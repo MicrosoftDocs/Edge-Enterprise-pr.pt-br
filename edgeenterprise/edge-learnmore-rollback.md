@@ -3,19 +3,19 @@ title: Reversão do Microsoft Edge para empresas
 ms.author: v-danwes
 author: dan-wesley
 manager: srugh
-ms.date: 07/21/2020
+ms.date: 09/02/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Como reverter o Microsoft Edge para uma versão anterior
-ms.openlocfilehash: 9af0881a079dd3059e567eaadb912b3d929924c4
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 9f659b0bcdd82f54a814c8ad4157521061cdfa7c
+ms.sourcegitcommit: 827a47d641c7ddc1d89be5d5fc0615373dec18b0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979057"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10993701"
 ---
 # Como reverter o Microsoft Edge para uma versão anterior
 
@@ -79,12 +79,11 @@ Use as seguintes etapas para ativar a reversão com a atualização do Microsoft
 
    - Sempre permitir as atualizações
    - Apenas atualizações silenciosas automáticas
-   - Apenas atualizações manuais  
 
-5. A reversão ocorrerá na próxima vez que a atualização do Microsoft Edge verificar se há atualizações.
+     > [!NOTE]
+     > Para forçar uma atualização de política de grupo, digite `dsregcmd /status`no prompt de comando do administrador do Windows (executar como administrador).
 
-   > [!NOTE]
-   > Se você quiser que a reversão ocorra imediatamente, você tem que alterar o intervalo de pesquisa de atualização do Microsoft Edge ou ativar a reversão usando um MSI.
+5. Clique em **OK** para salvar as configurações da política. A reversão ocorrerá na próxima vez que a atualização do Microsoft Edge verificar se há atualizações. Se você quiser que a atualização ocorra mais cedo, você pode alterar o intervalo de pesquisa do Microsoft Edge Update ou ativar a reversão usando um MSI.
 
 ### Erros comuns da reversão
 
@@ -109,6 +108,12 @@ Recomendamos forçar a reinicialização dos usuários depois da reversão.
 
 - Habilitar *Ativar Notificar um usuário de que é recomendado ou necessário reiniciar um navegador quando houver atualizações pendentes*. Em opções, selecione **Necessário**.
 - Habilitar *Definir o período de tempo das notificações de atualização* e defina o tempo desejado em milissegundos.
+
+## Instantâneo
+
+Um instantâneo é uma versão carimbada da pasta dados do usuário. Durante uma atualização de versão, um instantâneo da versão anterior é feito e armazenado na pasta do instantâneo. Após a reversão, um instantâneo com a versão correspondida será copiado para a nova pasta de dados do usuário e excluído da pasta do instantâneo. Se uma versão correspondente ao recurso de downgrade não estiver disponível, a reversão dependerá da sincronização para preencher os dados do usuário na nova versão do Microsoft Edge.
+
+A política de grupo [UserDataSnapshotRetentionLimit] permite definir um limite para o número de instantâneos que podem ser mantidos a qualquer momento. Por padrão, três instantâneos são mantidos. Você pode configurar essa política para manter até cinco instantâneos.
 
 ## Perguntas frequentes
 
@@ -145,27 +150,15 @@ Alguns erros comuns que impedem a reversão são:
   - A substituição da versão de destino está definida para uma versão de destino inexistente.
   - A entrada Substituição da versão de destino está formatada incorretamente.
 
-- Se a Substituição da política de atualizações estiver definida como " Atualizações desabilitadas", as atualizações do Microsoft Edge não aceitarão atualizações. Isso resulta em uma reversão não executada.
+- Se a substituição da política de atualizações estiver definida como " Atualizações desabilitadas", o Microsoft Edge Update não aceitará atualizações e a reversão não será executada.
 
 ### Configurei todas as políticas de grupo corretamente, mas a reversão não foi executada. O que aconteceu?
 
-A atualização do Microsoft Edge ainda não executa nenhuma verificação de atualizações. Por padrão, a atualização automática verifica se há atualizações a cada 10 horas. Você pode corrigir isso alterando o intervalo de pesquisa de atualização do Microsoft Edge com a política de grupo Substituição automática do período de verificação da atualização. Para obter mais informações, consulte a política [AutoUpdateCheckPeriodMinutes](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies#autoupdatecheckperiodminutes).
+A atualização do Microsoft Edge ainda não executa nenhuma verificação de atualizações. Por padrão, a atualização automática verifica se há atualizações a cada 10 horas. Você pode corrigir esse problema alterando o intervalo de pesquisa do Microsoft Edge Update com a política de substituição de grupo do período de verificação da atualização automática. Para obter mais informações, consulte a política [AutoUpdateCheckPeriodMinutes](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies#autoupdatecheckperiodminutes).
 
 ### Como um Administrador de TI, segui todas as etapas para reverter corretamente. Apenas uma parte do meu grupo de usuários foi revertida. Por que os outros usuários ainda não foram revertidos?
 
-A configuração da política de grupo ainda não foi sincronizada com todos os clientes. Quando o administrador define uma política de grupo, os clientes não recebem essas configurações instantaneamente.
-
-<!--
-You can update all users' group policy with the  
-
-When admins set all users don't get this setting instantaneously 
-
-GP Update force group policy – link to this 
-
--->
-
-
-
+A configuração da política de grupo ainda não foi sincronizada com todos os clientes. Quando o administrador define uma política de grupo, os clientes não recebem essas configurações instantaneamente. Você pode [forçar uma atualização remota da política de grupo](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134201(v=ws.11)).
 
 
 ## Consulte também
