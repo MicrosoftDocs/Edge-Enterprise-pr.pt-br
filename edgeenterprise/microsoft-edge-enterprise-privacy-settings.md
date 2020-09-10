@@ -3,19 +3,19 @@ title: Configurações de privacidade do Microsoft Edge Enterprise
 ms.author: likravit
 author: dan-wesley
 manager: srugh
-ms.date: 05/26/2020
+ms.date: 09/09/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Definir as configurações de privacidade do Microsoft Edge Enterprise
-ms.openlocfilehash: 2b7a33087ae5110c53d18b3192486d4ae62fa540
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 25b475206734634df9995f568a6d4e8c52e9f9de
+ms.sourcegitcommit: 16984537c8f5c9c60e92f41f0f869231fb79ccd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979128"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "11005489"
 ---
 # Configurar as políticas do Microsoft Edge para oferecer suporte à privacidade da empresa
 
@@ -23,22 +23,47 @@ A Microsoft está comprometida em fornecer às empresas as informações e os co
 
 ## Visão geral
 
-Por padrão, o Microsoft Edge implantado nas plataformas não Windows não envia dados de diagnóstico ou informações do site para a Microsoft. Por padrão, quando o Microsoft Edge é implantado no Windows 10, os dados de diagnóstico são enviados com base na [Configuração de dados de diagnóstico do Windows](https://go.microsoft.com/fwlink/?linkid=2099569) dos usuários.
+Por padrão, quando o Microsoft Edge é implantado no Windows 10, os dados de diagnóstico são enviados com base na [Configuração de dados de diagnóstico do Windows](https://go.microsoft.com/fwlink/?linkid=2099569) dos usuários.
 
-Você pode configurar como o Microsoft Edge realiza a coleta de dados da sua organização com as seguintes políticas de grupo:
+Quando o Microsoft Edge é implantado em plataformas não Windows, os dados de diagnóstico são coletados de acordo com as configurações das seguintes políticas de grupo:
 
-- [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) - habilita o uso e os relatórios de dados relacionados a falhas.
-- [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) - envia informações do site para melhorar os serviços da Microsoft.
+- (PRETERIDA) [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) - Habilita a geração de relatórios de dados relacionados a falhas e de uso. Essa política se tornará obsoleta na versão 89 do Microsoft Edge.
+- (PRETERIDA) [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) - Envia informações do site para melhorar os serviços Microsoft. Essa política se tornará obsoleta na versão 89 do Microsoft Edge.
+
+As políticas preteridas mencionadas são substituídas por [Permitir Telemetria](https://go.microsoft.com/fwlink/?linkid=2099569) no Windows 10 e a política [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) para todas as outras políticas.  
 
 ## Definir configurações de política
 
 Antes começar, baixe e use o modelo de política do Microsoft Edge mais recente (para obter mais informações, consulte [Configurar o Microsoft Edge](configure-microsoft-edge.md)).
 
-### Habilite a geração de relatórios de dados relacionados a falhas e uso
+### Enviar dados de diagnóstico obrigatórios e opcionais referentes ao uso do navegador
 
-Esta política habilita a geração de relatórios de dados relacionados a falhas e uso do Microsoft Edge para a Microsoft.
+Se a política [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) estiver configurada, ela tem precedência sobre [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled)  e [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices).
 
-O Microsoft Edge coleta um conjunto de dados que são necessários para manter o produto seguro, atualizado e funcionando corretamente. Isso inclui informações básicas de conectividade e configuração do dispositivo do Microsoft Edge sobre o consentimento de coleta de dados atual, a versão do aplicativo e o estado da sua instalação do Microsoft Edge. Esse conjunto de dados pode ser desativado desabilitando a política.
+#### Dados de diagnóstico obrigatórios e opcionais
+
+Os dados de diagnóstico obrigatórios são coletados para manter o Microsoft Edge seguro, atualizado e funcionando corretamente.
+
+Os dados de diagnóstico opcionais incluem dados sobre como você usa o navegador, os sites visitados e os relatórios de falha para ajudar a manter o Microsoft Edge seguro, atualizado e funcionando corretamente, e são usados para melhorar o Microsoft Edge e outros produtos e serviços Microsoft para todos os usuários.
+
+> [!NOTE]
+> Essa política não é compatível com dispositivos com Windows 10. Para controlar a coleta de dados no Windows 10, os administradores de TI devem usar a política de grupo de dados de diagnóstico do Windows. Essa política irá **Permitir Telemetria** ou **Permitir Dados de Diagnóstico**, dependendo da versão do Windows. Saiba mais sobre a [coleta de dados de diagnóstico do Windows 10](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
+
+Use uma das seguintes configurações para configurar **DiagnosticData**:
+
+- Desativado (não recomendado) (0) desativa a coleta de dados de diagnóstico obrigatórios ou opcionais. 
+- Dados obrigatórios (1) envia os dados de diagnóstico obrigatórios mas desativa a coleta de dados de diagnóstico opcionais. O Microsoft Edge irá enviar os dados de diagnóstico obrigatórios para manter o Microsoft Edge seguro, atualizado e funcionando corretamente. 
+- Dados opcionais (2) envia os dados de diagnóstico opcionais, inclui dados sobre o uso do navegador, sites visitados, relatórios de falha enviados à Microsoft para ajudar a manter o Microsoft Edge seguro, atualizado e funcionando corretamente e é usado para melhorar o Microsoft Edge e outros produtos e serviços Microsoft para todos os usuários.
+
+No Windows 7, Windows 8/8.1 e macOS, essa política controla o envio dos dados de diagnóstico obrigatórios e opcionais à Microsoft.
+
+Se você não configurar ou desativar essa política, o padrão do Microsoft Edge será a preferência do usuário.
+
+### (PRETERIDA) Habilitar a geração de relatórios de dados relacionados a falhas e de uso
+
+A política **MetricsReportingEnabled** habilita a geração de relatórios de dados relacionados a falhas e de uso do Microsoft Edge para a Microsoft.
+
+O Microsoft Edge coleta um conjunto de dados necessários para manter o produto atualizado, seguro e funcionando corretamente. Isso inclui informações básicas de conectividade e configuração do dispositivo do Microsoft Edge sobre o consentimento de coleta de dados atual, a versão do aplicativo e o estado da sua instalação do Microsoft Edge. Esse conjunto de dados pode ser desativado desabilitando a política.
 
 Habilite essa política para enviar relatórios de dados relacionados a falhas e uso para a Microsoft. Desabilite essa política para não enviar esses dados para a Microsoft. Em ambos os casos, os usuários não poderão alterar nem substituir a configuração.
 
@@ -46,15 +71,17 @@ Quando o Microsoft Edge estiver sendo executado no Windows 10:
 
 - Se essa política não estiver configurada, o padrão do Microsoft Edge será a configuração de dados de diagnóstico do Windows.
 - Se essa política estiver habilitada, o Microsoft Edge enviará dados de uso somente se a configuração de dados de diagnóstico do Windows estiver definida como **Avançada** ou **Completa**.
+  - Se essa política estiver habilitada, o Microsoft Edge só enviará dados de uso se [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) também estiver habilitada.
 - Se essa política estiver desabilitada, o Microsoft Edge não enviará dados de uso. Os dados relacionados a falha são enviados com base na configuração de dados de diagnóstico do Windows. [Saiba mais sobre as configurações de Dados de diagnóstico do Windows:](https://go.microsoft.com/fwlink/?linkid=2099569).
 
 Quando o Microsoft Edge estiver sendo executado no Windows 7, 8 e macOS:
 
 - Se essa política não estiver configurada, o padrão do Microsoft Edge será a preferência do usuário.
+-  Se essa política estiver habilitada, o Microsoft Edge só enviará dados de uso se [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) também estiver habilitada.
 
-### Envie as informações de sites para melhorar os serviços Microsoft
+### (PRETERIDA) Enviar informações de sites para aprimorar os serviços Microsoft
 
-Essa política permite o envio de informações sobre sites visitados no Microsoft Edge para a Microsoft visando melhorar os produtos e serviços Microsoft, tais como a pesquisa.
+A política **SendSiteInformationToImproveServices** permite o envio de informações sobre sites visitados no Microsoft Edge para a Microsoft visando melhorar os produtos e serviços Microsoft, tais como a pesquisa.
 
 Habilite essa política para enviar informações sobre os sites visitados no Microsoft Edge para a Microsoft. Desabilite essa política para não enviar informações sobre os sites visitados com o Microsoft Edge para a Microsoft. Em ambos os casos, os usuários não poderão alterar nem substituir a configuração.
 
@@ -62,31 +89,31 @@ Quando o Microsoft Edge estiver sendo executado no Windows 10:
 
 - Se essa política não estiver configurada, o padrão do Microsoft Edge será a configuração de dados de diagnóstico do Windows.
 - Se essa política estiver habilitada, o Microsoft Edge enviará informações dos sites visitados apenas se a configuração de dados de diagnóstico do Windows estiver definida como **Completa**.
+  - Se essa política estiver habilitada, o Microsoft Edge só enviará dados de uso se [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) também estiver habilitada. 
 - Se essa política estiver desabilitada, o Microsoft Edge não enviará informações dos sites visitados. Para [saber mais sobre as configurações de dados de diagnóstico do Windows](https://go.microsoft.com/fwlink/?linkid=2099569).
 
 Quando o Microsoft Edge estiver sendo executado no Windows 7, 8 e macOS:
 
+- Se essa política estiver habilitada, o Microsoft Edge só enviará dados de uso se [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) também estiver habilitada.
 - Se essa política não estiver configurada, o padrão do Microsoft Edge será a preferência do usuário.
 
 ## Detalhes da implementação
 
-Para que os canais do Windows 10 entendam nossa implementação com a dependência da configuração de dados de diagnóstico do Windows, a tabela a seguir descreve nossa configuração se **Habilitar relatórios de uso e dados relacionados a falhas** e **Enviar informações do site para melhorar os serviços Microsoft** não estiverem configurados.
+Para dispositivos não Windows 10: 
+- Se a política [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) estiver configurada, ela terá precedência sobre [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled)  e [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices). 
+- Se a política [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) não estiver configurada, o Microsoft Edge escutará [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled)  e [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices).  
 
-| Configuração de dados de diagnóstico do Windows | Habilite a geração de relatórios de dados relacionados a falhas e uso | Envie as informações de sites para melhorar os serviços Microsoft |
+Para que os canais do Windows 10 entendam nossa implementação com a dependência da configuração de dados de diagnóstico do Windows, a tabela a seguir identifica se os dados de diagnóstico  **Obrigatórios** e **Opcionais** foram enviados à Microsoft.
+
+| Configuração de dados de diagnóstico do Windows | Dados de diagnóstico necessários  | Dados de diagnóstico opcionais |
 |---------------------------------|-----------------------------------------------|-----------------------------------------------------|
 | Segurança                        | Não enviado                                      | Não enviado                                            |
-| Básico                           | Não enviado                                      | Não enviado                                            |
+| Básico                           | Enviado                                      | Não enviado                                            |
 | Avançado                        | Enviado                                          | Não enviado                                            |
 | Completo                            | Enviado                                          | Enviado                                                |
 
-Se as configurações dos canais Windows 10 não forem configuradas de acordo com esta tabela, retornaremos à menor configuração de coleta de dados.
-
-Por exemplo:
-
-- Você define a política "Habilitar relatórios de dados de uso e de falha" como **Habilitada**, mas a configuração de dados de Diagnóstico do Windows está definida como **Básica**. Não enviaremos dados de uso e relacionados a falhas.
-- Você define a diretiva "Enviar informações do site para melhorar os serviços da Microsoft" como **Desabilitada**, mas a configuração de dados de Diagnóstico do Windows está definida como **Completa**. Não enviaremos informações dos sites visitados.
-
-A implementação correta das configurações anteriores é definir a política "Habilitar relatórios de uso e dados relacionados a falhas" como **Habilitada** e definir a configuração de dados de diagnóstico do Windows como **Melhorada** ou**Completa**. 
+> [!IMPORTANT]
+> O Microsoft Edge será compatível com **MetricsReportingEnabled**  e **SendSiteInfoToImproveServices** nas versões 86 – 88 do Microsoft Edge. Na versão 89 do Microsoft Edge, **MetricsReportingEnabled**  e **SendSiteInfoToImproveServices** não serão mais compatíveis e a versão usará **DiagnosticData** como padrão em plataformas não Windows 10 ou a política **Permitir Telemetria** para Windows 10.
 
 ## Opções adicionais da política de privacidade
 
