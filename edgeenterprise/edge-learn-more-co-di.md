@@ -3,19 +3,19 @@ title: ClickOnce e DirectInvoke no Microsoft Edge
 ms.author: kele
 author: dan-wesley
 manager: srugh
-ms.date: 04/30/2020
+ms.date: 09/10/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Saiba mais sobre o ClickOnce e o DirectInvoke no Microsoft Edge.
-ms.openlocfilehash: 8290c34bd29ca72678e3fa68f74b689d0cf797e3
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 1d4e08c0ce3ee2afec7968cd892f77ef7bdc3fff
+ms.sourcegitcommit: 4c0b84b03e686a7a2989ce2187dbadf35418104a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979075"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11012791"
 ---
 # Noções básicas sobre os recursos ClickOnce e DirectInvoke no Microsoft Edge
 
@@ -55,13 +55,12 @@ Os casos de uso do DirectInvoke dependem da intenção do site que está solicit
 
 Suporte ao ClickOnce e ao DirectInvoke:
 
-- Para os usuários do Windows, o DirectInvoke tem suporte imediato, mas o ClickOnce está desabilitado.
+- O ClickOnce e o DirectInvoke têm suporte prontos para todos os usuários do Windows.
 
   > [!NOTE]
-  > Os usuários que precisam do suporte ao ClickOnce podem acessar edge://flags/#edge-click-once e selecionar **Ativar** na lista suspensa. Você precisará **Reiniciar** o navegador.
+  > Os usuários que precisam desabilitar o suporte ao ClickOnce podem acessar *edge://flags/#edge-click-once* e selecionar **Desabilitador** na lista suspensa. Você precisará **Reiniciar** o navegador.
 
 - O ClickOnce e o DirectInvoke não têm suporte em outras plataformas que não seja o Windows.
-- Como o ClickOnce é um recurso empresarial usado por um grupo específico de usuários avançados e não se destina ao uso geral, ele é desabilitado por padrão.
 
 ## Segurança de manipulação de arquivos do ClickOnce e do DirectInvoke
 
