@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: 2bcd18cd18c9b5be1f4b3b39137aea09889bbc2f
-ms.sourcegitcommit: db44b524973df8ac811b09e6b71c25be9ba92bbc
+ms.openlocfilehash: 75ae113b7e4b39a76b70d9c0f85bc484f63e3c1a
+ms.sourcegitcommit: 468b75d86803ad1531d7bed8e6c1a562a00ebe50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "11015357"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "11026891"
 ---
 # Notas de versão do canal do Microsoft Edge beta
 
@@ -35,7 +35,6 @@ Correção de vários bugs e problemas de desempenho.
 * **Modo Internet Explorer:**
 
    * Permita que os usuários usem a interface do usuário (UI) do Microsoft Edge para testar sites no modo Internet Explorer. A partir da versão 86 do Microsoft Edge, os administradores poderão habilitar uma opção da interface do usuário para seus usuários para carregar uma guia no modo Internet Explorer para fins de teste ou como um stopgap até que os sites sejam adicionados ao XML da lista de sites.
-   * Permita que os usuários forneçam comentários em sites que exigem o modo IE. Os usuários podem enviar comentários a você usando uma opção da interface do usuário do Microsoft Edge. Você pode configurar essa opção de UI para que ela fique visível na política de grupo e escolha como deseja receber essas informações (por email ou com um formulário personalizado).
 
 * **Excluir downloads do disco usando o gerenciador de downloads.** Agora, os usuários podem excluir os arquivos baixados de seu disco, sem sair do navegador. A nova funcionalidade Excluir downloads existe no menu de contexto da prateleira de downloads ou da página de downloads.
 
