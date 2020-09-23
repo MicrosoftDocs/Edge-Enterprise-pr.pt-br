@@ -1,4 +1,4 @@
-# last revised 09/20/2020
+# last revised 09/21/2020
 - name: Documentação do Microsoft Edge Enterprise
   href: index.yml
 - name: Documentação do Microsoft Edge
@@ -89,6 +89,8 @@
       href: microsoft-edge-enterprise-state-roaming.md
     - name: Modo de quiosque do Microsoft Edge
       href: microsoft-edge-kiosk-mode.md
+    - name: Configurar o modo de quiosque do Microsoft Edge
+      href: microsoft-edge-configure-kiosk-mode.md
     - name: Sincronização do Microsoft Edge
       href: microsoft-edge-enterprise-sync.md
     - name: Sincronização local para usuários do Active Directory
@@ -111,6 +113,8 @@
           href: edge-ie-mode-faq.md
 - name: Segurança do Microsoft Edge
   items:
+    - name: Segurança para a sua empresa
+      href: ms-edge-security-for-business.md
     - name: Visão geral da segurança
       href: security-overview.md
     - name: Lista de permissões para pontos de extremidade do Microsoft Edge
