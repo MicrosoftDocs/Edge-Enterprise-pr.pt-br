@@ -3,19 +3,19 @@ title: Materiais de adoção do cliente Microsoft Edge
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 09/20/2020
+ms.date: 09/22/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Materiais de adoção do cliente Microsoft Edge
-ms.openlocfilehash: 219316b6c89d73b25a7d34eac3bee88b16857f2b
-ms.sourcegitcommit: 8e350aa719ccdb0a8c76c1c145875efff28a8f23
+ms.openlocfilehash: 68b984faad3b36c0926ece070ca052e81e764e0e
+ms.sourcegitcommit: 858227653fc89532d1d274735f53280e27b2a8c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "11030604"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "11072628"
 ---
 # Materiais de adoção do Cliente para o Microsoft Edge
 
@@ -33,10 +33,7 @@ O kit de adoção do cliente contém o seguinte material:
 - Email de Dicas e Truques
 - Sinalização digital
 
-> [!NOTE]
-> Os materiais do kit de adoção estão sendo atualizados e o download estará disponível quando a atualização for concluída.
-<!--
-[Download customer adoption kit](https://download.microsoft.com/download/0/4/2/0426ffdf-e33c-4177-b0f8-a13a43719c63/Commercial%Adoption%Kit%-%Microsoft%Edge.zip)-->
+[Baixar o kit de adoção do cliente](https://www.microsoft.com/download/details.aspx?id=102119)
 
 ### Guia de Implementação de TI
 
