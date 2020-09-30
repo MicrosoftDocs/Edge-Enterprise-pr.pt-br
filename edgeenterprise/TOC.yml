@@ -1,4 +1,4 @@
-# last revised 09/21/2020
+# last revised 09/29/2020
 - name: Documentação do Microsoft Edge Enterprise
   href: index.yml
 - name: Documentação do Microsoft Edge
@@ -155,6 +155,8 @@
           href: edge-learnmore-mixed-content-downloads.md
         - name: Distribuições progressivas para atualizações de canal Estável
           href: microsoft-edge-update-progressive-rollout.md
+        - name: Provisionar favoritos para o Microsoft Edge
+          href: edge-learnmore-provision-favorites.md
         - name: Sintaxe da Expressão Regular 2 (re2.h)
           href: edge-learnmore-regex.md
         - name: Variáveis de diretório de dados do usuário
