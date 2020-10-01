@@ -3,19 +3,19 @@ title: Sincronização do Microsoft Edge Enterprise
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 09/15/2020
+ms.date: 09/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Sincronização do Microsoft Edge Enterprise
-ms.openlocfilehash: d9cd643142d0f6744664a5071c5000b820583e41
-ms.sourcegitcommit: 06c365faeea6070f103fe867cc2da13539ae4680
+ms.openlocfilehash: d5868fb496c036d750925bb5ae6dfa3de0293fd2
+ms.sourcegitcommit: 8a4479a1b034c3c13ea03ee3a2374a1af332cb38
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "11016340"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "11091943"
 ---
 # Sincronização do Microsoft Edge Enterprise
 
@@ -33,8 +33,6 @@ A sincronização do Microsoft Edge permite que os usuários acessem seus dados 
 - Endereços e etc. (preenchimento de formulário)
 - Coleções
 - Configurações
-- Histórico de navegação
-- Abrir guias
 
 A funcionalidade de sincronização é habilitada por meio do consentimento do usuário, e os usuários podem ativar ou desativar a sincronização para cada um dos tipos de dados listados acima.
 
@@ -80,7 +78,7 @@ As seguintes políticas de grupo afetam a sincronização do Microsoft Edge:
 
 #### Os dados sincronizados estão encriptados? 
 
-Os dados são criptografados no transporte usando TLS 1.2 ou posterior. A maioria dos tipos de dados também é criptografada em repouso no serviço da Microsoft usando AES256, com exceção do histórico do navegador e dos tipos de dados de guias abertas. Para evitar que esses tipos de dados sejam sincronizados, você pode aplicar a política [SavingBrowserHistoryDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#savingbrowserhistorydisabled).
+Os dados são criptografados no transporte usando TLS 1.2 ou posterior. A maioria dos tipos de dados também é criptografada em REST no serviço da Microsoft usando AES256. 
 
 #### Onde os dados sincronizados são armazenados para o Microsoft Edge?
 
