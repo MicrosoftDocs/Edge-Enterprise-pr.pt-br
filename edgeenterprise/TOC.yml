@@ -1,4 +1,4 @@
-# last revised 09/29/2020
+# last revised 10/02/2020
 - name: Documentação do Microsoft Edge Enterprise
   href: index.yml
 - name: Documentação do Microsoft Edge
@@ -79,19 +79,19 @@
       href: configure-microsoft-edge-on-mac.md
     - name: Configurar para macOS com Jamf
       href: configure-microsoft-edge-on-mac-jamf.md
-- name: Usar os recursos do Microsoft Edge para empresas
+- name: Use Microsoft Edge enterprise features
   items:
-    - name: Configurações e experimentação
+    - name: Configurations and experimentation
       href: edge-configuration-and-experiments.md
     - name: Suporte e configuração de identidade
       href: microsoft-edge-security-identity.md
     - name: Microsoft Edge e Enterprise State Roaming
       href: microsoft-edge-enterprise-state-roaming.md
-    - name: Modo de quiosque do Microsoft Edge
+    - name: Microsoft Edge kiosk mode
       href: microsoft-edge-kiosk-mode.md
-    - name: Configurar o modo de quiosque do Microsoft Edge
+    - name: Configure Microsoft Edge kiosk mode
       href: microsoft-edge-configure-kiosk-mode.md
-    - name: Sincronização do Microsoft Edge
+    - name: Microsoft Edge Sync
       href: microsoft-edge-enterprise-sync.md
     - name: Sincronização local para usuários do Active Directory
       href: microsoft-edge-on-premises-sync.md
@@ -111,17 +111,17 @@
           href: edge-ie-mode-site-discovery.md
         - name: Perguntas frequentes sobre o modo IE
           href: edge-ie-mode-faq.md
-- name: Segurança do Microsoft Edge
+- name: Microsoft Edge Security
   items:
-    - name: Segurança para a sua empresa
+    - name: Security for your business
       href: ms-edge-security-for-business.md
-    - name: Visão geral da segurança
-      href: security-overview.md
-    - name: Lista de permissões para pontos de extremidade do Microsoft Edge
+    - name: Allow list for Microsoft Edge endpoints
       href: microsoft-edge-security-endpoints.md
-    - name: Proteção contra aplicativos potencialmente indesejados
+    - name: Protect against potentially unwanted applications
       href: microsoft-edge-potentially-unwanted-apps.md
-    - name: Suporte para o Application Guard
+    - name: Support for Azure AD Conditional Access
+      href: ms-edge-security-conditional-access.md
+    - name: Support for Application Guard
       href: microsoft-edge-security-windows-defender-application-guard.md
     - name: Suporte ao Microsoft Defender SmartScreen
       href: microsoft-edge-security-smartscreen.md
@@ -153,25 +153,25 @@
           href: edge-learnmore-inpage-nav.md
         - name: Downloads de conteúdo misto?
           href: edge-learnmore-mixed-content-downloads.md
-        - name: Distribuições progressivas para atualizações de canal Estável
+        - name: Progressive rollouts for Stable channel updates
           href: microsoft-edge-update-progressive-rollout.md
-        - name: Provisionar favoritos para o Microsoft Edge
+        - name: Provision favorites for Microsoft Edge
           href: edge-learnmore-provision-favorites.md
-        - name: Sintaxe da Expressão Regular 2 (re2.h)
+        - name: Regular Expression 2 (re2.h) syntax
           href: edge-learnmore-regex.md
-        - name: Variáveis de diretório de dados do usuário
+        - name: User data directory variables
           href: edge-learnmore-create-user-directory-vars.md
-        - name: Usando o Microsoft Edge Rollback para empresas
+        - name: Using Microsoft Edge rollback for enterprises
           href: edge-learnmore-rollback.md
-- name: Vídeos do Microsoft Edge
+- name: Microsoft Edge Videos
   items:
-    - name: Coleção de vídeos do Microsoft Edge
+    - name: Microsoft Edge video collection
       href: microsoft-edge-videos.md
-    - name: Vídeo - Implantar o Microsoft Edge
+    - name: Video - Deploy Microsoft Edge
       href: microsoft-edge-video-deploy.md
-    - name: 'Vídeo: Microsoft Edge e Pesquisa da Microsoft'
+    - name: Video - Microsoft Edge and Microsoft Search
       href: microsoft-edge-video-search.md
-    - name: 'Vídeo - Segurança, compatibilidade e capacidade de gerenciamento'
+    - name: 'Video - Security, compatibility, and manageability'
       href: microsoft-edge-video-security-compatibility-manageability.md
-- name: Perguntas frequentes
+- name: Frequently asked questions
   href: faqs-edge-in-the-enterprise.md
