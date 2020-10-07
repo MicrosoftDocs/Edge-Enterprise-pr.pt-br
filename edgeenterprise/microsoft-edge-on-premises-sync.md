@@ -3,19 +3,19 @@ title: Sincronização local para usuários do Active Directory (AD)
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 08/21/2020
+ms.date: 10/05/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Sincronização local para usuários do Active Directory (AD)
-ms.openlocfilehash: 89f061072fdaa748d317ca8dc0c290893cfdfd6c
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: ce7fd912bc8cbd71e12444d58073e43df6b138db
+ms.sourcegitcommit: bd68077356a944b99a424d03b444b04aa60272dd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979142"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "11099740"
 ---
 # Sincronização local para usuários do Active Directory (AD)
 
@@ -30,7 +30,7 @@ Sincronizar os dados do usuário no Microsoft Edge normalmente requer uma conta 
 
 ## Como funciona
 
-O Microsoft Edge permite que perfis sejam associados a contas do Active Directory (AD), que não podem ser usados com sincronização em nuvem. Quando a sincronização local está habilitada, os dados do perfil AD são salvos em um arquivo chamado profile.pb. Por padrão, esse arquivo es armazenado em *%APP_DATA%/Microsoft/Edge*. Após a gravação desse arquivo, ele poderá ser movido entre computadores diferentes, e os dados do usuário serão lidos e escritos em cada computador.
+O Microsoft Edge permite que perfis sejam associados a contas do Active Directory (AD), que não podem ser usados com sincronização em nuvem. Quando a sincronização local está habilitada, os dados do perfil AD são salvos em um arquivo chamado profile.pb. Por padrão, esse arquivo está armazenado em *%APP_DATA%/Microsoft/Edge*. Após a gravação desse arquivo, ele poderá ser movido entre computadores diferentes, e os dados do usuário serão lidos e escritos em cada computador.
 
 ## Usar sincronização local
 
@@ -46,7 +46,7 @@ A sincronização local só funciona com o perfil associado a uma conta do Activ
 
 ### Alterar a localização dos dados do usuário (opcional)
 
-Por padrão, os dados do usuário são armazenados em um arquivamento chamado **perfil. PB** em *% APP_DATA%/Microsoft/Edge*. Para alterar o local desse arquivo, configure a política [RoamingProfileLocation](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#roamingprofilelocation).
+Por padrão, os dados do usuário são armazenados em um arquivamento chamado **profile.pb** em *%APPDATA%/Microsoft/Edge*. Para alterar o local desse arquivo, configure a política [RoamingProfileLocation](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#roamingprofilelocation).
 
 ## Alterações na experiência do usuário quando a sincronização no local está habilitada
 

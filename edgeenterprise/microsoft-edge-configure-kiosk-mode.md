@@ -3,19 +3,19 @@ title: Configurar o modo de quiosque do Microsoft Edge
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 09/24/2020
+ms.date: 10/05/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurar o modo de quiosque do Microsoft Edge
-ms.openlocfilehash: 17852cc7c7e4921a0fbef7d09a3f1c3d3cccf49f
-ms.sourcegitcommit: b1285b7745eb41b241d706b401f8ce78fa33b227
+ms.openlocfilehash: 799b3dd4b7fc96f0b8e5cb718bca98fd4f38ec15
+ms.sourcegitcommit: 78905f66f4a6590a57c8f2bf808af92106b62996
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "11078661"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "11094858"
 ---
 # Configurar o modo de quiosque do Microsoft Edge
 
@@ -23,8 +23,6 @@ Este artigo descreve como configurar as opções do modo de quiosque do Microsof
 
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 87 ou posterior.
-
-Para obter informações sobre o modo de quiosque da Versão Herdada do Microsoft Edge (versão 45 e anteriores), consulte [Implantar o modo de quiosque do Microsoft Edge](https://aka.ms/edgekioskmode).
 
 ## Visão geral
 
@@ -35,7 +33,7 @@ O modo de quiosque do Microsoft Edge oferece duas experiências de bloqueio do n
 
 As duas experiências estão executando uma sessão Microsoft Edge InPrivate, que protege os dados do usuário.
 
-## Configurar o modo de quiosque do Microsoft Edge  
+## Configurar o modo de quiosque do Microsoft Edge
 
 Um conjunto inicial de recursos de modo de quiosque já está disponível para teste com o Microsoft Edge Canary Channel, versão 87. Você pode baixar o Microsoft Edge Canary na página do [Microsoft Edge Insider Channels](https://www.microsoftedgeinsider.com/download).
 
@@ -43,9 +41,9 @@ Um conjunto inicial de recursos de modo de quiosque já está disponível para t
 
 Os seguintes recursos estão disponíveis:
 
-- Navegação InPrivate. Protege os dados do usuário excluindo os dados e os downloads do navegador quando a sessão termina.
+- A navegação InPrivate protege os dados do usuário excluindo os dados e os downloads do navegador quando a sessão termina.
 - Política para configurar Excluir downloads ao sair.
-- Redefinir a sessão de usuário após um determinado período de inatividade.
+- A opção de redefinir a sessão de usuário após determinado período de inatividade.
 - Conjunto inicial de funcionalidade de bloqueio. As funções a seguir estão disponíveis:
 
   - Menu de contexto do mouse
@@ -56,14 +54,14 @@ Os seguintes recursos estão disponíveis:
 > [!NOTE]
 > À medida que o modo de quiosque evolui, mais recursos estarão disponíveis.
 
-### Usar recursos do modo de quiosque
+## Usar recursos do modo de quiosque
 
 Você pode invocar os recursos do modo de quiosque do Microsoft Edge com as seguintes opções de linha de comando do Windows 10:
 
 - Sinalização interativa/digital do modo de quiosque: `msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen`
 - Navegação pública modo de quiosque: `msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing`
 
-#### Opções de linha de comando adicionais
+### Opções de linha de comando adicionais
 
 - `--no-first-run` : Desabilite a primeira experiência de execução do Microsoft Edge.
 - `--kiosk-idle-timeout-minutes` : Altere o tempo (em minutos) da última atividade de usuário antes que o modo de quiosque do Microsoft Edge redefina a sessão do usuário. Os seguintes valores são válidos:
@@ -75,13 +73,23 @@ Você pode invocar os recursos do modo de quiosque do Microsoft Edge com as segu
     - 0 - desativa o cronômetro
     - 1-1440 minutos para redefinição no timer de ociosidade
 
-## Configurar o modo de quiosque com acesso atribuído
+## Microsoft Edge com acesso atribuído
 
-O modo de quiosque do Microsoft Edge com acesso atribuído está disponível atualmente para teste com a versão mais recente do [Windows 10 Insider Preview](https://insider.windows.com/), versão 20215 ou superior e com o [Canal Microsoft Edge Dev](https://www.microsoftedgeinsider.com/download), versão 87.0.644.4 ou superior.
+### Quiosque de aplicativos único
+
+No momento, o Microsoft Edge tem suporte para um subconjunto de tipos de modo quiosque da Versão Prévia do Microsoft Edge para acesso atribuído a um aplicativo único com as seguintes experiências de bloqueio: com a Navegação Digital/Interativa e pública.  
+
+O modo de quiosque do Microsoft Edge com acesso atribuído está disponível atualmente para teste com a versão mais recente do  [Windows 10 Insider Preview](https://insider.windows.com/), versão 20215 ou superior e com o  [Canal Microsoft Edge Dev](https://www.microsoftedgeinsider.com/download), versão 87.0.644.4 ou superior.
 
 **Como faço para obter a visualização do Windows Insiders?**
 
-Para instalar uma versão do Windows 10 Insider Preview Build em um computador, siga as instruções em [Introdução ao Windows 10 Insider Preview Builds](https://docs.microsoft.com/windows-insider/get-started).
+Para instalar uma versão do Windows 10 Insider Preview Build em um computador, siga as instruções em  [Introdução às Compilações do Windows 10 Insider Preview](https://docs.microsoft.com/windows-insider/get-started).
+
+### Quiosque de vários aplicativos
+
+O Microsoft Edge pode ser executado com [acesso atribuído a vários aplicativos](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) no Windows 10, que é o equivalente ao tipo de modo de quiosque "Navegação Normal" da Versão Herdada do Microsoft Edge. Para configurar o Microsoft Edge com acesso atribuído a vários aplicativos, siga as instruções sobre como [Configurar um quiosque para vários aplicativos](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps). (O AUMID para o canal Estável do Microsoft Edge é **MSEdge**).
+
+Ao usar o Microsoft Edge com acesso atribuído a vários aplicativos, você poderá usar as [políticas de navegador do Microsoft Edge](https://review.docs.microsoft.com/en-us/DeployEdge/microsoft-edge-policies) para configurar a experiência de navegação para atender aos seus requisitos exclusivos.
 
 ### Configurar usando as configurações do Windows
 
