@@ -1,6 +1,6 @@
 ### YamlMime:Landing
-title: Microsoft Edge Enterprise documentation
-summary: Microsoft Edge enhances and extends the browser experience. Ele pode ser executado em dispositivos Windows, macOS, iOS e Android.
+title: Documentação do Microsoft Edge Enterprise
+summary: O Microsoft Edge aprimora e estende a experiência de navegador. Ele pode ser executado em dispositivos Windows, macOS, iOS e Android.
 metadata:
   title: Microsoft Edge
   description: O Microsoft Edge aprimora e estende a experiência de navegador. Ele pode ser executado em dispositivos Windows, macOS, iOS e Android.
@@ -19,65 +19,65 @@ metadata:
   ms.lasthandoff: 10/03/2020
   ms.locfileid: "11094455"
 landingContent:
-- title: Learn about Microsoft Edge in the enterprise
+- title: Saiba mais sobre o Microsoft Edge na empresa
   linkLists:
   - linkListType: overview
     links:
-    - text: Microsoft Edge Videos
+    - text: Vídeos do Microsoft Edge
       url: microsoft-edge-videos.md
-    - text: Microsoft Edge channel overview
+    - text: Visão geral dos canais do Microsoft Edge
       url: microsoft-edge-channels.md
     - text: Baixar um canal do Microsoft Edge
       url: https://aka.ms/EdgeEnterprise
-    - text: Use enterprise features
+    - text: Usar recursos empresariais
       url: edge-ie-mode.md
-    - text: Video - Microsoft Edge and Microsoft Search
+    - text: 'Vídeo: Microsoft Edge e Pesquisa da Microsoft'
       url: microsoft-edge-video-search.md
-- title: Deploy and update Microsoft Edge
+- title: Implantar e atualizar o Microsoft Edge
   linkLists:
   - linkListType: deploy
     links:
-    - text: Plan your deployment of Microsoft Edge
+    - text: Planejar sua implantação do Microsoft Edge
       url: deploy-edge-plan-deployment.md
-    - text: Video - Deploy Microsoft Edge
+    - text: Vídeo - Implantar o Microsoft Edge
       url: microsoft-edge-video-deploy.md
-    - text: Deploy to Windows
+    - text: Implantar no Windows
       url: https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json
     - text: Implantar no macOS
       url: https://docs.microsoft.com/intune/apps/apps-edge-macos/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json
-- title: Configure Microsoft Edge
+- title: Configurar o Microsoft Edge
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Configure Microsoft Edge on Windows
+    - text: Configurar o Microsoft Edge no Windows
       url: configure-microsoft-edge.md
-    - text: Configure Microsoft Edge on macOS
+    - text: Configurar o Microsoft Edge no macOS
       url: configure-microsoft-edge-on-mac.md
-    - text: Set Microsoft Edge as the default browser
+    - text: Definir o Microsoft Edge como o navegador padrão
       url: edge-default-browser.md
-- title: Manage security and privacy
+- title: Gerenciar a segurança e privacidade
   linkLists:
   - linkListType: concept
     links:
-    - text: Video - Security, compatibility, and manageability
+    - text: Vídeo - Segurança, compatibilidade e capacidade de gerenciamento
       url: microsoft-edge-video-security-compatibility-manageability.md
-    - text: Security
+    - text: Segurança
       url: ms-edge-security-for-business.md
-    - text: Privacy
+    - text: Privacidade
       url: microsoft-edge-enterprise-privacy-settings.md
-- title: Policy reference
+- title: Referência de política
   linkLists:
   - linkListType: reference
     links:
     - text: Referência de política do navegador
       url: microsoft-edge-policies.md
-    - text: Update policy reference
+    - text: Referência da política de atualização
       url: microsoft-edge-update-policies.md
-    - text: Policy mapping overview
+    - text: Visão geral do mapeamento de políticas
       url: microsoft-edge-policy-map-overview.md
-    - text: Microsoft Security Baselines Blog
+    - text: Blog de linhas de base de segurança da Microsoft
       url: https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines
-- title: Engage with enterprise community or get help
+- title: Envolva-se com a comunidade empresarial ou obtenha ajuda
   linkLists:
   - linkListType: get-started
     links:
