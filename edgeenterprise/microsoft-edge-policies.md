@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/24/2020
+ms.date: 10/02/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 0561f403bb385792767c3666be18bb6cf680edaf
-ms.sourcegitcommit: d4f2b62b41f0e40ec6b22aeca436b2c261658bd8
+ms.openlocfilehash: 906a8cdd73e07efc5662e9b3ea51d8b7a2f03079
+ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "11078119"
+ms.lasthandoff: 10/03/2020
+ms.locfileid: "11094745"
 ---
 # Microsoft Edge - Políticas
 A versão mais recente do Microsoft Edge inclui as políticas a seguir. Você pode usar essas políticas para configurar como o Microsoft Edge será executado em sua organização.
@@ -36,10 +36,11 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[Configurações do Application Guard](#application-guard-settings)|[Cast](#cast)|
 |[Configurações de conteúdo](#content-settings)|[Provedor de pesquisa padrão](#default-search-provider)|
 |[Extensões](#extensions)|[Autenticação HTTP](#http-authentication)|
-|[Sistema de mensagens nativo](#native-messaging)|[Gerenciador de senhas e proteção](#password-manager-and-protection)|
-|[Impressão](#printing)|[Servidor proxy](#proxy-server)|
-|[Configurações do SmartScreen](#smartscreen-settings)|[Página de inicialização, página inicial e nova guia](#startup-home-page-and-new-tab-page)|
-|[Adicional](#additional)|
+|[Configurações do modo de quiosque](#kiosk-mode-settings)|[Sistema de mensagens nativo](#native-messaging)|
+|[Gerenciador de senhas e proteção](#password-manager-and-protection)|[Impressão](#printing)|
+|[Servidor proxy](#proxy-server)|[Configurações do SmartScreen](#smartscreen-settings)|
+|[Página de inicialização, página inicial e nova guia](#startup-home-page-and-new-tab-page)|[Adicional](#additional)|
+
 
 ### [*Configurações do Application Guard*](#application-guard-settings-policies)
 |Nome da política|Legenda|
@@ -117,13 +118,17 @@ e dicas para os serviços Microsoft|
 ### [*Autenticação HTTP*](#http-authentication-policies)
 |Nome da política|Legenda|
 |-|-|
-|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|Permitir prompts de autenticação básica HTTP de origem cruzada|
+|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|Permitir solicitações de autenticação HTTP Cross-Origin|
 |[AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)|Especifica uma lista de servidores para os quais o Microsoft Edge pode delegar credenciais de usuário|
 |[AuthSchemes](#authschemes)|Esquemas de autenticação com suporte|
 |[AuthServerAllowlist](#authserverallowlist)|Configurar a lista de servidores de autenticação permitidos|
 |[DisableAuthNegotiateCnameLookup](#disableauthnegotiatecnamelookup)|Desabilitar a pesquisa CNAME durante a negociação da autenticação Kerberos|
 |[EnableAuthNegotiatePort](#enableauthnegotiateport)|Incluir porta não padrão no SPN Kerberos|
 |[NtlmV2Enabled](#ntlmv2enabled)|Controlar se a autenticação NTLMv2 está habilitada|
+### [*Configurações do modo de quiosque*](#kiosk-mode-settings-policies)
+|Nome da política|Legenda|
+|-|-|
+|[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Excluir arquivos baixados como parte de uma sessão Kiosk quando o Microsoft Edge for fechado|
 ### [*Sistema de mensagens nativo*](#native-messaging-policies)
 |Nome da política|Legenda|
 |-|-|
@@ -559,11 +564,21 @@ Se você também tiver definido a política [EnableMediaRouter](#enablemediarout
   - No Windows e no macOS desde 77 ou mais recente
 
   #### Descrição
-  Especificar uma lista de sites, com base nos padrões de URL, para os quais o Microsoft Edge deve selecionar automaticamente um certificado de cliente, se o site solicitar um.
+  A configuração da política permite que você faça uma lista de padrões de URL que especificam sites para os quais o Microsoft Edge pode selecionar automaticamente um certificado de cliente. O valor é uma matriz de dicionários estringidos JSON, cada uma com o formato {"Pattern": "$URL _PATTERN", "Filter": $FILTER}, onde $URL _PATTERN é um padrão de configuração de conteúdo. $FILTER restringe os certificados de cliente para os quais o navegador seleciona automaticamente. Independente do filtro, somente os certificados que correspondem à solicitação de certificado do servidor serão selecionados.
 
-O valor deve ser uma matriz de dicionários JSON com cadeia de caracteres. Cada dicionário deve ter o formato {"Pattern": "$URL _PATTERN", "Filter": $FILTER}, onde $URL _PATTERN é um padrão de configuração de conteúdo. $FILTER restringe a partir de quais certificados de cliente o navegador selecionará automaticamente. Independente do filtro, somente os certificados que correspondem à solicitação de certificado do servidor serão relacionados. Por exemplo, se $FILTER tiver o formato {"emissor": {"CN": "$ISSUER _CN"}}, além disso, somente os certificados do cliente serão selecionados e emitidos por um certificado com o $ISSUER _CN. Se $FILTER contiver uma seção "ISSUER" e "SUBJECT", um certificado de cliente deverá atender às duas condições a serem selecionadas. Se $FILTER especificar um organização ("O"), o certificado deve ter pelo menos uma organização que corresponda ao valor especificado a ser selecionado. Se $FILTER especifica uma unidade de organização ("OU"), um certificado deve ter pelo menos uma unidade organizacional que corresponda ao valor especificado a ser selecionado. Se $FILTER estiver no dicionário vazio {}, a seleção de certificados de cliente não será ainda restrita.
+Exemplos de uso da $FILTER seção:
 
-Se você não configurar essa política, a seleção automática não será realizada para nenhum site.
+* Quando a $FILTER está definida como {"EMISSOR": {"CN": "$ISSUER _CN"}}, somente os certificados do cliente emitidos por um certificado com a $ISSUER _CN devem ser selecionados.
+
+* Quando $FILTER contém as seções "EMISSOR" e "ASSUNTO", somente os certificados de cliente que atendem a ambas as condições são selecionados.
+
+* Quando $FILTER contém uma seção "ASSUNTO" com o valor "O", um certificado precisa que pelo menos uma organização corresponda ao valor especificado a ser selecionado.
+
+* Quando $FILTER contém uma seção "assunto" com um valor de "OU", um certificado precisa ter pelo menos uma unidade organizacional que corresponda ao valor especificado a ser selecionado.
+
+* Quando $FILTER está definida como {}, a seleção de certificados de cliente não é restringida também. Observe que os filtros fornecidos pelo servidor Web ainda se aplicam.
+
+Se você deixar a política não definida, não há nenhuma autoseleção para qualquer site.
 
   #### Recursos compatíveis:
   - Pode ser obrigatório: Sim
@@ -1268,8 +1283,6 @@ Use as informações anteriores ao configurar essa política.
   [PluginsAllowedForUrls](#pluginsallowedforurls) e [PluginsBlockedForUrls](#pluginsblockedforurls) são verificados primeiro e, em seguida, esta política. As opções são 'ClickToPlay' e 'BlockPlugins'. Se você definir essa política como 'BlockPlugins', esse plug-in será negado para todos os sites. 'ClickToPlay' permite a execução do plug-in do Flash, mas os usuários clicam no espaço reservado para iniciá-lo.
 
 Se você não configurar essa política, o usuário poderá alterar essa configuração manualmente.
-
-                                                                                     
 
 Observação: a reprodução automática só é permitida para domínios explicitamente listados na política [PluginsAllowedForUrls](#pluginsallowedforurls). Para ativar a reprodução automática para todos os sites, adicione http://* e https://* à lista de URLs permitidas.
 
@@ -2041,9 +2054,9 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
   - No Windows e no macOS desde 80 ou mais recente
 
   #### Descrição
-  Permite que você reverta todos os cookies para o comportamento herdado SameSite. A reversão para o comportamento herdado faz com que cookies que não especificam um atributo SameSite sejam tratados como se fossem "SameSite = None" e remove o requisito para os cookies "SameSite = None" para transmitir o atributo "Secure".
+  Permite que você reverta todos os cookies para o comportamento herdado SameSite. A reversão para o comportamento herdado causa cookies que não especificam um atributo SameSite a ser tratado como se fossem "SameSite = None", remove o requisito para os cookies "SameSite = None" para transportar o atributo "Secure" e pula a comparação de esquema ao avaliar se dois sites são de mesmo site.
 
-Se você não definir essa política, o comportamento padrão para os cookies que não especificam um atributo SameSite dependerá de outras fontes de configuração do recurso SameSite-by-default. Esse recurso pode ser definido por uma avaliação de campo ou por meio da habilitação do sinalizador de mesmo site por padrão-cookies em edge://flags.
+Se você não definir essa política, o comportamento de SameSite padrão para cookies dependerá de outras fontes de configuração do recurso SameSite-by-default, Cookies-without-SameSite-must-be-secure e Schemeful Same-Site. Esses recursos também podem ser configurados por uma avaliação de campo ou pelo sinalizador de mesmo site-por padrão-cookies, o sinalizador de cookies-sem o mesmo site-de segurança, ou o sinalizador do mesmo site no edge://flags.
 
 Mapeamento das opções de política:
 
@@ -2099,7 +2112,7 @@ Use as informações anteriores ao configurar essa política.
   #### Descrição
   Os cookies definidos para domínios que correspondem a padrões especificados voltarão para o comportamento herdado SameSite.
 
-A reversão para o comportamento herdado faz com que cookies que não especificam um atributo SameSite sejam tratados como se fossem "SameSite = None" e remove o requisito para os cookies "SameSite = None" para transmitir o atributo "Secure".
+A reversão para o comportamento herdado causa cookies que não especificam um atributo SameSite a ser tratado como se fossem "SameSite = None", remove o requisito para os cookies "SameSite = None" para transportar o atributo "Secure" e pula a comparação de esquema ao avaliar se dois sites são de mesmo site.
 
 Se você não definir essa política, o valor padrão global será utilizado. O padrão global também será usado para cookies em domínios não cobertos pelos padrões que você especificar.
 
@@ -3256,7 +3269,6 @@ Se você habilitar essa política e defini-la como:
 - "Barra de endereços" ('redirecionar'), a caixa de pesquisa da nova guia usa a barra de endereços para pesquisar novas guias.
 
 Mapeamento das opções de política:
-  
 
 * bing (bing) = Caixa de pesquisa (Recomendado)
 
@@ -3804,16 +3816,16 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   [Voltar ao início](#microsoft-edge---policies)
 
   ### AllowCrossOriginAuthPrompt
-  #### Permitir prompts de autenticação básica HTTP de origem cruzada
+  #### Permitir solicitações de autenticação HTTP Cross-Origin
   
   
   #### Versões com suporte:
   - No Windows e no macOS desde 77 ou mais recente
 
   #### Descrição
-  Controla se o subconteúdo de terceiros em uma página pode abrir uma caixa de diálogo de Autenticação Básica HTTP.
+  Controla se imagens de terceiros em uma página podem mostrar um aviso de autenticação.
 
-Geralmente, isso é desabilitado como uma defesa contra phishing. Se você não configurar essa política, ela será desabilitada e o subconteúdo de terceiros não poderá abrir uma caixa de diálogo de autenticação básica HTTP.
+Geralmente, isso é desabilitado como uma defesa contra phishing. Se você não configurar essa política, ela será desabilitada e imagens de terceiros não poderão exibir um aviso de autenticação.
 
   #### Recursos compatíveis:
   - Pode ser obrigatório: Sim
@@ -3826,7 +3838,7 @@ Geralmente, isso é desabilitado como uma defesa contra phishing. Se você não 
   #### Informações e configurações do Windows
   ##### Informações da Política de Grupo (ADMX)
   - Nome exclusivo da Política de Grupo: AllowCrossOriginAuthPrompt
-  - Nome da Política de Grupo: Permitir solicitações de autenticação básicas HTTP de várias origens
+  - Nome da GP: permitir avisos de autenticação HTTP Cross-Origin
   - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/HTTP authentication
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
@@ -4135,6 +4147,56 @@ Se você não configurar essa política, o NTLMv2 estará habilitado por padrão
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ## Configurações de política do modo de quiosque
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### KioskDeleteDownloadsOnExit
+  #### Excluir arquivos baixados como parte de uma sessão Kiosk quando o Microsoft Edge for fechado
+  
+  
+  #### Versões com suporte:
+  - No Windows desde 87 ou posterior
+
+  #### Descrição
+  Observação: essa política só tem suporte quando o Edge é inicializado com o parâmetro de linha de comando "--Edge-Kiosk-tipo".
+
+Se você habilitar essa política, os arquivos baixados como parte da sessão Kiosk serão excluídos sempre que o Microsoft Edge for fechado.
+
+Se você desabilitar essa política ou não a configurar, os arquivos baixados como parte da sessão Kiosk não serão excluídos quando o Microsoft Edge for fechado.
+
+Para obter informações detalhadas sobre como configurar o modo de quiosque, confira [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
+
+  #### Recursos compatíveis:
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### Tipo de dados:
+  - Booliano
+
+  #### Informações e configurações do Windows
+  ##### Informações da Política de Grupo (ADMX)
+  - Nome exclusivo da GP: KioskDeleteDownloadsOnExit
+  - Nome da GP: excluir arquivos baixados como parte de uma sessão Kiosk quando o Microsoft Edge é fechado
+  - Caminho da GP (obrigatório): modelos administrativos/Microsoft Edge/configurações do modo de quiosque
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+  ##### Configurações de registro do Windows
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: KioskDeleteDownloadsOnExit
+  - Tipo de valor: REG_DWORD
+  ##### Valor de exemplo:
+```
+0x00000001
+```
+
+
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ## Políticas de mensagens nativas
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -4409,12 +4471,6 @@ Obrigatório e Recomendado desabilitado: esses estados funcionam de maneira norm
 ```
 
 
-  
-  
-   
- 
- 
-   
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -5700,12 +5756,6 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 
 Se você não configurar essa política, todos os tipos de imagem de tela de fundo na página nova guia serão habilitados.
 
-    
-
-     
-
-   
-
 Mapeamento das opções de política:
 
 * DisableImageOfTheDay (1) = Desabilitar o tipo de imagem do plano de fundo diário
@@ -5754,7 +5804,6 @@ Use as informações anteriores ao configurar essa política.
 
   ### NewTabPageCompanyLogo
   #### Definir logotipo da empresa da página de nova guia (descontinuado)
-                                                                                                                 
   
   >OBSOLETA: Essa política está obsoleta e não funciona a partir da versão 85 do Microsoft Edge.
   #### Versões com suporte:
@@ -6639,8 +6688,6 @@ Se você habilitar essa política, as páginas poderão enviar solicitações XH
 
 Se você desabilitar essa política ou não configurar essa política, não será possível enviar solicitações de XHR síncronos durante o descarte da página.
 
-  
-
   #### Recursos compatíveis:
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -7218,20 +7265,6 @@ Essa política destina-se a proporcionar flexibilidade às empresas para desabil
   #### Descrição
   Se você habilitar essa política, todos os tipos de texto e configurações compatíveis do navegador especificado serão importados silenciosamente e automaticamente na primeira execução. Durante a primeira experiência de execução, a seção de importação também será ignorada.
 
- 
-
-   
-
-  
-
-   
-
-  
-
-    
-
-    
-
 Os dados do navegador Versão Prévia do Microsoft Edge serão sempre migrados silenciosamente na primeira vez, independentemente do valor desta política.
 
 Se essa política estiver definida como 'FromDefaultBrowser', os tipos de dados correspondentes ao navegador padrão no dispositivo gerenciado serão importados.
@@ -7262,7 +7295,6 @@ Observação: para obter mais detalhes sobre o que é importado do Google Chrome
 
 Se essa política estiver definida como 'FromSafari', os dados do usuário não serão mais importados para o Microsoft Edge. Isso ocorre devido à maneira como o acesso ao disco completo funciona no Mac.
 No macOS Mojave ou superior, não é mais possível ter uma importação automatizada e autônoma de dados do Safari para o Microsoft Edge.
- 
 
 A partir do Microsoft Edge versão 83, se essa política estiver definida para o valor de 'FromMozillaFirefox', os seguintes tipos de texto serão importados do Mozilla Firefox:
 1. Favoritos ou indicadores
@@ -7513,8 +7545,6 @@ Os arquivos com tipos que devem ser abertos automaticamente ainda estarão sujei
 Os tipos de arquivo que um usuário já especificou para serem abertos automaticamente, continuarão a fazê-lo quando forem baixados. O usuário continuará a ser capaz de especificar outros tipos de arquivos para serem abertos automaticamente.
 
 Se você não definir essa política, somente os tipos de arquivo que um usuário já especificou para serem abertos automaticamente o farão quando forem baixados.
-
-              
 
 Essa política está disponível apenas nas instâncias do Windows que fazem parte de um domínio do Microsoft Active Directory, em instâncias do Windows 10 Pro ou Enterprise que estejam inscritas no gerenciamento de dispositivos ou em instâncias do macOS que são gerenciadas por meio do MDM ou passaram a fazer parte de um domínio por meio de MCX.
 
@@ -8200,10 +8230,6 @@ Se você não configurar essa política, o cliente DNS interno ficará habilitad
 
   #### Descrição
   Essa política foi preterida porque seu objetivo é apenas servir como um mecanismo de curto prazo, para dar mais tempo para que as empresas atualizem seus ambientes e relatem problemas se forem considerados incompatíveis com o verificador de certificados interno.
- 
-  
-
-  
 
 Esta política não funcionará no Microsoft Edge versão 87, quando o suporte para o verificador de certificado herdado no Mac OS X está planejado para ser removido.
 
@@ -8577,8 +8603,6 @@ Para obter mais informações sobre o ClickOnce, confira [https://go.microsoft.c
 Se você habilitar essa política, os serviços e os destinos de exportação correspondentes à lista específica serão bloqueados.
 
 Se você não configurar essa política, não há restrições para os tipos de extensão aceitáveis.
-
-     
 
 Mapeamento das opções de política:
 
@@ -9047,8 +9071,6 @@ Se você desabilitar essa política, não será realizada a verificação de int
   - No Windows 7 e no macOS desde 77 ou posterior
 
   #### Descrição
-   
-
   Se você definir essa política como verdadeira, o Microsoft Edge sempre verificará na inicialização se é o navegador padrão e se registrará automaticamente, se possível.
 
 Se você definir essa política como falsa, o Microsoft Edge será interrompido de verificar se é o padrão e desativa os controles de usuário para essa opção.
@@ -9213,8 +9235,7 @@ Use as informações anteriores ao configurar essa política.
   - No Windows e no macOS desde 86 ou mais recente
 
   #### Descrição
-  
-Defina se os sites podem acessar portas seriais. Você pode bloquear completamente o acesso ou perguntar ao usuário toda vez que o site deseja obter acesso a portas seriais.
+  Defina se os sites podem acessar portas seriais. Você pode bloquear completamente o acesso ou perguntar ao usuário toda vez que o site deseja obter acesso a portas seriais.
 
 Definir a política como 3 permite que os sites solicitem acesso à portas seriais. Definir a política para 2 nega o acesso às portas seriais.
 
@@ -9914,9 +9935,7 @@ Se a pasta especificada pelo caminho não existir, o download disparará um avis
   - Tipo do valor: REG_SZ
   ##### Valor de exemplo:
 ```
-
 "\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
-             
 ```
 
 
@@ -10165,9 +10184,6 @@ SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "Exampl
 
   ### EnableDomainActionsDownload
   #### Habilitar ações de domínio para download da Microsoft (obsoleta)
-  
-  
-  
   
   >OBSOLETA: Esta política é obsoleta e não funciona após a versão 84 do Microsoft Edge.
   #### Versões com suporte:
@@ -10940,7 +10956,7 @@ Se você desabilitar essa política ou não a configurar, a Pesquisa Segura na P
   - No Windows e no macOS desde 81 ou mais recente
 
   #### Descrição
-  Essa política foi preterida porque destina-se a ser um mecanismo de curto prazo para dar mais tempo para que as empresas atualizem o conteúdo da Web se e quando ela for incompatível com a política referencial padrão atual. Ela não funcionará no Microsoft Edge versão 86.
+  Essa política foi preterida porque destina-se a ser um mecanismo de curto prazo para dar mais tempo para que as empresas atualizem o conteúdo da Web se e quando ela for incompatível com a política referencial padrão atual. Ela não funcionará no Microsoft Edge versão 88.
 
 A política referencial padrão do Microsoft Edge está sendo reforçada de seu valor atual de não-referencial-quando-faz o downgrade para origem-estrita-quando-origem-cruzada que é mais segura, através de uma implantação gradual.
 
@@ -10987,10 +11003,6 @@ Esta política corporativa está desabilitada por padrão.
   ### ForceNetworkInProcess
   #### Forçar o código de rede a executar no processo do navegador (obsoleta)
   
-  
-  
-  
-  
   >OBSOLETA: Esta política é obsoleta e não funciona após a versão 83 do Microsoft Edge.
   #### Versões com suporte:
   - No Windows desde 78 até 83
@@ -11002,10 +11014,6 @@ Essa política força o código de rede a ser executado no processo do navegador
 
 Essa política está desabilitada por padrão. Se habilitada, os usuários poderão ter problemas de segurança quando o processo de rede estiver na área restrita.
 
-
- 
-
-  
   #### Recursos compatíveis:
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -11048,7 +11056,7 @@ Essa política está desabilitada por padrão. Se habilitada, os usuários poder
 
 Se você não configurar essa política, os usuários poderão ativar ou desativar a sincronização. Se você habilitar essa política, os usuários não poderão desativar a sincronização.
 
-Para que essa política funcione conforme o esperado, a política [BrowserSignin](#browsersignin) não deve ser configurada, ou deve ser definida como habilitada. Se a [ForceSync](#forcesync) estiver definida como desabilitada, [BrowserSignin](#browsersignin) não terá efeito.
+Para que essa política funcione conforme o esperado, a política [BrowserSignin](#browsersignin) não deve ser configurada, ou deve ser definida como habilitada. Se [BrowserSignin](#browsersignin) estiver definida como desabilitada, [ForceSync](#forcesync) não terá efeito.
 
 [SyncDisabled](#syncdisabled) não deve ser configurada ou deve ser definida como false. Se ela estiver definida como true, [ForceSync](#forcesync) não terá efeito.
 
@@ -11422,7 +11430,7 @@ Para as opções de configuração exibidas na primeira experiência de execuç�
 
 - O usuário ainda será automaticamente conectado ao Microsoft Edge se a conta do Windows for do tipo Azure AD ou MSA.
 
-- A sincronização não será habilitada por padrão, e os usuários poderão ativar a sincronização a partir das configurações de sincronização.
+-A sincronização não será habilitada por padrão, e os usuários serão instruídos a escolher se deseja sincronizar na inicialização do navegador. Você pode usar as[](#forcesync)ForceSync[ ou a política [SyncDisabled](#syncdisabled) para configurar a sincronização e o aviso de consentimento de sincronização.](#forcesync)
 
 Se você desabilitar ou não configurar essa política, a primeira experiência de execução e a tela inicial Splash serão exibidas.
 
@@ -11433,6 +11441,8 @@ Observação: as opções de configuração específicas exibidas para o usuári
 -[NewTabPageLocation](#newtabpagelocation)
 
 -[NewTabPageSetFeedType](#newtabpagesetfeedtype)
+
+-[ForceSync](#forcesync)
 
 -[SyncDisabled](#syncdisabled)
 
@@ -12482,7 +12492,6 @@ Se você definir essa política como 'AllInPageNavigations', todas as navegaçõ
 Para saber mais sobre o modo do Internet Explorer, confira [https://go.microsoft.com/fwlink/?linkid=2105106](https://go.microsoft.com/fwlink/?linkid=2105106)
 
 Mapeamento das opções de política:
-  
 
 * Padrão (0) = Padrão
 
@@ -12532,13 +12541,13 @@ Use as informações anteriores ao configurar essa política.
   #### Descrição
   Essa política é um substituto para a política de sinalizador do modo IE. Permite que os usuários abram uma guia do modo IE na opção do menu UI.
 
-  Essa configuração funciona em conjunto com:   [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) está definido como 'IEMode' e [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) política na qual a lista tem pelo menos uma entrada.
+Essa configuração funciona em conjunto com a: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) está definida como "IEMode" e a política [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) onde a lista tem pelo menos uma entrada.
 
-  Se você habilitar essa política, os usuários poderão abrir a guia no modo IE da opção IU e navegar o site atual para um site modo IE.
+Se você habilitar essa política, os usuários poderão abrir a guia no modo IE da opção IU e navegar o site atual para um site modo IE.
 
-  Se você desabilitar essa política, os usuários não poderão ver a opção IU no menu diretamente. 
-  
-  Se você não configurar essa política, poderá configurar o sinalizador de teste do modo IE manualmente.
+Se você desabilitar essa política, os usuários não poderão ver a opção IU no menu diretamente.
+
+Se você não configurar essa política, poderá configurar o sinalizador de teste do modo IE manualmente.
 
   #### Recursos compatíveis:
   - Pode ser obrigatório: Sim
@@ -12579,9 +12588,13 @@ Use as informações anteriores ao configurar essa política.
 
   #### Descrição
   Especifique as origens para serem executadas isoladamente, em seus próprios processos.
+
 Essa política também isola as origens chamadas por subdomínios, por exemplo, especificar https://contoso.com/ fará https://foo.contoso.com/ ser isolada como parte do sitehttps://contoso.com/.
+
 Se a política estiver habilitada, cada uma das origens indicadas em uma lista de valores separados por vírgulas será executada em seu próprio processo.
+
 Se você desabilitar essa política, os recursos "IsolateOrigins" e "SitePerProcess" serão desabilitados. Os usuários ainda podem habilitá-las manualmente, por meio de sinalizadores de linha de comando.
+
 Se você não configurar a política, o usuário poderá alterar essa configuração.
 
   #### Recursos compatíveis:
@@ -13040,8 +13053,6 @@ Se a política [EnableMediaRouter](#enablemediarouter) estiver desabilitada, ess
   ### MetricsReportingEnabled
   #### Habilitar a geração de relatórios de dados de uso e relacionados a falhas (descontinuada)
   >SUBSTITUÍDO: Essa política está preterida. Ela tem suporte no momento, mas se tornará obsoleta em uma versão futura.
-   
-  
   
   #### Versões com suporte:
   - No Windows e no macOS desde 77 ou mais recente
@@ -13058,11 +13069,9 @@ Nos Windows 10, se você não configurar essa política, o Microsoft Edge usará
 No Windows 7, Windows 8 e macOS essa política controla o envio de dados de uso e relacionados a falhas. Se você não configurar essa política, o padrão do Microsoft Edge será a preferência do usuário.
 
 Para habilitar essa política, [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) deve ser configurado como Habilitado. Se [MetricsReportingEnabled](#metricsreportingenabled) ou [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) estiverem com status Não Configurado ou Desabilitado os dados não serão enviados para a Microsoft.
-           
 
 Essa política está disponível apenas nas instâncias do Windows que fazem parte de um domínio do Microsoft Active Directory, em instâncias do Windows 10 Pro ou Enterprise que estejam inscritas no gerenciamento de dispositivos ou em instâncias do macOS que são gerenciadas por meio do MDM ou passaram a fazer parte de um domínio por meio de MCX.
 
-  
   #### Recursos compatíveis:
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -13299,53 +13308,6 @@ Essa política só está disponível em instâncias do Windows que fazem parte d
 
   
 
-
- 
-   
- 
-
-   
-  
-
-   
-
-   
-
-  
- 
-  
- 
-
-  
-   
-
-   
-  
-   
-   
-  
-   
- 
-   
-   
-   
-  
- 
- 
-   
- 
-   
-
-
-  
-  
-   
- 
- 
-   
-  
-
- 
   [Voltar ao início](#microsoft-edge---policies)
 
   ### OverrideSecurityRestrictionsOnInsecureOrigin
@@ -14101,12 +14063,6 @@ Se você não configurar essa política, o caminho de perfil móvel será utiliz
 
 
   
-  
-   
- 
- 
-   
-  
 
   [Voltar ao início](#microsoft-edge---policies)
 
@@ -14152,12 +14108,6 @@ Confira https://docs.microsoft.com/windows-server/storage/folder-redirection/dep
 ```
 
 
-  
-  
-   
- 
- 
-   
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -14270,9 +14220,9 @@ Se você desabilitar essa política, os usuários serão impedidos de clicar em 
   - No Windows e no macOS desde 77 ou mais recente
 
   #### Descrição
-  Define a versão mínima suportada do SSL. Se você não configurar essa política, o Microsoft Edge usará uma versão mínima padrão, TLS 1,0.
+  Define a versão mínima suportada do TLS. Se você não configurar essa política, o Microsoft Edge usará uma versão mínima padrão, TLS 1,0.
 
-Se você habilitar essa política, poderá definir a versão mínima como um dos seguintes valores: 'TLSv1', 'TLSv1.1' or 'TLSv1.2'. Quando definido, o Microsoft Edge não usa nenhuma versão de SSL/TLS inferior à versão especificada. Todos os valores não reconhecidos são ignorados.
+Se você habilitar essa política, o Microsoft Edge não usará qualquer versão de SSL/TLS inferior à versão especificada. Todos os valores não reconhecidos são ignorados.
 
 Mapeamento das opções de política:
 
@@ -14675,8 +14625,6 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
   ### SendSiteInfoToImproveServices
   #### Enviar informações de sites para aprimorar os serviços da Microsoft (descontinuado)
   >SUBSTITUÍDO: Essa política está preterida. Ela tem suporte no momento, mas se tornará obsoleta em uma versão futura.
-   
-  
   
   #### Versões com suporte:
   - No Windows e no macOS desde 77 ou mais recente
@@ -14686,7 +14634,6 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
 Essa política permite o envio de informações sobre sites visitados no Microsoft Edge para a Microsoft visando melhorar serviços, tais como a pesquisa.
 
-   
 Habilite essa política para enviar informações sobre os sites visitados no Microsoft Edge para a Microsoft. Desabilite essa política para não enviar informações sobre os sites visitados no Microsoft Edge para a Microsoft. Em ambos os casos, os usuários não poderão alterar nem substituir a configuração.
 
 Nos Windows 10, se você não configurar essa política, o Microsoft Edge usará como padrão a configuração de dados de diagnóstico do Windows. Se essa política estiver habilitada, o Microsoft Edge enviará informações sobre os sites visitados no Microsoft Edge se a configuração de dados de diagnóstico do Windows estiver definida como Completa. Se essa política estiver desabilitada, o Microsoft Edge não enviará informações sobre os sites visitados. Saiba mais sobre as configurações de Dados de diagnóstico do Windows:[https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
@@ -14694,7 +14641,6 @@ Nos Windows 10, se você não configurar essa política, o Microsoft Edge usará
 No Windows 7, Windows 8 e macOS, essa política controla o envio de informações sobre sites visitados. Se você não configurar essa política, o padrão do Microsoft Edge será a preferência do usuário.
 
 Para habilitar essa política, [MetricsReportingEnabled](#metricsreportingenabled) deve ser configurado como habilitado. Se [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) ou [MetricsReportingEnabled](#metricsreportingenabled) estiverem com status Não Configurado ou Desabilitado os dados não serão enviados para a Microsoft.
-             
 
   #### Recursos compatíveis:
   - Pode ser obrigatório: Sim
@@ -14976,12 +14922,10 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   - No Windows e no macOS desde 77 ou mais recente
 
   #### Descrição
-  Esta política não funcionou conforme o esperado devido a alterações nos requisitos operacionais. Portanto, é obsoleto e não deve ser utilizado.
+  Esta política não funcionou conforme o esperado devido a alterações nos requisitos operacionais. Therefore it's deprecated and should not be used.
 
-Especifica se um atalho deve ser incluído no Office.com na barra de favoritos. Para usuários conectados ao Microsoft Edge, o atalho leva os usuários a seus aplicativos e documentos do Microsoft Office. Se você habilitar ou não configurar esta política, os usuários poderão escolher se querem ver o atalho alterando o botão de alternância no menu de contexto da barra de favoritos.
+Especifica se um atalho deve ser incluído no Office.com na barra de favoritos. For users signed into Microsoft Edge the shortcut takes users to their Microsoft Office apps and docs. If you enable or don't configure this policy, users can choose whether to see the shortcut by changing the toggle in the favorites bar context menu.
 Se você desativar esta política, o atalho não será mostrado.
-
-                                                       
 
   #### Recursos compatíveis:
   - Pode ser obrigatório: Sim
@@ -15077,9 +15021,10 @@ Se essa política estiver definida como desabilitada, as trocas HTTP assinadas n
   - No Windows e no macOS desde 77 ou mais recente
 
   #### Descrição
-  
-A política "SitePerProcess" pode ser usada para impedir que os usuários façam o comportamento padrão de isolar todos os sites. Lembre-se de que você também pode usar a política [IsolateOrigins](#isolateorigins)para isolar origens adicionais e mais refinadas.
+  A política "SitePerProcess" pode ser usada para impedir que os usuários façam o comportamento padrão de isolar todos os sites. Lembre-se de que você também pode usar a política [IsolateOrigins](#isolateorigins)para isolar origens adicionais e mais refinadas.
+
 Se você habilitar essa política, os usuários não poderão recusar o comportamento padrão em que cada site é executado em seu próprio processo.
+
 Se você desabilitar ou não configurar essa política, um usuário poderá optar por não isolar o site.  (Por exemplo, usando a entrada "Desabilitar isolamento de site" em edge://flags.)  Desabilitar a política ou não configurar a política não desativa o isolamento do site.
 
 
@@ -15289,8 +15234,6 @@ Se você definir a política como falsa, as atualizações automáticas serão d
 
 Essa política não afeta outros tipos de conteúdo misto diferentes de áudio, vídeo e imagens.
 
-
-  
   #### Recursos compatíveis:
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -15385,8 +15328,6 @@ Se essa política for falsa ou não estiver configurada, os avisos serão exibid
   #### Descrição
   Desabilita a sincronização de dados no Microsoft Edge. Essa política também impede que a solicitação de consentimento de sincronização apareça.
 
-
- 
 Se você não definir essa política ou aplicá-la conforme recomendado, os usuários poderão ativar ou desativar a sincronização. Se você aplicar essa política como obrigatória, os usuários não poderão ativar a sincronização.
 
   #### Recursos compatíveis:
@@ -15481,7 +15422,6 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
   ### TLS13HardeningForLocalAnchorsEnabled
   #### Habilitar um recurso de segurança TLS 1.3 para âncoras de confiança locais (obsoleto)
   
-  
   >OBSOLETA: Essa política está obsoleta e não funciona a partir da versão 85 do Microsoft Edge.
   #### Versões com suporte:
   - No Windows e no macOS, desde a 81 até a 85
@@ -15494,10 +15434,6 @@ Esta política controla um recurso de segurança no TLS 1.3 que protege as conex
 Se você habilitar essa política ou não a definir, o Microsoft Edge habilitará estas proteções de segurança para todas as conexões.
 
 Se você desabilitar essa política, o Microsoft Edge desabilitará estas proteções de segurança para conexões autenticadas com Certificados de Autoridade de Certificação instalados localmente. Essas proteções estão sempre ativadas para conexões autenticadas com Certificados de Autoridade de Certificação de confiança pública.
-
-                                                            
-
-             
 
 Essa política pode ser usada para testar todos os proxies afetados e atualizá-los. Espera-se que os proxies afetados falhem nas conexões com um código de erro de ERR_TLS13_DOWNGRADE_DETECTED.
 
@@ -15761,8 +15697,6 @@ Se você não definir essa política, o navegador só tentará economizar memór
 Se você desabilitar essa política ou não a configurar, os usuários poderão definir seu próprio nível de prevenção de rastreamento.
 
 Mapeamento das opções de política:
-   
- 
 
 * TrackingPreventionOff (0) = Desativado (sem prevenção contra rastreamento)
 
@@ -16367,16 +16301,9 @@ Independente da política ser habilitada, a configuração de otimização WPAD 
   - No Windows e no macOS desde 80 ou mais recente
 
   #### Descrição
-  Especifica uma lista de sites que são instalados silenciosamente, sem interação do usuário e que não podem ser desinstalados ou desativados pelo usuário.
+  Configure essa política para especificar uma lista de aplicativos Web que são instalados silenciosamente, sem interação do usuário e quais usuários não podem desinstalar ou desativar.
 
-Cada item da lista da política é um objeto com os seguintes membros:
-  - "URL", que é obrigatório. "URL" deve ser a URL do aplicativo Web a ser instalado.
-
-Os valores para os membros opcionais são:
-  - "launch_container" deve ser "window" ou "tab" para indicar como o aplicativo web será aberto depois de instalado.
-  - "create_desktop_shortcut" deve ser verdadeiro se um atalho da área de trabalho deve ser criado no Windows.
-
-Se "default_launch_container" for omitido, o aplicativo será aberto em uma guia por padrão. Independentemente do valor de "default_launch_container", os usuários podem alterar o contêiner no qual o aplicativo será aberto. Se "create_desktop_shortcuts" for omitido, nenhum atalho da área de trabalho será criado.
+Cada item de lista da política é um objeto com membro obrigatório: URL (a URL do aplicativo Web a ser instalada) e 2 Membros opcionais: default_launch_container (especifica o modo de janela que o aplicativo Web abre com uma nova guia é o padrão) e o create_desktop_shortcut (verdadeiro se quiser criar atalhos para a área de trabalho do Linux e Windows).
 
   #### Recursos compatíveis:
   - Pode ser obrigatório: Sim
@@ -16443,9 +16370,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ### WebComponentsV0Enabled
   #### Reabilitar a API de componentes Web V0 até M84 (obsoleta)
   
-  
-  
-  
   >OBSOLETA: Esta política é obsoleta e não funciona após a versão 84 do Microsoft Edge.
   #### Versões com suporte:
   - No Windows e no macOS desde 80 até 84
@@ -16496,17 +16420,12 @@ Se você definir essa política como falsa ou não definir essa política, os re
   ### WebDriverOverridesIncompatiblePolicies
   #### Permitir que o WebDriver substitua políticas incompatíveis (obsoleta)
   
-  
-  
-  
   >OBSOLETA: Esta política é obsoleta e não funciona após a versão 84 do Microsoft Edge.
   #### Versões com suporte:
   - No Windows e no macOS desde 77 até 84
 
   #### Descrição
-  
-  
-Essa política não funciona porque o WebDriver agora é compatível com todas as políticas existentes.
+  Essa política não funciona porque o WebDriver agora é compatível com todas as políticas existentes.
 
 Essa política permite que os usuários do recurso WebDriver substituam políticas que possam interferir na operação.
 
