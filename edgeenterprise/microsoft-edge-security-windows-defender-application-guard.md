@@ -3,19 +3,19 @@ title: Microsoft Edge e Microsoft Defender Application Guard
 ms.author: srugh
 author: dan-wesley
 manager: seanlyn
-ms.date: 10/02/2020
+ms.date: 10/12/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Suporte do Microsoft Edge para o Windows Defender Application Guard
-ms.openlocfilehash: 7052c8cee9282c0ca2f5cafaa608e7e4e71d111d
-ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
+ms.openlocfilehash: fcf9bb6e36ddd5e014bd8176643554bfe3ff8fd4
+ms.sourcegitcommit: b813f91803b8f0f27489634f49e7e0585b746d48
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "11094755"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "11114359"
 ---
 # Suporte do Microsoft Edge para o Windows Defender Application Guard
 
@@ -122,3 +122,4 @@ Sim. [Perguntas frequentes - Microsoft Defender Application Guard](https://docs.
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Proteção Avançada contra Ameaças do Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
+- [Vídeo: Isolamento de navegador Microsoft Edge usando o Application Guard](https://www.youtube.com/watch?v=zQjaRqNXMqw&t=3s)
