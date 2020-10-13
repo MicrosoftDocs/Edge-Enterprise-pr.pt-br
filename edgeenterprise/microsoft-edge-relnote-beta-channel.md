@@ -3,19 +3,19 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 10/07/2020
+ms.date: 10/12/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: 3108af527697a15875bc615deb6c3efe19a120d3
-ms.sourcegitcommit: 5dceccd6f882ce46ed53b8aa9247e115ce5adc7a
+ms.openlocfilehash: fdef5540214e80599c53d3802c9f34dacbfe7697
+ms.sourcegitcommit: b813f91803b8f0f27489634f49e7e0585b746d48
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "11104576"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "11114399"
 ---
 # Notas de versão do canal do Microsoft Edge beta
 
@@ -230,7 +230,7 @@ Correção de vários bugs e problemas de desempenho.
 
 - **A API de Acesso ao Armazenamento está disponível**. A API de Acesso ao Armazenamento permite acesso ao armazenamento primário em um contexto de terceiros quando um usuário tem providenciado uma intenção direta de permitir o armazenamento que de outra forma seria bloqueado pela configuração atual do navegador. Para saber mais, veja [API de Acesso de Armazenamento](https://www.chromestatus.com/feature/5612590694662144).
 
-- **Enviar para o OneNote está disponível nas Coleções do Microsoft Edge**. Todos estão entusiasmados em poder enviar as informações que eles reunirão nas Coleções para o OneNote, onde podem acrescentá-las a um projeto maior e colaborar com outras pessoas! E ainda mais importante, no Microsoft Edge 85, você poderá enviar conteúdo para produtos do *Office para Mac* (Word, Excel e OneNote) tanto para o MSA como para o Azure Active Directory.
+- **Enviar para o OneNote está disponível nas Coleções do Microsoft Edge**. Todos estão entusiasmados em poder enviar as informações que eles reunirão nas Coleções para o OneNote, onde podem acrescentá-las a um projeto maior e colaborar com outras pessoas! E ainda mais importante, no Microsoft Edge 85, você poderá enviar conteúdo para produtos do *Office para Mac* (Word, Excel e OneNote) tanto para a conta Microsoft como para o Azure Active Directory.
 
 - **Atualizações do DevTools**. Para obter detalhes sobre as atualizações a seguir, confira [Novidades no DevTools (Microsoft Edge 85)](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/whats-new/2020/06/devtools).
 
@@ -477,7 +477,7 @@ Correção de vários bugs e problemas de desempenho.
 
 - Permitir a remoção (Ocultar da barra de ferramentas) do botão coleções na barra de ferramentas do Microsoft Edge para obter consistência.
 
-- A entrada local de uma conta do Active Directory local só será direcionada a organizações que as ativam.  Se os usuários já tiverem entrado com uma conta do AD local, eles poderão sair dela. Agora, os usuários só entrarão automaticamente com a conta primária em seu sistema operacional se for um MSA ou uma conta do Azure AD. Os administradores podem habilitar para entrar automaticamente com uma conta do AD local usando a política ConfigureOnPremisesAccountAutoSignIn.
+- A entrada local de uma conta do Active Directory local só será direcionada a organizações que as ativam. Se os usuários já tiverem entrado com uma conta do AD local, eles poderão sair dela. Agora, os usuários só entrarão automaticamente com a conta primária em seu sistema operacional se for uma conta Microsoft ou uma conta do Azure Active Directory. Os administradores podem habilitar para entrar automaticamente com uma conta do AD local usando a política ConfigureOnPremisesAccountAutoSignIn.
 
 - Application Guard. Suporte para extensões agora disponível no contêiner.
 
