@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 906a8cdd73e07efc5662e9b3ea51d8b7a2f03079
-ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
+ms.openlocfilehash: 9a0a9157f1176f935ba2462ee34abb3ebb708b66
+ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "11094745"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "11105725"
 ---
 # Microsoft Edge - Políticas
 A versão mais recente do Microsoft Edge inclui as políticas a seguir. Você pode usar essas políticas para configurar como o Microsoft Edge será executado em sua organização.
@@ -255,7 +255,7 @@ e dicas para os serviços Microsoft|
 |[DownloadRestrictions](#downloadrestrictions)|Permitir restrições de download|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Habilitar o recurso Coleções|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Permite que os usuários editem favoritos|
-|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Reabilitar os recursos de plataforma da Web reaprovados por um tempo limitado|
+|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time (obsolete)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Habilitar ações de domínio para download da Microsoft (obsoleta)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Habilitar verificações OCSP/CRL online|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Permitir certificados assinados usando SHA-1 quando emitido por âncoras de confiança local (substituídos)|
@@ -345,6 +345,7 @@ e dicas para os serviços Microsoft|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Exibir o atalho do Microsoft Office na barra de favoritos (obsoleto)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Habilitar o suporte para o Exchange HTTP (SXG) assinado|
 |[SitePerProcess](#siteperprocess)|Habilitar o isolamento de sites para todos os sites|
+|[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
 |[SpellcheckEnabled](#spellcheckenabled)|Habilitar verificação ortográfica|
 |[SpellcheckLanguage](#spellchecklanguage)|Habilitar idiomas de verificação ortográfica específicos|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|Forçar a desabilitação de idiomas de verificação ortográfica|
@@ -10120,14 +10121,16 @@ Desabilite essa política para impedir que os usuários adicionem, removam ou mo
   [Voltar ao início](#microsoft-edge---policies)
 
   ### EnableDeprecatedWebPlatformFeatures
-  #### Reabilitar os recursos de plataforma da Web reaprovados por um tempo limitado
+  #### Re-enable deprecated web platform features for a limited time (obsolete)
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
   #### Versões com suporte:
-  - No Windows e no macOS desde 77 ou mais recente
+  - On Windows and macOS since 77, until 86
 
   #### Descrição
-  Especifique uma lista de recursos de Web Platform substituídos para reabilitar temporariamente.
+  This policy is obsolete because dedicated web platform policies are now used to manage individual web platform feature deprecations.
+
+Especifique uma lista de recursos de Web Platform substituídos para reabilitar temporariamente.
 
 Essa política permite reabilitar os recursos de plataforma da Web reaprovados por um tempo limitado. Os recursos são identificados por uma marca de cadeia de caracteres.
 
@@ -10154,7 +10157,7 @@ Use as informações anteriores ao configurar essa política.
   #### Informações e configurações do Windows
   ##### Informações da Política de Grupo (ADMX)
   - Nome Exclusivo da Política de Grupo: EnableDeprecatedWebPlatformFeatures
-  - Nome da Política de Grupo: Reabilitar os recursos de plataforma da Web reaprovados por um tempo limitado
+  - GP name: Re-enable deprecated web platform features for a limited time (obsolete)
   - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
@@ -15056,6 +15059,58 @@ Se você desabilitar ou não configurar essa política, um usuário poderá opta
 
   #### Informações e configurações do Mac
   - Nome da chave de preferência: SitePerProcess
+  - Valor de exemplo:
+``` xml
+<true/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### SpeechRecognitionEnabled
+  #### Configure Speech Recognition
+  
+  
+  #### Versões com suporte:
+  - On Windows and macOS since 87 or later
+
+  #### Descrição
+  Set whether websites can use the W3C Web Speech API to recognize speech from the user. The Microsoft Edge implementation of the Web Speech API uses Azure Cognitive Services, so voice data will leave the machine.
+
+If you enable or don't configure this policy, web-based applications that use the Web Speech API can use Speech Recognition.
+
+If you disable this policy, Speech Recognition is not available through the Web Speech API.
+
+Read more about this feature here: SpeechRecognition API: [https://go.microsoft.com/fwlink/?linkid=2143388](https://go.microsoft.com/fwlink/?linkid=2143388) Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
+
+  #### Recursos compatíveis:
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### Tipo de dados:
+  - Booliano
+
+  #### Informações e configurações do Windows
+  ##### Informações da Política de Grupo (ADMX)
+  - GP unique name: SpeechRecognitionEnabled
+  - GP name: Configure Speech Recognition
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+  ##### Configurações de registro do Windows
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Value Name: SpeechRecognitionEnabled
+  - Tipo de valor: REG_DWORD
+  ##### Valor de exemplo:
+```
+0x00000001
+```
+
+
+  #### Informações e configurações do Mac
+  - Preference Key Name: SpeechRecognitionEnabled
   - Valor de exemplo:
 ``` xml
 <true/>

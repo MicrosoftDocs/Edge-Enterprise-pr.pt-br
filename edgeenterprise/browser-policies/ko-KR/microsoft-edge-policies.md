@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/28/2020
+ms.date: 10/02/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 71d0127aa55f3784e94a8cc927d29acd70c2d99c
-ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
+ms.openlocfilehash: f13df737d2086bb5ddd3f99f234be16afc9d9cd0
+ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "11094655"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "11105705"
 ---
 # Microsoft Edge - 정책
 최신 버전의 Microsoft Edge에는 다음과 같은 정책이 포함되어 있습니다. 이러한 정책을 사용하여 조직에서 Microsoft Edge가 실행되는 방식을 구성할 수 있습니다.
@@ -53,7 +53,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대 해 [Microsof
 ### [*HTTP 인증*](#http-인증-policies)
 |정책 이름|설명|
 |-|-|
-|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|Allow cross-origin HTTP Authentication prompts|
+|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|Permitir solicitações de autenticação HTTP Cross-Origin|
 |[AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)|Microsoft Edge가 사용자 자격 증명을 위임할 수 있는 서버 목록을 지정합니다.|
 |[AuthSchemes](#authschemes)|지원되는 인증 방식|
 |[AuthServerAllowlist](#authserverallowlist)|허용된 인증 서버의 목록 구성|
@@ -254,7 +254,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대 해 [Microsof
 |[DownloadRestrictions](#downloadrestrictions)|다운로드 제한 허용|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|컬렉션 기능 사용|
 |[EditFavoritesEnabled](#editfavoritesenabled)|사용자가 즐겨찾기를 편집할 수 있도록 허용|
-|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|제한된 기간 동안 사용되지 않은 웹 플랫폼 기능 다시 사용|
+|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|제한된 기간 동안 사용되지 않은 웹 플랫폼 기능 다시 사용 (사용하지 않음)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Microsoft에서 도메인 작업 다운로드 사용 (사용하지 않음)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|온라인 OCSP/CRL 검사 사용|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|로컬 신뢰 앵커로 발급될 때 SHA-1을 사용하여 서명된 인증서 허용 (사용되지 않음)|
@@ -344,6 +344,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대 해 [Microsof
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|즐겨 찾기 모음에 Microsoft Office 바로 가기 표시 (사용되지 않음)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|서명된 HTTP 교환(SXG) 지원 사용|
 |[SitePerProcess](#siteperprocess)|모든 사이트에 대해 사이트 격리 사용|
+|[SpeechRecognitionEnabled](#speechrecognitionenabled)|음성 인식 구성|
 |[SpellcheckEnabled](#spellcheckenabled)|맞춤법 검사 사용|
 |[SpellcheckLanguage](#spellchecklanguage)|특정 맞춤법 검사 언어 사용|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|맞춤법 검사 언어 강제 사용 안 함|
@@ -3257,21 +3258,21 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   - Windows 및 macOS 이후 77 이상
 
   #### 설명
-  Setting the policy lets you make a list of URL patterns that specify sites for which Microsoft Edge can automatically select a client certificate. The value is an array of stringified JSON dictionaries, each with the form { "pattern": "$URL_PATTERN", "filter" : $FILTER }, where $URL_PATTERN is a content setting pattern. $FILTER restricts the client certificates the browser automatically selects from. Independent of the filter, only certificates that match the server's certificate request are selected.
+  정책을 설정하면 Microsoft Edge에서 클라이언트 인증서를 자동으로 선택할 수 있는 사이트를 지정할 URL 패턴 목록을 적용할 수 있습니다. 값은 문자열로 변환된 JSON 사전 배열을 사용하여, 각 문자열에 { "pattern": "$URL_PATTERN", "filter" : $FILTER } 양식이 포함되며, 여기에서 $URL_PATTERN은(는) 콘텐츠 설정 패턴입니다. $FILTER은(는) 브라우저가 여기의 클라이언트 인증서를 자동으로 선택하도록 제한합니다. 필터와 관계없이 서버의 인증서 요청과 일치하는 인증서만 선택됩니다.
 
-Examples for the usage of the $FILTER section:
+$FILTER 섹션의 사용 예:
 
-* When $FILTER is set to { "ISSUER": { "CN": "$ISSUER_CN" } }, only client certificates issued by a certificate with the CommonName $ISSUER_CN are selected.
+* $FILTER 기능을 { "ISSUER": { "CN": "$ISSUER_CN" } }(으)로 설정하면 CommonName이 $ISSUER_CN인 인증서에서 발급한 클라이언트 인증서만 선택됩니다.
 
-* When $FILTER contains both the "ISSUER" and the "SUBJECT" sections, only client certificates that satisfy both conditions are selected.
+* $FILTER에 "ISSUER" 및 "SUBJECT"의 두 섹션이 포함되어 있는 경우 두 조건을 모두 만족하는 클라이언트 인증서만 선택됩니다.
 
-* When $FILTER contains a "SUBJECT" section with the "O" value, a certificate needs at least one organization matching the specified value to be selected.
+* $FILTER에 값이 "O"인 "SUBJECT" 섹션이 있으면 지정된 값과 일치하는 조직이 하나 이상 있는 인증서를 선택해야 합니다.
 
-* When $FILTER contains a "SUBJECT" section with a "OU" value, a certificate needs at least one organizational unit matching the specified value to be selected.
+* $FILTER에 값이 "OU"인 "SUBJECT" 섹션이 있는 경우 지정된 값과 일치하는 조직 구성 단위가 하나 이상 있는 인증서를 선택해야 합니다.
 
-* When $FILTER is set to {}, the selection of client certificates is not additionally restricted. Note that filters provided by the web server still apply.
+* $FILTER 기능을 {}(으)로 설정하면 클라이언트 인증서를 추가 제한 없이 선택할 수 있습니다. 그렇지만 웹 서버에서 제공하는 필터는 계속 적용됩니다.
 
-If you leave the policy unset, there's no autoselection for any site.
+정책을 설정하지 않고 놔두면 어떤 사이트에 대해서도 자동 선택 기능이 적용되지 않습니다.
 
   #### 지원되는 기능:
   - 필수일 수 있음: 예
@@ -4747,9 +4748,9 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
   - Windows 및 macOS 이후 80 이상
 
   #### 설명
-  Permite que você reverta todos os cookies para o comportamento herdado SameSite. Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
+  Permite que você reverta todos os cookies para o comportamento herdado SameSite. A reversão para o comportamento herdado causa cookies que não especificam um atributo SameSite a ser tratado como se fossem "SameSite = None", remove o requisito para os cookies "SameSite = None" para transportar o atributo "Secure" e pula a comparação de esquema ao avaliar se dois sites são de mesmo site.
 
-If you don't set this policy, the default SameSite behavior for cookies will depend on other configuration sources for the SameSite-by-default feature, the Cookies-without-SameSite-must-be-secure feature, and the Schemeful Same-Site feature. These features can also be configured by a field trial or the same-site-by-default-cookies flag, the cookies-without-same-site-must-be-secure flag, or the schemeful-same-site flag in edge://flags.
+Se você não definir essa política, o comportamento de SameSite padrão para cookies dependerá de outras fontes de configuração do recurso SameSite-by-default, Cookies-without-SameSite-must-be-secure e Schemeful Same-Site. These features can also be configured by a field trial or the same-site-by-default-cookies flag, the cookies-without-same-site-must-be-secure flag, or the schemeful-same-site flag in edge://flags.
 
 정책 옵션 매핑:
 
@@ -4805,7 +4806,7 @@ If you don't set this policy, the default SameSite behavior for cookies will dep
   #### 설명
   Os cookies definidos para domínios que correspondem a padrões especificados voltarão para o comportamento herdado SameSite.
 
-Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
+A reversão para o comportamento herdado causa cookies que não especificam um atributo SameSite a ser tratado como se fossem "SameSite = None", remove o requisito para os cookies "SameSite = None" para transportar o atributo "Secure" e pula a comparação de esquema ao avaliar se dois sites são de mesmo site.
 
 Se você não definir essa política, o valor padrão global será utilizado. O padrão global também será usado para cookies em domínios não cobertos pelos padrões que você especificar.
 
@@ -10120,14 +10121,16 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
   [맨 위로 이동](#microsoft-edge---정책)
 
   ### EnableDeprecatedWebPlatformFeatures
-  #### 제한된 기간 동안 사용되지 않은 웹 플랫폼 기능 다시 사용
+  #### 제한된 기간 동안 사용되지 않은 웹 플랫폼 기능 다시 사용 (사용하지 않음)
   
-  
+  >사용되지 않음: 이 정책은 사용되지 않으며 Microsoft Edge 86 이후에는 작동되지 않습니다.
   #### 지원되는 버전:
-  - Windows 및 macOS 이후 77 이상
+  - Windows macOS 77 이후 86
 
   #### 설명
-  일시적으로 다시 사용하도록 사용 중단된 기능을 일시적으로 다시 사용할 수 있게 웹 플랫폼 기능 목록을 지정합니다.
+  전용 웹 플랫폼 정책이 개별 웹 플랫폼 기능 사용 중단을 관리하는 데 사용되기 때문에 이 정책은 더 이상 사용되지 않습니다.
+
+일시적으로 다시 사용하도록 사용 중단된 기능을 일시적으로 다시 사용할 수 있게 웹 플랫폼 기능 목록을 지정합니다.
 
 이 정책을 사용하면 제한된 기간 동안 사용 중단된 웹 플랫폼 기능을 다시 활성화할 수 있습니다.기능은 문자열 태그로 식별됩니다.
 
@@ -10154,7 +10157,7 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
   #### Windows 정보 및 설정
   ##### 그룹 정책(ADMX) 정보
   - GP 고유 이름: EnableDeprecatedWebPlatformFeatures
-  - GP 이름: 제한된 기간 동안 사용되지 않은 웹 플랫폼 기능 다시 사용
+  - GP 이름: 제한된 기간 동안 사용되지 않은 웹 플랫폼 기능 다시 사용 (사용하지 않음)
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (맞춤): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
@@ -14226,7 +14229,7 @@ Adobe Flash를 실행하도록 허용할 웹 사이트를 제어하려면 [Defau
   #### 설명
   Sets the minimum supported version of TLS. Se você não configurar essa política, o Microsoft Edge usará uma versão mínima padrão, TLS 1,0.
 
-If you enable this policy, Microsoft Edge won't use any version of SSL/TLS lower than the specified version. Todos os valores não reconhecidos são ignorados.
+Se você habilitar essa política, o Microsoft Edge não usará qualquer versão de SSL/TLS inferior à versão especificada. Todos os valores não reconhecidos são ignorados.
 
 정책 옵션 매핑:
 
@@ -15057,6 +15060,59 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   #### Mac 정보 및 설정
   - 기본 설정 키 이름: SitePerProcess
+  - 예제 값:
+``` xml
+<true/>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---정책)
+
+  ### SpeechRecognitionEnabled
+  #### 음성 인식 구성
+  
+  
+  #### 지원되는 버전:
+  - Windows 및 macOS 이후 87 이상
+
+  #### 설명
+  웹 사이트에서 W3C Web Speech API를 사용하여 사용자의 음성을 인식할 수 있는지 여부를 설정합니다. Microsoft Edge에서의 Web Speech API 구현은 Azure Cognitive Services를 사용하여 음성 데이터는 컴퓨터를 그대로 유지합니다.
+
+이 정책을 사용하거나 구성하지 않으면 Web Speech API를 사용하는 웹 기반 응용 프로그램에서 음성 인식을 사용할 수 있습니다.
+
+이 정책을 사용하지 않으면 Web Speech API를 통해 음성 인식을 사용할 수 없습니다.
+
+이 기능에 대한 자세한 정보는 다음에서 확인하세요.
+음성 인식 API: [https://go.microsoft.com/fwlink/?linkid=2143388](https://go.microsoft.com/fwlink/?linkid=2143388) Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
+
+  #### 지원되는 기능:
+  - 필수일 수 있음: 예
+  - 권장될 수 있음: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+  - 부울
+
+  #### Windows 정보 및 설정
+  ##### 그룹 정책(ADMX) 정보
+  - GP 고유 이름: SpeechRecognitionEnabled
+  - GP 이름: 음성 인식 구성
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (맞춤): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+  ##### Windows 레지스트리 설정
+  - 경로 (필수): SOFTWARE\Policies\Microsoft\Edge
+  - 경로 (맞춤): 해당 없음
+  - 값 이름: SpeechRecognitionEnabled
+  - 값 형식: REG_DWORD
+  ##### 예제 값:
+```
+0x00000001
+```
+
+
+  #### Mac 정보 및 설정
+  - 기본 설정 키 이름: SpeechRecognitionEnabled
   - 예제 값:
 ``` xml
 <true/>
