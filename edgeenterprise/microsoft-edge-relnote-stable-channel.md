@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Stable Channel
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 10/12/2020
+ms.date: 10/13/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: b01b431e117bc528187ee665bd314aab2df6d7e2
-ms.sourcegitcommit: b813f91803b8f0f27489634f49e7e0585b746d48
+ms.openlocfilehash: f624562f6c357940576138b2cb51e6a7ccdb75f2
+ms.sourcegitcommit: cc39d3a3e36a273261c0c3fb6ed859de1dd56fa2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "11114389"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "11115902"
 ---
 # Notas de versão do Microsoft Edge Stable Channel
 
@@ -46,7 +46,6 @@ As atualizações de segurança estão listadas [aqui](https://docs.microsoft.co
   * **Substituir as políticas [MetricsReportingEnabled]( https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) e [SendSiteInformationToImproveServices]( https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) para versões inferiores do Windows e macOS.** Essas políticas foram preteridas na versão 86 do Microsoft Edge e se tornarão preteridas na versão 89 do Microsoft Edge.<br>
 Essas políticas são substituídas por [Permitir Telemetria](https://go.microsoft.com/fwlink/?linkid=2099569) no Windows 10 e a nova política [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) para todas as outras políticas. Isso permitirá que os usuários gerenciem os dados de diagnóstico enviados para a Microsoft do Windows 7, 8, 8.1 e macOS.
   * Suporte ao DNS seguro (DNS em HTTPS).  A partir da versão 86 do Microsoft Edge, as configurações para controlar o DNS seguro em dispositivos não gerenciados estarão disponíveis. Essas configurações não podem ser acessadas por usuários em dispositivos gerenciados, mas os administradores de TI podem habilitar ou desabilitar o DNS seguro usando a política de grupo [dnsoverhttpsmode](https://docs.microsoft.com/deployedge/microsoft-edge-policies#dnsoverhttpsmode).
-  * Senhas encontradas em um vazamento online. O Microsoft Edge verifica as senhas no repositório de credenciais violadas conhecidas e alerta o usuário se uma correspondência for encontrada.
 
 * **Modo de Internet Explorer:** Permita que os usuários usem a interface do usuário (UI) do Microsoft Edge para testar sites no modo Internet Explorer. A partir da versão 86 do Microsoft Edge, os administradores poderão habilitar uma opção da interface do usuário para seus usuários para carregar uma guia no modo Internet Explorer para fins de teste ou como um stopgap até que os sites sejam adicionados ao XML da lista de sites.
 
