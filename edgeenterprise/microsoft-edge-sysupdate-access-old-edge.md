@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Saiba como acessar a versão herdada do Microsoft Edge.
-ms.openlocfilehash: e5a97a487dc6b3a45504a721e460a69103b0174e
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: e4733d020f3a681ded50e5a087fe086d39362201
+ms.sourcegitcommit: f7f7eb69d2298b0f9779a9fd28e3c4e297ef2e05
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979103"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125513"
 ---
 # Acessar a Versão Herdada do Microsoft Edge depois de instalar a nova versão do Microsoft Edge
 
@@ -35,6 +35,8 @@ Embora a maioria das organizações queira substituir o Microsoft Edge Legacy pe
 > O aplicativo de área de trabalho da Versão Prévia do Microsoft Edge chegará ao fim do suporte em 9 de março de 2021 em favor do novo Microsoft Edge. Isso significa que a Versão Prévia do Microsoft Edge não receberá atualizações de segurança após essa data. Essa alteração é aplicável a todas as experiências executadas no aplicativo da área de trabalho da Versão Prévia do Microsoft Edge. [Saiba mais](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666).
 
 ## Antes de começar
+> [!NOTE]
+> A partir do Windows 10 versão 20H2 a Versão Prévia do Microsoft Edge não está mais incluída. A experiência lado a lado não é compatível com esta versão do Windows 10.
 
 Os procedimentos neste artigo se aplicam aos sistemas que foram atualizados com as últimas atualizações de segurança. Quando a nova versão do Microsoft Edge estiver instalada, a versão antiga (Versão Herdada do Microsoft Edge) será ocultada. Por padrão, todas as tentativas de iniciar a versão antiga irão redirecionar o usuário para a versão recém-instalada do Microsoft Edge. Este artigo descreve como você pode continuar usando o Microsoft Edge herdado após instalar o Microsoft Edge.
 
