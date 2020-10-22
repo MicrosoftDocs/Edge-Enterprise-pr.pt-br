@@ -3,19 +3,19 @@ title: Lista de permissões para pontos de extremidade do Microsoft Edge
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 06/09/2020
+ms.date: 10/21/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Lista de permissões para pontos de extremidade do Microsoft Edge
-ms.openlocfilehash: 76186524a708861432199d5da7eec7573ebecb96
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 48a3a72e5af3744516e3b72d02b5254ad2e0504a
+ms.sourcegitcommit: b32d8d64ae65dc5a46e47b7c34b0211097a0cc65
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979163"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "11133116"
 ---
 # Lista de permissões para pontos de extremidade do Microsoft Edge
 
@@ -36,7 +36,7 @@ O serviço que o Microsoft Edge usa para verificar se há novas atualizações.
 
 ### Serviço Experimentação e Configuração
 
-- `https://config.ecs.skype.com`
+- `https://config.edge.skype.com`
 
 ### Locais de download para o Microsoft Edge
 
