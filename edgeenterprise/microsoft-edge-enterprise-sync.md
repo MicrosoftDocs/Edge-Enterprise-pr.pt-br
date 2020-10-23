@@ -3,19 +3,19 @@ title: Sincronização do Microsoft Edge Enterprise
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 09/30/2020
+ms.date: 10/21/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Sincronização do Microsoft Edge Enterprise
-ms.openlocfilehash: d5868fb496c036d750925bb5ae6dfa3de0293fd2
-ms.sourcegitcommit: 8a4479a1b034c3c13ea03ee3a2374a1af332cb38
+ms.openlocfilehash: e51346d9bab83228c42a84a7a14ee45dc9b463a7
+ms.sourcegitcommit: b32d8d64ae65dc5a46e47b7c34b0211097a0cc65
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "11091943"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "11133126"
 ---
 # Sincronização do Microsoft Edge Enterprise
 
@@ -45,7 +45,7 @@ A sincronização do Microsoft Edge para as contas do Azure Active Directory (Az
 
 - Azure AD Premium( P1 e P2)
 - M365 Business Premium
-- Office 365 E3 e superior
+- Office 365 E1 e superior
 - Proteção de Informações do Azure (AIP) (P1 e P2)
 - Todas as assinaturas EDU (Aplicativos da Microsoft para Estudantes ou Docentes, Exchange Online para Estudantes ou Docentes, O365 A1 ou superior, M365 A1 ou superior, Proteção de Informações do Azure P1 ou P2 para Estudantes ou Docentes)
 
