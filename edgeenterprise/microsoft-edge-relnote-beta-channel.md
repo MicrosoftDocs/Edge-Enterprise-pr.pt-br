@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: 57cd68d9366dd80812617f98934d44918b76926c
-ms.sourcegitcommit: a54037baf06d6f2e30b9485cfd397468b3174a86
+ms.openlocfilehash: 4269214a4c6a1c0d8fd62a8fd84cd9bf4f3e2b09
+ms.sourcegitcommit: d1f56745f91f36f8cfb437cfae3aaa7f816ff61a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "11133198"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "11133289"
 ---
 # Notas de versão do canal do Microsoft Edge beta
 
@@ -29,11 +29,7 @@ Estas notas de versão fornecem informações sobre os novos recursos e atualiza
 
 ### Atualizações de recursos
 
-- **Redirecione automaticamente os sites incompatíveis do Internet Explorer para o Microsoft Edge**. Com a atualização estável do Microsoft Edge 87, os sites públicos que mostram uma mensagem de incompatibilidade no Internet Explorer serão automaticamente redirecionados para o Microsoft Edge por padrão. Você pode desabilitar esse recurso configurando as políticas descritas no [Redirecionamento do Internet Explorer para o Microsoft Edge para compatibilidade com sites modernos](https://docs.microsoft.com/deployedge/edge-learnmore-neededge).
-- **Redefina manualmente os dados de sincronização do Microsoft Edge na nuvem**. Introduziremos uma maneira de redefinir os dados de sincronização do Microsoft Edge dentro do produto. Isso garante que os dados do usuário sejam removidos dos serviços Microsoft, além de resolver certos problemas de produto que exigiam um tíquete de suporte.
 - **Recursos de privacidade do modo de quiosque habilitados**. A partir do Microsoft Edge versão 87, os recursos do modo de quiosque que ajudarão as empresas em torno da privacidade dos dados do usuário serão habilitados. Esses recursos habilitarão experiências, como limpar os dados do usuário ao sair, excluir arquivos baixados e redefinir a experiência de iniciação configurada após uma quantidade específica de tempo ocioso. Saiba mais sobre como [Configurar as opções do modo de quiosque do Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode)
-- **O logon único (SSO) agora está disponível para contas do Azure Active Directory (Azure AD) no Windows com versão anterior.** Um usuário que se conectou no Microsoft Edge no Microsoft Windows com versão anterior (versões 7 e 8,1) será conectado automaticamente aos sites que estão configurados para permitir logon único com contas Corporativas ou de Estudante (por exemplo, sharepoint.com, office.com e bing.com).
-- **Conecte-se automaticamente às contas da Microsoft com o logon único (SSO) da Web**. Um usuário conectado no Microsoft Edge no Windows com versão anterior agora será conectado automaticamente aos sites que estão configurados para permitir o SSO com contas da Microsoft (por exemplo, bing.com, office.com, msn.com e outlook.com).
 - **Implantação de ClickOnce habilitada por padrão**. O ClickOnce está habilitado por padrão no Microsoft Edge 87, o que reduz as barreiras para a implantação de software e alinha-se melhor com o comportamento do navegador da Versão Prévia do Microsoft Edge. A partir do Microsoft Edge 87, o estado "Não Configurado" da política de ClickOnceEnabled refletirá o novo estado de ClickOnce padrão Habilitado (em comparação com o estado padrão anterior Desabilitado).
 - **A página nova guia da empresa (NTP) integra a produtividade com o conteúdo do feed personalizado e relevante para o trabalho**. O NTP empresarial combina a página de produtividade do Office 365 oferecemos a todos os usuários que entraram com uma conta corporativa ou de estudante com feeds personalizados da empresa e da indústria relevantes para o trabalho que são organizados em uma única página. Os usuários poderão reconhecer o conteúdo familiar do Office 365 e da Pesquisa da Microsoft para Empresas, da plataforma Bing. Além disso, eles podem facilmente inverter para um "Meu Feed" personalizável com conteúdo e módulos relevantes para o usuário, para a empresa ou para a sua indústria, além de uma seleção de outros feeds disponibilizados pela organização. [Saiba mais](https://docs.microsoft.com/microsoft-365/admin/manage/manage-industry-news?view=o365-worldwide&preserve-view=true).
 
@@ -128,7 +124,7 @@ Correção de vários bugs e problemas de desempenho.
 * **Segurança:**
 
   * Suporte ao DNS seguro (DNS em HTTPS).  A partir da versão 86 do Microsoft Edge, as configurações para controlar o DNS seguro em dispositivos não gerenciados estarão disponíveis. Essas configurações não podem ser acessadas por usuários em dispositivos gerenciados, mas os administradores de TI podem habilitar ou desabilitar o DNS seguro usando a política de grupo [dnsoverhttpsmode](https://docs.microsoft.com/deployedge/microsoft-edge-policies#dnsoverhttpsmode).
-  * O Microsoft Edge alerta o usuário se suas senhas forem encontradas em um vazamento online. O Microsoft Edge verifica as senhas no repositório de credenciais violadas conhecidas e alerta o usuário se uma correspondência for encontrada.
+
 
 * **Adicione uma imagem personalizada à página Nova guia (NTP) usando uma política de grupo.** A partir da versão 86 do Microsoft Edge, a NTP tem a opção de substituir a imagem padrão por uma imagem personalizada fornecida pelo usuário. A habilidade de gerenciar as propriedades desta imagem também é compatível com a política de grupo.
 

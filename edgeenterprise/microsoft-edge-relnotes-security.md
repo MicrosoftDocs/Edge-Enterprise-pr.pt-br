@@ -3,23 +3,27 @@ title: Notas de versão para atualizações de segurança do Microsoft Edge
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 10/09/2020
+ms.date: 10/22/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão para atualizações de segurança do Microsoft Edge
-ms.openlocfilehash: ac29dbb9e69f005b13e2ea7196413cc3a9a75e81
-ms.sourcegitcommit: bdd2b9f7fc6f816ed03bf57de89b87a66b9479c1
+ms.openlocfilehash: f7bb1c349db079aa3c94210752fc9c7870e5619a
+ms.sourcegitcommit: ab912e0629e3f060220f28cdecb414d292b0e37d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "11105796"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "11133739"
 ---
 # Notas de versão para atualizações de segurança do Microsoft Edge
 
 Estas notas de versão fornecem informações sobre correções de segurança incluídas em atualizações para o canal estável do Microsoft Edge.
+
+## 22 de outubro de 2020
+
+A Microsoft lançou o mais recente **Canal Estável do Microsoft Edge (versão 86.0.622.51)**, que incorpora as atualizações de segurança mais recentes do projeto Chromium. Esta atualização contém o [CVE-2020-15999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15999), que foi relatado pela equipe do Chromium como sendo um exploit ativo. Para obter mais informações, consulte o [Guia de atualização de segurança](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
 
 ## 9 de outubro de 2020
 
