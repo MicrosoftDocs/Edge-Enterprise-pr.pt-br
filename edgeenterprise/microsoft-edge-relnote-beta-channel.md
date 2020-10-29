@@ -3,19 +3,19 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 10/21/2020
+ms.date: 10/26/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: 4269214a4c6a1c0d8fd62a8fd84cd9bf4f3e2b09
-ms.sourcegitcommit: d1f56745f91f36f8cfb437cfae3aaa7f816ff61a
+ms.openlocfilehash: 8cedd34ba3a2053ae7c8d098c9d5106139a8b961
+ms.sourcegitcommit: 737da8f49297a0189f533480f7bfe5989a59a8f7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "11133289"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "11136114"
 ---
 # Notas de versão do canal do Microsoft Edge beta
 
@@ -24,8 +24,12 @@ Estas notas de versão fornecem informações sobre os novos recursos e atualiza
 > [!IMPORTANT]
 > Confira esta [atualização das versões do canal do Microsoft Edge](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/).
 
+## Versão 87.0.664.18: 26 de outubro
+
+Correção de vários bugs e problemas de desempenho.
+
 <!-- begin major 87 -->
-## Versão 87.0.664.12 : 20 de outubro
+## Versão 87.0.664.12: 20 de outubro
 
 ### Atualizações de recursos
 
@@ -69,19 +73,17 @@ Dez novas políticas foram adicionadas. Baixe os modelos administrativos atualiz
 
 [EnableDeprecatedWebPlatformFeatures](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledeprecatedwebplatformfeatures) - reative os recursos da plataforma Web preteridos por um tempo limitado.
 
-
-
 <!-- end major 87 -->
 
 ## Versão 86.0.622.43: 16 de outubro
 
 Correção de vários bugs e problemas de desempenho.
 
-## Versão 86.0.622.36 : 7 de outubro
+## Versão 86.0.622.36: 7 de outubro
 
 Correção de vários bugs e problemas de desempenho.
 
-## Versão 86.0.622.31 : 1 de outubro
+## Versão 86.0.622.31: 1 de outubro
 
 Correção de vários bugs e problemas de desempenho.
 

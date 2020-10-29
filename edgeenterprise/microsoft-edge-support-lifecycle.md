@@ -3,19 +3,19 @@ title: Ciclo de vida do Microsoft Edge
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 01/13/2020
+ms.date: 10/27/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Ciclo de vida do Microsoft Edge
-ms.openlocfilehash: 6f29155362a4f942f850116ca09162d49f1dfc52
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 311041e314a5c21d1110275cafbc23aadd6b737b
+ms.sourcegitcommit: 91abbcdd4918065d4ec1151587fc1fa92486dbf3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979104"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "11136200"
 ---
 # Política de ciclo de vida do Microsoft Edge
 
@@ -29,6 +29,13 @@ Este artigo descreve a política de ciclo de vida que se aplica ao Microsoft Edg
 A próxima versão do Microsoft Edge apresenta recursos de atualização mais frequentes e flexíveis. Como as versões do navegador não estão associadas às versões principais do Windows, é necessário ter a política de ciclo de vida reguladora atualizada para refletir isso. No futuro, o Microsoft Edge fará parte da [Política de ciclo de vida moderna](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 
 Como parte dessa política, as versões com suporte do Microsoft Edge incluirão a versão mais recente disponível dos canais Beta e Estável.
+
+## Disponibilidade de suporte assistido para o Microsoft Edge
+As atualizações de segurança e atualizações de serviço estão disponíveis somente na versão mais recente do canal estável e na versão mais recente do canal beta. O uso das versões anteriores do Microsoft Edge provavelmente significa que você esteja perdendo as últimas atualizações de qualidade e segurança. Se o uso das versões anteriores for necessário para a sua organização, o suporte assistido estará disponível para as três versões do canal estável mais recente e a versão mais recente do canal beta.  A duração de suporte assistido efetiva para um lançamento de canal estável é de aproximadamente 18 semanas. A duração de suporte efetiva para um lançamento de canal beta é de aproximadamente 6 semanas, não há suporte para as versões anteriores do canal beta.
+
+A Microsoft recomenda que você permaneça atualizado com o canal estável mais recente ou o lançamento do canal beta.
+
+
 
 ## Consulte também
 

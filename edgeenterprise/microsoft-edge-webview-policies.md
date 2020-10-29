@@ -3,7 +3,7 @@ title: Documentação de Política do Microsoft Edge WebView2
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 10/16/2020
+ms.date: 10/27/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 4298b25f7f158bc54f798442b4426494f046fa68
-ms.sourcegitcommit: 7d160257010f75b86b89c8802d0dd27f1f8761ef
+ms.openlocfilehash: 3ca9adb18ef41581bb016451015cf0aca0aa63c9
+ms.sourcegitcommit: 91abbcdd4918065d4ec1151587fc1fa92486dbf3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "11134440"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "11136210"
 ---
 # Políticas do Microsoft Edge WebView2
 
@@ -40,8 +40,8 @@ Estas tabelas listam todas as políticas de grupo disponíveis nesta versão do 
 
 |Nome da política|Legenda|
 |-|-|
-|[browserExecutableFolder](#browserexecutablefolder)|Configurar o local da pasta executável do navegador|
-|[releaseChannelPreference](#releasechannelpreference)|Definir a preferência de ordem de pesquisa do canal de lançamento|
+|[BrowserExecutableFolder](#browserexecutablefolder)|Configurar o local da pasta executável do navegador|
+|[ReleaseChannelPreference](#releasechannelpreference)|Definir a preferência de ordem de pesquisa do canal de lançamento|
 
 
 
@@ -50,7 +50,7 @@ Estas tabelas listam todas as políticas de grupo disponíveis nesta versão do 
 
   [Voltar ao início](#microsoft-edge-webview2---policies)
 
-  ### browserExecutableFolder
+  ### BrowserExecutableFolder
 
   #### Configurar o local da pasta executável do navegador
 
@@ -80,7 +80,7 @@ Para definir o valor do caminho da pasta, forneça um Nome do valor e um Par do 
 
   ##### Informações da Política de Grupo (ADMX)
 
-  - Nome exclusivo da PG: browserExecutableFolder
+  - Nome exclusivo da PG: BrowserExecutableFolder
   - Nome da PG: Configurar o local da pasta executável do navegador
   - Caminho da PG (obrigatório): Modelos administrativos/Microsoft Edge WebView2/Configurações de substituição do carregador
   - Caminho da Política de Grupo (recomendado): N/A
@@ -88,7 +88,7 @@ Para definir o valor do caminho da pasta, forneça um Nome do valor e um Par do 
 
   ##### Configurações de registro do Windows
 
-  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
   - Caminho (recomendado): N/A
   - Nome de valor: lista de REG_SZ
   - Tipo de valor: lista de REG_SZ
@@ -96,7 +96,7 @@ Para definir o valor do caminho da pasta, forneça um Nome do valor e um Par do 
   ##### Valor de exemplo:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
 
 ```
 
@@ -104,7 +104,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder = "Name: *, Va
 
   [Voltar ao início](#microsoft-edge-webview2---policies)
 
-  ### releaseChannelPreference
+  ### ReleaseChannelPreference
 
   #### Definir a preferência de ordem de pesquisa do canal de lançamento
 
@@ -136,7 +136,7 @@ Para definir o valor da preferência de canal de lançamento, forneça um Nome d
 
   ##### Informações da Política de Grupo (ADMX)
 
-  - Nome exclusivo da PG: releaseChannelPreference
+  - Nome exclusivo da PG: ReleaseChannelPreference
   - Nome da PG: Definir a preferência de ordem de pesquisa do canal de lançamento
   - Caminho da PG (obrigatório): Modelos administrativos/Microsoft Edge WebView2/Configurações de substituição do carregador
   - Caminho da Política de Grupo (recomendado): N/A
@@ -144,7 +144,7 @@ Para definir o valor da preferência de canal de lançamento, forneça um Nome d
 
   ##### Configurações de registro do Windows
 
-  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge\WebView2\releaseChannelPreference
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
   - Caminho (recomendado): N/A
   - Nome de valor: lista de REG_SZ
   - Tipo de valor: lista de REG_SZ
@@ -152,7 +152,7 @@ Para definir o valor da preferência de canal de lançamento, forneça um Nome d
   ##### Valor de exemplo:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebView2\releaseChannelPreference = "Name: *, Value: 1"
+SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
 
 ```
 
