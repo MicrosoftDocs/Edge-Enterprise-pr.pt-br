@@ -3,19 +3,19 @@ title: Sistemas operacionais com suporte do Microsoft Edge
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 05/11/2020
+ms.date: 10/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Sistemas operacionais com suporte do Microsoft Edge
-ms.openlocfilehash: c883798f11089060a2f4547999b015e9023d0ea9
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: cb7998fd8ee47b376df94f52bfc5f636687d848f
+ms.sourcegitcommit: 0c713487a811a2837abe4a3b08236f6815e65773
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979102"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "11145883"
 ---
 # Sistemas operacionais com suporte do Microsoft Edge
 
@@ -35,7 +35,7 @@ A próxima versão do Microsoft Edge tem suporte nos seguintes sistemas operacio
 
 - Windows 7**
 - Windows 8.1
-- Windows 10 SAC RS3 e posteriores***
+- Windows 10 SAC RS3 e posteriores **_
 - Windows 10 Enterprise 2015 LTSC
 - Windows 10 Enterprise 2016 LTSC
 - Windows 10 Enterprise 2019 LTSC
@@ -43,7 +43,7 @@ A próxima versão do Microsoft Edge tem suporte nos seguintes sistemas operacio
 
 ### Windows Server
 
-- Windows Server 2008 R2**
+- Windows Server 2008 R2_*
 - Windows Server 2012
 - Windows Server 2012 R2
 - Windows Server 2016 (LTSC)
