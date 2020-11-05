@@ -3,19 +3,19 @@ title: Redirecionamento do Internet Explorer para o Microsoft Edge para compatib
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 10/19/2020
+ms.date: 11/03/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Redirecionamento do Internet Explorer para o Microsoft Edge para compatibilidade com os sites modernos
-ms.openlocfilehash: ce9e8dabdff25cc3ba375746ec82ddd78b6d7694
-ms.sourcegitcommit: cf991cc4bd2e70169902cbda9ddc870d70e31ca2
+ms.openlocfilehash: d822bf4cef76fe4c0298133b47ed80f5d1242b3d
+ms.sourcegitcommit: 73fec3998f26d110252ace621be01f1c1142cf57
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "11120516"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "11151091"
 ---
 # Redirecionamento do Internet Explorer para o Microsoft Edge para compatibilidade com os sites modernos
 
@@ -74,14 +74,14 @@ O redirecionamento do Internet Explorer para o Microsoft Edge requer um Objeto A
 - Se você ativar esta política, o BHO necessário para o redirecionamento não será instalado e seus usuários continuarão a ver mensagens de incompatibilidade para certos sites no Internet Explorer. Se o BHO já estiver instalado, ele será desinstalado na próxima vez em que o canal do Microsoft Edge Estável for atualizado.
 - Se você desativar ou não configurar esta política, o BHO será instalado. Este é o comportamento padrão.
 
-Além de precisar do BHO, há uma dependência do **RedirectSitesFromInternetExplorerRedirectMode**, que precisa ser definida como "Sitelist" ou "Não Configurado".
+Além de precisar do BHO, há uma dependência do **RedirectSitesFromInternetExplorerRedirectMode**, que precisa ser definida como "Redirecionar sites com base em sites compatíveis com sites" ou "Não Configurado".
 
 ### Política: RedirectSitesFromInternetExplorerRedirectMode
 
  Esta política corresponde à configuração do Microsoft Edge **Navegador padrão** "Permitir que o Internet Explorer abra sites no Microsoft Edge". Você pode acessar essa configuração indo para o URL *edge://settings/defaultbrowser*.  
 
 - Se você não configurar esta política ou defini-la como "Sitelist", o Internet Explorer redirecionará os sites incompatíveis para o Microsoft Edge. Este é o comportamento padrão.
-- Se você desativar esta política, os sites incompatíveis não serão redirecionados para a Microsoft Edge.
+- Para desabilitar essa política, marque a **Habilitada** e, em seguida, na lista suspensa em opções: Redirecione sites incompatíveis do Internet Explorer para o Microsoft Edge, selecione **Desabilitar**. Nesse estado, os sites incompatíveis não serão redirecionados para o Microsoft Edge.
 
 > [!NOTE]
 > Se estiver em um dispositivo pessoal que não é gerenciado pela sua organização, você verá outra configuração chamada "Permitir que sites sejam carregados no modo Internet Explorer" em **Compatibilidade com o Internet Explorer**.
@@ -104,11 +104,11 @@ Esta política configura a experiência do usuário com o redirecionamento de si
 
 Se você quiser desativar o redirecionamento ANTES da atualização para o Microsoft Edge Estável versão 87, siga o seguinte passo:
 
-1. Defina a política **RedirectSitesFromInternetExplorerRedirectMode** para **Habilitada**. Esta configuração deixará de redirecionar assim que a política entrar em vigor.
+1. Defina a política **RedirectSitesFromInternetExplorerPreventBHOInstall** para **Habilitada**.
 
 Se você quiser desativar o redirecionamento DEPOIS da atualização para o Microsoft Edge Estável versão 87, siga os seguintes passos:
 
-1. Defina a política **RedirectSitesFromInternetExplorerRedirectMode** para **Desabilitada**. Esta configuração deixará de redirecionar assim que a política entrar em vigor.
+1. Defina a política **RedirectSitesFromInternetExplorerRedirectMode** para **Habilitado** E, em seguida, na lista suspensa em opções: Redirecione sites incompatíveis do Internet Explorer para o Microsoft Edge, selecione **Desabilitar**. Esta configuração deixará de redirecionar assim que a política entrar em vigor.
 2. Defina a política **RedirectSitesFromInternetExplorerPreventBHOInstall** para **Habilitada**. Isto vai desinstalar o BHO depois da próxima atualização do Microsoft Edge.
 
 ## Veja também
