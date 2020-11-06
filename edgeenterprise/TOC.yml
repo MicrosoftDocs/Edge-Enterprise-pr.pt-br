@@ -1,4 +1,4 @@
-# last revised 10/15/2020
+# last revised 11/03/2020
 - name: Documentação do Microsoft Edge Enterprise
   href: index.yml
 - name: Documentação do Microsoft Edge
@@ -25,6 +25,8 @@
       href: microsoft-edge-roadmap.md
     - name: Planejar sua implantação do Microsoft Edge
       href: deploy-edge-plan-deployment.md
+    - name: Pronto para o Microsoft Edge
+      href: deploy-edge-ready-for-edge.md
     - name: Informações sobre versão
       items:
         - name: Agenda de lançamento
