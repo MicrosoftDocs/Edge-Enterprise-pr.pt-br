@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 10/22/2020
+ms.date: 11/04/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 982a171e1c4f55ab99db53a399c669fdf4798f53
-ms.sourcegitcommit: 7d160257010f75b86b89c8802d0dd27f1f8761ef
+ms.openlocfilehash: 0e708707ae8465aa49ee49dcec542881a5080a57
+ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "11134460"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "11155308"
 ---
 # Microsoft Edge - Políticas
 
@@ -29,6 +29,18 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
 
+## Políticas novas e preteridas
+
+A tabela a seguir lista as políticas novas e preteridas para esta atualização.
+
+| Nome | Status |
+|-|-|
+| [WebWidgetAllowed](#webwidgetallowed) | Novo |
+| [ProxyBypassList](#proxybypasslist) | Preterido |
+| [ProxyMode](#proxymode) | Preterido |
+| [ProxyPacUrl](#proxypacurl) | Preterido |
+| [ProxyServer](#proxyserver) | Preterido |
+
 ## Políticas disponíveis
 
 Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disponíveis nesta versão do Microsoft Edge. Use os links na tabela a seguir para obter mais detalhes sobre políticas específicas.
@@ -39,10 +51,10 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[Configurações de conteúdo](#content-settings)|[Provedor de pesquisa padrão](#default-search-provider)|
 |[Extensões](#extensions)|[Autenticação HTTP](#http-authentication)|
 |[Configurações do modo de quiosque](#kiosk-mode-settings)|[Sistema de mensagens nativo](#native-messaging)|
-|[Gerenciador de senhas e proteção](#password-manager-and-protection)|[Impressão](#printing)|
-|[Servidor proxy](#proxy-server)|[Configurações do SmartScreen](#smartscreen-settings)|
-|[Página de inicialização, página inicial e nova guia](#startup-home-page-and-new-tab-page)|[Adicional](#additional)|
-
+|[Gerenciador de senhas e proteção](#password-manager-and-protection)|[Desempenho](#performance)|
+|[Impressão](#printing)|[Servidor proxy](#proxy-server)|
+|[Configurações do SmartScreen](#smartscreen-settings)|[Página de inicialização, página inicial e nova guia](#startup-home-page-and-new-tab-page)|
+|[Adicional](#additional)|
 
 ### [*Configurações do Application Guard*](#application-guard-settings-policies)
 
@@ -156,6 +168,11 @@ e dicas para os serviços Microsoft|
 |[PasswordProtectionLoginURLs](#passwordprotectionloginurls)|Configurar a lista de URLs de logon corporativos onde o serviço de proteção por senha deve capturar os hashes com sal de uma senha|
 |[PasswordProtectionWarningTrigger](#passwordprotectionwarningtrigger)|Configurar o gatilho de aviso de proteção por senha|
 |[PasswordRevealEnabled](#passwordrevealenabled)|Habilitar botão Mostrar senha|
+### [*Desempenho*](#performance-policies)
+
+|Nome da política|Legenda|
+|-|-|
+|[StartupBoostEnabled](#startupboostenabled)|Habilitar impulso de inicialização|
 ### [*Impressão*](#printing-policies)
 
 |Nome da política|Legenda|
@@ -170,10 +187,10 @@ e dicas para os serviços Microsoft|
 
 |Nome da política|Legenda|
 |-|-|
-|[ProxyBypassList](#proxybypasslist)|Configurar regras de bypass de proxy|
-|[ProxyMode](#proxymode)|Definir configurações do servidor proxy.|
-|[ProxyPacUrl](#proxypacurl)|Defina o URL do arquivo .pac do proxy|
-|[ProxyServer](#proxyserver)|Configurar o endereço ou a URL do servidor proxy|
+|[ProxyBypassList](#proxybypasslist)|Configurar regras de desvio de proxy (preterido)|
+|[ProxyMode](#proxymode)|Definir as configurações do servidor proxy (preterido)|
+|[ProxyPacUrl](#proxypacurl)|Definir o URL do arquivo proxy .pac (preterido)|
+|[ProxyServer](#proxyserver)|Configurar o endereço ou URL do servidor proxy (preterido)|
 |[ProxySettings](#proxysettings)|Configurações de proxy|
 ### [*Configurações do SmartScreen*](#smartscreen-settings-policies)
 
@@ -399,6 +416,8 @@ e dicas para os serviços Microsoft|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Gerenciar a exposição de endereço IP local por WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restringir a exposição de endereço IP local por WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restringir o intervalo de portas UDP locais usado por WebRTC|
+|[WebWidgetAllowed](#webwidgetallowed)|Habilitar o widget da web|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Permitir o widget da Web na inicialização do Windows|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Usar o solucionador de proxy do Windows (preterida)|
 
 
@@ -546,7 +565,6 @@ Por padrão, o Google Cast está habilitado.
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: EnableMediaRouter
@@ -608,7 +626,6 @@ Se você também tiver definido a política [EnableMediaRouter](#enablemediarout
 ```
 0x00000000
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -687,7 +704,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: AutoSelectCertificateForUrls
@@ -764,7 +780,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: CookiesAllowedForUrls
@@ -839,7 +854,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\1 = "https://www.contoso.
 SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -920,7 +934,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: CookiesSessionOnlyForUrls
@@ -996,7 +1009,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: DefaultCookiesSetting
@@ -1065,7 +1077,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000002
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da Chave de Preferência: DefaultFileSystemReadGuardSetting
@@ -1133,7 +1144,6 @@ Use as informações anteriores ao configurar essa política.
 ```
 0x00000002
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -1205,7 +1215,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: DefaultGeolocationSetting
@@ -1273,7 +1282,6 @@ Use as informações anteriores ao configurar essa política.
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -1345,7 +1353,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000002
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: DefaultInsecureContentSetting
@@ -1413,7 +1420,6 @@ Use as informações anteriores ao configurar essa política.
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -1485,7 +1491,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000002
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: DefaultNotificationsSetting
@@ -1556,7 +1561,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000002
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: DefaultPluginsSetting
@@ -1625,7 +1629,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: DefaultPopupsSetting
@@ -1693,7 +1696,6 @@ Use as informações anteriores ao configurar essa política.
 ```
 0x00000002
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -1765,7 +1767,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000002
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: DefaultWebUsbGuardSetting
@@ -1831,7 +1832,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\1 = "https://www.examp
 SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -1902,7 +1902,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.e
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: FileSystemReadBlockedForUrls
@@ -1971,7 +1970,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\1 = "https://www.exam
 SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -2042,7 +2040,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: FileSystemWriteBlockedForUrls
@@ -2107,7 +2104,6 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -2174,7 +2170,6 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: ImagesBlockedForUrls
@@ -2239,7 +2234,6 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\1 = "https://www.
 SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.edu"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -2306,7 +2300,6 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: InsecureContentBlockedForUrls
@@ -2372,7 +2365,6 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: JavaScriptAllowedForUrls
@@ -2437,7 +2429,6 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\1 = "https://www.conto
 SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -2510,7 +2501,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: LegacySameSiteCookieBehaviorEnabled
@@ -2579,7 +2569,6 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: LegacySameSiteCookieBehaviorEnabledForDomainList
@@ -2645,7 +2634,6 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: NotificationsAllowedForUrls
@@ -2710,7 +2698,6 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\1 = "https://www.co
 SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -2779,7 +2766,6 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: PluginsAllowedForUrls
@@ -2847,7 +2833,6 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: PluginsBlockedForUrls
@@ -2913,7 +2898,6 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: PopupsAllowedForUrls
@@ -2978,7 +2962,6 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -3133,7 +3116,6 @@ Se você desabilitar essa configuração, as experiências e as recomendações 
 ```
 0x00000001
 ```
-
 
   
 
@@ -3294,7 +3276,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: WebUsbAskForUrls
@@ -3361,7 +3342,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -3442,7 +3422,6 @@ A partir do Microsoft Edge 84, você pode definir essa política como uma polít
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: DefaultSearchProviderEnabled
@@ -3510,7 +3489,6 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\3 = "GB2312"
 SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -3587,7 +3565,6 @@ A partir do Microsoft Edge 84, você pode definir essa política como uma polít
 "https://search.contoso.com/searchbyimage/upload"
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: DefaultSearchProviderImageURL
@@ -3654,7 +3631,6 @@ A partir do Microsoft Edge 84, você pode definir essa política como uma polít
 "content={imageThumbnail},url={imageURL},sbisrc={SearchSource}"
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: DefaultSearchProviderImageURLPostParams
@@ -3718,7 +3694,6 @@ A partir do Microsoft Edge 84, você pode definir essa política como uma polít
 ```
 "mis"
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -3785,7 +3760,6 @@ A partir do Microsoft Edge 84, você pode definir essa política como uma polít
 ```
 "My Intranet Search"
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -3854,7 +3828,6 @@ A partir do Microsoft Edge 84, você pode definir essa política como uma polít
 ```
 "https://search.contoso.com/search?q={searchTerms}"
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -3925,7 +3898,6 @@ A partir do Microsoft Edge 84, você pode definir essa política como uma polít
 ```
 "https://search.contoso.com/suggest?q={searchTerms}"
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -4004,7 +3976,6 @@ Use as informações anteriores ao configurar essa política.
 "bing"
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: NewTabPageSearchBox
@@ -4076,7 +4047,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: ExtensionAllowedTypes
@@ -4102,7 +4072,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
   #### Descrição
 
-  Por padrão, todas as extensões são permitidas. No entanto, se você bloquear todas as extensões, configurando a política "ExtensionInstallBlockList" para "*", os usuários só poderão instalar extensões definidas nesta política.
+  Por padrão, todas as extensões são permitidas. No entanto, se você bloquear todas as extensões definindo a política 'ExtensionInstallBlockList' como "*", os usuários só poderão instalar extensões definidas nesta política.
 
   #### Recursos compatíveis:
 
@@ -4138,7 +4108,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\1 = "extension_id1"
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -4206,7 +4175,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\1 = "extension_id1"
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -4291,7 +4259,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: ExtensionInstallForcelist
@@ -4320,9 +4287,9 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
   Defina URLs que possam instalar extensões e temas.
 
-Por padrão, os usuários têm que baixar um arquivo *.crx para cada extensão ou script que deseja instalar e, em seguida, arrastá-lo para a página de configurações do Microsoft Edge. Essa política permite que URLs específicas usem a extensão ou o script para o usuário.
+Defina URLs que podem instalar extensões e temas diretamente sem ter que arrastar e soltar os pacotes para a página edge://extensions.
 
-Cada item nesta lista é um padrão de correspondência de estilo de extensão (consulte [https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039)). Os usuários podem instalar facilmente os itens de qualquer URL que corresponda a um item nesta lista. O local do arquivo *.crx e a página onde o download é iniciado (em outras palavras, a referencial) devem ser permitidos por esses padrões.
+Cada item nesta lista é um padrão de correspondência de estilo de extensão (consulte [https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039)). Os usuários podem instalar facilmente os itens de qualquer URL que corresponda a um item nesta lista. O local do arquivo *.crx e a página onde o download é iniciado (em outras palavras, a referencial) devem ser permitidos por esses padrões. Não hospede os arquivos em um local que exija autenticação.
 
 A política [ExtensionInstallBlocklist](#extensioninstallblocklist) tem precedência sobre esta política. As extensões que estiverem na lista de bloqueios não serão instaladas, mesmo se vierem de um site nesta lista.
 
@@ -4359,7 +4326,6 @@ A política [ExtensionInstallBlocklist](#extensioninstallblocklist) tem precedê
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.contoso.com/*"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -4652,7 +4618,6 @@ Geralmente, isso é desabilitado como uma defesa contra phishing. Se você não 
 0x00000000
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: AllowCrossOriginAuthPrompt
@@ -4714,7 +4679,6 @@ Se você não configurar essa política, o Microsoft Edge não delegará credenc
 ```
 "contoso.com"
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -4778,7 +4742,6 @@ Se você não configurar essa política, todos os quatro esquemas serão usados.
 "basic,digest,ntlm,negotiate"
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: AuthSchemes
@@ -4840,7 +4803,6 @@ Se você não configurar essa política, o Microsoft Edge tentará detectar se u
 ```
 "*contoso.com,contoso.com"
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -4904,7 +4866,6 @@ Se você desabilitar essa política ou não a configurar, será usado o nome can
 0x00000000
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: DisableAuthNegotiateCnameLookup
@@ -4966,7 +4927,6 @@ Se você não configurar ou desabilitar essa política, o SPN Kerberos gerado n�
 ```
 0x00000000
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -5099,7 +5059,6 @@ Para obter informações detalhadas sobre como configurar o modo de quiosque, co
   - No Windows desde 87 ou posterior
 
   #### Descrição
-                                                                                              
 
   Esta política só se aplica ao modo de quiosque do Microsoft Edge.
 
@@ -5141,7 +5100,6 @@ Para obter informações detalhadas sobre como configurar o modo de quiosque, co
 ```
 0x00000001
 ```
-
 
   
 
@@ -5201,7 +5159,6 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\1 = "com.native.messag
 SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messaging.host.name2"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -5270,7 +5227,6 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: NativeMessagingBlocklist
@@ -5335,7 +5291,6 @@ Por padrão, quando você não configura essa política, o Microsoft Edge permit
 ```
 0x00000000
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -5404,7 +5359,6 @@ Se você habilitar ou desabilitar essa política, os usuários não podem alter�
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -5484,7 +5438,6 @@ Obrigatório e Recomendado desabilitado: esses estados funcionam de maneira norm
 0x00000001
 ```
 
-
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -5543,7 +5496,6 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 ```
 "https://contoso.com/change_password.html"
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -5610,7 +5562,6 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\1 = "https://contos
 SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.contoso.com"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -5691,7 +5642,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: PasswordProtectionWarningTrigger
@@ -5769,6 +5719,71 @@ Essa política só afeta o botão revelar senha do navegador, mas não afeta os 
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ## Políticas de desempenho
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### StartupBoostEnabled
+
+  #### Habilitar impulso de inicialização
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows desde 88 ou posterior
+
+  #### Descrição
+
+  Permite que os processos do Microsoft Edge sejam iniciados na entrada do sistema operacional e reiniciados em tela de fundo após o fechamento da última janela do navegador.
+
+Se o Microsoft Edge estiver sendo executado no modo de tela de fundo, o navegador pode não fechar quando a última janela for fechada e o navegador não será reiniciado em tela de fundo quando a janela for fechada. Confira a política [BackgroundModeEnabled](#backgroundmodeenabled) para obter informações sobre o que acontece depois de configurar o comportamento do modo de tela de fundo do Microsoft Edge.
+
+Se você habilitar esta política, o impulso de inicialização será ativado.
+
+Se você desabilitar esta política, o impulso de inicialização será desativado.
+
+Se você não configurar esta política, o impulso de inicialização pode ser inicialmente desligado ou ligado. O usuário pode configurar seu comportamento em edge://settings/system.
+
+Saiba mais sobre o impulso de inicialização: [https://go.microsoft.com/fwlink/?linkid=2147018](https://go.microsoft.com/fwlink/?linkid=2147018)
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: Sim
+  - Atualização dinâmica das políticas: Sim
+
+  #### Tipo de dados:
+
+  - Booliano
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo do GP: StartupBoostEnabled
+  - Nome do GP: Habilitar impulso de inicialização
+  - Caminho do GP (Obrigatório): Modelos Administrativos/Microsoft Edge/Desempenho
+  - Caminho do GP (Recomendado): Modelos Administrativos /Microsoft Edge - Configurações Padrão (os usuários podem substituir)/Desempenho
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Nome do Valor: StartupBoostEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de exemplo:
+
+```
+0x00000001
+```
+
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ## Políticas de impressão
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -5827,7 +5842,6 @@ Omitir um campo significa que todos os valores são correspondentes. Por exemplo
 ```
 "{ \"idPattern\": \".*public\", \"namePattern\": \".*Color\" }"
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -5893,7 +5907,6 @@ Se você habilitar essa política, os usuários sempre poderão imprimir cabeça
 0x00000000
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: PrintHeaderFooter
@@ -5956,7 +5969,6 @@ Se você habilitar essa política, a visualização de impressão usará a impre
 0x00000000
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: PrintPreviewUseSystemDefaultPrinter
@@ -6018,7 +6030,6 @@ Se você desabilitar essa política, os usuários não poderão imprimir no Micr
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -6168,7 +6179,6 @@ Se você não configurar ou desabilitar essa política, os comandos de impressã
 0x00000000
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: UseSystemPrintDialog
@@ -6186,9 +6196,9 @@ Se você não configurar ou desabilitar essa política, os comandos de impressã
 
   ### ProxyBypassList
 
-  #### Configurar regras de bypass de proxy
+  #### Configurar regras de desvio de proxy (preterido)
 
-  
+  >SUBSTITUÍDO: Essa política está preterida. Ela tem suporte no momento, mas se tornará obsoleta em uma versão futura.
   
   #### Versões com suporte:
 
@@ -6196,9 +6206,11 @@ Se você não configurar ou desabilitar essa política, os comandos de impressã
 
   #### Descrição
 
-  Define uma lista de hosts para os quais o Microsoft Edge ignorará o proxy.
+  Esta política está preterida, use [ProxySettings](#proxysettings) em seu lugar. Não funcionará no Microsoft Edge versão 91.
 
-Essa política será aplicada somente se você tiver selecionado a opção ' usar servidores de proxy fixo ' na política [Proxymode](#proxymode). Se você tiver selecionado qualquer outro modo para configurar as políticas de proxy, não habilite ou configure esta política.
+Define uma lista de hosts para os quais o Microsoft Edge ignorará o proxy.
+
+Esta política é aplicada apenas se a política [ProxySettings](#proxysettings) não for especificada e você tiver selecionado fixed_servers na política [ProxyMode](#proxymode). Se você tiver selecionado qualquer outro modo para configurar as políticas de proxy, não habilite ou configure esta política.
 
 Se você habilitar essa política, poderá criar uma lista de hosts para os quais o Microsoft Edge não usa um proxy.
 
@@ -6221,7 +6233,7 @@ Para obter exemplos mais detalhados, acesse [https://go.microsoft.com/fwlink/?li
   ##### Informações da Política de Grupo (ADMX)
 
   - Nome exclusivo da Política de Grupo: ProxyBypassList
-  - Nome da Política de Grupo: Configurar regras de bypass de proxy
+  - Nome do GP: configurar regras de desvio de proxy (preterido)
   - Caminho da Política de Grupo: Administrative Templates/Microsoft Edge/Proxy server
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
@@ -6239,7 +6251,6 @@ Para obter exemplos mais detalhados, acesse [https://go.microsoft.com/fwlink/?li
 "https://www.contoso.com, https://www.fabrikam.com"
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: ProxyBypassList
@@ -6253,9 +6264,9 @@ Para obter exemplos mais detalhados, acesse [https://go.microsoft.com/fwlink/?li
 
   ### ProxyMode
 
-  #### Definir configurações do servidor proxy.
+  #### Definir as configurações do servidor proxy (preterido)
 
-  
+  >SUBSTITUÍDO: Essa política está preterida. Ela tem suporte no momento, mas se tornará obsoleta em uma versão futura.
   
   #### Versões com suporte:
 
@@ -6263,21 +6274,20 @@ Para obter exemplos mais detalhados, acesse [https://go.microsoft.com/fwlink/?li
 
   #### Descrição
 
-  Especificar as configurações de servidor proxy usadas pelo Microsoft Edge. Se você habilitar essa política, os usuários não poderão alterar as configurações de proxy.
+  Esta política está preterida, use [ProxySettings](#proxysettings) em seu lugar. Não funcionará no Microsoft Edge versão 91.
 
-Se você optar por nunca usar um servidor proxy e sempre se conectar diretamente, todas as outras opções serão ignoradas.
+Se você definir esta política como Habilitada, poderá especificar o servidor proxy que o Microsoft Edge usa e evitar que os usuários alterem as configurações de proxy. O Microsoft Edge ignora todas as opções relacionadas ao proxy especificadas na linha de comando. A política é aplicada apenas se a política [ProxySettings](#proxysettings) não for especificada.
 
-Se você optar por usar as configurações de proxy do sistema, todas as outras opções serão ignoradas.
+Outras opções são ignoradas se você escolher uma das seguintes opções:
+  * direct = Nunca use um servidor proxy e sempre se conecte diretamente
+  * system = Usar configurações de proxy do sistema
+  * auto_detect = Detectar automaticamente o servidor proxy
 
-Se você optar por detectar automaticamente o servidor proxy, todas as outras opções serão ignoradas.
-
-Se você escolher o modo de proxy de servidor fixo, poderá especificar mais opções em [ProxyServer](#proxyserver) e em uma lista de regras de bypass de proxy separadas por vírgulas.
-
-Se você optar por usar um script de proxy .pac, especifique a URL do script em "A URL para um arquivo .pac de proxy".
+Se você escolher usar:
+  * fixed_servers = Servidores proxy fixos. Você pode especificar outras opções com [ProxyServer](#proxyserver) e [ProxyBypassList](#proxybypasslist).
+  * pac_script = Um script de proxy .pac. Use [ProxyPacUrl](#proxypacurl) para definir o URL para um arquivo proxy .pac.
 
 Para obter exemplos detalhados, vá para [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
-
-Se você habilitar essa política, o Microsoft Edge ignorará todas as opções relacionadas ao proxy especificadas da linha de comando.
 
 Se você não configurar essa política, os usuários poderão escolher suas próprias configurações de proxy.
 
@@ -6310,7 +6320,7 @@ Use as informações anteriores ao configurar essa política.
   ##### Informações da Política de Grupo (ADMX)
 
   - Nome exclusivo da Política de Grupo: ProxyMode
-  - Nome da Política de Grupo: Definir configurações do servidor proxy.
+  - Nome da Política de Grupo: definir configurações do servidor proxy (preterido)
   - Caminho da Política de Grupo: Administrative Templates/Microsoft Edge/Proxy server
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
@@ -6328,7 +6338,6 @@ Use as informações anteriores ao configurar essa política.
 "direct"
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: Proxymode
@@ -6342,9 +6351,9 @@ Use as informações anteriores ao configurar essa política.
 
   ### ProxyPacUrl
 
-  #### Defina o URL do arquivo .pac do proxy
+  #### Definir o URL do arquivo proxy .pac (preterido)
 
-  
+  >SUBSTITUÍDO: Essa política está preterida. Ela tem suporte no momento, mas se tornará obsoleta em uma versão futura.
   
   #### Versões com suporte:
 
@@ -6352,9 +6361,11 @@ Use as informações anteriores ao configurar essa política.
 
   #### Descrição
 
-  Especifica a URL de um arquivo PAC (proxy automático).
+  Esta política está preterida, use [ProxySettings](#proxysettings) em seu lugar. Não funcionará no Microsoft Edge versão 91.
 
-Essa política será aplicada somente se você tiver selecionado a opção "usar um. script proxy da PAC" na política [Proxymode](#proxymode). Se você tiver selecionado qualquer outro modo para configurar as políticas de proxy, não habilite ou configure esta política.
+Especifica a URL de um arquivo PAC (proxy automático).
+
+Esta política é aplicada apenas se a política [ProxySettings](#proxysettings) não for especificada e você tiver selecionado pac_script na política [ProxyMode](#proxymode). Se você tiver selecionado qualquer outro modo para configurar as políticas de proxy, não habilite ou configure esta política.
 
 Se você habilitar essa política, poderá especificar a URL de um arquivo PAC, que define como o navegador escolherá automaticamente o servidor proxy apropriado para procurar um site específico.
 
@@ -6377,7 +6388,7 @@ Para obter exemplos detalhados, confira [https://go.microsoft.com/fwlink/?linkid
   ##### Informações da Política de Grupo (ADMX)
 
   - Nome exclusivo da Política de Grupo: ProxyPacUrl
-  - Nome da Política de Grupo: Defina o URL do arquivo .pac do proxy
+  - Nome da Política de Grupo: definir o URL do arquivo proxy .pac (preterido)
   - Caminho da Política de Grupo: Administrative Templates/Microsoft Edge/Proxy server
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
@@ -6395,7 +6406,6 @@ Para obter exemplos detalhados, confira [https://go.microsoft.com/fwlink/?linkid
 "https://internal.contoso.com/example.pac"
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: ProxyPacUrl
@@ -6409,9 +6419,9 @@ Para obter exemplos detalhados, confira [https://go.microsoft.com/fwlink/?linkid
 
   ### ProxyServer
 
-  #### Configurar o endereço ou a URL do servidor proxy
+  #### Configurar o endereço ou URL do servidor proxy (preterido)
 
-  
+  >SUBSTITUÍDO: Essa política está preterida. Ela tem suporte no momento, mas se tornará obsoleta em uma versão futura.
   
   #### Versões com suporte:
 
@@ -6419,9 +6429,11 @@ Para obter exemplos detalhados, confira [https://go.microsoft.com/fwlink/?linkid
 
   #### Descrição
 
-  Especifica a URL do servidor proxy.
+  Esta política está preterida, use [ProxySettings](#proxysettings) em seu lugar. Não funcionará no Microsoft Edge versão 91.
 
-Essa política será aplicada somente se você tiver selecionado a opção ' usar servidores de proxy fixo ' na política [Proxymode](#proxymode). Se você tiver selecionado qualquer outro modo para configurar as políticas de proxy, não habilite ou configure esta política.
+Especifica a URL do servidor proxy.
+
+Esta política é aplicada apenas se a política [ProxySettings](#proxysettings) não for especificada e você tiver selecionado fixed_servers na política [ProxyMode](#proxymode). Se você tiver selecionado qualquer outro modo para configurar as políticas de proxy, não habilite ou configure esta política.
 
 Se você habilitar essa política, o servidor proxy configurado por essa política será usado para todas as URLs.
 
@@ -6444,7 +6456,7 @@ Para obter mais opções e exemplos detalhados, confira [https://go.microsoft.co
   ##### Informações da Política de Grupo (ADMX)
 
   - Nome exclusivo da Política de Grupo: ProxyServer
-  - Nome da Política de Grupo: Configurar o endereço ou a URL do servidor proxy
+  - Nome da Política de Grupo: configurar o endereço ou URL do servidor proxy (preterido)
   - Caminho da Política de Grupo: Administrative Templates/Microsoft Edge/Proxy server
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
@@ -6461,7 +6473,6 @@ Para obter mais opções e exemplos detalhados, confira [https://go.microsoft.co
 ```
 "123.123.123.123:8080"
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -6499,23 +6510,20 @@ Essa política substitui as seguintes políticas individuais:
 [ProxyServer](#proxyserver)
 [ProxyBypassList](#proxybypasslist)
 
-O campo Proxymode permite especificar o servidor proxy usado pelo Microsoft Edge e impede que os usuários alterem as configurações de proxy.
+A configuração da política [ProxySettings](#proxysettings) aceita os seguintes campos:
+  * ProxyMode, que permite especificar o servidor proxy usado pelo Microsoft Edge e evita que os usuários alterem as configurações de proxy
+  * ProxyPacUrl, um URL para um arquivo proxy .pac
+  * ProxyServer, um URL para o servidor proxy
+  * ProxyBypassList, uma lista de hosts proxy que o Microsoft Edge ignora
 
-O campo ProxyPacUrl é uma URL para um arquivo .pac de proxy.
+Para ProxyMode, se você escolher o valor:
+  * direto, um proxy nunca é usado e todos os outros campos são ignorados.
+  * sistema, o proxy do sistema é usado e todos os outros campos são ignorados.
+  * auto_detect, todos os outros campos são ignorados.
+  * fixed_server, os campos ProxyServer e ProxyBypassList são usados.
+  * pac_script, os campos ProxyPacUrl e ProxyBypassList são usados.
 
-O campo ProxyServer é uma URL para o servidor proxy.
-
-O campo ProxyBypassList é uma lista de hosts de proxy que o Microsoft Edge ignora.
-
-Se você escolher o valor "direto" como "Proxymode", um proxy nunca será usado e todos os outros campos serão ignorados.
-
-Se você escolher o valor "sistema" como "Proxymode", o proxy do sistema será usado e todos os outros campos serão ignorados.
-
-Se você escolher o valor ' auto_detect ' como "Proxymode", todos os outros campos são ignorados.
-
-Se você escolher o valor ' fixed_server ' como "Proxymode", os campos 'ProxyServer' e 'ProxyBypassList ' serão usados.
-
-Se você escolher o valor ' pac_script ' como "Proxymode", os campos 'ProxyPacUrl' e 'ProxyBypassList ' serão usados.
+Para obter exemplos mais detalhados, acesse [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
   #### Recursos compatíveis:
 
@@ -6640,7 +6648,6 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da Chave de Preferência: PreventSmartScreenPromptOverride
@@ -6705,7 +6712,6 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -6773,7 +6779,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\1 = "mydomain.com"
 SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.edu"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -6844,7 +6849,6 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: SmartScreenEnabled
@@ -6909,7 +6913,6 @@ Essa política só está disponível em instâncias do Windows que fazem parte d
 0x00000000
 ```
 
-
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -6968,7 +6971,6 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -7040,7 +7042,6 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: HomepageIsNewTabPage
@@ -7108,7 +7109,6 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 ```
 "https://www.contoso.com"
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -7179,7 +7179,6 @@ Use as informações anteriores ao configurar essa política.
 ```
 0x00000002
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -7347,7 +7346,6 @@ Se você definir essa política como falsa ou não a configurar, os blocos de pr
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: NewTabPageHideDefaultTopSites
@@ -7417,7 +7415,6 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 ```
 "https://www.fabrikam.com"
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -7578,7 +7575,6 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: NewTabPagePrerenderEnabled
@@ -7661,7 +7657,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000000
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: NewTabPageSetFeedType
@@ -7740,7 +7735,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000004
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: RestoreOnStartup
@@ -7804,7 +7798,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\1 = "https://contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.com"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -7871,7 +7864,6 @@ Se você não configurar a política, os usuários poderão optar por mostrar o 
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: ShowHomeButton
@@ -7935,7 +7927,6 @@ Se você tiver habilitado o conjunto de políticas que força um provedor de pes
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -8003,7 +7994,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: AdsSettingForIntrusiveAdsSites
@@ -8033,7 +8023,7 @@ Observe que, mesmo se essa política estiver desabilitada, não é garantido que
 
 Se você habilitar essa política ou não a configurar, os usuários poderão excluir o histórico de navegação e downloads.
 
-Se você desabilitar essa política, os usuários não poderão excluir o histórico de navegação e downloads.
+Se você desabilitar esta política, os usuários não poderão excluir o histórico de navegação e download, e a sincronização do histórico será desabilitada.
 
 Se você habilitar essa política, não habilite a política [ClearBrowsingDataOnExit](#clearbrowsingdataonexit), porque ambas lidam com a exclusão de dados. Se você habilitar ambos, a política [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) terá precedência e excluirá todos os dados quando o Microsoft Edge fechar, independentemente de como essa política está configurada.
 
@@ -8069,7 +8059,6 @@ Se você habilitar essa política, não habilite a política [ClearBrowsingDataO
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -8132,7 +8121,6 @@ Se você desabilitar essa política, sempre que o usuário executar uma ação q
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -8198,7 +8186,6 @@ Essa política será removida no futuro.
 0x00000000
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: AllowPopupsDuringPageUnload
@@ -8258,7 +8245,6 @@ Se você habilitar ou não configurar essa política, os usuários poderão exec
 ```
 0x00000000
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -8323,7 +8309,6 @@ Se você desabilitar essa política ou não configurar essa política, não ser�
 ```
 0x00000000
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -8394,7 +8379,6 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = "[*.].mydomain2.co
 
 ```
 
-
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -8451,7 +8435,6 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -8521,7 +8504,6 @@ Especificamente, há um botão de alternância **Sugerir páginas similares quan
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: AlternateErrorPagesEnabled
@@ -8583,7 +8565,6 @@ Se você não configurar essa política ou desabilitá-la, o Microsoft Edge abri
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -8669,7 +8650,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000000
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: AmbientAuthenticationInPrivateModesEnabled
@@ -8729,7 +8709,6 @@ Se você definir essa política como falsa ou não a definir, o AppCache seguir�
 ```
 0x00000000
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -8793,7 +8772,6 @@ Se você desabilitar ou não definir essa configuração, o Microsoft Edge usar�
 "en"
 ```
 
-
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -8850,7 +8828,6 @@ Essa política afeta todos os tipos de entradas de áudio, não apenas o microfo
 ```
 0x00000000
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -8911,7 +8888,6 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\1 = "https://www.contos
 SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -8982,7 +8958,6 @@ Essa política destina-se a proporcionar flexibilidade às empresas para desabil
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -9096,7 +9071,6 @@ Use as informações anteriores ao configurar essa política.
 ```
 0x00000002
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -9295,7 +9269,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: AutoOpenAllowedForURLs
@@ -9372,7 +9345,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: AutoOpenFileTypes
@@ -9440,7 +9412,6 @@ Observe que, se você desabilitar essa política, também interromperá todas as
 0x00000000
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: AutofillAddressEnabled
@@ -9502,7 +9473,6 @@ Se você habilitar essa política ou não a configurar, os usuários poderão co
 ```
 0x00000000
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -9571,7 +9541,6 @@ Será necessário fechar uma guia e abri-la novamente para que essa política te
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: AutoplayAllowed
@@ -9636,7 +9605,6 @@ Se você não configurar essa política, o modo de tela de fundo será desabilit
 0x00000001
 ```
 
-
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -9691,7 +9659,6 @@ Se você desabilitar essa configuração, a lista de modelos disponíveis será 
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -9765,7 +9732,6 @@ Confira [https://go.microsoft.com/fwlink/?linkid=2119711](https://go.microsoft.c
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: BingAdsSuppression
@@ -9830,7 +9796,6 @@ Se você não configurar essa política, os cookies de terceiros serão habilita
 0x00000000
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: BlockThirdPartyCookies
@@ -9891,7 +9856,6 @@ Se você desabilitar essa política, os usuários não poderão adicionar novos 
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -9955,7 +9919,6 @@ Se você desabilitar essa política, o Microsoft Edge não permitirá que os usu
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: BrowserGuestModeEnabled
@@ -10017,7 +9980,6 @@ Se você habilitar essa política ou não a configurar, o Microsoft Edge enviar�
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -10095,7 +10057,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000002
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: BrowserSignin
@@ -10161,7 +10122,6 @@ Se você não configurar essa política, o cliente DNS interno ficará habilitad
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -10274,7 +10234,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: CertificateTransparencyEnforcementDisabledForCas
@@ -10346,7 +10305,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: CertificateTransparencyEnforcementDisabledForLegacyCas
@@ -10415,7 +10373,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\2 = ".contoso.com"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -10486,7 +10443,6 @@ Para impedir que os cookies sejam excluídos na saída, configure a política [S
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: ClearBrowsingDataOnExit
@@ -10552,7 +10508,6 @@ Se você desabilitar essa política, não habilite a política [ClearBrowsingDat
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -10622,7 +10577,6 @@ Para obter mais informações sobre o ClickOnce, confira [https://go.microsoft.c
 0x00000000
 ```
 
-
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -10648,6 +10602,8 @@ Se você não configurar essa política, não há restrições para os tipos de 
 Mapeamento das opções de política:
 
 * pinterest_suggestions (pinterest_suggestions) = Sugestões do Pinterest
+
+* coleções_share (coleções_share) = Compartilhamento de Coleções
 
 Use as informações anteriores ao configurar essa política.
 
@@ -10682,9 +10638,9 @@ Use as informações anteriores ao configurar essa política.
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pinterest_suggestions"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "collections_share"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -10693,6 +10649,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ``` xml
 <array>
   <string>pinterest_suggestions</string>
+  <string>collections_share</string>
 </array>
 ```
   
@@ -10751,7 +10708,6 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -10814,7 +10770,6 @@ No entanto, alguns componentes estão isentos desta política. Isso inclui qualq
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -10880,7 +10835,6 @@ Se você não configurar essa política, os usuários poderão optar por enviar 
 0x00000000
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: ConfigureDoNotTrack
@@ -10901,6 +10855,7 @@ Se você não configurar essa política, os usuários poderão optar por enviar 
   #### Versões com suporte:
 
   - No Windows desde 87 ou posterior
+  - No macOS desde 88 ou posterior
 
   #### Descrição
 
@@ -10963,6 +10918,13 @@ Use as informações anteriores ao configurar essa política.
 0x00000003
 ```
 
+  #### Informações e configurações do Mac
+  
+  - Nome da chave de preferência: ConfigureFriendlyURLFormat
+  - Valor de exemplo:
+``` xml
+<integer>3</integer>
+```
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -11028,7 +10990,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000000
 ```
 
-
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -11085,7 +11046,6 @@ Leia mais sobre este recurso aqui: API do SpeechSynthesis: [https://go.microsoft
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -11155,7 +11115,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000001
 ```
 
-
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -11212,7 +11171,6 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 ```
 "https://go.microsoft.com/fwlink/?linkid=2080734"
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -11278,7 +11236,6 @@ Se você desabilitar essa política, não será realizada a verificação de int
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: DNSInterceptionChecksEnabled
@@ -11343,7 +11300,6 @@ Observação para os administradores do Windows: essa política só funciona em 
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: DefaultBrowserSettingEnabled
@@ -11407,7 +11363,6 @@ O valor da política será aplicado apenas quando a política [DefaultSearchProv
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -11481,7 +11436,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000002
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: DefaultSensorsSetting
@@ -11553,7 +11507,6 @@ Use as informações anteriores ao configurar essa política.
 ```
 0x00000002
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -11629,7 +11582,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000001
 ```
 
-
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -11684,7 +11636,6 @@ Se você definir essa política como "desabilitada" ou se a política não estiv
 ```
 0x00000000
 ```
-
 
   
 
@@ -11752,7 +11703,6 @@ Use as informações anteriores ao configurar essa política.
 ```
 0x00000002
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -11840,7 +11790,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000002
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: DiagnosticData
@@ -11907,7 +11856,6 @@ Para obter mais informações sobre DirectInvoke, confira [https://go.microsoft.
 0x00000000
 ```
 
-
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -11962,7 +11910,6 @@ Se a política[HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled
 ```
 0x00000000
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -12028,7 +11975,6 @@ Observe que essa política controla as capturas de tela obtidas no próprio nave
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: DisableScreenshots
@@ -12093,7 +12039,6 @@ Se você não configurar essa política, o diretório de cache padrão será usa
 "${user_home}/Edge_cache"
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: DiskCacheDir
@@ -12157,7 +12102,6 @@ Se você não configurar essa política, o tamanho padrão será usado, mas os u
 ```
 0x06400000
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -12235,7 +12179,6 @@ Use as informações anteriores ao configurar essa política.
 "off"
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: DnsOverHttpsMode
@@ -12302,7 +12245,6 @@ Os modelos formatados incorretamente serão ignorados.
 "https://dns.example.net/dns-query{?dns}"
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: DnsOverHttpsTemplates
@@ -12368,7 +12310,6 @@ Se a pasta especificada pelo caminho não existir, o download disparará um avis
 ```
 "\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -12454,7 +12395,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000002
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: DownloadRestrictions
@@ -12516,7 +12456,6 @@ Se você desabilitar essa política, os usuários não poderão acessar e usar c
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -12640,7 +12579,6 @@ Desabilite essa política para impedir que os usuários adicionem, removam ou mo
 0x00000000
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: EditFavoritesEnabled
@@ -12659,7 +12597,6 @@ Desabilite essa política para impedir que os usuários adicionem, removam ou mo
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
   #### Versões com suporte:
-            
 
   - On Windows and macOS since 77, until 86
 
@@ -12716,7 +12653,6 @@ Use as informações anteriores ao configurar essa política.
 SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "ExampleDeprecatedFeature_EffectiveUntil20080902"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -12790,7 +12726,6 @@ Se você não configurar essa política, a lista de ações de domínio continua
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: EnableDomainActionsDownload
@@ -12852,7 +12787,6 @@ Se você desabilitar a política ou não a configurar, o Microsoft Edge não exe
 ```
 0x00000000
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -12918,7 +12852,6 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 0x00000000
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da Chave de Preferência: EnableSha1ForLocalAnchors
@@ -12978,7 +12911,6 @@ Essa política também se aplica a extensões de componente.
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -13041,7 +12973,6 @@ Se você desabilitar ou não configurar essa política, os usuários não verão
 ```
 0x00000000
 ```
-
 
   
 
@@ -13112,7 +13043,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"domains": ["*"], "file_extension": "swf"}
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -13201,7 +13131,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000002
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: ExperimentationAndConfigurationServiceControl
@@ -13270,7 +13199,6 @@ No Microsoft Edge 84, se você não configurar essa política quando um prompt d
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: ExternalProtocolDialogShowAlwaysOpenCheckbox
@@ -13332,7 +13260,6 @@ Se você desabilitar essa política, a página de segurança da família não se
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -13397,7 +13324,6 @@ Se essa política não estiver configurada, o usuário poderá decidir se quer o
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -13475,7 +13401,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000000
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: ForceBingSafeSearch
@@ -13537,7 +13462,6 @@ Se você definir essa política como falsa ou não a configurar, o Microsoft Edg
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -13603,7 +13527,6 @@ No modo efêmero, os dados de perfil são salvos em disco apenas quanto ao compr
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: ForceEphemeralProfiles
@@ -13665,7 +13588,6 @@ Se você desabilitar essa política ou não a configurar, a Pesquisa Segura na P
 ```
 0x00000000
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -13731,7 +13653,6 @@ Esta política corporativa está desabilitada por padrão.
 0x00000000
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: ForceLegacyDefaultReferrerPolicy
@@ -13794,7 +13715,6 @@ Essa política está desabilitada por padrão. Se habilitada, os usuários poder
 0x00000000
 ```
 
-
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -13854,7 +13774,6 @@ Para que essa política funcione conforme o esperado, a política [BrowserSignin
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -13930,7 +13849,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000000
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: ForceYouTubeRestrict
@@ -13995,7 +13913,6 @@ Abrir o Microsoft Edge no modo de quiosque usando a linha de comando ficará ind
 0x00000001
 ```
 
-
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -14054,7 +13971,6 @@ Esta política destina-se a fornecer às empresas, dependendo do comportamento h
 ```
 0x00000000
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -14124,7 +14040,6 @@ Termos de pesquisa populares de uma única palavra exigirão a seleção manual 
 0x00000000
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: GoToIntranetSiteForSingleWordEntryInAddressBar
@@ -14183,7 +14098,6 @@ Termos de pesquisa populares de uma única palavra exigirão a seleção manual 
 SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -14246,7 +14160,6 @@ Se você desabilitar essa política, a aceleração de hardware será desabilita
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -14331,7 +14244,6 @@ Observação: as opções de configuração específicas exibidas para o usuári
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -14458,7 +14370,6 @@ Você pode definir essa política como uma recomendação. Isso significa que o 
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: ImportAutofillFormData
@@ -14527,7 +14438,6 @@ Você também pode definir essa política como uma recomendação. Isso signific
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: ImportBrowserSettings
@@ -14593,7 +14503,6 @@ Você também pode definir essa política como uma recomendação. Isso signific
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -14663,7 +14572,6 @@ Você também pode definir essa política como uma recomendação. Isso signific
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: ImportExtensions
@@ -14731,7 +14639,6 @@ Você também pode definir essa política como uma recomendação. Isso signific
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -14801,7 +14708,6 @@ Você também pode definir essa política como uma recomendação. Isso signific
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: ImportHistory
@@ -14869,7 +14775,6 @@ Você pode definir essa política como uma recomendação. Isso significa que o 
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -14939,7 +14844,6 @@ Você também pode definir essa política como uma recomendação. Isso signific
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: ImportOpenTabs
@@ -15007,7 +14911,6 @@ Você também pode definir essa política como uma recomendação. Isso signific
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -15077,7 +14980,6 @@ Você pode definir essa política como uma recomendação. Isso significa que o 
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: ImportSavedPasswords
@@ -15146,7 +15048,6 @@ Você pode definir essa política como uma recomendação. Isso significa que o 
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: ImportSearchEngine
@@ -15212,7 +15113,6 @@ Você também pode definir essa política como uma recomendação. Isso signific
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -15288,7 +15188,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: InPrivateModeAvailability
@@ -15348,7 +15247,6 @@ Se você desabilitar essa política, os avisos não serão exibidos para os form
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -15416,7 +15314,6 @@ Observe que a política é aplicada por processo de processamento, com o valor m
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -15494,7 +15391,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000001
 ```
 
-
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -15556,7 +15452,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000001
 ```
 
-
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -15607,7 +15502,6 @@ Use as informações anteriores ao configurar essa política.
 ```
 "https://internal.contoso.com/sitelist.xml"
 ```
-
 
   
 
@@ -15684,7 +15578,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000000
 ```
 
-
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -15701,15 +15594,17 @@ Use as informações anteriores ao configurar essa política.
 
   #### Descrição
 
-  Essa política é um substituto para a política de sinalizador do modo IE. Permite que os usuários abram uma guia do modo IE na opção do menu UI.
+  Esta política permite que os usuários testem aplicativos no modo Internet Explorer abrindo uma guia do modo Internet Explorer no Microsoft Edge.
+
+Os usuários podem fazer isso no menu "Mais ferramentas", selecionando 'Abrir sites no modo Internet Explorer'.
+
+Além disso, os usuários podem testar seus aplicativos em um navegador moderno sem remover os aplicativos da lista de sites usando a opção 'Abrir sites no modo Edge'.
 
 Essa configuração funciona em conjunto com a: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) está definida como "IEMode" e a política [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) onde a lista tem pelo menos uma entrada.
 
-Se você habilitar essa política, os usuários poderão abrir a guia no modo IE da opção IU e navegar o site atual para um site modo IE.
+Se você habilitar esta política, a opção "Abrir sites no modo Internet Explorer" ficará visível em "Mais ferramentas". Os usuários podem visualizar seus sites no modo Internet Explorer nesta guia. Outra opção para 'Abrir sites no modo Edge' também estará visível em "Mais ferramentas" para ajudar a testar sites em um navegador moderno sem removê-los da lista de sites.
 
-Se você desabilitar essa política, os usuários não poderão ver a opção IU no menu diretamente.
-
-Se você não configurar essa política, poderá configurar o sinalizador de teste do modo IE manualmente.
+Se você desabilitar ou não configurar esta política, os usuários não poderão ver as opções 'Abrir no modo Internet Explorer' e 'Abrir no modo Edge' no menu "Mais ferramentas". No entanto, os usuários podem configurar essas opções com o sinalizador --ie-mode-test.
 
   #### Recursos compatíveis:
 
@@ -15743,7 +15638,6 @@ Se você não configurar essa política, poderá configurar o sinalizador de tes
 ```
 0x00000000
 ```
-
 
   
 
@@ -15803,7 +15697,6 @@ Se você não configurar a política, o usuário poderá alterar essa configura�
 ```
 "https://contoso.com/,https://fabrikam.com/"
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -15872,7 +15765,6 @@ Essa política exige uma reinicialização do navegador para concluir a aplicaç
 ```
 0x00000000
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -16233,7 +16125,6 @@ Se você não configurar essa política, o valor padrão (32) será usado.
 0x00000020
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: MaxConnectionsPerProxy
@@ -16297,7 +16188,6 @@ Se a política [EnableMediaRouter](#enablemediarouter) estiver desabilitada, ess
 ```
 0x00000000
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -16369,7 +16259,6 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: MetricsReportingEnabled
@@ -16434,7 +16323,6 @@ Se essa política não estiver definida, a detecção de ocultação da janela s
 0x00000001
 ```
 
-
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -16493,7 +16381,6 @@ Se você não configurar essa política, o tempo limite padrão de 2 segundos se
 ```
 0x0000000a
 ```
-
 
   
 
@@ -16559,7 +16446,6 @@ Use as informações anteriores ao configurar essa política.
 ```
 0x00000002
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -16627,7 +16513,6 @@ Essa política só está disponível em instâncias do Windows que fazem parte d
 0x00000001
 ```
 
-
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -16686,7 +16571,6 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\1 
 SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 = "*.contoso.com"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -16753,7 +16637,6 @@ Se você habilitar essa política ou não definir essa política, os sites poder
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: PaymentMethodQueryEnabled
@@ -16815,7 +16698,6 @@ Se você desabilitar essa política, os usuários não poderão alterar nem subs
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -16881,7 +16763,6 @@ As configurações do usuário para habilitar ou desabilitar o assistente Fixar 
 0x00000000
 ```
 
-
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -16938,7 +16819,6 @@ Se você não configurar essa política, a Autenticação Pró-ativa será ativa
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -17002,7 +16882,6 @@ Se você desabilitar (definir como falsa) essa política, o Microsoft Edge não 
 0x00000000
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: PromotionalTabsEnabled
@@ -17064,7 +16943,6 @@ Se você não configurar essa política, o usuário poderá alterar essa configu
 ```
 0x00000000
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -17129,7 +17007,6 @@ O QUIC é um protocolo de rede de camada de transporte que pode melhorar o desem
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -17216,8 +17093,6 @@ Para obter mais informações sobre essa política, consulte [https://go.microso
   Essa configuração permite especificar se o Internet Explorer redirecionará as navegações para sites que exigem um navegador moderno para o Microsoft Edge.
 
 Se você não configurar esta política ou defini-la como "Sitelist", começando no M87, o Internet Explorer redirecionará os sites incompatíveis para o Microsoft Edge.
-
-A Microsoft fornece uma lista de sites públicos que exigem tal redirecionamento, como https://mail.yahoo.com.
 
 Quando um site é redirecionado do Internet Explorer para o Microsoft Edge, a guia do Internet Explorer que começou a carregar o site é fechada se não tiver nenhum conteúdo anterior. Caso contrário, ela será navegada para uma página da ajuda da Microsoft, explicando por que o site foi redirecionado para o Microsoft Edge.
 
@@ -17335,7 +17210,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: RelaunchNotification
@@ -17398,7 +17272,6 @@ Caso contrário, o período padrão de 604,8 milhões milissegundos (uma semana)
 0x240c8400
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: RelaunchNotificationPeriod
@@ -17459,7 +17332,6 @@ Desabilitar essa política tem um efeito prejudicial à segurança e à estabili
 0x00000000
 ```
 
-
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -17514,7 +17386,6 @@ Se você não configurar ou desabilitar essa política, o Microsoft Edge usará 
 ```
 0x00000000
 ```
-
 
   
 
@@ -17575,7 +17446,6 @@ Especificamente, há um botão de alternância**Usar um serviço web para ajudar
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -17638,7 +17508,6 @@ Se você não configurar essa política ou deixá-la em branco, os usuários pod
 ```
 ".*@contoso.com"
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -17704,7 +17573,6 @@ Se você não configurar essa política, o caminho de perfil móvel será utiliz
 "${roaming_app_data}\\edge-profile"
 ```
 
-
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -17762,7 +17630,6 @@ Confira https://docs.microsoft.com/windows-server/storage/folder-redirection/dep
 0x00000001
 ```
 
-
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -17817,7 +17684,6 @@ Se você desabilitar essa política ou não a configurar, o conteúdo do Adobe F
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -17881,7 +17747,6 @@ Se você desabilitar essa política, os usuários serão impedidos de clicar em 
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: SSLErrorOverrideAllowed
@@ -17905,7 +17770,7 @@ Se você desabilitar essa política, os usuários serão impedidos de clicar em 
 
   #### Descrição
 
-  Define a versão mínima suportada do TLS. Se você não configurar essa política, o Microsoft Edge usará uma versão mínima padrão, TLS 1,0.
+  Define a versão mínima suportada do TLS. Se você não configurar esta política, o Microsoft Edge mostrará um erro para TLS 1.0 e TLS 1.1, mas o usuário poderá contorná-lo.
 
 Se você habilitar essa política, o Microsoft Edge não usará qualquer versão de SSL/TLS inferior à versão especificada. Todos os valores não reconhecidos são ignorados.
 
@@ -17951,7 +17816,6 @@ Use as informações anteriores ao configurar essa política.
 ```
 "tls1"
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -18024,7 +17888,6 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: SaveCookiesOnExit
@@ -18090,7 +17953,6 @@ Se você desabilitar essa política ou não a configurar, o histórico de navega
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: SavingBrowserHistoryDisabled
@@ -18149,7 +18011,6 @@ Se você desabilitar essa política, as chamadas a APIs de compartilhamento de t
 ```
 0x00000000
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -18212,7 +18073,6 @@ Se você desabilitar essa política, a rolagem de página da Web para fragmentos
 ```
 0x00000000
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -18278,7 +18138,6 @@ Se essa política não estiver definida, as sugestões de pesquisa serão habili
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: SearchSuggestEnabled
@@ -18340,7 +18199,6 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: SecurityKeyPermitAttestation
@@ -18400,7 +18258,6 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 ```
 0x00000001
 ```
-
 
   
 
@@ -18462,7 +18319,6 @@ Para habilitar essa política, [MetricsReportingEnabled](#metricsreportingenable
 ```
 0x00000000
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -18531,7 +18387,6 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\1 = "https://www.contoso.
 SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -18604,7 +18459,6 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: SensorsBlockedForUrls
@@ -18675,7 +18529,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -18748,7 +18601,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: SerialBlockedForUrls
@@ -18813,7 +18665,6 @@ Se você desativar esta política, o atalho não será mostrado.
 0x00000000
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: ShowOfficeShortcutInFavoritesBar
@@ -18875,7 +18726,6 @@ Se essa política estiver definida como desabilitada, as trocas HTTP assinadas n
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -18939,7 +18789,6 @@ Se você desabilitar ou não configurar essa política, um usuário poderá opta
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -19065,7 +18914,6 @@ Se você desabilitar essa política, o usuário não poderá usar o verificador 
 0x00000000
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: SpellcheckEnabled
@@ -19136,7 +18984,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
 
 ```
 
-
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -19200,7 +19047,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
 ```
 
-
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -19259,7 +19105,6 @@ Essa política não afeta outros tipos de conteúdo misto diferentes de áudio, 
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -19321,7 +19166,6 @@ Se essa política for falsa ou não estiver configurada, os avisos serão exibid
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: SuppressUnsupportedOSWarning
@@ -19381,7 +19225,6 @@ Se você não definir essa política ou aplicá-la conforme recomendado, os usu�
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -19445,7 +19288,6 @@ Os usuários não poderão substituir os tipos de dados desabilitados.
 SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -19514,7 +19356,6 @@ Essa política pode ser usada para testar todos os proxies afetados e atualizá-
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -19587,7 +19428,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: TLSCipherSuiteDenyList
@@ -19656,7 +19496,6 @@ Se você desabilitar essa política, nenhuma guia será congelada.
 0x00000000
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: TabFreezingEnabled
@@ -19714,7 +19553,6 @@ Se você desabilitar essa política, nenhuma guia será congelada.
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -19777,7 +19615,6 @@ Se você não definir essa política, o navegador só tentará economizar memór
 ```
 0x00000800
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -19851,7 +19688,6 @@ Use as informações anteriores ao configurar essa política.
 0x00000002
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: TrackingPrevention
@@ -19916,7 +19752,6 @@ Se você não configurar a política, os usuários poderão escolher se desejam 
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: TranslateEnabled
@@ -19939,7 +19774,6 @@ Se você não configurar a política, os usuários poderão escolher se desejam 
   - No Windows e no macOS desde 77 ou mais recente
 
   #### Descrição
-                    
 
   Configurar a política fornece acesso às URLs listadas como exceção na [URLBlocklist](#urlblocklist).
 
@@ -19992,7 +19826,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\4 = "https://server:8080/path"
 SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -20076,7 +19909,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: URLBlocklist
@@ -20150,7 +19982,6 @@ Se você habilitar ou não configurar essa política, o recurso Dicas de Cliente
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da Chave de Preferência: UserAgentClientHintsEnabled
@@ -20217,7 +20048,6 @@ Confira [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.c
 "${users}/${user_name}/Edge"
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: UserDataDir
@@ -20280,7 +20110,6 @@ Se você definir essa política, os instantâneos antigos serão excluídos conf
 0x00000003
 ```
 
-
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -20335,7 +20164,6 @@ Se você desabilitar essa política, os usuários não poderão invocar os Comen
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -20401,7 +20229,6 @@ Essa política afeta todos os tipos de entradas de vídeo, não apenas a câmera
 0x00000000
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: VideoCaptureAllowed
@@ -20461,7 +20288,6 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\1 = "https://www.contos
 SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -20529,7 +20355,6 @@ Independente da política ser habilitada, a configuração de otimização WPAD 
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -20746,7 +20571,6 @@ Se você definir essa política como falsa ou não definir essa política, os re
 0x00000001
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: WebComponentsV0Enabled
@@ -20764,7 +20588,6 @@ Se você definir essa política como falsa ou não definir essa política, os re
 
   >SUBSTITUÍDO: Essa política está preterida. Ela tem suporte no momento, mas se tornará obsoleta em uma versão futura.
   
-                     
   #### Versões com suporte:
 
   - No Windows e no macOS desde 77 até 84
@@ -20812,7 +20635,6 @@ Se a política estiver desabilitada ou não configurada, o WebDriver não terá 
 ```
 0x00000001
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -20881,7 +20703,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\1 = "https://www.cont
 SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
 ```
-
 
   #### Informações e configurações do Mac
   
@@ -20962,7 +20783,6 @@ Use as informações anteriores ao configurar essa política.
 "default"
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: WebRtcLocalhostIpHandling
@@ -21025,7 +20845,6 @@ Se você não configurar essa política, ou se a definir como uma cadeia de cara
 "10000-11999"
 ```
 
-
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: WebRtcUdpPortRange
@@ -21033,6 +20852,130 @@ Se você não configurar essa política, ou se a definir como uma cadeia de cara
 ``` xml
 <string>10000-11999</string>
 ```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### WebWidgetAllowed
+
+  #### Habilitar o widget da web
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows desde 88 ou posterior
+
+  #### Descrição
+
+  Habilitar o widget da Web. Quando habilitado, os usuários podem usar o widget para pesquisar na web a partir de um desktop ou de um aplicativo. O widget fornece uma caixa de pesquisa que mostra sugestões da web e abre todas as pesquisas da web no Microsoft Edge. A caixa de pesquisa fornece sugestões de pesquisa (da plataforma do Bing) e URL. O widget também inclui blocos de feed nos quais os usuários podem clicar para conferir mais informações no msn.com em uma nova guia ou janela do navegador Microsoft Edge. Os blocos de alimentação podem incluir anúncios. O widget pode ser iniciado nas configurações do Microsoft Edge ou no menu "Mais ferramentas" no Microsoft Edge.
+
+Se você habilitar ou não configurar esta política: O widget da Web será habilitado automaticamente para todos os perfis.
+Nas configurações do Microsoft Edge, os usuários verão a opção de iniciar o widget.
+Nas configurações do Microsoft Edge, os usuários verão o item de menu para executar o widget na inicialização do Windows (inicialização automática).
+A opção de habilitar o widget na inicialização será ativada se a política [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) estiver habilitada.
+Se [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) estiver desabilitado ou não configurado, a opção de habilitar o widget na inicialização será desligada.
+Os usuários verão o item de menu para iniciar o widget a partir do menu "Mais ferramentas" do Microsoft Edge. Os usuários podem iniciar o widget em "Mais ferramentas".
+O widget pode ser desativado pela opção "Sair" na bandeja do sistema ou fechando o widget na barra de tarefas. O widget será reiniciado na reinicialização do sistema se a inicialização automática estiver habilitada.
+
+Se você desabilitar esta política: O widget da Web será desabilitado para todos os perfis.
+A opção de iniciar o widget nas Configurações do Microsoft Edge será desabilitada.
+A opção de iniciar o widget na inicialização do Windows (inicialização automática) será desabilitada.
+A opção de iniciar o widget no menu "Mais ferramentas" do Microsoft Edge será desabilitada.
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### Tipo de dados:
+
+  - Booliano
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo do GP: WebWidgetAllowed
+  - Nome do GP: habilitar o widget da Web
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: WebWidgetAllowed
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de exemplo:
+
+```
+0x00000001
+```
+
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### WebWidgetIsEnabledOnStartup
+
+  #### Permitir o widget da Web na inicialização do Windows
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows desde 88 ou posterior
+
+  #### Descrição
+
+  Permite que o widget da Web comece a ser executado na inicialização do Windows.
+
+Se você habilitar: O widget da Web começará a ser executado na inicialização do Windows por padrão.
+Se o widget for desabilitado por meio da política [WebWidgetAllowed](#webwidgetallowed), esta política não iniciará o widget na inicialização do Windows.
+
+Se você desabilitar esta política: O widget da Web não será iniciado na inicialização do Windows para todos os perfis.
+A opção de iniciar o widget na inicialização do Windows será desabilitada e desativada nas configurações do Microsoft Edge.
+
+Se você não configurar a política: o widget da Web não iniciará na inicialização do Windows para todos os perfis.
+A opção de iniciar o widget na inicialização do Windows será desativada nas configurações do Microsoft Edge.
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### Tipo de dados:
+
+  - Booliano
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: WebWidgetIsEnabledOnStartup
+  - Nome da Política de Grupo: permitir o widget da web na inicialização do Windows
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: WebWidgetIsEnabledOnStartup
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de exemplo:
+
+```
+0x00000001
+```
+
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -21091,7 +21034,6 @@ Se você desabilitar ou não configurar essa política, o solucionador de proxy 
 ```
 0x00000001
 ```
-
 
   
 
