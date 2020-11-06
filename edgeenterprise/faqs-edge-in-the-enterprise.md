@@ -3,19 +3,19 @@ title: Perguntas frequentes sobre o Edge na empresa
 ms.author: jwhit
 author: jwhit-MSFT
 manager: laurawi
-ms.date: 08/03/2020
+ms.date: 11/04/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Perguntas frequentes sobre a implantação do Microsoft Edge na empresa
-ms.openlocfilehash: 0f6891f4f7187b23f6e3d4e7880fdafa49def351
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: e689967cbad950e2969535bad0dd63d5d7081798
+ms.sourcegitcommit: 12827458f6217f443128e826c1d18d36d401d03b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979055"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "11154316"
 ---
 # Perguntas frequentes sobre o Microsoft Edge na empresa
 
@@ -56,7 +56,9 @@ Sim. Agora há suporte para configurar o Microsoft Edge no Windows 10 usando o M
 
 ## O WSUS suporta a implantação inicial do novo Microsoft Edge?
 
-Não. O WSUS suporta a atualização de instalações MSI existentes do Microsoft Edge, mas não pode ser usado para a implantação inicial. Se a intenção é a de administrar as atualizações pelo WSUS, então a implementação inicial pode ser feita através de uma ferramenta de gestão, como o [ConfigMgr](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json).
+Sim. Há pacotes no [Catálogo do Microsoft Update](https://www.catalog.update.microsoft.com/Search.aspx?q=the%20new%20microsoft%20edge%20for%20windows) que podem ser usados para a implantação inicial do novo Microsoft Edge por meio do WSUS. Após a implantação inicial, as atualizações automáticas são configuradas por padrão. Para saber mais, consulte [Atualizar no WSUS para o novo Microsoft Edge para Windows 10, versão 1809, 1903, 1909 e 2004: 29 de outubro de 2020](https://support.microsoft.com/help/4584642/update-in-wsus-for-the-new-microsoft-edge).
+
+As atualizações manuais podem ser feitas por meio de uma ferramenta de gerenciamento de configuração, como a [ConfigMgr.](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json).
 
 ## Consulte também
 
