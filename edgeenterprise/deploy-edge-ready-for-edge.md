@@ -3,19 +3,19 @@ title: Pronto para o Microsoft Edge
 ms.author: bshiers
 author: dan-wesley
 manager: chstaab
-ms.date: 11/04/2020
+ms.date: 11/06/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Pronto para o Microsoft Edge
-ms.openlocfilehash: 06fd37dfa910c05db091cf764552ec93471dcbef
-ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
+ms.openlocfilehash: eb4f03fd831eda4b4773b87469ceeb896e3fe08a
+ms.sourcegitcommit: 2e8906d1090263efe83d628be06dbe910cb82bf7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "11155354"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "11157684"
 ---
 # Pronto para o Microsoft Edge
 
@@ -24,6 +24,17 @@ O artigo fornece informações para o Administrador de TI que está planejando u
 ## Compatibilidade e suporte de aplicativos Web
 
 Para ajudá-lo a planejar sua implementação do Microsoft Edge, compilamos uma lista de aplicativos web que podem ser utilizados dentro de sua organização. Esta lista permite determinar se o aplicativo web está pronto para o Microsoft Edge, conforme documentado pela declaração de apoio público do fornecedor do aplicativo web.
+
+### Adicionar à lista de aplicativos
+
+A lista é atualizada regularmente conforme as declarações de suporte são identificadas a partir dos comentários de envolvimento do cliente.
+
+Se você for um provedor de aplicativos Web e gostaria que a declaração de suporte seja incluída para referência do cliente, envie as seguintes informações para [isvoutreach@microsoft.com](mailto:isvoutreach@microsoft.com).
+
+- Nome do produto
+- Versão com Suporte (se aplicável)
+- Nome do provedor
+- URL de Declaração de Suporte Público
 
 ### Lista de aplicativos
 
