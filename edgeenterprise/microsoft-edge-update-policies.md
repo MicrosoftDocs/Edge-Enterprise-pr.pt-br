@@ -1,9 +1,9 @@
 ---
 title: Documentação da política do Microsoft Edge Update
 ms.author: stmoody
-author: brianalt-msft
+author: dan-wesley
 manager: tahills
-ms.date: 10/07/2020
+ms.date: 11/12/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,14 +11,15 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação para todas as políticas compatíveis com o Microsoft Edge Update
-ms.openlocfilehash: feb7859f062ae39e2bbfe08d8e478386defb85cf
-ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
+ms.openlocfilehash: 0cdcda984efff8d10a84431e44c49ffbf28ddf07
+ms.sourcegitcommit: c2ac4f889b625210b9365a60a447482fb5b4c9d4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "11105565"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "11167303"
 ---
 # Microsoft Edge - Políticas de atualização
+
 A versão mais recente do Microsoft Edge inclui as seguintes políticas que você pode usar para controlar como e quando o Microsoft Edge é atualizado.
 
 Para obter informações sobre outras políticas disponíveis no Microsoft Edge, confira [Referência de política do navegador Microsoft Edge](microsoft-edge-policies.md)
