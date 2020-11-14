@@ -1,4 +1,4 @@
-# last revised 11/03/2020
+# last revised 11/06/2020
 - name: Documentação do Microsoft Edge Enterprise
   href: index.yml
 - name: Documentação do Microsoft Edge
@@ -113,6 +113,8 @@
           href: edge-ie-mode-faq.md
         - name: Orientações adicionais
           items:
+            - name: Adicionar modo IE ao menu de contexto "abrir com"
+              href: edge-ie-mode-add-guidance-filetype-associations.md
             - name: Compartilhamento de cookies do Microsoft Edge para o Internet Explorer
               href: edge-ie-mode-add-guidance-cookieshare.md
 - name: Segurança do Microsoft Edge
