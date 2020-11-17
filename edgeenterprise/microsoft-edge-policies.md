@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/04/2020
+ms.date: 11/13/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 0e708707ae8465aa49ee49dcec542881a5080a57
-ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
+ms.openlocfilehash: e191d9487a0e6c0d72f2f4b47d6b6c413449cb71
+ms.sourcegitcommit: 2b6808a4d1878fd2da886f9c6c56f592c6b200e1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "11155308"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "11168796"
 ---
 # Microsoft Edge - Políticas
 
@@ -28,18 +28,6 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
-
-## Políticas novas e preteridas
-
-A tabela a seguir lista as políticas novas e preteridas para esta atualização.
-
-| Nome | Status |
-|-|-|
-| [WebWidgetAllowed](#webwidgetallowed) | Novo |
-| [ProxyBypassList](#proxybypasslist) | Preterido |
-| [ProxyMode](#proxymode) | Preterido |
-| [ProxyPacUrl](#proxypacurl) | Preterido |
-| [ProxyServer](#proxyserver) | Preterido |
 
 ## Políticas disponíveis
 
@@ -4003,15 +3991,23 @@ Use as informações anteriores ao configurar essa política.
 
   #### Descrição
 
-  Controla quais tipos de extensão podem ser instalados e limita o acesso de tempo de execução.
+  Configurar a política controla quais aplicativos e extensões podem ser instalados no Microsoft Edge, com quais hosts podem interagir e limita o acesso ao tempo de execução.
 
-Essa configuração define os tipos de extensões permitidas e com quais hosts elas podem interagir. O valor é uma lista de cadeias de caracteres, cada uma delas deve ser uma das seguintes: "extension", "theme", "user_script", and "hosted_app". Confira a documentação do Microsoft Edge Extensions para saber mais sobre esses tipos.
+Se você não definir essa política, não haverá restrições sobre tipos de aplicativo e extensão aceitáveis.
 
-Observe que essa política também afeta as extensões a serem instaladas à força ao usar a política [ExtensionInstallForcelist](#extensioninstallforcelist).
+Extensões e aplicativos que têm um tipo que não está na lista não serão instalados. Cada valor deve ser uma destas cadeias de caracteres:
 
-Se você habilitar essa política, somente as extensões que correspondem a um tipo na lista serão instaladas.
+* "extension"
 
-Se você não configurar essa política, não há restrições para os tipos de extensão aceitáveis.
+* "theme"
+
+* "user_script"
+
+* "hosted_app"
+
+Consulte a documentação das extensões do Microsoft Edge para obter mais informações sobre esses tipos.
+
+Observação: essa política também afeta as extensões e os aplicativos a serem instalados por força usando o [ExtensionInstallForcelist](#extensioninstallforcelist).
 
   #### Recursos compatíveis:
 
@@ -4202,27 +4198,21 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
   #### Descrição
 
-  Especifica as extensões instaladas silenciosamente, sem a interação do usuário e que os usuários não podem desinstalar ou desabilitar ("instalação forçada"). Todas as permissões solicitadas pelas extensões são concedidas implicitamente, sem interação do usuário, incluindo quaisquer permissões adicionais solicitadas por versões futuras da extensão. Além disso, as permissões são concedidas para as APIs de extensão enterprise.deviceAttributes e enterprise.platformKeys. (Essas duas APIs estão disponíveis apenas para extensões que são instaladas à força.)
+  Defina essa política para especificar uma lista de aplicativos e extensões que são instalados silenciosamente, sem a interação do usuário. Os usuários não podem desinstalar ou desativar essa configuração. As permissões são concedidas implicitamente, incluindo as APIs de extensão enterprise.deviceAttributes e enterprise.platformKeys. Observação: essas duas APIs não estão disponíveis para aplicativos e extensões que não são compatíveis com o recurso de instalação forçada.
 
-Essa política tem precedência sobre uma política [ExtensionInstallBlocklist](#extensioninstallblocklist) potencialmente conflitante. Quando você tira uma extensão da lista de instalação forçada, ela é desinstalada automaticamente no Microsoft Edge.
+Se você não definir essa política, não será possível instalar aplicativos ou extensões e os usuários poderão desinstalar qualquer aplicativo no Microsoft Edge.
 
-A instalação forçada se limitada aos aplicativos e extensões listados no site Complementos do Microsoft Edge para instâncias que não são uma das seguintes opções: as instâncias do Windows que fazem parte de um domínio do Microsoft Active Directory, ou instâncias do Windows 10 Pro ou Enterprise que se inscreveram para o gerenciamento de dispositivos e as instâncias do macOS gerenciadas via MDM ou associadas a um domínio por meio do MCX.
+Essa política substitui a política [ExtensionInstallBlocklist](#extensioninstallblocklist). Se um aplicativo ou uma extensão instalada anteriormente à força for removida da lista, o Microsoft Edge o desinstalará automaticamente.
 
-Observe que os usuários podem modificar o código-fonte de qualquer extensão usando as ferramentas de desenvolvedor, potencialmente processando a extensão Dysfunctional. Se isso for uma preocupação, defina a política [DeveloperToolsAvailability](#developertoolsavailability).
+Em instâncias do Microsoft Windows, aplicativos e extensões de fora do site de complementos do Microsoft Edge só podem ser instalados à força se a instância estiver incluída em um domínio do Microsoft Active Directory e estiver executando o Windows 10 Pro.
 
-Use o formato a seguir para adicionar uma extensão à lista:
+Em instâncias do macOS, aplicativos e extensões de fora do site de complementos do Microsoft Edge só podem ser instalados à força se a instância for gerenciada via MDM ou ingressada em um domínio via MCX.
 
-[ExtensionId]; [updateURL]
+O código-fonte de qualquer extensão pode ser alterado pelos usuários com ferramentas de desenvolvedor, potencialmente renderizando a extensão não funcional. Se isso for uma preocupação, configure a política DeveloperToolsDisabled.
 
-- ExtensionId: A cadeia de 32 caracteres, encontrada em edge://extensions, no modo de desenvolvedor.
+Cada item de lista da política é uma cadeia de caracteres que contém uma ID de extensão e, opcionalmente, uma URL de "atualização" separada por um ponto e vírgula (;). A ID da extensão é a cadeia de caracteres de 32 letras encontrada, por exemplo, no edge://extensions quando estiver no modo de desenvolvedor. Se especificado, a URL "atualizar" deve apontar para um documento XML de manifesto de atualização ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ). Por padrão, a URL de atualização do site de complementos do Microsoft Edge é usada. A URL "atualizar" definida nessa política é usada somente para a instalação inicial. Atualizações subsequentes da extensão usam a URL de atualização no manifesto da extensão.
 
-- updateURL (opcional) é o endereço do documento XML de atualização para o aplicativo ou extensão, conforme descrito em [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043). Se você deseja instalar uma extensão na Web Store, forneça a URL de atualização do Chrome Web Store, https://clients2.google.com/service/update2/crx. Observe que a URL de atualização definida nesta política só é usada para a instalação inicial. As atualizações subsequentes da extensão usam a URL de atualização indicada no manifesto da extensão. Se você não definir o updateURL, a extensão será considerada hospedada na Microsoft Store e a seguinte URL de atualização será usada (https://edge.microsoft.com/extensionwebstorebase/v1/crx).
-
-Por exemplo, gggmmkjegpiggikcnhidnjjhmicpibll; https://edge.microsoft.com/extensionwebstorebase/v1/crx instala o aplicativo Microsoft Online na URL "atualizar" da Microsoft Store. Para obter mais informações sobre as extensões de hospedagem, confira: [https://go.microsoft.com/fwlink/?linkid=2095044](https://go.microsoft.com/fwlink/?linkid=2095044).
-
-Se você não configurar essa política, nenhuma extensão será instalada automaticamente, e os usuários poderão desinstalar qualquer extensão no Microsoft Edge.
-
-Observe que essa política não se aplica ao modo InPrivate.
+Observação: essa política não se aplica ao modo InPrivate. Leia sobre extensões de hospedagem (https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
   #### Recursos compatíveis:
 
