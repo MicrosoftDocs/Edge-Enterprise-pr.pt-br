@@ -3,19 +3,19 @@ title: Redirecionamento do Internet Explorer para o Microsoft Edge para compatib
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 11/03/2020
+ms.date: 11/16/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Redirecionamento do Internet Explorer para o Microsoft Edge para compatibilidade com os sites modernos
-ms.openlocfilehash: d822bf4cef76fe4c0298133b47ed80f5d1242b3d
-ms.sourcegitcommit: 73fec3998f26d110252ace621be01f1c1142cf57
+ms.openlocfilehash: c9c64a55df3aeecaebaab3675296c5594612b94f
+ms.sourcegitcommit: fc0ac6bb6655d1f6e2de7c838f275779cd7a5de6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "11151091"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "11175194"
 ---
 # Redirecionamento do Internet Explorer para o Microsoft Edge para compatibilidade com os sites modernos
 
@@ -31,7 +31,7 @@ A necessidade de mudar manualmente para um navegador diferente muda a partir da 
 Quando o usuário visita um site incompatível com o Internet Explorer, ele será automaticamente redirecionado para o Microsoft Edge. Este artigo descreve a experiência do usuário para o redirecionamento e as políticas de grupo que são utilizadas para configurar ou desativar o redirecionamento automático.
 
 > [!NOTE]
-> A Microsoft mantém uma lista de todos os sites que são conhecidos por não serem compatíveis com o Internet Explorer.
+> A Microsoft mantém uma lista de todos os sites que são conhecidos por não serem compatíveis com o Internet Explorer. Para obter mais informações, consulte [Solicitar atualizações à lista de sites incompatíveis](https://docs.microsoft.com/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
 
 ## Experiência de redirecionamento
 
@@ -111,7 +111,8 @@ Se você quiser desativar o redirecionamento DEPOIS da atualização para o Micr
 1. Defina a política **RedirectSitesFromInternetExplorerRedirectMode** para **Habilitado** E, em seguida, na lista suspensa em opções: Redirecione sites incompatíveis do Internet Explorer para o Microsoft Edge, selecione **Desabilitar**. Esta configuração deixará de redirecionar assim que a política entrar em vigor.
 2. Defina a política **RedirectSitesFromInternetExplorerPreventBHOInstall** para **Habilitada**. Isto vai desinstalar o BHO depois da próxima atualização do Microsoft Edge.
 
-## Veja também
+## Consulte também
 
+- [Solicitar atualizações à lista de sites incompatíveis](https://docs.microsoft.com/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
 - [Página de destino do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Políticas do Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-policies)
