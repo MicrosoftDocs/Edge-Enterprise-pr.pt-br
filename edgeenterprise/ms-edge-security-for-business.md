@@ -3,19 +3,19 @@ title: Segurança do Microsoft Edge para a sua empresa
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 11/11/2020
+ms.date: 11/18/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Segurança do Microsoft Edge para a sua empresa
-ms.openlocfilehash: e2f45d49d8f4960f3f2263098ff2eb7d0103b6ea
-ms.sourcegitcommit: 5efa7f6196804da205c3deff4ba7917a94ffcf4f
+ms.openlocfilehash: 52e55c64aad193072c44f6bc76e5c66808a5439d
+ms.sourcegitcommit: 5a5be508c3c9c57187aca821b4a16f639abdd7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "11165940"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "11176948"
 ---
 # Segurança do Microsoft Edge para a sua empresa
 
@@ -56,11 +56,13 @@ Além da proteção contra ameaças externas, os administradores de TI também d
 > [!NOTE]
 > A configuração de Proteção de Informações do Windows (WIP) exige o licenciamento do Microsoft Intune ou do Microsoft Endpoint Configuration Manager, ou uso de uma solução de gerenciamento de dispositivo móvel (MDM) de terceiros, que pode ter requisitos de licença adicionais.
 
-**O Microsoft Endpoint DLP só tem suporte nativo no Microsoft Edge**. A Proteção contra Perda de Dados de Ponto de Extremidade do Microsoft (DLP) integra o centro de segurança do Microsoft e amplia a proteção de informações para o Microsoft Edge para ajudar os usuários de atividade não compatível e evitar a perda de dados quando os usuários trabalham online. Ela descobre e rotula os dados confidenciais dentro da empresa que correspondem aos critérios definidos pelo administrador, como arquivos que contenham números de cartão de crédito ou identificações governamentais (por exemplo, números de seguridade social), informações financeiras, etc. As políticas de proteção de informações da Microsoft podem ser implantadas no Microsoft Endpoint DLP sem a reconfiguração adicional, incluindo identificadores de conteúdo confidenciais e políticas que os administradores de TI já personalizaram. Essa é uma implantação tranquila da proteção de informações para administradores de TI.
+A **prevenção contra perda de dados do Ponto de extremidade da Microsoft (Endpoint DLP) só tem suporte nativo no Microsoft Edge**. O Ponto de extremidade da DLP integra-se com a Central de Segurança da Microsoft e estende a proteção de informações ao Microsoft Edge para ajudar a alertar os usuários sobre atividades não compatíveis e evitar a perda de dados enquanto os usuários trabalham online. Ela descobre e rotula os dados confidenciais dentro da empresa que correspondem aos critérios definidos pelo administrador, como arquivos que contenham números de cartão de crédito ou identificações governamentais (por exemplo, números de seguridade social), informações financeiras, etc. As políticas de proteção de informações da Microsoft podem ser implantadas no Microsoft Endpoint DLP sem a reconfiguração adicional, incluindo identificadores de conteúdo confidenciais e políticas que os administradores de TI já personalizaram. Essa é uma implantação tranquila da proteção de informações para administradores de TI.
+
+Para saber mais sobre os pré-requisitos do Ponto de extremidade da DLP e como configurá-lo, confira [Introdução à prevenção contra perda de dados de Ponto de extremidade](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide).
 
 > [!NOTE]
-> A assinatura do Microsoft 365 E5 Compliance ou Microsoft 365 E5 Compliance é necessária para a Proteção contra Perda de Dados de Ponto de Extremidade do Microsoft.
+> A assinatura de Conformidade do Microsoft 365 E5 ou Microsoft 365 E5 necessária para prevenção contra perda de dados do ponto de extremidade da Microsoft.
 
-## Consulte também
+## Confira também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

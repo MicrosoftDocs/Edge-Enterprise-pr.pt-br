@@ -3,19 +3,19 @@ title: Prevenção contra Perda de Dados no Microsoft Edge
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 10/08/2020
+ms.date: 11/18/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Prevenção contra Perda de Dados (DLP) no Microsoft Edge
-ms.openlocfilehash: 59c1b68c0526a49a2ee30283893707852514828d
-ms.sourcegitcommit: 2af303fc97e8493024e2359fa2e8be162ab95a59
+ms.openlocfilehash: 72f670caf34a09cdfc7f47575f688c2a39d3c221
+ms.sourcegitcommit: 5a5be508c3c9c57187aca821b4a16f639abdd7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "11104596"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "11176938"
 ---
 # Prevenção contra Perda de Dados (DLP) no Microsoft Edge
 
@@ -27,12 +27,17 @@ Essa combinação de atividades do usuário também se espalhou para os disposit
 
 O Microsoft Edge oferece suporte nativo a duas soluções de DLP diferentes, Microsoft Endpoint DLP e Proteção de Informações do Windows (WIP).
 
-## Microsoft Endpoint DLP
+## A prevenção contra perda de dados do ponto de extremidade da Microsoft (Endpoint DLP)
 
-O Microsoft Endpoint DLP é a próxima geração de DLP que usa conceitos modernos, como proteção centrada em dados. Ele é integrado ao Windows 10 e ao Microsoft Edge, por isso não precisa de agentes ou plugins adicionais no dispositivo. Para saber mais sobre o Endpoint DLP, leia [Saiba mais sobre a prevenção contra perda de dados do Microsoft 365 Endpoint](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide).
+A prevenção contra perda de dados do ponto de extremidade da Microsoft é a próxima geração de prevenção contra perda de dados usando conceitos modernos, como proteção centrada em dados. Ela é integrada ao Windows 10 e ao Microsoft Edge, portanto, não é necessário agentes adicionais ou plugins no dispositivo.
 
 > [!NOTE]
 > Isso se aplica ao Microsoft Edge na versão 85 ou posterior.
+
+Para saber mais sobre a DLP do Ponto de extremidade:
+
+- [Saiba mais sobre a prevenção contra perda de dados do ponto de extremidade do Microsoft 365 ](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide)
+- [Introdução à prevenção contra perda de dados do Ponto de extremidade](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide)
 
 O Microsoft Edge impõe políticas configuradas pelo administrador para arquivos confidenciais e registros de eventos de auditoria para atividades não compatíveis.
 
