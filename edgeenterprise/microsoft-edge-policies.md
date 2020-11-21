@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/13/2020
+ms.date: 11/19/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: e191d9487a0e6c0d72f2f4b47d6b6c413449cb71
-ms.sourcegitcommit: 2b6808a4d1878fd2da886f9c6c56f592c6b200e1
+ms.openlocfilehash: 77d79f36ba91c5966ffb8dde66ba7ec14934f39e
+ms.sourcegitcommit: fc6f86f92f2fecac89028d77524d123bfaf2111d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "11168796"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "11181982"
 ---
 # Microsoft Edge - Políticas
 
@@ -28,6 +28,17 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
+
+## Políticas novas e preteridas
+
+A tabela a seguir lista as políticas novas e preteridas para esta atualização.
+
+| Nome | Status |
+|-|-|
+|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)| Novo |
+|[BlockExternalExtensions](#blockexternalextensions) | Novo |
+|[ShowMicrosoftRewards](#showmicrosoftrewards) | Novo |
+|[ProactiveAuthEnabled](#proactiveauthenabled) | Preterido |
 
 ## Políticas disponíveis
 
@@ -41,8 +52,9 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[Configurações do modo de quiosque](#kiosk-mode-settings)|[Sistema de mensagens nativo](#native-messaging)|
 |[Gerenciador de senhas e proteção](#password-manager-and-protection)|[Desempenho](#performance)|
 |[Impressão](#printing)|[Servidor proxy](#proxy-server)|
-|[Configurações do SmartScreen](#smartscreen-settings)|[Página de inicialização, página inicial e nova guia](#startup-home-page-and-new-tab-page)|
-|[Adicional](#additional)|
+|[Configurações de Guias em repouso](#sleeping-tabs-settings)|[Configurações do SmartScreen](#smartscreen-settings)|
+|[Página de inicialização, página inicial e nova guia](#startup-home-page-and-new-tab-page)|[Adicional](#additional)|
+
 
 ### [*Configurações do Application Guard*](#application-guard-settings-policies)
 
@@ -116,6 +128,7 @@ e dicas para os serviços Microsoft|
 
 |Nome da política|Legenda|
 |-|-|
+|[BlockExternalExtensions](#blockexternalextensions)|Bloqueia a instalação de extensões externas|
 |[ExtensionAllowedTypes](#extensionallowedtypes)|Configurar tipos de extensão permitidas|
 |[ExtensionInstallAllowlist](#extensioninstallallowlist)|Permitir que extensões específicas sejam instaladas|
 |[ExtensionInstallBlocklist](#extensioninstallblocklist)|Controlar quais extensões não podem ser instaladas|
@@ -180,6 +193,13 @@ e dicas para os serviços Microsoft|
 |[ProxyPacUrl](#proxypacurl)|Definir o URL do arquivo proxy .pac (preterido)|
 |[ProxyServer](#proxyserver)|Configurar o endereço ou URL do servidor proxy (preterido)|
 |[ProxySettings](#proxysettings)|Configurações de proxy|
+### [*Configurações de Guias em repouso*](#sleeping-tabs-settings-policies)
+
+|Nome da política|Legenda|
+|-|-|
+|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)|Bloquear Guias em Suspensão em sites específicos|
+|[SleepingTabsEnabled](#sleepingtabsenabled)|Configurar Guias de Repouso|
+|[SleepingTabsTimeout](#sleepingtabstimeout)|Definir o tempo limite de inatividade de tela de fundo para Guias em Suspensão|
 ### [*Configurações do SmartScreen*](#smartscreen-settings-policies)
 
 |Nome da política|Legenda|
@@ -341,7 +361,7 @@ e dicas para os serviços Microsoft|
 |[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|Permitir que os sites pesquisem os métodos de pagamento disponíveis|
 |[PersonalizationReportingEnabled](#personalizationreportingenabled)|Permite a personalização de anúncios, pesquisas e notícias enviando o histórico de navegação à Microsoft.|
 |[PinningWizardAllowed](#pinningwizardallowed)|Permitir fixar o assistente na barra de tarefas|
-|[ProactiveAuthEnabled](#proactiveauthenabled)|Habilitar a autenticação Proativa|
+|[ProactiveAuthEnabled](#proactiveauthenabled)|Habilitar a Autenticação Pró-ativa (preterida)|
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|Habilitar o conteúdo promocional em uma guia|
 |[PromptForDownloadLocation](#promptfordownloadlocation)|Perguntar onde salvar os arquivos baixados|
 |[QuicAllowed](#quicallowed)|Permitir protocolo QUIC|
@@ -369,7 +389,8 @@ e dicas para os serviços Microsoft|
 |[SensorsAllowedForUrls](#sensorsallowedforurls)|Permitir o acesso a sensores em sites específicos|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Bloquear o acesso a sensores em sites específicos|
 |[SerialAskForUrls](#serialaskforurls)|Permitir a API serial em sites específicos|
-|[SerialBlockedForUrls](#serialblockedforurls)|Bloquear a API serial em sites específicos|
+|[SerialBlockedForUrls](#serialblockedforurls)|Bloquear a API Serial em sites específicos|
+|[ShowMicrosoftRewards](#showmicrosoftrewards)|Mostrar experiências do Microsoft Rewards|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Exibir o atalho do Microsoft Office na barra de favoritos (obsoleto)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Habilitar o suporte para o Exchange HTTP (SXG) assinado|
 |[SitePerProcess](#siteperprocess)|Habilitar o isolamento de sites para todos os sites|
@@ -3979,6 +4000,71 @@ Use as informações anteriores ao configurar essa política.
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### BlockExternalExtensions
+
+  #### Bloqueia a instalação de extensões externas
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows e no macOS desde 88 ou posterior
+
+  #### Descrição
+
+  Controle a instalação de extensões externas.
+
+Se você habilitar essa configuração, as extensões externas serão bloqueadas para serem instaladas.
+
+Se você desabilitar essa configuração ou deixá-la sem definição, as extensões externas poderão ser instaladas.
+
+As extensões externas e suas instalações são documentadas em https://docs.microsoft.com/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options.
+
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### Tipo de dados:
+
+  - Booliano
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da GP: BlockExternalExtensions
+  - Nome da GP: bloqueia a instalação de extensões externas
+  - Caminho da Política de Grupo (Obrigatório): Modelos Administrativos/Microsoft Edge/Extensões
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (Recomendado): N/A
+  - Nome do Valor: BlockExternalExtensions
+  - Tipo de Valor: REG_DWORD
+
+  ##### Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### Informações e configurações do Mac
+  
+  - Nome da Chave de Preferência: BlockExternalExtensions
+  - Valor de exemplo:
+``` xml
+<true/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### ExtensionAllowedTypes
 
   #### Configurar tipos de extensão permitidas
@@ -6581,6 +6667,225 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ## Políticas de configurações de Guias em repouso
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### SleepingTabsBlockedForUrls
+
+  #### Bloquear Guias em Suspensão em sites específicos
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows e no macOS desde 88 ou posterior
+
+  #### Descrição
+
+  Defina uma lista de sites, com base em padrões de URL, que não são permitidas a serem colocadas em suspensão pelas Guias em Repouso.
+
+Se a política [SleepingTabsEnabled](#sleepingtabsenabled) estiver desabilitada, essa lista não será usada e nenhum site será colocado em suspensão automaticamente.
+
+Se você não configurar essa política, todos os sites ficarão qualificados para serem colocados em suspensão, a menos que a configuração pessoal do usuário a bloqueie.
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: Sim
+  - Atualização dinâmica das políticas: Sim
+
+  #### Tipo de dados:
+
+  - Lista de cadeias de caracteres
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: SleepingTabsBlockedForUrls
+  - Nome da Política de Grupo: bloquear guias em repouso em sites específicos
+  - Caminho Política de Grupo (obrigatório): modelos administrativos/Microsoft Edge/configurações das Guias em Suspensão
+  - Caminho Política de Grupo (recomendado): modelos Administrativos/Microsoft Edge - Configurações Padrão (os usuários podem substituir)/configurações de Guias de Suspensão
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de Registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls
+  - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended\SleepingTabsBlockedForUrls
+  - Nome do Valor: 1, 2, 3, ...
+  - Tipo de valor: lista de REG_SZ
+
+  ##### Valor de exemplo:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu"
+
+```
+
+  #### Informações e configurações do Mac
+  
+  - Nome da Chave de Preferência: SleepingTabsBlockedForUrls
+  - Valor de exemplo:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### SleepingTabsEnabled
+
+  #### Configurar Guias de Repouso
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows e no macOS desde 88 ou posterior
+
+  #### Descrição
+
+  Essa configuração de política permite que você configure se as guias em suspensão devem ser ativadas. As guias em suspensão reduzem o uso da CPU, da bateria e da memória colocando as guias em tela de fundo ociosas em suspensão. O Microsoft Edge usa a heurística para evitar colocar as guias em suspensão que fazem trabalho útil em tela de fundo, como exibir notificações, reproduzir som e transmitir vídeo. Por padrão, as Guias em Suspensão estão ativadas.
+
+Sites individuais podem ser bloqueados para serem colocados em suspensão Configurando a política [SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls).
+
+Se você habilitar essa configuração, as guias em suspensão serão ativadas.
+
+Se você desabilitar essa configuração, as guias em suspenso serão desabilitadas.
+
+Se você não definir essa configuração, os usuários poderão escolher se desejam usar Guias em Suspensão.
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: Sim
+  - Atualização dinâmica das políticas: Sim
+
+  #### Tipo de dados:
+
+  - Booliano
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da GP: SleepingTabsEnabled
+  - Nome da GP: configurar Guias em Suspensão
+  - Caminho Política de Grupo (obrigatório): modelos administrativos/Microsoft Edge/configurações das Guias em Suspensão
+  - Caminho Política de Grupo (recomendado): modelos Administrativos/Microsoft Edge - Configurações Padrão (os usuários podem substituir)/configurações de Guias de Suspensão
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Nome do Valor: SleepingTabsEnabled
+  - Tipo de Valor: REG_DWORD
+
+  ##### Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### Informações e configurações do Mac
+  
+  - Nome da Chave de Preferência: SleepingTabsEnabled
+  - Valor de exemplo:
+``` xml
+<true/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### SleepingTabsTimeout
+
+  #### Definir o tempo limite de inatividade de tela de fundo para Guias em Suspensão
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows e no macOS desde 88 ou posterior
+
+  #### Descrição
+
+  Essa configuração de política permite que você configure o tempo limite, em segundos, após o qual as guias de tela de fundo inativo serão automaticamente colocadas em suspensão se as guias em repouso estiverem habilitadas. Por padrão, esse tempo limite é de 7.200 segundos (2 horas).
+
+As guias são apenas colocadas em suspensão automaticamente quando a política [SleepingTabsEnabled](#sleepingtabsenabled) está habilitada ou não está configurada, e o usuário habilitou a configuração de Guias em Repouso.
+
+Se você não configurar essa política, os usuários poderão escolher o valor de tempo limite.
+
+Mapeamento das opções de política:
+
+* 5 Minutos (300) = 5 minutos de inatividade
+
+* 15 Minutos (900) = 15 minutos de inatividade
+
+* 30 Minutos (1800) = 30 minutos de inatividade
+
+* 1 Hora (3600) = 1 hora de inatividade
+
+* 2 Horas (7200) = 2 horas de inatividade
+
+* 3 Horas (10800) = 3 horas de inatividade
+
+* 6 Horas (21600) = 6 horas de inatividade
+
+* 12 Horas (43200) = 12 horas de inatividade
+
+Use as informações anteriores ao configurar essa política.
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: Sim
+  - Atualização dinâmica das políticas: Sim
+
+  #### Tipo de dados:
+
+  - Inteiro
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: SleepingTabsTimeout
+  - Nome da Política de Grupo: definir o tempo limite de inatividade de tela de fundo para Guias em Suspensão
+  - Caminho Política de Grupo (obrigatório): modelos administrativos/Microsoft Edge/configurações das Guias em Suspensão
+  - Caminho Política de Grupo (recomendado): modelos Administrativos/Microsoft Edge - Configurações Padrão (os usuários podem substituir)/configurações de Guias de Suspensão
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Nome do Valor: SleepingTabsTimeout
+  - Tipo de Valor: REG_DWORD
+
+  ##### Valor de exemplo:
+
+```
+0x00000384
+```
+
+  #### Informações e configurações do Mac
+  
+  - Nome da Chave de Preferência: SleepingTabsTimeout
+  - Valor de exemplo:
+``` xml
+<integer>900</integer>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ## Políticas de configurações do SmartScreen
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -7359,7 +7664,9 @@ Se você definir essa política como falsa ou não a configurar, os blocos de pr
 
   #### Descrição
 
-  Configura a URL padrão para a página nova guia.
+  Configura a URL padrão para a página da nova guia.
+
+A versão recomendada desta política não funciona no momento e funciona exatamente como a versão obrigatória.
 
 Essa política determina a página que é aberta quando novas guias são criadas (inclusive quando novas janelas são abertas). Isso também afetará a página de inicialização se ela estiver definida para ser aberta para a página nova guia.
 
@@ -7889,7 +8196,7 @@ Se você tiver habilitado o conjunto de políticas que força um provedor de pes
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
-  - Atualização dinâmica das políticas: Sim
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
 
   #### Tipo de dados:
 
@@ -16759,9 +17066,9 @@ As configurações do usuário para habilitar ou desabilitar o assistente Fixar 
 
   ### ProactiveAuthEnabled
 
-  #### Habilitar a autenticação Proativa
+  #### Habilitar a Autenticação Pró-ativa (preterida)
 
-  
+  >PRETERIDA: Essa política está preterida. Ela tem suporte no momento, mas se tornará obsoleta em uma versão futura.
   
   #### Versões com suporte:
 
@@ -16769,11 +17076,13 @@ As configurações do usuário para habilitar ou desabilitar o assistente Fixar 
 
   #### Descrição
 
-  Permite que você configure a ativação da Autenticação Pró-ativa.
+  Esta política foi preterida porque não funciona independentemente da entrada no navegador. Não funcionará na versão 91 do Microsoft Edge. Se você deseja configurar o login do navegador, use a política [BrowserSignin](#browsersignin).
 
-Se você habilitar essa política, o Microsoft Edge tentará autenticar proativamente o usuário conectado com os serviços Microsoft. Em intervalos regulares, o Microsoft Edge verifica com um serviço online para obter um manifesto atualizado que contém a configuração que governa como fazer isso.
+Ela permite configurar se a autenticação pró-ativa deve ser ativada no Microsoft Edge.
 
-Se você desabilitar essa política, o Microsoft Edge não tentará autenticar proativamente o usuário conectado com os serviços Microsoft. O Microsoft Edge não verifica mais um serviço online em busca de um manifesto atualizado que contém a configuração para fazer isso.
+Se você habilitar essa política, o Microsoft Edge tentará autenticar diretamente para sites e serviços usando a conta que está conectada ao navegador.
+
+Se você desabilitar essa política, o Microsoft Edge não tentará autenticar com sites ou serviços usando logon único (SSO). As experiências autenticadas, como a Nova Guia da Empresa, não funcionarão (por exemplo, documentos do Office recentes e recomendados não estarão disponíveis).
 
 Se você não configurar essa política, a Autenticação Pró-ativa será ativada.
 
@@ -16791,9 +17100,9 @@ Se você não configurar essa política, a Autenticação Pró-ativa será ativa
 
   ##### Informações da Política de Grupo (ADMX)
 
-  - Nome Exclusivo da Política de Grupo: ProactiveAuthEnabled
-  - Nome da Política de Grupo: Habilitar a autenticação Proativa
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Nome exclusivo da Política de Grupo: ProactiveAuthEnabled
+  - Nome da Política de Grupo: habilitar a Autenticação pró-ativa (preterida)
+  - Caminho da Política de Grupo (obrigatório): modelos Administrativos/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -18600,6 +18909,77 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   <string>https://www.contoso.com</string>
   <string>[*.]contoso.edu</string>
 </array>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### ShowMicrosoftRewards
+
+  #### Mostrar experiências do Microsoft Rewards
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows e no macOS desde 88 ou posterior
+
+  #### Descrição
+
+  Mostre a experiência e as notificações do Microsoft Rewards.
+Se você habilitar essa política:
+   - Os usuários da conta Microsoft (exclui contas do Azure AD) em busca e conquista de mercados verão a experiência do Microsoft Rewards em seu perfil de usuário do Microsoft Edge.
+   - A configuração para habilitar o Microsoft Rewards nas configurações do Microsoft Edge será habilitada e alternada.
+   - A configuração para habilitar o Modo de Permissão será habilitada e respeitará a configuração do usuário.
+
+Se você desabilitar esta política:
+   - Os usuários da conta Microsoft (exclui contas do Azure AD) em busca e conquista de mercados não verão a experiência do Microsoft Rewards em seu perfil de usuário do Microsoft Edge.
+   - A configuração para habilitar o Microsoft Rewards nas configurações do Microsoft Edge será desabilitada e alternada.
+
+Se você não configurar esta política:
+   - Os usuários da conta Microsoft (exclui contas do Azure AD) em busca e conquista de mercados verão a experiência do Microsoft Rewards em seu perfil de usuário do Microsoft Edge.
+   - A configuração para habilitar o Microsoft Rewards nas configurações do Microsoft Edge será habilitada e alternada.
+   - A configuração para habilitar o Modo de Permissão será habilitada e respeitará a configuração do usuário.
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: Sim
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### Tipo de dados:
+
+  - Booliano
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: ShowMicrosoftRewards
+  - Nome da Política de Grupo: mostrar experiências do Microsoft Rewards
+  - Caminho da Política de Grupo (obrigatório): modelos Administrativos/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): Administrative Templates/Microsoft Edge - Default Settings (usuários podem substituir)/
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Nome do Valor: ShowMicrosoftRewards
+  - Tipo de Valor: REG_DWORD
+
+  ##### Valor de exemplo:
+
+```
+0x00000000
+```
+
+  #### Informações e configurações do Mac
+  
+  - Nome da Chave de Preferência: ShowMicrosoftRewards
+  - Valor de exemplo:
+``` xml
+<false/>
 ```
   
 
