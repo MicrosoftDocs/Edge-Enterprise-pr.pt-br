@@ -3,19 +3,19 @@ title: Reversão do Microsoft Edge para empresas
 ms.author: v-danwes
 author: dan-wesley
 manager: srugh
-ms.date: 09/02/2020
+ms.date: 11/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Como reverter o Microsoft Edge para uma versão anterior
-ms.openlocfilehash: 9f659b0bcdd82f54a814c8ad4157521061cdfa7c
-ms.sourcegitcommit: 827a47d641c7ddc1d89be5d5fc0615373dec18b0
+ms.openlocfilehash: 69fdfd29572dd6eda9f7eb7cbd4c2500851dcafc
+ms.sourcegitcommit: 63a094a5268bb3b4819269438357095acd79abac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993701"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "11192421"
 ---
 # Como reverter o Microsoft Edge para uma versão anterior
 
@@ -30,7 +30,7 @@ A reversão permite que você substitua a versão do navegador Microsoft Edge po
 
 ## Antes de começar
 
-É importante compreender como o recurso de reversão está instalado em um ambiente do Microsoft Edge. Você pode implantar a reversão ao usar dois métodos diferentes: manualmente com, um MSI ou ao usar a atualização do Microsoft Edge e a Política de grupo. Também incentivamos o uso de uma seleção das Políticas de grupo para se ter uma implantação mais suave.
+É importante compreender como o recurso de reversão está instalado em um ambiente do Microsoft Edge. Você pode implantar a reversão ao usar dois métodos diferentes: manualmente com, um MSI ou ao usar a atualização do Microsoft Edge e a Política de grupo. Também encorajamos o uso de uma seleção de Políticas de Grupo para uma implantação mais suave.
 
 ### Recomendações
 
@@ -81,7 +81,7 @@ Use as seguintes etapas para ativar a reversão com a atualização do Microsoft
    - Apenas atualizações silenciosas automáticas
 
      > [!NOTE]
-     > Para forçar uma atualização de política de grupo, digite `dsregcmd /status`no prompt de comando do administrador do Windows (executar como administrador).
+     > Para forçar uma atualização de política de grupo, digite `gpupdate /force`no prompt de comando do administrador do Windows (executar como administrador).
 
 5. Clique em **OK** para salvar as configurações da política. A reversão ocorrerá na próxima vez que a atualização do Microsoft Edge verificar se há atualizações. Se você quiser que a atualização ocorra mais cedo, você pode alterar o intervalo de pesquisa do Microsoft Edge Update ou ativar a reversão usando um MSI.
 
@@ -113,7 +113,7 @@ Recomendamos forçar a reinicialização dos usuários depois da reversão.
 
 Um instantâneo é uma versão carimbada da pasta dados do usuário. Durante uma atualização de versão, um instantâneo da versão anterior é feito e armazenado na pasta do instantâneo. Após a reversão, um instantâneo com a versão correspondida será copiado para a nova pasta de dados do usuário e excluído da pasta do instantâneo. Se uma versão correspondente ao recurso de downgrade não estiver disponível, a reversão dependerá da sincronização para preencher os dados do usuário na nova versão do Microsoft Edge.
 
-A política de grupo [UserDataSnapshotRetentionLimit] permite definir um limite para o número de instantâneos que podem ser mantidos a qualquer momento. Por padrão, três instantâneos são mantidos. Você pode configurar essa política para manter até cinco instantâneos.
+A política de grupo do [UserDataSnapshotRetentionLimit](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userdatasnapshotretentionlimit) permite definir um limite para o número de instantâneos que podem ser retidos a qualquer momento. Por padrão, três instantâneos são mantidos. Você pode configurar essa política para manter até cinco instantâneos.
 
 ## Perguntas frequentes
 
@@ -159,7 +159,6 @@ A atualização do Microsoft Edge ainda não executa nenhuma verificação de at
 ### Como um Administrador de TI, segui todas as etapas para reverter corretamente. Apenas uma parte do meu grupo de usuários foi revertida. Por que os outros usuários ainda não foram revertidos?
 
 A configuração da política de grupo ainda não foi sincronizada com todos os clientes. Quando o administrador define uma política de grupo, os clientes não recebem essas configurações instantaneamente. Você pode [forçar uma atualização remota da política de grupo](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134201(v=ws.11)).
-
 
 ## Consulte também
 
