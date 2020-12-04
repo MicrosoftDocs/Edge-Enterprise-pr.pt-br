@@ -3,19 +3,19 @@ title: Configurar o Microsoft Edge para macOS usando um. plist
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 02/14/2020
+ms.date: 11/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Definir as configurações de política do Microsoft Edge no macOS usando .plist
-ms.openlocfilehash: 84469a4f84deeee0e47b6d8899426fa36cf345aa
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: abe110ab3589cc9276f28590273ece2d372be3b8
+ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10978972"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "11194679"
 ---
 # Definir as configurações de política do Microsoft Edge no macOS usando .plist
 
@@ -35,7 +35,7 @@ A primeira etapa é criar seu plist. Você pode criar o arquivo plist com qualqu
 
 Para obter uma lista de políticas com suporte e seus nomes de teclas de preferência, consulte [Referência de políticas do navegador Microsoft Edge](microsoft-edge-policies.md). No arquivo de modelos de política, que pode ser baixado da [página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise), há um plist de exemplo (*itadminexample.plist*) na pasta **examples**. O arquivo de exemplo contém todos os tipos de dados com suporte que você pode personalizar para definir suas configurações de política. 
 
-A próxima etapa depois que você criar o conteúdo de seu plist é nomeá-lo usando o domínio de preferência do Microsoft Edge, *com.microsoft.Edge*. O nome diferencia maiúsculas de minúsculas e não deve incluir o canal de destino, pois ele se aplica a todos os canais do Microsoft Edge. O nome do arquivo plist deve ser **_com.microsoft.Edge.plist_**. 
+A próxima etapa depois que você criar o conteúdo de seu plist é nomeá-lo usando o domínio de preferência do Microsoft Edge, *com.microsoft.Edge*. O nome diferencia maiúsculas de minúsculas e não deve incluir o canal de destino, pois ele se aplica a todos os canais do Microsoft Edge. O nome do arquivo plist deve ser **_com.microsoft.Edge.plist_**.
 
 > [!IMPORTANT]
 > A partir do build 78.0.249.2, todos os canais do Microsoft Edge no macOS serão lidos no domínio de preferência **com.microsoft.Edge**. Todas as versões anteriores são lidas em um domínio específico de canal, como **com.microsoft.Edge.Dev** para o canal de desenvolvimento.
@@ -55,6 +55,7 @@ A última etapa é implantar o plist nos dispositivos Mac dos seus usuários uti
    ```cmd
    /usr/bin/plutil -convert xml1 ~/Desktop/com.microsoft.Edge.plist
    ```
+
 Depois de converter o arquivo, verifique se os dados da política estão corretos e se contêm as configurações desejadas para o perfil de configuração.
 
 > [!NOTE]
@@ -66,22 +67,7 @@ Para o Microsoft Intune crie um novo perfil de configuração de dispositivo vol
 
 Para o Jamf, carregue o arquivo .plist como uma carga *Configurações personalizadas*.
 
-## Perguntas frequentes
-
-### O Microsoft Edge pode ser configurado para usar as preferências mestres?
-
-Sim, você pode configurar o Microsoft Edge para usar um arquivo de preferências mestre.
-
-Um arquivo de preferências mestre permite definir as configurações padrão para um perfil de usuário do navegador quando o Microsoft Edge for implantado. Você também pode usar um arquivo de preferências mestre para aplicar configurações em computadores que não são gerenciados por um sistema de gerenciamento de dispositivo. Essas configurações são aplicadas ao perfil do usuário na primeira vez que o usuário executa o navegador. Depois que o usuário executar o navegador, as alterações feitas no arquivo de preferências mestre não serão aplicadas. Um usuário pode alterar as configurações das preferências do mestre no navegador. Se quiser fazer uma configuração obrigatória ou alterar uma configuração após a primeira execução do navegador, você deverá usar uma política.
-
-Um arquivo de preferências mestre permite que você personalize muitas configurações e preferências diferentes para o navegador, incluindo aquelas compartilhadas com outros navegadores baseados em Chromium e específicas do Microsoft Edge.  As preferências relacionadas à política podem ser configuradas usando o arquivo de preferências mestre. Nos casos em que uma política é definida e há um conjunto de preferências do mestre correspondente, a configuração de política terá precedência.
-
-> [!IMPORTANT]
-> Todas as preferências disponíveis podem não ser consistentes com a terminologia e as convenções de nomenclatura do Microsoft Edge.  Não há garantia de que essas preferências continuarão funcionando como esperado em versões futuras. As preferências podem ser alteradas ou ignoradas em versões posteriores.
-
-Um arquivo de preferências mestre é um arquivo de texto formatado usando a marcação JSON. Esse arquivo precisa ser adicionado ao mesmo diretório do que o executável msedge.exe. Para implantações empresariais no sistema no macOS, isso geralmente é: “*~/Library/Application Support/Microsoft/Microsoft Edge Master Preferences*" ou "*/Library/Application Support/Microsoft/Microsoft Edge Master Preferences*”.
-
-## Consulte também
+## Confira também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Configurar para macOS com Jamf](configure-microsoft-edge-on-mac-jamf.md)

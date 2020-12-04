@@ -3,19 +3,19 @@ title: Configurar o Microsoft Edge para Windows
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 10/09/2019
+ms.date: 11/30/2019
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Definir configurações de política do Microsoft Edge em dispositivos Windows
-ms.openlocfilehash: 99aaf002f868ce29e81aa40024fa1de2e83d76e1
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 14ba2845e95394fe1f992c8b6446c975a8b4fb00
+ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10978973"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "11194699"
 ---
 # Definir configurações de política do Microsoft Edge no Windows
 
@@ -53,12 +53,12 @@ Acesse a [página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/E
 #### Adicionar o modelo administrativo ao Active Directory
 
 1. Em um controlador de domínio ou uma estação de trabalho com o RSAT, navegue até a pasta **PolicyDefinition** (também conhecida como o _Repositório Central_) em qualquer controlador de domínio para seu domínio. Para versões mais antigas do Windows Server, talvez seja necessário criar a pasta PolicyDefinition. Para obter mais informações, consulte [Como criar e gerenciar o Repositório Central para Modelos Administrativos de Política de Grupo no Windows](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra).
-1. Abra *MicrosoftEdgePolicyTemplates* e acesse **windows** > **admx**.
-1. Copie o arquivo *msedge.admx* para a pasta PolicyDefinition. (Exemplo: %systemroot%\sysvol\domain\policies\PolicyDefinitions)
-1. Na pasta *admx*, abra a pasta do idioma apropriado. Por exemplo, se você estiver nos EUA, abra a pasta **en-US**.
-1. Copie o arquivo *msedge.adml* para a pasta do idioma correspondente na pasta PolicyDefinition. Crie a pasta se ela ainda não existir. (Exemplo: %systemroot%\sysvol\domain\policies\PolicyDefinitions\EN-US)
-1. Se o domínio tiver mais de um controlador de domínio, os novos arquivos ADMX serão replicados para eles no próximo intervalo de replicação de domínio.
-1. Para confirmar se os arquivos foram carregados corretamente, abra o **Editor de Gerenciamento de Política de Grupo** nas Ferramentas Administrativas do Windows e expanda **Configuração do Computador** > **Políticas** > **Modelos Administrativos** > **Microsoft Edge**. Você deve ver um ou mais nós do Microsoft Edge, como mostrado abaixo.
+2. Abra *MicrosoftEdgePolicyTemplates* e acesse **windows** > **admx**.
+3. Copie o arquivo *msedge.admx* para a pasta PolicyDefinition. (Exemplo: %systemroot%\sysvol\domain\policies\PolicyDefinitions)
+4. Na pasta *admx*, abra a pasta do idioma apropriado. Por exemplo, se você estiver nos EUA, abra a pasta **en-US**.
+5. Copie o arquivo *msedge.adml* para a pasta do idioma correspondente na pasta PolicyDefinition. Crie a pasta se ela ainda não existir. (Exemplo: %systemroot%\sysvol\domain\policies\PolicyDefinitions\EN-US)
+6. Se o domínio tiver mais de um controlador de domínio, os novos arquivos ADMX serão replicados para eles no próximo intervalo de replicação de domínio.
+7. Para confirmar se os arquivos foram carregados corretamente, abra o **Editor de Gerenciamento de Política de Grupo** nas Ferramentas Administrativas do Windows e expanda **Configuração do Computador** > **Políticas** > **Modelos Administrativos** > **Microsoft Edge**. Você deve ver um ou mais nós do Microsoft Edge, como mostrado abaixo.
 
     ![Políticas do Microsoft Edge](./media/configure-microsoft-edge/edge-gpo-policies.png)
 
@@ -69,19 +69,6 @@ Acesse a [página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/E
 3. Na pasta *admx*, abra a pasta do idioma apropriado. Por exemplo, se você estiver nos EUA, abra a pasta **en-US**.
 4. Copie o arquivo *msedge.adml* para a pasta do idioma correspondente na sua pasta Definição de Política. (Exemplo: C:\Windows\PolicyDefinitions\en-US)
 5. Para confirmar se os arquivos foram carregados corretamente, abra o Editor de Política de Grupo Local diretamente (tecla Windows + R e digite gpedit.msc) ou abra o MMC e carregue o snap-in Editor de Política de Grupo Local. Se ocorrer um erro, isso geralmente significa que os arquivos estão em um local incorreto.
-
-<!--
-To add the administrative template to manage Microsoft Edge updates:
-
-1. Open the *MicrosoftEdgePolicyTemplates* file and go to **windows** > **admx**.
-2. Copy the *msedgeupdate.admx* file to your Policy Definition template folder. (Example: C:\Windows\PolicyDefinitions)
-3. In the *updatepolicies* folder, open the appropriate language folder. For example, if you’re in Germany, open the **de-DE** folder.
-4. Copy the *msedgeupdate.adml* file to the matching language folder in your Policy Definition folder. (Example: C:\Windows\PolicyDefinitions\de-DE)
-5. Open MMC and load the Local Group Policy Editor snap-in to confirm the files loaded correctly. If an error occurs, it’s usually because the files are in an incorrect location.
-
-> [!NOTE]
-> Currently the Microsoft Edge update policies are only localized in en-US. Additional language support will be added in a future release.
--->
 
 ### 2. Definir políticas obrigatórias ou recomendadas
 
@@ -108,22 +95,7 @@ Talvez seja necessário fechar e reabrir o Microsoft Edge antes que as novas pol
 
 Você também pode usar REGEDIT.exe em um computador de destino para exibir as configurações do Registro que armazenam as configurações da política de grupo. Essas configurações estão localizadas no caminho do Registro **HKLM\SOFTWARE\Policies\Microsoft\Edge**.
 
-## Perguntas Frequentes
-
-### O Microsoft Edge pode ser configurado para usar as preferências mestres?
-
-Sim, você pode configurar o Microsoft Edge para usar um arquivo de preferências mestre.
-
- Um arquivo de preferências mestre permite definir as configurações padrão quando Microsoft Edge é implantado. Você também pode usar um arquivo de preferências mestre para aplicar configurações em computadores que não são gerenciados por um sistema de gerenciamento de dispositivo. Essas configurações são aplicadas ao perfil do usuário na primeira vez que o usuário executa o navegador. Depois que o usuário executar o navegador, as alterações feitas no arquivo de preferências mestre não serão aplicadas. Um usuário pode alterar as configurações das preferências do mestre no navegador. Se quiser fazer uma configuração obrigatória ou alterar uma configuração após a primeira execução do navegador, você deverá usar uma política.
-
-Um arquivo de preferências mestre permite que você personalize muitas configurações e preferências diferentes para o navegador, incluindo aquelas compartilhadas com outros navegadores baseados em Chromium e específicas do Microsoft Edge.  As preferências relacionadas à política podem ser configuradas usando o arquivo de preferências mestre. Nos casos em que uma política é definida e há um conjunto de preferências do mestre correspondente, a configuração de política terá precedência.
-
-> [!IMPORTANT]
-> Todas as preferências disponíveis podem não ser consistentes com a terminologia e as convenções de nomenclatura do Microsoft Edge.  Não há garantia de que essas preferências continuarão funcionando como esperado em versões futuras. As preferências podem ser alteradas ou ignoradas em versões posteriores.
-
-Um arquivo de preferências mestre é um arquivo de texto formatado usando a marcação JSON. Esse arquivo precisa ser adicionado ao mesmo diretório do que o executável msedge.exe. Para implantações corporativas em todo o sistema no Windows, isso geralmente é: *Windows: C:\Arquivos de Programas\Microsoft\Edge\Application\master_preferences*.
-
-## Consulte também
+## Confira também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Configurar para o Windows com o Intune](configure-edge-with-intune.md)

@@ -3,19 +3,19 @@ title: Configurar o Microsoft Edge no macOS com Jamf
 ms.author: brianalt
 author: dan-wesley
 manager: laurawi
-ms.date: 02/20/2020
+ms.date: 11/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Definir as configurações de política do Microsoft Edge em dispositivos Mac com o Jamf
-ms.openlocfilehash: 336bdfed2c53811615b0183dc5ca7db916cd7428
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 1859d9fb1fd3ea8ff6908c41f75df21a8b338769
+ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10978978"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "11194709"
 ---
 # Definir as configurações de política do Microsoft Edge no macOS com o Jamf
 
@@ -45,8 +45,8 @@ Para saber mais, confira [Perfis de Configuração do Computador](https://jamf.i
 Para obter o manifesto de política:
 
 - Vá para a [página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise).
-- Na lista suspensa de canal/versão, selecione **qualquer canal com a versão 81 ou posterior.***.
-- Na lista suspensa Build, selecione qualquer Build **81 ou posterior.***.
+- Na lista suspensa Canal/Versão, selecione **qualquer canal com a versão 81 ou posterior.** _.
+- Na lista suspensa de Build, selecione qualquer _ *compilação do 81 ou posterior.* * _.
 - Clique em OBTER ARQUIVOS DE POLÍTICA para baixar nosso pacote de modelos de política.
 
   > [!NOTE]
@@ -61,7 +61,7 @@ Esse manifesto será publicado em todos os pacotes de política, começando com 
 Use as etapas a seguir para carregar o manifesto de política para o Jamf Pro e, em seguida, crie um perfil de política para o macOS.
 
 1. Entre no Jamf.
-2. Selecione a guia **Computador**.
+2. Selecione a guia _*computador**.
 3. Em **Gerenciamento de Conteúdo**, selecione **Perfis de Configuração**.
 4. Na página **Perfis de Configuração**, clique em **+ Novo**.
 
@@ -115,22 +115,7 @@ Depois de criar o novo perfil de configuração, você ainda terá que configura
 2. Para **Limitações**, mantenha a configuração padrão: Nenhuma. Clique em **Cancelar**.
 3. Para **Exclusões**, mantenha a configuração padrão: Nenhuma. Clique em **Cancelar**.
 
-## Perguntas frequentes
-
-### O Microsoft Edge pode ser configurado para usar as preferências mestres?
-
-Sim, você pode configurar o Microsoft Edge para usar um arquivo de preferências mestre.
-
-Um arquivo de preferências mestre permite definir as configurações padrão para um perfil de usuário do navegador quando o Microsoft Edge for implantado. Você também pode usar um arquivo de preferências mestre para aplicar configurações em computadores que não são gerenciados por um sistema de gerenciamento de dispositivo. Essas configurações são aplicadas ao perfil do usuário na primeira vez que o usuário executa o navegador. Depois que o usuário executar o navegador, as alterações feitas no arquivo de preferências mestre não serão aplicadas. Um usuário pode alterar as configurações das preferências do mestre no navegador. Se quiser fazer uma configuração obrigatória ou alterar uma configuração após a primeira execução do navegador, você deverá usar uma política.
-
-Um arquivo de preferências mestre permite que você personalize muitas configurações e preferências diferentes para o navegador, incluindo aquelas compartilhadas com outros navegadores baseados em Chromium e específicas do Microsoft Edge.  As preferências relacionadas à política podem ser configuradas usando o arquivo de preferências mestre. Nos casos em que uma política é definida e há um conjunto de preferências do mestre correspondente, a configuração de política terá precedência.
-
-> [!IMPORTANT]
-> Todas as preferências disponíveis podem não ser consistentes com a terminologia e as convenções de nomenclatura do Microsoft Edge.  Não há garantia de que essas preferências continuarão funcionando como esperado em versões futuras. As preferências podem ser alteradas ou ignoradas em versões posteriores.
-
-Um arquivo de preferências mestre é um arquivo de texto formatado usando a marcação JSON. Esse arquivo precisa ser adicionado ao mesmo diretório do que o executável msedge.exe. Para implantações corporativas em todo o sistema no macOS,isso geralmente é: “*~/Library/Application Support/Microsoft/Microsoft Edge Master Preferences*" ou "*/Library/Microsoft/Microsoft Edge Master Preferences*”.
-
-## Consulte também
+## Confira também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Configurar para macOS com Intune](configure-microsoft-edge-on-mac.md)
