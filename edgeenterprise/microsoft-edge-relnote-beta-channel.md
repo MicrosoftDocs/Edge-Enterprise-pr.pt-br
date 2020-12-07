@@ -3,19 +3,19 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 11/30/2020
+ms.date: 12/03/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: f674c39506736dfc5b5706e902970e0e4ce84fd8
-ms.sourcegitcommit: 2a53bdd2510770c0b7580f912864337c6ef617fd
+ms.openlocfilehash: cb4a7de72582ff16a528cbaca04bb39364f6d93f
+ms.sourcegitcommit: 91821fa6a962ea9e88ffeff94dff94fcd1245df5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "11192531"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "11195257"
 ---
 # Notas de versão do canal do Microsoft Edge beta
 
@@ -23,6 +23,12 @@ Estas notas de versão fornecem informações sobre os novos recursos e atualiza
 
 > [!IMPORTANT]
 > Confira esta [atualização das versões do canal do Microsoft Edge](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/).
+
+## Versão 87.0.664.55: 3 de dezembro
+
+Correção de vários bugs e problemas de desempenho. O novo recurso a seguir tem suporte nesta versão.
+
+- **Alertas são gerados se a senha de um usuário for encontrada em um vazamento online**. As senhas do usuário serão verificadas em um repositório de credenciais violadas conhecidas e enviará um alerta ao usuário se uma correspondência for encontrada. (Este recurso estará disponível no Microsoft Edge Stable 88.)
 
 ## Versão 87.0.664.52: 30 de novembro
 
