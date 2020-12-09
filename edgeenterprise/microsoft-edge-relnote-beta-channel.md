@@ -3,19 +3,19 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 12/03/2020
+ms.date: 12/04/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: cb4a7de72582ff16a528cbaca04bb39364f6d93f
-ms.sourcegitcommit: 91821fa6a962ea9e88ffeff94dff94fcd1245df5
+ms.openlocfilehash: 39e6062d8cf7ce0e5f03ecf26daaae4cc06bd4cf
+ms.sourcegitcommit: 46d42a284e54574811a7c934a36d85a3526fc8ea
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "11195257"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "11196532"
 ---
 # Notas de versão do canal do Microsoft Edge beta
 
@@ -26,9 +26,9 @@ Estas notas de versão fornecem informações sobre os novos recursos e atualiza
 
 ## Versão 87.0.664.55: 3 de dezembro
 
-Correção de vários bugs e problemas de desempenho. O novo recurso a seguir tem suporte nesta versão.
+Correção de vários bugs e problemas de desempenho. O novo recurso a seguir é compatível com esta versão.
 
-- **Alertas são gerados se a senha de um usuário for encontrada em um vazamento online**. As senhas do usuário serão verificadas em um repositório de credenciais violadas conhecidas e enviará um alerta ao usuário se uma correspondência for encontrada. (Este recurso estará disponível no Microsoft Edge Stable 88.)
+- Alertas **são gerados se a senha de um usuário for encontrada em um vazamento online**. As senhas do usuário são verificadas em um repositório de credenciais violadas e envia ao usuário um alerta se uma correspondência for encontrada. Para garantir a segurança e a privacidade, as senhas dos usuários são criptografadas e criptografadas quando são verificadas no banco de dados de credenciais vazadas.
 
 ## Versão 87.0.664.52: 30 de novembro
 
