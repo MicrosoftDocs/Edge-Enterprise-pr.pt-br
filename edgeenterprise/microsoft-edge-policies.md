@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/19/2020
+ms.date: 12/02/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 77d79f36ba91c5966ffb8dde66ba7ec14934f39e
-ms.sourcegitcommit: fc6f86f92f2fecac89028d77524d123bfaf2111d
+ms.openlocfilehash: 94e16c202ce45332975c89ef354402a5b3edcc6e
+ms.sourcegitcommit: 0ab6e25fd045dec2ec23f9dd7b2d2adb6fde3ef2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "11181982"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "11195132"
 ---
 # Microsoft Edge - Políticas
 
@@ -33,12 +33,18 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 
 A tabela a seguir lista as políticas novas e preteridas para esta atualização.
 
-| Nome | Status |
+| Nome | Lista de endereçamento |
 |-|-|
-|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)| Novo |
-|[BlockExternalExtensions](#blockexternalextensions) | Novo |
-|[ShowMicrosoftRewards](#showmicrosoftrewards) | Novo |
-|[ProactiveAuthEnabled](#proactiveauthenabled) | Preterido |
+|[PrinterTypeDenyList](#printertypedenylist)|Desabilitar tipos de impressoras na lista de negações|
+|[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Permitir a inicialização de arquivos locais no modo Internet Explorer|
+|[InternetExplorerIntegrationLocalFileExtensionAllowList](#internetexplorerintegrationlocalfileextensionallowlist)|Abrir arquivos locais na lista de permissões de extensão de arquivo do modo Internet Explorer|
+|[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Mostrar o menu de contexto para abrir um link no modo Internet Explorer|
+|[IntranetRedirectBehavior](#intranetredirectbehavior)|Comportamento de redirecionamento da intranet|
+|[UpdatePolicyOverride](#updatepolicyoverride)|Especifica como o Microsoft Edge Update lida com as atualizações disponíveis do Microsoft Edge|
+|[VerticalTabsAllowed](#verticaltabsallowed)|Configura a disponibilidade de um layout vertical para guias na lateral do navegador|
+| PRETERIDO [WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|Permitir downgrade TLS/DTLS herdado no WebRTC|
+
+
 
 ## Políticas disponíveis
 
@@ -83,7 +89,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[DefaultInsecureContentSetting](#defaultinsecurecontentsetting)|Controlar o uso de exceções de conteúdo não seguro|
 |[DefaultJavaScriptSetting](#defaultjavascriptsetting)|Configuração padrão de JavaScript|
 |[DefaultNotificationsSetting](#defaultnotificationssetting)|Configuração de notificação padrão|
-|[DefaultPluginsSetting](#defaultpluginssetting)|Configuração padrão do Adobe Flash|
+|[DefaultPluginsSetting](#defaultpluginssetting)|Configuração padrão do Adobe Flash (obsoleta)|
 |[DefaultPopupsSetting](#defaultpopupssetting)|Configuração da janela pop-up padrão|
 |[DefaultWebBluetoothGuardSetting](#defaultwebbluetoothguardsetting)|Controlar o uso da API do Bluetooth na Web|
 |[DefaultWebUsbGuardSetting](#defaultwebusbguardsetting)|Controlar o uso da API WebUSB|
@@ -101,8 +107,8 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist)|Reverter para o comportamento herdado SameSite para cookies em sites especificados|
 |[NotificationsAllowedForUrls](#notificationsallowedforurls)|Permitir notificações em sites específicos|
 |[NotificationsBlockedForUrls](#notificationsblockedforurls)|Bloquear notificações em sites específicos|
-|[PluginsAllowedForUrls](#pluginsallowedforurls)|Permitir o plug-in Adobe Flash em sites específicos|
-|[PluginsBlockedForUrls](#pluginsblockedforurls)|Bloquear o plug-in Adobe Flash em sites específicos|
+|[PluginsAllowedForUrls](#pluginsallowedforurls)|Permitir o plug-in Adobe Flash em sites específicos (obsoleto)|
+|[PluginsBlockedForUrls](#pluginsblockedforurls)|Bloquear o plug-in Adobe Flash em sites específicos (obsoleto)|
 |[PopupsAllowedForUrls](#popupsallowedforurls)|Permitir janelas pop-up em sites específicos|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|Bloquear janelas pop-up em sites específicos|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|Registrar manipuladores de protocolo|
@@ -181,6 +187,7 @@ e dicas para os serviços Microsoft|
 |[DefaultPrinterSelection](#defaultprinterselection)|Regras de seleção de impressora padrão|
 |[PrintHeaderFooter](#printheaderfooter)|Imprimir cabeçalhos e rodapés|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Definir a impressora padrão do sistema como impressora padrão|
+|[PrinterTypeDenyList](#printertypedenylist)|Desabilitar tipos de impressoras na lista de negações|
 |[PrintingEnabled](#printingenabled)|Habilitar impressão|
 |[PrintingPaperSizeDefault](#printingpapersizedefault)|Tamanho da página de impressão padrão|
 |[UseSystemPrintDialog](#usesystemprintdialog)|Imprimir usando a caixa de diálogo de impressão do sistema|
@@ -343,9 +350,13 @@ e dicas para os serviços Microsoft|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Controlar o recurso IntensiveWakeUpThrottling|
 |[InternetExplorerIntegrationEnhancedHangDetection](#internetexplorerintegrationenhancedhangdetection)|Configurar a detecção de trava avançada para o modo do Internet Explorer|
 |[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Configurar a integração do Internet Explorer|
+|[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Permitir a inicialização de arquivos locais no modo Internet Explorer|
+|[InternetExplorerIntegrationLocalFileExtensionAllowList](#internetexplorerintegrationlocalfileextensionallowlist)|Abrir arquivos locais na lista de permissões de extensão de arquivo do modo Internet Explorer|
+|[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Mostrar o menu de contexto para abrir um link no modo Internet Explorer|
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|Configurar a lista de sites do modo Empresarial|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Especificar como as navegações "na página" para sites não configurados se comportam quando iniciadas nas páginas do modo Internet Explorer.|
 |[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Permitir teste no modo Internet Explorer|
+|[IntranetRedirectBehavior](#intranetredirectbehavior)|Comportamento de redirecionamento da intranet|
 |[IsolateOrigins](#isolateorigins)|Habilitar o isolamento de sites para determinadas origens|
 |[LocalProvidersEnabled](#localprovidersenabled)|Permitir sugestões de provedores locais|
 |[ManagedFavorites](#managedfavorites)|Configurar Favoritos|
@@ -375,7 +386,7 @@ e dicas para os serviços Microsoft|
 |[RestrictSigninToPattern](#restrictsignintopattern)|Restringir quais contas podem ser usadas como contas principais do Microsoft Edge|
 |[RoamingProfileLocation](#roamingprofilelocation)|Configurar o diretório de perfil móvel|
 |[RoamingProfileSupportEnabled](#roamingprofilesupportenabled)|Habilitar o uso de cópias de roaming para dados de perfil do Microsoft Edge|
-|[RunAllFlashInAllowMode](#runallflashinallowmode)|Estender a configuração de conteúdo do Adobe Flash a todo o conteúdo|
+|[RunAllFlashInAllowMode](#runallflashinallowmode)|Estender a configuração de conteúdo do Adobe Flash para todo o conteúdo (obsoleta)|
 |[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Permitir que os usuários continuem a partir da página de aviso de HTTPS|
 |[SSLVersionMin](#sslversionmin)|Versão mínima do TLS habilitada|
 |[SaveCookiesOnExit](#savecookiesonexit)|Salvar os cookies ao fechar o Microsoft Edge|
@@ -411,17 +422,20 @@ e dicas para os serviços Microsoft|
 |[TranslateEnabled](#translateenabled)|Habilitar traduzir|
 |[URLAllowlist](#urlallowlist)|Definir uma lista de URLs permitidas|
 |[URLBlocklist](#urlblocklist)|Bloquear o acesso a uma lista de URLs|
+|[UpdatePolicyOverride](#updatepolicyoverride)|Especifica como o Microsoft Edge Update lida com as atualizações disponíveis do Microsoft Edge|
 |[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|Habilitar o recurso de Dicas do Cliente Usuário-Agente (descontinuado)|
 |[UserDataDir](#userdatadir)|Definir o diretório de dados de usuário|
 |[UserDataSnapshotRetentionLimit](#userdatasnapshotretentionlimit)|Limita o número de instantâneos de dados do usuário mantidos para uso no caso de uma reversão de emergência|
 |[UserFeedbackAllowed](#userfeedbackallowed)|Permitir comentários do usuário|
+|[VerticalTabsAllowed](#verticaltabsallowed)|Configura a disponibilidade de um layout vertical para guias na lateral do navegador|
 |[VideoCaptureAllowed](#videocaptureallowed)|Permitir ou bloquear captura de vídeo|
 |[VideoCaptureAllowedUrls](#videocaptureallowedurls)|Sites que podem acessar dispositivos de captura de vídeo sem solicitar permissão|
 |[WPADQuickCheckEnabled](#wpadquickcheckenabled)|Definir otimização de WPAD|
 |[WebAppInstallForceList](#webappinstallforcelist)|Configura a lista de aplicativos Web instalados pela força.|
 |[WebCaptureEnabled](#webcaptureenabled)|Habilite o recurso de captura da Web no Microsoft Edge.|
 |[WebComponentsV0Enabled](#webcomponentsv0enabled)|Reabilitar a API de componentes Web V0 até M84 (obsoleta)|
-|[WebDriverOverridesIncompatiblePolicies](#webdriveroverridesincompatiblepolicies)|Permitir que o WebDriver substitua políticas incompatíveis (substituído)|
+|[WebDriverOverridesIncompatiblePolicies](#webdriveroverridesincompatiblepolicies)|Permitir que o WebDriver substitua políticas incompatíveis (preterido)|
+|[WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|Permitir downgrade TLS/DTLS herdado no WebRTC (preterido)|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Gerenciar a exposição de endereço IP local por WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restringir a exposição de endereço IP local por WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restringir o intervalo de portas UDP locais usado por WebRTC|
@@ -1513,17 +1527,19 @@ Use as informações anteriores ao configurar essa política.
 
   ### DefaultPluginsSetting
 
-  #### Configuração padrão do Adobe Flash
+  #### Configuração padrão do Adobe Flash (obsoleta)
 
   
-  
+  >OBSOLETA: essa política está obsoleta e não funciona após a versão 87 do Microsoft Edge.
   #### Versões com suporte:
 
-  - No Windows e no macOS desde 77 ou mais recente
+  - No Windows e no macOS desde 77 até 87
 
   #### Descrição
 
-  [PluginsAllowedForUrls](#pluginsallowedforurls) e [PluginsBlockedForUrls](#pluginsblockedforurls) são verificados primeiro e, em seguida, esta política. As opções são 'ClickToPlay' e 'BlockPlugins'. Se você definir essa política como 'BlockPlugins', esse plug-in será negado para todos os sites. 'ClickToPlay' permite a execução do plug-in do Flash, mas os usuários clicam no espaço reservado para iniciá-lo.
+  Esta política não funciona porque o Microsoft Edge não oferece mais suporte ao Flash.
+
+[PluginsAllowedForUrls](#pluginsallowedforurls) e [PluginsBlockedForUrls](#pluginsblockedforurls) são verificados primeiro e, em seguida, esta política. As opções são 'ClickToPlay' e 'BlockPlugins'. Se você definir essa política como 'BlockPlugins', esse plug-in será negado para todos os sites. 'ClickToPlay' permite a execução do plug-in do Flash, mas os usuários clicam no espaço reservado para iniciá-lo.
 
 Se você não configurar essa política, o usuário poderá alterar essa configuração manualmente.
 
@@ -1551,9 +1567,9 @@ Use as informações anteriores ao configurar essa política.
 
   ##### Informações da Política de Grupo (ADMX)
 
-  - Nome exclusivo da Política de Grupo: DefaultPluginsSetting
-  - Nome da Política de Grupo: Configuração padrão do Adobe Flash
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Content settings
+  - Nome exclusivo da política de grupo: DefaultPluginsSetting
+  - Nome da política de grupo: configuração padrão do Adobe Flash (obsoleta)
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/configurações do conteúdo
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -2724,21 +2740,23 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.ed
 
   ### PluginsAllowedForUrls
 
-  #### Permitir o plug-in Adobe Flash em sites específicos
+  #### Permitir o plug-in Adobe Flash em sites específicos (obsoleto)
 
   
-  
+  >OBSOLETA: essa política está obsoleta e não funciona após a versão 87 do Microsoft Edge.
   #### Versões com suporte:
 
-  - No Windows e no macOS desde 77 ou mais recente
+  - No Windows e no macOS desde 77 até 87
 
   #### Descrição
 
-  Defina uma lista de sites, com base em padrões de URL, que podem executar o plug-in Adobe Flash.
+  Esta política não funciona porque o Microsoft Edge não oferece mais suporte ao Flash.
+
+Defina uma lista de sites, com base em padrões de URL, que podem executar o plug-in Adobe Flash.
 
 Se você não configurar essa política, o valor padrão global da diretiva [DefaultPluginsSetting](#defaultpluginssetting) (se definida) ou a configuração pessoal do usuário será usada para todos os sites.
 
-Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). No entanto, iniciando no M85, padrões com os caracteres curinga '*' e '[*.]' no host não têm mais suporte para esta política.
+Para obter informações detalhadas sobre os padrões de URL válidos, confira [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). No entanto, a partir do M85, não há mais suporte para os caracteres curinga '\*' e '[\*.]' no host para esta política.
 
   #### Recursos compatíveis:
 
@@ -2754,9 +2772,9 @@ Para obter informações detalhadas sobre os padrões de URL válidos, consulte 
 
   ##### Informações da Política de Grupo (ADMX)
 
-  - Nome exclusivo da Política de Grupo: PluginsAllowedForUrls
-  - Nome da Política de Grupo: Permitir o plug-in Adobe Flash em sites específicos
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Content settings
+  - Nome exclusivo da política de grupo: PluginsAllowedForUrls
+  - Nome da política de grupo: permitir o plug-in do Adobe Flash em sites específicos (obsoleto)
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/configurações do conteúdo
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -2791,21 +2809,23 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
 
   ### PluginsBlockedForUrls
 
-  #### Bloquear o plug-in Adobe Flash em sites específicos
+  #### Bloquear o plug-in Adobe Flash em sites específicos (obsoleto)
 
   
-  
+  >OBSOLETA: essa política está obsoleta e não funciona após a versão 87 do Microsoft Edge.
   #### Versões com suporte:
 
-  - No Windows e no macOS desde 77 ou mais recente
+  - No Windows e no macOS desde 77 até 87
 
   #### Descrição
 
-  Defina uma lista de sites, com base em padrões de URL, que são impedidos de executar o Adobe Flash.
+  Esta política não funciona porque o Microsoft Edge não oferece mais suporte ao Flash.
+
+Defina uma lista de sites, com base em padrões de URL, que são impedidos de executar o Adobe Flash.
 
 Se você não configurar essa política, o valor padrão global da diretiva [DefaultPluginsSetting](#defaultpluginssetting) (se definida) ou a configuração pessoal do usuário será usada para todos os sites.
 
-Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). No entanto, iniciando no M85, padrões com os caracteres curinga '*' e '[*.]' no host não têm mais suporte para esta política.
+Para obter informações detalhadas sobre os padrões de URL válidos, confira [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). No entanto, a partir do M85, não há mais suporte para os caracteres curinga '\*' e '[\*.]' no host para esta política.
 
   #### Recursos compatíveis:
 
@@ -2821,9 +2841,9 @@ Para obter informações detalhadas sobre os padrões de URL válidos, consulte 
 
   ##### Informações da Política de Grupo (ADMX)
 
-  - Nome exclusivo da Política de Grupo: PluginsBlockedForUrls
-  - Nome da Política de Grupo: Bloquear o plug-in Adobe Flash em sites específicos
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Content settings
+  - Nome exclusivo da política de grupo: PluginsBlockedForUrls
+  - Nome da política de grupo: bloquear o plug-in do Adobe Flash em sites específicos (obsoleto)
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/configurações do conteúdo
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -6051,6 +6071,88 @@ Se você habilitar essa política, a visualização de impressão usará a impre
   - Valor de exemplo:
 ``` xml
 <false/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### PrinterTypeDenyList
+
+  #### Desabilitar tipos de impressoras na lista de negações
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows e no macOS desde 88 ou posterior
+
+  #### Descrição
+
+  Os tipos de impressora na lista de negações não serão detectados nem terão seus recursos obtidos.
+
+Colocar todos os tipos de impressora na lista de negações desabilita efetivamente a impressão, porque não há destino de impressão para documentos.
+
+Se você não configurar esta política ou a lista de impressoras estiver vazia, todos os tipos de impressora serão detectáveis.
+
+Os destinos da impressora incluem impressoras de extensão e impressoras locais. As impressoras de extensão também são conhecidas como destinos de provedores de impressão e incluem qualquer destino que pertença a uma extensão do Microsoft Edge.
+As impressoras locais também são conhecidas como destinos de impressão nativos e incluem destinos disponíveis ao computador local e impressoras de rede compartilhadas.
+
+Mapeamento das opções de política:
+
+* privet (privet) = destinos de protocolo baseados em zeroconf (mDNS + DNS-SD)
+
+* extensão (extensão) = destinos baseados em extensão
+
+* pdf (pdf) = o destino 'Salvar como PDF'
+
+* local (local) = destinos da impressora local
+
+Use as informações anteriores ao configurar essa política.
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### Tipo de dados:
+
+  - Lista de cadeias de caracteres
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da política de grupo (ADMX)
+
+  - Nome exclusivo da política de grupo: PrinterTypeDenyList
+  - Nome da política de grupo: desabilitar tipos de impressora na lista de negações
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/imprimir
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList
+  - Caminho (recomendado): N/A
+  - Nome do valor: 1, 2, 3, ...
+  - Tipo de valor: lista de REG_SZ
+
+  ##### Valor de exemplo:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\1 = "local"
+SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
+
+```
+
+  #### Informações e configurações do Mac
+  
+  - Nome da chave de preferência: PrinterTypeDenyList
+  - Valor de exemplo:
+``` xml
+<array>
+  <string>local</string>
+  <string>privet</string>
+</array>
 ```
   
 
@@ -15753,6 +15855,186 @@ Use as informações anteriores ao configurar essa política.
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### InternetExplorerIntegrationLocalFileAllowed
+
+  #### Permitir a inicialização de arquivos locais no modo Internet Explorer
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows desde 88 ou posterior
+
+  #### Descrição
+
+  Esta política controla a disponibilidade do argumento da linha de comando --ie-mode-file-url que é usado para iniciar o Microsoft Edge com um arquivo local especificado na linha de comando no modo Internet Explorer.
+
+Essa configuração funciona em conjunto com: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) é definida como 'IEMode'.
+
+Se você definir esta política como verdadeira ou não configurá-la, o usuário terá permissão para usar o argumento da linha de comando --ie-mode-file-url para iniciar arquivos locais no modo Internet Explorer.
+
+Se você definir esta política como falsa, o usuário não terá permissão para usar o argumento da linha de comando --ie-mode-file-url para iniciar arquivos locais no modo Internet Explorer.
+
+Para saber mais sobre o modo Internet Explorer, confira [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### Tipo de dados:
+
+  - Booliano
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da política de grupo (ADMX)
+
+  - Nome exclusivo da política de grupo: InternetExplorerIntegrationLocalFileAllowed
+  - Nome da política de grupo: permitir a inicialização de arquivos locais no modo Internet Explorer
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: InternetExplorerIntegrationLocalFileAllowed
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de exemplo:
+
+```
+0x00000001
+```
+
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### InternetExplorerIntegrationLocalFileExtensionAllowList
+
+  #### Abrir arquivos locais na lista de permissões de extensão de arquivo do modo Internet Explorer
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows desde 88 ou posterior
+
+  #### Descrição
+
+  Esta política limita quais URLs arquivo:// podem ser iniciadas no modo Internet Explorer com base na extensão do arquivo.
+
+Essa configuração funciona em conjunto com: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) é definida como 'IEMode'.
+
+Quando uma URL arquivo:// é solicitada para iniciar no modo Internet Explorer, a extensão do arquivo da URL deve estar presente nesta lista para que a URL seja autorizada a ser iniciada no modo Internet Explorer. Uma URL que está bloqueada para ser aberta no modo Internet Explorer será aberta no modo Microsoft Edge.
+
+Se você definir essa política com o valor especial "*" ou não configurá-la, todas as extensões do arquivo serão permitidas.
+
+Para saber mais sobre o modo Internet Explorer, confira [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### Tipo de dados:
+
+  - Lista de cadeias de caracteres
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da política de grupo (ADMX)
+
+  - Nome exclusivo da política de grupo InternetExplorerIntegrationLocalFileExtensionAllowList
+  - Nome da política de grupo: abrir arquivos locais na lista de permissões de extensão de arquivo do modo Internet Explorer
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAllowList
+  - Caminho (recomendado): N/A
+  - Nome do valor: 1, 2, 3, ...
+  - Tipo de valor: lista de REG_SZ
+
+  ##### Valor de exemplo:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAllowList\1 = ".mht"
+SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAllowList\2 = ".pdf"
+SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAllowList\3 = ".vsdx"
+
+```
+
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### InternetExplorerIntegrationLocalFileShowContextMenu
+
+  #### Mostrar o menu de contexto para abrir um link no modo Internet Explorer
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows desde 88 ou posterior
+
+  #### Descrição
+
+  Esta política controla a visibilidade da opção 'Abrir link na nova guia do modo Internet Explorer' no menu de contexto para links de arquivo://.
+
+Essa configuração funciona em conjunto com: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) é definida como 'IEMode'.
+
+Se você definir essa política como verdadeira, o item do menu de contexto "Abrir link na nova guia do modo Internet Explorer' estará disponível para links de arquivo://.
+
+Se você definir essa política como falsa ou não a configurar, o item do menu de contexto não será adicionado.
+
+Para saber mais sobre o modo Internet Explorer, confira [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### Tipo de dados:
+
+  - Booliano
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da política de grupo (ADMX)
+
+  - Nome exclusivo da política de grupo: InternetExplorerIntegrationLocalFileShowContextMenu
+  - Nome da política de grupo: mostrar menu de contexto para abrir um link no modo Internet Explorer
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: InternetExplorerIntegrationLocalFileShowContextMenu
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de exemplo:
+
+```
+0x00000001
+```
+
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### InternetExplorerIntegrationSiteList
 
   #### Configurar a lista de sites do modo Empresarial
@@ -15936,6 +16218,82 @@ Se você desabilitar ou não configurar esta política, os usuários não poder�
 0x00000000
 ```
 
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### IntranetRedirectBehavior
+
+  #### Comportamento de redirecionamento da intranet
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows e no macOS desde 88 ou posterior
+
+  #### Descrição
+
+  Esta política configura o comportamento de redirecionamento da intranet por meio de verificações de interceptação DNS. As verificações tentam descobrir se o navegador está atrás de um proxy que redireciona nomes de host desconhecidos.
+
+Se esta política não for configurada, o navegador usará o comportamento padrão de verificações de interceptação DNS e sugestões de redirecionamento de intranet. No M88, elas são habilitadas por padrão, mas serão desabilitadas por padrão na versão futura.
+
+[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled) é uma política relacionada que também pode desabilitar as verificações de interceptação DNS. No entanto, esta política é uma versão mais flexível que pode controlar separadamente barras de informações de redirecionamento de intranet e pode ser expandida no futuro.
+Se [DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled) ou esta política fizer uma solicitação para desabilitar as verificações de interceptação, as verificações serão desabilitadas.
+Se as verificações de interceptação DNS forem desabilitadas por esta política, mas [GoToIntranetSiteForSingleWordEntryInAddressBar](#gotointranetsiteforsinglewordentryinaddressbar) estiver habilitada, as consultas de uma única palavra ainda resultarão em navegações na intranet.
+
+Mapeamento das opções de política:
+
+* Padrão (0) = usar o comportamento padrão do navegador.
+
+* DisableInterceptionChecksDisableInfobar (1) = Desabilitar as verificações de interceptação DNS as barras de informações você quis dizer "http://intranetsite/".
+
+* DisableInterceptionChecksEnableInfobar (2) = Desabilitar verificações de interceptação DNS; permitir barras de informações você quis dizer "http://intranetsite/".
+
+* EnableInterceptionChecksEnableInfobar (3) = Permitir verificações de interceptação DNS e barras de informações você quis dizer "http://intranetsite/".
+
+Use as informações anteriores ao configurar essa política.
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### Tipo de dados:
+
+  - Inteiro
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da política de grupo (ADMX)
+
+  - Nome exclusivo da política de grupo: IntranetRedirectBehavior
+  - Nome da política de grupo: comportamento de redirecionamento da intranet
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: IntranetRedirectBehavior
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### Informações e configurações do Mac
+  
+  - Nome da chave de preferência: IntranetRedirectBehavior
+  - Valor de exemplo:
+``` xml
+<integer>1</integer>
+```
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -17935,17 +18293,19 @@ Confira https://docs.microsoft.com/windows-server/storage/folder-redirection/dep
 
   ### RunAllFlashInAllowMode
 
-  #### Estender a configuração de conteúdo do Adobe Flash a todo o conteúdo
+  #### Estender a configuração de conteúdo do Adobe Flash para todo o conteúdo (obsoleta)
 
   
-  
+  >OBSOLETA: essa política está obsoleta e não funciona após a versão 87 do Microsoft Edge.
   #### Versões com suporte:
 
-  - No Windows e no macOS desde 77 ou mais recente
+  - No Windows e no macOS desde 77 até 87
 
   #### Descrição
 
-  Se você habilitar essa política, todo o conteúdo do Adobe Flash inserido em sites configurados para permitir o Adobe Flash nas configurações de conteúdo, pelo usuário ou pela política empresarial, será executado. Isso inclui conteúdo de outras origens e/ou conteúdo pequeno.
+  Esta política não funciona porque o Microsoft Edge não oferece mais suporte ao Flash.
+
+Se você habilitar essa política, todo o conteúdo do Adobe Flash inserido em sites configurados para permitir o Adobe Flash nas configurações de conteúdo, pelo usuário ou pela política empresarial, será executado. Isso inclui conteúdo de outras origens e/ou conteúdo pequeno.
 
 Para controlar quais sites podem executar o Adobe Flash, Confira as especificações nas políticas [DefaultPluginsSetting](#defaultpluginssetting), [PluginsAllowedForUrls](#pluginsallowedforurls)e [PluginsBlockedForUrls](#pluginsblockedforurls).
 
@@ -17965,9 +18325,9 @@ Se você desabilitar essa política ou não a configurar, o conteúdo do Adobe F
 
   ##### Informações da Política de Grupo (ADMX)
 
-  - Nome Exclusivo da Política de Grupo: RunAllFlashInAllowMode
-  - Nome da Política de Grupo: Estender a configuração de conteúdo do Adobe Flash a todo o conteúdo
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Nome exclusivo da política de grupo: RunAllFlashInAllowMode
+  - Nome da política de grupo: estender a configuração de conteúdo do Adobe Flash para todo o conteúdo (obsoleto)
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -20299,6 +20659,60 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### UpdatePolicyOverride
+
+  #### Especifica como o Microsoft Edge Update lida com as atualizações disponíveis do Microsoft Edge
+
+  
+  
+  #### Versões com suporte:
+
+  - No macOS desde 89 ou posterior
+
+  #### Descrição
+
+  Se você habilitar essa política, o Microsoft Edge Update irá tratar as atualizações do Microsoft Edge de acordo com as seguintes opções:
+
+- Somente atualizações silenciosas automáticas: as atualizações serão aplicadas somente quando forem encontradas pela verificação de atualização periódica.
+
+- Somente atualizações manuais: as atualizações serão aplicadas somente quando o usuário executar uma verificação de atualização manual. (Nem todos os aplicativos fornecem uma interface para essa opção.)
+
+Se você selecionar atualizações manuais, certifique-se de verificar periodicamente se há atualizações usando o Microsoft Autoupdate.
+
+Se você não habilitar e configurar esta política, o Microsoft Edge Update verificará automaticamente se há atualizações.
+
+
+Mapeamento das opções de política:
+
+* somente-atualizações-silenciosas (automatic-silent-only) = as atualizações são aplicadas apenas quando são encontradas pela verificação de atualização periódica.
+
+* somente-manuais (manual-only) = as atualizações são aplicadas apenas quando o usuário executa uma verificação de atualização manual. (Nem todos os aplicativos fornecem uma interface para essa opção.)
+
+Use as informações anteriores ao configurar essa política.
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: Sim
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### Tipo de dados:
+
+  - Cadeia de caracteres
+
+  
+
+  #### Informações e configurações do Mac
+  
+  - Nome da chave de preferência: UpdatePolicyOverride
+  - Valor de exemplo:
+``` xml
+<string>automatic-silent-only</string>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### UserAgentClientHintsEnabled
 
   #### Habilitar o recurso de Dicas do Cliente Usuário-Agente (descontinuado)
@@ -20538,6 +20952,70 @@ Se você desabilitar essa política, os usuários não poderão invocar os Comen
   #### Informações e configurações do Mac
   
   - Nome da chave de preferência: UserFeedbackAllowed
+  - Valor de exemplo:
+``` xml
+<true/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### VerticalTabsAllowed
+
+  #### Configura a disponibilidade de um layout vertical para guias na lateral do navegador
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows e no macOS desde 88 ou posterior
+
+  #### Descrição
+
+  Configura se um usuário pode acessar um layout alternativo onde as guias são alinhadas verticalmente na lateral do navegador em vez de na parte superior.
+Quando há várias guias abertas, esse layout oferece melhor visualização e gerenciamento das guias. Há melhor visibilidade dos títulos do site, é mais fácil verificar os ícones alinhados e há mais espaço para gerenciar e fechar as guias.
+
+Se você desabilitar esta política, o layout da guia vertical não estará disponível como uma opção para os usuários.
+
+Se você habilitar ou não configurar esta política, o layout da guia ainda estará na parte superior, mas o usuário tem a opção de ativar as guias verticais na lateral.
+
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### Tipo de dados:
+
+  - Booliano
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da política de grupo (ADMX)
+
+  - Nome exclusivo da política de grupo: VerticalTabsAllowed
+  - Nome da política de grupo: configura a disponibilidade de um layout vertical para guias na lateral do navegador
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: VerticalTabsAllowed
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### Informações e configurações do Mac
+  
+  - Nome da chave de preferência: VerticalTabsAllowed
   - Valor de exemplo:
 ``` xml
 <true/>
@@ -21012,6 +21490,67 @@ Se a política estiver desabilitada ou não configurada, o WebDriver não terá 
   - Valor de exemplo:
 ``` xml
 <true/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### WebRtcAllowLegacyTLSProtocols
+
+  #### Permitir downgrade TLS/DTLS herdado no WebRTC (preterido)
+
+  >PRETERIDA: Essa política está preterida. Ela tem suporte no momento, mas se tornará obsoleta em uma versão futura.
+  
+  #### Versões com suporte:
+
+  - No Windows e no macOS desde 88 ou posterior
+
+  #### Descrição
+
+  Se você habilitar esta política, as conexões de par WebRTC poderão fazer o downgrade para versões obsoletas dos protocolos TLS/DTLS (DTLS 1.0, TLS 1.0 e TLS 1.1).
+Se você desabilitar ou não definir esta política, essas versões de TLS/DTLS serão desabilitadas.
+
+Esta política é temporária e será removida em uma versão futura do Microsoft Edge.
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### Tipo de dados:
+
+  - Booliano
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da política de grupo (ADMX)
+
+  - Nome exclusivo da política de grupo: WebRtcAllowLegacyTLSProtocols
+  - Nome da política de grupo: permitir downgrade TLS/DTLS herdado no WebRTC (preterido)
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: WebRtcAllowLegacyTLSProtocols
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de exemplo:
+
+```
+0x00000000
+```
+
+  #### Informações e configurações do Mac
+  
+  - Nome da chave de preferência: WebRtcAllowLegacyTLSProtocols
+  - Valor de exemplo:
+``` xml
+<false/>
 ```
   
 

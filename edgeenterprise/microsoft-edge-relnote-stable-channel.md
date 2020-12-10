@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Stable Channel
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 11/30/2020
+ms.date: 12/08/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: 7975cf408a2b9d1c759ebf31e115b830649f1ee4
-ms.sourcegitcommit: 2a53bdd2510770c0b7580f912864337c6ef617fd
+ms.openlocfilehash: e998437308a9fc95ba6cb683561c109797a3e9c9
+ms.sourcegitcommit: 1be5f3584b2a9400ca18c3d5483c3c8929ac9dce
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "11192522"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "11203593"
 ---
 # Notas de versão do Microsoft Edge Stable Channel
 
@@ -23,6 +23,16 @@ Essas notas de versão fornecem informações dos novos recursos e atualizaçõe
 
 > [!NOTE]
 > Para o Canal Estável, as atualizações serão implantadas progressivamente por um ou mais dias. Para saber mais, confira [Distribuições progressivas para as atualizações do Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
+
+## Versão 87.0.664.57: 7 de dezembro
+
+Correção de vários bugs e problemas de desempenho. As atualizações de segurança estão listadas [aqui](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#december-7-2020).
+
+## Versão 87.0.664.55: 3 de dezembro
+
+Correção de vários bugs e problemas de desempenho. O seguinte recurso foi atualizado para este lançamento.
+
+- **O Shopping está habilitado por padrão**. A partir da versão 87 do Microsoft Edge, os usuários corporativos podem se beneficiar das compras no Microsoft Edge. Com os recursos de compra, o Microsoft Edge ajuda os usuários a encontrar cupons e melhores preços ao fazer compras online. (A experiência de cupom foi lançada com a versão estável 87.0.664.41). A experiência de comparação de preços agora está disponível nesta atualização. Este recurso pode ser configurado usando a política [EdgeShoppingAssistantEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgeshoppingassistantenabled). Veja nosso [Blog](https://blogs.windows.com/windowsexperience/2020/11/19/finish-up-that-holiday-shopping-with-new-features-from-microsoft-edge-and-bing/) e [Saiba mais](https://docs.microsoft.com/microsoft-edge/privacy-whitepaper#shopping) sobre o Microsoft Shopping.
 
 ## Versão 87.0.664.52: 30 de novembro
 
