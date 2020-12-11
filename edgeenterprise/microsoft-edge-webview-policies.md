@@ -3,7 +3,7 @@ title: Documentação de Política do Microsoft Edge WebView2
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/02/2020
+ms.date: 12/10/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: b924e40e34c86c3636c18394b561f4b0c35c0437
-ms.sourcegitcommit: 0ab6e25fd045dec2ec23f9dd7b2d2adb6fde3ef2
+ms.openlocfilehash: 698b291d8831efe1efd7fcbb436fe3921e09f255
+ms.sourcegitcommit: 2887b30d46a9fe59d2ab9f95e638197ae058eaf7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "11195112"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "11205719"
 ---
 # <span data-ttu-id="37bb4-103">Políticas do Microsoft Edge WebView2</span><span class="sxs-lookup"><span data-stu-id="37bb4-103">Microsoft Edge WebView2 - Policies</span></span>
 
