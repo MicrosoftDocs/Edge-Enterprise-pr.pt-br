@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/02/2020
+ms.date: 12/11/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 94e16c202ce45332975c89ef354402a5b3edcc6e
-ms.sourcegitcommit: 0ab6e25fd045dec2ec23f9dd7b2d2adb6fde3ef2
+ms.openlocfilehash: d2261f327022ea2d4d57e91748de46173d72dfa4
+ms.sourcegitcommit: 12c803b07a1dbced5f2360f5745186e33adcc41a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "11195132"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "11218730"
 ---
 # Microsoft Edge - Políticas
 
@@ -29,22 +29,14 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
 
-## Políticas novas e preteridas
+## Novas políticas
 
-A tabela a seguir lista as políticas novas e preteridas para esta atualização.
+A tabela a seguir lista as novas políticas desta atualização.
 
 | Nome | Lista de endereçamento |
-|-|-|
-|[PrinterTypeDenyList](#printertypedenylist)|Desabilitar tipos de impressoras na lista de negações|
-|[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Permitir a inicialização de arquivos locais no modo Internet Explorer|
-|[InternetExplorerIntegrationLocalFileExtensionAllowList](#internetexplorerintegrationlocalfileextensionallowlist)|Abrir arquivos locais na lista de permissões de extensão de arquivo do modo Internet Explorer|
-|[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Mostrar o menu de contexto para abrir um link no modo Internet Explorer|
-|[IntranetRedirectBehavior](#intranetredirectbehavior)|Comportamento de redirecionamento da intranet|
-|[UpdatePolicyOverride](#updatepolicyoverride)|Especifica como o Microsoft Edge Update lida com as atualizações disponíveis do Microsoft Edge|
-|[VerticalTabsAllowed](#verticaltabsallowed)|Configura a disponibilidade de um layout vertical para guias na lateral do navegador|
-| PRETERIDO [WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|Permitir downgrade TLS/DTLS herdado no WebRTC|
-
-
+|--|--|
+|[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)| Restringir o modo de impressão de elementos gráficos de plano de fundo|
+|[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)| Modo padrão de impressão de elementos gráficos de plano de fundo|
 
 ## Políticas disponíveis
 
@@ -187,7 +179,9 @@ e dicas para os serviços Microsoft|
 |[DefaultPrinterSelection](#defaultprinterselection)|Regras de seleção de impressora padrão|
 |[PrintHeaderFooter](#printheaderfooter)|Imprimir cabeçalhos e rodapés|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Definir a impressora padrão do sistema como impressora padrão|
-|[PrinterTypeDenyList](#printertypedenylist)|Desabilitar tipos de impressoras na lista de negações|
+|[PrinterTypeDenyList](#printertypedenylist)|Desabilitar tipos de impressora na lista de negação|
+|[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)|Restringir o modo de impressão de elementos gráficos de plano de fundo|
+|[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)|Modo padrão de impressão de elementos gráficos de plano de fundo|
 |[PrintingEnabled](#printingenabled)|Habilitar impressão|
 |[PrintingPaperSizeDefault](#printingpapersizedefault)|Tamanho da página de impressão padrão|
 |[UseSystemPrintDialog](#usesystemprintdialog)|Imprimir usando a caixa de diálogo de impressão do sistema|
@@ -439,8 +433,6 @@ e dicas para os serviços Microsoft|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Gerenciar a exposição de endereço IP local por WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restringir a exposição de endereço IP local por WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restringir o intervalo de portas UDP locais usado por WebRTC|
-|[WebWidgetAllowed](#webwidgetallowed)|Habilitar o widget da web|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Permitir o widget da Web na inicialização do Windows|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Usar o solucionador de proxy do Windows (preterida)|
 
 
@@ -2756,7 +2748,7 @@ Defina uma lista de sites, com base em padrões de URL, que podem executar o plu
 
 Se você não configurar essa política, o valor padrão global da diretiva [DefaultPluginsSetting](#defaultpluginssetting) (se definida) ou a configuração pessoal do usuário será usada para todos os sites.
 
-Para obter informações detalhadas sobre os padrões de URL válidos, confira [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). No entanto, a partir do M85, não há mais suporte para os caracteres curinga '\*' e '[\*.]' no host para esta política.
+Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). No entanto, iniciando no M85, padrões com os caracteres curinga '*' e '[*.]' no host não têm mais suporte para esta política.
 
   #### Recursos compatíveis:
 
@@ -2825,7 +2817,7 @@ Defina uma lista de sites, com base em padrões de URL, que são impedidos de ex
 
 Se você não configurar essa política, o valor padrão global da diretiva [DefaultPluginsSetting](#defaultpluginssetting) (se definida) ou a configuração pessoal do usuário será usada para todos os sites.
 
-Para obter informações detalhadas sobre os padrões de URL válidos, confira [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). No entanto, a partir do M85, não há mais suporte para os caracteres curinga '\*' e '[\*.]' no host para esta política.
+Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). No entanto, iniciando no M85, padrões com os caracteres curinga '*' e '[*.]' no host não têm mais suporte para esta política.
 
   #### Recursos compatíveis:
 
@@ -4174,9 +4166,13 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
   #### Descrição
 
-  Por padrão, todas as extensões são permitidas. No entanto, se você bloquear todas as extensões definindo a política 'ExtensionInstallBlockList' como "*", os usuários só poderão instalar extensões definidas nesta política.
+  Configurar essa política especifica quais extensões não estão sujeitas à lista de bloqueio.
 
-  #### Recursos compatíveis:
+Um valor de lista de bloqueio de * significa que todas as extensões estão bloqueadas e os usuários só podem instalar extensões listadas na lista de permissões.
+
+Por padrão, todas as extensões são permitidas. No entanto, se você proibiu extensões por política, poderá usar a lista de extensões permitidas para alterar essa política.
+
+  #### Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -4237,13 +4233,13 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
   #### Descrição
 
-  Liste extensões específicas que os usuários não podem instalar no Microsoft Edge. Ao implantar essa política, todas as extensões nesta lista que foram instaladas anteriormente serão desabilitadas e o usuário não poderá habilitá-las. Se você remover um item da lista de extensões bloqueadas, essa extensão será reabilitada automaticamente em todos os lugares em que já havia sido instalada.
+  Permite que você especifique quais extensões os usuários NÃO PODEM instalar. As extensões já instaladas serão desabilitadas se bloqueadas, sem uma maneira do usuário habilitá-las. Depois que uma extensão desabilitada for removida da lista de bloqueio, ela será reabilitada automaticamente.
 
-Use "*" para bloquear todas as extensões que não estão explicitamente listadas na lista de permissões.
+Um valor de lista de bloqueio de '*' significa que todas as extensões estão bloqueadas, exceto se estiverem explicitamente listadas na lista de permissões.
 
-Se você não configurar essa política, os usuários poderão instalar as extensões no Microsoft Edge.
+Se essa política não for definida, o usuário poderá instalar qualquer extensão no Microsoft Edge.
 
-  #### Recursos compatíveis:
+  #### Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -4448,13 +4444,14 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   #### Descrição
 
-  Define as configurações de gerenciamento de extensão para o Microsoft Edge.
+  A definição desta política controla as configurações de gerenciamento de extensão do Microsoft Edge, incluindo qualquer uma controlada por políticas relacionadas à extensão existentes. Essa política substitui qualquer política herdada que possa ser definida.
 
-Essa política controla várias configurações, incluindo as configurações controladas por qualquer política de extensão existente. Essa política substitui as políticas herdadas se ambas estiverem definidas.
+Essa política mapeia um ID de extensão ou uma URL de atualização apenas para sua configuração específica. Uma configuração padrão pode ser definida para o ID especial "*", que se aplica a todas as extensões sem uma configuração personalizada nesta política. Com uma URL de atualização, a configuração se aplica a extensões com a URL de atualização exata indicada no manifesto da extensão ([https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043)).
 
-Esta política mapeia um ID de extensão ou uma URL de atualização para a sua configuração. Com uma ID de extensão, a configuração é aplicada somente à extensão especificada. Defina uma configuração padrão para o ID especial "*" para aplicar a todas as extensões que não estão listadas especificamente nesta política. Com uma URL de atualização, a configuração é aplicada a todas as extensões com a URL de atualização exata mencionada no manifesto desta extensão, conforme descrito em [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043).
+Observação: para caso de instâncias do Windows que não fazem parte de um domínio do Microsoft Active Directory, a instalação forçada fica limitada a aplicativos e extensões listados no site Complementos do Microsoft Edge.
 
-  #### Recursos compatíveis:
+
+  #### Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -5217,11 +5214,11 @@ Para obter informações detalhadas sobre como configurar o modo de quiosque, co
 
   #### Descrição
 
-  Liste hosts de mensagens nativos específicos que os usuários podem usar no Microsoft Edge.
+  Definir a política especifica quais hosts de mensagens nativas não estão sujeitos à lista de negação. Um valor de lista de negação de * significa que todos os hosts de mensagens nativos são negados, a menos que sejam explicitamente permitidos.
 
-Por padrão, todos os hosts de mensagens nativos são permitidos. Se você definir a política [NativeMessagingBlocklist](#nativemessagingblocklist) como *, todos os hosts de mensagens nativos serão bloqueados e somente hosts de mensagens nativos listados neste artigo serão carregados.
+Todos os hosts de mensagens nativos são permitidos por padrão. No entanto, se um host de mensagem nativo for negado pela política, o administrador poderá usar a lista de permissões para alterar essa política.
 
-  #### Recursos compatíveis:
+  #### Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -5282,13 +5279,11 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messag
 
   #### Descrição
 
-  Especifica quais hosts de mensagens nativos não devem ser usados.
+  Definir essa política especifica quais hosts de mensagens nativas não devem ser carregados. Um valor de lista de negação de * significa que todos os hosts de mensagens nativos são negados, a menos que sejam explicitamente permitidos.
 
-Use "*" para bloquear todos os hosts de mensagens nativos, a menos que estejam explicitamente listados na lista de permissões.
+Se você não definir esta política, o Microsoft Edge carregará todos os hosts de mensagens nativas instalados.
 
-Se você não configurar essa política, o Microsoft Edge carregará todos os hosts de mensagens nativos instalados.
-
-  #### Recursos compatíveis:
+  #### Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -5349,13 +5344,11 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
   #### Descrição
 
-  Permite a instalação em nível de usuário de hosts nativos de mensagens.
+  Se você definir essa política como Habilitada ou deixá-la sem definição, o Microsoft Edge poderá usar hosts de mensagens nativos instalados no nível do usuário.
 
-Se você desabilitar essa política, o Microsoft Edge usará somente hosts nativos de mensagens instaladas no nível do sistema.
+Se você definir essa política como Desabilitada, o Microsoft Edge só poderá usar esses hosts se eles estiverem instalados no nível do sistema.
 
-Por padrão, quando você não configura essa política, o Microsoft Edge permite o uso de hosts de mensagens nativos no nível do usuário.
-
-  #### Recursos compatíveis:
+  #### Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -6153,6 +6146,140 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
   <string>local</string>
   <string>privet</string>
 </array>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### PrintingAllowedBackgroundGraphicsModes
+
+  #### Restringir o modo de impressão de elementos gráficos de plano de fundo
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows e no macOS desde 89 ou posterior
+
+  #### Descrição
+
+  Restringe o modo de impressão de gráficos em segundo plano. Se essa política não for definida, não haverá restrição para a impressão de gráficos de tela de fundo.
+
+Mapeamento das opções de política:
+
+* qualquer (qualquer) = Permitir impressão com e sem elementos gráficos de plano de fundo
+
+* habilitado (habilitado) = Permitir impressão apenas com elementos gráficos de plano de fundo
+
+* desabilitado (desabilitado) = Permitir impressão apenas com elementos gráficos de plano de fundo
+
+Use as informações anteriores ao configurar essa política.
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### Tipo de dados:
+
+  - String
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: PrintingAllowedBackgroundGraphicsModes
+  - Nome da Política de Grupo: restringir o modo de impressão gráfica em segundo plano.
+  - Caminho da Política de Grupo (obrigatório): Modelos administrativos/Microsoft Edge/Impressão
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: PrintingAllowedBackgroundGraphicsModes
+  - Tipo de valor: REG_SZ
+
+  ##### Valor de exemplo:
+
+```
+"enabled"
+```
+
+  #### Informações e configurações do Mac
+  
+  - Nome da Chave de Preferência: PrintingAllowedBackgroundGraphicsModes
+  - Valor de exemplo:
+``` xml
+<string>enabled</string>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### PrintingBackgroundGraphicsDefault
+
+  #### Modo padrão de impressão de elementos gráficos de plano de fundo
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows e no macOS desde 89 ou posterior
+
+  #### Descrição
+
+  Substitui o modo de impressão de gráficos em segundo plano padrão.
+
+Mapeamento das opções de política:
+
+* habilitado (habilitado) = Habilitar modo de impressão de gráficos em segundo plano por padrão
+
+* desabilitado (desabilitado) = Desativar o modo de impressão de gráficos em segundo plano por padrão
+
+Use as informações anteriores ao configurar essa política.
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### Tipo de dados:
+
+  - String
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: PrintingBackgroundGraphicsDefault
+  - Nome da Política de Grupo: modo de impressão de gráficos em segundo plano padrão
+  - Caminho da Política de Grupo (obrigatório): Modelos administrativos/Microsoft Edge/Impressão
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: PrintingBackgroundGraphicsDefault
+  - Tipo de valor: REG_SZ
+
+  ##### Valor de exemplo:
+
+```
+"enabled"
+```
+
+  #### Informações e configurações do Mac
+  
+  - Nome da chave de preferência: PrintingBackgroundGraphicsDefault
+  - Valor de exemplo:
+``` xml
+<string>enabled</string>
 ```
   
 
@@ -8291,10 +8418,10 @@ Se você não configurar a política, os usuários poderão optar por mostrar o 
   #### Descrição
 
   Permite a exibição da pesquisa relevante da Microsoft em sugestões do Bing na lista de sugestões da barra de endereços quando o usuário digita uma cadeia de pesquisa na barra de endereços. Se você habilitar ou não configurar essa política, os usuários poderão ver os resultados internos da plataforma Pesquisa da Microsoft no Bing, na lista de sugestões de barra de endereços do Microsoft Edge. Para ver a pesquisa da Microsoft nos resultados do Bing, o usuário deve estar conectado ao Microsoft Edge com a conta do Azure AD para essa organização.
-Se você desabilitar essa política, os usuários não poderão ver resultados internos na lista de sugestões de barra de endereços do Microsoft Edge.
-Se você tiver habilitado o conjunto de políticas que força um provedor de pesquisa padrão ([DefaultSearchProviderEnabled](#defaultsearchproviderenabled), [DefaultSearchProviderName](#defaultsearchprovidername) e [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl)) e o provedor de pesquisa especificado não for Bing, essa política não será aplicável e não haverá uma pesquisa da Microsoft em sugestões de Bing na lista de sugestões da barra de endereços.
+Se você desabilitar essa política, os usuários não poderão ver os resultados internos na lista de sugestões da barra de endereço do Microsoft Edge.
+A partir da versão 89 do Microsoft Edge, as sugestões da Pesquisa da Microsoft no Bing estarão disponíveis mesmo se o Bing não for o provedor de pesquisa padrão do usuário.
 
-  #### Recursos compatíveis:
+  #### Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -17952,11 +18079,10 @@ Caso contrário, o período padrão de 604,8 milhões milissegundos (uma semana)
 
   #### Descrição
 
-  Se essa política estiver ativada ou não definida, a Integridade do código do renderizador será ativada. Essa política só deve ser desabilitada se houver problemas de compatibilidade com software de terceiros que devem ser executados dentro dos processos de renderização do Microsoft Edge.
+  A configuração da política como Habilitada ou deixá-la sem definição ativa a Integridade do Código do Renderizador.
+A configuração a política como Desabilitada tem um efeito prejudicial na segurança e estabilidade do Microsoft Edge, pois um código desconhecido e potencialmente hostil pode ser carregado nos processos de renderização do Microsoft Edge. Desabilite a política apenas se houver problemas de compatibilidade com software de terceiros que devem ser executados dentro dos processos de renderização do Microsoft Edge.
 
-Desabilitar essa política tem um efeito prejudicial à segurança e à estabilidade do Microsoft Edge porque um código desconhecido e potencialmente hostil poderá ser carregado dentro dos processos de renderização do Microsoft Edge.
-
-  #### Recursos compatíveis:
+  #### Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -20698,7 +20824,7 @@ Use as informações anteriores ao configurar essa política.
 
   #### Tipo de dados:
 
-  - Cadeia de caracteres
+  - String
 
   
 
@@ -21761,131 +21887,7 @@ Se você não configurar essa política, ou se a definir como uma cadeia de cara
 ``` xml
 <string>10000-11999</string>
 ```
-  
-
-  [Voltar ao início](#microsoft-edge---policies)
-
-  ### WebWidgetAllowed
-
-  #### Habilitar o widget da web
-
-  
-  
-  #### Versões com suporte:
-
-  - No Windows desde 88 ou posterior
-
-  #### Descrição
-
-  Habilitar o widget da Web. Quando habilitado, os usuários podem usar o widget para pesquisar na web a partir de um desktop ou de um aplicativo. O widget fornece uma caixa de pesquisa que mostra sugestões da web e abre todas as pesquisas da web no Microsoft Edge. A caixa de pesquisa fornece sugestões de pesquisa (da plataforma do Bing) e URL. O widget também inclui blocos de feed nos quais os usuários podem clicar para conferir mais informações no msn.com em uma nova guia ou janela do navegador Microsoft Edge. Os blocos de alimentação podem incluir anúncios. O widget pode ser iniciado nas configurações do Microsoft Edge ou no menu "Mais ferramentas" no Microsoft Edge.
-
-Se você habilitar ou não configurar esta política: O widget da Web será habilitado automaticamente para todos os perfis.
-Nas configurações do Microsoft Edge, os usuários verão a opção de iniciar o widget.
-Nas configurações do Microsoft Edge, os usuários verão o item de menu para executar o widget na inicialização do Windows (inicialização automática).
-A opção de habilitar o widget na inicialização será ativada se a política [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) estiver habilitada.
-Se [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) estiver desabilitado ou não configurado, a opção de habilitar o widget na inicialização será desligada.
-Os usuários verão o item de menu para iniciar o widget a partir do menu "Mais ferramentas" do Microsoft Edge. Os usuários podem iniciar o widget em "Mais ferramentas".
-O widget pode ser desativado pela opção "Sair" na bandeja do sistema ou fechando o widget na barra de tarefas. O widget será reiniciado na reinicialização do sistema se a inicialização automática estiver habilitada.
-
-Se você desabilitar esta política: O widget da Web será desabilitado para todos os perfis.
-A opção de iniciar o widget nas Configurações do Microsoft Edge será desabilitada.
-A opção de iniciar o widget na inicialização do Windows (inicialização automática) será desabilitada.
-A opção de iniciar o widget no menu "Mais ferramentas" do Microsoft Edge será desabilitada.
-
-  #### Recursos compatíveis:
-
-  - Pode ser obrigatório: Sim
-  - Pode ser recomendável: não
-  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
-
-  #### Tipo de dados:
-
-  - Booliano
-
-  #### Informações e configurações do Windows
-
-  ##### Informações da Política de Grupo (ADMX)
-
-  - Nome exclusivo do GP: WebWidgetAllowed
-  - Nome do GP: habilitar o widget da Web
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
-  - Caminho da Política de Grupo (recomendado): N/A
-  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
-
-  ##### Configurações de registro do Windows
-
-  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
-  - Caminho (recomendado): N/A
-  - Nome do valor: WebWidgetAllowed
-  - Tipo de valor: REG_DWORD
-
-  ##### Valor de exemplo:
-
-```
-0x00000001
-```
-
-  
-
-  [Voltar ao início](#microsoft-edge---policies)
-
-  ### WebWidgetIsEnabledOnStartup
-
-  #### Permitir o widget da Web na inicialização do Windows
-
-  
-  
-  #### Versões com suporte:
-
-  - No Windows desde 88 ou posterior
-
-  #### Descrição
-
-  Permite que o widget da Web comece a ser executado na inicialização do Windows.
-
-Se você habilitar: O widget da Web começará a ser executado na inicialização do Windows por padrão.
-Se o widget for desabilitado por meio da política [WebWidgetAllowed](#webwidgetallowed), esta política não iniciará o widget na inicialização do Windows.
-
-Se você desabilitar esta política: O widget da Web não será iniciado na inicialização do Windows para todos os perfis.
-A opção de iniciar o widget na inicialização do Windows será desabilitada e desativada nas configurações do Microsoft Edge.
-
-Se você não configurar a política: o widget da Web não iniciará na inicialização do Windows para todos os perfis.
-A opção de iniciar o widget na inicialização do Windows será desativada nas configurações do Microsoft Edge.
-
-  #### Recursos compatíveis:
-
-  - Pode ser obrigatório: Sim
-  - Pode ser recomendável: não
-  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
-
-  #### Tipo de dados:
-
-  - Booliano
-
-  #### Informações e configurações do Windows
-
-  ##### Informações da Política de Grupo (ADMX)
-
-  - Nome exclusivo da Política de Grupo: WebWidgetIsEnabledOnStartup
-  - Nome da Política de Grupo: permitir o widget da web na inicialização do Windows
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
-  - Caminho da Política de Grupo (recomendado): N/A
-  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
-
-  ##### Configurações de registro do Windows
-
-  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
-  - Caminho (recomendado): N/A
-  - Nome do valor: WebWidgetIsEnabledOnStartup
-  - Tipo de valor: REG_DWORD
-
-  ##### Valor de exemplo:
-
-```
-0x00000001
-```
-
-  
+ 
 
   [Voltar ao início](#microsoft-edge---policies)
 
