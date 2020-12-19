@@ -1,6 +1,6 @@
 ### YamlMime:FAQ
 metadata:
-  title: Perguntas frequentes sobre o Edge na empresa
+  title: Perguntas frequentes (FAQ) sobre o Edge na empresa
   ms.author: jwhit
   author: jwhit-MSFT
   manager: laurawi
@@ -10,14 +10,14 @@ metadata:
   ms.prod: microsoft-edge
   ms.localizationpriority: high
   ms.collection: M365-modern-desktop
-  description: Perguntas frequentes sobre a implantação do Microsoft Edge na empresa
-  ms.openlocfilehash: 8a260d4830de4bb84ef6744be1871b148a2466e6
-  ms.sourcegitcommit: 9e92bea0a3e2e7f1ef373c34eb761115508e747f
+  description: Perguntas frequentes (FAQ) sobre a implantação do Microsoft Edge na empresa
+  ms.openlocfilehash: 59a47c7a37629e94ff50d6319fb96e8bf45f7f63
+  ms.sourcegitcommit: d1ecab8d3d9f7a369c2690c0e6eaa9b12520ae46
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 12/16/2020
-  ms.locfileid: "11229504"
-title: Perguntas frequentes sobre o Microsoft Edge na empresa
+  ms.lasthandoff: 12/18/2020
+  ms.locfileid: "11236808"
+title: Perguntas frequentes (FAQ) sobre o Microsoft Edge na empresa
 summary: >
   > [!NOTE]
 
@@ -26,7 +26,8 @@ sections:
 - name: Aceita
   questions:
   - question: Como sei que versão do Microsoft Edge tenho?
-    answer: No canto superior direito do Microsoft Edge, selecione o ícone de reticências (**...**) e, em seguida, selecione **configurações**. Escolha **Sobre o Microsoft Edge** para ver sua versão do Microsoft Edge.
+    answer: >
+      No canto superior direito do Microsoft Edge, selecione o ícone de reticências (**...**) e, em seguida, selecione **configurações**. Escolha **Sobre o Microsoft Edge** para ver sua versão do Microsoft Edge.
   - question: O Internet Explorer 11 continuará a receber atualizações?
     answer: >
       Temos o compromisso de manter o Internet Explorer um navegador compatível, confiável e seguro. O Internet Explorer ainda é um componente do Windows e segue o ciclo de vida do suporte do sistema operacional no qual ele está instalado. Para obter mais informações, consulte as [Perguntas frequentes sobre ciclo de vida - Internet Explorer](https://support.microsoft.com/help/17454/). Embora continuemos a dar suporte e atualizar ao Internet Explorer, os recursos e as atualizações de plataforma mais recentes estarão disponíveis somente no Microsoft Edge.
