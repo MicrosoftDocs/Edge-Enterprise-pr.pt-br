@@ -3,19 +3,19 @@ title: Associar extensões de arquivo com o modo Internet Explorer
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/16/2020
+ms.date: 12/21/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Associar extensões de arquivo com o modo Internet Explorer
-ms.openlocfilehash: 63ab0bb8eafda093dedbed0c38a6763e0c054cdf
-ms.sourcegitcommit: c7c326c97926764d2d614520c1c8dc2546254c98
+ms.openlocfilehash: 9f39a3319c3e45001090dd9f0cffb3e7ce2648fb
+ms.sourcegitcommit: 306582403d4272831bcac390154c7cc7041a9b7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "11218917"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "11238188"
 ---
 # <span data-ttu-id="6c211-103">Associar extensões de arquivo com o modo Internet Explorer</span><span class="sxs-lookup"><span data-stu-id="6c211-103">Associate file extensions with Internet Explorer mode</span></span>
 
