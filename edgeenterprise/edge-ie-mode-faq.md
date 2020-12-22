@@ -1,21 +1,21 @@
 ---
 title: Perguntas frequentes sobre o modo IE
-ms.author: cjacks
-author: cjacks
-manager: saudm
-ms.date: 05/27/2020
+ms.author: shisub
+author: dan-wesley
+manager: srugh
+ms.date: 12/21/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Perguntas frequentes e solução de problemas do Microsoft Edge com o modo IE
-ms.openlocfilehash: fcceb9eab19d667f772c593fe4f362606c1623ff
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 62bf8afc5ac908e18d2f503fa9248a19f78fd6f6
+ms.sourcegitcommit: 306582403d4272831bcac390154c7cc7041a9b7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979027"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "11238168"
 ---
 # Perguntas frequentes sobre o modo IE
 
@@ -82,7 +82,21 @@ Não há nenhuma linha de comando explícita no Microsoft Edge para espelhar a o
 
 Se nenhuma das opções acima funcionar para o seu cenário, fale por meio de um dos nossos canais de comentários: suporte da Microsoft, [Fórum TechCommunity](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise)ou [UserVoice do Microsoft Edge](https://microsoftedge.uservoice.com/forums/928825-enterprise).
 
-## Consulte também
+### Posso salvar links como páginas da Web no modo Internet Explorer?
+ 
+Sim, você pode habilitar a opção Salvar destino como no menu de contexto do modo Internet Explorer no Microsoft Edge. Para fazer isso, configure a política de grupo *"Permitir Salvar destino como no modo Internet Explorer"* localizada em *Configuração do Computador > Modelos Administrativos > Componentes do Windows > Internet Explorer*.
+O mecanismo de salvamento funciona da mesma forma que no Internet Explorer, e se o destino for salvo como um arquivo html, a reabertura do arquivo renderizará a página no Microsoft Edge.
+ 
+Observe que essa funcionalidade requer as seguintes atualizações mínimas do sistema operacional:
+- Windows 10, versão 2004, Windows Server, versão 2004, Windows 10, versão 20H2: [KB4580364](https://support.microsoft.com/help/4580364/windows-10-update-kb4580364)
+- Windows 10, versão 1903, Windows 10, versão 1909, Windows Server, versão 1903: [KB4580386](https://support.microsoft.com/help/4580386/windows-10-update-kb4580386)
+- Windows 10, versão 1809, Windows Server, versão 1809, Windows Server 2019: [KB4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390)
+- Windows 10, versão 1803: [KB4586785](https://support.microsoft.com/help/4586785/windows-10-update-kb4586785)
+- Windows 10, versão 1607: [KB4586830](https://support.microsoft.com/help/4586830/windows-10-update-kb4586830)
+- Windows 10, versão 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)
+
+
+## Confira também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Sobre o modo IE](https://docs.microsoft.com/deployedge/edge-ie-mode)

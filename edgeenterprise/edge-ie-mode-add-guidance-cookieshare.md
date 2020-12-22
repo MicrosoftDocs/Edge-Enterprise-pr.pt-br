@@ -3,19 +3,19 @@ title: Compartilhamento de cookies do Microsoft Edge para o Internet Explorer
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/05/2020
+ms.date: 12/21/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 'Como compartilhar os cookies do Microsoft Edge para o Internet Explorer '
-ms.openlocfilehash: 5740a4ce31a240573b9106e7a20a5c44688aca0a
-ms.sourcegitcommit: 2024629929044e2dcf146674058c1d6312c32e9a
+ms.openlocfilehash: ddd9d34b5e2b0ee49093734da82e4a4fa7aa6a69
+ms.sourcegitcommit: 306582403d4272831bcac390154c7cc7041a9b7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "11157533"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "11238178"
 ---
 # Compartilhamento de cookies do Microsoft Edge para o Internet Explorer
 
@@ -28,10 +28,10 @@ Este artigo explica como configurar o compartilhamento de cookie de sessão de u
 
 - Atualizações do Windows
 
-  - Windows 10 versão 2004, versão do servidor Windows 2004 - KB4571744 ou superior
-  - Windows 10 versão 1909, versão do servidor Windows 1909 - KB4566116 ou superior
-  - Windows 10 versão 1903, versão do servidor Windows 1903 - KB4566116 ou superior
-  - Windows 10 versão 1809, versão do Servidor Windows 1809 e Servidor Windows 2019 - KB4571748 ou superior
+  - Windows 10, versão 2004, Windows Server, versão 2004-KB4571744 ou superior
+  - Windows 10, versão 1909, Windows Server, versão 1909 – KB4566116 ou superior
+  - Windows 10, versão 1903, Windows Server, versão 1903 – KB4566116 ou superior
+  - Windows 10, versão 1809, Windows Server, versão 1809 e Windows Server 2019 - KB4571748 ou superior
   - Windows 10 versão 1803 - KB4577032 ou superior
 
 - Microsoft Edge versão 87 ou posterior
