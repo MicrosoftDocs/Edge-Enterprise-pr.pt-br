@@ -3,7 +3,7 @@ title: Documentação de Política do Microsoft Edge WebView2
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/10/2020
+ms.date: 01/07/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,19 +11,18 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 698b291d8831efe1efd7fcbb436fe3921e09f255
-ms.sourcegitcommit: 2887b30d46a9fe59d2ab9f95e638197ae058eaf7
+ms.openlocfilehash: 0be51f193d12c14d1bb40439d7ec6ca9e59effae
+ms.sourcegitcommit: 4dc45cde7cfd29cd24a03f6e830502e95c43d82e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "11205719"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "11254949"
 ---
 # Políticas do Microsoft Edge WebView2
 
 A versão mais recente do Microsoft Edge WebView2 inclui as políticas a seguir. Você pode usar essas políticas para configurar como o Microsoft Edge WebView2 será executado em sua organização.
 
 Para saber mais sobre o conjunto adicional de políticas, usado para controlar como e quando o Microsoft Edge WebView2 é atualizado, confira [Referência de política de atualização do Microsoft Edge](microsoft-edge-update-policies.md).
-
 
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 87 ou posterior.
@@ -161,7 +160,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, V
   [Voltar ao início](#microsoft-edge-webview2---policies)
 
 
-## Consulte também
+## Ver também
 
 - [Configurar o Microsoft Edge](configure-microsoft-edge.md)
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
