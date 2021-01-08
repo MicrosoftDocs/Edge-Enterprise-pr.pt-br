@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/11/2020
+ms.date: 01/07/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: d2261f327022ea2d4d57e91748de46173d72dfa4
-ms.sourcegitcommit: 12c803b07a1dbced5f2360f5745186e33adcc41a
+ms.openlocfilehash: b422361809b0a2acaa392729025a95aef7ac8f83
+ms.sourcegitcommit: 4dc45cde7cfd29cd24a03f6e830502e95c43d82e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "11218730"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "11254969"
 ---
 # Microsoft Edge - Políticas
 
@@ -29,14 +29,18 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
 
+
 ## Novas políticas
 
 A tabela a seguir lista as novas políticas desta atualização.
 
 | Nome | Lista de endereçamento |
-|--|--|
-|[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)| Restringir o modo de impressão de elementos gráficos de plano de fundo|
-|[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)| Modo padrão de impressão de elementos gráficos de plano de fundo|
+|-|-|
+|[BasicAuthOverHttpEnabled](#basicauthoverhttpenabled)|Permitir autenticação Básica para HTTP|
+|[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Não defina o window.opener para links de direcionamento \_blank|
+|[WebWidgetAllowed](#webwidgetallowed)|Permitir o widget da Web|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Ativar o widget Web na inicialização do Windows|
+
 
 ## Políticas disponíveis
 
@@ -50,7 +54,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[Configurações do modo de quiosque](#kiosk-mode-settings)|[Sistema de mensagens nativo](#native-messaging)|
 |[Gerenciador de senhas e proteção](#password-manager-and-protection)|[Desempenho](#performance)|
 |[Impressão](#printing)|[Servidor proxy](#proxy-server)|
-|[Configurações de Guias em repouso](#sleeping-tabs-settings)|[Configurações do SmartScreen](#smartscreen-settings)|
+|[Configurações de guias em suspensão](#sleeping-tabs-settings)|[Configurações do SmartScreen](#smartscreen-settings)|
 |[Página de inicialização, página inicial e nova guia](#startup-home-page-and-new-tab-page)|[Adicional](#additional)|
 
 
@@ -141,6 +145,7 @@ e dicas para os serviços Microsoft|
 |[AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)|Especifica uma lista de servidores para os quais o Microsoft Edge pode delegar credenciais de usuário|
 |[AuthSchemes](#authschemes)|Esquemas de autenticação com suporte|
 |[AuthServerAllowlist](#authserverallowlist)|Configurar a lista de servidores de autenticação permitidos|
+|[BasicAuthOverHttpEnabled](#basicauthoverhttpenabled)|Permitir autenticação Básica para HTTP|
 |[DisableAuthNegotiateCnameLookup](#disableauthnegotiatecnamelookup)|Desabilitar a pesquisa CNAME durante a negociação da autenticação Kerberos|
 |[EnableAuthNegotiatePort](#enableauthnegotiateport)|Incluir porta não padrão no SPN Kerberos|
 |[NtlmV2Enabled](#ntlmv2enabled)|Controlar se a autenticação NTLMv2 está habilitada|
@@ -194,13 +199,13 @@ e dicas para os serviços Microsoft|
 |[ProxyPacUrl](#proxypacurl)|Definir o URL do arquivo proxy .pac (preterido)|
 |[ProxyServer](#proxyserver)|Configurar o endereço ou URL do servidor proxy (preterido)|
 |[ProxySettings](#proxysettings)|Configurações de proxy|
-### [*Configurações de Guias em repouso*](#sleeping-tabs-settings-policies)
+### [*Configurações de guias em suspensão*](#sleeping-tabs-settings-policies)
 
 |Nome da política|Legenda|
 |-|-|
-|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)|Bloquear Guias em Suspensão em sites específicos|
-|[SleepingTabsEnabled](#sleepingtabsenabled)|Configurar Guias de Repouso|
-|[SleepingTabsTimeout](#sleepingtabstimeout)|Definir o tempo limite de inatividade de tela de fundo para Guias em Suspensão|
+|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)|Bloquear guias em suspensão em sites específicos|
+|[SleepingTabsEnabled](#sleepingtabsenabled)|Configurar guias em suspensão|
+|[SleepingTabsTimeout](#sleepingtabstimeout)|Defina o tempo limite de inatividade da guia de fundo para as guias em suspensão|
 ### [*Configurações do SmartScreen*](#smartscreen-settings-policies)
 
 |Nome da política|Legenda|
@@ -235,7 +240,7 @@ e dicas para os serviços Microsoft|
 |[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|Configuração Ads para sites com publicidade invasiva|
 |[AllowDeletingBrowserHistory](#allowdeletingbrowserhistory)|Habilitar a exclusão do navegador e baixar o histórico|
 |[AllowFileSelectionDialogs](#allowfileselectiondialogs)|Permitir diálogos de seleção de arquivo|
-|[AllowPopupsDuringPageUnload](#allowpopupsduringpageunload)|Permite que uma página mostre pop-ups durante seu descarregamento|
+|[AllowPopupsDuringPageUnload](#allowpopupsduringpageunload)|Permite que uma página mostre pop-ups durante seu descarregamento (obsoleto)|
 |[AllowSurfGame](#allowsurfgame)|Permitir a navegação|
 |[AllowSyncXHRInPageDismissal](#allowsyncxhrinpagedismissal)|Permitir que as páginas enviem solicitações XHR síncronas durante o descarte da página (preterida)|
 |[AllowTokenBindingForUrls](#allowtokenbindingforurls)|Configurar a lista de sites com os quais o Microsoft Edge tentará estabelecer uma Associação de Token.|
@@ -316,7 +321,7 @@ e dicas para os serviços Microsoft|
 |[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|Configurar se o Microsoft Edge deve selecionar automaticamente um certificado quando houver várias correspondências de certificado para um site configurado com "AutoSelectCertificateForUrls"|
 |[ForceEphemeralProfiles](#forceephemeralprofiles)|Habilitar o uso de perfis efêmeros|
 |[ForceGoogleSafeSearch](#forcegooglesafesearch)|Aplicar a Pesquisa Segura do Google|
-|[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|Usa uma política referencial padrão de no-referrer-when-downgrade (preterida)|
+|[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|Usar uma política de referência padrão de no-referrer-when-downgrade (obsoleto)|
 |[ForceNetworkInProcess](#forcenetworkinprocess)|Forçar o código de rede a executar no processo do navegador (obsoleta)|
 |[ForceSync](#forcesync)|Forçar a sincronização dos dados do navegador e não mostrar o aviso de consentimento da sincronização|
 |[ForceYouTubeRestrict](#forceyoutuberestrict)|Forçar o modo restrito mínimo do YouTube|
@@ -357,7 +362,7 @@ e dicas para os serviços Microsoft|
 |[ManagedSearchEngines](#managedsearchengines)|Gerenciar mecanismos de pesquisa|
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|Número máximo de conexões simultâneas com o servidor proxy|
 |[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|Permitir que o Google Cast se conecte a dispositivos de conversão em todos os endereços IP|
-|[MetricsReportingEnabled](#metricsreportingenabled)|Habilitar a geração de relatórios de dados de uso e relacionados a falhas (descontinuada)|
+|[MetricsReportingEnabled](#metricsreportingenabled)|Ativar relatórios de dados relacionados a falhas e uso (obsoleto)|
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Habilitar Native Window Occlusion|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Definir um tempo limite para o atraso da navegação da guia para a lista de sites do Modo Empresarial|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Habilitar a previsão de rede|
@@ -390,7 +395,7 @@ e dicas para os serviços Microsoft|
 |[SearchSuggestEnabled](#searchsuggestenabled)|Permitir sugestões de pesquisa|
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Sites ou domínios que não precisam de permissão para usar o atestado de chave de segurança direta|
 |[SendIntranetToInternetExplorer](#sendintranettointernetexplorer)|Enviar todos os sites da intranet para o Internet Explorer|
-|[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Enviar informações de sites para aprimorar os serviços da Microsoft (descontinuado)|
+|[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Enviar informações do site para melhorar os serviços Microsoft (obsoleto)|
 |[SensorsAllowedForUrls](#sensorsallowedforurls)|Permitir o acesso a sensores em sites específicos|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Bloquear o acesso a sensores em sites específicos|
 |[SerialAskForUrls](#serialaskforurls)|Permitir a API serial em sites específicos|
@@ -410,6 +415,7 @@ e dicas para os serviços Microsoft|
 |[TLS13HardeningForLocalAnchorsEnabled](#tls13hardeningforlocalanchorsenabled)|Habilitar um recurso de segurança TLS 1.3 para âncoras de confiança locais (obsoleto)|
 |[TLSCipherSuiteDenyList](#tlsciphersuitedenylist)|Especificar os pacotes de codificação TLS para desabilitar|
 |[TabFreezingEnabled](#tabfreezingenabled)|Permitir congelamento das guias de plano de fundo|
+|[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Não defina o window.opener para links de direcionamento _blank|
 |[TaskManagerEndProcessEnabled](#taskmanagerendprocessenabled)|Habilitar processos finais no Gerenciador de tarefas do navegador|
 |[TotalMemoryLimitMb](#totalmemorylimitmb)|Definir o limite em megabytes de memória que uma única instância do Microsoft Edge pode usar.|
 |[TrackingPrevention](#trackingprevention)|Bloquear o acompanhamento de atividades de navegação na Web do usuário|
@@ -433,6 +439,8 @@ e dicas para os serviços Microsoft|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Gerenciar a exposição de endereço IP local por WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restringir a exposição de endereço IP local por WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restringir o intervalo de portas UDP locais usado por WebRTC|
+|[WebWidgetAllowed](#webwidgetallowed)|Permitir o widget da Web|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Ativar o widget Web na inicialização do Windows|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Usar o solucionador de proxy do Windows (preterida)|
 
 
@@ -758,6 +766,8 @@ Observe que não é possível definir padrões de URL conflitantes entre essas t
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
+Para obter informações detalhadas sobre os padrões válidos de url, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
+
 Para impedir que os cookies sejam excluídos na saída, configure a política [SaveCookiesOnExit](#savecookiesonexit).
 
   #### Recursos compatíveis:
@@ -835,7 +845,9 @@ Observe que não é possível definir padrões de URL conflitantes entre essas t
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
-  #### Recursos compatíveis:
+Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
+
+  #### Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -911,6 +923,8 @@ Observe que não é possível definir padrões de URL conflitantes entre essas t
 - [CookiesAllowedForUrls](#cookiesallowedforurls)
 
 - CookiesSessionOnlyForUrls
+
+Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
 
 Se você definir a política [RestoreOnStartup](#restoreonstartup) para restaurar URLs de sessões anteriores, essa política será ignorada e os cookies serão armazenados permanentemente para esses sites.
 
@@ -2748,7 +2762,7 @@ Defina uma lista de sites, com base em padrões de URL, que podem executar o plu
 
 Se você não configurar essa política, o valor padrão global da diretiva [DefaultPluginsSetting](#defaultpluginssetting) (se definida) ou a configuração pessoal do usuário será usada para todos os sites.
 
-Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). No entanto, iniciando no M85, padrões com os caracteres curinga '*' e '[*.]' no host não têm mais suporte para esta política.
+Para obter informações detalhadas sobre os padrões de URL válidos, confira [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). No entanto, a partir do M85, não há mais suporte para os caracteres curinga '\*' e '[\*.]' no host para esta política.
 
   #### Recursos compatíveis:
 
@@ -2817,7 +2831,7 @@ Defina uma lista de sites, com base em padrões de URL, que são impedidos de ex
 
 Se você não configurar essa política, o valor padrão global da diretiva [DefaultPluginsSetting](#defaultpluginssetting) (se definida) ou a configuração pessoal do usuário será usada para todos os sites.
 
-Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). No entanto, iniciando no M85, padrões com os caracteres curinga '*' e '[*.]' no host não têm mais suporte para esta política.
+Para obter informações detalhadas sobre os padrões de URL válidos, confira [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). No entanto, a partir do M85, não há mais suporte para os caracteres curinga '\*' e '[\*.]' no host para esta política.
 
   #### Recursos compatíveis:
 
@@ -4235,7 +4249,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
   Permite que você especifique quais extensões os usuários NÃO PODEM instalar. As extensões já instaladas serão desabilitadas se bloqueadas, sem uma maneira do usuário habilitá-las. Depois que uma extensão desabilitada for removida da lista de bloqueio, ela será reabilitada automaticamente.
 
-Um valor de lista de bloqueio de '*' significa que todas as extensões estão bloqueadas, exceto se estiverem explicitamente listadas na lista de permissões.
+Um valor de lista de bloqueios de '\*' significa que todas as extensões serão bloqueadas, a menos que sejam explicitamente listadas na lista de autorizações.
 
 Se essa política não for definida, o usuário poderá instalar qualquer extensão no Microsoft Edge.
 
@@ -4447,6 +4461,12 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
   A definição desta política controla as configurações de gerenciamento de extensão do Microsoft Edge, incluindo qualquer uma controlada por políticas relacionadas à extensão existentes. Essa política substitui qualquer política herdada que possa ser definida.
 
 Essa política mapeia um ID de extensão ou uma URL de atualização apenas para sua configuração específica. Uma configuração padrão pode ser definida para o ID especial "*", que se aplica a todas as extensões sem uma configuração personalizada nesta política. Com uma URL de atualização, a configuração se aplica a extensões com a URL de atualização exata indicada no manifesto da extensão ([https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043)).
+
+Para bloquear extensões de um determinado armazenamento de terceiros, você só precisa bloquear o update_url para esse armazenamento. Por exemplo, se quiser bloquear extensões da Chrome Web Store, você pode usar o seguinte JSON.
+
+{"update_url: https://clients2.google.com/service/update2/crx ":{"installation_mode":"blocked"}}
+
+Observe que você ainda pode usar [ExtensionInstallForcelist](#extensioninstallforcelist) e [ExtensionInstallAllowlist](#extensioninstallallowlist) para permitir/forçar a instalação de extensões específicas, mesmo se o armazenamento estiver bloqueado usando o JSON no exemplo anterior.
 
 Observação: para caso de instâncias do Windows que não fazem parte de um domínio do Microsoft Active Directory, a instalação forçada fica limitada a aplicativos e extensões listados no site Complementos do Microsoft Edge.
 
@@ -4903,6 +4923,66 @@ Se você não configurar essa política, o Microsoft Edge tentará detectar se u
   - Valor de exemplo:
 ``` xml
 <string>*contoso.com,contoso.com</string>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### BasicAuthOverHttpEnabled
+
+  #### Permitir autenticação Básica para HTTP
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows e no macOS desde 88 ou posterior
+
+  #### Descrição
+
+  Se você habilitar esta política ou deixá-la sem definição, os desafios de autenticação Básica recebidos por HTTP não seguro serão permitidos.
+
+Se você desabilitar essa política, as solicitações HTTP  não seguras do esquema de autenticação Básica serão bloqueadas e somente HTTPS seguro será permitido.
+
+  #### Recursos com suporte:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### Tipo de dados:
+
+  - Booliano
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: BasicAuthOverHttpEnabled
+  - Nome da Política de Grupo: Permitir autenticação Básica para HTTP
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/HTTP authentication
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do Valor: BasicAuthOverHttpEnabled
+  - Tipo de Valor: REG_DWORD
+
+  ##### Valor de exemplo:
+
+```
+0x00000000
+```
+
+  #### Informações e configurações do Mac
+  
+  - Nome da Chave de Preferência: BasicAuthOverHttpEnabled
+  - Valor de exemplo:
+``` xml
+<false/>
 ```
   
 
@@ -6896,13 +6976,13 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
   [Voltar ao início](#microsoft-edge---policies)
 
-  ## Políticas de configurações de Guias em repouso
+  ## Políticas de configurações de guias em suspensão
 
   [Voltar ao início](#microsoft-edge---policies)
 
   ### SleepingTabsBlockedForUrls
 
-  #### Bloquear Guias em Suspensão em sites específicos
+  #### Bloquear guias em suspensão em sites específicos
 
   
   
@@ -6912,7 +6992,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
   #### Descrição
 
-  Defina uma lista de sites, com base em padrões de URL, que não são permitidas a serem colocadas em suspensão pelas Guias em Repouso.
+  Defina uma lista de sites, com base em padrões de URL, que não podem ser colocado em modo de suspensão pelas guias em suspensão.
 
 Se a política [SleepingTabsEnabled](#sleepingtabsenabled) estiver desabilitada, essa lista não será usada e nenhum site será colocado em suspensão automaticamente.
 
@@ -6933,9 +7013,9 @@ Se você não configurar essa política, todos os sites ficarão qualificados pa
   ##### Informações da Política de Grupo (ADMX)
 
   - Nome exclusivo da Política de Grupo: SleepingTabsBlockedForUrls
-  - Nome da Política de Grupo: bloquear guias em repouso em sites específicos
-  - Caminho Política de Grupo (obrigatório): modelos administrativos/Microsoft Edge/configurações das Guias em Suspensão
-  - Caminho Política de Grupo (recomendado): modelos Administrativos/Microsoft Edge - Configurações Padrão (os usuários podem substituir)/configurações de Guias de Suspensão
+  - Nome da Política de Grupo: Bloquear guias em suspensão em sites específicos
+  - Caminho da Política de Grupo (Obrigatório): Administrative Templates/Microsoft Edge/Sleeping tabs settings
+  - Caminho da Política de Grupo (Recomendado): Administrative Templates/Microsoft Edge - Default Settings (usuários podem substituir)/Sleeping tabs settings
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
   ##### Configurações de Registro do Windows
@@ -6969,7 +7049,7 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
   ### SleepingTabsEnabled
 
-  #### Configurar Guias de Repouso
+  #### Configurar guias em suspensão
 
   
   
@@ -6979,17 +7059,17 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
   #### Descrição
 
-  Essa configuração de política permite que você configure se as guias em suspensão devem ser ativadas. As guias em suspensão reduzem o uso da CPU, da bateria e da memória colocando as guias em tela de fundo ociosas em suspensão. O Microsoft Edge usa a heurística para evitar colocar as guias em suspensão que fazem trabalho útil em tela de fundo, como exibir notificações, reproduzir som e transmitir vídeo. Por padrão, as Guias em Suspensão estão ativadas.
+  Esta configuração de política permite que você configure se deseja ativar as guias em suspensão. As guias em suspensão reduzem o uso de CPU, bateria e memória ao colocar as guias ociosas de segundo plano em modo de suspensão. O Microsoft Edge usa a heurística para evitar colocar as guias em suspensão que fazem trabalho útil em tela de fundo, como exibir notificações, reproduzir som e transmitir vídeo. Por padrão, as guias em suspensão estão ativadas.
 
 Sites individuais podem ser bloqueados para serem colocados em suspensão Configurando a política [SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls).
 
-Se você habilitar essa configuração, as guias em suspensão serão ativadas.
+Se você ativar essa configuração, as guias em suspensão serão ativadas.
 
-Se você desabilitar essa configuração, as guias em suspenso serão desabilitadas.
+Se você desabilitar essa configuração, as guias em suspensão são desligadas.
 
-Se você não definir essa configuração, os usuários poderão escolher se desejam usar Guias em Suspensão.
+Se você não definir essa configuração, os usuários poderão optar por usar as guias em suspensão.
 
-  #### Recursos compatíveis:
+  #### Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: Sim
@@ -7003,10 +7083,10 @@ Se você não definir essa configuração, os usuários poderão escolher se des
 
   ##### Informações da Política de Grupo (ADMX)
 
-  - Nome exclusivo da GP: SleepingTabsEnabled
-  - Nome da GP: configurar Guias em Suspensão
-  - Caminho Política de Grupo (obrigatório): modelos administrativos/Microsoft Edge/configurações das Guias em Suspensão
-  - Caminho Política de Grupo (recomendado): modelos Administrativos/Microsoft Edge - Configurações Padrão (os usuários podem substituir)/configurações de Guias de Suspensão
+  - Nome exclusivo da Política de Grupo: SleepingTabsEnabled
+  - Nome da Política de Grupo: Configurar guias em suspensão
+  - Caminho da Política de Grupo (Obrigatório): Administrative Templates/Microsoft Edge/Sleeping tabs settings
+  - Caminho da Política de Grupo (Recomendado): Administrative Templates/Microsoft Edge - Default Settings (usuários podem substituir)/Sleeping tabs settings
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
   ##### Configurações de registro do Windows
@@ -7035,7 +7115,7 @@ Se você não definir essa configuração, os usuários poderão escolher se des
 
   ### SleepingTabsTimeout
 
-  #### Definir o tempo limite de inatividade de tela de fundo para Guias em Suspensão
+  #### Defina o tempo limite de inatividade da guia de fundo para as guias em suspensão
 
   
   
@@ -7045,9 +7125,9 @@ Se você não definir essa configuração, os usuários poderão escolher se des
 
   #### Descrição
 
-  Essa configuração de política permite que você configure o tempo limite, em segundos, após o qual as guias de tela de fundo inativo serão automaticamente colocadas em suspensão se as guias em repouso estiverem habilitadas. Por padrão, esse tempo limite é de 7.200 segundos (2 horas).
+  Esta configuração de política permite configurar o tempo limite, em segundos, após o qual as guias em suspensão em segundo plano serão automaticamente colocadas em modo de suspensão se as guias em suspensão estiverem habilitadas. Por padrão, esse tempo limite é de 7.200 segundos (2 horas).
 
-As guias são apenas colocadas em suspensão automaticamente quando a política [SleepingTabsEnabled](#sleepingtabsenabled) está habilitada ou não está configurada, e o usuário habilitou a configuração de Guias em Repouso.
+As guias só são colocadas no modo de suspensão automaticamente quando a política [SleepingTabsEnabled](#sleepingtabsenabled) está ativada ou não está configurada e o usuário ativou a configuração de guias em suspensão.
 
 Se você não configurar essa política, os usuários poderão escolher o valor de tempo limite.
 
@@ -7086,9 +7166,9 @@ Use as informações anteriores ao configurar essa política.
   ##### Informações da Política de Grupo (ADMX)
 
   - Nome exclusivo da Política de Grupo: SleepingTabsTimeout
-  - Nome da Política de Grupo: definir o tempo limite de inatividade de tela de fundo para Guias em Suspensão
-  - Caminho Política de Grupo (obrigatório): modelos administrativos/Microsoft Edge/configurações das Guias em Suspensão
-  - Caminho Política de Grupo (recomendado): modelos Administrativos/Microsoft Edge - Configurações Padrão (os usuários podem substituir)/configurações de Guias de Suspensão
+  - Nome da Política de Grupo: Definir o tempo de inatividade da guia de plano de fundo para guias em suspensão
+  - Caminho da Política de Grupo (Obrigatório): Administrative Templates/Microsoft Edge/Sleeping tabs settings
+  - Caminho da Política de Grupo (Recomendado): Administrative Templates/Microsoft Edge - Default Settings (usuários podem substituir)/Sleeping tabs settings
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
   ##### Configurações de registro do Windows
@@ -8661,13 +8741,13 @@ Se você desabilitar essa política, sempre que o usuário executar uma ação q
 
   ### AllowPopupsDuringPageUnload
 
-  #### Permite que uma página mostre pop-ups durante seu descarregamento
+  #### Permite que uma página mostre pop-ups durante seu descarregamento (obsoleto)
 
   
-  
+  >OBSOLETA: Essa política está obsoleta e não funciona após a versão 87 do Microsoft Edge.
   #### Versões com suporte:
 
-  - No Windows e no macOS desde 78 ou mais recente
+  - No Windows e no macOS desde 78 até 87
 
   #### Descrição
 
@@ -8675,11 +8755,11 @@ Se você desabilitar essa política, sempre que o usuário executar uma ação q
 
 Quando a política estiver definida como habilitada, as páginas poderão mostrar pop-ups enquanto estiverem sendo descarregadas.
 
-Quando a política estiver definida como desabilitada ou desativada, as páginas não terão permissão para mostrar os pop-ups enquanto estão sendo descarregadas. Esse é o mesmo da seguinte especificação: (https://html.spec.whatwg.org/#apis-for-creating-and-navigating-browsing-contexts-by-name).
+Quando a política estiver definida como desabilitada ou desativada, as páginas não terão permissão para mostrar os pop-ups enquanto estão sendo descarregadas. Isso está de acordo com as especificações: (https://html.spec.whatwg.org/#apis-for-creating-and-navigating-browsing-contexts-by-name).
 
-Essa política será removida no futuro.
+Essa política foi removida do Microsoft Edge 88 e será ignorada se definida.
 
-  #### Recursos compatíveis:
+  #### Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -8694,7 +8774,7 @@ Essa política será removida no futuro.
   ##### Informações da Política de Grupo (ADMX)
 
   - Nome Exclusivo da Política de Grupo: AllowPopupsDuringPageUnload
-  - Nome da Política de Grupo: Permite que uma página mostre pop-ups durante seu descarregamento
+  - Nome da Política de Grupo: Permite que uma página mostre pop-ups durante seu descarregamento (obsoleto)
   - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
@@ -11469,11 +11549,15 @@ Use as informações anteriores ao configurar essa política.
 
   Habilite o uso de contas do Active Directory para entrada automática se os computadores dos usuários forem Ingressados no Domínio e seu ambiente não for híbrido. Se você deseja que os usuários se conectem automaticamente com as contas do Azure Active Directory, faça o ingresso do Azure AD (Confira [https://go.microsoft.com/fwlink/?linkid=2118197](https://go.microsoft.com/fwlink/?linkid=2118197) para obter mais informações) ou o ingresso híbrido (consulte [https://go.microsoft.com/fwlink/?linkid=2118365](https://go.microsoft.com/fwlink/?linkid=2118365) para saber mais) em seu ambiente.
 
+Em cada lançamento, o Microsoft Edge tentará entrar usando essa política, contanto que o primeiro perfil que está sendo iniciado não esteja conectado ou um logon automático não tenha acontecido antes.
+
 Se você configurou a política [BrowserSignin](#browsersignin) como desabilitada, essa política não terá efeito.
 
 Se você habilitar essa política e configurá-la para "SignInAndMakeDomainAccountNonRemovable", o Microsoft Edge entrará automaticamente em usuários que estejam em máquinas ingressados pelo domínio usando suas contas do Active Directory.
 
 Se você definir essa política como "Desabilitada" ou não a definir, o Microsoft Edge não entrará automaticamente em usuários que estejam em computadores ingressados no domínio com contas do Active Directory.
+
+Do Microsoft Edge 89 em diante, se houver um perfil local existente com a sincronização desativada e a máquina agora for junção híbrida, ou seja, se tiver uma conta do Azure AD, ele atualizará automaticamente o perfil local para o perfil do Azure AD para obter recursos completos de sincronização do Microsoft Azure Active Directory.
 
 Mapeamento das opções de política:
 
@@ -14128,21 +14212,21 @@ Se você desabilitar essa política ou não a configurar, a Pesquisa Segura na P
 
   ### ForceLegacyDefaultReferrerPolicy
 
-  #### Usa uma política referencial padrão de no-referrer-when-downgrade (preterida)
+  #### Usar uma política de referência padrão de no-referrer-when-downgrade (obsoleto)
 
-  >SUBSTITUÍDO: Essa política está preterida. Ela tem suporte no momento, mas se tornará obsoleta em uma versão futura.
   
+  >OBSOLETO: essa política é obsoleta e não funciona após o Microsoft Edge 88.
   #### Versões com suporte:
 
-  - No Windows e no macOS desde 81 ou mais recente
+  - No Windows e no macOS desde 81 até 88
 
   #### Descrição
 
-  Essa política foi preterida porque destina-se a ser um mecanismo de curto prazo para dar mais tempo para que as empresas atualizem o conteúdo da Web se e quando ela for incompatível com a política referencial padrão atual. Ela não funcionará no Microsoft Edge versão 88.
+  Esta política não funciona porque se destina a ser apenas um mecanismo de curto prazo para dar às empresas mais tempo para atualizar seu conteúdo da Web se for considerado incompatível com a nova política de referência padrão.
 
-A política referencial padrão do Microsoft Edge está sendo reforçada de seu valor atual de não-referencial-quando-faz o downgrade para origem-estrita-quando-origem-cruzada que é mais segura, através de uma implantação gradual.
+A política de referenciador padrão do Microsoft Edge foi reforçada do valor de no-referrer-when-downgrade para a mais segura strict-origin-when-cross-origin.
 
-Antes da implantação, essa política empresarial não terá efeito. Após a distribuição, quando essa política empresarial estiver habilitada, a política referencial padrão do Microsoft Edge será definida como seu valor antigo de não-referencial-quando-downgrade.
+Quando esta política corporativa está habilitada, a política de referenciador padrão do Microsoft Edge será definida com seu valor antigo de no-referrer-when-downgrade.
 
 Esta política corporativa está desabilitada por padrão.
 
@@ -14161,7 +14245,7 @@ Esta política corporativa está desabilitada por padrão.
   ##### Informações da Política de Grupo (ADMX)
 
   - Nome Exclusivo da Política de Grupo: ForceLegacyDefaultReferrerPolicy
-  - Nome da Política de Grupo: Usa uma política referencial padrão de no-referrer-when-downgrade (preterida)
+  - Nome da Política de Grupo: Usar uma política de referência padrão de no-referrer-when-downgrade (obsoleto)
   - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
@@ -16984,17 +17068,17 @@ Se a política [EnableMediaRouter](#enablemediarouter) estiver desabilitada, ess
 
   ### MetricsReportingEnabled
 
-  #### Habilitar a geração de relatórios de dados de uso e relacionados a falhas (descontinuada)
+  #### Ativar relatórios de dados relacionados a falhas e uso (obsoleto)
 
-  >SUBSTITUÍDO: Essa política está preterida. Ela tem suporte no momento, mas se tornará obsoleta em uma versão futura.
   
+  >OBSOLETO: essa política é obsoleta e não funciona após o Microsoft Edge 88.
   #### Versões com suporte:
 
-  - No Windows e no macOS desde 77 ou mais recente
+  - No Windows e no macOS desde 77 até 88
 
   #### Descrição
 
-  Essa política foi preterida. Está sendo suportada no momento, mas se tornará obsoleta no Microsoft Edge 89. Essa política foi substituída pela nova política: [DiagnosticData](#diagnosticdata) para o Windows 7, Windows 8 e macOS. Essa política foi substituída por “Permitir telemetria” no Win 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
+  Essa política não é mais suportada. Ele foi substituído por [DiagnosticData](#diagnosticdata) (para Windows 7, Windows 8 e macOS) e Permitir Telemetria no Windows 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
 
 Esta política habilita a geração de relatórios de dados relacionados a falhas e uso do Microsoft Edge para a Microsoft.
 
@@ -17023,7 +17107,7 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
   ##### Informações da Política de Grupo (ADMX)
 
   - Nome Exclusivo da Política de Grupo: MetricsReportingEnabled
-  - Nome da Política de Grupo: Habilitar a geração de relatórios de dados de uso e relacionados a falhas (descontinuada)
+  - Nome da Política de Grupo: Habilitar relatórios de dados relacionados a falhas e uso (obsoleto)
   - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
@@ -17254,7 +17338,7 @@ Use as informações anteriores ao configurar essa política.
 
   Essa política determina se um usuário pode remover o perfil Microsoft Edge automaticamente conectado com uma conta corporativa ou de estudante.
 
-Se você habilitar essa política, um perfil não removível será criado com a conta corporativa ou de estudante do usuário no Windows. Esse perfil não poderá ser desconectado nem removido.
+Se você habilitar essa política, um perfil não removível será criado com a conta corporativa ou de estudante do usuário no Windows. Esse perfil não poderá ser desconectado nem removido. O perfil não será removível apenas se o perfil estiver conectado com uma conta local ou uma conta do Microsoft Azure Active Directory que corresponda à conta de entrada do sistema operacional.
 
 Se você desabilitar ou não configurar essa política, o perfil automaticamente conectado com uma conta corporativa ou de estudante do usuário no Windows poderá ser desconectado ou removido pelo usuário.
 
@@ -17262,7 +17346,9 @@ Se você quiser configurar o navegador, use a política [BrowserSignin](#browser
 
 Essa política só está disponível em instâncias do Windows que fazem parte de um domínio do Microsoft Active Directory, instâncias do Windows 10 Pro ou Enterprise que foram inscritas no gerenciamento de dispositivos.
 
-  #### Recursos compatíveis:
+Do Microsoft Edge 89 em diante, se houver um perfil local existente com a sincronização desabilitada e a máquina tiver ingressado de forma híbrida, ele atualizará automaticamente o perfil local para o perfil do Azure AD e o tornará não removível em vez de criar um novo perfil não removível do Azure AD.
+
+  #### Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -19050,17 +19136,17 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   ### SendSiteInfoToImproveServices
 
-  #### Enviar informações de sites para aprimorar os serviços da Microsoft (descontinuado)
+  #### Enviar informações do site para melhorar os serviços Microsoft (obsoleto)
 
-  >SUBSTITUÍDO: Essa política está preterida. Ela tem suporte no momento, mas se tornará obsoleta em uma versão futura.
   
+  >OBSOLETO: essa política é obsoleta e não funciona após o Microsoft Edge 88.
   #### Versões com suporte:
 
-  - No Windows e no macOS desde 77 ou mais recente
+  - No Windows e no macOS desde 77 até 88
 
   #### Descrição
 
-  Essa política foi preterida. Está sendo suportada no momento, mas se tornará obsoleta no Microsoft Edge 89. Essa política foi substituída pela nova política: [DiagnosticData](#diagnosticdata) para o Windows 7, Windows 8 e macOS. Essa política foi substituída por “Permitir telemetria” no Win 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
+  Essa política não é mais suportada. Ele foi substituído por [DiagnosticData](#diagnosticdata) (para Windows 7, Windows 8 e macOS) e Permitir Telemetria no Windows 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
 
 Essa política permite o envio de informações sobre sites visitados no Microsoft Edge para a Microsoft visando melhorar serviços, tais como a pesquisa.
 
@@ -19087,7 +19173,7 @@ Para habilitar essa política, [MetricsReportingEnabled](#metricsreportingenable
   ##### Informações da Política de Grupo (ADMX)
 
   - Nome Exclusivo da Política de Grupo: SendSiteInfoToImproveServices
-  - Nome da Política de Grupo: Envie as informações de sites para aprimorar os serviços da Microsoft (descontinuada)
+  - Nome da Política de Grupo: Enviar informações do site para melhorar os serviços Microsoft (obsoleto)
   - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
@@ -19416,7 +19502,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 Se você habilitar essa política:
    - Os usuários da conta Microsoft (exclui contas do Azure AD) em busca e conquista de mercados verão a experiência do Microsoft Rewards em seu perfil de usuário do Microsoft Edge.
    - A configuração para habilitar o Microsoft Rewards nas configurações do Microsoft Edge será habilitada e alternada.
-   - A configuração para habilitar o Modo de Permissão será habilitada e respeitará a configuração do usuário.
 
 Se você desabilitar esta política:
    - Os usuários da conta Microsoft (exclui contas do Azure AD) em busca e conquista de mercados não verão a experiência do Microsoft Rewards em seu perfil de usuário do Microsoft Edge.
@@ -19425,9 +19510,8 @@ Se você desabilitar esta política:
 Se você não configurar esta política:
    - Os usuários da conta Microsoft (exclui contas do Azure AD) em busca e conquista de mercados verão a experiência do Microsoft Rewards em seu perfil de usuário do Microsoft Edge.
    - A configuração para habilitar o Microsoft Rewards nas configurações do Microsoft Edge será habilitada e alternada.
-   - A configuração para habilitar o Modo de Permissão será habilitada e respeitará a configuração do usuário.
 
-  #### Recursos compatíveis:
+  #### Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: Sim
@@ -20363,6 +20447,68 @@ Se você desabilitar essa política, nenhuma guia será congelada.
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### TargetBlankImpliesNoOpener
+
+  #### Não defina o window.opener para links de direcionamento _blank
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows e no macOS desde 88 ou posterior
+
+  #### Descrição
+
+  Se você habilitar essa política ou deixá-la sem definição, a propriedade window.opener será definida como nula, a menos que a âncora especifique rel="opener".
+
+Se você desabilitar esta política, os pop-ups que direcionam _blank têm permissão para acessar (via JavaScript) a página que solicitou a abertura do pop-up.
+
+Essa política será obsoleta no Microsoft Edge versão 95.
+
+  #### Recursos com suporte:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### Tipo de dados:
+
+  - Booliano
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: TargetBlankImpliesNoOpener
+  - Nome da Política de Grupo: Não definir window.opener para links de direcionamento _blank
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do Valor TargetBlankImpliesNoOpener
+  - Tipo de Valor: REG_DWORD
+
+  ##### Valor de exemplo:
+
+```
+0x00000000
+```
+
+  #### Informações e configurações do Mac
+  
+  - Nome da Chave de Preferência: TargetBlankImpliesNoOpener
+  - Valor de exemplo:
+``` xml
+<false/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### TaskManagerEndProcessEnabled
 
   #### Habilitar processos finais no Gerenciador de tarefas do navegador
@@ -20635,7 +20781,7 @@ Se você não configurar a política, os usuários poderão escolher se desejam 
 
 Formata o padrão de URL de acordo com [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
-Você pode usar essa política para abrir exceções para listas de bloqueio restritivas. Por exemplo, você pode incluir "*" na lista de bloqueios para bloquear todas as solicitações e, em seguida, usar essa política para permitir o acesso a uma lista limitada de URLs. Você pode usar essa política para abrir exceções a determinados esquemas, subdomínios de outros domínios, portas ou caminhos específicos.
+Você pode usar essa política para abrir exceções para listas de bloqueio restritivas. Por exemplo, você pode incluir '\*' na lista de bloqueio para bloquear todas as solicitações e, em seguida, usar esta política para permitir o acesso a uma lista limitada de URLs. Você pode usar essa política para abrir exceções a determinados esquemas, subdomínios de outros domínios, portas ou caminhos específicos.
 
 O filtro mais específico determina se uma URL está bloqueada ou permitida. A lista permitida tem precedência sobre a lista de bloqueios.
 
@@ -21355,9 +21501,16 @@ Independente da política ser habilitada, a configuração de otimização WPAD 
 
   Configure essa política para especificar uma lista de aplicativos Web que são instalados silenciosamente, sem interação do usuário e quais usuários não podem desinstalar ou desativar.
 
-Cada item de lista da política é um objeto com membro obrigatório: URL (a URL do aplicativo Web a ser instalada) e 2 Membros opcionais: default_launch_container (especifica o modo de janela que o aplicativo Web abre com uma nova guia é o padrão) e o create_desktop_shortcut (verdadeiro se quiser criar atalhos para a área de trabalho do Linux e Windows).
+Cada item da lista da política é um objeto com um membro obrigatório: url (o URL do aplicativo da web a ser instalado)
 
-  #### Recursos compatíveis:
+e 3 membros opcionais:
+- default_launch_container (especifica o modo de janela que o aplicativo da web abre, por padrão, com uma nova guia.)
+
+- create_desktop_shortcut (Verdadeiro se você quiser criar atalhos do Linux e da Área de trabalho do Windows.)
+
+- override_app_name (Iniciando com o Microsoft Edge 89, permite que você substitua o nome do aplicativo se não for um Aplicativo Web Progressivo (PWA) ou o nome do aplicativo que está temporariamente instalado se for um PWA, mas a autenticação é necessária antes que a instalação possa ser concluída.)
+
+  #### Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -21396,6 +21549,11 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
     "default_launch_container": "tab", 
     "url": "https://app.contoso.edu"
+  }, 
+  {
+    "default_launch_container": "window", 
+    "override_app_name": "Editor", 
+    "url": "https://app.contoso.com/editor"
   }
 ]
 ```
@@ -21403,7 +21561,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### Valor do exemplo de compactação:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "override_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
   ```
   
 
@@ -21427,6 +21585,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
     <string>tab</string>
     <key>url</key>
     <string>https://app.contoso.edu</string>
+  </dict>
+  <dict>
+    <key>default_launch_container</key>
+    <string>window</string>
+    <key>override_app_name</key>
+    <string>Editor</string>
+    <key>url</key>
+    <string>https://app.contoso.com/editor</string>
   </dict>
 </array>
 ```
@@ -21887,7 +22053,131 @@ Se você não configurar essa política, ou se a definir como uma cadeia de cara
 ``` xml
 <string>10000-11999</string>
 ```
- 
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### WebWidgetAllowed
+
+  #### Permitir o widget da Web
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows desde 88 ou posterior
+
+  #### Descrição
+
+  Habilitar o widget da Web. Quando habilitado, os usuários podem usar o widget para pesquisar na web a partir de um desktop ou de um aplicativo. O widget fornece uma caixa de pesquisa que mostra sugestões da web e abre todas as pesquisas da web no Microsoft Edge. A caixa de pesquisa fornece sugestões de pesquisa (da plataforma do Bing) e URL. O widget também inclui blocos de feed nos quais os usuários podem clicar para conferir mais informações no msn.com em uma nova guia ou janela do navegador Microsoft Edge. Os blocos de alimentação podem incluir anúncios. O widget pode ser iniciado nas configurações do Microsoft Edge ou no menu "Mais ferramentas" no Microsoft Edge.
+
+Se você habilitar ou não configurar esta política: O widget da Web será habilitado automaticamente para todos os perfis.
+Nas configurações do Microsoft Edge, os usuários verão a opção de iniciar o widget.
+Nas configurações do Microsoft Edge, os usuários verão o item de menu para executar o widget na inicialização do Windows (inicialização automática).
+A opção de habilitar o widget na inicialização será ativada se a política [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) estiver habilitada.
+Se [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) estiver desabilitado ou não configurado, a opção de habilitar o widget na inicialização será desligada.
+Os usuários verão o item de menu para iniciar o widget a partir do menu "Mais ferramentas" do Microsoft Edge. Os usuários podem iniciar o widget em "Mais ferramentas".
+O widget pode ser desativado pela opção "Sair" na bandeja do sistema ou fechando o widget na barra de tarefas. O widget será reiniciado na reinicialização do sistema se a inicialização automática estiver habilitada.
+
+Se você desabilitar esta política: O widget da Web será desabilitado para todos os perfis.
+A opção de iniciar o widget nas Configurações do Microsoft Edge será desabilitada.
+A opção de iniciar o widget na inicialização do Windows (inicialização automática) será desabilitada.
+A opção de iniciar o widget no menu "Mais ferramentas" do Microsoft Edge será desabilitada.
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### Tipo de dados:
+
+  - Booliano
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo do GP: WebWidgetAllowed
+  - Nome do GP: habilitar o widget da Web
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: WebWidgetAllowed
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de exemplo:
+
+```
+0x00000001
+```
+
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### WebWidgetIsEnabledOnStartup
+
+  #### Ativar o widget Web na inicialização do Windows
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows desde 88 ou posterior
+
+  #### Descrição
+
+  Permite que o widget da Web comece a ser executado na inicialização do Windows.
+
+Se você habilitar: O widget da Web começará a ser executado na inicialização do Windows por padrão.
+Se o widget for desabilitado por meio da política [WebWidgetAllowed](#webwidgetallowed), esta política não iniciará o widget na inicialização do Windows.
+
+Se você desabilitar esta política: O widget da Web não será iniciado na inicialização do Windows para todos os perfis.
+A opção de iniciar o widget na inicialização do Windows será desabilitada e desativada nas configurações do Microsoft Edge.
+
+Se você não configurar a política: o widget da Web não iniciará na inicialização do Windows para todos os perfis.
+A opção de iniciar o widget na inicialização do Windows será desativada nas configurações do Microsoft Edge.
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### Tipo de dados:
+
+  - Booliano
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: WebWidgetIsEnabledOnStartup
+  - Nome da Política de Grupo: permitir o widget da web na inicialização do Windows
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: WebWidgetIsEnabledOnStartup
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de exemplo:
+
+```
+0x00000001
+```
+
+  
 
   [Voltar ao início](#microsoft-edge---policies)
 
@@ -21951,7 +22241,7 @@ Se você desabilitar ou não configurar essa política, o solucionador de proxy 
   [Voltar ao início](#microsoft-edge---policies)
 
 
-## Consulte também
+## Ver também
 
 - [Configurar o Microsoft Edge](configure-microsoft-edge.md)
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
