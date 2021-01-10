@@ -3,23 +3,27 @@ title: Notas de versão para atualizações de segurança do Microsoft Edge
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 12/08/2020
+ms.date: 01/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão para atualizações de segurança do Microsoft Edge
-ms.openlocfilehash: 4bcd47521f0f57e9d7733e717688685a6abf5a24
-ms.sourcegitcommit: 1be5f3584b2a9400ca18c3d5483c3c8929ac9dce
+ms.openlocfilehash: 9644f981f8a94d0c6bd7a4c9070fb53668e7d4ab
+ms.sourcegitcommit: f3b422cba2810c973682437ff46a652fc5429f7c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "11203603"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "11255237"
 ---
 # Notas de versão para atualizações de segurança do Microsoft Edge
 
 Estas notas de versão fornecem informações sobre correções de segurança incluídas em atualizações para o canal estável do Microsoft Edge.
+
+## 7 de janeiro de 2021
+
+A Microsoft lançou o mais recente **Canal Estável do Microsoft Edge (Versão 87.0.664.75)**, que incorpora as Atualizações de Segurança mais recentes do projeto Chromium. Para obter mais informações, consulte o [Guia de atualização de segurança](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
 
 ## 7 de dezembro de 2020
 
