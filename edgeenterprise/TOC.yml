@@ -1,4 +1,4 @@
-# last revised 12/21/2020
+# last revised 01/13/2021
 - name: Documentação do Microsoft Edge Enterprise
   href: index.yml
 - name: Documentação do Microsoft Edge
@@ -27,16 +27,18 @@
       href: deploy-edge-plan-deployment.md
     - name: Pronto para o Microsoft Edge
       href: deploy-edge-ready-for-edge.md
-    - name: Informações sobre versão
-      items:
-        - name: Agenda de lançamento
-          href: microsoft-edge-release-schedule.md
-        - name: Notas de Versão do Canal Beta
-          href: microsoft-edge-relnote-beta-channel.md
-        - name: Notas de Versão de Canal Estável
-          href: microsoft-edge-relnote-stable-channel.md
-        - name: Atualizações de segurança
-          href: microsoft-edge-relnotes-security.md
+    - name: Notas de Versão de Canal Estável
+      href: microsoft-edge-relnote-stable-channel.md
+    - name: Notas de versão arquivadas do Canal Estável
+      href: microsoft-edge-relnote-archive-stable-channel.md
+    - name: Notas de Versão do Canal Beta
+      href: microsoft-edge-relnote-beta-channel.md
+    - name: Notas de versão arquivadas do Canal Beta
+      href: microsoft-edge-relnote-archive-beta-channel.md
+    - name: Agenda de lançamento
+      href: microsoft-edge-release-schedule.md
+    - name: Atualizações de segurança
+      href: microsoft-edge-relnotes-security.md
     - name: Mapeamento de políticas do Microsoft Edge
       items:
         - name: Visão geral do mapeamento de políticas
@@ -119,11 +121,11 @@
               href: edge-ie-mode-add-guidance-cookieshare.md
 - name: Segurança do Microsoft Edge
   items:
-    - name: Segurança para a sua empresa
+    - name: Segurança para sua empresa
       href: ms-edge-security-for-business.md
     - name: Lista de permissões para pontos de extremidade do Microsoft Edge
       href: microsoft-edge-security-endpoints.md
-    - name: Prevenção contra perda de dados (DLP)
+    - name: Prevenção contra Perda de Dados (DLP)
       href: microsoft-edge-security-dlp.md
     - name: Proteção contra aplicativos potencialmente indesejados
       href: microsoft-edge-potentially-unwanted-apps.md
@@ -151,7 +153,7 @@
       href: microsoft-edge-webview-policies.md
     - name: Conheça mais referências
       items:
-        - name: Compatibilidade retroativa para página de nova guia em empresas
+        - name: Compatibilidade com compatibilidade com a página Nova Guia Empresarial
           href: edge-learnmore-ntp-backward-compatibility.md
         - name: ClickOnce e DirectInvoke
           href: edge-learn-more-co-di.md
@@ -177,17 +179,17 @@
           href: edge-learnmore-reset-data-in-cloud.md
         - name: Variáveis de diretório de dados do usuário
           href: edge-learnmore-create-user-directory-vars.md
-        - name: Usando o Microsoft Edge Rollback para empresas
+        - name: Usando a reação do Microsoft Edge para empresas
           href: edge-learnmore-rollback.md
 - name: Vídeos do Microsoft Edge
   items:
     - name: Coleção de vídeos do Microsoft Edge
       href: microsoft-edge-videos.md
-    - name: Isolamento do navegador de vídeo usando o Application Guard
+    - name: Vídeo - Isolamento do navegador usando o Application Guard
       href: microsoft-edge-video-security-application-guard.md
     - name: Vídeo - Implantar o Microsoft Edge
       href: microsoft-edge-video-deploy.md
-    - name: Prevenção contra perda de dados (DLP)
+    - name: Vídeo - Prevenção contra perda de dados (DLP)
       href: microsoft-edge-video-security-dlp.md
     - name: 'Vídeo: Microsoft Edge e Pesquisa da Microsoft'
       href: microsoft-edge-video-search.md
