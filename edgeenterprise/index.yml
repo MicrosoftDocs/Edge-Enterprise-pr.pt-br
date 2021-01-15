@@ -11,28 +11,30 @@ metadata:
   ms.collection: collection
   author: dan-wesley
   ms.author: kvice
-  ms.date: 10/15/2020
-  ms.openlocfilehash: 09eb7c214e048ddd281817f8050ef4f1ff4cb985
-  ms.sourcegitcommit: 49a37e9c584eeb44683c83f098a15464054a26f9
+  ms.date: 12/01/2020
+  ms.openlocfilehash: 2a0466121bb773be20a01ec0b9f72e16bb8ac644
+  ms.sourcegitcommit: 42af8123dc86c2a1d07de0080a6c878c151f354f
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 10/15/2020
-  ms.locfileid: "11119406"
+  ms.lasthandoff: 01/14/2021
+  ms.locfileid: "11269272"
 landingContent:
 - title: Saiba mais sobre o Microsoft Edge na empresa
   linkLists:
   - linkListType: overview
     links:
-    - text: Vídeos do Microsoft Edge
-      url: microsoft-edge-videos.md
     - text: Visão geral dos canais do Microsoft Edge
       url: microsoft-edge-channels.md
     - text: Baixar um canal do Microsoft Edge
       url: https://aka.ms/EdgeEnterprise
     - text: Usar recursos empresariais
       url: edge-ie-mode.md
-    - text: 'Vídeo: Microsoft Edge e Pesquisa da Microsoft'
-      url: microsoft-edge-video-search.md
+  - linkListType: video
+    links:
+    - text: Vídeos do Microsoft Edge
+      url: microsoft-edge-videos.md
+    - text: Canal do Microsoft Edge no YouTube
+      url: https://www.youtube.com/channel/UCIGx7oT8p6-jUpOfg98yelA
 - title: Implantar e atualizar o Microsoft Edge
   linkLists:
   - linkListType: deploy
