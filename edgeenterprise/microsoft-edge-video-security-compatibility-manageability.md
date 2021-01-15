@@ -3,23 +3,25 @@ title: Segurança, compatibilidade e capacidade de gerenciamento do Microsoft Ed
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 07/28/2020
+ms.date: 01/13/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Segurança, compatibilidade e capacidade de gerenciamento do Microsoft Edge
-ms.openlocfilehash: a2da462b587ddaa7919331b835760108f533b5a1
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 759f28a10fc342ebc1f3eac7933b46c6ace169b4
+ms.sourcegitcommit: 42af8123dc86c2a1d07de0080a6c878c151f354f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979086"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "11269302"
 ---
 # Vídeo: segurança, compatibilidade e capacidade de gerenciamento do Microsoft Edge
 
-Esse vídeo mostra como o Microsoft Edge leva a segurança, a compatibilidade e a capacidade de gerenciamento para o próximo nível.
+Esse vídeo mostra como o Microsoft Edge leva a segurança, a compatibilidade e a capacidade de gerenciamento para o próximo nível. Clique na próxima captura de tela para assistir o vídeo de Jeremy Chapman, diretor do Microsoft 365.
+
+[![Segurança, compatibilidade e capacidade de gerenciamento do Microsoft Edge](media/microsoft-edge-video-security-compatibility-manageability/0.png)](http://www.youtube.com/watch?v=uMmh_gNaM4I "Microsoft Edge security, compatibility, and manageability")
 
 ## Sobre o vídeo
 
@@ -28,12 +30,6 @@ Faça um tour prático para experimentar a segurança, a compatibilidade e a cap
 - Segurança. O Microsoft Edge ajuda a proteger a rede e os dispositivos contra ataques mal-intencionados, impedindo o acesso não autorizado e vazamentos de dados corporativos.
 - Compatibilidade. O Microsoft Edge é compatível com ambas web herdada e moderna.
 - Capacidade de gerenciamento. Considere o gerenciamento de atualizações ou as opções de serviços do Microsoft Edge.
-
-Clique na próxima captura de tela para assistir ao vídeo de Jeremy Chapman, diretor do Microsoft 365.
-<!--
-[![Video: Security, compatibility, and manageability](http://img.youtube.com/vi/uMmh_gNaM4I/0.jpg)](http://www.youtube.com/watch?v=uMmh_gNaM4I "Microsoft Edge security, compatibility, and update management deep dive (Chromium | 2020)")-->
-
-[![Detalhes de segurança, compatibilidade e gerenciamento de atualizações do Microsoft Edge (Chromium | 2020)](https://res.cloudinary.com/marcomontalbano/image/upload/v1595890410/video_to_markdown/images/youtube--uMmh_gNaM4I-c05b58ac6eb4c4700831b2b3070cd403.jpg)](http://www.youtube.com/watch?v=uMmh_gNaM4I "Video: Security, compatibility, and manageability")
 
 ## Consulte também
 
