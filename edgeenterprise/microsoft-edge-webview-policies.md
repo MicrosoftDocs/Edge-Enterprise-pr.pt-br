@@ -3,7 +3,7 @@ title: Documentação de Política do Microsoft Edge WebView2
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/07/2021
+ms.date: 01/15/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,18 +11,19 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 0be51f193d12c14d1bb40439d7ec6ca9e59effae
-ms.sourcegitcommit: 4dc45cde7cfd29cd24a03f6e830502e95c43d82e
+ms.openlocfilehash: edc942eb2f8238433ded0e94cbb6a5af8cd7293c
+ms.sourcegitcommit: 63c53d1eaa3ad70acd405379bd3af57275a0b24f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "11254949"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "11270817"
 ---
 # <span data-ttu-id="a39bd-103">Políticas do Microsoft Edge WebView2</span><span class="sxs-lookup"><span data-stu-id="a39bd-103">Microsoft Edge WebView2 - Policies</span></span>
 
 <span data-ttu-id="a39bd-104">A versão mais recente do Microsoft Edge WebView2 inclui as políticas a seguir.</span><span class="sxs-lookup"><span data-stu-id="a39bd-104">The latest version of Microsoft Edge WebView2 includes the following policies.</span></span> <span data-ttu-id="a39bd-105">Você pode usar essas políticas para configurar como o Microsoft Edge WebView2 será executado em sua organização.</span><span class="sxs-lookup"><span data-stu-id="a39bd-105">You can use these policies to configure how Microsoft Edge WebView2 runs in your organization.</span></span>
 
 <span data-ttu-id="a39bd-106">Para saber mais sobre o conjunto adicional de políticas, usado para controlar como e quando o Microsoft Edge WebView2 é atualizado, confira [Referência de política de atualização do Microsoft Edge](microsoft-edge-update-policies.md).</span><span class="sxs-lookup"><span data-stu-id="a39bd-106">For information about an additional set of policies used to control how and when Microsoft Edge WebView2 is updated, check out [Microsoft Edge update policy reference](microsoft-edge-update-policies.md).</span></span>
+
 
 > [!NOTE]
 > <span data-ttu-id="a39bd-107">Este artigo se aplica ao Microsoft Edge versão 87 ou posterior.</span><span class="sxs-lookup"><span data-stu-id="a39bd-107">This article applies to Microsoft Edge version 87 or later.</span></span>
