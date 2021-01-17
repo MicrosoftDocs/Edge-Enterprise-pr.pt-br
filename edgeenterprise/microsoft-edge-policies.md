@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/07/2021
+ms.date: 01/15/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: b422361809b0a2acaa392729025a95aef7ac8f83
-ms.sourcegitcommit: 4dc45cde7cfd29cd24a03f6e830502e95c43d82e
+ms.openlocfilehash: 92b89087cd7082844e36660ffdc7ff217cd92ff2
+ms.sourcegitcommit: 63c53d1eaa3ad70acd405379bd3af57275a0b24f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "11254969"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "11270837"
 ---
 # Microsoft Edge - Políticas
 
@@ -29,17 +29,14 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
 
-
 ## Novas políticas
 
 A tabela a seguir lista as novas políticas desta atualização.
 
 | Nome | Lista de endereçamento |
-|-|-|
-|[BasicAuthOverHttpEnabled](#basicauthoverhttpenabled)|Permitir autenticação Básica para HTTP|
-|[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Não defina o window.opener para links de direcionamento \_blank|
-|[WebWidgetAllowed](#webwidgetallowed)|Permitir o widget da Web|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Ativar o widget Web na inicialização do Windows|
+|--|--|
+|[BrowsingDataLifetime](#browsingdatalifetime)|Configurações de Tempo de vida de Dados de Navegação|
+|[DefinePreferredLanguages](#definepreferredlanguages)|Definir uma lista ordenada de idiomas preferidos em que os sites devem ser exibidos se o site oferecer suporte|
 
 
 ## Políticas disponíveis
@@ -268,6 +265,7 @@ e dicas para os serviços Microsoft|
 |[BrowserGuestModeEnabled](#browserguestmodeenabled)|Habilitar o modo convidado|
 |[BrowserNetworkTimeQueriesEnabled](#browsernetworktimequeriesenabled)|Permitir consultas a um serviço de Hoário da Rede do Navegador|
 |[BrowserSignin](#browsersignin)|Configurações de entrada do navegador|
+|[BrowsingDataLifetime](#browsingdatalifetime)|Configurações de Tempo de vida de Dados de Navegação|
 |[BuiltInDnsClientEnabled](#builtindnsclientenabled)|Usar o cliente DNS interno|
 |[BuiltinCertificateVerifierEnabled](#builtincertificateverifierenabled)|Determina se o verificador interno de certificado será usado para verificar certificados do servidor (preterido)|
 |[CertificateTransparencyEnforcementDisabledForCas](#certificatetransparencyenforcementdisabledforcas)|Desabilitar a imposição da transparência do certificado para obter uma lista de hashes subjectPublicKeyInfo|
@@ -290,6 +288,7 @@ e dicas para os serviços Microsoft|
 |[DefaultSearchProviderContextMenuAccessAllowed](#defaultsearchprovidercontextmenuaccessallowed)|Permitir que o menu de contexto do provedor de pesquisa padrão pesquise no acesso|
 |[DefaultSensorsSetting](#defaultsensorssetting)|Configuração de sensores padrão|
 |[DefaultSerialGuardSetting](#defaultserialguardsetting)|Controlar o uso da API serial|
+|[DefinePreferredLanguages](#definepreferredlanguages)|Definir uma lista ordenada de idiomas preferidos em que os sites devem ser exibidos se o site oferecer suporte|
 |[DelayNavigationsForInitialSiteListDownload](#delaynavigationsforinitialsitelistdownload)|Exigir que a lista de sites no Modo Empresarial esteja disponível antes da navegação na guia|
 |[DeleteDataOnMigration](#deletedataonmigration)|Excluir dados antigos do navegador na migração|
 |[DeveloperToolsAvailability](#developertoolsavailability)|Controlar onde as ferramentas de desenvolvedor podem ser usadas|
@@ -439,8 +438,8 @@ e dicas para os serviços Microsoft|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Gerenciar a exposição de endereço IP local por WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restringir a exposição de endereço IP local por WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restringir o intervalo de portas UDP locais usado por WebRTC|
-|[WebWidgetAllowed](#webwidgetallowed)|Permitir o widget da Web|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Ativar o widget Web na inicialização do Windows|
+|[WebWidgetAllowed](#webwidgetallowed)|Habilitar o widget da web|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Permitir o widget da Web na inicialização do Windows|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Usar o solucionador de proxy do Windows (preterida)|
 
 
@@ -6311,7 +6310,9 @@ Use as informações anteriores ao configurar essa política.
 
   #### Descrição
 
-  Substitui o modo de impressão de gráficos em segundo plano padrão.
+  Substitui a última configuração usada para imprimir gráficos de tela de fundo.
+Se você habilitar essa configuração, a impressão de gráficos em tela de fundo será habilitada.
+Se você desabilitar esta configuração, a impressão de gráficos em tela de fundo será desabilitada.
 
 Mapeamento das opções de política:
 
@@ -10674,6 +10675,108 @@ Use as informações anteriores ao configurar essa política.
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### BrowsingDataLifetime
+
+  #### Configurações de Tempo de vida de Dados de Navegação
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows e no macOS desde 89 ou posterior
+
+  #### Descrição
+
+  Define as configurações de tempo de vida dos dados de navegação para o Microsoft Edge.
+Essa política controla o tempo de vida dos dados de navegação selecionados. Essa política não terá efeito se a sincronização estiver habilitada.
+Os tipos de dados disponíveis são 'browsing_history', 'download_history', 'cookies_and_other_site_data', 'cached_images_and_files', 'password_signin', 'autofill', 'site_settings' e 'hosted_app_data'.
+O Microsoft Edge removerá regularmente dados de tipos selecionados mais antigos do que "time_to_live_in_hours". Como a exclusão de dados só acontece em determinados intervalos, alguns dados podem ser mantidos um pouco mais longos, mas nunca mais do que duas vezes seu 'time_to_live_in_hours' esperado.
+
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### Tipo de dados:
+
+  - Dictionary
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da Política de Grupo (ADMX)
+
+  - Nome Exclusivo da Gp: BrowsingDataLifetime
+  - Nome da Política de Usuário: Configurações de Tempo de Vida de Dados de Navegação
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: BrowsingDataLifetime
+  - Tipo do Valor: REG_SZ
+
+  ##### Valor de exemplo:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
+  {
+    "data_types": [
+      "browsing_history"
+    ], 
+    "time_to_live_in_hours": 24
+  }, 
+  {
+    "data_types": [
+      "password_signin", 
+      "autofill"
+    ], 
+    "time_to_live_in_hours": 12
+  }
+]
+```
+
+  ##### Valor do exemplo de compactação:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [{"data_types": ["browsing_history"], "time_to_live_in_hours": 24}, {"data_types": ["password_signin", "autofill"], "time_to_live_in_hours": 12}]
+  ```
+  
+
+  #### Informações e configurações do Mac
+  
+  - Nome da chave de preferência: BrowsingDataLifetime
+  - Valor de exemplo:
+``` xml
+<key>BrowsingDataLifetime</key>
+<array>
+  <dict>
+    <key>data_types</key>
+    <array>
+      <string>browsing_history</string>
+    </array>
+    <key>time_to_live_in_hours</key>
+    <integer>24</integer>
+  </dict>
+  <dict>
+    <key>data_types</key>
+    <array>
+      <string>password_signin</string>
+      <string>autofill</string>
+    </array>
+    <key>time_to_live_in_hours</key>
+    <integer>12</integer>
+  </dict>
+</array>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### BuiltInDnsClientEnabled
 
   #### Usar o cliente DNS interno
@@ -10688,13 +10791,13 @@ Use as informações anteriores ao configurar essa política.
 
   Controla se o cliente DNS interno deve ser usado.
 
-Isso não afeta quais servidores DNS serão usados, apenas a pilha de software que será usada para se comunicar com eles. Por exemplo, se o sistema operacional estiver configurado para usar um servidor DNS corporativo, esse mesmo servidor seria usado pelo cliente DNS interno. No entanto, é possível que o cliente DNS interno enderece servidores de maneiras diferentes usando protocolos mais modernos relacionados a DNS, como o DNS em TLS.
+Esta política controla qual pilha de software é usada para se comunicar com o servidor DNS: o cliente DNS do sistema operacional ou o cliente DNS integrado do Microsoft Edge. Esta política não afeta quais servidores DNS são usados: se, por exemplo, o sistema operacional for configurado para usar um servidor DNS corporativo, esse mesmo servidor será usado pelo cliente DNS integrado. Ele também não controla se o DNS sobre HTTPS é usado; O Microsoft Edge sempre usa o resolvedor integrado para solicitações DE DNS sobre HTTPS. Confira a [DnsOverHttpsMode](#dnsoverhttpsmode) para obter informações sobre como controlar o DNS sobre HTTPS.
 
 Se você habilitar essa política, o cliente DNS interno será usado, se ele estiver disponível.
 
-Se você desabilitar essa política, o cliente nunca será utilizado.
+Se você desabilitar essa política, o cliente DNS integrado só será usado quando o DNS sobre HTTPS estiver em uso.
 
-Se você não configurar essa política, o cliente DNS interno ficará habilitado por padrão no MacOS, e os usuários poderão alterar se desejam usar o cliente DNS interno editando edge://flags ou especificando um sinalizador de linha de comando.
+Se você não configurar essa política, o cliente DNS integrado será habilitado por padrão.
 
   #### Recursos compatíveis:
 
@@ -12129,6 +12232,70 @@ Use as informações anteriores ao configurar essa política.
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### DefinePreferredLanguages
+
+  #### Definir uma lista ordenada de idiomas preferidos em que os sites devem ser exibidos se o site oferecer suporte
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows e no macOS desde 89 ou posterior
+
+  #### Descrição
+
+  Configura as variantes de idioma que o Microsoft Edge envia aos sites como parte do cabeçalho HTTP da solicitação Accept-Language e evita que os usuários adicionem, removam ou alterem a ordem dos idiomas preferidos nas configurações do Microsoft Edge. Os usuários que desejam alterar os idiomas que o Microsoft Edge exibe ou se oferece para traduzir as páginas estarão limitados aos idiomas configurados nesta política.
+
+Se você habilitar esta política, os sites aparecerão no primeiro idioma na lista que eles suportam, a menos que outra lógica específica do site seja usada para determinar o idioma de exibição. As variantes de idioma definidas nesta política substituem os idiomas configurados como parte da política [SpellcheckLanguage](#spellchecklanguage).
+
+Se você não configurar ou desabilitar essa política, o Microsoft Edge enviará aos sites os idiomas preferenciais especificados pelo usuário como parte do cabeçalho HTTP da solicitação Accept-Language.
+
+Para obter informações detalhadas sobre variantes de idioma válidas, confira[https://go.microsoft.com/fwlink/?linkid=2148854](https://go.microsoft.com/fwlink/?linkid=2148854).
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### Tipo de dados:
+
+  - String
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo do GP: DefinePreferredLanguages
+  - Nome do GP: defina uma lista ordenada de idiomas preferidos que os sites devem exibir se o site for compatível com o idioma
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do Valor: DefinePreferredLanguages
+  - Tipo do Valor: REG_SZ
+
+  ##### Valor de exemplo:
+
+```
+"en-US,fr,es"
+```
+
+  #### Informações e configurações do Mac
+  
+  - Nome da Chave de Preferência: DefinePreferredLanguages
+  - Valor de exemplo:
+``` xml
+<string>en-US,fr,es</string>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### DelayNavigationsForInitialSiteListDownload
 
   #### Exigir que a lista de sites no Modo Empresarial esteja disponível antes da navegação na guia
@@ -13090,11 +13257,11 @@ Se você desabilitar essa política, os usuários não poderão acessar e usar c
 
   #### Descrição
 
-  Essa política permite que os usuários comparem os preços de um produto que estão examinando, obter cupons do site no qual estão ou aplicar cupons automaticamente durante a finalização da compra.
+  Esta política permite que os usuários comparem os preços de um produto que estão olhando, obtenham cupons ou descontos no site em que estão ou apliquem cupons automaticamente durante a finalização da compra.
 
-Se você habilitar ou não configurar essa política, recursos de compra, como comparação de preços e cupons serão aplicados automaticamente a domínios de varejo. Os cupons do revendedor atual e os preços de outros revendedores serão buscados em um servidor.
+Se você habilitar ou não configurar esta política, recursos de compras, como comparação de preços, cupons e descontos serão aplicados automaticamente para domínios de varejo. Os cupons do revendedor atual e os preços de outros revendedores serão buscados em um servidor.
 
-Se você desabilitar essa política, recursos de compra, como comparação de preços e cupons serão aplicados automaticamente a domínios de varejo.
+Se você desabilitar esse recurso de compras de política, como comparação de preço, cupons e reembolsos não serão encontrados automaticamente para domínios de varejo.
 
   #### Recursos compatíveis:
 
@@ -16347,11 +16514,11 @@ Use as informações anteriores ao configurar essa política.
 
   #### Informações e configurações do Windows
 
-  ##### Informações da Política de Grupo (ADMX)
+  ##### Informações da política de grupo (ADMX)
 
   - Nome Exclusivo da Política de Grupo: InternetExplorerIntegrationSiteRedirect
   - Nome da Política de Grupo: Especificar como as navegações "na página" para sites não configurados se comportam quando iniciadas nas páginas do modo Internet Explorer.
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -18462,9 +18629,9 @@ Se você não configurar essa política, o caminho de perfil móvel será utiliz
 
 Se você desabilitar essa política ou não a configurar, somente os perfis locais normais serão usados.
 
-A política [SyncDisabled](#syncdisabled) desabilita toda a sincronização de dados, substituindo a política.
+O [SyncDisabled](#syncdisabled) desabilita apenas a sincronização na nuvem e não tem impacto nessa política.
 
-Confira https://docs.microsoft.com/windows-server/storage/folder-redirection/deploy-roaming-user-profiles para saber mais sobre como usar perfis de usuários móveis.
+Confira [https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/fwlink/?linkid=2150058) mais informações sobre como usar perfis de usuário em roaming.
 
   #### Recursos compatíveis:
 
@@ -19366,7 +19533,7 @@ Os padrões de URL definidos nessa política não podem entrar em conflito com a
 
 Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
-  #### Recursos compatíveis:
+  #### Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -19382,7 +19549,7 @@ Para obter informações detalhadas sobre os padrões de URL válidos, consulte 
 
   - Nome exclusivo da Política de Grupo: SerialAskForUrls
   - Nome da Política de Grupo: Permitir a API serial em sites específicos
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (obrigatório): modelos Administrativos/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -20130,6 +20297,8 @@ Se essa política for falsa ou não estiver configurada, os avisos serão exibid
   #### Descrição
 
   Desabilita a sincronização de dados no Microsoft Edge. Essa política também impede que a solicitação de consentimento de sincronização apareça.
+
+Essa política desabilita apenas a sincronização de nuvem e não afeta a política [RoamingProfileSupportEnabled](#roamingprofilesupportenabled).
 
 Se você não definir essa política ou aplicá-la conforme recomendado, os usuários poderão ativar ou desativar a sincronização. Se você aplicar essa política como obrigatória, os usuários não poderão ativar a sincronização.
 
@@ -22059,7 +22228,7 @@ Se você não configurar essa política, ou se a definir como uma cadeia de cara
 
   ### WebWidgetAllowed
 
-  #### Permitir o widget da Web
+  #### Habilitar o widget da web
 
   
   
@@ -22123,7 +22292,7 @@ A opção de iniciar o widget no menu "Mais ferramentas" do Microsoft Edge será
 
   ### WebWidgetIsEnabledOnStartup
 
-  #### Ativar o widget Web na inicialização do Windows
+  #### Permitir o widget da Web na inicialização do Windows
 
   
   
