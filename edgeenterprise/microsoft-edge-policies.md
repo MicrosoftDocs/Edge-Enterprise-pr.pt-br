@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/15/2021
+ms.date: 01/20/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 92b89087cd7082844e36660ffdc7ff217cd92ff2
-ms.sourcegitcommit: 63c53d1eaa3ad70acd405379bd3af57275a0b24f
+ms.openlocfilehash: 6df9ad9a1b3912387180aa249e220fbfe70e99b7
+ms.sourcegitcommit: a6c58b19976c194299be217c58b9a99b48756fd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "11270837"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "11281020"
 ---
 # Microsoft Edge - Políticas
 
@@ -35,8 +35,10 @@ A tabela a seguir lista as novas políticas desta atualização.
 
 | Nome | Lista de endereçamento |
 |--|--|
-|[BrowsingDataLifetime](#browsingdatalifetime)|Configurações de Tempo de vida de Dados de Navegação|
-|[DefinePreferredLanguages](#definepreferredlanguages)|Definir uma lista ordenada de idiomas preferidos em que os sites devem ser exibidos se o site oferecer suporte|
+|[MAMEnabled](#mamenabled)|Gerenciamento de Aplicativos Móveis Habilitado|
+|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Permitir recomendações e notificações promocionais do Microsoft Edge|
+
+
 
 
 ## Políticas disponíveis
@@ -48,12 +50,12 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[Configurações do Application Guard](#application-guard-settings)|[Cast](#cast)|
 |[Configurações de conteúdo](#content-settings)|[Provedor de pesquisa padrão](#default-search-provider)|
 |[Extensões](#extensions)|[Autenticação HTTP](#http-authentication)|
-|[Configurações do modo de quiosque](#kiosk-mode-settings)|[Sistema de mensagens nativo](#native-messaging)|
-|[Gerenciador de senhas e proteção](#password-manager-and-protection)|[Desempenho](#performance)|
-|[Impressão](#printing)|[Servidor proxy](#proxy-server)|
-|[Configurações de guias em suspensão](#sleeping-tabs-settings)|[Configurações do SmartScreen](#smartscreen-settings)|
-|[Página de inicialização, página inicial e nova guia](#startup-home-page-and-new-tab-page)|[Adicional](#additional)|
-
+|[Configurações do modo de quiosque](#kiosk-mode-settings)|[Capacidade de gerenciamento](#manageability)|
+|[Sistema de mensagens nativo](#native-messaging)|[Gerenciador de senhas e proteção](#password-manager-and-protection)|
+|[Desempenho](#performance)|[Impressão](#printing)|
+|[Servidor proxy](#proxy-server)|[Configurações de guias em suspensão](#sleeping-tabs-settings)|
+|[Configurações do SmartScreen](#smartscreen-settings)|[Página de inicialização, página inicial e nova guia](#startup-home-page-and-new-tab-page)|
+|[Adicional](#additional)|
 
 ### [*Configurações do Application Guard*](#application-guard-settings-policies)
 
@@ -152,6 +154,11 @@ e dicas para os serviços Microsoft|
 |-|-|
 |[KioskAddressBarEditingEnabled](#kioskaddressbareditingenabled)|Configure a edição da barra de endereços para a experiência de navegação pública do modo de quiosque.|
 |[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Excluir arquivos baixados como parte de uma sessão modo de quiosque quando o Microsoft Edge for fechado|
+### [*Capacidade de gerenciamento*](#manageability-policies)
+
+|Nome da política|Legenda|
+|-|-|
+|[MAMEnabled](#mamenabled)|Gerenciamento de Aplicativos Móveis Habilitado|
 ### [*Sistema de mensagens nativo*](#native-messaging-policies)
 
 |Nome da política|Legenda|
@@ -401,6 +408,7 @@ e dicas para os serviços Microsoft|
 |[SerialBlockedForUrls](#serialblockedforurls)|Bloquear a API Serial em sites específicos|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Mostrar experiências do Microsoft Rewards|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Exibir o atalho do Microsoft Office na barra de favoritos (obsoleto)|
+|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Permitir recomendações e notificações promocionais do Edge|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Habilitar o suporte para o Exchange HTTP (SXG) assinado|
 |[SitePerProcess](#siteperprocess)|Habilitar o isolamento de sites para todos os sites|
 |[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
@@ -5277,6 +5285,72 @@ Para obter informações detalhadas sobre como configurar o modo de quiosque, co
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ## Políticas de capacidade de gerenciamento
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### MAMEnabled
+
+  #### Gerenciamento de Aplicativos Móveis Habilitado
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows e no macOS desde 89 ou posterior
+
+  #### Descrição
+
+  Permite que o navegador Microsoft Edge recupere políticas dos serviços de gerenciamento de aplicativos Intune e as aplique aos perfis dos usuários.
+
+Se você habilitar essa política ou não a configurar, as Políticas de Gerenciamento de Aplicativos Móveis (MAM) poderão ser aplicadas.
+
+Se você desabilitar essa política, o Microsoft Edge não se comunicará com o Intune para solicitar políticas de MAM.
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### Tipo de dados:
+
+  - Booliano
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da Política de Grupo (ADMX)
+
+  - Nome Exclusivo da Gp: MAMEnabled
+  - Nome da Gp: Gerenciamento de Aplicativo Móvel Habilitado
+  - Caminho da Gp (obrigatório): Administrative Templates/Microsoft Edge/Manageability
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: MAMEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de exemplo:
+
+```
+0x00000000
+```
+
+  #### Informações e configurações do Mac
+  
+  - Nome da Chave de Preferência: MAMEnabled
+  - Valor de exemplo:
+``` xml
+<false/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ## Políticas de mensagens nativas
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -9137,6 +9211,8 @@ Especificamente, há um botão de alternância **Sugerir páginas similares quan
   Desabilita o Visualizador de PDF interno no Microsoft Edge.
 
 Se você habilitar essa política, o Microsoft Edge tratará arquivos PDF como downloads e permitirá que os usuários os abram usando o aplicativo padrão.
+
+Se o Microsoft Edge for o leitor de PDF padrão, os arquivos PDF não serão baixados e continuarão a ser abertos no Microsoft Edge.
 
 Se você não configurar essa política ou desabilitá-la, o Microsoft Edge abrirá arquivos PDF (a menos que o usuário a desative).
 
@@ -16514,11 +16590,11 @@ Use as informações anteriores ao configurar essa política.
 
   #### Informações e configurações do Windows
 
-  ##### Informações da política de grupo (ADMX)
+  ##### Informações da Política de Grupo (ADMX)
 
   - Nome Exclusivo da Política de Grupo: InternetExplorerIntegrationSiteRedirect
   - Nome da Política de Grupo: Especificar como as navegações "na página" para sites não configurados se comportam quando iniciadas nas páginas do modo Internet Explorer.
-  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -19533,7 +19609,7 @@ Os padrões de URL definidos nessa política não podem entrar em conflito com a
 
 Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
-  #### Recursos com suporte:
+  #### Recursos compatíveis:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -19549,7 +19625,7 @@ Para obter informações detalhadas sobre os padrões de URL válidos, consulte 
 
   - Nome exclusivo da Política de Grupo: SerialAskForUrls
   - Nome da Política de Grupo: Permitir a API serial em sites específicos
-  - Caminho da Política de Grupo (obrigatório): modelos Administrativos/Microsoft Edge/
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -19778,6 +19854,68 @@ Se você desativar esta política, o atalho não será mostrado.
   - Valor de exemplo:
 ``` xml
 <false/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### ShowRecommendationsEnabled
+
+  #### Permitir recomendações e notificações promocionais do Edge
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows e no macOS desde 89 ou posterior
+
+  #### Descrição
+
+  Esta configuração de política permite que você decida se os funcionários devem receber recomendações e notificações de assistência no produto do Microsoft Edge.
+
+Se você habilitar ou não definir essa configuração, os funcionários receberão recomendações/notificações do Microsoft Edge.
+
+Se você desabilitar essa configuração, os funcionários não receberão recomendações/notificações do Microsoft Edge.
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### Tipo de dados:
+
+  - Booliano
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da Política de Grupo (ADMX)
+
+  - Nome Exclusivo da Gp: ShowRecommendationsEnabled
+  - Nome da Gp: Permitir recomendações e notificações promocionais do Edge
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: ShowRecommendationsEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### Informações e configurações do Mac
+  
+  - Nome da Chave de Preferência: ShowRecommendationsEnabled
+  - Valor de exemplo:
+``` xml
+<true/>
 ```
   
 
