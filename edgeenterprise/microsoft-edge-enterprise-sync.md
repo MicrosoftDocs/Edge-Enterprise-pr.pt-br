@@ -3,19 +3,19 @@ title: Configurar e solucionar problemas de sincronização do Microsoft Edge
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 01/14/2021
+ms.date: 01/22/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurar e solucionar problemas de sincronização do Microsoft Edge
-ms.openlocfilehash: fa9b9ead6319bceeb95066003a77be7ecf84db46
-ms.sourcegitcommit: 68b50c45b2b78acec5a0776ce4ddd11410a4e382
+ms.openlocfilehash: 36912d2fd1c33a227ce1d4b7c912f6ef1dfdcc00
+ms.sourcegitcommit: 8a88fd38bdb5e132e89bf17dd2b5fb72f5d1b4b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "11270745"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "11297447"
 ---
 # Configurar e solucionar problemas de sincronização do Microsoft Edge
 
@@ -74,7 +74,7 @@ Para restringir a sincronização a certos conjuntos de usuários, você pode ha
 
 ## Microsoft Edge e ESR (Enterprise State Roaming)
 
-O Microsoft Edge é um aplicativo de plataforma cruzada com um escopo expandido para sincronizar dados de usuários em todos os seus dispositivos, e não faz mais parte do Enterprise State Roaming do Azure AD. No entanto, o Microsoft Edge cumprirá as promessas de proteção de dados do ESR, como a capacidade de trazer sua própria chave. Para obter mais informações, confira [Microsoft Edge e Enterprise State Roaming](microsoft-edge-enterprise-state-roaming.md).
+O Microsoft Edge é um aplicativo de plataforma cruzada com um escopo expandido para sincronizar dados do usuário em todos os seus dispositivos e não faz parte do Azure AD Enterprise State Roaming. No entanto, o Microsoft Edge cumprirá as promessas de proteção de dados do ESR, como a capacidade de trazer sua própria chave. Para obter mais informações, confira [Microsoft Edge e Enterprise State Roaming](microsoft-edge-enterprise-state-roaming.md).
 
 ## Solucionar problemas de sincronização
 
@@ -86,9 +86,9 @@ Um caso de uso popular para manter a identidade do usuário no navegador é dar 
 
 Antes de tratar um problema como sendo de sincronização, verifique se o usuário está conectado ao navegador com uma conta válida.
 
-A próxima captura de tela mostra um exemplo de um erro de identidade encontrado em *edge://sync-internals* em **Credenciais**:
+A próxima captura de tela mostra um exemplo de um erro de identidade. O erro é "**Last Token Error, EDGE_AUTH_ERROR: 3, 54, 3ea**", que é encontrado no *edge://sync-internals* em **Credenciais**:
 
-:::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-identity-issue.png" alt-text="Erro de identidade":::
+:::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-identity-issue.png" alt-text="Last Token Error EDGE_AUTH_ERROR: 3,54, 3ea":::
 
 ### Problemas comuns de sincronização
 
@@ -160,9 +160,8 @@ Se este erro for encontrado para uma conta do Azure Active Directory, ou se DISA
 
 ### Problema: erro de criptógrafo encontrado
 
-Este erro está visível em **Informações do tipo** em *edge://sync-internals*, e isso poderá significar que os dados do lado de serviço do usuário precisam ser redefinidos. A próxima captura de tela mostra um exemplo dos detalhes de um erro de criptografia.
-
-:::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-crypto-error-new.png" alt-text="Erro de criptógrafo.":::
+Este erro está visível em **Informações do tipo** em *edge://sync-internals*, e isso poderá significar que os dados do lado de serviço do usuário precisam ser redefinidos. O exemplo a seguir mostra uma mensagem de erro de criptografia:
+<br>"Error:GenerateCryptoErrorsForTypes@.. /.. /components/sync/driver/data_type_manager_impl.cc:42, erro criptografador encontrado".
 
 1. Reinicie o Microsoft Edge e navegue até *edge://sync-internals* e verifique a seção “**Status da Chave de Conta do AAD**”
    - "Êxito" em "Último Resultado do MIP": o erro de criptógrafo significa que os dados do servidor podem ser criptografados com uma chave perdida. É necessário a redefinição dos dados para retomar a sincronia.
@@ -210,7 +209,7 @@ Não atualmente. Para os clientes na nuvem GCC High, o Microsoft Edge sync está
 
 #### Por que a sincronização do Microsoft Edge não é compatível com todas as assinaturas do M365?
 
-A sincronização da empresa depende da[Proteção de Informações do Azure](https://azure.microsoft.com/services/information-protection/), que não está disponível em todas as assinaturas do M365.
+A sincronização empresarial depende da [Proteção de Informações do Azure,](https://azure.microsoft.com/services/information-protection/)que não está disponível em todas as assinaturas do M365.
 
 #### A sincronização do Microsoft Edge é baseada no Enterprise State Roaming?
 
