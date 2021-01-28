@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/20/2021
+ms.date: 01/27/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 6df9ad9a1b3912387180aa249e220fbfe70e99b7
-ms.sourcegitcommit: a6c58b19976c194299be217c58b9a99b48756fd0
+ms.openlocfilehash: 59c3c3426e3e7db2c5a115b15ae5e9b9e7628f9e
+ms.sourcegitcommit: e9433045503c2614386ee4948cda0a9c9701bac5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11281020"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "11304724"
 ---
 # Microsoft Edge - Políticas
 
@@ -35,11 +35,7 @@ A tabela a seguir lista as novas políticas desta atualização.
 
 | Nome | Lista de endereçamento |
 |--|--|
-|[MAMEnabled](#mamenabled)|Gerenciamento de Aplicativos Móveis Habilitado|
-|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Permitir recomendações e notificações promocionais do Microsoft Edge|
-
-
-
+|[SmartActionsBlockList](#smartactionsblocklist)|Bloquear ações inteligentes para uma lista de serviços|
 
 ## Políticas disponíveis
 
@@ -411,6 +407,7 @@ e dicas para os serviços Microsoft|
 |[ShowRecommendationsEnabled](#showrecommendationsenabled)|Permitir recomendações e notificações promocionais do Edge|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Habilitar o suporte para o Exchange HTTP (SXG) assinado|
 |[SitePerProcess](#siteperprocess)|Habilitar o isolamento de sites para todos os sites|
+|[SmartActionsBlockList](#smartactionsblocklist)|Bloquear ações inteligentes para uma lista de serviços|
 |[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
 |[SpellcheckEnabled](#spellcheckenabled)|Habilitar verificação ortográfica|
 |[SpellcheckLanguage](#spellchecklanguage)|Habilitar idiomas de verificação ortográfica específicos|
@@ -2901,7 +2898,7 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
 
   #### Descrição
 
-  Defina uma lista de sites, com base em padrões de URL, que podem abrir janelas pop-up.
+  Defina uma lista de sites, com base em padrões de URL, que podem abrir janelas pop-up. * não é um valor aceito para esta política.
 
 Se você não configurar essa política, o valor padrão global da diretiva [DefaultPopupsSetting](#defaultpopupssetting) (se definida) ou a configuração pessoal do usuário será usada para todos os sites.
 
@@ -2966,7 +2963,7 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
   #### Descrição
 
-  Defina uma lista de sites, com base em padrões de URL, que estão impedidos de abrir janelas pop-up.
+  Defina uma lista de sites, com base em padrões de URL, que estão impedidos de abrir janelas pop-up. * não é um valor aceito para esta política.
 
 Se você não configurar essa política, o valor padrão global da diretiva [DefaultPopupsSetting](#defaultpopupssetting) (se definida) ou a configuração pessoal do usuário será usada para todos os sites.
 
@@ -7017,7 +7014,7 @@ Para obter exemplos mais detalhados, acesse [https://go.microsoft.com/fwlink/?li
 ```
 SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   "ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", 
-  "ProxyMode": "direct", 
+  "ProxyMode": "pac_script", 
   "ProxyPacUrl": "https://internal.site/example.pac", 
   "ProxyServer": "123.123.123.123:8080"
 }
@@ -7026,7 +7023,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   ##### Valor do exemplo de compactação:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {"ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", "ProxyMode": "direct", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
+  SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {"ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", "ProxyMode": "pac_script", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
   ```
   
 
@@ -7040,7 +7037,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   <key>ProxyBypassList</key>
   <string>https://www.example1.com,https://www.example2.com,https://internalsite/</string>
   <key>ProxyMode</key>
-  <string>direct</string>
+  <string>pac_script</string>
   <key>ProxyPacUrl</key>
   <string>https://internal.site/example.pac</string>
   <key>ProxyServer</key>
@@ -20046,6 +20043,83 @@ Se você desabilitar ou não configurar essa política, um usuário poderá opta
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### SmartActionsBlockList
+
+  #### Bloquear ações inteligentes para uma lista de serviços
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows e no macOS desde 89 ou posterior
+
+  #### Descrição
+
+  Listar serviços específicos, como PDFs, que não mostram ações inteligentes. (Ações inteligentes são ações como "definir" que estão disponíveis nos menus de contexto mínimo e completo no Microsoft Edge.)
+
+Se você habilitar a política: :
+   - A ação inteligente no menu de contexto mínimo e completo será desabilitada para todos os perfis de serviços que corresponderem à lista determinada.
+   - Os usuários não verão a ação inteligente no menu de contexto mínimo e completo na seleção de texto para serviços que corresponderem à lista determinada.
+   - Nas configurações do Microsoft Edge, a ação inteligente no menu de contexto mínimo e completo será desabilitada para serviços que corresponderem à lista determinada.
+
+Se você desabilitar ou não configurar essa política:
+   - A ação inteligente no menu de contexto mínimo e completo será habilitada para todos os perfis.
+   - Os usuários verão a ação inteligente no menu de contexto mínimo e completo na seleção de texto.
+   - Nas configurações do Microsoft Edge, a ação inteligente no menu de contexto mínimo e completo será habilitada.
+
+Mapeamento das opções de política:
+
+* smart_actions_pdf (smart_actions_pdf) = Ações inteligentes em PDF
+
+Use as informações anteriores ao configurar essa política.
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: Sim
+  - Atualização dinâmica das políticas: Sim
+
+  #### Tipo de dados:
+
+  - Lista de cadeias de caracteres
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da Política de Grupo (ADMX)
+
+  - Nome Exclusivo da PG: SmartActionsBlockList
+  - Nome da PG: Bloquear ações inteligentes para uma lista de serviços
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): Administrative Templates/Microsoft Edge - Default Settings (usuários podem substituir)/
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge\SmartActionsBlockList
+  - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended\SmartActionsBlockList
+  - Nome do valor: 1, 2, 3, ...
+  - Tipo de valor: lista de REG_SZ
+
+  ##### Valor de exemplo:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SmartActionsBlockList\1 = "smart_actions_pdf"
+
+```
+
+  #### Informações e configurações do Mac
+  
+  - Nome da chave de preferência: SmartActionsBlockList
+  - Valor de exemplo:
+``` xml
+<array>
+  <string>smart_actions_pdf</string>
+</array>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### SpeechRecognitionEnabled
 
   #### Configure Speech Recognition
@@ -21808,16 +21882,9 @@ Independente da política ser habilitada, a configuração de otimização WPAD 
 
   Configure essa política para especificar uma lista de aplicativos Web que são instalados silenciosamente, sem interação do usuário e quais usuários não podem desinstalar ou desativar.
 
-Cada item da lista da política é um objeto com um membro obrigatório: url (o URL do aplicativo da web a ser instalado)
+Cada item de lista da política é um objeto com membro obrigatório: URL (a URL do aplicativo Web a ser instalada) e 2 Membros opcionais: default_launch_container (especifica o modo de janela que o aplicativo Web abre com uma nova guia é o padrão) e o create_desktop_shortcut (verdadeiro se quiser criar atalhos para a área de trabalho do Linux e Windows).
 
-e 3 membros opcionais:
-- default_launch_container (especifica o modo de janela que o aplicativo da web abre, por padrão, com uma nova guia.)
-
-- create_desktop_shortcut (Verdadeiro se você quiser criar atalhos do Linux e da Área de trabalho do Windows.)
-
-- override_app_name (Iniciando com o Microsoft Edge 89, permite que você substitua o nome do aplicativo se não for um Aplicativo Web Progressivo (PWA) ou o nome do aplicativo que está temporariamente instalado se for um PWA, mas a autenticação é necessária antes que a instalação possa ser concluída.)
-
-  #### Recursos com suporte:
+  #### Recursos compatíveis:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -21856,11 +21923,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
     "default_launch_container": "tab", 
     "url": "https://app.contoso.edu"
-  }, 
-  {
-    "default_launch_container": "window", 
-    "override_app_name": "Editor", 
-    "url": "https://app.contoso.com/editor"
   }
 ]
 ```
@@ -21868,7 +21930,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### Valor do exemplo de compactação:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "override_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}]
   ```
   
 
@@ -21892,14 +21954,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
     <string>tab</string>
     <key>url</key>
     <string>https://app.contoso.edu</string>
-  </dict>
-  <dict>
-    <key>default_launch_container</key>
-    <string>window</string>
-    <key>override_app_name</key>
-    <string>Editor</string>
-    <key>url</key>
-    <string>https://app.contoso.com/editor</string>
   </dict>
 </array>
 ```
@@ -22548,7 +22602,7 @@ Se você desabilitar ou não configurar essa política, o solucionador de proxy 
   [Voltar ao início](#microsoft-edge---policies)
 
 
-## Ver também
+## Consulte também
 
 - [Configurar o Microsoft Edge](configure-microsoft-edge.md)
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

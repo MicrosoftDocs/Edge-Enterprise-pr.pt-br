@@ -3,19 +3,19 @@ title: Monitor de Senha habilitado automaticamente para usuários
 ms.author: supalsul
 author: dan-wesley
 manager: tulasim
-ms.date: 01/21/2021
+ms.date: 01/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Monitor de Senha habilitado automaticamente para usuários
-ms.openlocfilehash: 8ea96522fe99082579e88b2eab330fb265d02b12
-ms.sourcegitcommit: 8a88fd38bdb5e132e89bf17dd2b5fb72f5d1b4b9
+ms.openlocfilehash: 2f796f0cd1bbb437f83d04a8bd59586ef7b6a982
+ms.sourcegitcommit: 187203e9eaa9c48c59095b7e7d625d3081a6ba19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "11297478"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "11304531"
 ---
 # Monitor de Senha habilitado automaticamente para usuários
 
@@ -26,7 +26,7 @@ Este artigo descreve como o Monitor de Senhas no Microsoft Edge será ativado pa
 
 ## Introdução, benefícios e disponibilidade
 
-O Monitor de Senhas ajuda os usuários do Microsoft Edge a proteger suas contas online informando-os se alguma de suas senhas foi encontrada em um vazamento online. Vazamentos online ou violações de dados ocorrem quando atores ruins roubam dados de sites ou aplicativos de terceiros.
+O Monitor de Senhas ajuda os usuários do Microsoft Edge a proteger suas contas online informando-os se alguma de suas senhas foi encontrada em um vazamento online. Vazamentos online ou violações de dados ocorrem quando atores ruins roubam dados de sites ou aplicativos de terceiros. Para saber mais, confira o [Monitor de senhas: proteção de senhas no documento do Microsoft Edge](https://www.microsoft.com/research/blog/password-monitor-safeguarding-passwords-in-microsoft-edge/) no Blog da Pesquisa da Microsoft.
 
 ### Benefícios
 
@@ -34,7 +34,7 @@ Dada a frequência e o escopo desses ataques online, ter esse tipo de proteção
 
 ### Disponibilidade
 
-O Monitor de Senhas está nos canais de visualização antecipada (Canary/Dev) e será promovido para o Canal Estável versão 88 a partir de 21/01. A distribuição será gradual e pode levar algumas semanas antes que você veja a seguinte mensagem e controle na página **Configurações** > **Perfil** > **Senha**. 
+O Monitor de Senhas está disponível no Canal Estável versão 88 a partir de 21/01. A distribuição será gradual e pode levar algumas semanas antes que você veja a seguinte mensagem e controle na página **Configurações** > **Perfil** > **Senha**. 
 
 :::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-enable-option.png" alt-text="Opção para habilitar o Monitor de Senhas":::
 
