@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Stable Channel
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/22/2021
+ms.date: 01/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: b7a875c7a3688d1839be9c3fdc835f77e14f3bae
-ms.sourcegitcommit: f0f250190fc09964175778338a177f1240946b98
+ms.openlocfilehash: 6adba3b373f5989362594d0ff84a2932a661550a
+ms.sourcegitcommit: 6109055bfd0e2deba7f0cc75b27f6a805b16a0b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "11297185"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "11306061"
 ---
 # Notas de versão do Microsoft Edge Stable Channel
 
@@ -28,6 +28,14 @@ Essas notas de versão fornecem informações dos novos recursos e atualizaçõe
 
 > [!NOTE]
 > Para o Canal Estável, as atualizações serão implantadas progressivamente por um ou mais dias. Para saber mais, confira [Distribuições progressivas para as atualizações do Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
+
+## Versão 88.0.705.56: 28 de janeiro
+
+Correção de vários bugs e problemas de desempenho.
+
+## Versão 88.0.705.53: 26 de janeiro
+
+Correção de vários bugs e problemas de desempenho.
 
 ## Versão 88.0.705.50: 21 de janeiro
 
@@ -44,6 +52,11 @@ As atualizações de segurança estão listadas [aqui](https://docs.microsoft.co
 - **Autenticação:**
 
   - O SSO (SSO) já está disponível para contas do Azure Active Directory (Azure AD) e conta da Microsoft (MSA) no Windows de nível inferior. Um usuário conectado no Microsoft Edge no nível inferior do Microsoft Windows (7, 8.1) agora será automaticamente conectado aos sites que estiverem configurados para permitir logon único com contas Work e Microsoft (por exemplo, bing.com, office.com, msn.com, outlook.com).<br>Observação: um usuário pode ter que sair e entrar novamente se ele se conectar ao Microsoft Edge em uma versão anterior ao Microsoft Edge 88 para aproveitar esse recurso.
+  
+  - Logon Único (SSO) para sites de trabalho usando qualquer conta do Windows Azure Active Directory (Azure AD) no sistema de perfis que não são do Azure AD do Microsoft Edge. Este recurso pode ser habilitado para qualquer perfil que não esteja conectado com uma conta corporativa/de estudante, não seja convidado ou privado e permita o uso de qualquer conta corporativa/de estudante no sistema operacional com esse perfil. Esse recurso pode ser configurado em **Configurações** > **Perfis** > **Preferências de Perfil** > **Permitir logon único para sites de trabalho ou escola usando esse perfil**.
+  
+    > [!NOTE]
+    > "Logon único (SSO) para todas as contas do Windows usando o perfil do Microsoft Edge" é uma atualização das notas de versão de 21 de janeiro.
 
 - **Opção de modo de quiosque para encerrar a sessão**. O botão "Encerrar sessão" agora está disponível em uma experiência de navegação pública do modo de quiosque. Esse recurso garante que os dados e as configurações do navegador sejam excluídos quando o Microsoft Edge estiver fechado. Saiba mais sobre os recursos do modo de quiosque e o roteiro, [Configurar o modo de quiosque do Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode).
 
