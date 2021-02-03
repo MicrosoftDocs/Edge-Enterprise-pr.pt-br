@@ -3,19 +3,19 @@ title: Agenda de lançamento do Microsoft Edge
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/22/2021
+ms.date: 02/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Agenda de lançamento do Microsoft Edge
-ms.openlocfilehash: 3b9c257123f2d1eeda1484e761963b6d0106c7c0
-ms.sourcegitcommit: d8d0b0fcb787fe90fa20426ef5e6dc194e935808
+ms.openlocfilehash: ad02c2775b836fe1a829945c205f2f52208065f1
+ms.sourcegitcommit: 90f33698262b255a63d6ba6ec854a12c1091a630
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "11297696"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "11311518"
 ---
 # Agenda de lançamento do Microsoft Edge
 
@@ -33,6 +33,8 @@ A tabela a seguir lista as datas de lançamento planejadas para os canais beta e
 > As datas de lançamento são aproximadas e podem variar com base no status de compilação.
 
 ### Lançamentos do Microsoft Edge
+
+A tabela a seguir apenas rastreia e fornece informações para versões principais em ambos os canais.
 
 | Versão | Status da versão | Canal Beta<br>Semana de lançamento | Canal Estável<br>Semana de lançamento |
 |---------|-----|------|--------|

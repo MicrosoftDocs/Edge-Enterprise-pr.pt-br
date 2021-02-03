@@ -3,19 +3,19 @@ title: Sistemas operacionais com suporte do Microsoft Edge
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 12/17/2020
+ms.date: 02/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Sistemas operacionais com suporte do Microsoft Edge
-ms.openlocfilehash: 866708bc1d24523f47237a5242575a16544b8009
-ms.sourcegitcommit: 7db4c9854175898844ce3daf75d8007cfc6632a2
+ms.openlocfilehash: 81b9999a98a913e72f3a064f32bd88b301e52b5f
+ms.sourcegitcommit: 90f33698262b255a63d6ba6ec854a12c1091a630
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "11237243"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "11311508"
 ---
 # Sistemas operacionais com suporte do Microsoft Edge
 
@@ -35,12 +35,12 @@ O Microsoft Edge segue a Política de Ciclo de Vida Moderna e é compatível com
 
 - Windows 7 * *
 - Windows 8.1
-- Windows 10 SAC 1709 e posterior**_
+- Windows 10 SAC 1709 e posterior ***
 - Windows 10 Enterprise 2015 LTSC
 - Windows 10 Enterprise 2016 LTSC
 - Windows 10 Enterprise 2019 LTSC
 - Windows 10 Enterprise com várias sessões
-- Windows 10 IoT Enterprise SAC _ * * *
+- Windows 10 IoT Enterprise SAC ****
 - Windows 10 IoT Enterprise 2019 LTSC * * * *
 
 ### Windows Server
@@ -55,9 +55,9 @@ O Microsoft Edge segue a Política de Ciclo de Vida Moderna e é compatível com
 > [!IMPORTANT]
 > ** Continuaremos a oferecer suporte ao Microsoft Edge no Windows 7 e no Windows Server 2008 R2 até 15 de janeiro de 2022. Esses sistemas operacionais não têm suporte e a Microsoft recomenda que você faça uma atualização para um sistema operacional compatível, como o Windows 10. Embora o Microsoft Edge ajude a manter você mais seguro na Web, seu computador ainda pode estar vulnerável a riscos de segurança. Para que o modo IE tenha suporte nesses sistemas operacionais, os dispositivos precisarão ter as [Atualizações de segurança estendidas para o Windows 7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7). Sem as atualizações de segurança estendidas para o Windows 7, a funcionalidade do Internet Explorer ficará vulnerável aos riscos de segurança. Além disso, a funcionalidade do modo IE pode deixar de funcionar sem a manutenção contínua por meio das atualizações de segurança estendidas.  
 >
-> * * _ Da mesma maneira que acima, para lançamentos do Windows 10 SAC que não têm suporte, mas o Microsoft Edge é compatível, é recomendável fazer a atualização para uma versão com suporte do Win10SAC assim que possível para manter a segurança. O Microsoft Edge com suporte nesse estado deve ser considerado uma ponte temporária para chegar a um estado de sistema operacional compatível.
+> *** Da mesma forma que acima, para as versões do SAC do Windows 10 sem suporte, mas com suporte para o Microsoft Edge, será recomendado fazer upgrade para uma versão do SAC do Win10 assim que possível para segurança. O Microsoft Edge com suporte nesse estado deve ser considerado uma ponte temporária para chegar a um estado de sistema operacional compatível.
 >
-> _ * * * O OPK do Microsoft Edge está disponível no MOO para que os OEMs do IoT sejam pré-instalados e distribuídos como parte da solução baseada no Windows 10 IoT Enterprise.
+> **** O OpK do Microsoft Edge está disponível noNG para OEMs IoT pré-instalar e distribuir como parte de sua solução baseada no Windows 10 IoT Enterprise.
 
 ### macOS
 
@@ -71,15 +71,20 @@ O Microsoft Edge para iPad&reg; e iPhone&reg; requer o iOS 11.0 ou posterior. O 
 
 O Microsoft Edge para Android pode ser instalado em tablets e celulares que atendam aos seguintes critérios: dispositivos que executam o Android KitKat 4.4 ou posterior com um processador baseado em ARM.
 
+### Macs com Apple Silicon 
+
+Suporte nativo do Microsoft Edge a partir da Versão estável 88 para Macs com Apple Silicon.
+
 ### Chromebooks
 
 O Microsoft Edge não é compatível com o Chromebooks.
 
 ## Alterações recentes
 
-- **17/12/2020** - suporte do Microsoft Edge no Windows 7 e no windows Server 2008 R2 estendido até 15 de janeiro de 2022.
+- **17/12/2020** - suporte do Microsoft Edge no Windows 7 e no Windows Server 2008 R2 estendido até 15 de janeiro de 2022.
+- **28/01/2021** - suporte do Microsoft Edge para Macs com Apple Silicon.
 
-## Consulte também
+## Veja também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Política de Ciclo de Vida Moderna da Microsoft](https://support.microsoft.com/help/30881/modern-lifecycle-policy)
