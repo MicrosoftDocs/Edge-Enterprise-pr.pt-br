@@ -3,23 +3,23 @@ title: Perguntas frequentes sobre o modo IE
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 12/21/2020
+ms.date: 02/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Perguntas frequentes e solução de problemas do Microsoft Edge com o modo IE
-ms.openlocfilehash: 62bf8afc5ac908e18d2f503fa9248a19f78fd6f6
-ms.sourcegitcommit: 306582403d4272831bcac390154c7cc7041a9b7e
+ms.openlocfilehash: aeae79dfd1745c754fb5ab690338f87fd25c080b
+ms.sourcegitcommit: ff67ccc93d07588a9128e9b1fe007d5393a9d6af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "11238168"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "11312587"
 ---
 # Perguntas frequentes sobre o modo IE
 
-Este artigo fornece dicas para solução de problemas e uma seção de perguntas frequentes para o Microsoft Edge (versão 77 ou posterior).
+Este artigo fornece dicas de solução de problemas e perguntas frequentes sobre o Microsoft Edge versão 77 ou posterior.
 
 > [!NOTE]
 > Este artigo se aplica aos Canais **Estável**, **Beta** e **Dev** do Microsoft Edge Beta, versão 77 ou posteriores.
@@ -63,7 +63,11 @@ Esse erro pode ocorrer se houver um erro inesperado no Internet Explorer. Reinic
 
 Esse erro pode ocorrer se você estiver depurando remotamente e navegar a uma página da Web configurada para executar no modo IE. Você pode continuar, mas a página será renderizada usando o Microsoft Edge.
 
-## Perguntas frequentes
+### Mensagem de erro: "Erro: não foi possível recuperar a lista de sites do EMIE".
+
+Você pode ver esse erro na página *edge://compat/enterprise* indicando que o download da lista de sites falhou. A partir da versão 87 do Microsoft Edge, quando os cookies são bloqueados para solicitações de terceiros usando a política [BlockThirdPartyCookies](https://docs.microsoft.com/deployedge/microsoft-edge-policies#blockthirdpartycookies), a autenticação HTTP também não é permitida. Você pode permitir cookies para o domínio específico que hospeda sua Lista de Sites do Modo Empresarial usando a política [CookiesAllowedForURLs](https://docs.microsoft.com/deployedge/microsoft-edge-policies#cookiesallowedforurls) para garantir que os downloads da lista de sites sejam bem-sucedidos.
+
+## Perguntas Frequentes
 
 ### O modo IE substituirá o Internet Explorer 11?
 
