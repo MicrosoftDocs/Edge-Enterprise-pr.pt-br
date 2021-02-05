@@ -3,26 +3,26 @@ title: 'Gerenciador de Lista de Site Empresarial no Microsoft Edge '
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 01/20/2021
+ms.date: 02/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 'Habilitar e usar o Gerenciador de Lista de Site Empresarial no Microsoft Edge no Microsoft Edge '
-ms.openlocfilehash: 2d10886624918c97933a841c428ea66ccf5b34c9
-ms.sourcegitcommit: a6c58b19976c194299be217c58b9a99b48756fd0
+ms.openlocfilehash: 9700c2b78bba514525c4d80d211ef744dd175d2f
+ms.sourcegitcommit: ff67ccc93d07588a9128e9b1fe007d5393a9d6af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11281040"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "11312577"
 ---
 # Gerenciador de Lista de Site Empresarial no Microsoft Edge
 
 Este artigo explica como habilitar o acesso e usar o Gerenciador de Lista de Site Empresarial no Microsoft Edge no Microsoft Edge para criar, editar e exportar sua Lista de Sites Corporativos para o modo Internet Explorer.
 
 > [!NOTE]
-> Este artigo se aplica ao Microsoft Edge versão 89 ou posterior.
+> Este artigo se aplica ao Microsoft Edge versão 89 ou posterior. 
 
 ## Visão geral
 
@@ -38,7 +38,7 @@ Se ativado, seus usuários verão uma opção chamada do Gerenciador de Lista de
 
 ## Usando o Gerenciador de Lista de Site Empresarial
 
-A ferramenta Gerenciador de Lista de Site Empresarial usa a versão v.2 do esquema. Se você importar um esquema de versão v.1 para o Gerenciador de Lista de Site Empresarial (esquema v.2), o XML será salvo na versão v.2 do esquema.
+A ferramenta Gerenciador de Lista de Site Empresarial usa a versão v.2 do esquema. Se você importar um esquema de versão v.1 para o Gerenciador de Lista de Site Empresarial (esquema v.2), o XML será salvo na versão v.2 do esquema. Confira a [Orientação do esquema v.2 do modo Empresarial](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
 
 ### Adicione sites únicos à sua lista de sites  
 
@@ -127,5 +127,5 @@ Para pesquisar, digite parte do URL na caixa de pesquisa  **Filtrar sites por 
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Sobre o modo IE](https://docs.microsoft.com/deployedge/edge-ie-mode)
+- [Diretrizes de esquema v.2 do modo Empresarial](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance)
 - [Informações adicionais sobre o Modo Empresarial](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
-- [Informações adicionais sobre o Enterprise Site Discovery](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery)
