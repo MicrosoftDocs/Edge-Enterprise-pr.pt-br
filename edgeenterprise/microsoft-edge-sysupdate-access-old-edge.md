@@ -3,23 +3,23 @@ title: Acessar a versão antiga do Microsoft Edge
 ms.author: jtkim
 author: dan-wesley
 manager: srugh
-ms.date: 08/17/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Saiba como acessar a versão herdada do Microsoft Edge.
-ms.openlocfilehash: e4733d020f3a681ded50e5a087fe086d39362201
-ms.sourcegitcommit: f7f7eb69d2298b0f9779a9fd28e3c4e297ef2e05
+ms.openlocfilehash: 00f4a29c9a2bed137b339c8b5ef43eb213d33ee4
+ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11125513"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "11313891"
 ---
 # Acessar a Versão Herdada do Microsoft Edge depois de instalar a nova versão do Microsoft Edge
 
-Saiba como acessar a Versão Herdada do Microsoft Edge depois de instalar a nova versão do Microsoft Edge.
+Versão Prévia do Microsoft Edge deixará de receber atualizações de segurança em 9 de março de 2021. Você pode acessar o Versão Prévia do Microsoft Edge até 13 de abril. Para obter mais informações, consulte a [postagem do blog](https://aka.ms/EdgeLegacyEOS)da equipe de produto do Microsoft Edge.
 
 > [!NOTE]
 > Este artigo aplica-se ao [canal Estável](microsoft-edge-channels.md) do Microsoft Edge.
@@ -45,10 +45,6 @@ Os procedimentos neste artigo se aplicam aos sistemas que foram atualizados com 
 Antes de usar as instruções detalhadas deste artigo, considere as duas etapas a seguir para permitir que os usuários executem a Versão Prévia do Microsoft Edge e o Microsoft Edge ([canal Beta](microsoft-edge-channels.md)) lado a lado.
 
 1. Impeça a instalação automática do Canal Estável de Microsoft Edge pelo [Windows Update.](https://support.microsoft.com/help/12373/windows-update-faq).
-
-   > [!TIP]
-   > Use o [Blocker Toolkit](microsoft-edge-blocker-toolkit.md) para desabilitar a entrega automática do Microsoft Edge.
-
 2. Instale o [canal Beta](https://www.microsoft.com/edge/business/download) da nova versão do Microsoft Edge.
 
    > [!NOTE]

@@ -3,19 +3,19 @@ title: Segurança, compatibilidade e capacidade de gerenciamento do Microsoft Ed
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 01/13/2021
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Segurança, compatibilidade e capacidade de gerenciamento do Microsoft Edge
-ms.openlocfilehash: 759f28a10fc342ebc1f3eac7933b46c6ace169b4
-ms.sourcegitcommit: 42af8123dc86c2a1d07de0080a6c878c151f354f
+ms.openlocfilehash: 6d0787deac408e243697872b2393112d0d946dbb
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "11269302"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314724"
 ---
 # Vídeo: segurança, compatibilidade e capacidade de gerenciamento do Microsoft Edge
 
@@ -34,4 +34,5 @@ Faça um tour prático para experimentar a segurança, a compatibilidade e a cap
 ## Consulte também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
+- [Segurança do Microsoft Edge para a sua empresa](ms-edge-security-for-business.md)
 - [Playlist do YouTube do Microsoft Edge](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)

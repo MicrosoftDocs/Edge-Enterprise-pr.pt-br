@@ -3,19 +3,19 @@ title: Prevenção contra Perda de Dados no Microsoft Edge
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 11/18/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Prevenção contra Perda de Dados (DLP) no Microsoft Edge
-ms.openlocfilehash: 72f670caf34a09cdfc7f47575f688c2a39d3c221
-ms.sourcegitcommit: 5a5be508c3c9c57187aca821b4a16f639abdd7e2
+ms.openlocfilehash: 8c7906f69f8d1161b47aa381bc04bcdaa70fe6cd
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "11176938"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314554"
 ---
 # Prevenção contra Perda de Dados (DLP) no Microsoft Edge
 
@@ -34,21 +34,22 @@ A prevenção contra perda de dados do ponto de extremidade da Microsoft é a pr
 > [!NOTE]
 > Isso se aplica ao Microsoft Edge na versão 85 ou posterior.
 
-Para saber mais sobre a DLP do Ponto de extremidade:
+Para saber mais sobre Endpoint DLP, use os seguintes recursos:
 
-- [Saiba mais sobre a prevenção contra perda de dados do ponto de extremidade do Microsoft 365 ](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide)
-- [Introdução à prevenção contra perda de dados do Ponto de extremidade](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide)
+- [Video: Microsoft Edge e Prevenção contra perda de dados (DLP)](microsoft-edge-video-security-dlp.md)
+- [Saiba mais sobre a prevenção contra perda de dados do ponto de extremidade do Microsoft 365 ](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide&preserve-view=true)
+- [Introdução à prevenção contra perda de dados do Ponto de extremidade](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide&preserve-view=true)
 
 O Microsoft Edge impõe políticas configuradas pelo administrador para arquivos confidenciais e registros de eventos de auditoria para atividades não compatíveis.
 
 Algumas das atividades do usuário que você pode auditar e gerenciar em dispositivos que executam o Windows 10 incluem as seguintes atividades:
 
-- Upload de Arquivos: Proteja o upload de arquivos confidenciais para locais não autorizados na nuvem. As próximas 3 capturas de tela mostram uma sequência em que um usuário tenta soltar um arquivo de dados confidenciais em seu armazenamento local.
+- Upload de Arquivos: Proteja o upload de arquivos confidenciais para locais não autorizados na nuvem. <!-- The next 3 screenshots show a sequence where a user tries to drop a sensitive data file on to their local storage.-->
 - Proteção da Área de Transferência: Protege os dados confidenciais contra cópias do arquivo.
 - Proteção de Impressão: Protege arquivos confidenciais contra impressão.
 - Salvar no USB/REDE: Protege arquivos confidenciais de serem salvos em armazenamento USB removível ou em locais de rede não autorizados.
 
-Para obter informações mais detalhadas sobre as atividades do usuário que você pode auditar e gerenciar, confira [Atividades do Ponto de Extremidade que você pode monitorar e executar](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on).
+Para obter informações mais detalhadas sobre as atividades do usuário que você pode auditar e gerenciar, confira [Atividades do Ponto de Extremidade que você pode monitorar e executar](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on&preserve-view=true).
 
 ## Proteção de Informações do Windows
 
@@ -62,5 +63,5 @@ Verifique o [Suporte para Proteção de Informações do Windows](https://docs.m
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Vídeo: Prevenção contra perda de dados - Microsoft Edge](https://www.youtube.com/watch?v=dLD04U9eTqg)
-- [Visão geral da prevenção contra perda de dados](https://docs.microsoft.com/microsoft-365/compliance/data-loss-prevention-policies?view=o365-worldwide)
+- [Visão geral da prevenção contra perda de dados](https://docs.microsoft.com/microsoft-365/compliance/data-loss-prevention-policies?view=o365-worldwide&preserve-view=true)
 - [Proteger os dados da sua empresa usando a Proteção de Informações do Windows](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)

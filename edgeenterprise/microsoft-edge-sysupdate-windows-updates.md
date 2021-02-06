@@ -3,30 +3,33 @@ title: Atualizações do Windows para o Microsoft Edge
 ms.author: jtkim
 author: dan-wesley
 manager: srugh
-ms.date: 02/20/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Atualizações do Windows para o Microsoft Edge
-ms.openlocfilehash: ab5832dc878495a0f0a0880676fb7c3e34b69d4d
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 953becc459fe729f84d54da419481b3c6e26cc47
+ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979100"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "11313901"
 ---
 # Atualizações do Windows para oferecer suporte à próxima versão do Microsoft Edge
 
 Este artigo descreve como o Windows será atualizado para oferecer suporte à próxima versão do Microsoft Edge.
+
+> [!IMPORTANT]
+> Consulte a postagem [do blog da equipe de produto do Microsoft Edge](https://aka.ms/EdgeLegacyEOS) sobre o fim de serviço da Versão Prévia do Microsoft Edge.
 
 > [!NOTE]
 > Este artigo aplica-se ao canal estável do Microsoft Edge.
 
 ## Microsoft Edge e o ciclo de lançamento do Windows
 
-A próxima versão do Microsoft Edge apresenta recursos de atualização mais frequentes e flexíveis. Como as versões do navegador não são vinculadas às versões principais do Windows, as alterações serão feitas no sistema operacional para garantir que a próxima versão do Microsoft Edge se adapte perfeitamente ao Windows. Como resultado, as atualizações de recursos serão lançadas em um ciclo de seis semanas (aproximadamente). As atualizações de segurança e compatibilidade serão enviadas conforme o necessário.
+A próxima versão do Microsoft Edge apresenta recursos de atualização mais frequentes e flexíveis. Como as versões do navegador não são vinculadas às versões principais do Windows, as alterações serão feitas no sistema operacional para garantir que a próxima versão do Microsoft Edge se adapte perfeitamente ao Windows. Como resultado, as atualizações de recursos serão lançadas em um ciclo de 6 semanas (aproximadamente). As atualizações de segurança e compatibilidade serão enviadas conforme necessário.
 
 ## Atualizações e a experiência do usuário
 

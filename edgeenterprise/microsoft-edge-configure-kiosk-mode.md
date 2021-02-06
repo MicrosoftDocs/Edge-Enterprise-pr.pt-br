@@ -3,19 +3,19 @@ title: Configurar o modo de quiosque do Microsoft Edge
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 01/21/2021
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurar o modo de quiosque do Microsoft Edge
-ms.openlocfilehash: be353a0e13e9234de40296a2e8dcc31b1b800f52
-ms.sourcegitcommit: 8a88fd38bdb5e132e89bf17dd2b5fb72f5d1b4b9
+ms.openlocfilehash: 3f6e75b73d8c541bae4442263a5b415aeeb15eb1
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "11297467"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314614"
 ---
 # Configurar o modo de quiosque do Microsoft Edge
 
@@ -39,44 +39,85 @@ Um conjunto inicial de recursos de modo de quiosque já está disponível para t
 
 ### Recursos com suporte no modo quiosque
 
-A tabela a seguir lista os recursos com suporte no modo quiosque.
+A tabela a seguir lista os recursos compatíveis com o modo quiosque no Microsoft Edge e na Versão Prévia do Microsoft Edge. Usar esta tabela como um guia para a transição para o Microsoft Edge, comparando como esses recursos são suportados em ambas as versões do Microsoft Edge.
 
-|Recurso|Sinalização Interativa/Digital|Navegação pública|Disponível com a versão do Microsoft Edge (e superior)|
-|-|-|-|-|
-|Navegação InPrivate.|S|S|87|
-|Redefinir em inatividade|S|S|87|
-|[Barra de endereços somente leitura](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) (política) |N|S |87|
-|[Excluir downloads na saída](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) (política)  | S|S |87|
-|F11 bloqueado (entrar/sair de tela inteira) | S | S | 87 |
-|F12 bloqueado (iniciar Ferramentas do Desenvolvedor) | S | S | 87 |
-| Suporte a várias guias | N| S| 87|
-|Botão encerrar sessão | N| S| 88|
-|Todas as URLs internas do Microsoft Edge estão bloqueadas, exceto *edge://downloads* e *edge://print* |N|S|88|
-| Ctrl+N bloqueado (abrir uma nova janela) | S | S | 89 |
-| Ctrl+T bloqueado (abrir nova guia) | N | S | 89 |
-|Configurações e mais (...) exibirá somente as opções necessárias  |N |S |89 |
+|Recurso|Sinalização Interativa/Digital|Navegação pública|Disponível com a versão do Microsoft Edge (e superior)|Disponível com Versão Prévia do Microsoft Edge|
+|-|-|-|-|-|
+|Navegação InPrivate.|S|S|89|S|
+|Redefinir em inatividade|S|S|89|S|
+|[Barra de endereços somente leitura](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) (política) |N|S |89|N|
+|[Excluir downloads na saída](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) (política)  | S|S |89|N|
+|F11 bloqueado (entrar/sair de tela inteira) | S | S | 89 |S|
+|F12 bloqueado (iniciar Ferramentas do Desenvolvedor) | S | S | 89 |S|
+| Suporte a várias guias | N| S| 89|S|
+|[Permitir suporte de URL](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) (política)|S|S|89|N|
+|[Bloquear suporte de URL](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) (política)|S|S|89|N|
+|[Mostrar botão Página Principal](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#showhomebutton) (política)|N|S|89|S|
+|[Gerenciar favoritos](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#managedfavorites) (política)|N|S|89|S|
+|[Habilitar impressora](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printingenabled) (política)|S|S|89|S|
+|[Configurar a URL da página de nova guia](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagelocation) (política)|N|S||S|
+|Botão encerrar sessão | N| S| 89|S|
+|Todas as URLs internas do Microsoft Edge estão bloqueadas, exceto *edge://downloads* e *edge://print* |N|S|89|S|
+| Ctrl+N bloqueado (abrir uma nova janela) | S | S | 89 |S|
+| Ctrl+T bloqueado (abrir nova guia) |S | S | 89 |S|
+|Configurações e mais (...) exibirá somente as opções necessárias  |S |S |89 |S|
+|Restringir o lançamento de outros aplicativos do navegador|S|S|90/91|S|
+|Bloqueio de configurações de impressão da IU|S|S|90/91|S|
+|[Defina a página da nova guia como a página inicial ](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepageisnewtabpage) (política)|-|-|A ser definido|S|
 
 > [!NOTE]
 > À medida que o modo de quiosque evolui, mais recursos estarão disponíveis.
 
 ## Usar recursos do modo de quiosque
 
-Você pode invocar os recursos do modo de quiosque do Microsoft Edge com as seguintes opções de linha de comando do Windows 10:
+Os recursos do modo quiosque do Microsoft Edge podem ser chamados com as seguintes opções de linha de comando do Windows 10 para sinalização digital / interativa e navegação pública.
 
-- Sinalização Interativa/Digital do modo de quiosque: `msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen`
-- Navegação pública modo de quiosque: `msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing`
+### Sinalização digital / interativa em modo quiosque
+ 
+```
+msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen
+```
+
+### Modo quiosque Navegação pública
+
+```
+msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
+```
 
 ### Opções de linha de comando adicionais
 
-- `--no-first-run` : Desabilite a primeira experiência de execução do Microsoft Edge.
-- `--kiosk-idle-timeout-minutes` : Altere o tempo (em minutos) da última atividade de usuário antes que o modo de quiosque do Microsoft Edge redefina a sessão do usuário. Os seguintes valores são válidos:
+- **--no-first-run:** desabilitar a primeira experiência de executar do Microsoft Edge.
 
-  - Valores padrão
-    - Tela cheia - desativado
-    - Navegação pública - 5 minutos
-  - Valores permitidos
-    - 0 - desativa o cronômetro
-    - 1-1440 minutos para redefinição no timer de ociosidade
+   ```
+  msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen --no-first-run
+  ```
+
+  ```
+  msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing --no-first-run
+  ```
+
+- **--kiosk-idle-timeout-minutes =**: Altere o tempo (em minutos) da última atividade do usuário antes que o modo quiosque do Microsoft Edge redefina a sessão do usuário. Substitua "valor" no próximo exemplo pelo número de minutos.
+
+   ```
+   --kiosk-idle-timeout-minutes=value
+   ``` 
+   Os seguintes "valores" são suportados:
+
+     - Valores padrão (em minutos)
+       - Tela inteira - 0 (desligado)
+       - Navegação pública - 5 minutos
+    - Valores permitidos
+      - 0 - desativa o cronômetro
+      - 1-1440 minutos para redefinição no timer de ociosidade
+
+
+    ```
+    msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen --kiosk-idle-timeout-minutes=1
+   ```
+
+   ```
+   msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing --kiosk-idle-timeout-minutes=1
+   ```
 
 ## Políticas suportadas no modo de quiosque
 
@@ -98,6 +139,7 @@ Use qualquer uma das políticas do Microsoft Edge listadas na tabela a seguir pa
 |[UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed) |N | S|
 |[VerticalTabsAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#verticaltabsallowed) | N|S |
 |[Configurações do SmartScreen](https://docs.microsoft.com/deployedge/microsoft-edge-policies#smartscreen-settings-policies) |S |S |
+|[EdgeCollectionsEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgecollectionsenabled)|S|S|
 
 ## Microsoft Edge com acesso atribuído
 
@@ -105,7 +147,7 @@ Use qualquer uma das políticas do Microsoft Edge listadas na tabela a seguir pa
 
 No momento, o Microsoft Edge tem suporte para um subconjunto de tipos de modo quiosque da Versão Prévia do Microsoft Edge para acesso atribuído a um aplicativo único com as seguintes experiências de bloqueio: com a Navegação Digital/Interativa e Pública.  
 
-O modo de quiosque do Microsoft Edge com acesso atribuído está disponível atualmente para teste com a versão mais recente do  [Windows 10 Insider Preview](https://insider.windows.com/), versão 20215 ou superior e com o  [Canal Microsoft Edge Dev](https://www.microsoftedgeinsider.com/download), versão 87.0.644.4 ou superior.
+O modo quiosque do Microsoft Edge com aplicativo único de acesso atribuído está disponível atualmente para teste com o  [Windows 10 Insider Preview Build ](https://insider.windows.com/), versão 20215 ou superior, e com o [Microsoft Edge Beta Channel](https://www.microsoftedgeinsider.com/download), versão 89 ou superior.
 
 **Como faço para obter a visualização do Windows Insiders?**
 
@@ -122,11 +164,7 @@ Ao usar o Microsoft Edge com acesso atribuído a vários aplicativos, você pode
 As Configurações do Windows é a maneira mais simples de configurar um ou mais dispositivos em modo de quiosque de aplicativo único. Use as etapas a seguir para configurar um computador em modo de quiosque de aplicativo único.
 
 1. Instale a versão do Windows 10 Insider Preview mais recente, versão 20215 ou superior. Siga as instruções em [Introdução às Compilações de Visualização do Windows 10 Insider](https://docs.microsoft.com/windows-insider/get-started).
-2. Instale a versão mais recente do [Canal Estável do Microsoft Edge](https://www.microsoft.com/edge)versão 87 ou superior.  Para testar os recursos mais recentes, você pode baixar o [Canal Microsoft Edge Dev](https://www.microsoftedgeinsider.com/download)mais recente, versão 89 ou superior.
-
-   > [!IMPORTANT]
-   > Como é necessária uma instalação no nível do dispositivo, só há suporte para um canal que não seja Canary.
-
+2. Para testar os recursos mais recentes, você pode baixar o [canal Microsoft Edge Beta ](https://www.microsoftedgeinsider.com/download)mais recente, versão 89 ou superior.
 3. No computador modo de quiosque, abra as configurações do Windows e digite "modo de quiosque" no campo de pesquisa. Selecione  **Configurar um modo de quiosque (acesso atribuído)**, mostrada na próxima captura de tela para abrir a caixa de diálogo para criar o modo de quiosque.
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-1-assigned-access.png" alt-text="Configurar o modo de quiosque com acesso atribuído":::
@@ -175,6 +213,13 @@ Com o lançamento desta versão de visualização do modo de quiosque, continuam
 
 Recomendamos que você desligue:
 
+- [InPrivateModeAvailability](https://docs.microsoft.com/deployedge/microsoft-edge-policies#inprivatemodeavailability)
+- [IsolateOrigins](https://docs.microsoft.com/deployedge/microsoft-edge-policies#isolateorigins)
+- [ManagedFavorites](https://docs.microsoft.com/deployedge/microsoft-edge-policies#managedfavorites)
+- [EdgeShoppingAssistantEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgeshoppingassistantenabled)
+- [EdgeCollectionsEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgecollectionsenabled)
+- [UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed)
+- [DefaultPopupsSetting](https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultpopupssetting)
 - [StartupBoostEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#startupboostenabled)
 - [InternetExplorerIntegrationLevel](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlevel)
 - [Extensões](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensions-policies)
@@ -189,12 +234,12 @@ Incluiremos os seguintes recursos e suporte:
 - Disponibilidade geral do modo de quiosque do Microsoft Edge com acesso atribuído a um único aplicativo no Windows 10 1909 ou superior.
 - Recursos adicionais para a paridade com a Versão Prévia do Microsoft Edge.
 - Integração com o Intune para configurar os dispositivos usando o Profile UX do modo de quiosque.
-- Atalhos de teclado adicionais serão bloqueados.
 - Restrinja o lançamento de outros aplicativos do navegador.
+- Bloqueio das configurações de impressão da interface do usuário.
 
 ## Veja também
 
-- [Configurar quiosques e sinalizações digitais em edições do Windows desktop](https://docs.microsoft.com/windows/configuration/kiosk-methods)
-- [Implantar o modo de quiosque da Versão Herdada do Microsoft Edge](https://aka.ms/edgekioskmode)
+- [Página de destino do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Planejar sua implantação do Microsoft Edge](deploy-edge-plan-deployment.md)
-- [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
+- [Configurar quiosques e sinalizações digitais em edições do Windows desktop](https://docs.microsoft.com/windows/configuration/kiosk-methods)
+- [Planejar a transição do modo de quiosque](microsoft-edge-kiosk-mode-transition-plan.md)

@@ -3,19 +3,19 @@ title: Suporte do Microsoft Edge para o Microsoft Defender SmartScreen
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 04/23/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Suporte do Microsoft Edge para o Microsoft Defender SmartScreen
-ms.openlocfilehash: d27366409d7792784c360cfee10f96ab174aa375
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 2de93b4ebe26b4a90592f7ee9143f6f775b682ce
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979164"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314684"
 ---
 # Suporte do Microsoft Edge para o Microsoft Defender SmartScreen
 
@@ -24,7 +24,7 @@ Este artigo descreve as vantagens de usar o Microsoft Defender SmartScreen, expl
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
 
-O Microsoft Defender SmartScreen é um serviço que o Microsoft Edge usa para manter você seguro enquanto navega pela Web. O Microsoft Defender SmartScreen fornece um sistema de aviso prévio contra sites que podem se envolver em ataques de phishing ou tentar distribuir software mal-intencionado por meio de um ataque focado.
+O Microsoft Defender SmartScreen é um serviço que o Microsoft Edge usa para manter você seguro enquanto navega pela Web. O Microsoft Defender SmartScreen fornece um sistema de aviso prévio contra sites que podem se envolver em ataques de phishing ou tentar distribuir software mal-intencionado por meio de um ataque focado. Para obter mais informações, assista a [Vídeo: Navegação segura no Microsoft Edge](microsoft-edge-video-security-smartscreen.md).
 
 > [!NOTE]
 > Antes do Windows 10, versão 1703, esse recurso era chamado de filtro do SmartScreen, quando usado no navegador, e Microsoft SmartScreen, quando usado fora do navegador.
@@ -62,13 +62,13 @@ Os usuários recebem a opção de relatar um site como seguro ou não seguro na 
 O Microsoft Defender SmartScreen determina se um aplicativo baixado ou um instalador de aplicativo é potencialmente mal-intencionado com base em vários critérios, como o tráfego de downloads, o histórico de downloads, o histórico de resultados do antivírus e a reputação da URL.
 
 - Arquivos com uma reputação segura conhecida serão baixados sem qualquer notificação.  
-- Arquivos com reputação mal-intencionada conhecida mostram um aviso para informar ao usuário que o arquivo não é seguro e foi relatado como mal-intencionado. A captura de tela a seguir é um exemplo de aviso de arquivo mal-intencionado.
+- Arquivos com reputação mal-intencionada conhecida mostram um aviso para informar ao usuário que o arquivo não é seguro e foi relatado como mal-intencionado. Microsoft Defender SmartScreen bloquea notificação para arquivo com reputação maliciosa
 
-  ![Página de bloqueio de arquivo com reputação de mal-intencionado do Microsoft Defender SmartScreen](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-known-malicious.png)
+  ![Microsoft Defender SmartScreen bloquea notificação para arquivo com reputação maliciosa](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-known-malicious.png)
 
 - Os arquivos desconhecidos mostram um aviso para que o usuário saiba que o download não possui uma pegada conhecida e se recomenda cautela. A próxima captura de tela é um exemplo de aviso de um arquivo desconhecido.
 
-  ![Página de bloqueio de arquivo com reputação de mal-intencionado do Microsoft Defender SmartScreen](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-unknown-malicious.png)
+  ![Microsoft Defender SmartScreen bloquear notificação para arquivo com reputação desconhecida](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-unknown-malicious.png)
 
 Nem todos os programas desconhecidos são mal-intencionados, e o aviso de desconhecido tem o objetivo de fornecer contexto e orientação aos usuários que precisam, principalmente se o aviso for inesperado.
 
@@ -119,7 +119,8 @@ Enquanto você navega na Web, o Microsoft Defender SmartScreen categoriza sites 
 
 ## Consulte também
 
-- [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
+- [Página inicial do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
+- [Vídeo: navegação segura no Microsoft Edge](microsoft-edge-video-security-smartscreen.md)
 - [Visão geral do Microsoft Defender SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview)
 - [Proteção contra ameaças](https://docs.microsoft.com/windows/security/threat-protection/index)
 - [Proteção contra aplicativos potencialmente indesejados](https://docs.microsoft.com/DeployEdge/microsoft-edge-potentially-unwanted-apps)
