@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/27/2021
+ms.date: 02/03/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 59c3c3426e3e7db2c5a115b15ae5e9b9e7628f9e
-ms.sourcegitcommit: e9433045503c2614386ee4948cda0a9c9701bac5
+ms.openlocfilehash: e57c840931e2c0e73eb720179fc780182d433831
+ms.sourcegitcommit: 5cdcf44324e35c3ac71d7ca78e512f64d4dcbfea
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "11304724"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "11313419"
 ---
 # Microsoft Edge - Políticas
 
@@ -33,9 +33,11 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 
 A tabela a seguir lista as novas políticas desta atualização.
 
-| Nome | Lista de endereçamento |
+| Nome| Lista de endereçamento |
 |--|--|
-|[SmartActionsBlockList](#smartactionsblocklist)|Bloquear ações inteligentes para uma lista de serviços|
+|[WindowsHelloForHTTPAuthEnabled](#windowshelloforhttpauthenabled)|Windows Hello Para Autenticação HTTP Habilitada|
+|[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Define valores de configuração gerenciados para websites de origens específicas|
+
 
 ## Políticas disponíveis
 
@@ -144,6 +146,7 @@ e dicas para os serviços Microsoft|
 |[DisableAuthNegotiateCnameLookup](#disableauthnegotiatecnamelookup)|Desabilitar a pesquisa CNAME durante a negociação da autenticação Kerberos|
 |[EnableAuthNegotiatePort](#enableauthnegotiateport)|Incluir porta não padrão no SPN Kerberos|
 |[NtlmV2Enabled](#ntlmv2enabled)|Controlar se a autenticação NTLMv2 está habilitada|
+|[WindowsHelloForHTTPAuthEnabled](#windowshelloforhttpauthenabled)|Windows Hello Para Autenticação HTTP Habilitada|
 ### [*Configurações do modo de quiosque*](#kiosk-mode-settings-policies)
 
 |Nome da política|Legenda|
@@ -360,6 +363,7 @@ e dicas para os serviços Microsoft|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Comportamento de redirecionamento da intranet|
 |[IsolateOrigins](#isolateorigins)|Habilitar o isolamento de sites para determinadas origens|
 |[LocalProvidersEnabled](#localprovidersenabled)|Permitir sugestões de provedores locais|
+|[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Define valores de configuração gerenciados para websites de origens específicas|
 |[ManagedFavorites](#managedfavorites)|Configurar Favoritos|
 |[ManagedSearchEngines](#managedsearchengines)|Gerenciar mecanismos de pesquisa|
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|Número máximo de conexões simultâneas com o servidor proxy|
@@ -412,7 +416,7 @@ e dicas para os serviços Microsoft|
 |[SpellcheckEnabled](#spellcheckenabled)|Habilitar verificação ortográfica|
 |[SpellcheckLanguage](#spellchecklanguage)|Habilitar idiomas de verificação ortográfica específicos|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|Forçar a desabilitação de idiomas de verificação ortográfica|
-|[StricterMixedContentTreatmentEnabled](#strictermixedcontenttreatmentenabled)|Habilitar tratamento mais estrito para conteúdo misto (preterido)|
+|[StricterMixedContentTreatmentEnabled](#strictermixedcontenttreatmentenabled)|Habilitar um tratamento mais restrito para conteúdo misto (obsoleto)|
 |[SuppressUnsupportedOSWarning](#suppressunsupportedoswarning)|Suprimir o aviso do sistema operacional sem suporte|
 |[SyncDisabled](#syncdisabled)|Desabilitar a sincronização de dados usando o Microsoft Sync Services|
 |[SyncTypesListDisabled](#synctypeslistdisabled)|Configurar a lista de tipos excluídos da sincronização.|
@@ -770,7 +774,7 @@ Observe que não é possível definir padrões de URL conflitantes entre essas t
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
-Para obter informações detalhadas sobre os padrões válidos de url, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
+Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
 
 Para impedir que os cookies sejam excluídos na saída, configure a política [SaveCookiesOnExit](#savecookiesonexit).
 
@@ -5157,6 +5161,59 @@ Se você não configurar essa política, o NTLMv2 estará habilitado por padrão
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### WindowsHelloForHTTPAuthEnabled
+
+  #### Windows Hello Para Autenticação HTTP Habilitada
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows desde 90 ou posterior
+
+  #### Descrição
+
+  Indica se a IU de Credencial do Windows deve ser usada para responder aos desafios de autenticação do NTLM e negociar.
+
+Se você desabilitar esta política, um nome de usuário básico e uma senha serão usados para responder aos desafios da NTLM e Negociar. Se você habilitar ou não configurar esta política, será utilizada a IU de Credencial do Windows.
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: Sim
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### Tipo de dados:
+
+  - Booliano
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: WindowsHelloForHTTPAuthEnabled
+  - Nome da Política de Grupo: Windows Hello para autenticação HTTP habilitada
+  - Caminho da Política de Grupo (Obrigatório): Administrative Templates/Microsoft Edge/HTTP authentication
+  - Caminho da Política de Grupo (Recomendado): Administrative Templates/Microsoft Edge - Default Settings (users can override)/HTTP authentication
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (Recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Nome do Valor: WindowsHelloForHTTPAuthEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de exemplo:
+
+```
+0x00000001
+```
+
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ## Configurações de política do modo de quiosque
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -5304,7 +5361,7 @@ Se você habilitar essa política ou não a configurar, as Políticas de Gerenci
 
 Se você desabilitar essa política, o Microsoft Edge não se comunicará com o Intune para solicitar políticas de MAM.
 
-  #### Recursos compatíveis:
+  #### Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -6409,7 +6466,7 @@ Use as informações anteriores ao configurar essa política.
 
   - Nome exclusivo da Política de Grupo: PrintingBackgroundGraphicsDefault
   - Nome da Política de Grupo: modo de impressão de gráficos em segundo plano padrão
-  - Caminho da Política de Grupo (obrigatório): Modelos administrativos/Microsoft Edge/Impressão
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Printing
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -7002,7 +7059,7 @@ Para obter exemplos mais detalhados, acesse [https://go.microsoft.com/fwlink/?li
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
-  ##### Configurações de registro do Windows
+  ##### Configurações de Registro do Windows
 
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): N/A
@@ -7248,7 +7305,7 @@ Use as informações anteriores ao configurar essa política.
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Nome do Valor: SleepingTabsTimeout
-  - Tipo de Valor: REG_DWORD
+  - Tipo de valor: REG_DWORD
 
   ##### Valor de exemplo:
 
@@ -8573,7 +8630,7 @@ Se você não configurar a política, os usuários poderão optar por mostrar o 
 Se você desabilitar essa política, os usuários não poderão ver os resultados internos na lista de sugestões da barra de endereço do Microsoft Edge.
 A partir da versão 89 do Microsoft Edge, as sugestões da Pesquisa da Microsoft no Bing estarão disponíveis mesmo se o Bing não for o provedor de pesquisa padrão do usuário.
 
-  #### Recursos com suporte:
+  #### Recursos compatíveis:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -8767,7 +8824,7 @@ Se você habilitar ou não configurar essa política, os usuários poderão abri
 
 Se você desabilitar essa política, sempre que o usuário executar uma ação que acione uma caixa de diálogo de seleção de arquivo (como importar favoritos, carregar arquivos ou salvar links), uma mensagem será exibida, e o usuário deverá clicar em Cancelar na caixa de diálogo de seleção de arquivo.
 
-  #### Recursos compatíveis:
+  #### Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -16717,11 +16774,11 @@ Use as informações anteriores ao configurar essa política.
 
   #### Informações e configurações do Windows
 
-  ##### Informações da política de grupo (ADMX)
+  ##### Informações da Política de Grupo (ADMX)
 
   - Nome exclusivo da política de grupo: IntranetRedirectBehavior
   - Nome da política de grupo: comportamento de redirecionamento da intranet
-  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -16878,6 +16935,103 @@ Essa política exige uma reinicialização do navegador para concluir a aplicaç
   - Valor de exemplo:
 ``` xml
 <false/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### ManagedConfigurationPerOrigin
+
+  #### Define valores de configuração gerenciados para websites de origens específicas
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows e no macOS desde 90 ou posterior
+
+  #### Descrição
+
+  A definição desta diretiva define o valor de retorno da API de Configuração Gerenciada para determinada origem.
+
+ A API de configuração gerenciada é uma configuração de valor chave que pode ser acessada pela chamada javascript navigator.device.getManagedConfiguration(). Esta API só está disponível para as origens que correspondem às aplicações web instaladas à força através do [WebAppInstallForceList](#webappinstallforcelist).
+
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### Tipo de dados:
+
+  - Dictionary
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: ManagedConfigurationPerOrigin
+  - Nome da Política de Grupo: Define valores de configuração gerenciados para sites de origens específicas
+  - Caminho da Política de Grupo (Obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (Recomendado): N/A
+  - Nome do Valor: ManagedConfigurationPerOrigin
+  - Tipo do Valor: REG_SZ
+
+  ##### Valor de exemplo:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [
+  {
+    "managed_configuration_hash": "asd891jedasd12ue9h", 
+    "managed_configuration_url": "https://static.contoso.com/configuration.json", 
+    "origin": "https://www.contoso.com"
+  }, 
+  {
+    "managed_configuration_hash": "djio12easd89u12aws", 
+    "managed_configuration_url": "https://static.contoso.com/configuration2.json", 
+    "origin": "https://www.example.com"
+  }
+]
+```
+
+  ##### Valor do exemplo de compactação:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [{"managed_configuration_hash": "asd891jedasd12ue9h", "managed_configuration_url": "https://static.contoso.com/configuration.json", "origin": "https://www.contoso.com"}, {"managed_configuration_hash": "djio12easd89u12aws", "managed_configuration_url": "https://static.contoso.com/configuration2.json", "origin": "https://www.example.com"}]
+  ```
+  
+
+  #### Informações e configurações do Mac
+  
+  - Nome da Chave Preferencial: ManagedConfigurationPerOrigin
+  - Valor de exemplo:
+``` xml
+<key>ManagedConfigurationPerOrigin</key>
+<array>
+  <dict>
+    <key>managed_configuration_hash</key>
+    <string>asd891jedasd12ue9h</string>
+    <key>managed_configuration_url</key>
+    <string>https://static.contoso.com/configuration.json</string>
+    <key>origin</key>
+    <string>https://www.contoso.com</string>
+  </dict>
+  <dict>
+    <key>managed_configuration_hash</key>
+    <string>djio12easd89u12aws</string>
+    <key>managed_configuration_url</key>
+    <string>https://static.contoso.com/configuration2.json</string>
+    <key>origin</key>
+    <string>https://www.example.com</string>
+  </dict>
+</array>
 ```
   
 
@@ -19751,7 +19905,7 @@ Se você não configurar esta política:
    - Os usuários da conta Microsoft (exclui contas do Azure AD) em busca e conquista de mercados verão a experiência do Microsoft Rewards em seu perfil de usuário do Microsoft Edge.
    - A configuração para habilitar o Microsoft Rewards nas configurações do Microsoft Edge será habilitada e alternada.
 
-  #### Recursos com suporte:
+  #### Recursos compatíveis:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: Sim
@@ -19767,7 +19921,7 @@ Se você não configurar esta política:
 
   - Nome exclusivo da Política de Grupo: ShowMicrosoftRewards
   - Nome da Política de Grupo: mostrar experiências do Microsoft Rewards
-  - Caminho da Política de Grupo (obrigatório): modelos Administrativos/Microsoft Edge/
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): Administrative Templates/Microsoft Edge - Default Settings (usuários podem substituir)/
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -19776,7 +19930,7 @@ Se você não configurar esta política:
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Nome do Valor: ShowMicrosoftRewards
-  - Tipo de Valor: REG_DWORD
+  - Tipo de valor: REG_DWORD
 
   ##### Valor de exemplo:
 
@@ -20088,8 +20242,8 @@ Use as informações anteriores ao configurar essa política.
   ##### Informações da Política de Grupo (ADMX)
 
   - Nome Exclusivo da PG: SmartActionsBlockList
-  - Nome da PG: Bloquear ações inteligentes para uma lista de serviços
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Nome da Política de Grupo: Bloquear as ações inteligentes para obter uma lista de serviços
+  - Caminho da Política de Grupo (Obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): Administrative Templates/Microsoft Edge - Default Settings (usuários podem substituir)/
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -20372,17 +20526,17 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
   ### StricterMixedContentTreatmentEnabled
 
-  #### Habilitar tratamento mais estrito para conteúdo misto (preterido)
+  #### Habilitar um tratamento mais restrito para conteúdo misto (obsoleto)
 
-  >SUBSTITUÍDO: Essa política está preterida. Ela tem suporte no momento, mas se tornará obsoleta em uma versão futura.
   
+  >OBSOLETA: Esta política está obsoleta e não funciona após a versão 84 do Microsoft Edge.
   #### Versões com suporte:
 
-  - No Windows e no macOS desde 81 ou mais recente
+  - No Windows e mo macOS desde 81, até 84
 
   #### Descrição
 
-  Essa política foi preterida porque destina-se a ser um mecanismo de curto prazo para dar mais tempo para que as empresas atualizem o conteúdo da Web se e quando ele for incompatível com um tratamento de conteúdo misto mais estrito. Ela não funcionará no Microsoft Edge versão 85.
+  Esta política não funciona porque se destina a ser apenas um mecanismo de curto prazo para dar às empresas mais tempo para atualizar seu conteúdo da web se for considerado incompatível com um tratamento mais rígido de conteúdo misto.
 
 Esta política controla o tratamento de conteúdo misto (conteúdo HTTP em sites HTTPS) no navegador.
 
@@ -20407,8 +20561,8 @@ Essa política não afeta outros tipos de conteúdo misto diferentes de áudio, 
   ##### Informações da Política de Grupo (ADMX)
 
   - Nome Exclusivo da Política de Grupo: StricterMixedContentTreatmentEnabled
-  - Nome da GP: Habilitar tratamento mais estrito para conteúdo misto (preterido)
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Nome da Política de Grupo: Habilitar um tratamento mais restrito para conteúdo misto (obsoleto)
+  - Caminho da Política de Grupo (Obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -20713,7 +20867,7 @@ O pacote de codificação TLS 1.3 TLS_AES_128_GCM_SHA256 (0x1301) é necessário
 
 Essa política não afeta as conexões baseadas em QUIC. O QUIC pode ser desativado pela política [QuicAllowed](#quicallowed).
 
-  #### Recursos compatíveis:
+  #### Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -20846,7 +21000,7 @@ Se você desabilitar esta política, os pop-ups que direcionam _blank têm permi
 
 Essa política será obsoleta no Microsoft Edge versão 95.
 
-  #### Recursos com suporte:
+  #### Recursos compatíveis:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -20871,7 +21025,7 @@ Essa política será obsoleta no Microsoft Edge versão 95.
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): N/A
   - Nome do Valor TargetBlankImpliesNoOpener
-  - Tipo de Valor: REG_DWORD
+  - Tipo de valor: REG_DWORD
 
   ##### Valor de exemplo:
 
@@ -21882,9 +22036,16 @@ Independente da política ser habilitada, a configuração de otimização WPAD 
 
   Configure essa política para especificar uma lista de aplicativos Web que são instalados silenciosamente, sem interação do usuário e quais usuários não podem desinstalar ou desativar.
 
-Cada item de lista da política é um objeto com membro obrigatório: URL (a URL do aplicativo Web a ser instalada) e 2 Membros opcionais: default_launch_container (especifica o modo de janela que o aplicativo Web abre com uma nova guia é o padrão) e o create_desktop_shortcut (verdadeiro se quiser criar atalhos para a área de trabalho do Linux e Windows).
+Cada item da lista da política é um objeto com um membro obrigatório: url (o URL do aplicativo da web a ser instalado)
 
-  #### Recursos compatíveis:
+e 3 membros opcionais:
+- default_launch_container (especifica o modo de janela que o aplicativo da web abre, por padrão, com uma nova guia.)
+
+- create_desktop_shortcut (Verdadeiro se você quiser criar atalhos do Linux e da Área de trabalho do Windows.)
+
+- override_app_name (Iniciando com o Microsoft Edge 89, permite que você substitua o nome do aplicativo se não for um Aplicativo Web Progressivo (PWA) ou o nome do aplicativo que está temporariamente instalado se for um PWA, mas a autenticação é necessária antes que a instalação possa ser concluída.)
+
+  #### Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -21923,6 +22084,11 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
     "default_launch_container": "tab", 
     "url": "https://app.contoso.edu"
+  }, 
+  {
+    "default_launch_container": "window", 
+    "override_app_name": "Editor", 
+    "url": "https://app.contoso.com/editor"
   }
 ]
 ```
@@ -21930,7 +22096,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### Valor do exemplo de compactação:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "override_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
   ```
   
 
@@ -21954,6 +22120,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
     <string>tab</string>
     <key>url</key>
     <string>https://app.contoso.edu</string>
+  </dict>
+  <dict>
+    <key>default_launch_container</key>
+    <string>window</string>
+    <key>override_app_name</key>
+    <string>Editor</string>
+    <key>url</key>
+    <string>https://app.contoso.com/editor</string>
   </dict>
 </array>
 ```
@@ -22051,11 +22225,11 @@ Se você definir essa política como falsa ou não definir essa política, os re
 
   #### Informações e configurações do Windows
 
-  ##### Informações da Política de Grupo (ADMX)
+  ##### Informações da política de grupo (ADMX)
 
   - Nome Exclusivo da Política de Grupo: WebComponentsV0Enabled
   - Nome da Política de Grupo: Reabilitar a API de componentes Web V0 até M84 (obsoleta)
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -22602,7 +22776,7 @@ Se você desabilitar ou não configurar essa política, o solucionador de proxy 
   [Voltar ao início](#microsoft-edge---policies)
 
 
-## Consulte também
+## Ver também
 
 - [Configurar o Microsoft Edge](configure-microsoft-edge.md)
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
