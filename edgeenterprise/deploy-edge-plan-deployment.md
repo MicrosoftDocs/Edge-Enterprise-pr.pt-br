@@ -1,21 +1,21 @@
 ---
 title: Planejar sua implantação do Microsoft Edge
-ms.author: cjacks
+ms.author: collw
 author: appcompatguy
-manager: saudm
-ms.date: 11/04/2020
+manager: srugh
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: procedural
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Planejar sua implantação do Microsoft Edge
-ms.openlocfilehash: a6c24dcc8c2f53bd6813a0dea9584cd6b5df8285
-ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
+ms.openlocfilehash: 1b56d9874550c2002cec0577a53a3bf5766e2805
+ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "11155248"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "11313871"
 ---
 # Planejar sua implantação do Microsoft Edge
 
@@ -55,7 +55,6 @@ Comece definindo o estado atual:
 Depois de entender o estado atual, você poderá determinar as metas desejadas para a implantação do navegador, levando em conta o seguinte:
 
 - Deseja [definir o Microsoft Edge como navegador padrão](https://docs.microsoft.com/DeployEdge/edge-default-browser)?
-- Você deseja ocultar a versão herdada do Microsoft Edge ou [deixá-la disponível para os usuários](https://docs.microsoft.com/DeployEdge/microsoft-edge-sysupdate-access-old-edge)?
 - Como você [configurará o Microsoft Edge](https://docs.microsoft.com/DeployEdge/configure-microsoft-edge)?
 - Quais recursos são cruciais para serem configurados como parte da implantação inicial?
 - Qual é o processo para abordar problemas identificados de compatibilidade ou configuração?
@@ -211,4 +210,3 @@ Depois de concluir o piloto e atualizar o plano de implantação com as lições
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Vídeo - Implantar o Microsoft Edge](microsoft-edge-video-deploy.md)
-

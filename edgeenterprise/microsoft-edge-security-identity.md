@@ -3,23 +3,23 @@ title: Configuração e suporte à identidade do Microsoft Edge
 ms.author: avvaid
 author: dan-wesley
 manager: srugh
-ms.date: 12/08/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configuração e suporte à identidade do Microsoft Edge
-ms.openlocfilehash: e553174fa40cb60046e5a46af4d81a0787957a93
-ms.sourcegitcommit: b3f8ef9e4944efa3be15c7bfc0cd13360a350c1c
+ms.openlocfilehash: 05dc0fabe212f31fe9207c72d097913d5765915f
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "11201288"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314604"
 ---
 # Configuração e suporte à identidade do Microsoft Edge
 
-Este artigo descreve como o Microsoft Edge usa a identidade para dar suporte a recursos como sincronização e logon único (SSO). O Microsoft Edge oferece suporte para entrada usando: Serviços de Domínio Active Directory (AD DS), Azure Active Directory (Azure AD) e contas da Microsoft (MSA). No momento o Microsoft Edge suporta apenas contas do Azure Active Directory (Azure AD) pertencentes à nuvem global ou à nuvem soberana do GCC. Estamos trabalhando para adicionar outras nuvens soberanas. 
+Este artigo descreve como o Microsoft Edge usa a identidade para dar suporte a recursos como sincronização e logon único (SSO). O Microsoft Edge oferece suporte para entrada usando: Serviços de Domínio Active Directory (AD DS), Azure Active Directory (Azure AD) e contas da Microsoft (MSA). No momento o Microsoft Edge suporta apenas contas do Azure Active Directory (Azure AD) pertencentes à nuvem global ou à nuvem soberana do GCC. Estamos trabalhando para adicionar outras nuvens soberanas.
 
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
@@ -28,7 +28,7 @@ Este artigo descreve como o Microsoft Edge usa a identidade para dar suporte a r
 
 Com o Microsoft Edge é possível entrar em um perfil de navegador com uma conta do Azure AD, uma conta MSA ou uma conta de domínio. O tipo de conta usada para entrar determina quais recursos autenticados estão disponíveis para o usuário no Microsoft Edge. A tabela a seguir resume o suporte a recursos para cada tipo de conta.
 
-|    | Azure AD Premium | Azure AD Gratuito | AD DS local | MSA     |
+| Recurso   | Azure AD Premium | Azure AD Gratuito | AD DS local | MSA     |
 |----|------------------|---------------|----------------|---------|
 | Sincronização | Sim | Não | Não | Sim |
 | SSO com Token de atualização principal | Sim | Sim | Não | Sim |
@@ -51,7 +51,7 @@ Por padrão, o usuário não será conectado automaticamente. Se você deseja co
 
 ### Entrada manual
 
-Caso o usuário não entre automaticamente, ele poderá entrar manualmente no Microsoft Edge, durante a primeira experiência de execução, configurações do navegador ou abrindo o submenu de identidade. 
+Caso o usuário não entre automaticamente, ele poderá entrar manualmente no Microsoft Edge, durante a primeira experiência de execução, configurações do navegador ou abrindo o submenu de identidade.
 
 ### Gerenciando a entrada do navegador
 
@@ -103,8 +103,8 @@ Se um usuário salvar senhas no Microsoft Edge, ele poderá habilitar um recurso
 
 ## Consulte também
 
-- [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Página de aterrissagem da documentação do Microsoft Edge](https://docs.microsoft.com/DeployEdge/)
+- [Página inicial do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
+- [Vídeo: Microsoft Edge e Identidade](microsoft-edge-video-identity.md)
 - [Gerenciamento de identidades e acessos](https://www.microsoft.com/security/technology/identity-access-management)
 - [Plataforma de identidade](https://developer.microsoft.com/identity)
 - [Quatro etapas para uma base de identidade segura com Azure Active Directory](https://docs.microsoft.com/azure/active-directory/hybrid/four-steps)

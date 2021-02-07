@@ -3,25 +3,25 @@ title: Segurança do Microsoft Edge para a sua empresa
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 11/18/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Segurança do Microsoft Edge para a sua empresa
-ms.openlocfilehash: 52e55c64aad193072c44f6bc76e5c66808a5439d
-ms.sourcegitcommit: 5a5be508c3c9c57187aca821b4a16f639abdd7e2
+ms.openlocfilehash: eb981f3ed47b40219e50818531132ed5d385b642
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "11176948"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314674"
 ---
 # Segurança do Microsoft Edge para a sua empresa
 
-O Microsoft Edge foi criado a partir do projeto de fonte aberta Chromium, que é a base do Google Chrome, o que significa que ele compartilha o design e a mesma arquitetura de segurança bem planejada e bem testada na sua fundação. A história de segurança do Microsoft Edge não para por aqui. Na verdade, o **Microsoft Edge é mais seguro do que o Google Chrome para sua empresa no Windows 10**. Ele tem defesas sofisticadas e avançadas contra phishing e malware, e tem suporte nativo para o isolamento de hardware no Windows 10, não necessitando de nenhum software adicional para alcançar essa linha de base segura. Além disso, quando comparado com o suporte nativo para os serviços de segurança e conformidade do Microsoft 365, o Microsoft Edge traz recursos de segurança e recursos avançados adicionais que ajudam a proteger contra a perda de dados para obter ainda mais benefícios.
+O Microsoft Edge foi criado a partir do projeto de fonte aberta Chromium, que é a base do Google Chrome, o que significa que ele compartilha o design e a mesma arquitetura de segurança bem planejada e bem testada na sua fundação. A história de segurança do Microsoft Edge não para por aqui. Na verdade, o **Microsoft Edge é mais seguro do que o Google Chrome para sua empresa no Windows 10**. Ele tem defesas sofisticadas e avançadas contra phishing e malware, e tem suporte nativo para o isolamento de hardware no Windows 10, não necessitando de nenhum software adicional para alcançar essa linha de base segura. Além disso, quando comparado com o suporte nativo para os serviços de segurança e conformidade do Microsoft 365, o Microsoft Edge traz recursos de segurança e recursos avançados adicionais que ajudam a proteger contra a perda de dados para obter ainda mais benefícios. Para obter mais informações, assista [Vídeo: segurança, compatibilidade e capacidade de gerenciamento do Microsoft Edge](microsoft-edge-video-security-compatibility-manageability.md).
 
-Vamos entrar nos detalhes, começando com as ameaças externas e, em seguida, conferimos a **proteção de informações e riscos internos**.
+Vamos entrar nos detalhes, começando com as **ameaças externas** e, em seguida, conferimos a **proteção de informações e riscos internos**.
 
 ## Proteção contra ameaças externas
 
@@ -58,11 +58,12 @@ Além da proteção contra ameaças externas, os administradores de TI também d
 
 A **prevenção contra perda de dados do Ponto de extremidade da Microsoft (Endpoint DLP) só tem suporte nativo no Microsoft Edge**. O Ponto de extremidade da DLP integra-se com a Central de Segurança da Microsoft e estende a proteção de informações ao Microsoft Edge para ajudar a alertar os usuários sobre atividades não compatíveis e evitar a perda de dados enquanto os usuários trabalham online. Ela descobre e rotula os dados confidenciais dentro da empresa que correspondem aos critérios definidos pelo administrador, como arquivos que contenham números de cartão de crédito ou identificações governamentais (por exemplo, números de seguridade social), informações financeiras, etc. As políticas de proteção de informações da Microsoft podem ser implantadas no Microsoft Endpoint DLP sem a reconfiguração adicional, incluindo identificadores de conteúdo confidenciais e políticas que os administradores de TI já personalizaram. Essa é uma implantação tranquila da proteção de informações para administradores de TI.
 
-Para saber mais sobre os pré-requisitos do Ponto de extremidade da DLP e como configurá-lo, confira [Introdução à prevenção contra perda de dados de Ponto de extremidade](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide).
+Para saber mais sobre os pré-requisitos do Ponto de extremidade da DLP e como configurá-lo, confira [Introdução à prevenção contra perda de dados de Ponto de extremidade](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide&preserve-view=true).
 
 > [!NOTE]
 > A assinatura de Conformidade do Microsoft 365 E5 ou Microsoft 365 E5 necessária para prevenção contra perda de dados do ponto de extremidade da Microsoft.
 
 ## Confira também
 
-- [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
+- [Página inicial do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
+- [Vídeo: segurança, compatibilidade e capacidade de gerenciamento do Microsoft Edge](microsoft-edge-video-security-compatibility-manageability.md)
