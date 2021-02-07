@@ -3,19 +3,19 @@ title: Microsoft Edge e Microsoft Defender Application Guard
 ms.author: srugh
 author: dan-wesley
 manager: seanlyn
-ms.date: 10/12/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Suporte do Microsoft Edge para o Windows Defender Application Guard
-ms.openlocfilehash: fcf9bb6e36ddd5e014bd8176643554bfe3ff8fd4
-ms.sourcegitcommit: b813f91803b8f0f27489634f49e7e0585b746d48
+ms.openlocfilehash: 751201192c3b4e69cc866f35e51a6db23b9972f9
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "11114359"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314584"
 ---
 # Suporte do Microsoft Edge para o Windows Defender Application Guard
 
@@ -38,7 +38,10 @@ Projetado para o Windows 10 e o Microsoft Edge, o Application Guard usa uma abor
 
 O administrador corporativo define quais são os sites, recursos de nuvem e redes internas confiáveis. Tudo que não está na lista de sites confiáveis é considerado não confiável. Esses sites são isolados da rede corporativa e dos dados do dispositivo do usuário.
 
-Para mais informação, confira [O que é o Application Guard e como ele funciona?](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview#what-is-application-guard-and-how-does-it-work).
+Para saber mais:
+
+- Assista o nosso vídeo [Isolamento do navegador Microsoft Edge usando o Application Guard](microsoft-edge-video-security-application-guard.md)
+- Leia [O que é o Application Guard e como ele funciona?](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview#what-is-application-guard-and-how-does-it-work)
 
 A próxima captura de tela mostra um exemplo de mensagem do Application Guard que mostra que o usuário está navegando em um espaço seguro.
 
