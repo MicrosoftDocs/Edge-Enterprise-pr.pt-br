@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Stable Channel
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/05/2021
+ms.date: 02/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: 6175f1a4156af697e121ebe7230b5b86d347e825
-ms.sourcegitcommit: b1d49b229c47dc1d99e1b677d75aad38b3334ed6
+ms.openlocfilehash: df5298934496db5f5899bebad3ecf44bbda91913
+ms.sourcegitcommit: b4a2bebc45da3c8fff8dd8eae194c2c8ed589bce
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "11314221"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "11319255"
 ---
 # Notas de versão do Microsoft Edge Stable Channel
 
@@ -31,7 +31,7 @@ Essas notas de versão fornecem informações dos novos recursos e atualizaçõe
 
 ## Versão 88.0.705.63: 5 de Fevereiro
 
-As atualizações de segurança estão listadas [aqui](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-5-2021).
+As atualizações de segurança estão listadas [aqui](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-5-2021). Esta atualização contém [CVE-2021-21148](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21148) que foi relatado pela equipe do Chromium como tendo um exploit em liberdade.
 
 ## Versão 88.0.705.62: 4 de Fevereiro
 
