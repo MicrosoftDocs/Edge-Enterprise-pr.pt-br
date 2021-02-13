@@ -3,19 +3,19 @@ title: Segurança do Microsoft Edge para a sua empresa
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 02/05/2021
+ms.date: 02/10/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Segurança do Microsoft Edge para a sua empresa
-ms.openlocfilehash: eb981f3ed47b40219e50818531132ed5d385b642
-ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
+ms.openlocfilehash: 497ca83c64bdc3d1f1b1be8989cf798d65a7eda3
+ms.sourcegitcommit: 543259647f221de88e67d47984617091f9c75cfc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314674"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "11327014"
 ---
 # Segurança do Microsoft Edge para a sua empresa
 
@@ -29,7 +29,7 @@ Vamos entrar nos detalhes, começando com as **ameaças externas** e, em seguida
 
 Integrado ao Microsoft Edge, o SmartScreen bloqueia mais tentativas de [phishing](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf) e [malware](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf) do que a navegação segura do Google Chrome, de acordo com um estudo independente do NSS Labs. O SmartScreen fornece verificações de reputação de sites e downloads em tempo real à medida que os usuários trabalham online, e faz parte do [Gráfico de Segurança Inteligente da Microsoft](https://www.microsoft.com/microsoft-365/windows/intelligent-security), que desenha sinais e percepções geradas na grande rede de ativos, pesquisadores e parceiros global do Microsoft. Executando verificações contra listas dinâmicas e baseadas na nuvem de downloads e sites perigosos, o Microsoft Edge ajuda a detectar e bloquear até mesmo as ameaças indesejadas que desaparecem rapidamente.  
 
-O [Microsoft Edge com SmartScreen](https://docs.microsoft.com//DeployEdge/microsoft-edge-security-smartscreen) bloqueou 95,5% das tentativas de phishing e 98,5% de tentativas de malware [durante os testes de laboratório do NSS](https://www.nsslabs.com/tested-technologies/web-browser-security-wbs/) em comparação com as taxas da Navegação Segura do Chrome de 86,9% e 86,0%, respectivamente.
+O [Microsoft Edge com SmartScreen](https://docs.microsoft.com//DeployEdge/microsoft-edge-security-smartscreen) bloqueou 95,5% das tentativas de phishing durante o teste de [Proteção contra phishing da NSS Labs](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf) e 98,5% de tentativas de malware durante o teste de [Proteção contra malware do NSS Labs](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf) em comparação com as taxas da Navegação Segura do Chrome de 86,9% e 86,0%, respectivamente.
 
 ### O único navegador no Windows 10 compatível nativamente com isolamento de hardware
 

@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/03/2021
+ms.date: 02/09/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: e57c840931e2c0e73eb720179fc780182d433831
-ms.sourcegitcommit: 5cdcf44324e35c3ac71d7ca78e512f64d4dcbfea
+ms.openlocfilehash: fb1ae6bb0933767a2c5cbcc59212602aed068b9e
+ms.sourcegitcommit: b9061bdf8c2fa04ea2958fba614476542ad4b932
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "11313419"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "11325891"
 ---
 # Microsoft Edge - Políticas
 
@@ -33,10 +33,11 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 
 A tabela a seguir lista as novas políticas desta atualização.
 
-| Nome| Lista de endereçamento |
+| Nome | Lista de endereçamento |
 |--|--|
-|[WindowsHelloForHTTPAuthEnabled](#windowshelloforhttpauthenabled)|Windows Hello Para Autenticação HTTP Habilitada|
-|[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Define valores de configuração gerenciados para websites de origens específicas|
+|[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Habilitada a Sincronização de Favoritos do Application Guard|
+|[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Gerenciar a capacidade de Visualização Rápida de arquivos do Office no Microsoft Edge|
+
 
 
 ## Políticas disponíveis
@@ -60,7 +61,8 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |Nome da política|Legenda|
 |-|-|
 |[ApplicationGuardContainerProxy](#applicationguardcontainerproxy)|Proxy de contêiner do Application Guard|
-### [*Cast*](#cast-policies)
+|[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Habilitada a Sincronização de Favoritos do Application Guard|
+### [*Converter*](#cast-policies)
 
 |Nome da política|Legenda|
 |-|-|
@@ -381,6 +383,7 @@ e dicas para os serviços Microsoft|
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|Habilitar o conteúdo promocional em uma guia|
 |[PromptForDownloadLocation](#promptfordownloadlocation)|Perguntar onde salvar os arquivos baixados|
 |[QuicAllowed](#quicallowed)|Permitir protocolo QUIC|
+|[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Gerenciar a capacidade de Visualização Rápida de arquivos do Office no Microsoft Edge|
 |[RedirectSitesFromInternetExplorerPreventBHOInstall](#redirectsitesfrominternetexplorerpreventbhoinstall)|Impedir que a instalação do BHO redirecione sites incompatíveis do Internet Explorer para o Microsoft Edge|
 |[RedirectSitesFromInternetExplorerRedirectMode](#redirectsitesfrominternetexplorerredirectmode)|Redirecione os sites incompatíveis do Internet Explorer para o Microsoft Edge|
 |[RelaunchNotification](#relaunchnotification)|Notificar um usuário que uma reinicialização do navegador é recomendada ou necessária para atualizações pendentes|
@@ -408,7 +411,7 @@ e dicas para os serviços Microsoft|
 |[SerialBlockedForUrls](#serialblockedforurls)|Bloquear a API Serial em sites específicos|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Mostrar experiências do Microsoft Rewards|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Exibir o atalho do Microsoft Office na barra de favoritos (obsoleto)|
-|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Permitir recomendações e notificações promocionais do Edge|
+|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Permitir recomendações e notificações promocionais do Microsoft Edge|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Habilitar o suporte para o Exchange HTTP (SXG) assinado|
 |[SitePerProcess](#siteperprocess)|Habilitar o isolamento de sites para todos os sites|
 |[SmartActionsBlockList](#smartactionsblocklist)|Bloquear ações inteligentes para uma lista de serviços|
@@ -536,6 +539,63 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
   SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {"ProxyMode": "direct", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
   ```
   
+
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### ApplicationGuardFavoritesSyncEnabled
+
+  #### Habilitada a Sincronização de Favoritos do Application Guard
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows desde 90 ou posterior
+
+  #### Descrição
+
+  Esta política permite que computadores/dispositivos com o Microsoft Edge que tenham o protetor de aplicativos habilitado sincronizem os favoritos do host com o container para que os favoritos correspondam.
+
+Se [ManagedFavorites](#managedfavorites) forem configurados, esses favoritos também serão sincronizados com o contêiner.
+
+Se você habilitar esta política, a edição dos favoritos no contêiner será desativada. Assim, o adicionar favoritos e adicionar botões da pasta de favoritos serão desfocados na interface do usuário do navegador de contêineres.
+
+Se você desativar ou não configurar esta política, os favoritos no host não serão compartilhados no contêiner.
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### Tipo de dados:
+
+  - Booliano
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da Política de Grupo (ADMX)
+
+  - Nome Exclusivo da Política de Grupo: ApplicationGuardFavoritesSyncEnabled
+  - Nome da Política de Grupo: Habilitada a Sincronização de Favoritos do Application Guard
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Application Guard settings
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do Valor: ApplicationGuardFavoritesSyncEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de exemplo:
+
+```
+0x00000001
+```
 
   
 
@@ -2719,7 +2779,7 @@ Se você não definir essa política, o valor padrão global será utilizado par
 
   - Nome exclusivo da Política de Grupo: NotificationsBlockedForUrls
   - Nome da Política de Grupo: Bloquear notificações em sites específicos
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Content settings
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/configurações do conteúdo
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -4479,7 +4539,7 @@ Observe que você ainda pode usar [ExtensionInstallForcelist](#extensioninstallf
 Observação: para caso de instâncias do Windows que não fazem parte de um domínio do Microsoft Active Directory, a instalação forçada fica limitada a aplicativos e extensões listados no site Complementos do Microsoft Edge.
 
 
-  #### Recursos com suporte:
+  #### Recursos compatíveis:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -5232,11 +5292,11 @@ Se você desabilitar esta política, um nome de usuário básico e uma senha ser
 
   Esta política só se aplica ao modo de quiosque do Microsoft Edge, usando a experiência de navegação pública.
 
-Se você habilitar essa política, ela impede que os usuários alterem a URL na barra de endereços.
+Se você habilitar ou não configurar esta política, os usuários poderão alterar o URL na barra de endereço.
 
-Se você desabilitar essa política ou não a configurar, os usuários poderão alterar a URL na barra de endereços.
+Se você desativar esta política, ela impedirá que os usuários alterem o URL na barra de endereço.
 
-Para obter informações detalhadas sobre como configurar o modo de quiosque, confira [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
+Para obter informações detalhadas sobre como configurar o modo de quiosque, consulte [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
 
   #### Recursos compatíveis:
 
@@ -8114,7 +8174,7 @@ Se você não configurar essa política, a página de nova guia padrão será us
 
 Se você configurar essa política *e* a política [NewTabPageSetFeedType](#newtabpagesetfeedtype), esta política terá precedência.
 
-Se uma URL inválida for fornecida, novas guias serão abertas about://blank.
+Se uma guia em branco for preferida, "about:blank" é o URL correto a ser usado e não "about://blank".
 
 Essa política está disponível apenas nas instâncias do Windows que fazem parte de um domínio do Microsoft Active Directory, em instâncias do Windows 10 Pro ou Enterprise que estejam inscritas no gerenciamento de dispositivos ou em instâncias do macOS que são gerenciadas por meio do MDM ou passaram a fazer parte de um domínio por meio de MCX.
 
@@ -10432,7 +10492,7 @@ Confira [https://go.microsoft.com/fwlink/?linkid=2119711](https://go.microsoft.c
 
 * Você tem um locatário EDU, mas a política não funciona.
 
-* Foi permitido que seu IP tenha uma experiência de pesquisa gratuita do AD.
+* Você teve seu IP permitido listado por ter uma experiência de pesquisa gratuita de anúncios.
 
 * Você estava enfrentando uma experiência de pesquisa sem anúncios na Versão Prévia do Microsoft Edge e deseja atualizar para a nova versão do Microsoft Edge.
 
@@ -18283,6 +18343,68 @@ O QUIC é um protocolo de rede de camada de transporte que pode melhorar o desem
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### QuickViewOfficeFilesEnabled
+
+  #### Gerenciar a capacidade de Visualização Rápida de arquivos do Office no Microsoft Edge
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows e no macOS desde 90 ou posterior
+
+  #### Descrição
+
+  Permite definir se os usuários podem visualizar os arquivos do Office na web que não estão no OneDrive ou no Microsoft Office SharePoint Online. (Por exemplo: documentos do Word, apresentações do PowerPoint e planilhas do Excel)
+
+Se você ativar ou não configurar essa política, esses arquivos podem ser visualizados no Microsoft Edge usando o Visualizador do Office em vez de baixar os arquivos.
+
+Se você desativar esta política, esses arquivos serão baixados para serem visualizados.
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### Tipo de dados:
+
+  - Booliano
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da Política de Grupo (ADMX)
+
+  - Nome Exclusivo da Política de Grupo: QuickViewOfficeFilesEnabled
+  - Nome da Política de Grupo: Capacidade de Visualização Rápida dos arquivos do Office no Microsoft Edge
+  - Caminho da Política de Grupo (Obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do Valor: QuickViewOfficeFilesEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### Informações e configurações do Mac
+  
+  - Nome da Chave de Preferência: QuickViewOfficeFilesEnabled
+  - Valor de exemplo:
+``` xml
+<true/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### RedirectSitesFromInternetExplorerPreventBHOInstall
 
   #### Impedir que a instalação do BHO redirecione sites incompatíveis do Internet Explorer para o Microsoft Edge
@@ -20012,7 +20134,7 @@ Se você desativar esta política, o atalho não será mostrado.
 
   ### ShowRecommendationsEnabled
 
-  #### Permitir recomendações e notificações promocionais do Edge
+  #### Permitir recomendações e notificações promocionais do Microsoft Edge
 
   
   
@@ -20042,9 +20164,9 @@ Se você desabilitar essa configuração, os funcionários não receberão recom
 
   ##### Informações da Política de Grupo (ADMX)
 
-  - Nome Exclusivo da Gp: ShowRecommendationsEnabled
-  - Nome da Gp: Permitir recomendações e notificações promocionais do Edge
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Nome Exclusivo da Política de Grupo: ShowRecommendationsEnabled
+  - Nome da Política de Grupo: Permitir recomendações e notificações promocionais do Microsoft Edge
+  - Caminho da Política de Grupo (Obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -20211,7 +20333,7 @@ Se você desabilitar ou não configurar essa política, um usuário poderá opta
 
   Listar serviços específicos, como PDFs, que não mostram ações inteligentes. (Ações inteligentes são ações como "definir" que estão disponíveis nos menus de contexto mínimo e completo no Microsoft Edge.)
 
-Se você habilitar a política: :
+Se você habilitar a política:
    - A ação inteligente no menu de contexto mínimo e completo será desabilitada para todos os perfis de serviços que corresponderem à lista determinada.
    - Os usuários não verão a ação inteligente no menu de contexto mínimo e completo na seleção de texto para serviços que corresponderem à lista determinada.
    - Nas configurações do Microsoft Edge, a ação inteligente no menu de contexto mínimo e completo será desabilitada para serviços que corresponderem à lista determinada.
@@ -20867,7 +20989,7 @@ O pacote de codificação TLS 1.3 TLS_AES_128_GCM_SHA256 (0x1301) é necessário
 
 Essa política não afeta as conexões baseadas em QUIC. O QUIC pode ser desativado pela política [QuicAllowed](#quicallowed).
 
-  #### Recursos com suporte:
+  #### Recursos compatíveis:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -21909,7 +22031,7 @@ Essa política afeta todos os tipos de entradas de vídeo, não apenas a câmera
 
   Especificar sites, com base em padrões de URL, que podem usar dispositivos de captura de vídeo sem pedir permissão ao usuário. Os padrões nesta lista são comparados com a origem de segurança da URL da solicitação. Se elas corresponderem, o site recebe acesso automaticamente aos dispositivos de captura de vídeo.
 
-  #### Recursos compatíveis:
+  #### Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -22225,11 +22347,11 @@ Se você definir essa política como falsa ou não definir essa política, os re
 
   #### Informações e configurações do Windows
 
-  ##### Informações da política de grupo (ADMX)
+  ##### Informações da Política de Grupo (ADMX)
 
   - Nome Exclusivo da Política de Grupo: WebComponentsV0Enabled
   - Nome da Política de Grupo: Reabilitar a API de componentes Web V0 até M84 (obsoleta)
-  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
