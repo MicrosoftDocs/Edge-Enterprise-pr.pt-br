@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/09/2021
+ms.date: 02/17/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: fb1ae6bb0933767a2c5cbcc59212602aed068b9e
-ms.sourcegitcommit: b9061bdf8c2fa04ea2958fba614476542ad4b932
+ms.openlocfilehash: e293fc948625f2a36a94184f1e0502bb5e73f65a
+ms.sourcegitcommit: b85a216c616e055448028754971cd6dc4c308e81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "11325891"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "11340601"
 ---
 # Microsoft Edge - Políticas
 
@@ -29,16 +29,15 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
 
-## Novas políticas
+## Políticas novas e preteridas
 
-A tabela a seguir lista as novas políticas desta atualização.
+A tabela a seguir lista as políticas novas e preteridas para esta atualização.
 
-| Nome | Lista de endereçamento |
+| Nome | Legenda |
 |--|--|
-|[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Habilitada a Sincronização de Favoritos do Application Guard|
-|[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Gerenciar a capacidade de Visualização Rápida de arquivos do Office no Microsoft Edge|
-
-
+|[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|Permitir que os usuários prossigam na página de aviso HTTPS para origens específicas|
+|[WindowOcclusionEnabled](#windowocclusionenabled)|Habilitar Oclusão de Janela|
+|[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Habilitar Oclusão de Janela Nativa (preterida)|
 
 ## Políticas disponíveis
 
@@ -371,7 +370,7 @@ e dicas para os serviços Microsoft|
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|Número máximo de conexões simultâneas com o servidor proxy|
 |[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|Permitir que o Google Cast se conecte a dispositivos de conversão em todos os endereços IP|
 |[MetricsReportingEnabled](#metricsreportingenabled)|Ativar relatórios de dados relacionados a falhas e uso (obsoleto)|
-|[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Habilitar Native Window Occlusion|
+|[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Habilitar Oclusão de Janela Nativa (preterida)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Definir um tempo limite para o atraso da navegação da guia para a lista de sites do Modo Empresarial|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Habilitar a previsão de rede|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configurar se um usuário sempre tem um perfil padrão conectado automaticamente à sua conta corporativa ou de estudante|
@@ -396,6 +395,7 @@ e dicas para os serviços Microsoft|
 |[RoamingProfileSupportEnabled](#roamingprofilesupportenabled)|Habilitar o uso de cópias de roaming para dados de perfil do Microsoft Edge|
 |[RunAllFlashInAllowMode](#runallflashinallowmode)|Estender a configuração de conteúdo do Adobe Flash para todo o conteúdo (obsoleta)|
 |[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Permitir que os usuários continuem a partir da página de aviso de HTTPS|
+|[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|Permitir que os usuários prossigam na página de aviso HTTPS para origens específicas|
 |[SSLVersionMin](#sslversionmin)|Versão mínima do TLS habilitada|
 |[SaveCookiesOnExit](#savecookiesonexit)|Salvar os cookies ao fechar o Microsoft Edge|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|Desabilitar o salvamento do histórico do navegador|
@@ -453,6 +453,7 @@ e dicas para os serviços Microsoft|
 |[WebWidgetAllowed](#webwidgetallowed)|Habilitar o widget da web|
 |[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Permitir o widget da Web na inicialização do Windows|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Usar o solucionador de proxy do Windows (preterida)|
+|[WindowOcclusionEnabled](#windowocclusionenabled)|Habilitar Oclusão de Janela|
 
 
 
@@ -2779,7 +2780,7 @@ Se você não definir essa política, o valor padrão global será utilizado par
 
   - Nome exclusivo da Política de Grupo: NotificationsBlockedForUrls
   - Nome da Política de Grupo: Bloquear notificações em sites específicos
-  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/configurações do conteúdo
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Content settings
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -5421,7 +5422,7 @@ Se você habilitar essa política ou não a configurar, as Políticas de Gerenci
 
 Se você desabilitar essa política, o Microsoft Edge não se comunicará com o Intune para solicitar políticas de MAM.
 
-  #### Recursos com suporte:
+  #### Recursos compatíveis:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -7119,7 +7120,7 @@ Para obter exemplos mais detalhados, acesse [https://go.microsoft.com/fwlink/?li
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
-  ##### Configurações de Registro do Windows
+  ##### Configurações de registro do Windows
 
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): N/A
@@ -8884,7 +8885,7 @@ Se você habilitar ou não configurar essa política, os usuários poderão abri
 
 Se você desabilitar essa política, sempre que o usuário executar uma ação que acione uma caixa de diálogo de seleção de arquivo (como importar favoritos, carregar arquivos ou salvar links), uma mensagem será exibida, e o usuário deverá clicar em Cancelar na caixa de diálogo de seleção de arquivo.
 
-  #### Recursos com suporte:
+  #### Recursos compatíveis:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -15091,7 +15092,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   #### Descrição
 
-  Especifique para usar a aceleração de hardware, caso ela esteja disponível. Se você habilitar essa política ou não a configurar, a aceleração de hardware será habilitada, a menos que um recurso GPU seja explicitamente bloqueado.
+  Especifica se usar aceleração de hardware, se disponível. Se você habilitar essa política ou não a configurar, a aceleração de hardware será habilitada, a menos que um recurso GPU seja explicitamente bloqueado.
 
 Se você desabilitar essa política, a aceleração de hardware será desabilitada.
 
@@ -17592,9 +17593,9 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 
   ### NativeWindowOcclusionEnabled
 
-  #### Habilitar Native Window Occlusion
+  #### Habilitar Oclusão de Janela Nativa (preterida)
 
-  
+  >PRETERIDA: essa política está preterida. Ela tem suporte no momento, mas se tornará obsoleta em uma versão futura.
   
   #### Versões com suporte:
 
@@ -17602,15 +17603,17 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 
   #### Descrição
 
-  Ativa a oclusão da janela nativa no Microsoft Edge.
+  Esta política está preterida. Em vez disso, use a política '[WindowOcclusionEnabled](#windowocclusionenabled)'. Não funcionará no Microsoft Edge versão 92.
+
+Habilita a oclusão da janela nativa no Microsoft Edge.
 
 Se você habilitar essa configuração para reduzir o consumo de CPU e de energia, o Microsoft Edge detectará quando uma janela é coberta por outras janelas e suspenderá os pixels da pintura do trabalho.
 
 Se você desabilitar essa configuração, o Microsoft Edge não detectará quando uma janela é coberta por outras janelas.
 
-Se essa política não estiver definida, a detecção de ocultação da janela será habilitada.
+Se esta política não for definida, a detecção de oclusão será habilitada.
 
-  #### Recursos compatíveis:
+  #### Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -17624,9 +17627,9 @@ Se essa política não estiver definida, a detecção de ocultação da janela s
 
   ##### Informações da Política de Grupo (ADMX)
 
-  - Nome Exclusivo da Política de Grupo: NativeWindowOcclusionEnabled
-  - Nome da GP: habilitar a oclusão da janela nativa
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Nome exclusivo da GP: NativeWindowOcclusionEnabled
+  - Nome da GP: Habilitar Oclusão de Janela Nativa (preterido)
+  - Caminho da GP (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -19140,6 +19143,77 @@ Se você desabilitar essa política, os usuários serão impedidos de clicar em 
   - Valor de exemplo:
 ``` xml
 <true/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### SSLErrorOverrideAllowedForOrigins
+
+  #### Permitir que os usuários prossigam na página de aviso HTTPS para origens específicas
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows e no macOS desde 90 ou posterior
+
+  #### Descrição
+
+  O Microsoft Edge mostra uma página de aviso quando os usuários acessam sites que têm erros SSL.
+
+Se você habilitar ou não configurar a política [SSLErrorOverrideAllowed](#sslerroroverrideallowed), esta política não fará nada.
+
+Se você desabilitar a política [SSLErrorOverrideAllowed](#sslerroroverrideallowed), a configuração dessa política permite configurar uma lista de padrões de origem para sites onde os usuários podem continuar a clicar nas páginas de erro SSL. Os usuários não podem clicar nas páginas de erro SSL em origens que não estão nesta lista.
+
+Se você não configurar esta política, a política [SSLErrorOverrideAllowed](#sslerroroverrideallowed) se aplicará a todos os sites.
+
+Para obter informações detalhadas sobre padrões de origem válidos, confira [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política. Essa política só corresponde com base na origem, portanto, qualquer caminho ou consulta no padrão de URL é ignorado.
+
+  #### Recursos com suporte:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### Tipo de dados:
+
+  - Lista de cadeias de caracteres
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da GP: SSLErrorOverrideAllowedForOrigins
+  - Nome GP: permite que os usuários prossigam a partir da página de aviso HTTPS para origens específicas
+  - Caminho da GP (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de Registro do Windows
+
+  - Caminho (Obrigatório): SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins
+  - Caminho (Recomendado): N/A
+  - Nome do valor: 1, 2, 3, ...
+  - Tipo de valor: lista de REG_SZ
+
+  ##### Valor de exemplo:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]example.edu"
+
+```
+
+  #### Informações e configurações do Mac
+  
+  - Nome da Chave de preferência: SSLErrorOverrideAllowedForOrigins
+  - Valor de exemplo:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
 ```
   
 
@@ -22031,7 +22105,7 @@ Essa política afeta todos os tipos de entradas de vídeo, não apenas a câmera
 
   Especificar sites, com base em padrões de URL, que podem usar dispositivos de captura de vídeo sem pedir permissão ao usuário. Os padrões nesta lista são comparados com a origem de segurança da URL da solicitação. Se elas corresponderem, o site recebe acesso automaticamente aos dispositivos de captura de vídeo.
 
-  #### Recursos com suporte:
+  #### Recursos compatíveis:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -22163,9 +22237,9 @@ Cada item da lista da política é um objeto com um membro obrigatório: url (o 
 e 3 membros opcionais:
 - default_launch_container (especifica o modo de janela que o aplicativo da web abre, por padrão, com uma nova guia.)
 
-- create_desktop_shortcut (Verdadeiro se você quiser criar atalhos do Linux e da Área de trabalho do Windows.)
+- create_desktop_shortcut (verdadeiro se você deseja criar atalhos de desktop para Linux e Microsoft Windows.)
 
-- override_app_name (Iniciando com o Microsoft Edge 89, permite que você substitua o nome do aplicativo se não for um Aplicativo Web Progressivo (PWA) ou o nome do aplicativo que está temporariamente instalado se for um PWA, mas a autenticação é necessária antes que a instalação possa ser concluída.)
+- fallback_app_name (a partir do Microsoft Edge 90, permite que você substitua o nome do aplicativo se não for um Progressive Web App (PWA) ou o nome do aplicativo que está temporariamente instalado se for um PWA, mas a autenticação é necessária antes que a instalação possa ser concluída.)
 
   #### Recursos com suporte:
 
@@ -22209,7 +22283,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   }, 
   {
     "default_launch_container": "window", 
-    "override_app_name": "Editor", 
+    "fallback_app_name": "Editor", 
     "url": "https://app.contoso.com/editor"
   }
 ]
@@ -22218,7 +22292,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### Valor do exemplo de compactação:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "override_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "fallback_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
   ```
   
 
@@ -22246,7 +22320,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   <dict>
     <key>default_launch_container</key>
     <string>window</string>
-    <key>override_app_name</key>
+    <key>fallback_app_name</key>
     <string>Editor</string>
     <key>url</key>
     <string>https://app.contoso.com/editor</string>
@@ -22897,8 +22971,65 @@ Se você desabilitar ou não configurar essa política, o solucionador de proxy 
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### WindowOcclusionEnabled
 
-## Ver também
+  #### Habilitar Oclusão de Janela
+
+  
+  
+  #### Versões com suporte:
+
+  - No Windows desde 89 ou posterior
+
+  #### Descrição
+
+  Habilita a oclusão de janela no Microsoft Edge.
+
+Se você habilitar essa configuração para reduzir o consumo de CPU e de energia, o Microsoft Edge detectará quando uma janela é coberta por outras janelas e suspenderá os pixels da pintura do trabalho.
+
+Se você desabilitar essa configuração, o Microsoft Edge não detectará quando uma janela é coberta por outras janelas.
+
+Se essa política não estiver definida, a detecção de ocultação da janela será habilitada.
+
+  #### Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### Tipo de dados:
+
+  - Booliano
+
+  #### Informações e configurações do Windows
+
+  ##### Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da GP: WindowOcclusionEnabled
+  - Nome da GP: Habilitar Oclusão de Janela
+  - Caminho da GP (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (Recomendado): N/A
+  - Nome do Valor: WindowOcclusionEnabled
+  - Tipo de Valor: REG_DWORD
+
+  ##### Valor de exemplo:
+
+```
+0x00000001
+```
+
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+
+## Consulte também
 
 - [Configurar o Microsoft Edge](configure-microsoft-edge.md)
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
