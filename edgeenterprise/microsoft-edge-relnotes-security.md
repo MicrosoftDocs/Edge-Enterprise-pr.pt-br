@@ -3,25 +3,29 @@ title: Notas de versão para atualizações de segurança do Microsoft Edge
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/05/2021
+ms.date: 02/17/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão para atualizações de segurança do Microsoft Edge
-ms.openlocfilehash: fffcad26dba8d3a5e0899fa741648341b17411c5
-ms.sourcegitcommit: b1d49b229c47dc1d99e1b677d75aad38b3334ed6
+ms.openlocfilehash: e147211ba9ca834d4e65e253f59cf4419c566fda
+ms.sourcegitcommit: 8589a07ebd936070edb2eafa43b83cc6ef283a6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "11314171"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "11343824"
 ---
 # Notas de versão para atualizações de segurança do Microsoft Edge
 
 Estas notas de versão fornecem informações sobre correções de segurança incluídas em atualizações para o canal estável do Microsoft Edge.
 
-## 5 de Fevereiro de 2021
+## 17 de fevereiro de 2021
+
+A Microsoft lançou o **Microsoft Edge Stable Channel (versão 88.0.705.74)** mais recente, que incorpora as atualizações de segurança mais recentes do projeto Chromium. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
+
+## 5 de fevereiro de 2021
 
 A Microsoft lançou o canal mais recente do **Microsoft Edge (versão 88.0.705.63),** que incorpora as atualizações de segurança mais recentes do projeto Chromium. Esta atualização contém [CVE-2021-21148](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21148) que foi relatado pela equipe do Chromium como tendo um exploit em liberdade. Para obter mais informações, consulte o [Guia de atualização de segurança](https://msrc.microsoft.com/update-guide).
 
