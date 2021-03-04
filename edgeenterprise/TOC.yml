@@ -1,4 +1,4 @@
-# last revised 02/05/2021
+# last revised 03/02/2021
 - name: Documentação do Microsoft Edge Enterprise
   href: index.yml
 - name: Documentação do Microsoft Edge
@@ -113,6 +113,8 @@
           href: edge-ie-mode-sitelist.md
         - name: Configurar políticas do modo IE
           href: edge-ie-mode-policies.md
+        - name: Desabilitar o Internet Explorer 11
+          href: edge-ie-disable-ie11.md
         - name: Guia Passo a Passo do Enterprise Site Discovery
           href: edge-ie-mode-site-discovery.md
         - name: Perguntas frequentes sobre o modo IE
@@ -123,7 +125,7 @@
               href: edge-ie-mode-add-guidance-filetype-associations.md
             - name: Compartilhamento de cookies do Microsoft Edge para o Internet Explorer
               href: edge-ie-mode-add-guidance-cookieshare.md
-            - name: Gerenciador de Lista de Site Empresarial no Microsoft Edge
+            - name: Gerenciador de Listas de Sites Empresariais no Microsoft Edge
               href: edge-ie-mode-site-list-manager.md
 - name: Segurança do Microsoft Edge
   items:
@@ -131,13 +133,13 @@
       href: ms-edge-security-for-business.md
     - name: Lista de permissões para pontos de extremidade do Microsoft Edge
       href: microsoft-edge-security-endpoints.md
-    - name: Prevenção contra Perda de Dados (DLP)
+    - name: Prevenção contra perda de dados (DLP)
       href: microsoft-edge-security-dlp.md
     - name: Monitor de Senhas habilitado automaticamente para usuários
       href: microsoft-edge-security-password-monitor.md
     - name: Proteção contra aplicativos potencialmente indesejados
       href: microsoft-edge-potentially-unwanted-apps.md
-    - name: Suporte para acesso condicional do Azure AD
+    - name: Suporte para Acesso Condicional do Azure AD
       href: ms-edge-security-conditional-access.md
     - name: Suporte para o Application Guard
       href: microsoft-edge-security-windows-defender-application-guard.md
@@ -157,11 +159,11 @@
       href: microsoft-edge-policies.md
     - name: Referência da política de atualização
       href: microsoft-edge-update-policies.md
-    - name: Referência de política WebView2
+    - name: Referência de política webView2
       href: microsoft-edge-webview-policies.md
     - name: Conheça mais referências
       items:
-        - name: Compatibilidade com compatibilidade com a página Nova Guia Empresarial
+        - name: Página de compatibilidade com a Nova Empresa
           href: edge-learnmore-ntp-backward-compatibility.md
         - name: ClickOnce e DirectInvoke
           href: edge-learn-more-co-di.md
@@ -203,9 +205,9 @@
       href: microsoft-edge-video-security-dlp.md
     - name: Vídeo - Identidade no Microsoft Edge
       href: microsoft-edge-video-identity.md
-    - name: Vídeo - Reversões do Microsoft Edge
+    - name: Vídeo - Reversões de versão do Microsoft Edge
       href: microsoft-edge-video-version-rollback.md
-    - name: Vídeo - Leitor de PDF no Microsoft Edge
+    - name: Vídeo - leitor de PDF no Microsoft Edge
       href: microsoft-edge-video-pdf-reader.md
     - name: Vídeo - Navegação segura no Microsoft Edge
       href: microsoft-edge-video-security-smartscreen.md
