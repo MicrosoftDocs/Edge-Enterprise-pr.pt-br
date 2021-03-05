@@ -3,23 +3,26 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/03/2021
+ms.date: 03/04/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: e2a2933e7edf3456bcb33e70d6db7a36ab72aa07
-ms.sourcegitcommit: 6603dc23d8e7ff46df76bc6aa48b93a0b435fe7d
+ms.openlocfilehash: e5096d437f8b70ed94add8341db1cdb1d4b69b84
+ms.sourcegitcommit: f63a30c3e64e9e57fd76b6675ddff1fc2bbbeac8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "11385632"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "11393634"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão do canal do Microsoft Edge beta
 
-Estas notas de versão fornecem informações sobre os novos recursos e atualizações não relacionadas à segurança que estão inclusos no canal Beta do Microsoft Edge. Versões arquivadas dessas notas de lançamento estão disponíveis [ aqui](microsoft-edge-relnote-archive-beta-channel.md).
+Estas notas de versão fornecem informações sobre os novos recursos e atualizações não relacionadas à segurança que estão inclusos no canal Beta do Microsoft Edge. Versões arquivadas dessas notas de versão estão disponíveis [ aqui](microsoft-edge-relnote-archive-beta-channel.md).
+
+> [!NOTE]
+> Atualizamos a nota de versão do Microsoft Edge Beta [Versão 89.0.774.18: 3](#version-89077418-february-3) de fevereiro para refletir os recursos que foram lançados.
 
 ## <a name="version-89077445-march-3"></a>Versão 89.0.774.45: 3 de março
 
@@ -58,18 +61,9 @@ Correção de vários bugs e problemas de desempenho.
 
 - **Melhorias na experiência de seleção de texto em documentos PDF**. Os usuários começarão a ter uma experiência de seleção de texto mais uniforme e consistente em documentos PDF abertos no Microsoft Edge a partir da versão 89.
 
-- **O aviso "Desabilite extensões do modo desenvolvedor" pode ser permanentemente descartado**. A partir da versão 89 do Microsoft Edge, você pode desativar o aviso "Desabilite extensões do modo de desenvolvedor" selecionando a opção "Não mostrar isto novamente".
+- **O campo de data de nascimento agora é compatível com o preenchimento automático**. Hoje, o Microsoft Edge ajuda você a economizar tempo e esforço ao preencher formulários e criar contas online, preenchendo automaticamente seus dados como endereços, nomes, números de telefone, etc. A partir da versão 89 do Microsoft Edge, estamos adicionando suporte para outro campo que você pode ter salvar e preencher automaticamente: a data de nascimento. Você pode exibir, editar e excluir essas informações a qualquer momento nas configurações do seu perfil.
 
-- **Gerencie suas extensões na barra de ferramentas**. O menu de novas extensões na barra de ferramentas permitirá ocultar/fixar as extensões facilmente. Os links rápidos para gerenciar extensões e encontrar novas extensões facilitarão a localização de novas extensões e o gerenciamento das existentes.
-
-- **Suporte para pesquisa de idioma natural na barra de endereços, página de pesquisa do histórico e no hub de histórico**. A partir da versão 89 do Microsoft Edge, encontrar um artigo/site será mais fácil com a pesquisa em idioma natural na barra de endereços, na página do histórico e no hub de histórico. Os usuários podem pesquisar pelo conteúdo/descrição/tempo de uma página exibida anteriormente (como "receita de bolo da semana passada"), além de correspondências de palavras-chave de títulos/URL.
-
-- **Produtividade:**
-
-  - O campo de data de nascimento agora é suportado no preenchimento automático. Hoje, o Microsoft Edge ajuda você a economizar tempo e esforço ao preencher formulários e criar contas online, preenchendo automaticamente seus dados como endereços, nomes, números de telefone, etc. A partir da versão 89 do Microsoft Edge, estamos adicionando suporte para outro campo que você pode ter salvar e preencher automaticamente: a data de nascimento. Você pode exibir, editar e excluir essas informações a qualquer momento em suas configurações de perfil.
-  - Estenda as sugestões de preenchimento automático para incluir conteúdos da área de transferência. O conteúdo da área de transferência é analisado quando você seleciona um campo de perfil/endereço (por exemplo, telefone, email, CEP, cidade, estado, etc.) para mostrar como sugestões de preenchimento automático.
-
-- **Suporte para bloqueio automático de reprodução de vídeo**. A partir da versão 89 do Microsoft Edge, os usuários terão a opção de bloquear a reprodução automática de mídias.
+- **Suporte para pesquisa com linguagem natural na barra de endereços, página de pesquisa do histórico e no hub de histórico**. A partir da versão 89 do Microsoft Edge, encontrar um artigo/site será mais fácil com a pesquisa em idioma natural na barra de endereços, na página do histórico e no hub de histórico. Os usuários podem pesquisar pelo conteúdo/descrição/tempo de uma página exibidos anteriormente (tal como "receita de bolo da semana passada"), além de correspondências de títulos/palavras-chave de URL. Este recurso é limitado a um grupo selecionado aleatoriamente de usuários que ativaram a experimentação. Esses usuários estão fazendo comentários para a equipe de recursos.
 
 ### <a name="policy-updates"></a>Atualizações de política
 
