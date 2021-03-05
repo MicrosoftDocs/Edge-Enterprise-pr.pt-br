@@ -3,7 +3,7 @@ title: Documentação de Política do Microsoft Edge WebView2
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/17/2021
+ms.date: 03/03/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,24 +11,23 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 2e3258a0427a7fb280023ddc1518f12869f9c791
-ms.sourcegitcommit: b85a216c616e055448028754971cd6dc4c308e81
+ms.openlocfilehash: b362ac7b7addde044155428f61b7fb35d68f3e80
+ms.sourcegitcommit: bd83f2fbc4d7943e8f19c24414b65ed9d9009f2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "11340581"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "11388739"
 ---
-# Políticas do Microsoft Edge WebView2
+# <a name="microsoft-edge-webview2---policies"></a>Políticas do Microsoft Edge WebView2
 
 A versão mais recente do Microsoft Edge WebView2 inclui as políticas a seguir. Você pode usar essas políticas para configurar como o Microsoft Edge WebView2 será executado em sua organização.
 
 Para saber mais sobre o conjunto adicional de políticas, usado para controlar como e quando o Microsoft Edge WebView2 é atualizado, confira [Referência de política de atualização do Microsoft Edge](microsoft-edge-update-policies.md).
 
-
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 87 ou posterior.
 
-## Políticas disponíveis
+## <a name="available-policies"></a>Políticas disponíveis
 
 Estas tabelas listam todas as políticas de grupo disponíveis nesta versão do Microsoft Edge WebView2. Use os links na tabela a seguir para obter mais detalhes sobre políticas específicas.
 
@@ -36,7 +35,7 @@ Estas tabelas listam todas as políticas de grupo disponíveis nesta versão do 
 |-|-|
 |[Configurações de substituição do carregador](#loader-override-settings)|
 
-### [*Configurações de substituição do carregador*](#loader-override-settings-policies)
+### [*<a name="loader-override-settings"></a>Configurações de substituição do carregador*](#loader-override-settings-policies)
 
 |Nome da política|Legenda|
 |-|-|
@@ -46,39 +45,39 @@ Estas tabelas listam todas as políticas de grupo disponíveis nesta versão do 
 
 
 
-  ## Políticas de configurações de substituição do carregador
+  ## <a name="loader-override-settings-policies"></a>Políticas de configurações de substituição do carregador
 
   [Voltar ao início](#microsoft-edge-webview2---policies)
 
-  ### BrowserExecutableFolder
+  ### <a name="browserexecutablefolder"></a>BrowserExecutableFolder
 
-  #### Configurar o local da pasta executável do navegador
+  #### <a name="configure-the-location-of-the-browser-executable-folder"></a>Configurar o local da pasta executável do navegador
 
   
   
-  #### Versões com suporte:
+  #### <a name="supported-versions"></a>Versões com suporte:
 
   - No Windows desde 87 ou posterior
 
-  #### Descrição
+  #### <a name="description"></a>Descrição
 
   Essa política configura aplicativos de WebView2 para usar o WebView2 Runtime no caminho especificado. A pasta deve conter os seguintes arquivos: msedgewebview2.exe, msedge.dll e assim por diante.
 
 Para definir o valor do caminho da pasta, forneça um Nome do valor e um Par do valor. Defina o nome do valor para a ID do Modelo de Usuário do Aplicativo ou o nome do arquivo executável. Você pode usar o caractere curinga "*" como nome do valor a ser aplicado a todos os aplicativos.
 
-  #### Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos compatíveis:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
   - Atualização dinâmica das políticas: Sim
 
-  #### Tipo de dados:
+  #### <a name="data-type"></a>Tipo de dados:
 
   - Lista de cadeias de caracteres
 
-  #### Informações e configurações do Windows
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
 
-  ##### Informações da Política de Grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
   - Nome exclusivo da PG: BrowserExecutableFolder
   - Nome da PG: Configurar o local da pasta executável do navegador
@@ -86,14 +85,14 @@ Para definir o valor do caminho da pasta, forneça um Nome do valor e um Par do 
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da PG: MSEdgeWebView2.admx
 
-  ##### Configurações de registro do Windows
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
 
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
   - Caminho (recomendado): N/A
   - Nome de valor: lista de REG_SZ
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de exemplo:
+  ##### <a name="example-value"></a>Valor de exemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
@@ -104,17 +103,17 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Va
 
   [Voltar ao início](#microsoft-edge-webview2---policies)
 
-  ### ReleaseChannelPreference
+  ### <a name="releasechannelpreference"></a>ReleaseChannelPreference
 
-  #### Definir a preferência de ordem de pesquisa do canal de lançamento
+  #### <a name="set-the-release-channel-search-order-preference"></a>Definir a preferência de ordem de pesquisa do canal de lançamento
 
   
   
-  #### Versões com suporte:
+  #### <a name="supported-versions"></a>Versões com suporte:
 
   - No Windows desde 87 ou posterior
 
-  #### Descrição
+  #### <a name="description"></a>Descrição
 
   O pedido padrão de pesquisa de canal é WebView2 Runtime, Beta, Dev e Canary.
 
@@ -122,19 +121,19 @@ Para inverter a ordem de pesquisa padrão, defina essa política como 1.
 
 Para definir o valor da preferência de canal de lançamento, forneça um Nome do valor e um Par do valor. Defina o nome do valor para a ID do Modelo de Usuário do Aplicativo ou o nome do arquivo executável. Você pode usar o caractere curinga "*" como nome do valor a ser aplicado a todos os aplicativos.
 
-  #### Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos compatíveis:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
   - Atualização dinâmica das políticas: Sim
 
-  #### Tipo de dados:
+  #### <a name="data-type"></a>Tipo de dados:
 
   - Lista de cadeias de caracteres
 
-  #### Informações e configurações do Windows
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
 
-  ##### Informações da Política de Grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
   - Nome exclusivo da PG: ReleaseChannelPreference
   - Nome da PG: Definir a preferência de ordem de pesquisa do canal de lançamento
@@ -142,14 +141,14 @@ Para definir o valor da preferência de canal de lançamento, forneça um Nome d
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da PG: MSEdgeWebView2.admx
 
-  ##### Configurações de registro do Windows
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
 
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
   - Caminho (recomendado): N/A
   - Nome de valor: lista de REG_SZ
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de exemplo:
+  ##### <a name="example-value"></a>Valor de exemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
@@ -161,7 +160,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, V
   [Voltar ao início](#microsoft-edge-webview2---policies)
 
 
-## Consulte também
+## <a name="see-also"></a>Ver também
 
 - [Configurar o Microsoft Edge](configure-microsoft-edge.md)
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

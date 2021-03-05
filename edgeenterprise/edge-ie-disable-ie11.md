@@ -3,19 +3,19 @@ title: Desabilitar o Internet Explorer 11
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 03/02/2021
+ms.date: 03/04/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Aprenda a desabilitar o Internet Explorer 11 e usar o modo Internet Explorer no Microsoft Edge.
-ms.openlocfilehash: 08d1fe48bfc4614710f4a341a285048194a64794
-ms.sourcegitcommit: 928714329d0b11575494f557498f69a8417a3289
+ms.openlocfilehash: be52f33b091977aff0ca29a4e10d4fc6ea4be957
+ms.sourcegitcommit: f63a30c3e64e9e57fd76b6675ddff1fc2bbbeac8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "11385321"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "11393612"
 ---
 # <a name="disable-internet-explorer-11"></a>Desabilitar o Internet Explorer 11
 
@@ -67,7 +67,7 @@ Se a sua Lista de Sites do Modo Enterprise contém aplicativos configurados para
 
 Para desabilitar o Internet Explorer 11 usando a política de grupo, siga estas etapas:
 
-1. Baixar e instalar o mais recente [Modelo de política Microsoft Edge](https://www.microsoft.com/en-us/business/download).
+1. Baixar e instalar o mais recente [Modelo de política Microsoft Edge](https://www.microsoft.com/edge/business/download).
 2. Abra o Editor de Política de Grupo.
 3. Vá para ***Configuração do computador/Modelos administrativos/Componentes do Windows/Internet Explorer***. 
 4. Duplo click **Desabilitar o Internet Explorer 11 como um navegador independente**.
