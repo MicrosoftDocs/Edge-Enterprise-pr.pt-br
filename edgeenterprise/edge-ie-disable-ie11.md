@@ -3,19 +3,19 @@ title: Desabilitar o Internet Explorer 11
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 03/04/2021
+ms.date: 03/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Aprenda a desabilitar o Internet Explorer 11 e usar o modo Internet Explorer no Microsoft Edge.
-ms.openlocfilehash: be52f33b091977aff0ca29a4e10d4fc6ea4be957
-ms.sourcegitcommit: f63a30c3e64e9e57fd76b6675ddff1fc2bbbeac8
+ms.openlocfilehash: a0486c2965b1868db67b6de1423f279905074410
+ms.sourcegitcommit: f34ff11499a2b96941e704103bdd959d19e3d7e7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "11393612"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "11400601"
 ---
 # <a name="disable-internet-explorer-11"></a>Desabilitar o Internet Explorer 11
 
@@ -67,7 +67,7 @@ Se a sua Lista de Sites do Modo Enterprise contém aplicativos configurados para
 
 Para desabilitar o Internet Explorer 11 usando a política de grupo, siga estas etapas:
 
-1. Baixar e instalar o mais recente [Modelo de política Microsoft Edge](https://www.microsoft.com/edge/business/download).
+1. Verifique se você tem as atualizações de pré-requisito do sistema operacional. Essa etapa atualizará diretamente os arquivos ADMX no computador (especificamente, inetres.adml e inetres.admx). Observe que, se você quiser atualizar seu Repositório Central, será necessário copiar sobre os arquivos .adml e .admx de um computador que tenha as atualizações de pré-requisito. Para obter mais informações, confira [Criar e gerenciar o Repositório Central](https://docs.microsoft.com/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
 2. Abra o Editor de Política de Grupo.
 3. Vá para ***Configuração do computador/Modelos administrativos/Componentes do Windows/Internet Explorer***. 
 4. Duplo click **Desabilitar o Internet Explorer 11 como um navegador independente**.
