@@ -1,10 +1,8 @@
-# last revised 03/02/2021
+# last revised 03/08/2021
 - name: Documentação do Microsoft Edge Enterprise
   href: index.yml
 - name: Documentação do Microsoft Edge
   href: 'https://docs.microsoft.com/microsoft-edge/'
-- name: Atualizações de conteúdo do Microsoft Edge
-  href: microsoft-edge-content-updates.md
 - name: Aprenda a usar o Microsoft Edge
   items:
     - name: Saiba mais sobre os Canais do Microsoft Edge
@@ -97,8 +95,14 @@
       href: microsoft-edge-kiosk-mode-transition-plan.md
     - name: Configurar o modo de quiosque do Microsoft Edge
       href: microsoft-edge-configure-kiosk-mode.md
-    - name: Sincronização do Microsoft Edge
-      href: microsoft-edge-enterprise-sync.md
+    - name: Sincronização corporativa do Microsoft Edge
+      items:
+        - name: Configurar a sincronização do Microsoft Edge
+          href: microsoft-edge-enterprise-sync.md
+        - name: Diagnosticar e corrigir problemas de sincronização do Microsoft Edge
+          href: microsoft-edge-troubleshoot-enterprise-sync.md
+        - name: Perguntas frequentes sobre sincronização
+          href: microsoft-edge-enterprise-sync-faq.md
     - name: Sincronização local para usuários do Active Directory
       href: microsoft-edge-on-premises-sync.md
     - name: Leitor de PDF no Microsoft Edge
