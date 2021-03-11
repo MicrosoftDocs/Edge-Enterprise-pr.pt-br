@@ -3,23 +3,23 @@ title: Suporte a idiomas do Microsoft Edge
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 03/01/2021
+ms.date: 03/10/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Suporte a idiomas do Microsoft Edge
-ms.openlocfilehash: ec2c61bc5a94f47769685a2764fa9cc2e58a9898
-ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
+description: Suporte ao idioma de exibição do Microsoft Edge para Windows e macOS.
+ms.openlocfilehash: af8d2a57d35411600237d09ad528c7b071228d21
+ms.sourcegitcommit: 2b902ecf31430f3fc75d3731f26255aea0bb937e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "11384988"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "11406156"
 ---
 # <a name="microsoft-edge-language-support"></a>Suporte a idiomas do Microsoft Edge
 
-Este artigo mostra como você pode usar as configurações do Microsoft Edge para adicionar um idioma compatível com o navegador. O Microsoft Edge dá suporte a 96 idiomas no Windows e 91 idiomas no macOS.
+Este artigo mostra como você pode usar as configurações do Microsoft Edge para adicionar um idioma compatível com o navegador. O Microsoft Edge oferece suporte a 84 idiomas de exibição no Windows e 81 idiomas de exibição no macOS.
 
 > [!NOTE]
 > Este artigo aplica-se ao Microsoft Edge versão 78 ou posterior.
@@ -58,9 +58,9 @@ Além de usar um idioma estrangeiro no navegador, você pode usar a extensão [T
 > [!NOTE]
 > Se a extensão do tradutor não funcionar após a instalação, reinicie o Microsoft Edge. Se a extensão ainda não funcionar, faça comentários por meio do Hub de Feedback.
 
-## <a name="supported-languages"></a>Idiomas com suporte
+## <a name="supported-display-languages"></a>Idiomas de exibição suportados
 
-A tabela a seguir lista os idiomas compatíveis com o Microsoft Edge.
+A tabela a seguir lista os idiomas de exibição com suporte do Microsoft Edge.
 
 > [!NOTE]
 > Os idiomas sem o suporte do Microsoft Edge no macOS são indicados por um asterisco (*) após o país/região.  
