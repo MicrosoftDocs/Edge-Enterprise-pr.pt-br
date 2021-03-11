@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/03/2021
+ms.date: 03/10/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 130ed008a190edb92649beb658084c157ebade50
-ms.sourcegitcommit: bd83f2fbc4d7943e8f19c24414b65ed9d9009f2d
+ms.openlocfilehash: 94ad135f23dae83391e873ef120e6c88b44d0e27
+ms.sourcegitcommit: e3762b1a204c143b4e2264100affae3d9ddaaffc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "11388723"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "11406372"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -29,29 +29,36 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
 
-## <a name="new-policies"></a>Novas políticas
+## <a name="new-and-deprecated-policies"></a>Políticas novas e preteridas
 
-A tabela a seguir lista as novas políticas desta atualização.
+A tabela a seguir lista as políticas novas e preteridas para esta atualização.
 
-| Nome | Legenda |
+|Nome|Legenda|
 |--|--|
-|[PrintRasterizationMode](#printrasterizationmode)|Modo de Rasterização de Impressão|
+|[SSLVersionMin](#sslversionmin)|Versão mínima de TLS habilitada (obsoleta)|
 
 ## <a name="available-policies"></a>Políticas disponíveis
 
 Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disponíveis nesta versão do Microsoft Edge. Use os links na tabela a seguir para obter mais detalhes sobre políticas específicas.
 
-|||
-|-|-|
-|[Configurações do Application Guard](#application-guard-settings)|[Cast](#cast)|
-|[Configurações de conteúdo](#content-settings)|[Provedor de pesquisa padrão](#default-search-provider)|
-|[Extensões](#extensions)|[Autenticação HTTP](#http-authentication)|
-|[Configurações do modo de quiosque](#kiosk-mode-settings)|[Capacidade de gerenciamento](#manageability)|
-|[Sistema de mensagens nativo](#native-messaging)|[Gerenciador de senhas e proteção](#password-manager-and-protection)|
-|[Desempenho](#performance)|[Impressão](#printing)|
-|[Servidor proxy](#proxy-server)|[Configurações de guias em suspensão](#sleeping-tabs-settings)|
-|[Configurações do SmartScreen](#smartscreen-settings)|[Página de inicialização, página inicial e nova guia](#startup-home-page-and-new-tab-page)|
-|[Adicional](#additional)|
+- [Configurações do Application Guard](#application-guard-settings)
+- [Cast](#cast)
+- [Configurações de conteúdo](#content-settings)
+- [Provedor de pesquisa padrão](#default-search-provider)
+- [Extensões](#extensions)
+- [Autenticação HTTP](#http-authentication)
+- [Configurações do modo de quiosque](#kiosk-mode-settings)
+- [Capacidade de gerenciamento](#manageability)
+- [Sistema de mensagens nativo](#native-messaging)
+- [Gerenciador de senhas e proteção](#password-manager-and-protection)
+- [Desempenho](#performance)
+- [Impressão](#printing)
+- [Servidor proxy](#proxy-server)
+- [Configurações de guias em suspensão](#sleeping-tabs-settings)
+- [Configurações do SmartScreen](#smartscreen-settings)
+- [Página de inicialização, página inicial e nova guia](#startup-home-page-and-new-tab-page)
+- [Adicional](#additional)
+
 
 ### [*<a name="application-guard-settings"></a>Configurações do Application Guard*](#application-guard-settings-policies)
 
@@ -395,7 +402,7 @@ e dicas para os serviços Microsoft|
 |[RunAllFlashInAllowMode](#runallflashinallowmode)|Estender a configuração de conteúdo do Adobe Flash para todo o conteúdo (obsoleta)|
 |[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Permitir que os usuários continuem a partir da página de aviso de HTTPS|
 |[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|Permitir que os usuários prossigam na página de aviso HTTPS para origens específicas|
-|[SSLVersionMin](#sslversionmin)|Versão mínima do TLS habilitada|
+|[SSLVersionMin](#sslversionmin)|Versão mínima de TLS habilitada (obsoleta)|
 |[SaveCookiesOnExit](#savecookiesonexit)|Salvar os cookies ao fechar o Microsoft Edge|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|Desabilitar o salvamento do histórico do navegador|
 |[ScreenCaptureAllowed](#screencaptureallowed)|Permitir ou negar captura de tela|
@@ -1895,9 +1902,9 @@ Não definir a política significa que [DefaultFileSystemReadGuardSetting](#defa
 
 Os padrões de URL não podem entrar em conflito com [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls). Nenhuma das políticas tem precedência se uma URL corresponder a ambas.
 
-Para obter informações detalhadas sobre os padrões de URL válidos, confira https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -1964,9 +1971,9 @@ Se você não definir esta política, [DefaultFileSystemReadGuardSetting](#defau
 
 Os padrões de URL não podem entrar em conflito com [FileSystemReadAskForUrls](#filesystemreadaskforurls). Nenhuma das políticas tem precedência se uma URL corresponder a ambas.
 
-Para obter informações detalhadas sobre os padrões de URL válidos, confira https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -2033,9 +2040,9 @@ Se você não definir esta política, [DefaultFileSystemWriteGuardSetting](#defa
 
 Os padrões de URL não podem entrar em conflito com [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls). Nenhuma das políticas tem precedência se uma URL corresponder a ambas.
 
-Para obter informações detalhadas sobre os padrões de URL válidos, confira https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -2102,9 +2109,9 @@ Se você não definir esta política, [DefaultFileSystemWriteGuardSetting](#defa
 
 Os padrões de URL não podem entrar em conflito com [FileSystemWriteAskForUrls](#filesystemwriteaskforurls). Nenhuma das políticas tem precedência se uma URL corresponder a ambas.
 
-Para obter informações detalhadas sobre os padrões de URL válidos, confira https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -2169,7 +2176,9 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 Se você não configurar essa política, o valor padrão global será usado para todos os sites da diretiva [DefaultImagesSetting](#defaultimagessetting) (se definida) ou à configuração pessoal do usuário.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
+
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -2234,7 +2243,9 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 Se você não configurar essa política, o valor padrão global da diretiva [DefaultImagesSetting](#defaultimagessetting) (se definida) ou a configuração pessoal do usuário será usada para todos os sites.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
+
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -2299,7 +2310,9 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 Se você não configurar essa política, o conteúdo misto bloqueável será bloqueado, e o conteúdo misto opcionalmente bloqueável será atualizado. No entanto, os usuários poderão definir exceções para permitir conteúdo misto não seguro para sites específicos.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
+
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -2364,7 +2377,9 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
 
 Se você não configurar essa política, o conteúdo misto bloqueável será bloqueado, e o conteúdo misto opcionalmente bloqueável será atualizado. No entanto, os usuários poderão definir exceções para permitir conteúdo misto não seguro para sites específicos.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
+
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -9129,7 +9144,7 @@ Se você habilitar ou não configurar essa política, os usuários poderão exec
 
   #### <a name="description"></a>Descrição
 
-  Essa política foi preterida porque destina-se a ser um mecanismo de curto prazo para dar mais tempo para que as empresas atualizem o conteúdo da Web se e quando ela for incompatível com a alteração para não permitir solicitações XHR síncronas durante a descarte da página. Ela não funcionará no Microsoft Edge versão 88.
+  Essa política foi preterida porque destina-se a ser um mecanismo de curto prazo para dar mais tempo para que as empresas atualizem o conteúdo da Web se e quando ela for incompatível com a alteração para não permitir solicitações XHR síncronas durante a descarte da página. Não funcionará no Microsoft Edge versão 93.
 
 Essa política permite especificar que uma página pode enviar solicitações XHR síncronas durante o descarte da página.
 
@@ -11052,7 +11067,7 @@ Se você habilitar essa política, o cliente DNS interno será usado, se ele est
 
 Se você desabilitar essa política, o cliente DNS integrado só será usado quando o DNS sobre HTTPS estiver em uso.
 
-Se você não configurar essa política, o cliente DNS integrado será habilitado por padrão.
+Se você não configurar esta política, o cliente DNS integrado será habilitado por padrão no macOS e no Android (quando nem o DNS privado nem o VPN estiverem habilitados).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -11112,7 +11127,7 @@ Se você não configurar essa política, o cliente DNS integrado será habilitad
 
   Essa política foi preterida porque seu objetivo é apenas servir como um mecanismo de curto prazo, para dar mais tempo para que as empresas atualizem seus ambientes e relatem problemas se forem considerados incompatíveis com o verificador de certificados interno.
 
-Esta política não funcionará no Microsoft Edge versão 87, quando o suporte para o verificador de certificado herdado no Mac OS X está planejado para ser removido.
+Não funcionará no Microsoft Edge versão 92, quando o suporte para o verificador de certificado legado no Mac OS X está planejado para ser removido.
 
 
   #### <a name="supported-features"></a>Recursos compatíveis:
@@ -19285,9 +19300,9 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   ### <a name="sslversionmin"></a>SSLVersionMin
 
-  #### <a name="minimum-tls-version-enabled"></a>Versão mínima do TLS habilitada
+  #### <a name="minimum-tls-version-enabled-deprecated"></a>Versão mínima de TLS habilitada (obsoleta)
 
-  
+  >PRETERIDA: essa política está preterida. Ela tem suporte no momento, mas se tornará obsoleta em uma versão futura.
   
   #### <a name="supported-versions"></a>Versões com suporte:
 
@@ -19295,7 +19310,9 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   #### <a name="description"></a>Descrição
 
-  Define a versão mínima suportada do TLS. Se você não configurar esta política, o Microsoft Edge mostrará um erro para TLS 1.0 e TLS 1.1, mas o usuário poderá contorná-lo.
+  O suporte para suprimir o aviso de TLS 1.0 / 1.1 será removido do Microsoft Edge a partir da versão 91 (por volta de maio de 2021) e esta política deixará de funcionar.
+
+Define a versão mínima suportada do TLS. Se você não configurar esta política, o Microsoft Edge mostrará um erro para TLS 1.0 e TLS 1.1, mas o usuário poderá contorná-lo.
 
 Se você habilitar essa política, o Microsoft Edge não usará qualquer versão de SSL/TLS inferior à versão especificada. Todos os valores não reconhecidos são ignorados.
 
@@ -19324,7 +19341,7 @@ Use as informações anteriores ao configurar essa política.
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
   - Nome Exclusivo da Política de Grupo: SSLVersionMin
-  - Nome da Política de Grupo: Versão mínima do TLS habilitada
+  - Nome GP: versão mínima de TLS habilitada (obsoleta)
   - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
