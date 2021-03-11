@@ -3,7 +3,7 @@ title: Documentação de Política do Microsoft Edge WebView2
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/03/2021
+ms.date: 03/10/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: b362ac7b7addde044155428f61b7fb35d68f3e80
-ms.sourcegitcommit: bd83f2fbc4d7943e8f19c24414b65ed9d9009f2d
+ms.openlocfilehash: 47072c6e39944bb51fd4c683a9597125d8776d08
+ms.sourcegitcommit: e3762b1a204c143b4e2264100affae3d9ddaaffc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "11388739"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "11406352"
 ---
 # <a name="microsoft-edge-webview2---policies"></a><span data-ttu-id="2bc9e-103">Políticas do Microsoft Edge WebView2</span><span class="sxs-lookup"><span data-stu-id="2bc9e-103">Microsoft Edge WebView2 - Policies</span></span>
 
@@ -31,9 +31,8 @@ ms.locfileid: "11388739"
 
 <span data-ttu-id="2bc9e-109">Estas tabelas listam todas as políticas de grupo disponíveis nesta versão do Microsoft Edge WebView2.</span><span class="sxs-lookup"><span data-stu-id="2bc9e-109">These tables list all of the group policies available in this release of Microsoft Edge WebView2.</span></span> <span data-ttu-id="2bc9e-110">Use os links na tabela a seguir para obter mais detalhes sobre políticas específicas.</span><span class="sxs-lookup"><span data-stu-id="2bc9e-110">Use the links in the table to get more details about specific policies.</span></span>
 
-|||
-|-|-|
-|[<span data-ttu-id="2bc9e-111">Configurações de substituição do carregador</span><span class="sxs-lookup"><span data-stu-id="2bc9e-111">Loader Override Settings</span></span>](#loader-override-settings)|
+- [<span data-ttu-id="2bc9e-111">Configurações de substituição do carregador</span><span class="sxs-lookup"><span data-stu-id="2bc9e-111">Loader Override Settings</span></span>](#loader-override-settings)
+
 
 ### [*<a name="loader-override-settings"></a><span data-ttu-id="2bc9e-112">Configurações de substituição do carregador</span><span class="sxs-lookup"><span data-stu-id="2bc9e-112">Loader Override Settings</span></span>*](#loader-override-settings-policies)
 
