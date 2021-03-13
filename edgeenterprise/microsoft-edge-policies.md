@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/10/2021
+ms.date: 03/12/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 94ad135f23dae83391e873ef120e6c88b44d0e27
-ms.sourcegitcommit: e3762b1a204c143b4e2264100affae3d9ddaaffc
+ms.openlocfilehash: cecadd38a07c6be0153744657c5bef037bd665c7
+ms.sourcegitcommit: 24e26d393e87acb59300bcca6529a9be57c530cf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "11406372"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "11408643"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -26,16 +26,9 @@ Para saber mais sobre o conjunto de políticas, usado para controlar como e quan
 
 Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microsoft](https://www.microsoft.com/download/details.aspx?id=55319) para obter as configurações de linha de base de configuração de segurança do Microsoft Edge. Para saber mais, confira o blog [Linhas de base de segurança da Microsoft,](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).
 
+
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
-
-## <a name="new-and-deprecated-policies"></a>Políticas novas e preteridas
-
-A tabela a seguir lista as políticas novas e preteridas para esta atualização.
-
-|Nome|Legenda|
-|--|--|
-|[SSLVersionMin](#sslversionmin)|Versão mínima de TLS habilitada (obsoleta)|
 
 ## <a name="available-policies"></a>Políticas disponíveis
 
