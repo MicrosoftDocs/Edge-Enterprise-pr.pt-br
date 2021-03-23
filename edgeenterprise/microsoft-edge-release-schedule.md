@@ -3,19 +3,19 @@ title: Agenda de lançamento do Microsoft Edge
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/11/2021
+ms.date: 03/18/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Agenda de lançamento do Microsoft Edge
-ms.openlocfilehash: 31e8c3e884abdb12ffbd5fae940e466a2ab188d0
-ms.sourcegitcommit: e05e55b5f7808335c68dcee3acc488c53eede435
+ms.openlocfilehash: 7c679918a52a251a53ed5aa5d36df587ba1c46ab
+ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "11407523"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "11442402"
 ---
 # <a name="microsoft-edge-release-schedule"></a>Agenda de lançamento do Microsoft Edge
 
@@ -42,8 +42,8 @@ A tabela a seguir apenas rastreia e fornece informações para versões principa
 | Versão | Status da versão | Canal Beta<br>Semana de lançamento | Canal Estável<br>Semana de lançamento |
 |---------|-----|------|--------|
 | 88 | Lançada<br>Versão | 09 de novembro de 2020<br>[88.0.705.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-88070518-december-9) | 21 de janeiro de 2021<br>[88.0.705.50](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-88070550-january-21)|
-| **89** | Lançada<br>Versão | **03 de fevereiro de 2021**<br>**[89.0.774.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-89077418-february-3)** | **04-mar-2021**<br>**[89.0.774.45](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-89077445-march-21)** |
-| 90 | Lançamento previsto | Semana de 16 de março de 2021 | Semana de 15 de abril de 2021 |
+| **89** | Lançada<br>Versão | 03 de fevereiro de 2021<br>[89.0.774.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-89077418-february-3) | **04-mar-2021**<br>**[89.0.774.45](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-89077445-march-21)** |
+| **90** | Liberado<br>Versão | **16 de março de 2021**<br>**[90.0.818.8](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-9008188-march-16)** | Semana de 15 de abril de 2021 |
 | 91 | Lançamento previsto | Semana de 27 de abril de 2021 | Semana de 27 de maio de 2021 |
 | 92 | Lançamento previsto | Semana do 08 de junho de 2021 | Semana de 22 de julho de 2021 |
 | 93 | Lançamento previsto | Semana de 03 de agosto de 2021 | Semana de 02 de setembro de 2021 |

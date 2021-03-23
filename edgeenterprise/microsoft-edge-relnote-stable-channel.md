@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Stable Channel
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/15/2021
+ms.date: 03/18/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: 7d08aa1d9cf1f3e04861561169d2f6a01772e5f2
-ms.sourcegitcommit: b1060a5c71174ba1d2eea91efb51232beeb97bf8
+ms.openlocfilehash: a0f33300d39f5ecaf48de114697c593a391dc052
+ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "11409245"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "11442381"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão do Microsoft Edge Stable Channel
 
@@ -27,7 +27,11 @@ Essas notas de versão fornecem informações dos novos recursos e atualizaçõe
  Para entender os canais do Microsoft Edge, confira a [Visão geral dos canais do Microsoft Edge](microsoft-edge-channels.md).
 
 > [!NOTE]
-> Para o Canal Estável, as atualizações serão implantadas progressivamente por um ou mais dias. Para saber mais, confira [Lançamentos progressivos para atualizações do Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
+> Para o Canal Estável, as atualizações serão implantadas progressivamente por um ou mais dias. Para saber mais, consulte [Distribuições progressivas para atualizações do Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
+
+## <a name="version-89077457-march-18"></a>Versão 89.0.774.57: 18 de março
+
+Correção de vários bugs e problemas de desempenho.
 
 ## <a name="version-89077454-march-13"></a>Versão 89.0.774.54: 13 de março
 

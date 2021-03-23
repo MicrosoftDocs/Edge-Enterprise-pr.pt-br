@@ -3,19 +3,19 @@ title: Configurar o modo de quiosque do Microsoft Edge
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 03/03/2021
+ms.date: 03/16/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Aprenda sobre os recursos do modo de quiosque e como configurar as opções do modo de quiosque do Microsoft Edge.
-ms.openlocfilehash: 9f2ce26f2c505ba3fc9e2e05b057e5d5df8257fe
-ms.sourcegitcommit: 8da3a4de1a14514014b6d7b103ba79f2ace48044
+ms.openlocfilehash: 516bc004a516b243e52d4128ae47f3ab9d7498df
+ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "11388550"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "11442481"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Configurar o modo de quiosque do Microsoft Edge
 
@@ -24,7 +24,10 @@ Este artigo descreve como configurar as opções do modo de quiosque do Microsof
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 87 ou posterior.
 
-## <a name="overview"></a>Visão geral
+> [!IMPORTANT]
+> Chame os recursos do modo quiosque do Microsoft Edge no Windows 10 usando os argumentos de linha de comando fornecidos em [Use os recursos do modo quiosque](#use-kiosk-mode-features).
+
+## <a name="overview"></a>Visão Geral
 
 O modo de quiosque do Microsoft Edge oferece duas experiências de bloqueio do navegador, para que as organizações possam criar, gerenciar e oferecer a melhor experiência para seus clientes. As seguintes experiências de bloqueio estão disponíveis:  
 
@@ -209,9 +212,9 @@ As Configurações do Windows é a maneira mais simples de configurar um ou mais
 
 ## <a name="functional-limitations"></a>Limitações funcionais
 
-Com o lançamento desta versão de visualização do modo de quiosque, continuamos a melhorar o produto e adicionar novos recursos.
+Com o lançamento desta versão prévia do modo quiosque, continuamos trabalhando para melhorar o produto e adicionar novos recursos.
 
-Recomendamos que você desligue:
+No momento, não oferecemos suporte aos seguintes recursos e recomendamos que você desligue:
 
 - [InPrivateModeAvailability](https://docs.microsoft.com/deployedge/microsoft-edge-policies#inprivatemodeavailability)
 - [IsolateOrigins](https://docs.microsoft.com/deployedge/microsoft-edge-policies#isolateorigins)
@@ -224,6 +227,7 @@ Recomendamos que você desligue:
 - [InternetExplorerIntegrationLevel](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlevel)
 - [Extensões](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensions-policies)
 - [BackgroundModeEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#backgroundmodeenabled)
+- [UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed)
 
 ## <a name="roadmap"></a>Roteiro
 

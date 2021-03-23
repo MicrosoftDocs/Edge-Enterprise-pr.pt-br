@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/12/2021
+ms.date: 03/18/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: cecadd38a07c6be0153744657c5bef037bd665c7
-ms.sourcegitcommit: 24e26d393e87acb59300bcca6529a9be57c530cf
+ms.openlocfilehash: 4935b927081ef1823ecf36b922948992926d4005
+ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2021
-ms.locfileid: "11408643"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "11442471"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -29,6 +29,16 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
+
+## <a name="new-policies"></a>Novas políticas
+
+A tabela a seguir lista as novas políticas desta atualização.
+
+|Nome|Legenda|
+|--|--|
+|[NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)|Permitir links rápidos na página nova guia|
+|[FetchKeepaliveDurationOnShutdown](#fetchkeepalivedurationonshutdown)|Buscar a duração do keepalive no desligamento|
+
 
 ## <a name="available-policies"></a>Políticas disponíveis
 
@@ -230,7 +240,8 @@ e dicas para os serviços Microsoft|
 |[NewTabPageHideDefaultTopSites](#newtabpagehidedefaulttopsites)|Ocultar os principais sites padrão da página nova guia|
 |[NewTabPageLocation](#newtabpagelocation)|Configurar a URL da página nova guia|
 |[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|Definir link rápido de Página Nova Guia|
-|[NewTabPagePrerenderEnabled](#newtabpageprerenderenabled)|Habilitar o pré-carregamento da nova página da guia para renderização mais rápida|
+|[NewTabPagePrerenderEnabled](#newtabpageprerenderenabled)|Habilite o pré-carregamento da página da nova guia para renderização mais rápida|
+|[NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)|Permitir links rápidos na página nova guia|
 |[NewTabPageSetFeedType](#newtabpagesetfeedtype)|Configurar a nova experiência de página da guia Microsoft Edge (preterido)|
 |[RestoreOnStartup](#restoreonstartup)|Ação a ser realizada na inicialização|
 |[RestoreOnStartupURLs](#restoreonstartupurls)|Sites a abrir quando o navegador for iniciado|
@@ -322,6 +333,7 @@ e dicas para os serviços Microsoft|
 |[ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox)|Mostrar a caixa de seleção "sempre aberta" no diálogo de protocolo externo|
 |[FamilySafetySettingsEnabled](#familysafetysettingsenabled)|Permitir que os usuários configurem a Proteção para a Família e o Modo Crianças|
 |[FavoritesBarEnabled](#favoritesbarenabled)|Habilitar barra de favoritos|
+|[FetchKeepaliveDurationOnShutdown](#fetchkeepalivedurationonshutdown)|Buscar a duração do keepalive no desligamento|
 |[ForceBingSafeSearch](#forcebingsafesearch)|Aplicar a Pesquisa Segura do Bing|
 |[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|Configurar se o Microsoft Edge deve selecionar automaticamente um certificado quando houver várias correspondências de certificado para um site configurado com "AutoSelectCertificateForUrls"|
 |[ForceEphemeralProfiles](#forceephemeralprofiles)|Habilitar o uso de perfis efêmeros|
@@ -8452,6 +8464,70 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 ```
   
 
+  [Voltar ao topo](#microsoft-edge---policies)
+
+  ### <a name="newtabpagequicklinksenabled"></a>NewTabPageQuickLinksEnabled
+
+  #### <a name="allow-quick-links-on-the-new-tab-page"></a>Permitir links rápidos na página nova guia
+
+  
+  
+  #### <a name="supported-versions"></a>Versões suportadas:
+
+  - No Windows e macOS desde 91 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Se você habilitar ou não configurar esta política, o Microsoft Edge exibe links rápidos na página da nova guia e o usuário pode interagir com o controle, ativando e desativando os links rápidos. Ativar esta política não força os links rápidos a ficarem visíveis - o usuário pode continuar a ativar e desativar os links rápidos.
+
+Se você desabilitar esta política, o Microsoft Edge oculta links rápidos na página da nova guia e desativa o controle de links rápidos no menu desdobrável Configurações de NTP.
+
+Esta política se aplica apenas a perfis de usuário local do Microsoft Edge, perfis conectados usando uma conta da Microsoft e perfis conectados usando Active Directory. Para configurar a página da nova guia Enterprise para perfis conectados usando o Azure Active Directory, use o portal de administração do M365.
+
+Política relacionada: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)
+
+  #### <a name="supported-features"></a>Recursos com suporte:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome único GP: NewTabPageQuickLinksEnabled
+  - Nome GP: Permitir links rápidos na página nova guia
+  - Caminho GP (obrigatório): Modelos Administrativos/Microsoft Edge/Inicialização, página inicial e página de nova guia
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: NewTabPageQuickLinksEnabled
+  - Tipo de Valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: NewTabPageQuickLinksEnabled
+  - Valor de exemplo:
+``` xml
+<true/>
+```
+  
+
   [Voltar ao início](#microsoft-edge---policies)
 
   ### <a name="newtabpagesetfeedtype"></a>NewTabPageSetFeedType
@@ -14374,6 +14450,68 @@ Se essa política não estiver configurada, o usuário poderá decidir se quer o
 ```
   
 
+  [Voltar ao topo](#microsoft-edge---policies)
+
+  ### <a name="fetchkeepalivedurationonshutdown"></a>FetchKeepaliveDurationOnShutdown
+
+  #### <a name="fetch-keepalive-duration-on-shutdown"></a>Buscar a duração do keepalive no desligamento
+
+  
+  
+  #### <a name="supported-versions"></a>Versões suportadas:
+
+  - No Windows e no macOS desde 90 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Controla a duração (em segundos) que as solicitações de manutenção de atividade têm permissão para impedir que o navegador conclua seu desligamento.
+
+Se você configurar esta política, o navegador bloqueará a conclusão do desligamento enquanto processa todas as solicitações de manutenção de atividade pendentes (consulte https://fetch.spec.whatwg.org/#request-keepalive-flag) até o período máximo de tempo especificado por esta política.
+
+Se você desabilitar ou não configurar esta política, o valor padrão de 0 segundos será usado e as solicitações de manutenção de atividade pendentes serão canceladas imediatamente durante o desligamento do navegador.
+
+  #### <a name="supported-features"></a>Recursos com suporte:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Inteiro
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome único GP: FetchKeepaliveDurationOnShutdown
+  - Nome da GP: Buscar a duração do keepalive no desligamento
+  - Caminho GP (obrigatório): Modelos Administrativos/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: FetchKeepaliveDurationOnShutdown
+  - Tipo de Valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: FetchKeepaliveDurationOnShutdown
+  - Valor de exemplo:
+``` xml
+<integer>1</integer>
+```
+  
+
   [Voltar ao início](#microsoft-edge---policies)
 
   ### <a name="forcebingsafesearch"></a>ForceBingSafeSearch
@@ -15103,9 +15241,13 @@ Termos de pesquisa populares de uma única palavra exigirão a seleção manual 
 
   #### <a name="description"></a>Descrição
 
-  Os nomes de host especificados nesta lista serão isentos da verificação de política HSTS que podem, potencialmente, atualizar solicitações de "http://" para "https://". Somente os nomes de host de rótulo único são permitidos nesta política. Os nomes de host devem ser canônicos. Todos os IDNs devem ser convertidos no formato de uma etiqueta A, e todas as letras ASCII devem estar em letras minúsculas. Essa política se aplica somente aos nomes de host específicos especificados. Isso não se aplica a subdomínios dos nomes da lista.
+  Definir a política especifica uma lista de nomes de host que ignora atualizações de HSTS pré-carregadas de http para https.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+Apenas nomes de host de rótulo único são permitidos nesta política, e esta política se aplica apenas a entradas pré-carregadas de HSTS estáticas (por exemplo, "app", "novo", "pesquisar", "reproduzir"). Esta política não impede atualizações de HSTS para servidores que solicitaram atualizações de HSTS dinamicamente usando um cabeçalho de resposta Strict-Transport-Security.
+
+Os nomes de host fornecidos devem ser canônicos: todos os IDNs devem ser convertidos para o formato de rótulo A e todas as letras ASCII devem ser minúsculas. Esta política se aplica apenas aos nomes de host de rótulo único específicos especificados, não aos subdomínios desses nomes.
+
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -16820,9 +16962,11 @@ Os usuários podem fazer isso no menu "Mais ferramentas", selecionando 'Abrir si
 
 Além disso, os usuários podem testar seus aplicativos em um navegador moderno sem remover os aplicativos da lista de sites usando a opção 'Abrir sites no modo Edge'.
 
-Essa configuração funciona em conjunto com a: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) está definida como "IEMode" e a política [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) onde a lista tem pelo menos uma entrada.
+Essa configuração funciona em conjunto com: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) está definido para 'IEMode'.
+   
+                                                                                                                         
 
-Se você habilitar esta política, a opção "Abrir sites no modo Internet Explorer" ficará visível em "Mais ferramentas". Os usuários podem visualizar seus sites no modo Internet Explorer nesta guia. Outra opção para 'Abrir sites no modo Edge' também estará visível em "Mais ferramentas" para ajudar a testar sites em um navegador moderno sem removê-los da lista de sites.
+Se você habilitar esta política, a opção 'Abrir sites no modo Internet Explorer' ficará visível em "Mais ferramentas". Os usuários podem visualizar seus sites no modo Internet Explorer nesta guia. Outra opção para 'Abrir sites no modo Edge' também estará visível em "Mais ferramentas" para ajudar a testar sites em um navegador moderno sem removê-los da lista de sites.
 
 Se você desabilitar ou não configurar esta política, os usuários não poderão ver as opções 'Abrir no modo Internet Explorer' e 'Abrir no modo Edge' no menu "Mais ferramentas". No entanto, os usuários podem configurar essas opções com o sinalizador --ie-mode-test.
 
