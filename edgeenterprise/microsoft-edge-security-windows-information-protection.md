@@ -10,35 +10,35 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Suporte do Microsoft Edge para Proteção de Informações do Windows
-ms.openlocfilehash: 4ec48d258deb1cf6d4436716f14aa2561cee2a50
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: a9981947462627ae4884f18f4df6accf2ee60f12
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979157"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447185"
 ---
-# Suporte do Microsoft Edge para Proteção de Informações do Windows (WIP)
+# <a name="microsoft-edge-support-for-windows-information-protection-wip"></a>Suporte do Microsoft Edge para Proteção de Informações do Windows (WIP)
 
 Este artigo descreve como o Microsoft Edge tem suporte para a Proteção de Informações do Windows (WIP).
 
 > [!NOTE]
 > Isso se aplica ao Microsoft Edge versão 81 ou mais recente.
 
-## Visão geral
+## <a name="overview"></a>Visão geral
 
 A Proteção de Informações do Windows (WIP) é um recurso do Windows 10 que ajuda a proteger os dados corporativos contra divulgações acidentais ou não autorizadas. Com o aumento do trabalho remoto, há um maior risco de compartilhar dados corporativos fora do local de trabalho. Esse risco aumenta quando atividades pessoais e atividades de trabalho ocorrem em dispositivos corporativos.
 
 O Microsoft Edge é compatível com a WIP para ajudar a proteger o conteúdo em um ambiente da Web em que os usuários compartilham e distribuem conteúdo com frequência.
 
-### Requisitos de sistema
+### <a name="system-requirements"></a>Requisitos de sistema
 
 Os requisitos a seguir se aplicam aos dispositivos que usam WIP na empresa:
 
 - Windows 10, versão 1607 ou posterior
 - Somente SKUs de clientes Windows
-- Uma das soluções de gerenciamento descritas nos [pré-requisitos da WIP](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip#prerequisites)
+- Uma das soluções de gerenciamento descritas nos [pré-requisitos da WIP](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip#prerequisites)
 
-### Benefícios da Proteção de Informações do Windows
+### <a name="windows-information-protection-benefits"></a>Benefícios da Proteção de Informações do Windows
 
 A WIP fornece os seguintes benefícios:
 
@@ -48,9 +48,9 @@ A WIP fornece os seguintes benefícios:
 - Relatórios de auditoria para controlar problemas e para ações corretivas, como treinamento de conformidade para usuários.
 - Integração com o seu sistema de gerenciamento existente para configurar, implantar e gerenciar WIP. Alguns exemplos são o Microsoft Intune, o Microsoft Endpoint Configuration Manager ou o seu sistema de Gerenciamento de Dispositivo Móvel (MDM) atual.
 
-## Modos de política e proteção da WIP
+## <a name="wip-policy-and-protection-modes"></a>Modos de política e proteção da WIP
 
-Usando políticas, você pode configurar os quatro modos de proteção descritos na tabela a seguir. Para obter mais informações, confira [modos de proteção da WIP](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip#wip-protection-modes).
+Usando políticas, você pode configurar os quatro modos de proteção descritos na tabela a seguir. Para obter mais informações, confira [modos de proteção da WIP](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip#wip-protection-modes).
 
 | Modo | Descrição |
 |------|-------------|
@@ -60,7 +60,7 @@ Usando políticas, você pode configurar os quatro modos de proteção descritos
 | Desativada | A WIP permanece desativada e não ajuda a proteger nem auditar os dados. Depois de desativar a WIP, é feita uma tentativa de descriptografar todos os arquivos marcados pela WIP nas unidades conectadas localmente. As suas informações de descriptografia e política anteriores não serão reaplicadas automaticamente se você reativar a proteção WIP novamente.
  |
 
-## Recursos da WIP com suporte no Microsoft Edge
+## <a name="wip-features-supported-in-microsoft-edge"></a>Recursos da WIP com suporte no Microsoft Edge
 
 A partir da versão 81 do Microsoft Edge, há suporte para os seguintes recursos:
 
@@ -72,7 +72,7 @@ A partir da versão 81 do Microsoft Edge, há suporte para os seguintes recursos
 - A navegação em locais de trabalho de perfis que não são de trabalho redireciona automaticamente para o Perfil de Trabalho (associado à identidade do Azure AD).
 - O modo IE é compatível com a funcionalidade completa da WIP.
 
-## Trabalhando com a WIP no Microsoft Edge
+## <a name="working-with-wip-in-microsoft-edge"></a>Trabalhando com a WIP no Microsoft Edge
 
 Depois que o suporte à WIP estiver habilitado para o Microsoft Edge, os usuários verão quando informações relacionadas ao trabalho forem acessadas. A próxima captura de tela mostra o ícone de maleta na barra de endereços, indicando que as informações relacionadas ao trabalho são acessadas por meio do navegador.
 
@@ -82,34 +82,34 @@ O Microsoft Edge oferece aos usuários a capacidade de compartilhar conteúdo pr
 
  ![Aviso de substituição de conteúdo protegido](./media/microsoft-edge-security-windows-information-protection/microsoft-edge-wip-override.png)
 
-## Configurar políticas para oferecer suporte à WIP
+## <a name="configure-policies-to-support-wip"></a>Configurar políticas para oferecer suporte à WIP
 
 O uso da WIP com o Microsoft Edge requer a presença de um perfil de trabalho.
 
-### Garanta a presença de um perfil de trabalho
+### <a name="ensure-the-presence-of-a-work-profile"></a>Garanta a presença de um perfil de trabalho
 
 Em máquinas unidas híbridas, o Microsoft Edge é automaticamente conectado com a conta do Azure Active Directory (Azure AD). Para garantir que os usuários não removam esse perfil, que é necessário para a WIP, configure a seguinte política:
 
-- [NonRemovableProfileEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#nonremovableprofileenabled)
+- [NonRemovableProfileEnabled](./microsoft-edge-policies.md#nonremovableprofileenabled)
 
 > [!NOTE]
-> Se o seu ambiente não tiver união híbrida, você pode fazer a união híbrida usando estas instruções: [Planejar a implementação de união híbrida do Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan).
+> Se o seu ambiente não tiver união híbrida, você pode fazer a união híbrida usando estas instruções: [Planejar a implementação de união híbrida do Azure Active Directory](/azure/active-directory/devices/hybrid-azuread-join-plan).
 
 Se a junção híbrida não for uma opção, você poderá usar as contas locais do Active Directory para permitir que o Microsoft Edge crie automaticamente um perfil de trabalho especial com as contas de domínio dos usuários. Observe que as contas locais podem não receber todos os recursos do Azure AD, como a sincronização de nuvem, o Office NTP, e assim por diante.)
 
-#### Contas do Active Directory (AD)
+#### <a name="active-directory-ad-accounts"></a>Contas do Active Directory (AD)
 
 Para contas do AD, você deve configurar a política a seguir para que o Microsoft Edge crie um perfil de trabalho especial automaticamente.
 
-- [ConfigureOnPremisesAccountAutoSignIn](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#configureonpremisesaccountautosignin)
+- [ConfigureOnPremisesAccountAutoSignIn](./microsoft-edge-policies.md#configureonpremisesaccountautosignin)
 
-### Políticas do Windows para a WIP
+### <a name="windows-policies-for-wip"></a>Políticas do Windows para a WIP
 
-Você pode configurar a WIP usando políticas do Windows. Para saber mais, confira [Criar e implantar políticas da WIP usando o Microsoft Intune](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/overview-create-wip-policy)
+Você pode configurar a WIP usando políticas do Windows. Para saber mais, confira [Criar e implantar políticas da WIP usando o Microsoft Intune](/windows/security/information-protection/windows-information-protection/overview-create-wip-policy)
 
-## Perguntas frequentes
+## <a name="frequently-asked-questions"></a>Perguntas frequentes
 
-### Como resolver o Código de erro -2147024540?
+### <a name="how-do-i-resolve-error-code--2147024540"></a>Como resolver o Código de erro -2147024540?
 
 Esse código de erro corresponde ao seguinte erro de Proteção de Informações do Windows: *ERROR_EDP_POLICY_DENIES_OPERATION: a operação solicitada foi bloqueada pela política de Proteção de Informações do Windows. Para obter mais informações, entre em contato com o administrador do sistema.*.
 
@@ -121,7 +121,7 @@ A captura de tela a seguir mostra como o Microsoft Intune é usado para adiciona
 
 Se você não estiver usando o Microsoft Intune, baixe e aplique a atualização de política no arquivo de [Política AppLocker para WIP Enterprise](https://download.microsoft.com/download/8/9/9/8995d820-065c-4ab1-aa2a-9d6dc0cd7ffa/MsEdge%20-%20WIP%20Enterprise%20AppLocker%20Policy%20Files.zip).
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise) 
-- [Proteja dados corporativos usando a Proteção de Informações do Windows](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
+- [Proteja dados corporativos usando a Proteção de Informações do Windows](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)

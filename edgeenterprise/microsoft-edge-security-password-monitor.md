@@ -10,41 +10,41 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Monitor de Senha habilitado automaticamente para usuários
-ms.openlocfilehash: 2f796f0cd1bbb437f83d04a8bd59586ef7b6a982
-ms.sourcegitcommit: 187203e9eaa9c48c59095b7e7d625d3081a6ba19
+ms.openlocfilehash: d1995735ac7558c1608d427aac70081d4afed3a0
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "11304531"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447275"
 ---
-# Monitor de Senha habilitado automaticamente para usuários
+# <a name="password-monitor-auto-enabled-for-users"></a>Monitor de Senha habilitado automaticamente para usuários
 
 Este artigo descreve como o Monitor de Senhas no Microsoft Edge será ativado para usuários selecionados e fornece aos administradores as etapas para controlar como o monitoramento está habilitado.
 
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 88 ou posterior.
 
-## Introdução, benefícios e disponibilidade
+## <a name="introduction-benefits-and-availability"></a>Introdução, benefícios e disponibilidade
 
 O Monitor de Senhas ajuda os usuários do Microsoft Edge a proteger suas contas online informando-os se alguma de suas senhas foi encontrada em um vazamento online. Vazamentos online ou violações de dados ocorrem quando atores ruins roubam dados de sites ou aplicativos de terceiros. Para saber mais, confira o [Monitor de senhas: proteção de senhas no documento do Microsoft Edge](https://www.microsoft.com/research/blog/password-monitor-safeguarding-passwords-in-microsoft-edge/) no Blog da Pesquisa da Microsoft.
 
-### Benefícios
+### <a name="benefits"></a>Benefícios
 
 Dada a frequência e o escopo desses ataques online, ter esse tipo de proteção se tornou necessário para todos. O Microsoft Edge tem a capacidade interna de verificar com segurança as senhas salvas de um usuário em relação a senhas que se sabem comprometidas e os alerta se uma correspondência for encontrada.  
 
-### Disponibilidade
+### <a name="availability"></a>Disponibilidade
 
 O Monitor de Senhas está disponível no Canal Estável versão 88 a partir de 21/01. A distribuição será gradual e pode levar algumas semanas antes que você veja a seguinte mensagem e controle na página **Configurações** > **Perfil** > **Senha**. 
 
 :::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-enable-option.png" alt-text="Opção para habilitar o Monitor de Senhas":::
 
-## Configurar a política de grupo para o Monitor de Senhas
+## <a name="configure-group-policy-for-password-monitor"></a>Configurar a política de grupo para o Monitor de Senhas
 
-Esse recurso é controlado por meio da política de grupo[PasswordMonitorAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#passwordmonitorallowed).
+Esse recurso é controlado por meio da política de grupo[PasswordMonitorAllowed](./microsoft-edge-policies.md#passwordmonitorallowed).
 
 Depois que a política é habilitada, os usuários ainda precisam dar consentimento para ativar o recurso. O consentimento é necessário porque o recurso contém dados pessoais e confidenciais do usuário (senhas). Se o recurso estiver desabilitado usando a política de grupo, os usuários não poderão substituir essa configuração.  
 
-## Habilitando o Monitor de Senhas para usuários
+## <a name="enabling-password-monitor-for-users"></a>Habilitando o Monitor de Senhas para usuários
 
 Depois que a política de monitor de senhas é habilitada, há maneiras diferentes de disponibilizar esse recurso para os usuários.
 
@@ -63,7 +63,7 @@ Depois que a política de monitor de senhas é habilitada, há maneiras diferent
    
 - Ativação direta. Os usuários podem ir a **Configurações** > **Senhas** a qualquer momento e ativar ou desativar o recurso.
 
-## Cenários de usuário com Monitor de Senha habilitado automaticamente
+## <a name="user-scenarios-with-password-monitor-auto-enabled"></a>Cenários de usuário com Monitor de Senha habilitado automaticamente
 
 A tabela a seguir mostra cenários em que o Monitor de Senhas é habilitado automaticamente e como ele funcionará em dispositivos do usuário.
 
@@ -80,9 +80,9 @@ Além disso, se um usuário tiver entrado usando uma conta de trabalho restrita 
 - A Sincronização de Senhas está desabilitada
 - O compartilhamento de dados com servidores da Microsoft está desabilitado
 
-## Perguntas Frequentes
+## <a name="frequently-asked-questions"></a>Perguntas Frequentes
 
-### Como o Monitor de Senhas pode ser desabilitado para minha organização?
+### <a name="how-can-password-monitor-be-disabled-for-my-organization"></a>Como o Monitor de Senhas pode ser desabilitado para minha organização?
 
 Você pode desabilitar o Monitor de Senhas para sua organização:
 - Usando a política de grupo PasswordMonitorAllowed.
@@ -91,10 +91,10 @@ Você pode desabilitar o Monitor de Senhas para sua organização:
   > [!NOTE]
   > O Monitor de Senhas pode funcionar mesmo se a Sincronização de Senha estiver desabilitada, desde que o usuário tenha dado consentimento explícito para ativar o recurso ou o tiver ativado por meio de Configurações.
 
-### O que acontece se um usuário para o qual o recurso tenha sido habilitado automaticamente ative o Monitor de Senhas por meio das Configurações?
+### <a name="what-happens-if-a-user-for-whom-the-feature-has-been-auto-enabled-turns-password-monitor-off-via-settings"></a>O que acontece se um usuário para o qual o recurso tenha sido habilitado automaticamente ative o Monitor de Senhas por meio das Configurações?
 
 A configuração do usuário é a mesma e o recurso permanecerá desabilitado para esse usuário. No entanto, eles podem ser mostrados uma caixa de diálogo de consentimento novamente caso nunca tenham respondido anteriormente à solicitação de consentimento.
 
-## Veja também
+## <a name="see-also"></a>Veja também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

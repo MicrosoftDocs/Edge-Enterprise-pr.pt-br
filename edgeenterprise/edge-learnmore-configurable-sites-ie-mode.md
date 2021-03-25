@@ -10,18 +10,18 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge e sites configuráveis no modo IE
-ms.openlocfilehash: a846d71d63a4f837041acc9b601f704999bb826a
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 1bffdef8c88b7a83d999b29763fcca258102ed51
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979118"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447325"
 ---
-# Saiba mais sobre sites configuráveis no modo IE
+# <a name="learn-about-configurable-sites-in-ie-mode"></a>Saiba mais sobre sites configuráveis no modo IE
 
 Este artigo explica o recurso de sites configuráveis na lista de sites do modo empresarial ao usar o modo IE no Microsoft Edge.
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Atualizações do Windows
 
@@ -34,17 +34,17 @@ Este artigo explica o recurso de sites configuráveis na lista de sites do modo 
   - Windows 8.1 – KB4556798 ou superior
 
 - Microsoft Edge versão 83 ou posterior
-- [Modo IE](https://aka.ms/iemodeonedge) configurado com a lista de sites do modo empresarial
+- [Modo IE](./edge-ie-mode.md) configurado com a lista de sites do modo empresarial
 
-## Visão geral
+## <a name="overview"></a>Visão geral
 
 Configurar sites que precisam do modo IE na lista de sites do modo empresarial funcionará bem na maioria dos ambientes com aplicativos herdados. No entanto, em alguns casos essa abordagem não é a melhor para configurar um subconjunto de sites para abrir no modo do IE sem processar um domínio inteiro no modo do IE. Por exemplo, quando seu ambiente do contém aplicativos modernos e herdados sendo executados em um único servidor, e você gostaria de ter a flexibilidade para renderizar apenas os aplicativos herdados no modo IE e os aplicativos restantes para renderizar no modo Microsoft Edge.
 
 A solução é usar o recurso sites configuráveis da lista de sites do modo empresarial. Quando o recurso está habilitado, o Microsoft Edge permite que os sites com a marca "configurada" participem da determinação do mecanismo do IE.
 
-## Como funcionam os sites configuráveis
+## <a name="how-configurable-sites-works"></a>Como funcionam os sites configuráveis
 
-### Mudança automática do mecanismo no Microsoft Edge para o mecanismo no modo IE
+### <a name="automatic-switching-from-the-microsoft-edge-engine-to-the-ie-mode-engine"></a>Mudança automática do mecanismo no Microsoft Edge para o mecanismo no modo IE
 
 Para usar o recurso sites configuráveis, você precisará de um ou mais sites na lista de sites do modo empresarial para ter a opção `<open-in>Configurable</open-in>`.
 
@@ -67,7 +67,7 @@ Quando o recurso sites configuráveis estiver habilitado, ocorrerá o seguinte c
    > [!NOTE]
    > A resposta de redirecionamento está sujeita ao cache de acordo com o comportamento de cache HTTP normal do Microsoft Edge para redirecionamentos.
 
-### Mudança de um mecanismo do modo IE para o mecanismo do modo Microsoft Edge
+### <a name="switching-back-from-ie-mode-engine-to-microsoft-edge-engine"></a>Mudança de um mecanismo do modo IE para o mecanismo do modo Microsoft Edge
 
 Habilitar os sites configuráveis no Microsoft Edge habilita automaticamente os seguintes comportamentos nas guias do modo IE:
 
@@ -81,8 +81,8 @@ Habilitar os sites configuráveis no Microsoft Edge habilita automaticamente os 
 > [!TIP]
 > Os dois mecanismos de navegador enviam o mesmo cabeçalho de solicitação "`X-InternetExplorerModeConfigurable: 1`" aos sites configuráveis. Você deve usar o cabeçalho da solicitação do agente do usuário para diferenciar as solicitações no modo Microsoft Edge versus no modo IE para evitar o redirecionamento quando o site estiver carregando no mecanismo correto.
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
-- [Sobre o modo IE](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Informações adicionais sobre o Modo Empresarial](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Sobre o modo IE](./edge-ie-mode.md)
+- [Informações adicionais sobre o Modo Empresarial](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

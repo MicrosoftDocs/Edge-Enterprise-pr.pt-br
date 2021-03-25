@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Definir as configurações de política do Microsoft Edge no macOS usando .plist
-ms.openlocfilehash: abe110ab3589cc9276f28590273ece2d372be3b8
-ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
+ms.openlocfilehash: 3f297c11d8009c85a1bc5e17447681ee2b9ef1e2
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "11194679"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447445"
 ---
-# Definir as configurações de política do Microsoft Edge no macOS usando .plist
+# <a name="configure-microsoft-edge-policy-settings-for-macos-using-a-plist"></a>Definir as configurações de política do Microsoft Edge no macOS usando .plist
 
 Este artigo descreve como configurar o Microsoft Edge no macOS usando um arquivo de lista de propriedades (.plist). Você aprenderá a criar esse arquivo e a implementá-lo no Microsoft Intune.
 
@@ -26,7 +26,7 @@ Para obter mais informações, consulte [About Information Property List Files](
 > [!NOTE]
 > Este artigo aplica-se ao Microsoft Edge versão 77 ou posterior.
 
-## Configurar políticas do Microsoft Edge no macOS
+## <a name="configure-microsoft-edge-policies-on-macos"></a>Configurar políticas do Microsoft Edge no macOS
 
 A primeira etapa é criar seu plist. Você pode criar o arquivo plist com qualquer editor de texto ou pode usar o [Terminal para criar o perfil de configuração](#create-a-configuration-profile-using-terminal). No entanto, é mais fácil criar e editar um arquivo plist usando uma ferramenta que formate o código XML para você. O *Xcode* é um ambiente de desenvolvimento integrado gratuito que você pode obter de um dos seguintes locais:
 
@@ -42,7 +42,7 @@ A próxima etapa depois que você criar o conteúdo de seu plist é nomeá-lo us
 
 A última etapa é implantar o plist nos dispositivos Mac dos seus usuários utilizando seu provedor MDM preferencial, como o Microsoft Intune. Para obter instruções, consulte [Implantar seu plist](#deploy-your-plist).
 
-### Criar um perfil de configuração usando o Terminal
+### <a name="create-a-configuration-profile-using-terminal"></a>Criar um perfil de configuração usando o Terminal
 
 1. No Terminal, use o seguinte comando para criar um plist para o Microsoft Edge em sua área de trabalho com suas configurações preferidas:
 
@@ -61,13 +61,13 @@ Depois de converter o arquivo, verifique se os dados da política estão correto
 > [!NOTE]
 > Somente pares chave devem estar no conteúdo do arquivo plist ou xml. Antes de carregar o seu ficheiro no Intune, remova todos os \<plist> e \<dict> valores, assim como os cabeçalhos xml do seu ficheiro. O arquivo deve conter apenas pares de chave/valor.
 
-## Implantar seu plist
+## <a name="deploy-your-plist"></a>Implantar seu plist
 
-Para o Microsoft Intune crie um novo perfil de configuração de dispositivo voltado para a plataforma do macOS e selecione o tipo de perfil *Arquivo de preferência*. Direcione **com.microsoft.Edge** como o nome de domínio de preferência e carregue seu plist. Para obter mais informações, consulte [Adicionar um arquivo de lista de propriedades a dispositivos macOS usando o Microsoft Intune](https://docs.microsoft.com/intune/configuration/preference-file-settings-macos).
+Para o Microsoft Intune crie um novo perfil de configuração de dispositivo voltado para a plataforma do macOS e selecione o tipo de perfil *Arquivo de preferência*. Direcione **com.microsoft.Edge** como o nome de domínio de preferência e carregue seu plist. Para obter mais informações, consulte [Adicionar um arquivo de lista de propriedades a dispositivos macOS usando o Microsoft Intune](/intune/configuration/preference-file-settings-macos).
 
 Para o Jamf, carregue o arquivo .plist como uma carga *Configurações personalizadas*.
 
-## Confira também
+## <a name="see-also"></a>Confira também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Configurar para macOS com Jamf](configure-microsoft-edge-on-mac-jamf.md)

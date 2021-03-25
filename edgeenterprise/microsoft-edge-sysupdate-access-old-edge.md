@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Saiba como acessar a versão herdada do Microsoft Edge.
-ms.openlocfilehash: 00f4a29c9a2bed137b339c8b5ef43eb213d33ee4
-ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
+ms.openlocfilehash: b521ab9ea093b62db7268e6bf2f4d656b3dc8d4b
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "11313891"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447085"
 ---
-# Acessar a Versão Herdada do Microsoft Edge depois de instalar a nova versão do Microsoft Edge
+# <a name="access-microsoft-edge-legacy-after-installing-the-new-version-of-microsoft-edge"></a>Acessar a Versão Herdada do Microsoft Edge depois de instalar a nova versão do Microsoft Edge
 
 Versão Prévia do Microsoft Edge deixará de receber atualizações de segurança em 9 de março de 2021. Você pode acessar o Versão Prévia do Microsoft Edge até 13 de abril. Para obter mais informações, consulte a [postagem do blog](https://aka.ms/EdgeLegacyEOS)da equipe de produto do Microsoft Edge.
 
@@ -34,13 +34,13 @@ Embora a maioria das organizações queira substituir o Microsoft Edge Legacy pe
 >
 > O aplicativo de área de trabalho da Versão Prévia do Microsoft Edge chegará ao fim do suporte em 9 de março de 2021 em favor do novo Microsoft Edge. Isso significa que a Versão Prévia do Microsoft Edge não receberá atualizações de segurança após essa data. Essa alteração é aplicável a todas as experiências executadas no aplicativo da área de trabalho da Versão Prévia do Microsoft Edge. [Saiba mais](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666).
 
-## Antes de começar
+## <a name="before-you-begin"></a>Antes de começar
 > [!NOTE]
 > A partir do Windows 10 versão 20H2 a Versão Prévia do Microsoft Edge não está mais incluída. A experiência lado a lado não é compatível com esta versão do Windows 10.
 
 Os procedimentos neste artigo se aplicam aos sistemas que foram atualizados com as últimas atualizações de segurança. Quando a nova versão do Microsoft Edge estiver instalada, a versão antiga (Versão Herdada do Microsoft Edge) será ocultada. Por padrão, todas as tentativas de iniciar a versão antiga irão redirecionar o usuário para a versão recém-instalada do Microsoft Edge. Este artigo descreve como você pode continuar usando o Microsoft Edge herdado após instalar o Microsoft Edge.
 
-## QuickStart: experiência lado a lado com o Microsoft Edge Beta e a Versão Prévia do Microsoft Edge
+## <a name="quickstart-side-by-side-experience-with-microsoft-edge-beta-channel-and-microsoft-edge-legacy"></a>QuickStart: experiência lado a lado com o Microsoft Edge Beta e a Versão Prévia do Microsoft Edge
 
 Antes de usar as instruções detalhadas deste artigo, considere as duas etapas a seguir para permitir que os usuários executem a Versão Prévia do Microsoft Edge e o Microsoft Edge ([canal Beta](microsoft-edge-channels.md)) lado a lado.
 
@@ -52,13 +52,13 @@ Antes de usar as instruções detalhadas deste artigo, considere as duas etapas 
 
 Essa solução lado a lado é menos complexa e requer menos gerenciamento do que a solução detalhada descrita neste artigo. No entanto, isso significa que você estará executando o canal Beta em vez do canal Estável.
 
-## Experiência lado a lado com o canal estável do Microsoft Edge e a Versão Prévia do Microsoft Edge
+## <a name="side-by-side-experience-with-microsoft-edge-stable-channel-and-microsoft-edge-legacy"></a>Experiência lado a lado com o canal estável do Microsoft Edge e a Versão Prévia do Microsoft Edge
 
 Instalar o canal Estável da próxima versão do Microsoft Edge no nível do sistema fará com que a versão atual (Versão Herdada do Microsoft Edge) seja ocultada. Para permitir que os usuários vejam as duas versões do Microsoft Edge lado a lado no Windows, você poderá habilitar essa experiência ao definir a política de grupo **Permitir experiência de navegador Lado a Lado do Microsoft Edge** como **Habilitada**.
 
-Essa política de grupo é documentada [aqui](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies#allowsxs)
+Essa política de grupo é documentada [aqui](./microsoft-edge-update-policies.md#allowsxs)
 
-### Para configurar a política de experiência do navegador lado a lado:
+### <a name="to-set-up-the-side-by-side-browser-experience-policy"></a>Para configurar a política de experiência do navegador lado a lado:
 
 1. Instalar as definições de política do [Microsoft Edge for Business](https://www.microsoft.com/edge/business/download).
 
@@ -86,7 +86,7 @@ Definir essa política definirá a seguinte chave do Registro como '00000001':
 - Nome do valor: `Allowsxs`
 - Tipo de valor: `'REG_DWORD'`
 
-#### Diretrizes de prática recomendada
+#### <a name="best-practice-guidance"></a>Diretrizes de prática recomendada
 
 Para a melhor experiência, **Permitir experiência de navegador Lado a Lado do Microsoft Edge** deve ser habilitado antes que a nova versão do Microsoft Edge seja implantada nos dispositivos dos usuários.
 
@@ -100,7 +100,7 @@ Se a política de grupo for habilitada depois que o Microsoft Edge tiver sido im
 2. A Versão Herdada do Microsoft Edge precisará ser fixada novamente em Iniciar ou na Barra de Tarefas porque o marcador será migrado quando a nova versão do Microsoft Edge for implantada.
 3. Os sites fixados em Iniciar ou na Barra de Tarefas para a Versão Herdada do Microsoft Edge serão migrados para a nova versão do Microsoft Edge.
 
-## Informações adicionais
+## <a name="additional-information"></a>Informações adicionais
 
 Depois que os sistemas forem totalmente atualizados e o canal Estável da próxima versão do Microsoft Edge for instalado, a seguinte chave do Registro e o valor serão definidos:
 
@@ -110,7 +110,7 @@ Depois que os sistemas forem totalmente atualizados e o canal Estável da próxi
   > [!IMPORTANT]
   > Essa chave é substituída sempre que o canal Estável do Microsoft Edge é atualizado. Como uma prática recomendada, recomendamos que você NÃO exclua essa chave para permitir que os usuários acessem as duas versões do Microsoft Edge.
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Atualizações do Windows para dar suporte ao Microsoft Edge](microsoft-edge-sysupdate-windows-updates.md)

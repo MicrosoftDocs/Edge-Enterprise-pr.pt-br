@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Perguntas frequentes sobre a sincronização empresarial do Microsoft Edge.
-ms.openlocfilehash: 51f6dfc4cd8f308815ee111c30d5501ec0e44f59
-ms.sourcegitcommit: 86e0de9b27ad4297a6d5a57c866d7ef4fc7bb0cd
+ms.openlocfilehash: e25ee985f65ee61dda5cacece73d43be7f1e6d7d
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "11400176"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447865"
 ---
 # <a name="microsoft-edge-enterprise-sync-faq"></a>Perguntas frequentes sobre a sincronização empresarial do Microsoft Edge
 
@@ -25,11 +25,11 @@ Este artigo responde a perguntas frequentes sobre a sincronização empresarial 
 
 ### <a name="is-the-synced-data-encrypted"></a>Os dados sincronizados estão criptografados?
 
-Os dados são criptografados no transporte usando TLS 1.2 ou posterior. Todos os tipos de dados também são criptografados como descansar no serviço da Microsoft usando o AES128. Todos os tipos de dados, exceto os usados na guia aberta e na sincronização do histórico, são adicionalmente criptografados antes de deixar o dispositivo do usuário com chaves gerenciadas através da política da [Proteção de Informações do Microsoft Azure](https://docs.microsoft.com/deployedge/microsoft-edge-policies#restrictsignintopattern).
+Os dados são criptografados no transporte usando TLS 1.2 ou posterior. Todos os tipos de dados também são criptografados como descansar no serviço da Microsoft usando o AES128. Todos os tipos de dados, exceto os usados na guia aberta e na sincronização do histórico, são adicionalmente criptografados antes de deixar o dispositivo do usuário com chaves gerenciadas através da política da [Proteção de Informações do Microsoft Azure](./microsoft-edge-policies.md#restrictsignintopattern).
 
 ### <a name="why-dont-open-tab-and-history-data-have-more-client-side-encryption"></a>Por que a guia aberta e os dados do histórico não têm mais criptografia do lado do cliente?
 
-Para reduzir o uso de recursos nos dispositivos do usuário final, os dados do histórico são gerados no lado do servidor com base nos dados de roaming da guia aberta. Este processo não seria possível com a criptografia ao lado do cliente desses dados. Para desabilitar a guia aberta e a sincronização do histórico, aplique as políticas [SavingBrowserHistoryDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#savingbrowserhistorydisabled) ou [SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled) .
+Para reduzir o uso de recursos nos dispositivos do usuário final, os dados do histórico são gerados no lado do servidor com base nos dados de roaming da guia aberta. Este processo não seria possível com a criptografia ao lado do cliente desses dados. Para desabilitar a guia aberta e a sincronização do histórico, aplique as políticas [SavingBrowserHistoryDisabled](./microsoft-edge-policies.md#savingbrowserhistorydisabled) ou [SyncTypesListDisabled](./microsoft-edge-policies.md#synctypeslistdisabled) .
 
 ### <a name="can-tenant-admins-bring-their-own-key"></a>Os administradores de locatários podem ter suas próprias chaves?
 
@@ -63,7 +63,7 @@ Não. O ESR pode ser usado para habilitar a sincronização, mas a sincronizaç�
 
 ### <a name="will-microsoft-edge-ever-support-syncing-between-microsoft-edge-and-ie"></a>O Microsoft Edge oferecerá suporte para sincronização entre o Microsoft Edge e o IE?
 
-Não há planos para dar suporte a essa sincronização. Se você ainda precisar do IE no seu ambiente para oferecer suporte aos aplicativos herdados, considere o nosso [novo modo do IE](https://docs.microsoft.com/deployedge/edge-ie-mode).
+Não há planos para dar suporte a essa sincronização. Se você ainda precisar do IE no seu ambiente para oferecer suporte aos aplicativos herdados, considere o nosso [novo modo do IE](./edge-ie-mode.md).
 
 ### <a name="will-microsoft-edge-sync-with-microsoft-edge-legacy"></a>O Microsoft Edge será sincronizado com o Microsoft Edge herdado?
 
@@ -73,7 +73,7 @@ Não. Acreditamos que a conexão destes dois ecossistemas comprometerá a confia
 
 ### <a name="is-it-possible-to-stop-my-users-from-syncing-with-a-personal-tenant"></a>É possível impedir que os meus usuários sincronizem com um locatário pessoal?
 
-Não diretamente, mas você pode determinar quais perfis podem entrar no Microsoft Edge usando a política [RestrictSigninToPattern](https://docs.microsoft.com/deployedge/microsoft-edge-policies#restrictsignintopattern).
+Não diretamente, mas você pode determinar quais perfis podem entrar no Microsoft Edge usando a política [RestrictSigninToPattern](./microsoft-edge-policies.md#restrictsignintopattern).
 
 ## <a name="see-also"></a>Ver também
 

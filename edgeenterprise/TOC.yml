@@ -2,7 +2,7 @@
 - name: Documentação do Microsoft Edge Enterprise
   href: index.yml
 - name: Documentação do Microsoft Edge
-  href: 'https://docs.microsoft.com/microsoft-edge/'
+  href: /microsoft-edge/
 - name: Atualizações de conteúdo do Microsoft Edge
   href: microsoft-edge-content-updates.md
 - name: Aprenda a usar o Microsoft Edge
@@ -14,7 +14,7 @@
     - name: Materiais de adoção do cliente
       href: microsoft-edge-customer-adoption-kit.md
     - name: Explore os recursos da documentação
-      href: 'https://docs.microsoft.com/microsoft-edge/'
+      href: /microsoft-edge/
     - name: Laboratório de implantação prática do Microsoft Edge
       href: deploy-edge-hands-on-lab.md
     - name: Blogs do Windows - Desenvolvedor do Microsoft Edge
@@ -27,6 +27,8 @@
       href: deploy-edge-plan-deployment.md
     - name: Microsoft Edge em seu ambiente
       href: deploy-edge-prepare-to-deploy.md
+    - name: Relatório de uso do navegador da Microsoft
+      href: microsoft-edge-browser-usage-report.md
     - name: Pronto para o Microsoft Edge
       href: deploy-edge-ready-for-edge.md
     - name: Notas de Versão de Canal Estável
@@ -66,19 +68,19 @@
     - name: Implantar o Microsoft Edge com atualizações do Windows 10
       href: deploy-edge-with-windows-10-updates.md
     - name: Implantar no Windows com o Gerenciador de Configurações
-      href: 'https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
+      href: /configmgr/apps/deploy-use/deploy-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
     - name: Implantar no Windows com o Intune
-      href: 'https://docs.microsoft.com/intune/apps/apps-windows-edge/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
+      href: /intune/apps/apps-windows-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
     - name: Implantar no macOS com o Jamf
       href: deploy-edge-mac-jamf.md
     - name: Implantar no macOS com o Intune
-      href: 'https://docs.microsoft.com/intune/apps/apps-edge-macos/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
+      href: /intune/apps/apps-edge-macos/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
 - name: Configurar o Microsoft Edge
   items:
     - name: Configurar para o Windows
       href: configure-microsoft-edge.md
     - name: Configurar para o Windows com o Intune
-      href: 'https://docs.microsoft.com/mem/intune/configuration/administrative-templates-configure-edge/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
+      href: /mem/intune/configuration/administrative-templates-configure-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
     - name: Configurar para o Windows com Gerenciamento de Dispositivos Móveis
       href: configure-edge-with-mdm.md
     - name: Configurar para macOS usando um. plist
@@ -158,7 +160,7 @@
     - name: Configurar políticas de privacidade
       href: microsoft-edge-enterprise-privacy-settings.md
     - name: White paper de Privacidade do Microsoft Edge
-      href: 'https://docs.microsoft.com/microsoft-edge/privacy-whitepaper'
+      href: /microsoft-edge/privacy-whitepaper
 - name: Referência do Microsoft Edge
   items:
     - name: Referência de política do navegador

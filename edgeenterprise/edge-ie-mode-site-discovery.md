@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Usar o Enterprise Site Discovery para se Preparar para o Modo IE
-ms.openlocfilehash: 9ec748686b83466cd1c7d92fcc7fdc0f0d136977
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 2557544a93222b03aaa0961149aa0d3c5d7d8806
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979085"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447715"
 ---
-# Guia Passo a Passo do Enterprise Site Discovery
+# <a name="enterprise-site-discovery-step-by-step-guide"></a>Guia Passo a Passo do Enterprise Site Discovery
 
 Este artigo fornece um guia passo a passo para usar o Enterprise Site Discovery com o Gerenciador de Configurações do Microsoft Endpoint.
 
@@ -29,7 +29,7 @@ O Enterprise Site Discovery pode ajudá-lo a configurar sua Lista de Sites do Mo
 > [!NOTE]
 > Este artigo se aplica aos Canais **Estável**, **Beta** e **Dev** do Microsoft Edge Beta, versão 77 ou posteriores.
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Este guia pressupõe que você tenha experiência com o Gerenciador de Configurações do Microsoft Endpoint e tenha os seguintes serviços e funções instalados:
 
@@ -37,20 +37,20 @@ Este guia pressupõe que você tenha experiência com o Gerenciador de Configura
 2. Microsoft SQL Server Reporting Services
 3. (Opcional) Função de Ponto do Reporting Services do Gerenciador de Configurações configurada
 
-## Baixar Ferramentas do Enterprise Site Discovery
+## <a name="download-enterprise-site-discovery-tools"></a>Baixar Ferramentas do Enterprise Site Discovery
 
 Baixe as seguintes ferramentas:
 
 - [Pacote de Instalação e Configuração do Enterprise Site Discovery](https://go.microsoft.com/fwlink/p/?LinkId=517719)
 - [Construtor de Relatórios da Microsoft](https://www.microsoft.com/download/details.aspx?id=53613)
 
-## Habilitar o Enterprise Site Discovery
+## <a name="enable-enterprise-site-discovery"></a>Habilitar o Enterprise Site Discovery
 
 Para que você possa se conectar à Instrumentação de Gerenciamento do Windows (WMI) para recuperar dados de descoberta do site, primeiro implante o provedor de classe WMI no dispositivo.
 
 Em **Pacote de Instalação e Configuração do Enterprise Site Discovery**, extraia o conteúdo para uma pasta em seu compartilhamento de arquivo definitivo da biblioteca de software. Exemplo: **\\\\DSL\\EnterpriseSiteDiscovery**.
 
-Em seguida, crie um pacote no Gerenciador de Configurações do Microsoft Endpoint, conforme descrito na [documentação](https://docs.microsoft.com/configmgr/apps/deploy-use/packages-and-programs), selecionando as seguintes opções:
+Em seguida, crie um pacote no Gerenciador de Configurações do Microsoft Endpoint, conforme descrito na [documentação](/configmgr/apps/deploy-use/packages-and-programs), selecionando as seguintes opções:
 
 - Na página **Pacote**, selecione **Nome** e especifique o nome **Habilitar Descoberta do Site**
 - Na página **Pacote**, selecione **Este pacote contém arquivos de origem**
@@ -68,11 +68,11 @@ Em seguida, crie um pacote no Gerenciador de Configurações do Microsoft Endpoi
 Após criar o pacote, clique duas vezes no nome do pacote **Ativar Descoberta do Site** para visualizar suas propriedades. Na propriedade **Após a execução**, selecione **Gerenciador de configuração reinicia o computador**. A coleta de dados WMI começará após a reinicialização dos dispositivos.
 
 > [!NOTE]
-> Você pode configurar o tempo que um usuário precisa para reiniciar o dispositivo, conforme descrito na [documentação de configurações do cliente](https://docs.microsoft.com/configmgr/core/clients/deploy/about-client-settings#computer-restart).
+> Você pode configurar o tempo que um usuário precisa para reiniciar o dispositivo, conforme descrito na [documentação de configurações do cliente](/configmgr/core/clients/deploy/about-client-settings#computer-restart).
 
-## Configurar o Enterprise Site Discovery por meio da Política de Grupo
+## <a name="configure-enterprise-site-discovery-via-group-policy"></a>Configurar o Enterprise Site Discovery por meio da Política de Grupo
 
-Com o Enterprise Site Discovery habilitado, você pode configurar quais dados coletará. Considere as leis locais e os requisitos regulatórios, conforme descrito [aqui](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery#what-data-is-collected).
+Com o Enterprise Site Discovery habilitado, você pode configurar quais dados coletará. Considere as leis locais e os requisitos regulatórios, conforme descrito [aqui](/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery#what-data-is-collected).
 
 1. Abrir o Editor de Política de Grupo
 2. Clique em **Configuração do Computador** > **Modelos Administrativos** > **Componentes do Windows** > **Internet Explorer** 
@@ -103,7 +103,7 @@ Você pode limitar os domínios para os quais você coleta dados do site:
 3. Digite os domínios para os quais você deseja coletar dados, um domínio por linha
 4. Clique em **OK** ou em **Aplicar** para salvar essa configuração de política
 
-## Colete dados da Descoberta do Site usando o Gerenciador de Configurações
+## <a name="collect-site-discovery-data-using-configuration-manager"></a>Colete dados da Descoberta do Site usando o Gerenciador de Configurações
 
 Agora que seus dispositivos estão gerando dados, é hora de coletar esses dados no Gerenciador de Configurações.
 
@@ -121,16 +121,16 @@ Agora que seus dispositivos estão gerando dados, é hora de coletar esses dados
 
 Depois que o cliente atualizar as configurações do ponto de gerenciamento, os dados serão relatados quando o próximo inventário de hardware for executado (por padrão a cada sete dias).
 
-## Importar relatórios de Descoberta do Site
+## <a name="import-site-discovery-reports"></a>Importar relatórios de Descoberta do Site
 
 O pacote Enterprise Site Discovery inclui dois exemplos de relatórios. Um relatório mostra sites usando controles ActiveX e outro mostra sites usando modos de documento herdados.
 
-### Configure o relatório de exemplo de Descoberta do Site
+### <a name="configure-the-site-discovery-sample-report"></a>Configure o relatório de exemplo de Descoberta do Site
 
 Use o procedimento a seguir para criar um relatório de exemplo que use três fontes de dados: os sites que um usuário visita, informações sobre o sistema e os modos de documento usados ​​pelos sites. Este relatório ajuda a identificar sites que podem depender dos modos de documentos herdados.
 
 1. Copie o relatório **SCCM_Report-Site_Discovery.rdl** no servidor do Gerenciador de Configurações.
-2. Instale o [Construtor de Relatórios da Microsoft](https://docs.microsoft.com/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver15).
+2. Instale o [Construtor de Relatórios da Microsoft](/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver15).
 3. Clique duas vezes em **SCCM_Report-Site_Discovery.rdl** para abrir o relatório no Construtor de Relatórios.
 4. Na primeira vez que você tentar abrir o relatório, ele tentará entrar em contato com o servidor onde ele foi criado. Quando solicitado a **Conectar-se ao Servidor de Relatório**, clique em **Não**.
 5. Depois que o relatório for aberto, expanda **Fontes de Dados** e clique duas vezes em **DataSource1**.
@@ -147,12 +147,12 @@ Use o procedimento a seguir para criar um relatório de exemplo que use três fo
 16. Feche o Construtor de Relatórios da Microsoft.
 17. Renomeie o arquivo para **Descoberta do Site.rdl**
 
-### Configure o relatório de exemplo ActiveX
+### <a name="configure-the-activex-sample-report"></a>Configure o relatório de exemplo ActiveX
 
 Use o procedimento a seguir para criar um relatório de exemplo que usa uma fonte de dados: os sites que estão usando controles ActiveX. Como o Internet Explorer é o único navegador que suporta controles ActiveX, esses sites podem exigir o modo IE.
 
 1. Copie o relatório **Exemplo de relatório SCCM - ActiveX.rdl** para o servidor do Gerenciador de Configurações.
-2. Instale o [Construtor de Relatórios da Microsoft](https://docs.microsoft.com/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver15).
+2. Instale o [Construtor de Relatórios da Microsoft](/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver15).
 3. Clique duas vezes em **Exemplo de relatório SCCM - ActiveX.rdl** para abrir o relatório no Construtor de Relatórios.
 4. Na primeira vez que você tentar abrir o relatório, ele tentará entrar em contato com o servidor onde ele foi criado. Quando solicitado a **Conectar-se ao Servidor de Relatório**, clique em **Não**.
 5. Depois de abrir o relatório, expanda **Fontes de Dados** e clique duas vezes em **AutoGen__5C6358F2_4BB6_4a1b_A16E_8D96795D8602_**.
@@ -167,7 +167,7 @@ Use o procedimento a seguir para criar um relatório de exemplo que usa uma font
 14. Feche o Construtor de Relatórios da Microsoft.
 15. Renomeie o arquivo para **ActiveX**
 
-### Carregue relatórios configurados no Microsoft SQL Server Reporting Services
+### <a name="upload-configured-reports-to-microsoft-sql-server-reporting-services"></a>Carregue relatórios configurados no Microsoft SQL Server Reporting Services
 
 Depois de configurar os relatórios para o seu ambiente, carregue-os no servidor de relatórios.
 
@@ -181,16 +181,16 @@ Depois de configurar os relatórios para o seu ambiente, carregue-os no servidor
 8. Selecione o relatório de **Descoberta do Site** e clique em **OK**.
 9. Repita as etapas 7 e 8 para o relatório **ActiveX**.
 
-### Visualize os relatórios no Gerenciador de Configurações
+### <a name="view-reports-in-configuration-manager"></a>Visualize os relatórios no Gerenciador de Configurações
 
 Agora que você personalizou e enviou os relatórios, é possível visualizá-los no Gerenciador de Configurações.
 
 1. No console do Gerenciador de Configurações, escolha **Monitoramento** > **Reportar** > **Relatórios** > **Enterprise Site Discovery**
 2. Clique duas vezes em um relatório para visualizá-lo.
 
-## Desabilitar o Enterprise Site Discovery
+## <a name="disable-enterprise-site-discovery"></a>Desabilitar o Enterprise Site Discovery
 
-Quando terminar de coletar dados, você deve desabilitar o Enterprise Site Discovery. Crie um segundo pacote para desabilitar o Enterprise Site Discovery no Gerenciador de Configurações do Microsoft Endpoint, conforme descrito na [documentação](https://docs.microsoft.com/configmgr/apps/deploy-use/packages-and-programs), selecionando as seguintes opções:
+Quando terminar de coletar dados, você deve desabilitar o Enterprise Site Discovery. Crie um segundo pacote para desabilitar o Enterprise Site Discovery no Gerenciador de Configurações do Microsoft Endpoint, conforme descrito na [documentação](/configmgr/apps/deploy-use/packages-and-programs), selecionando as seguintes opções:
 
 - Na página **Pacote**, selecione **Nome** e especifique o nome **Desabilitar Descoberta do Site**
 - Na página **Pacote**, selecione **Este pacote contém arquivos de origem**
@@ -203,9 +203,9 @@ Quando terminar de coletar dados, você deve desabilitar o Enterprise Site Disco
 - Na página **Programa Padrão**, selecione a opção para executar **Oculto**
 - Na página **Programa Padrão**, em **Programa pode executar**, selecione a opção **Se um usuário está ou não conectado**.
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Sobre o modo IE](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Informações adicionais sobre o Modo Empresarial](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
-- [Informações adicionais sobre o Enterprise Site Discovery](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery)
+- [Sobre o modo IE](./edge-ie-mode.md)
+- [Informações adicionais sobre o Modo Empresarial](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Informações adicionais sobre o Enterprise Site Discovery](/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery)

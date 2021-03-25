@@ -10,28 +10,28 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Provisionar favoritos para o Microsoft Edge
-ms.openlocfilehash: 94bd42573bdbc0fd1b971ded1c82e5fe152acc54
-ms.sourcegitcommit: 854dd73eb168960c0eb4b483f81a8efe88806a64
+ms.openlocfilehash: 67627fa10806435d76cecae00f79867bc5af03df
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "11088679"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447595"
 ---
-# Provisionar favoritos para o Microsoft Edge
+# <a name="provision-favorites-for-microsoft-edge"></a>Provisionar favoritos para o Microsoft Edge
 
 Com base nos comentários dos clientes, fizemos aperfeiçoamentos no provisionamento dos favoritos. A partir do Microsoft Edge versão 85, os administradores não precisam mais criar manualmente um arquivo para provisionar os favoritos. Os administradores podem adicionar favoritos e pastas usando a interface do usuário do Microsoft Edge para gerar um arquivo que possa ser exportado para uma política de grupo.
 
-Este artigo descreve como configurar um conjunto de favoritos e pastas para sua organização. Você pode usar a política [Configurar favoritos](https://docs.microsoft.com//DeployEdge/microsoft-edge-policies#configure-favorites) para provisionar favoritos e pastas.
+Este artigo descreve como configurar um conjunto de favoritos e pastas para sua organização. Você pode usar a política [Configurar favoritos](//DeployEdge/microsoft-edge-policies#configure-favorites) para provisionar favoritos e pastas.
 
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 85 ou posterior.
 
-## Pré-requisitos e recomendações
+## <a name="prerequisites-and-recommendations"></a>Pré-requisitos e recomendações
 
 - Microsoft Edge versão 85 com o modelo administrativo apropriado instalado para políticas de grupo.
 - Recomendamos que você use um novo perfil no Microsoft Edge para provisionar esses favoritos. Todos os favoritos salvos com o perfil serão incluídos na exportação.  
 
-## Provisionar favoritos e pastas
+## <a name="provision-favorites-and-folders"></a>Provisionar favoritos e pastas
 
 Use as etapas a seguir para provisionar favoritos e pastas para seus usuários.
 
@@ -66,6 +66,6 @@ Use as etapas a seguir para provisionar favoritos e pastas para seus usuários.
 
 7. Clique em **OK** ou **Aplicar** para salvar as configurações de política.
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

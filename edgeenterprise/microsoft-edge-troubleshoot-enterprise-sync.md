@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Diretrizes e ferramentas que um administrador do Microsoft Edge pode usar para solucionar e corrigir problemas comuns de sincronização empresarial
-ms.openlocfilehash: 767b26c74e91213b407e8264a8ed185f38dfc2e9
-ms.sourcegitcommit: 86e0de9b27ad4297a6d5a57c866d7ef4fc7bb0cd
+ms.openlocfilehash: 49fb0c5fc555e4f7ad4c728477387e931a5fbb5f
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "11400175"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447155"
 ---
 # <a name="diagnose-and-fix-microsoft-edge-sync-issues"></a>Diagnosticar e corrigir problemas de sincronização do Microsoft Edge
 
@@ -49,10 +49,10 @@ Se este erro for encontrado para uma conta do Azure Active Directory, ou se DISA
 > [!NOTE]
 > Como a origem deste erro geralmente requer uma alteração de configuração em um locatário do Azure Active Directory, estas etapas de solução de problemas só podem ser executadas por um administrador do locatário e não por usuários finais.
 
-1. Verifique se o locatário corporativo tem uma assinatura do M365 com suporte. A lista atual dos tipos de assinatura disponíveis está [fornecida aqui](https://docs.microsoft.com/azure/information-protection/activate-office365). Se o locatário não tiver uma assinatura com suporte, é possível comprar a Proteção de Informações do Azure separadamente, ou atualizar para uma das assinaturas com suporte.
-2. Se uma assinatura com suporte estiver disponível, verifique se o locatário tem a AIP (Proteção de Informações do Microsoft Azure) disponível. As instruções para verificar o status da AIP e, se necessário, ativar a AIP estão [aqui](https://docs.microsoft.com/azure/information-protection/activate-office365).
-3. Se a etapa 2 mostrar que a AIP está ativa, mas a sincronização ainda não funciona, ative o ESR (Enterprise State Roaming). As instruções para habilitar o ESR estão [aqui](https://docs.microsoft.com/azure/active-directory/devices/enterprise-state-roaming-enable). Observe que o ESR não precisa permanecer ativado. Você pode desativar o ESR se esta etapa corrigir o problema.
-4. Confirme se a Proteção de Informações do Azure não tem escopo por meio de uma política de integração. Use o miniaplicativo [Get-AadrmOnboardingControlPolicy](https://docs.microsoft.com/powershell/module/aadrm/get-aadrmonboardingcontrolpolicy?view=azureipps) do PowerShell para ver se o escopo está habilitado. Os dois exemplos a seguir mostram uma configuração com escopo e outra sem escopo para um grupo de segurança específico.
+1. Verifique se o locatário corporativo tem uma assinatura do M365 com suporte. A lista atual dos tipos de assinatura disponíveis está [fornecida aqui](/azure/information-protection/activate-office365). Se o locatário não tiver uma assinatura com suporte, é possível comprar a Proteção de Informações do Azure separadamente, ou atualizar para uma das assinaturas com suporte.
+2. Se uma assinatura com suporte estiver disponível, verifique se o locatário tem a AIP (Proteção de Informações do Microsoft Azure) disponível. As instruções para verificar o status da AIP e, se necessário, ativar a AIP estão [aqui](/azure/information-protection/activate-office365).
+3. Se a etapa 2 mostrar que a AIP está ativa, mas a sincronização ainda não funciona, ative o ESR (Enterprise State Roaming). As instruções para habilitar o ESR estão [aqui](/azure/active-directory/devices/enterprise-state-roaming-enable). Observe que o ESR não precisa permanecer ativado. Você pode desativar o ESR se esta etapa corrigir o problema.
+4. Confirme se a Proteção de Informações do Azure não tem escopo por meio de uma política de integração. Use o miniaplicativo [Get-AadrmOnboardingControlPolicy](/powershell/module/aadrm/get-aadrmonboardingcontrolpolicy?view=azureipps) do PowerShell para ver se o escopo está habilitado. Os dois exemplos a seguir mostram uma configuração com escopo e outra sem escopo para um grupo de segurança específico.
 
    ```powershell
     PS C:\Work\scripts\PowerShell> Get-AadrmOnboardingControlPolicy
@@ -71,9 +71,9 @@ Se este erro for encontrado para uma conta do Azure Active Directory, ou se DISA
                 False f1488a05-8196-40a6-9483-524948b90282   All
    ```
 
-   Se o escopo estiver habilitado, o usuário afetado deverá ser adicionado ao grupo de segurança para o escopo, ou o escopo deverá ser removido. No exemplo abaixo, a integração definiu a AIP para o grupo de segurança indicado e o escopo deve ser removido com o miniplicativo [Set-AadrmOnboardingControlPolicy](https://docs.microsoft.com/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps) do PowerShell.
+   Se o escopo estiver habilitado, o usuário afetado deverá ser adicionado ao grupo de segurança para o escopo, ou o escopo deverá ser removido. No exemplo abaixo, a integração definiu a AIP para o grupo de segurança indicado e o escopo deve ser removido com o miniplicativo [Set-AadrmOnboardingControlPolicy](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps) do PowerShell.
 
-5. Confirme se o IPCv3Service está ativado no locatário. O miniaplicativo [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/module/aadrm/get-aadrmconfiguration?view=azureipps) do PowerShell mostra o status do serviço.
+5. Confirme se o IPCv3Service está ativado no locatário. O miniaplicativo [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration?view=azureipps) do PowerShell mostra o status do serviço.
 
    :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-scoped-cfg-example.png" alt-text="Verifique se IPCv3Service está habilitado.":::
 
@@ -99,7 +99,7 @@ Se este erro for encontrado para uma conta do Azure Active Directory, ou se DISA
       - [https://api.aadrm.com](https://api.aadrm.com) (para a maioria dos locatários)
       - [https://api.aadrm.de](https://api.aadrm.de) (para locatários na Alemanha)
       - [https://api.aadrm.cn](https://api.aadrm.cn) (para locatários na China)
-   - [Pontos de Extremidade do Serviço de Notificação do Windows](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).
+   - [Pontos de Extremidade do Serviço de Notificação do Windows](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).
 
 5. Se o problema ainda não estiver corrigido, entre em contato com o [suporte do Microsoft Edge.](https://www.microsoftedgeinsider.com/support)
 
@@ -116,7 +116,7 @@ Este erro está visível em **Informações do tipo** em *edge://sync-internals*
 
 ### <a name="issue-sync-has-been-turned-off-by-your-administrator"></a>Problema: "A sincronização foi desativada pelo administrador".
 
-Verifique se a [política SyncDisabled ](https://docs.microsoft.com/deployedge/microsoft-edge-policies#syncdisabled) não está definida.
+Verifique se a [política SyncDisabled ](./microsoft-edge-policies.md#syncdisabled) não está definida.
 
 ## <a name="see-also"></a>Veja também
 

@@ -10,33 +10,33 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Saiba como implantar Microsoft Edge com o SCCM (System Center Configuration Manager).
-ms.openlocfilehash: be14f2db3b28b7585bfad1706b9f82209235df0a
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 64b26412c4596a9514227d41d1a4e753a66ed057
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979037"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447825"
 ---
-# Implantar o Microsoft Edge usando o System Center Configuration Manager
+# <a name="deploy-microsoft-edge-using-system-center-configuration-manager"></a>Implantar o Microsoft Edge usando o System Center Configuration Manager
 
 Este artigo mostra como automatizar uma implantação do Microsoft Edge usando o SCCM (System Center Configuration Manager).
 
 >[!NOTE]
 >Este artigo aplica-se ao Microsoft Edge versão 77 ou posterior.
 
-## Antes de começar
+## <a name="before-you-begin"></a>Antes de começar
 
-Revise as informações em [Introdução ao gerenciamento de aplicativos no Configuration Manager](https://docs.microsoft.com/sccm/apps/understand/introduction-to-application-management). Este artigo de gerenciamento de aplicativos ajudará você a entender a terminologia usada neste artigo e é um guia para preparar seu site para instalar aplicativos.
+Revise as informações em [Introdução ao gerenciamento de aplicativos no Configuration Manager](/sccm/apps/understand/introduction-to-application-management). Este artigo de gerenciamento de aplicativos ajudará você a entender a terminologia usada neste artigo e é um guia para preparar seu site para instalar aplicativos.
 
 Baixe os arquivos de instalação do Microsoft Edge (**MicrosoftEdgeDevEnterpriseX64.msi** e/ou **MicrosoftEdgeDevEnterpriseX86.msi**) da [página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise).
 
 Armazene os arquivos de instalação do Microsoft Edge em um local de rede acessível.
 
-## Criar o aplicativo
+## <a name="create-the-application"></a>Criar o aplicativo
 
 Você criará o aplicativo usando um assistente do Configuration Manager.
 
-### Iniciar o assistente para Criar Aplicativo e criar o aplicativo  
+### <a name="start-the-create-application-wizard-and-create-the-application"></a>Iniciar o assistente para Criar Aplicativo e criar o aplicativo  
 
 1. No console do Configuration Manager, clique em **Biblioteca de Software** > **Gerenciamento de Aplicativos** > **Aplicativos**.  
 
@@ -85,7 +85,7 @@ A captura de tela a seguir mostra o exemplo usado neste artigo.
 
 ![Aplicativos](./media/edge-ent-deployment-sccm/edge-ent-create-app-8.png)
 
-## Alterar as propriedades e as configurações de implantação do aplicativo
+## <a name="change-application-properties-and-deployment-settings"></a>Alterar as propriedades e as configurações de implantação do aplicativo
 
 Depois de criar um aplicativo, você poderá refinar as configurações do aplicativo, se necessário. Para ver as propriedades do aplicativo:
 
@@ -94,7 +94,7 @@ Depois de criar um aplicativo, você poderá refinar as configurações do aplic
 
    ![Configurar as propriedades do aplicativo](./media/edge-ent-deployment-sccm/edge-ent-create-app-req-1.png)
 
- Na página de diálogo **Propriedades do Aplicativo <nome do aplicativo\>**, você verá uma exibição com guias dos itens que pode configurar para alterar o comportamento do aplicativo. Para obter mais informações sobre as configurações que você pode definir, consulte [Criar aplicativos](https://docs.microsoft.com/sccm/apps/deploy-use/create-applications).
+ Na página de diálogo **Propriedades do Aplicativo <nome do aplicativo\>**, você verá uma exibição com guias dos itens que pode configurar para alterar o comportamento do aplicativo. Para obter mais informações sobre as configurações que você pode definir, consulte [Criar aplicativos](/sccm/apps/deploy-use/create-applications).
 
 Neste exemplo, você mudará algumas propriedades do tipo de implantação do aplicativo. Para alterar as propriedades da implantação:
 
@@ -104,7 +104,7 @@ Neste exemplo, você mudará algumas propriedades do tipo de implantação do ap
 
    ![Editar o tipo de implantação](./media/edge-ent-deployment-sccm/edge-ent-create-app-req-2.png)
 
-### Adicionar um requisito ao tipo de implantação
+### <a name="add-a-requirement-to-the-deployment-type"></a>Adicionar um requisito ao tipo de implantação
 
  Os requisitos especificam as condições que devem ser atendidas antes que um aplicativo seja instalado em um dispositivo. Você pode escolher entre os requisitos internos ou pode criar os seus próprios. Por exemplo, você pode adicionar um requisito de que o aplicativo só será instalado em computadores que estejam executando o Windows 10 **x86** ou **x64**, dependendo da arquitetura do processador de destino do arquivo de instalação. Neste exemplo, você especificará o Windows 10 **x86**.
 
@@ -132,12 +132,12 @@ Neste exemplo, você mudará algumas propriedades do tipo de implantação do ap
 
 4. Clique em **OK** para fechar cada página de propriedades aberta e retorne à lista **Aplicativos** no console do Configuration Manager.  
 
-## Adicionar o conteúdo do aplicativo a um ponto de distribuição  
+## <a name="add-the-application-content-to-a-distribution-point"></a>Adicionar o conteúdo do aplicativo a um ponto de distribuição  
 
 Para implantar o aplicativo atualizado em computadores, certifique-se de que o conteúdo do aplicativo seja copiado para um ponto de distribuição. Os computadores acessam o ponto de distribuição para instalar o aplicativo.  
 
 >[!TIP]
->Para saber mais sobre pontos de distribuição e gerenciamento de conteúdo no Configuration Manager, consulte [Implantar e gerenciar conteúdo para o System Center Configuration Manager](https://docs.microsoft.com/sccm/core/servers/deploy/configure/deploy-and-manage-content).  
+>Para saber mais sobre pontos de distribuição e gerenciamento de conteúdo no Configuration Manager, consulte [Implantar e gerenciar conteúdo para o System Center Configuration Manager](/sccm/core/servers/deploy/configure/deploy-and-manage-content).  
 
 1. No console do Configuration Manager, clique em **Biblioteca de Software**.  
 
@@ -155,7 +155,7 @@ Para implantar o aplicativo atualizado em computadores, certifique-se de que o c
 
 Você pode verificar se o conteúdo do aplicativo foi copiado com êxito para o ponto de distribuição do espaço de trabalho **Monitoramento**, em **Status de Distribuição** > **Status do Conteúdo**.  
 
-## Implantar o aplicativo  
+## <a name="deploy-the-application"></a>Implantar o aplicativo  
 
 Em seguida, implante o aplicativo em uma coleção de dispositivos em sua hierarquia. Neste exemplo, você implanta o aplicativo na coleção de dispositivos **Todos os Sistemas**.  
 
@@ -199,11 +199,11 @@ Em seguida, implante o aplicativo em uma coleção de dispositivos em sua hierar
 
 Use as informações na seção **Monitorar o aplicativo** a seguir para ver o status da implantação do seu aplicativo.  
 
-## Monitorar o aplicativo
+## <a name="monitor-the-application"></a>Monitorar o aplicativo
 
  Nesta seção, você examinará rapidamente o status de implantação do aplicativo que acabou de implantar.  
 
-### Para revisar o status da implantação  
+### <a name="to-review-the-deployment-status"></a>Para revisar o status da implantação  
 
 1. No console do Configuration Manager, clique em **Monitoramento** > **Implantações**.  
 
@@ -226,13 +226,13 @@ Use as informações na seção **Monitorar o aplicativo** a seguir para ver o s
     - **Desconhecido**: o Configuration Manager não pôde relatar o status da implantação. Verifique novamente mais tarde.  
 
     >[!TIP]
-    >Há várias maneiras de monitorar implantações de aplicativos. Para obter mais informações, consulte [Monitorar aplicativos do console do System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/deploy-use/monitor-applications-from-the-console).  
+    >Há várias maneiras de monitorar implantações de aplicativos. Para obter mais informações, consulte [Monitorar aplicativos do console do System Center Configuration Manager](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
 
-## Experiência do usuário final  
+## <a name="end-user-experience"></a>Experiência do usuário final  
 
 Os usuários com computadores gerenciados pelo Configuration Manager e que executam o Windows 10 da arquitetura de processador especificada verão uma mensagem informando que devem instalar o aplicativo Microsoft Edge Dev. Ao aceitar essa opção de instalação, o aplicativo será instalado.  
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Criar e implantar um aplicativo com o System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/get-started/create-and-deploy-an-application)
+- [Criar e implantar um aplicativo com o System Center Configuration Manager](/sccm/apps/get-started/create-and-deploy-an-application)

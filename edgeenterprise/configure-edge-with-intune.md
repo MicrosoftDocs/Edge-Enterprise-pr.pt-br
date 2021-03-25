@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Definir as configurações de política do Microsoft Edge para Windows usando o Microsoft Intune.
-ms.openlocfilehash: 6200b52e9061f37f85fe0bfe7cf59a2172db97df
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 0189a3fc2f9dc115563e7cf6dca1df960680bf22
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979008"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447555"
 ---
-# Definir as configurações de política do Microsoft Edge com o Microsoft Intune
+# <a name="configure-microsoft-edge-policy-settings-with-microsoft-intune"></a>Definir as configurações de política do Microsoft Edge com o Microsoft Intune
 
 Este artigo explica como definir as configurações de política do Microsoft Edge para Windows 10 usando o Microsoft Intune.
 
@@ -26,16 +26,16 @@ Este artigo explica como definir as configurações de política do Microsoft Ed
 
 Você pode definir políticas e configurações do Microsoft Edge adicionando um perfil de configuração de dispositivo ao Microsoft Intune. Usar o Intune para gerenciar e aplicar políticas é o mesmo que usar a Política de grupo do Active Directory ou configurar as configurações locais do Objeto da política de grupo (GPO) nos dispositivos do usuário.
 
-Para obter mais informações sobre o gerenciamento de políticas do Microsoft Edge com o Microsoft Intune, leia [Gerenciar o acesso via Web usando o Microsoft Edge com o Microsoft Intune](https://docs.microsoft.com/intune/manage-microsoft-edge), mas lembre-se de que o artigo vinculado é específico para o Microsoft Edge versão 45 e anterior e, portanto, pode conter informações e referências que não se apliquem ao Microsoft Edge Enterprise versão 77 e posterior.
+Para obter mais informações sobre o gerenciamento de políticas do Microsoft Edge com o Microsoft Intune, leia [Gerenciar o acesso via Web usando o Microsoft Edge com o Microsoft Intune](/intune/manage-microsoft-edge), mas lembre-se de que o artigo vinculado é específico para o Microsoft Edge versão 45 e anterior e, portanto, pode conter informações e referências que não se apliquem ao Microsoft Edge Enterprise versão 77 e posterior.
 
 > [!TIP]
 > Para obter informações sobre como configurar o Microsoft Edge no macOS usando o Microsoft Intune, consulte [Configurar para macOS](configure-microsoft-edge-on-mac.md).
 
-## Criar um perfil para gerenciar as configurações no Microsoft Edge para Windows 10
+## <a name="create-a-profile-to-manage-settings-in-microsoft-edge-for-windows-10"></a>Criar um perfil para gerenciar as configurações no Microsoft Edge para Windows 10
 
 Usando os Modelos Administrativos no Microsoft Intune, você pode gerenciar as políticas de grupo do Microsoft Edge em seus dispositivos Windows 10 usando a nuvem. Esta seção ajudará você a criar um modelo para definir as configurações de aplicativo específicas do Microsoft Edge. Quando você cria o modelo, ele cria um perfil de configuração de dispositivo. Você então poderá atribuir ou implantar esse perfil em dispositivos Windows 10 em sua organização.
 
-### Pré-requisitos
+### <a name="prerequisites"></a>Pré-requisitos
 
 - Windows 10 com os seguintes requisitos mínimos do sistema:
   - Windows 10, versão 1909
@@ -44,7 +44,7 @@ Usando os Modelos Administrativos no Microsoft Intune, você pode gerenciar as p
   - Windows 10, versão 1803 com [KB4512509](https://support.microsoft.com/kb/4512509) instalado
   - Windows 10, versão 1709 com [KB4516071](https://support.microsoft.com/kb/4516071) instalado
 
-### Usar Modelos administrativos para criar uma política para o Microsoft Edge
+### <a name="use-administrative-templates-to-create-a-policy-for-microsoft-edge"></a>Usar Modelos administrativos para criar uma política para o Microsoft Edge
 
 Esse procedimento alavanca os Modelos Administrativos (que você pode estar familiarizado com a Política de grupo) que são incorporados no Intune. Você pode usar esses modelos para criar uma política para o Microsoft Edge, selecionando configurações de uma lista pré-configurada.
 
@@ -73,7 +73,7 @@ A próxima captura de tela mostra o formulário da guia **Básico** e a barra de
    ![Guia Definições de configuração](./media/configure-edge-with-intune/create-profile-configuration-settings-tab.png)
 
    > [!NOTE]
-   > Consulte [Microsoft Edge – Políticas](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies) e [Microsoft Edge – Políticas de atualização](https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies) para a lista mais completa e atualizada de todas as configurações disponíveis do Microsoft Edge.
+   > Consulte [Microsoft Edge – Políticas](./microsoft-edge-policies.md) e [Microsoft Edge – Políticas de atualização](./microsoft-edge-update-policies.md) para a lista mais completa e atualizada de todas as configurações disponíveis do Microsoft Edge.
 
 10. Use o campo de pesquisa ("Pesquisar para filtrar itens...") para encontrar uma configuração específica que você quer configurar. Nesse exemplo, a cadeia de caracteres de pesquisa é "página inicial". A próxima captura de tela mostra os resultados da pesquisa.
 
@@ -93,7 +93,7 @@ A próxima captura de tela mostra o formulário da guia **Básico** e a barra de
 
 15. Na guia **Rótulos de escopo**, adicione um rótulo de escopo se você quiser, do contrário, clique no botão **Próximo**.
 
-16. Na guia **Atribuições**, clique em **+ Selecionar grupos para incluir** para atribuir essa política ao grupo do Azure Active Directory (Azure AD) que contiver os dispositivos ou os usuários que você quer que recebam essa configuração de política. Consulte [Atribuir perfis de usuário e dispositivo no Microsoft Intune](https://docs.microsoft.com/intune/device-profile-assign) para obter mais informações sobre como atribuir o perfil ao seu usuário ou aos seus grupos de dispositivos do Azure AD.
+16. Na guia **Atribuições**, clique em **+ Selecionar grupos para incluir** para atribuir essa política ao grupo do Azure Active Directory (Azure AD) que contiver os dispositivos ou os usuários que você quer que recebam essa configuração de política. Consulte [Atribuir perfis de usuário e dispositivo no Microsoft Intune](/intune/device-profile-assign) para obter mais informações sobre como atribuir o perfil ao seu usuário ou aos seus grupos de dispositivos do Azure AD.
 
     ![Selecionar grupos para incluir](./media/configure-edge-with-intune/create-profile-assignments-tab.png)
 
@@ -105,11 +105,11 @@ A próxima captura de tela mostra o formulário da guia **Básico** e a barra de
 
     ![Selecionar grupos para incluir](./media/configure-edge-with-intune/create-profile-new-policy-finished.png)
 
-Para obter mais informações sobre perfis do Windows 10, consulte [Usar modelos do Windows 10 para definir configurações de política de grupo no Microsoft Intune](https://docs.microsoft.com/intune/administrative-templates-windows).
+Para obter mais informações sobre perfis do Windows 10, consulte [Usar modelos do Windows 10 para definir configurações de política de grupo no Microsoft Intune](/intune/administrative-templates-windows).
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Gerenciar o acesso via Web usando o Microsoft Edge com o Microsoft Intune](https://docs.microsoft.com/intune/manage-microsoft-edge)
-- [Usar os modelos di Windows 10 para definir as configurações de política de grupo no Microsoft Intune](https://docs.microsoft.com/intune/administrative-templates-windows)
-- [Implantar o Microsoft Edge usando o Microsoft Intune](https://docs.microsoft.com/intune/apps/apps-windows-edge/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json)
+- [Gerenciar o acesso via Web usando o Microsoft Edge com o Microsoft Intune](/intune/manage-microsoft-edge)
+- [Usar os modelos di Windows 10 para definir as configurações de política de grupo no Microsoft Intune](/intune/administrative-templates-windows)
+- [Implantar o Microsoft Edge usando o Microsoft Intune](/intune/apps/apps-windows-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json)

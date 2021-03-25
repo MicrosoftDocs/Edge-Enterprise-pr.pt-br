@@ -10,21 +10,21 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge e downloads de conteúdo misto
-ms.openlocfilehash: 57da17a8684b97aad88e7837ff9d070f6862357b
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 13cc9d935dfe415039078b2ca794945b4fa2d1a3
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979061"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447265"
 ---
-# Saiba mais sobre o Microsoft Edge e downloads de conteúdo misto
+# <a name="learn-about-microsoft-edge-and-mixed-content-downloads"></a>Saiba mais sobre o Microsoft Edge e downloads de conteúdo misto
 
 Este artigo explica os downloads de conteúdo misto e como o Microsoft Edge lida com eles.
 
 >[!NOTE]
 >Este artigo se aplica ao Microsoft Edge versão 85 ou posterior.
 
-## O que são downloads de conteúdo misto?
+## <a name="what-are-mixed-content-downloads"></a>O que são downloads de conteúdo misto?
 
 Um download de conteúdo misto ocorre quando você inicia um download de uma página HTML carregada em uma conexão HTTPS segura, mas existe uma das seguintes condições:
 
@@ -33,7 +33,7 @@ Um download de conteúdo misto ocorre quando você inicia um download de uma pá
 
 Qualquer cenário é um conteúdo misto, porque a solicitação foi feita usando HTTPS seguro e tanto o conteúdo HTTP como o HTTPS estão envolvidos na obtenção do destino final do download. Navegadores modernos exibem avisos sobre esse tipo de conteúdo para indicar ao usuário que esse download pode ser transferido sem segurança, mesmo que a página original acessada seja segura.
 
-## Baixar avisos e opções de usuário
+## <a name="download-warnings-and-user-options"></a>Baixar avisos e opções de usuário
 
 O aviso de download garante que os usuários saibam que o arquivo que estão baixando pode ser lido por invasores mal-intencionados em sua rede. Esse aviso permite que um usuário tome uma decisão informada sobre se deseja baixar o arquivo.
 
@@ -56,17 +56,17 @@ Se um usuário decidir manter o download, ele será solicitado a confirmar sua a
 
  ![Escolha o modo Internet Explorer](./media/edge-learnmore-mixed-content-downloads/edge-mixed-content-download-override.png)
 
-## Políticas de apoio
+## <a name="supporting-policies"></a>Políticas de apoio
 
-As empresas que desejem excluir o bloqueio de conteúdo misto de sites específicos podem usar a política [InsecureContentAllowedForUrls](https://docs.microsoft.com/deployedge/microsoft-edge-policies#insecurecontentallowedforurls) para fazer isso.
+As empresas que desejem excluir o bloqueio de conteúdo misto de sites específicos podem usar a política [InsecureContentAllowedForUrls](./microsoft-edge-policies.md#insecurecontentallowedforurls) para fazer isso.
 
-## Licença de conteúdo
+## <a name="content-license"></a>Licença de conteúdo
 
 > [!NOTE]
 > Partes desta página são modificações baseadas no trabalho criado e compartilhado pela Chromium.org e usadas de acordo com os termos descritos na [Licença Pública Creative Commons Atribuição 4.0 Internacional](http://creativecommons.org/licenses/by/4.0/). A página original pode ser encontrada [aqui](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content).
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Esse trabalho é licenciado sob uma <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licença Attribution 4.0 International (CC BY 4.0) da Creative Commons</a>.
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

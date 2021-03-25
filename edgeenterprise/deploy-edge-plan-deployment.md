@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Planejar sua implantação do Microsoft Edge
-ms.openlocfilehash: 1b56d9874550c2002cec0577a53a3bf5766e2805
-ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
+ms.openlocfilehash: aae219bf44e78edabc02974a434d7d7efc1665eb
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "11313871"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447815"
 ---
-# Planejar sua implantação do Microsoft Edge
+# <a name="plan-your-deployment-of-microsoft-edge"></a>Planejar sua implantação do Microsoft Edge
 
 Este artigo descreve as práticas recomendadas para implantar o Microsoft Edge em um ambiente corporativo.
 
@@ -37,7 +37,7 @@ As seções a seguir fornecem orientações específicas para o planejamento da 
 - [Avaliar o piloto](#validate-your-deployment)
 - [Implante o Microsoft Edge em toda a empresa](#broad-deployment-of-microsoft-edge)
 
-## Avaliar seu ambiente do navegador e as necessidades do navegador
+## <a name="evaluate-your-existing-browser-environment-and-browser-needs"></a>Avaliar seu ambiente do navegador e as necessidades do navegador
 
 Reserve um tempo para entender o estado atual do navegador e a visão do projeto para garantir que todas as partes interessadas do projeto estejam alinhados e trabalhando para atingir o mesmo resultado.
 
@@ -54,41 +54,41 @@ Comece definindo o estado atual:
 
 Depois de entender o estado atual, você poderá determinar as metas desejadas para a implantação do navegador, levando em conta o seguinte:
 
-- Deseja [definir o Microsoft Edge como navegador padrão](https://docs.microsoft.com/DeployEdge/edge-default-browser)?
-- Como você [configurará o Microsoft Edge](https://docs.microsoft.com/DeployEdge/configure-microsoft-edge)?
+- Deseja [definir o Microsoft Edge como navegador padrão](./edge-default-browser.md)?
+- Como você [configurará o Microsoft Edge](./configure-microsoft-edge.md)?
 - Quais recursos são cruciais para serem configurados como parte da implantação inicial?
 - Qual é o processo para abordar problemas identificados de compatibilidade ou configuração?
 
 Você também deve entender os **pré-requisitos** para os recursos em que está interessado, como:
 
-- [Windows Defender Application Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/reqs-wd-app-guard)
-- [Modo Internet Explorer](https://docs.microsoft.com/DeployEdge/edge-ie-mode)
-- [Autenticação e sincronização](https://docs.microsoft.com/DeployEdge/microsoft-edge-security-identity)
+- [Windows Defender Application Guard](/windows/security/threat-protection/windows-defender-application-guard/reqs-wd-app-guard)
+- [Modo Internet Explorer](./edge-ie-mode.md)
+- [Autenticação e sincronização](./microsoft-edge-security-identity.md)
 
 Com essas respostas em mente, você está pronto para planejar a implantação do Microsoft Edge.
 <!--bookmark -->
 
-## Certifique-se de que seus dispositivos Windows 10 estejam prontos
+## <a name="make-sure-your-windows-10-devices-are-ready"></a>Certifique-se de que seus dispositivos Windows 10 estejam prontos
 
-O canal estável do Microsoft Edge exige a atualização cumulativa mais recente (LCU) de outubro de 2019 (ou posterior). Se você tentar implantar em um dispositivo com Windows 10 que tenha um LCU mais antigo, a instalação falhará. Para obter mais detalhes sobre as LCU mínimas que devem ser aplicadas antes da implantação do Microsoft Edge, confira [atualizações do Windows que oferecem suporte à próxima versão do Microsoft Edge](https://docs.microsoft.com/DeployEdge/microsoft-edge-sysupdate-windows-updates).
+O canal estável do Microsoft Edge exige a atualização cumulativa mais recente (LCU) de outubro de 2019 (ou posterior). Se você tentar implantar em um dispositivo com Windows 10 que tenha um LCU mais antigo, a instalação falhará. Para obter mais detalhes sobre as LCU mínimas que devem ser aplicadas antes da implantação do Microsoft Edge, confira [atualizações do Windows que oferecem suporte à próxima versão do Microsoft Edge](./microsoft-edge-sysupdate-windows-updates.md).
 
-## Determinar a metodologia de sua implantação
+## <a name="determine-your-deployment-methodology"></a>Determinar a metodologia de sua implantação
 
 Depois de saber o estado final desejado, você estará pronto para começar a planejar como chegar lá. As duas principais maneiras de implantar o Microsoft Edge são por função e por site.
 
-### Implantar para usuários finais por função
+### <a name="deploy-to-end-users-by-role"></a>Implantar para usuários finais por função
 
 Se a compatibilidade do aplicativo for sua principal preocupação, e você não tiver um bom controle sobre quais aplicativos testar, considere implantar para usuários finais por função. Isso permite que cada onda de uma implantação em fases forneça comentários e insights sobre aplicativos que talvez precisem ter a configuração modificada para resolver problemas de compatibilidade.
 
-### Implantar para usuários por site
+### <a name="deploy-to-end-users-by-site"></a>Implantar para usuários por site
 
 Se a largura de banda for sua principal preocupação, considere fazer o teste de compatibilidade de aplicativos antecipadamente. Depois de concluir o teste, implante-os para usuários finais por site, para que você possa aproveitar o cache de outras otimizações de entrega de software.
 
-## Fazer descoberta de site
+## <a name="do-site-discovery"></a>Fazer descoberta de site
 
 Se você tiver uma dependência em aplicativos web herdados e planejar usar o modo Internet Explorer (que é o caso da maioria dos clientes), provavelmente precisará de uma descoberta de site adicional.
 
-### Se você já implantou e configurou a versão herdada do Microsoft Edge
+### <a name="if-youve-already-deployed-and-configured-the-legacy-version-of-microsoft-edge"></a>Se você já implantou e configurou a versão herdada do Microsoft Edge
 
 Se você já configurou a lista de sites do modo empresarial para funcionar na versão herdada do Microsoft Edge, seu trabalho está quase pronto. Algo que você talvez precise adicionar são sites neutros.
 
@@ -96,14 +96,14 @@ Sites neutros geralmente são sites que oferecem logon único (SSO). Se você na
 
 Identifique os sites com SSO (ou outros tipos neutros) usados e adicione-os à sua lista de sites do modo empresarial.
 
-### Se você configurou o Internet Explorer como navegador padrão
+### <a name="if-youve-configured-internet-explorer-as-your-default-browser"></a>Se você configurou o Internet Explorer como navegador padrão
 
 Se você estiver usando somente o Internet Explorer, talvez não saiba quais sites atualizaram para padrões modernos da Web e quais ainda exigem o Internet Explorer. Convém encontrar esses sites e adicioná-los à lista de sites do modo empresarial. Isso permite que você use o modo Internet Explorer somente nos sites que precisam dele.
 
 > [!TIP]
-> Use as ferramentas do [Enterprise Site Discovery](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery?redirectedfrom=MSDN) para descobrir os sites que podem precisar do modo Internet Explorer. Você pode coletar dados em computadores que executam do Windows Internet Explorer 8 até o Internet Explorer 11 no Windows 10, no Windows 8.1 ou no Windows 7.
+> Use as ferramentas do [Enterprise Site Discovery](/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery) para descobrir os sites que podem precisar do modo Internet Explorer. Você pode coletar dados em computadores que executam do Windows Internet Explorer 8 até o Internet Explorer 11 no Windows 10, no Windows 8.1 ou no Windows 7.
 
-### Analisar dados da descoberta de site
+### <a name="analyze-site-discovery-data"></a>Analisar dados da descoberta de site
 
 Depois de coletar os dados do site, recomendamos o seguinte processo de 4 etapas para analisar os dados:
 
@@ -115,16 +115,16 @@ Depois de coletar os dados do site, recomendamos o seguinte processo de 4 etapas
    > [!NOTE]
    > Como prática recomendada, agrupe todos os sites que compõem um aplicativo. Se os todos sites precisam ser usados para realizar uma tarefa, e se eles tendem a serem atualizados juntos, é uma boa indicação de que eles devem ser agrupados. Dessa forma, ao atualizar um aplicativo, é mais fácil remover todo o site do modo Internet Explorer e começar a usar um navegador moderno para esse aplicativo.
 
-## Determinar sua estratégia de canal
+## <a name="determine-your-channel-strategy"></a>Determinar sua estratégia de canal
 
-O Microsoft Edge é lançado em [vários canais](https://docs.microsoft.com/DeployEdge/microsoft-edge-channels).
+O Microsoft Edge é lançado em [vários canais](./microsoft-edge-channels.md).
 
 > [!NOTE]
 > Você pode instalar mais de um canal em um dispositivo
 
 O canal estável é o que convém implantar na maioria dos dispositivos. No entanto, você deve considerar uma estratégia de implantação que inclua vários dispositivos e vários canais.
 
-### Vários dispositivos e canais
+### <a name="multiple-devices-and-channels"></a>Vários dispositivos e canais
 
 Recomendamos ter um subconjunto representativo de dispositivos configurados para usar o canal Beta. Isso permite que você visualize futuras alterações no navegador. Você pode ver se essas alterações afetarão os usuários finais ou aplicativos.
 
@@ -135,25 +135,25 @@ Como é possível instalar vários canais em um dispositivo, você pode mitigar 
 > [!NOTE]
 > Se o usuário habilitou a sincronização, a configuração será sincronizada em todos os canais, facilitando ainda mais a transição entre canais.
 
-## Definir e configurar políticas
+## <a name="define-and-configure-policies"></a>Definir e configurar políticas
 
 Depois de criar sua lista de sites do modo empresarial, recomendamos identificar e configurar as políticas que você pretende implantar com o Microsoft Edge. Isso garante que essas políticas sejam aplicadas ao realizar o teste.
 
-Primeiro, considere a experiência de primeira execução que você deseja que os usuários tenham. Se você quiser importar automaticamente as configurações do navegador atual, configure a política para [AutoImportAtFirstRun.](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#autoimportatfirstrun)
+Primeiro, considere a experiência de primeira execução que você deseja que os usuários tenham. Se você quiser importar automaticamente as configurações do navegador atual, configure a política para [AutoImportAtFirstRun.](./microsoft-edge-policies.md#autoimportatfirstrun)
 
-Para políticas de segurança, recomendamos começar com a linha de base de segurança do Microsoft Edge. A linha de base de segurança pode ser aplicada usando as [definições recomendadas da linha de base de configuração de segurança](https://techcommunity.microsoft.com/t5/Microsoft-Security-Baselines/Security-baseline-DRAFT-for-Chromium-based-Microsoft-Edge/ba-p/949991) ou usando o [Microsoft Intune](https://docs.microsoft.com/intune/protect/security-baseline-settings-edge).
+Para políticas de segurança, recomendamos começar com a linha de base de segurança do Microsoft Edge. A linha de base de segurança pode ser aplicada usando as [definições recomendadas da linha de base de configuração de segurança](https://techcommunity.microsoft.com/t5/Microsoft-Security-Baselines/Security-baseline-DRAFT-for-Chromium-based-Microsoft-Edge/ba-p/949991) ou usando o [Microsoft Intune](/intune/protect/security-baseline-settings-edge).
 
-Para outras políticas, é recomendável analisar as configurações de política para o [Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-policies) e as [Atualizações do Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies).
+Para outras políticas, é recomendável analisar as configurações de política para o [Microsoft Edge](./microsoft-edge-policies.md) e as [Atualizações do Microsoft Edge](./microsoft-edge-update-policies.md).
 
-### Definir sua estratégia de atualização e políticas
+### <a name="define-your-update-strategy-and-policies"></a>Definir sua estratégia de atualização e políticas
 
 Também convém determinar como deseja fazer atualizações depois de implantar o Microsoft Edge:
 
 - **Permitir que o Microsoft Edge se atualize** (padrão). Se você optar por permitir atualizações automáticas do Microsoft Edge, o Microsoft Edge se atualizará automaticamente atualizado no ritmo determinado pelos canais implantados.
-- **Atualizar o Microsoft Edge em seu próprio ritmo**. Se você preferir ter um controle explícito sobre quando as atualizações são implantadas, poderá desabilitar as atualizações automáticas e implantá-las você mesmo, (consulte a [Referência da política de atualização](https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies). Depois de desabilitar as atualizações automáticas, você pode implantar atualizações para cada canal usando uma das seguintes ferramentas:
+- **Atualizar o Microsoft Edge em seu próprio ritmo**. Se você preferir ter um controle explícito sobre quando as atualizações são implantadas, poderá desabilitar as atualizações automáticas e implantá-las você mesmo, (consulte a [Referência da política de atualização](./microsoft-edge-update-policies.md). Depois de desabilitar as atualizações automáticas, você pode implantar atualizações para cada canal usando uma das seguintes ferramentas:
 
-- [Intune](https://docs.microsoft.com/intune/apps/apps-windows-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json)
-- [Gerenciador de Configurações](https://docs.microsoft.com/DeployEdge/deploy-edge-with-configuration-manager)
+- [Intune](/intune/apps/apps-windows-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json)
+- [Gerenciador de Configurações](./deploy-edge-with-configuration-manager.md)
 - a ferramenta de implantação de sua escolha.
 
 Independentemente de sua estratégia de atualização, recomendamos o uso de uma estratégia de implantação anelada. Com as atualizações automáticas, isso significa ter uma amostra representativa de usuários executando o canal Beta, para identificar problemas com o que se tornará o canal Estável. Com as atualizações manuais, isso também pode incluir uma validação adicional de um grupo piloto após o lançamento de um novo build do canal Estável. Isso é seguido por uma implantação abrangente.
@@ -161,7 +161,7 @@ Independentemente de sua estratégia de atualização, recomendamos o uso de uma
 >[!NOTE]
 >O suporte do Microsoft Edge só será aplicado à versão mais recente do Microsoft Edge em cada canal
 
-## Fazer o teste de compatibilidade do aplicativo
+## <a name="do-app-compatibility-testing"></a>Fazer o teste de compatibilidade do aplicativo
 
 A compatibilidade do aplicativo com o Microsoft Edge é extremamente alta; tão alta que a Microsoft oferece as seguintes promessas de compatibilidade:
 
@@ -171,7 +171,7 @@ A compatibilidade do aplicativo com o Microsoft Edge é extremamente alta; tão 
 
 Se você tiver um aplicativo em que não cumprimos nossa promessa de compatibilidade, cumpriremos a promessa de corrigi-lo com[Aplicativo do Microsoft Assure](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure).
 
-### Teste de aplicativo de linha interna de negócios
+### <a name="internal-line-of-business-app-testing"></a>Teste de aplicativo de linha interna de negócios
 
 Apesar de nossa promessa de compatibilidade, sabemos que muitas organizações devem validar alguns aplicativos por motivos de conformidade ou gerenciamento de risco. Embora esperemos que isso seja muito simples, é importante ser organizado e rigoroso no teste de aplicativos.
 
@@ -182,19 +182,19 @@ Há duas maneiras de fazer o teste de compatibilidade de aplicativos:
 
 Escolha o método mais adequado para cada aplicativo, para gerenciar riscos sem muito investimento no teste de compatibilidade.
 
-### Suporte a aplicativos de terceiros
+### <a name="third-party-app-support"></a>Suporte a aplicativos de terceiros
 
 Além de seus próprios aplicativos de linha de negócios, muitas organizações usam aplicativos fornecidos por fontes externas. O artigo [Pronto para o Microsoft Edge](deploy-edge-ready-for-edge.md) contém uma lista de aplicações web que podem estar em uso dentro de sua organização. Esta lista fornece links para declarações de suporte do provedor para seus produtos quando usados com o Microsoft Edge.
 
-## Implantar o Microsoft Edge em um grupo piloto
+## <a name="deploy-microsoft-edge-to-a-pilot-group"></a>Implantar o Microsoft Edge em um grupo piloto
 
 Depois de definir as políticas e concluir o teste de compatibilidade inicial do aplicativo, você estará pronto para implantá-lo no grupo piloto. Implante no grupo piloto usando uma das seguintes ferramentas:
 
-- [Microsoft Intune para Windows](https://docs.microsoft.com/intune/apps/apps-windows-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json) ou [Microsoft Intune para macOS](https://docs.microsoft.com/intune/apps/apps-edge-macos?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json)
-- [Gerenciador de Configurações](https://docs.microsoft.com/DeployEdge/deploy-edge-with-configuration-manager).
+- [Microsoft Intune para Windows](/intune/apps/apps-windows-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json) ou [Microsoft Intune para macOS](/intune/apps/apps-edge-macos?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json)
+- [Gerenciador de Configurações](./deploy-edge-with-configuration-manager.md).
 - Outra ferramenta de gerenciamento, baixe e implante o [Arquivo MSI para o Microsoft Edge](https://www.microsoftedgeinsider.com/enterprise).
 
-## Validar a implantação
+## <a name="validate-your-deployment"></a>Validar a implantação
 
 Depois de implantar o piloto, convém capturar todos os comentários obtidos com seus usuários.
 
@@ -202,11 +202,11 @@ Depois de implantar o piloto, convém capturar todos os comentários obtidos com
 - Capture comentários sobre a configuração de política. Verifique se os usuários podem usar os principais recursos e fazer seu trabalho ao seguirem as diretrizes de segurança.
 - Capture comentários sobre a facilidade de uso e novos recursos. Identifique as áreas em que um treinamento deve ser desenvolvido e entregue com base nas perguntas dos usuários.
 
-## Implantação ampla do Microsoft Edge
+## <a name="broad-deployment-of-microsoft-edge"></a>Implantação ampla do Microsoft Edge
 
 Depois de concluir o piloto e atualizar o plano de implantação com as lições aprendidas no piloto, você estará pronto para fazer uma implantação completa do Microsoft Edge a todos os usuários.  Parabéns!
 
-## Ver também
+## <a name="see-also"></a>Ver também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Vídeo - Implantar o Microsoft Edge](microsoft-edge-video-deploy.md)

@@ -10,23 +10,23 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurar Lista de Sites Empresariais
-ms.openlocfilehash: 969a4f6001dbe08a51c26ecf35812b101d315a59
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 9b1943e4d50dcc770b4a634b99ecbd001d1ffbcc
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979119"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447645"
 ---
-# Configurar sites na lista de sites do modo empresarial
+# <a name="configure-sites-on-the-enterprise-mode-site-list"></a>Configurar sites na lista de sites do modo empresarial
 
 Este artigo descreve alterações na Lista de Sites do Modo Empresarial que oferecem suporte à configuração do modo IE para Microsoft Edge versão 77 e posterior.
 
-Para obter mais informações sobre o esquema do arquivo XML da Lista de Sites do Modo Empresarial, consulte as [orientações do esquema do Modo Empresarial v.2](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
+Para obter mais informações sobre o esquema do arquivo XML da Lista de Sites do Modo Empresarial, consulte as [orientações do esquema do Modo Empresarial v.2](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
 
 > [!NOTE]
 > Este artigo se aplica aos Canais **Estável**, **Beta** e **Dev** do Microsoft Edge Beta, versão 77 ou posteriores.
 
-## Elementos do esquema atualizados
+## <a name="updated-schema-elements"></a>Elementos do esquema atualizados
 
 A tabela a seguir descreve o elemento \<open-in app\> adicionado ao esquema v.2 do esquema Modo Empresarial:
 
@@ -48,7 +48,7 @@ A tabela a seguir mostra os valores possíveis do elemento\<open-in\>:
 
 | **Valor** | **Descrição** |
 | --- | --- |
-| **\<open-in\>IE11\</open-in\>** | Abre o site no modo IE ou em uma janela completa do IE11. Para ativar o modo IE, confira [Configurar políticas do modo IE](https://docs.microsoft.com/deployedge/edge-ie-mode-policies)|
+| **\<open-in\>IE11\</open-in\>** | Abre o site no modo IE ou em uma janela completa do IE11. Para ativar o modo IE, confira [Configurar políticas do modo IE](./edge-ie-mode-policies.md)|
 | **\<open-in app="**true**"\>IE11\</open-in\>** | Abre o site em uma janela completa do IE11 |
 | **\<open-in\>MSEdge\</open-in\>** | Abre o site no Microsoft Edge |
 | **\<open-in\>Nenhum ou não especificado.\</open-in\>** | Abre o site no navegador padrão ou no navegador em que o usuário navegou até o site. |
@@ -57,7 +57,7 @@ A tabela a seguir mostra os valores possíveis do elemento\<open-in\>:
 >[!NOTE]
 > O atributo app =**"true"** é reconhecido somente quando associado a _'open-in' IE11_. Adicioná-lo aos outros elementos 'open-in' não mudará o comportamento do navegador.   
 
-## Configurar sites neutros
+## <a name="configure-neutral-sites"></a>Configurar sites neutros
 
 Para que o modo IE funcione corretamente, os servidores de autenticação/Logon Único precisarão ser explicitamente configurados como sites neutros. Caso contrário, as páginas do modo IE tentarão redirecionar para o Microsoft Edge e a autenticação falhará.
 
@@ -73,13 +73,13 @@ Para configurar sites neutros, configure o menu suspenso *Open In* como “Nenhu
 </site>
 ```
 
-Para identificar servidores de autenticação, inspecione o tráfego de rede de um aplicativo usando as Ferramentas de Desenvolvedor do IE11. Se você precisar de mais tempo para identificar seus servidores de autenticação, poderá configurar uma política para manter toda a navegação na página no modo IE. Para minimizar o uso do modo IE, desative essa configuração depois de identificar e adicionar seus servidores de autenticação à lista de sites. Para obter mais informações, confira [Configurar a navegação na página para permanecer no modo IE](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationsiteredirect).
+Para identificar servidores de autenticação, inspecione o tráfego de rede de um aplicativo usando as Ferramentas de Desenvolvedor do IE11. Se você precisar de mais tempo para identificar seus servidores de autenticação, poderá configurar uma política para manter toda a navegação na página no modo IE. Para minimizar o uso do modo IE, desative essa configuração depois de identificar e adicionar seus servidores de autenticação à lista de sites. Para obter mais informações, confira [Configurar a navegação na página para permanecer no modo IE](./microsoft-edge-policies.md#internetexplorerintegrationsiteredirect).
 
 >[!NOTE]
-   >O esquema v.1 do Modo Empresarial não tem suporte na integração do modo IE. Se você estiver usando o esquema v.1 atualmente com o Internet Explorer 11, deverá atualizar para o esquema v.2. Para obter mais informações, consulte [Diretrizes sobre o esquema v.2 do Modo Empresarial](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
+   >O esquema v.1 do Modo Empresarial não tem suporte na integração do modo IE. Se você estiver usando o esquema v.1 atualmente com o Internet Explorer 11, deverá atualizar para o esquema v.2. Para obter mais informações, consulte [Diretrizes sobre o esquema v.2 do Modo Empresarial](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Sobre o modo IE](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Informações adicionais sobre o Modo Empresarial](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Sobre o modo IE](./edge-ie-mode.md)
+- [Informações adicionais sobre o Modo Empresarial](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

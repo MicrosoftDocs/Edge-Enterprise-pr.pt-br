@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Aprenda a desabilitar o Internet Explorer 11 e usar o modo Internet Explorer no Microsoft Edge.
-ms.openlocfilehash: a0486c2965b1868db67b6de1423f279905074410
-ms.sourcegitcommit: f34ff11499a2b96941e704103bdd959d19e3d7e7
+ms.openlocfilehash: 89fa6f81879be851f0036990a41e36e1eaee7fca
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "11400601"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447385"
 ---
 # <a name="disable-internet-explorer-11"></a>Desabilitar o Internet Explorer 11
 
@@ -45,7 +45,7 @@ Para organizações que exigem o Internet Explorer 11 (IE11) para compatibilidad
 Depois de configurar o modo IE, você pode desativar o IE11 como um navegador autônomo **sem afetar a funcionalidade do modo IE** em sua organização usando a política de grupo.
 
 > [!NOTE]
-> Se você precisa do aplicativo IE11 autônomo para sites específicos e deseja redirecionar todo o tráfego do navegador para o Microsoft Edge, pode configurar o [Envie todos os sites não incluídos na lista de sites para o Microsoft Edge](https://docs.microsoft.com/deployedge/edge-ie-mode-policies#redirect-sites-from-ie-to-microsoft-edge) política para redirecionar sites do IE para o Microsoft Edge.
+> Se você precisa do aplicativo IE11 autônomo para sites específicos e deseja redirecionar todo o tráfego do navegador para o Microsoft Edge, pode configurar o [Envie todos os sites não incluídos na lista de sites para o Microsoft Edge](./edge-ie-mode-policies.md#redirect-sites-from-ie-to-microsoft-edge) política para redirecionar sites do IE para o Microsoft Edge.
 
 ## <a name="user-experience-after-redirecting-traffic-to-microsoft-edge"></a>Experiência do usuário após redirecionar o tráfego para o Microsoft Edge
 
@@ -67,7 +67,7 @@ Se a sua Lista de Sites do Modo Enterprise contém aplicativos configurados para
 
 Para desabilitar o Internet Explorer 11 usando a política de grupo, siga estas etapas:
 
-1. Verifique se você tem as atualizações de pré-requisito do sistema operacional. Essa etapa atualizará diretamente os arquivos ADMX no computador (especificamente, inetres.adml e inetres.admx). Observe que, se você quiser atualizar seu Repositório Central, será necessário copiar sobre os arquivos .adml e .admx de um computador que tenha as atualizações de pré-requisito. Para obter mais informações, confira [Criar e gerenciar o Repositório Central](https://docs.microsoft.com/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
+1. Verifique se você tem as atualizações de pré-requisito do sistema operacional. Essa etapa atualizará diretamente os arquivos ADMX no computador (especificamente, inetres.adml e inetres.admx). Observe que, se você quiser atualizar seu Repositório Central, será necessário copiar sobre os arquivos .adml e .admx de um computador que tenha as atualizações de pré-requisito. Para obter mais informações, confira [Criar e gerenciar o Repositório Central](/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
 2. Abra o Editor de Política de Grupo.
 3. Vá para ***Configuração do computador/Modelos administrativos/Componentes do Windows/Internet Explorer***. 
 4. Duplo click **Desabilitar o Internet Explorer 11 como um navegador independente**.
@@ -83,5 +83,5 @@ Para desabilitar o Internet Explorer 11 usando a política de grupo, siga estas 
 ## <a name="see-also"></a>Ver também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Sobre o modo IE](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Informações adicionais sobre o Modo Empresarial](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Sobre o modo IE](./edge-ie-mode.md)
+- [Informações adicionais sobre o Modo Empresarial](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

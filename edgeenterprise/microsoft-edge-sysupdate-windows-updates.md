@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Atualizações do Windows para o Microsoft Edge
-ms.openlocfilehash: 953becc459fe729f84d54da419481b3c6e26cc47
-ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
+ms.openlocfilehash: 880e5a591ee23ff852981e73fe4fc4cd815be9ad
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "11313901"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447145"
 ---
-# Atualizações do Windows para oferecer suporte à próxima versão do Microsoft Edge
+# <a name="windows-updates-to-support-the-next-version-of-microsoft-edge"></a>Atualizações do Windows para oferecer suporte à próxima versão do Microsoft Edge
 
 Este artigo descreve como o Windows será atualizado para oferecer suporte à próxima versão do Microsoft Edge.
 
@@ -27,11 +27,11 @@ Este artigo descreve como o Windows será atualizado para oferecer suporte à pr
 > [!NOTE]
 > Este artigo aplica-se ao canal estável do Microsoft Edge.
 
-## Microsoft Edge e o ciclo de lançamento do Windows
+## <a name="microsoft-edge-and-the-windows-release-cycle"></a>Microsoft Edge e o ciclo de lançamento do Windows
 
 A próxima versão do Microsoft Edge apresenta recursos de atualização mais frequentes e flexíveis. Como as versões do navegador não são vinculadas às versões principais do Windows, as alterações serão feitas no sistema operacional para garantir que a próxima versão do Microsoft Edge se adapte perfeitamente ao Windows. Como resultado, as atualizações de recursos serão lançadas em um ciclo de 6 semanas (aproximadamente). As atualizações de segurança e compatibilidade serão enviadas conforme necessário.
 
-## Atualizações e a experiência do usuário
+## <a name="updates-and-the-user-experience"></a>Atualizações e a experiência do usuário
 
 As atualizações não mudam a experiência do usuário até que o canal estável da próxima versão do Microsoft Edge seja instalado. A instalação do Microsoft Edge Beta, Dev ou Canary não dispara alterações no Windows. Essas versões do navegador serão instaladas junto com os navegadores existentes.
 
@@ -52,11 +52,11 @@ Juntamente com as alterações anteriores, há alterações que ocorrem independ
 
 - O Microsoft Edge cancela o registro de livros e protocolos XML não compatíveis com a próxima versão do Microsoft Edge. Os usuários que tentarem abrir esses protocolos receberão uma caixa de diálogo solicitando que escolham um aplicativo padrão. Saiba mais sobre as alterações no suporte em [Baixar um aplicativo de ePub para continuar lendo](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Fhelp%2F4517840&data=02%7C01%7Cv-danwes%40microsoft.com%7Cc9f8571b880549c30fcf08d72be5eaf9%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637026138803983526&sdata=qtb3DvVZQ6H%2FFXnBievkl%2B%2BngAQXwl340PcH8kRc3y4%3D&reserved=0).
 
-## Linha do Tempo
+## <a name="timeline"></a>Linha do Tempo
 
 As alterações necessárias para oferecer suporte à experiência descrita serão fornecidas com três atualizações para diferentes versões do Windows.
 
-### Windows versões 1903 e 1909
+### <a name="windows-versions-1903-and-1909"></a>Windows versões 1903 e 1909
 
 - Primeiro conjunto de mudanças na atualização opcional de julho de 2019, fornecido com a atualização de segurança de agosto de 2019.
 - Segundo conjunto de mudanças na atualização opcional de agosto de 2019, fornecido com a atualização de segurança de setembro de 2019.
@@ -69,7 +69,7 @@ As alterações necessárias para oferecer suporte à experiência descrita ser�
   > [!NOTE]
   > Esta é a atualização em que o Microsoft Edge não oferece mais suporte para eBooks.
 
-### Windows versões 1709, 1803 e 1809
+### <a name="windows-versions-1709-1803-and-1809"></a>Windows versões 1709, 1803 e 1809
 
 - Primeiro conjunto de mudanças na atualização opcional de agosto de 2019, fornecido com a atualização de segurança de setembro de 2019.
 - Segundo conjunto de mudanças na atualização opcional de setembro de 2019, fornecido com a atualização de segurança de outubro de 2019.
@@ -91,7 +91,7 @@ A tabela a seguir fornece os detalhes de atualizações específicas em cada con
 | Versão1809  | [KB4523205](https://support.microsoft.com/help/4523205/windows-10-update-kb4523205) | [Atualização Cumulativa para Windows 10 Versão 1809](https://www.catalog.update.microsoft.com/Search.aspx?q=4523205) |
 | Versão 1903 e 1909 |[KB4517389](https://support.microsoft.com/help/4517389/windows-10-update-kb4517389)  | [Atualização Cumulativa para Windows 10 Versão 1903 e 1909](https://www.catalog.update.microsoft.com/Search.aspx?q=4517389) |
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Documentação do Microsoft Edge](https://docs.microsoft.com/DeployEdge/)
+- [Documentação do Microsoft Edge](./index.yml)
