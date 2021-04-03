@@ -1,5 +1,5 @@
 ---
-title: Perguntas frequentes sobre o modo IE
+title: Solução de problemas e perguntas frequentes do modo IE
 ms.author: shisub
 author: dan-wesley
 manager: srugh
@@ -9,20 +9,20 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Perguntas frequentes e solução de problemas do Microsoft Edge com o modo IE
-ms.openlocfilehash: f5279caddb5d3dfabaf04be6bd927f7095be1fc9
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+description: Solução de problemas e perguntas frequentes para o modo Microsoft Edge Internet Explorer
+ms.openlocfilehash: 77b31362bd7d28598ead7f0a3b33a69f2f4cb264
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447725"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470199"
 ---
-# <a name="ie-mode-faq"></a>Perguntas frequentes sobre o modo IE
+# <a name="ie-mode-troubleshooting-and-faq"></a>Solução de problemas e perguntas frequentes do modo IE
 
 Este artigo fornece dicas de solução de problemas e perguntas frequentes sobre o Microsoft Edge versão 77 ou posterior.
 
 > [!NOTE]
-> Este artigo se aplica aos Canais **Estável**, **Beta** e **Dev** do Microsoft Edge Beta, versão 77 ou posteriores.
+> Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
 
 
 ## <a name="troubleshoot-ie-mode"></a>Solução de problemas do modo IE

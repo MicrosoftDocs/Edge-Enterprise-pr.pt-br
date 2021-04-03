@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Stable Channel
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/18/2021
+ms.date: 03/25/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: 94d8d621ecac3764ecf13194efb55cfbbf80b70b
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 36f6e5fe462fcb4c43862754603bef7902fcf670
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447985"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470269"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão do Microsoft Edge Stable Channel
 
@@ -28,6 +28,10 @@ Essas notas de versão fornecem informações dos novos recursos e atualizaçõe
 
 > [!NOTE]
 > Para o Canal Estável, as atualizações serão implantadas progressivamente por um ou mais dias. Para saber mais, consulte [Distribuições progressivas para atualizações do Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
+
+## <a name="version-89077463-march-25"></a>Versão 89.0.774.63: 25 de março
+
+Vários bugs corrigidos e problemas de desempenho.
 
 ## <a name="version-89077457-march-18"></a>Versão 89.0.774.57: 18 de março
 
@@ -107,7 +111,7 @@ Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-88070574-february-17"></a>Versão 88.0.705.74: 17 de fevereiro
 
-As atualizações de segurança do canal estável estão listadas [aqui](./microsoft-edge-relnotes-security.md#February-17-2021).
+As atualizações de segurança do canal estável estão listadas [aqui](./microsoft-edge-relnotes-security.md#february-17-2021).
 
 ## <a name="version-88070568-february-11"></a>Versão 88.0.705.68: 11 de fevereiro
 
@@ -118,11 +122,11 @@ Correção de vários bugs e problemas de desempenho.
 > [!IMPORTANT]
 > Esta atualização contém o [CVE-2021-21148](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21148) que foi reportado pela equipe da Chromium por ter uma vulnerabilidade em aberto.
 
-As atualizações de segurança do canal estável estão listadas [aqui](./microsoft-edge-relnotes-security.md#February-5-2021).
+As atualizações de segurança do canal estável estão listadas [aqui](./microsoft-edge-relnotes-security.md#february-5-2021).
 
 ## <a name="version-88070562-february-4"></a>Versão 88.0.705.62: 4 de Fevereiro
 
-As atualizações de segurança do canal estável estão listadas [aqui](./microsoft-edge-relnotes-security.md#February-4-2021).
+As atualizações de segurança do canal estável estão listadas [aqui](./microsoft-edge-relnotes-security.md#february-4-2021).
 
 Vários bugs e problemas de desempenho corrigidos.
 

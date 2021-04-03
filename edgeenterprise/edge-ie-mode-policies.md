@@ -1,21 +1,21 @@
 ---
 title: Configurar políticas do modo IE
-ms.author: cjacks
-author: cjacks
-manager: saudm
-ms.date: 03/25/2020
+ms.author: collw
+author: dan-wesley
+manager: srugh
+ms.date: 03/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurar políticas do modo IE
-ms.openlocfilehash: e33aa57b7877d50fe6a5d9e9a888d05c366b0ef0
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: a2abf6f6ef71c1f30786031ef19b9633bfafc43f
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447355"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470159"
 ---
 # <a name="configure-ie-mode-policies"></a>Configurar políticas do modo IE
 
@@ -29,6 +29,9 @@ A configuração do modo IE tem três etapas:
 1. [Configurar a integração do Internet Explorer](#configure-internet-explorer-integration)
 2. [Redirecionar sites do Microsoft Edge para o modo do IE](#redirect-sites-from-microsoft-edge-to-ie-mode)
 3. (Opcional) [Redirecione sites do IE para Microsoft Edge](#redirect-sites-from-ie-to-microsoft-edge)
+
+    1. Se você estiver pronto para desabilitar o aplicativo IE11, siga as etapas em [Desabilitar o Internet Explorer 11](https://docs.microsoft.com/deployedge/edge-ie-disable-ie11)
+    2. Caso contrário, siga o restante das etapas em [Redirecionar sites do IE para o Microsoft Edge](https://docs.microsoft.com/deployedge/edge-ie-mode-policies#redirect-sites-from-ie-to-microsoft-edge)
 
 > [!NOTE]
 > As políticas para habilitar o modo do IE podem ser configuradas por meio do Intune. Para obter mais informações, confira [Adicionar o Microsoft Edge ao Microsoft Intune](/intune/apps/apps-windows-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json) e [Configurar as políticas do Microsoft Edge com o Microsoft Intune](./configure-edge-with-intune.md).
