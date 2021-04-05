@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/24/2021
+ms.date: 04/01/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 2204f1062699095e66707858646014daefc9322a
-ms.sourcegitcommit: e17de92b1fe9637cc7476e5c953bb8131ca2fbe1
+ms.openlocfilehash: 79996cdbee3099fbb3a3d17b982b84a05f5a5066
+ms.sourcegitcommit: 21390f52f8605fe6cb0b73ca6dffacff562ada82
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "11448428"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "11470889"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -35,7 +35,7 @@ A tabela a seguir lista as novas políticas desta atualização.
 
 |Nome|Legenda|
 |--|--|
-|[NewTabPageContentEnabled](#newtabpagecontentenabled)|Permitir conteúdo do Microsoft News na página de nova guia|
+|[ApplicationGuardTrafficIdentificationEnabled](#applicationguardtrafficidentificationenabled)|Identificação de Tráfego de Proteção de Aplicativo|
 
 ## <a name="available-policies"></a>Políticas disponíveis
 
@@ -66,7 +66,8 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |-|-|
 |[ApplicationGuardContainerProxy](#applicationguardcontainerproxy)|Proxy de contêiner do Application Guard|
 |[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Habilitada a Sincronização de Favoritos do Application Guard|
-### [*<a name="cast"></a>Converter*](#cast-policies)
+|[ApplicationGuardTrafficIdentificationEnabled](#applicationguardtrafficidentificationenabled)|Identificação de Tráfego de Proteção de Aplicativo|
+### [*<a name="cast"></a>Reproduzir em*](#cast-policies)
 
 |Nome da política|Legenda|
 |-|-|
@@ -504,7 +505,7 @@ Se você escolher o valor 'fixed_server ' como "Proxymode", o campo "ProxyServer
 
 Se você escolher o valor 'pac_script ' como "Proxymode", o campo "ProxyPacUrl" será usado.
 
-Para saber mais sobre como identificar o tráfego do Application Guard por proxy duplo, acesse [https://go.microsoft.com/fwlink/?linkid=2134653](./microsoft-edge-security-windows-defender-application-guard.md).
+Para saber mais sobre como identificar o tráfego do Application Guard por proxy duplo, acesse [https://go.microsoft.com/fwlink/?linkid=2134653](https://go.microsoft.com/fwlink/?linkid=2134653).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -600,6 +601,59 @@ Se você desativar ou não configurar esta política, os favoritos no host não 
   - Caminho (recomendado): N/A
   - Nome do Valor: ApplicationGuardFavoritesSyncEnabled
   - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  
+
+  [Voltar ao topo](#microsoft-edge---policies)
+
+  ### <a name="applicationguardtrafficidentificationenabled"></a>ApplicationGuardTrafficIdentificationEnabled
+
+  #### <a name="application-guard-traffic-identification"></a>Identificação de Tráfego de Proteção de Aplicativo
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows desde 91 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Se você habilitar ou não configurar esta política, o Application Guard adicionará um cabeçalho HTTP extra (X-MS-ApplicationGuard-Initiated) a todas as solicitações HTTP de saída feitas do contêiner do Application Guard.
+
+Se você desabilitar esta política, o cabeçalho extra não será adicionado ao tráfego.
+
+  #### <a name="supported-features"></a>Recursos com suporte:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo do GP: ApplicationGuardTrafficIdentificationEnabled
+  - Nome da GP: Identificação de Tráfego do Application Guard
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Application Guard settings
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (Recomendado): N/A
+  - Nome do valor: ApplicationGuardTrafficIdentificationEnabled
+  - Tipo de Valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -844,7 +898,7 @@ Observe que não é possível definir padrões de URL conflitantes entre essas t
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
-Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * não é um valor aceito para esta política.
+Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
 
 Para impedir que os cookies sejam excluídos na saída, configure a política [SaveCookiesOnExit](#savecookiesonexit).
 
@@ -923,7 +977,7 @@ Observe que não é possível definir padrões de URL conflitantes entre essas t
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
-Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * não é um valor aceito para esta política.
+Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
 
   #### <a name="supported-features"></a>Recursos com suporte:
 
@@ -1002,7 +1056,7 @@ Observe que não é possível definir padrões de URL conflitantes entre essas t
 
 - CookiesSessionOnlyForUrls
 
-Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * não é um valor aceito para esta política.
+Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
 
 Se você definir a política [RestoreOnStartup](#restoreonstartup) para restaurar URLs de sessões anteriores, essa política será ignorada e os cookies serão armazenados permanentemente para esses sites.
 
@@ -1905,7 +1959,7 @@ Não definir a política significa que [DefaultFileSystemReadGuardSetting](#defa
 
 Os padrões de URL não podem entrar em conflito com [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls). Nenhuma das políticas tem precedência se uma URL corresponder a ambas.
 
-Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * não é um valor aceito para esta política.
+Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
 
   #### <a name="supported-features"></a>Recursos com suporte:
 
@@ -1974,7 +2028,7 @@ Se você não definir esta política, [DefaultFileSystemReadGuardSetting](#defau
 
 Os padrões de URL não podem entrar em conflito com [FileSystemReadAskForUrls](#filesystemreadaskforurls). Nenhuma das políticas tem precedência se uma URL corresponder a ambas.
 
-Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * não é um valor aceito para esta política.
+Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
 
   #### <a name="supported-features"></a>Recursos com suporte:
 
@@ -2043,7 +2097,7 @@ Se você não definir esta política, [DefaultFileSystemWriteGuardSetting](#defa
 
 Os padrões de URL não podem entrar em conflito com [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls). Nenhuma das políticas tem precedência se uma URL corresponder a ambas.
 
-Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * não é um valor aceito para esta política.
+Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
 
   #### <a name="supported-features"></a>Recursos com suporte:
 
@@ -2112,7 +2166,7 @@ Se você não definir esta política, [DefaultFileSystemWriteGuardSetting](#defa
 
 Os padrões de URL não podem entrar em conflito com [FileSystemWriteAskForUrls](#filesystemwriteaskforurls). Nenhuma das políticas tem precedência se uma URL corresponder a ambas.
 
-Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * não é um valor aceito para esta política.
+Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
 
   #### <a name="supported-features"></a>Recursos com suporte:
 
@@ -2179,7 +2233,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 Se você não configurar essa política, o valor padrão global será usado para todos os sites da diretiva [DefaultImagesSetting](#defaultimagessetting) (se definida) ou à configuração pessoal do usuário.
 
-Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * não é um valor aceito para esta política.
+Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
 
   #### <a name="supported-features"></a>Recursos com suporte:
 
@@ -2246,7 +2300,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 Se você não configurar essa política, o valor padrão global da diretiva [DefaultImagesSetting](#defaultimagessetting) (se definida) ou a configuração pessoal do usuário será usada para todos os sites.
 
-Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * não é um valor aceito para esta política.
+Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
 
   #### <a name="supported-features"></a>Recursos com suporte:
 
@@ -2313,7 +2367,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 Se você não configurar essa política, o conteúdo misto bloqueável será bloqueado, e o conteúdo misto opcionalmente bloqueável será atualizado. No entanto, os usuários poderão definir exceções para permitir conteúdo misto não seguro para sites específicos.
 
-Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * não é um valor aceito para esta política.
+Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
 
   #### <a name="supported-features"></a>Recursos com suporte:
 
@@ -2380,7 +2434,7 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
 
 Se você não configurar essa política, o conteúdo misto bloqueável será bloqueado, e o conteúdo misto opcionalmente bloqueável será atualizado. No entanto, os usuários poderão definir exceções para permitir conteúdo misto não seguro para sites específicos.
 
-Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * não é um valor aceito para esta política.
+Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
 
   #### <a name="supported-features"></a>Recursos com suporte:
 
@@ -2714,7 +2768,7 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
 
   Permite que você crie uma lista de padrões de URL para especificar sites que têm permissão para exibir notificações.
 
-Se você não definir essa política, o valor padrão global será utilizado para todos os sites. Esse valor padrão será da política [DefaultNotificationsSetting](#defaultnotificationssetting), se ela estiver definida, ou da configuração pessoal do usuário. Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Se você não definir essa política, o valor padrão global será utilizado para todos os sites. Esse valor padrão será da política [DefaultNotificationsSetting](#defaultnotificationssetting), se ela estiver definida, ou da configuração pessoal do usuário. Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -2779,7 +2833,7 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 
   Permite que você crie uma lista de padrões de URL para especificar sites que não têm permissão para exibir notificações.
 
-Se você não definir essa política, o valor padrão global será utilizado para todos os sites. Esse valor padrão será da política [DefaultNotificationsSetting](#defaultnotificationssetting), se ela estiver definida, ou da configuração pessoal do usuário. Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Se você não definir essa política, o valor padrão global será utilizado para todos os sites. Esse valor padrão será da política [DefaultNotificationsSetting](#defaultnotificationssetting), se ela estiver definida, ou da configuração pessoal do usuário. Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -2848,7 +2902,7 @@ Defina uma lista de sites, com base em padrões de URL, que podem executar o plu
 
 Se você não configurar essa política, o valor padrão global da diretiva [DefaultPluginsSetting](#defaultpluginssetting) (se definida) ou a configuração pessoal do usuário será usada para todos os sites.
 
-Para obter informações detalhadas sobre os padrões de URL válidos, confira [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). No entanto, a partir do M85, não há mais suporte para os caracteres curinga '\*' e '[\*.]' no host para esta política.
+Para obter informações detalhadas sobre os padrões de URL válidos, confira [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). No entanto, a partir do M85, não há mais suporte para os caracteres curinga '\*' e '[\*.]' no host para esta política.
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -2917,7 +2971,7 @@ Defina uma lista de sites, com base em padrões de URL, que são impedidos de ex
 
 Se você não configurar essa política, o valor padrão global da diretiva [DefaultPluginsSetting](#defaultpluginssetting) (se definida) ou a configuração pessoal do usuário será usada para todos os sites.
 
-Para obter informações detalhadas sobre os padrões de URL válidos, confira [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). No entanto, a partir do M85, não há mais suporte para os caracteres curinga '\*' e '[\*.]' no host para esta política.
+Para obter informações detalhadas sobre os padrões de URL válidos, confira [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). No entanto, a partir do M85, não há mais suporte para os caracteres curinga '\*' e '[\*.]' no host para esta política.
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -3360,7 +3414,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
 
 Se você não configurar essa política, o valor padrão global da diretiva [DefaultWebUsbGuardSetting](#defaultwebusbguardsetting) (se definida) ou a configuração pessoal do usuário será usada para todos os sites.
 
-Os padrões de URL definidos nesta política não podem entrar em conflito com aqueles configurados na política [WebUsbBlockedForUrls](#webusbblockedforurls)- você não pode permitir e bloquear uma URL. Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Os padrões de URL definidos nesta política não podem entrar em conflito com aqueles configurados na política [WebUsbBlockedForUrls](#webusbblockedforurls)- você não pode permitir e bloquear uma URL. Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -3427,7 +3481,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 Se você não configurar essa política, o valor padrão global da diretiva [DefaultWebUsbGuardSetting](#defaultwebusbguardsetting) (se definida) ou a configuração pessoal do usuário será usada para todos os sites.
 
-Os padrões de URL nesta política não podem entrar em conflito com aqueles configurados na política [WebUsbAskForUrls](#webusbaskforurls). Você não pode permitir nem bloquear uma URL.  Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Os padrões de URL nesta política não podem entrar em conflito com aqueles configurados na política [WebUsbAskForUrls](#webusbaskforurls). Você não pode permitir nem bloquear uma URL.  Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -4412,7 +4466,7 @@ Em instâncias do macOS, aplicativos e extensões de fora do site de complemento
 
 O código-fonte de qualquer extensão pode ser alterado pelos usuários com ferramentas de desenvolvedor, potencialmente renderizando a extensão não funcional. Se isso for uma preocupação, configure a política DeveloperToolsDisabled.
 
-Cada item de lista da política é uma cadeia de caracteres que contém uma ID de extensão e, opcionalmente, uma URL de "atualização" separada por um ponto e vírgula (;). A ID da extensão é a cadeia de caracteres de 32 letras encontrada, por exemplo, no edge://extensions quando estiver no modo de desenvolvedor. Se especificado, a URL "atualizar" deve apontar para um documento XML de manifesto de atualização ( [https://go.microsoft.com/fwlink/?linkid=2095043](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating) ). Por padrão, a URL de atualização do site de complementos do Microsoft Edge é usada. A URL "atualizar" definida nessa política é usada somente para a instalação inicial. Atualizações subsequentes da extensão usam a URL de atualização no manifesto da extensão.
+Cada item de lista da política é uma cadeia de caracteres que contém uma ID de extensão e, opcionalmente, uma URL de "atualização" separada por um ponto e vírgula (;). A ID da extensão é a cadeia de caracteres de 32 letras encontrada, por exemplo, no edge://extensions quando estiver no modo de desenvolvedor. Se especificado, a URL "atualizar" deve apontar para um documento XML de manifesto de atualização ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ). Por padrão, a URL de atualização do site de complementos do Microsoft Edge é usada. A URL "atualizar" definida nessa política é usada somente para a instalação inicial. Atualizações subsequentes da extensão usam a URL de atualização no manifesto da extensão.
 
 Observação: essa política não se aplica ao modo InPrivate. Leia sobre extensões de hospedagem (https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
@@ -4481,7 +4535,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
 Defina URLs que podem instalar extensões e temas diretamente sem ter que arrastar e soltar os pacotes para a página edge://extensions.
 
-Cada item nesta lista é um padrão de correspondência de estilo de extensão (consulte [https://go.microsoft.com/fwlink/?linkid=2095039](/microsoft-edge/extensions-chromium/enterprise/match-patterns)). Os usuários podem instalar facilmente os itens de qualquer URL que corresponda a um item nesta lista. O local do arquivo *.crx e a página onde o download é iniciado (em outras palavras, a referencial) devem ser permitidos por esses padrões. Não hospede os arquivos em um local que exija autenticação.
+Cada item nesta lista é um padrão de correspondência de estilo de extensão (consulte [https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039)). Os usuários podem instalar facilmente os itens de qualquer URL que corresponda a um item nesta lista. O local do arquivo *.crx e a página onde o download é iniciado (em outras palavras, a referencial) devem ser permitidos por esses padrões. Não hospede os arquivos em um local que exija autenticação.
 
 A política [ExtensionInstallBlocklist](#extensioninstallblocklist) tem precedência sobre esta política. As extensões que estiverem na lista de bloqueios não serão instaladas, mesmo se vierem de um site nesta lista.
 
@@ -4546,7 +4600,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   A definição desta política controla as configurações de gerenciamento de extensão do Microsoft Edge, incluindo qualquer uma controlada por políticas relacionadas à extensão existentes. Essa política substitui qualquer política herdada que possa ser definida.
 
-Essa política mapeia um ID de extensão ou uma URL de atualização apenas para sua configuração específica. Uma configuração padrão pode ser definida para o ID especial "*", que se aplica a todas as extensões sem uma configuração personalizada nesta política. Com uma URL de atualização, a configuração se aplica a extensões com a URL de atualização exata indicada no manifesto da extensão ([https://go.microsoft.com/fwlink/?linkid=2095043](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating)).
+Essa política mapeia um ID de extensão ou uma URL de atualização apenas para sua configuração específica. Uma configuração padrão pode ser definida para o ID especial "*", que se aplica a todas as extensões sem uma configuração personalizada nesta política. Com uma URL de atualização, a configuração se aplica a extensões com a URL de atualização exata indicada no manifesto da extensão ([https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043)).
 
 Para bloquear extensões de um determinado armazenamento de terceiros, você só precisa bloquear o update_url para esse armazenamento. Por exemplo, se quiser bloquear extensões da Chrome Web Store, você pode usar o seguinte JSON.
 
@@ -5314,7 +5368,7 @@ Se você habilitar ou não configurar esta política, os usuários poderão alte
 
 Se você desativar esta política, ela impedirá que os usuários alterem o URL na barra de endereço.
 
-Para obter informações detalhadas sobre como configurar o modo de quiosque, consulte [https://go.microsoft.com/fwlink/?linkid=2137578](./microsoft-edge-configure-kiosk-mode.md).
+Para obter informações detalhadas sobre como configurar o modo de quiosque, consulte [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -5378,7 +5432,7 @@ Se você habilitar essa política, os arquivos baixados como parte da sessão qu
 
 Se você desabilitar essa política ou não a configurar, os arquivos baixados como parte da sessão quiosque não serão excluídos quando o Microsoft Edge for fechado.
 
-Para obter informações detalhadas sobre como configurar o modo de quiosque, confira [https://go.microsoft.com/fwlink/?linkid=2137578](./microsoft-edge-configure-kiosk-mode.md).
+Para obter informações detalhadas sobre como configurar o modo de quiosque, confira [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -6873,7 +6927,7 @@ Se você habilitar essa política, poderá criar uma lista de hosts para os quai
 
 Se você não configurar essa política, nenhuma lista de hosts será criada para que o Microsoft Edge ignore um proxy. Deixe essa política desconfigurada se você tiver especificado qualquer outro método para a configuração das políticas de proxy.
 
-Para obter exemplos mais detalhados, acesse [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
+Para obter exemplos mais detalhados, acesse [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -6944,7 +6998,7 @@ Se você escolher usar:
   * fixed_servers = Servidores proxy fixos. Você pode especificar outras opções com [ProxyServer](#proxyserver) e [ProxyBypassList](#proxybypasslist).
   * pac_script = Um script de proxy .pac. Use [ProxyPacUrl](#proxypacurl) para definir o URL para um arquivo proxy .pac.
 
-Para obter exemplos detalhados, vá para [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
+Para obter exemplos detalhados, vá para [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
 Se você não configurar essa política, os usuários poderão escolher suas próprias configurações de proxy.
 
@@ -7028,7 +7082,7 @@ Se você habilitar essa política, poderá especificar a URL de um arquivo PAC, 
 
 Se você desabilitar ou não configurar essa política, nenhum arquivo PAC será especificado. Deixe essa política desconfigurada se você tiver especificado qualquer outro método para a configuração das políticas de proxy.
 
-Para obter exemplos detalhados, confira [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
+Para obter exemplos detalhados, confira [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -7096,7 +7150,7 @@ Se você habilitar essa política, o servidor proxy configurado por essa políti
 
 Se você desabilitar ou não configurar essa política, os usuários poderão escolher suas próprias configurações de proxy durante esse modo de proxy. Deixe essa política desconfigurada se você tiver especificado qualquer outro método para a configuração das políticas de proxy.
 
-Para obter mais opções e exemplos detalhados, confira [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
+Para obter mais opções e exemplos detalhados, confira [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -7180,7 +7234,7 @@ Para ProxyMode, se você escolher o valor:
   * fixed_server, os campos ProxyServer e ProxyBypassList são usados.
   * pac_script, os campos ProxyPacUrl e ProxyBypassList são usados.
 
-Para obter exemplos mais detalhados, acesse [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
+Para obter exemplos mais detalhados, acesse [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -10115,7 +10169,7 @@ Se a condição for falsa, o prompt de inicialização do protocolo externo não
 
 Se você não configurar essa política, nenhum protocolo poderá ser iniciado sem um aviso. Os usuários podem optar por recusar solicitações por protocolo/por site, a menos que a política [ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox) esteja definida como desabilitada. Essa política não afeta as isenções por solicitação por protocolo/por site definidas pelos usuários.
 
-Os padrões de correspondência de origem usam um formato semelhante para os da [URLBlocklist](#urlblocklist) política, que estão documentadas em [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Os padrões de correspondência de origem usam um formato semelhante para os da [URLBlocklist](#urlblocklist) política, que estão documentadas em [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
 No entanto, padrões de correspondência de origem para esta política não podem conter elementos "/path" ou "@query". Todos os padrões que contenham um elemento "/path" ou "@query" serão ignorados.
 
@@ -10237,7 +10291,7 @@ Se você definir URLs nesta política, os arquivos só serão abertos automatica
 
 Se você não definir essa política, todos os downloads do tipo de arquivo no local [AutoOpenFileTypes](#autoopenfiletypes) serão abertos automaticamente.
 
-Um padrão de URL deve ser formatado de acordo com [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Um padrão de URL deve ser formatado de acordo com [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -10699,7 +10753,7 @@ Se você não configurar essa política, a experiência padrão terá anúncios 
 
 Essa política só estará disponível para SKUs K-12 identificados como locatários EDU pela Microsoft.
 
-Confira [https://go.microsoft.com/fwlink/?linkid=2119711](/microsoft-365/education/deploy/install-microsoft-edge) para saber mais sobre essa política ou se os seguintes cenários se aplicam a você:
+Confira [https://go.microsoft.com/fwlink/?linkid=2119711](https://go.microsoft.com/fwlink/?linkid=2119711) para saber mais sobre essa política ou se os seguintes cenários se aplicam a você:
 
 * Você tem um locatário EDU, mas a política não funciona.
 
@@ -11445,7 +11499,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 
 Essa política permite que você não divulgue certificados para os nomes de host nas URLs especificadas por meio da Transparência de Certificados. Isso permite que você use certificados que, de outra forma, seriam não confiáveis, pois eles não foram divulgados publicamente, mas dificulta a detecção de certificados emitidos incorretamente para esses hosts.
 
-Formate seu padrão de URL de acordo com [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). Como os certificados são válidos para um determinado nome de host, independente do esquema, da porta ou do caminho, apenas a parte do nome do host da URL é considerada. Não há suporte para hosts curinga.
+Formate seu padrão de URL de acordo com [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Como os certificados são válidos para um determinado nome de host, independente do esquema, da porta ou do caminho, apenas a parte do nome do host da URL é considerada. Não há suporte para hosts curinga.
 
 Se você não configurar essa política, todo o certificado que deve ser divulgado por meio da transparência do certificado será tratado como não confiável, se não for divulgado.
 
@@ -11652,7 +11706,7 @@ Se você não configurar essa política, os usuários com versões do Microsoft 
 
 A desabilitação do ClickOnce poderá impedir que aplicativos ClickOnce (arquivos .application) sejam iniciados corretamente.
 
-Para obter mais informações sobre o ClickOnce, confira [https://go.microsoft.com/fwlink/?linkid=2103872](./edge-learn-more-co-di.md) e [https://go.microsoft.com/fwlink/?linkid=2099880](/visualstudio/deployment/clickonce-security-and-deployment).
+Para obter mais informações sobre o ClickOnce, confira [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) e [https://go.microsoft.com/fwlink/?linkid=2099880](https://go.microsoft.com/fwlink/?linkid=2099880).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -12051,7 +12105,7 @@ Use as informações anteriores ao configurar essa política.
 
   #### <a name="description"></a>Descrição
 
-  Habilite o uso de contas do Active Directory para entrada automática se os computadores dos usuários forem Ingressados no Domínio e seu ambiente não for híbrido. Se você deseja que os usuários se conectem automaticamente com as contas do Azure Active Directory, faça o ingresso do Azure AD (Confira [https://go.microsoft.com/fwlink/?linkid=2118197](/azure/active-directory/devices/azureadjoin-plan) para obter mais informações) ou o ingresso híbrido (consulte [https://go.microsoft.com/fwlink/?linkid=2118365](/azure/active-directory/devices/hybrid-azuread-join-plan) para saber mais) em seu ambiente.
+  Habilite o uso de contas do Active Directory para entrada automática se os computadores dos usuários forem Ingressados no Domínio e seu ambiente não for híbrido. Se você deseja que os usuários se conectem automaticamente com as contas do Azure Active Directory, faça o ingresso do Azure AD (Confira [https://go.microsoft.com/fwlink/?linkid=2118197](https://go.microsoft.com/fwlink/?linkid=2118197) para obter mais informações) ou o ingresso híbrido (consulte [https://go.microsoft.com/fwlink/?linkid=2118365](https://go.microsoft.com/fwlink/?linkid=2118365) para saber mais) em seu ambiente.
 
 Em cada lançamento, o Microsoft Edge tentará entrar usando essa política, contanto que o primeiro perfil que está sendo iniciado não esteja conectado ou um logon automático não tenha acontecido antes.
 
@@ -12379,7 +12433,7 @@ Se você definir essa política como falsa, o Microsoft Edge será interrompido 
 
 Se você não definir essa política, o Microsoft Edge permite aos usuários controlar se esse é o padrão e, caso contrário, se as notificações do usuário devem ser exibidas.
 
-Observação para os administradores do Windows: essa política só funciona em computadores que executam o Windows 7. Para as versões mais recentes do Windows, você precisará implantar um arquivo de "associações de aplicativos padrão" que torna o Microsoft Edge o manipulador para os protocolos https e http (e, opcionalmente, os formatos de arquivo e protocolo FTP, como. html,. htm,. pdf,. svg,. webp). Consulte [https://go.microsoft.com/fwlink/?linkid=2094932](./edge-default-browser.md) para mais informações.
+Observação para os administradores do Windows: essa política só funciona em computadores que executam o Windows 7. Para as versões mais recentes do Windows, você precisará implantar um arquivo de "associações de aplicativos padrão" que torna o Microsoft Edge o manipulador para os protocolos https e http (e, opcionalmente, os formatos de arquivo e protocolo FTP, como. html,. htm,. pdf,. svg,. webp). Consulte [https://go.microsoft.com/fwlink/?linkid=2094932](https://go.microsoft.com/fwlink/?linkid=2094932) para mais informações.
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -12911,7 +12965,7 @@ Os dados de diagnóstico obrigatórios são coletados para manter o Microsoft Ed
 
 Os dados de diagnóstico opcionais incluem dados sobre como o navegador é usado, os sites que você visita e relatórios de falha enviados para a Microsoft para aprimorar o produto e os serviços.
 
-Essa política não é suportada nos dispositivos com Windows 10. Para controlar essa coleta de dados no Windows 10, os administradores de TI precisam usar a política de grupo de dados de diagnóstico do Windows. Essa política irá “Permitir a telemetria” ou “Permitir dados de diagnóstico”, dependendo da versão do Windows. Saiba mais sobre a coleta de dados de diagnóstico do Windows 10: [https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
+Essa política não é suportada nos dispositivos com Windows 10. Para controlar essa coleta de dados no Windows 10, os administradores de TI precisam usar a política de grupo de dados de diagnóstico do Windows. Essa política irá “Permitir a telemetria” ou “Permitir dados de diagnóstico”, dependendo da versão do Windows. Saiba mais sobre a coleta de dados de diagnóstico do Windows 10: [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
 
 Use uma das seguintes configurações para configurar essa política:
 
@@ -12999,7 +13053,7 @@ Se você desabilitar essa política, os usuários não poderão abrir arquivos u
 
 Observação: a desabilitação do DirectInvoke pode impedir que determinados recursos do Microsoft Office SharePoint Online funcionem conforme o esperado.
 
-Para obter mais informações sobre DirectInvoke, confira [https://go.microsoft.com/fwlink/?linkid=2103872](./edge-learn-more-co-di.md) e [https://go.microsoft.com/fwlink/?linkid=2099871](/previous-versions/windows/internet-explorer/ie-developer/dev-guides/jj215788(v=vs.85)).
+Para obter mais informações sobre DirectInvoke, confira [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) e [https://go.microsoft.com/fwlink/?linkid=2099871](https://go.microsoft.com/fwlink/?linkid=2099871).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -14176,7 +14230,7 @@ Se você desabilitar essa política ou não a configurar, os tipos de arquivo qu
 
 Se você habilitar essa política:
 
-* O padrão de URL deve ser formatado de acordo com [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+* O padrão de URL deve ser formatado de acordo com [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 * A extensão do tipo de arquivo inserida deve estar em ASCII de letras minúsculas. O separador à esquerda não deve ser incluído ao listar o tipo de extensão do arquivo, então liste "txt", em vez de ".txt".
 
 Exemplo:
@@ -16592,7 +16646,7 @@ Se você definir essa política como 'Habilitada' ou não a configurar, os sites
 
 Se você definir essa política como 'Desabilitada', a detecção de trava avançada será desabilitada, e os usuários receberão o comportamento de detecção básica do Internet Explorer.
 
-Para saber mais sobre o modo do Internet Explorer, confira [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
+Para saber mais sobre o modo do Internet Explorer, confira [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
 Mapeamento das opções de política:
 
@@ -16651,7 +16705,7 @@ Use as informações anteriores ao configurar essa política.
 
   #### <a name="description"></a>Descrição
 
-  Para obter instruções sobre como configurar a melhor experiência para o modo do Internet Explorer, confira [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
+  Para obter instruções sobre como configurar a melhor experiência para o modo do Internet Explorer, confira [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
 Mapeamento das opções de política:
 
@@ -16720,7 +16774,7 @@ Se você definir esta política como verdadeira ou não configurá-la, o usuári
 
 Se você definir esta política como falsa, o usuário não terá permissão para usar o argumento da linha de comando --ie-mode-file-url para iniciar arquivos locais no modo Internet Explorer.
 
-Para saber mais sobre o modo Internet Explorer, confira [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
+Para saber mais sobre o modo Internet Explorer, confira [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -16779,7 +16833,7 @@ Quando uma URL arquivo:// é solicitada para iniciar no modo Internet Explorer, 
 
 Se você definir essa política com o valor especial "*" ou não configurá-la, todas as extensões do arquivo serão permitidas.
 
-Para saber mais sobre o modo Internet Explorer, confira [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
+Para saber mais sobre o modo Internet Explorer, confira [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -16841,7 +16895,7 @@ Se você definir essa política como verdadeira, o item do menu de contexto "Abr
 
 Se você definir essa política como falsa ou não a configurar, o item do menu de contexto não será adicionado.
 
-Para saber mais sobre o modo Internet Explorer, confira [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
+Para saber mais sobre o modo Internet Explorer, confira [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -16892,7 +16946,7 @@ Para saber mais sobre o modo Internet Explorer, confira [https://go.microsoft.co
 
   #### <a name="description"></a>Descrição
 
-  Para obter instruções sobre como configurar a melhor experiência para o modo do Internet Explorer, confira [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
+  Para obter instruções sobre como configurar a melhor experiência para o modo do Internet Explorer, confira [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -16957,7 +17011,7 @@ Se você definir essa política como 'AutomaticNavigationsOnly', obterá a exper
 
 Se você definir essa política como 'AllInPageNavigations', todas as navegações de páginas carregadas no modo IE para sites não configurados serão mantidas no modo Internet Explorer (Menos Recomendado).
 
-Para saber mais sobre o modo do Internet Explorer, confira [https://go.microsoft.com/fwlink/?linkid=2105106](./edge-learnmore-inpage-nav.md)
+Para saber mais sobre o modo do Internet Explorer, confira [https://go.microsoft.com/fwlink/?linkid=2105106](https://go.microsoft.com/fwlink/?linkid=2105106)
 
 Mapeamento das opções de política:
 
@@ -17809,13 +17863,13 @@ Se a política [EnableMediaRouter](#enablemediarouter) estiver desabilitada, ess
 
   #### <a name="description"></a>Descrição
 
-  Essa política não é mais suportada. Ele foi substituído por [DiagnosticData](#diagnosticdata) (para Windows 7, Windows 8 e macOS) e Permitir Telemetria no Windows 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)).
+  Essa política não é mais suportada. Ele foi substituído por [DiagnosticData](#diagnosticdata) (para Windows 7, Windows 8 e macOS) e Permitir Telemetria no Windows 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
 
 Esta política habilita a geração de relatórios de dados relacionados a falhas e uso do Microsoft Edge para a Microsoft.
 
 Habilite essa política para enviar relatórios de dados relacionados a falhas e uso para a Microsoft. Desabilite essa política para não enviar esses dados para a Microsoft. Em ambos os casos, os usuários não poderão alterar nem substituir a configuração.
 
-Nos Windows 10, se você não configurar essa política, o Microsoft Edge usará como padrão a configuração de dados de diagnóstico do Windows. Se essa política estiver habilitada, o Microsoft Edge enviará dados de uso somente se a configuração de dados de diagnóstico do Windows estiver definida como Avançada ou Completa. Se essa política estiver desabilitada, o Microsoft Edge não enviará dados de uso. Os dados relacionados a falha são enviados com base na configuração de dados de diagnóstico do Windows. Saiba mais sobre as configurações de dados de diagnóstico do Windows em[https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
+Nos Windows 10, se você não configurar essa política, o Microsoft Edge usará como padrão a configuração de dados de diagnóstico do Windows. Se essa política estiver habilitada, o Microsoft Edge enviará dados de uso somente se a configuração de dados de diagnóstico do Windows estiver definida como Avançada ou Completa. Se essa política estiver desabilitada, o Microsoft Edge não enviará dados de uso. Os dados relacionados a falha são enviados com base na configuração de dados de diagnóstico do Windows. Saiba mais sobre as configurações de dados de diagnóstico do Windows em[https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569).
 
 No Windows 7, Windows 8 e macOS essa política controla o envio de dados de uso e relacionados a falhas. Se você não configurar essa política, o padrão do Microsoft Edge será a preferência do usuário.
 
@@ -18704,7 +18758,7 @@ Se essa política não estiver configurada ou estiver desabilitada, o BHO será 
 
 O BHO é necessário para que o redirecionamento de site incompatível ocorra, no entanto, se o redirecionamento ocorrer ou não também é controlado por [ RedirectSitesFromInternetExplorerRedirectMode](#redirectsitesfrominternetexplorerredirectmode).
 
-Para obter mais informações sobre essa política, consulte [https://go.microsoft.com/fwlink/?linkid=2141715](./edge-learnmore-neededge.md)
+Para obter mais informações sobre essa política, consulte [https://go.microsoft.com/fwlink/?linkid=2141715](https://go.microsoft.com/fwlink/?linkid=2141715)
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -18765,7 +18819,7 @@ Ao iniciar o Microsoft Edge para carregar um site do IE, uma barra de informaç�
 
 Se você definir essa política como "Desabilitar", o Internet Explorer não redirecionará todo o tráfego para o Microsoft Edge.
 
-Para obter mais informações sobre essa política, consulte  [https://go.microsoft.com/fwlink/?linkid=2141715](./edge-learnmore-neededge.md)
+Para obter mais informações sobre essa política, consulte  [https://go.microsoft.com/fwlink/?linkid=2141715](https://go.microsoft.com/fwlink/?linkid=2141715)
 
 Mapeamento das opções de política:
 
@@ -19259,7 +19313,7 @@ Se você desabilitar essa política ou não a configurar, somente os perfis loca
 
 O [SyncDisabled](#syncdisabled) desabilita apenas a sincronização na nuvem e não tem impacto nessa política.
 
-Confira [https://go.microsoft.com/fwlink/?linkid=2150058](./microsoft-edge-on-premises-sync.md) mais informações sobre como usar perfis de usuário em roaming.
+Confira [https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/fwlink/?linkid=2150058) mais informações sobre como usar perfis de usuário em roaming.
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -19444,7 +19498,7 @@ Se você desabilitar a política [SSLErrorOverrideAllowed](#sslerroroverrideallo
 
 Se você não configurar esta política, a política [SSLErrorOverrideAllowed](#sslerroroverrideallowed) se aplicará a todos os sites.
 
-Para obter informações detalhadas sobre padrões de origem válidos, confira [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * não é um valor aceito para esta política. Essa política só corresponde com base na origem, portanto, qualquer caminho ou consulta no padrão de URL é ignorado.
+Para obter informações detalhadas sobre padrões de origem válidos, confira [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política. Essa política só corresponde com base na origem, portanto, qualquer caminho ou consulta no padrão de URL é ignorado.
 
   #### <a name="supported-features"></a>Recursos com suporte:
 
@@ -19963,7 +20017,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   #### <a name="description"></a>Descrição
 
-  Para obter instruções sobre como configurar a melhor experiência para o modo do Internet Explorer, confira [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
+  Para obter instruções sobre como configurar a melhor experiência para o modo do Internet Explorer, confira [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -20014,13 +20068,13 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   #### <a name="description"></a>Descrição
 
-  Essa política não é mais suportada. Ele foi substituído por [DiagnosticData](#diagnosticdata) (para Windows 7, Windows 8 e macOS) e Permitir Telemetria no Windows 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)).
+  Essa política não é mais suportada. Ele foi substituído por [DiagnosticData](#diagnosticdata) (para Windows 7, Windows 8 e macOS) e Permitir Telemetria no Windows 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
 
 Essa política permite o envio de informações sobre sites visitados no Microsoft Edge para a Microsoft visando melhorar serviços, tais como a pesquisa.
 
 Habilite essa política para enviar informações sobre os sites visitados no Microsoft Edge para a Microsoft. Desabilite essa política para não enviar informações sobre os sites visitados no Microsoft Edge para a Microsoft. Em ambos os casos, os usuários não poderão alterar nem substituir a configuração.
 
-Nos Windows 10, se você não configurar essa política, o Microsoft Edge usará como padrão a configuração de dados de diagnóstico do Windows. Se essa política estiver habilitada, o Microsoft Edge enviará informações sobre os sites visitados no Microsoft Edge se a configuração de dados de diagnóstico do Windows estiver definida como Completa. Se essa política estiver desabilitada, o Microsoft Edge não enviará informações sobre os sites visitados. Saiba mais sobre as configurações de Dados de diagnóstico do Windows:[https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
+Nos Windows 10, se você não configurar essa política, o Microsoft Edge usará como padrão a configuração de dados de diagnóstico do Windows. Se essa política estiver habilitada, o Microsoft Edge enviará informações sobre os sites visitados no Microsoft Edge se a configuração de dados de diagnóstico do Windows estiver definida como Completa. Se essa política estiver desabilitada, o Microsoft Edge não enviará informações sobre os sites visitados. Saiba mais sobre as configurações de Dados de diagnóstico do Windows:[https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
 
 No Windows 7, Windows 8 e macOS, essa política controla o envio de informações sobre sites visitados. Se você não configurar essa política, o padrão do Microsoft Edge será a preferência do usuário.
 
@@ -20090,7 +20144,7 @@ Para padrões de URL que não correspondam a essa política, a ordem de precedê
 
 Os padrões de URL definidos nessa política não podem entrar em conflito com aqueles configurados na política [SensorsBlockedForUrls](#sensorsblockedforurls). Você não pode permitir e bloquear uma URL.
 
-Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -20161,7 +20215,7 @@ Para padrões de URL que não correspondam a essa política, a ordem de precedê
 
 Os padrões de URL definidos nessa política não podem entrar em conflito com aqueles configurados na política [SensorsAllowedForUrls](#sensorsallowedforurls). Você não pode permitir e bloquear uma URL.
 
-Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -20232,7 +20286,7 @@ Para padrões de URL que não correspondam a essa política, a ordem de precedê
 
 Os padrões de URL definidos nessa política não podem entrar em conflito com aqueles configurados na política [SerialBlockedForUrls](#serialblockedforurls). Você não pode permitir e bloquear uma URL.
 
-Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -20303,7 +20357,7 @@ Para padrões de URL que não correspondam a essa política, a ordem de precedê
 
 Os padrões de URL nesta política não podem entrar em conflito com aqueles configurados na política [SerialAskForUrls](#serialaskforurls). Você não pode permitir e bloquear uma URL.
 
-Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -21790,7 +21844,7 @@ Se você não configurar a política, os usuários poderão escolher se desejam 
 
   Configurar a política fornece acesso às URLs listadas como exceção na [URLBlocklist](#urlblocklist).
 
-Formata o padrão de URL de acordo com [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Formata o padrão de URL de acordo com [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
 Você pode usar essa política para abrir exceções para listas de bloqueio restritivas. Por exemplo, você pode incluir '\*' na lista de bloqueio para bloquear todas as solicitações e, em seguida, usar esta política para permitir o acesso a uma lista limitada de URLs. Você pode usar essa política para abrir exceções a determinados esquemas, subdomínios de outros domínios, portas ou caminhos específicos.
 
@@ -21871,7 +21925,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
   Define uma lista de sites, com base nos padrões de URL, que estão bloqueados (os usuários não podem carregá-los).
 
-Formata o padrão de URL de acordo com [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Formata o padrão de URL de acordo com [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
 Você pode definir exceções na política [URLAllowlist](#urlallowlist). Essas políticas estão limitadas a 1000 entradas. As entradas subsequentes serão ignoradas.
 
@@ -23309,7 +23363,7 @@ Se essa política não estiver definida, a detecção de ocultação da janela s
   [Voltar ao início](#microsoft-edge---policies)
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Ver também
 
 - [Configurar o Microsoft Edge](configure-microsoft-edge.md)
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
