@@ -32,7 +32,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas a atualizações 
 |[Aplicativos](#applications)|[Preferências](#preferences)|
 |[Servidor proxy](#proxy-server)|[Microsoft Edge WebView](#microsoft-edge-webview)|
 
-### [Aplicativos](#applications-policies)
+### <a name="applications"></a>[Aplicativos](#applications-policies)
 |Nome da política|Legenda|
 |-|-|
 |[InstallDefault](#installdefault)|Permitir a instalação padrão|
@@ -45,20 +45,20 @@ Estas tabelas listam todas as políticas de grupo relacionadas a atualizações 
 |[RollbackToTargetVersion](#rollbacktotargetversion)|Reverter para a Versão de Destino (por canal)|
 |[TargetVersionPrefix](#targetversionprefix)|Substituir versão de destino (por canal)|
 
-### [Preferências](#preferences-policies)
+### <a name="preferences"></a>[Preferências](#preferences-policies)
 |Nome da política|Legenda|
 |-|-|
 |[AutoUpdateCheckPeriodMinutes](#autoupdatecheckperiodminutes)|Atualizar automaticamente a substituição do período de verificação|
 |[UpdatesSuppressed](#updatessuppressed)|O período em cada dia para suprimir a verificação de atualização automática|
 
-### [Servidor proxy](#proxy-server-policies)
+### <a name="proxy-server"></a>[Servidor proxy](#proxy-server-policies)
 |Nome da política|Legenda|
 |-|-|
 |[ProxyMode](#proxymode)|Escolher como especificar as configurações do servidor proxy|
 |[ProxyPacUrl](#proxypacurl)|A URL para um arquivo .pac de proxy|
 |[ProxyServer](#proxyserver)|Endereço ou URL do servidor proxy|
 
-### [Microsoft Edge WebView](#microsoft-edge-webview-policies)
+### <a name="install-webview"></a>[Microsoft Edge WebView](#microsoft-edge-webview-policies)
 |Nome da política|Legenda|
 |-|-|
 |[Instalar](#install-webview)|Permitir instalação|
