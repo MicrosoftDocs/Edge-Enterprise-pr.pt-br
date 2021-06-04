@@ -18,7 +18,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/09/2020
 ms.locfileid: "11105565"
 ---
-# Microsoft Edge - Políticas de atualização
+# <a name="microsoft-edge---update-policies"></a>Microsoft Edge - Políticas de atualização
 A versão mais recente do Microsoft Edge inclui as seguintes políticas que você pode usar para controlar como e quando o Microsoft Edge é atualizado.
 
 Para obter informações sobre outras políticas disponíveis no Microsoft Edge, confira [Referência de política do navegador Microsoft Edge](microsoft-edge-policies.md)
