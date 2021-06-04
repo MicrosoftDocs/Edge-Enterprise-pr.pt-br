@@ -35,7 +35,7 @@ Esta página lista a sintaxe de expressão regular aceita por RE2.
 
 Ela também lista algumas sintaxes aceitas pela PCRE, PERL e VIM.
 
-## Tabelas de sintaxe
+##  <a name="syntax-tables"></a>Tabelas de sintaxe
 
 | Tipos de expressões de caractere único | Exemplos |
 | --- | --- |
@@ -500,13 +500,13 @@ A sintaxe do sinalizador é xyz (definir) or -xyz (desmarcar) or xy-z (definir x
 | (\*BSR\_ANYCRLF) | definir convenção \R (SEM SUPORTE) |
 | (\*BSR\_UNICODE) | (SEM SUPORTE) PCRE |
 
-## Licença de conteúdo
+##  <a name="content-license"></a>Licença de conteúdo
 
 > [!NOTE]
 > Partes desta página são modificações baseadas no trabalho criado e compartilhado pela Chromium.org e usadas de acordo com os termos descritos na [Licença Pública Creative Commons Atribuição 4.0 Internacional](http://creativecommons.org/licenses/by/4.0/). A página original pode ser encontrada [aqui](https://github.com/google/re2/wiki/Syntax).
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Esse trabalho é licenciado sob uma <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licença Attribution 4.0 International (CC BY 4.0) da Creative Commons</a>.
 
-## Consulte também
+##  <a name="see-also"></a>Consulte também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

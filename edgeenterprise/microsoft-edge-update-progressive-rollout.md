@@ -24,15 +24,15 @@ A partir do lançamento do Microsoft Edge 83, realizaremos distribuições progr
 > [!NOTE]
 > Isso se aplica ao canal estável do Microsoft Edge versão 83 ou posterior.
 
-## Por que precisamos de uma distribuição progressiva?
+##  <a name="why-do-we-need-progressive-rollout"></a>Por que precisamos de uma distribuição progressiva?
 
 Ao monitorar a integridade das atualizações e implementar as atualizações durante esse período, podemos limitar o impacto dos problemas que podem ocorrer com a nova atualização. Com o Microsoft Edge versão 83, as distribuições progressivas serão habilitadas para todas as versões do Windows 7, Windows 8 e 8.1 e Windows 10 no Microsoft Edge. Vamos dar suporte ao Microsoft Edge no Mac assim que estiver pronto.
 
-## Como as atualizações funcionarão?
+##  <a name="how-will-the-updates-work"></a>Como as atualizações funcionarão?
 
 Todas as instalações do Microsoft Edge recebem um valor de atualização. Quando começarmos a distribuição progressiva, você verá a atualização quando o valor no seu dispositivo estiver dentro do intervalo de valores de atualização. À medida que a distribuição progride (dentro de alguns dias), todos os usuários eventualmente receberão a atualização. As atualizações de navegador com correções de segurança críticas terão uma distribuição mais rápida do que as atualizações que não possuem correções de segurança críticas. Isso é feito para garantir a proteção contra vulnerabilidades.
 
-## Como isso afeta as empresas?
+##  <a name="how-does-this-affect-enterprises"></a>Como isso afeta as empresas?
 
 Os artefatos do Microsoft Edge são distribuídos para empresas usando vários mecanismos, como o Microsoft Intune, o WSUS (serviço de atualização do Windows Server) e o Gerenciador de Configurações. Essas ferramentas de implantação se comportam de forma diferente com relação à distribuição progressiva:
 
@@ -41,6 +41,6 @@ Os artefatos do Microsoft Edge são distribuídos para empresas usando vários m
 
 Compartilhe seus comentários por meio da voz do usuário, do botão de comentários no aplicativo ou abaixo nos comentários, caso tenha dúvidas ou questões.
 
-## Consulte também
+##  <a name="see-also"></a>Consulte também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

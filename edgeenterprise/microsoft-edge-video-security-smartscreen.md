@@ -23,14 +23,14 @@ Este vídeo mostra como o Microsoft Edge dá suporte à navegação segura usand
 
 [![Navegação segura no Microsoft Edge](media/microsoft-edge-video-security-smartscreen/0.png)](http://www.youtube.com/watch?v=s9kk88SkjLw "Secure browsing on Microsoft Edge")
 
-## Sobre o vídeo
+##  <a name="about-the-video"></a>Sobre o vídeo
 
 O Microsoft Edge usa o Microsoft Defender SmartScreen para ajudar a mantê-lo seguro enquanto você navega. Saiba mais sobre os resultados recentes de phishing e proteção de malware de Laboratórios NSS e saiba mais sobre como o Microsoft Defender SmartScreen traz a integração de segurança empresarial premium ao Microsoft Edge.
 
 > [!TIP]
 > A ativar a configuração de proteção de aplicativos potencialmente indesejados em *edge://settings*.
 
-## Ver também
+##  <a name="see-also"></a>Ver também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Suporte do Microsoft Edge para o Microsoft Defender SmartScreen](microsoft-edge-security-smartscreen.md)

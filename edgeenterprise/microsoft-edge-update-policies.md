@@ -24,7 +24,7 @@ A versão mais recente do Microsoft Edge inclui as seguintes políticas que voc�
 Para obter informações sobre outras políticas disponíveis no Microsoft Edge, confira [Referência de política do navegador Microsoft Edge](microsoft-edge-policies.md)
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
-## Políticas disponíveis
+##  <a name="available-policies"></a>Políticas disponíveis
 Estas tabelas listam todas as políticas de grupo relacionadas a atualizações disponíveis nesta versão do Microsoft Edge. Use os links na tabela a seguir para obter mais detalhes sobre políticas específicas.
 
 |||
@@ -64,10 +64,10 @@ Estas tabelas listam todas as políticas de grupo relacionadas a atualizações 
 |[Instalar](#install-webview)|Permitir instalação|
 |[Atualização](#update-webview)|Atualizar a substituição de política|
 
-## Políticas de aplicativos
+##  <a name="applications-policies"></a>Políticas de aplicativos
 
 [Voltar ao início](#microsoft-edge---update-policies)
-### InstallDefault
+###  <a name="installdefault"></a>InstallDefault
 #### Permitir a instalação padrão
 >Microsoft Edge Update 1.2.145.5 e posterior
 
@@ -98,7 +98,7 @@ Esta política está disponível apenas em instâncias do Windows que fazem part
 [Voltar ao início](#microsoft-edge---update-policies)
 
 
-### UpdateDefault
+###  <a name="updatedefault"></a>UpdateDefault
 #### Atualizar o padrão de substituição de política
 >Microsoft Edge Update 1.2.145.5 e posterior
 
@@ -133,7 +133,7 @@ Permite especificar o comportamento padrão para todos os canais referentes à m
 [Voltar ao início](#microsoft-edge---update-policies)
 
 
-### Install
+###  <a name="install"></a>Install
 #### Permitir instalação
 >Microsoft Edge Update 1.2.145.5 e posterior
 
@@ -172,7 +172,7 @@ Especifica se um canal do Microsoft Edge pode ser instalado em dispositivos ingr
 [Voltar ao início](#microsoft-edge---update-policies)
 
 
-### Update
+###  <a name="update"></a>Update
 #### Atualizar a substituição de política
 >Microsoft Edge Update 1.2.145.5 e posterior
 
@@ -217,7 +217,7 @@ Esta política está disponível apenas em instâncias do Windows que fazem part
 [Voltar ao início](#microsoft-edge---update-policies)
 
 
-### Allowsxs
+###  <a name="allowsxs"></a>Allowsxs
 #### Permitir a experiência de navegador Lado a Lado do Microsoft Edge
 >Microsoft Edge Update 1.2.145.5 e posterior
 
@@ -248,7 +248,7 @@ Para que essa política de grupo entre em vigor, ela deve ser configurada antes 
 [Voltar ao início](#microsoft-edge---update-policies)
 
 
-### CreateDesktopShortcutDefault
+###  <a name="createdesktopshortcutdefault"></a>CreateDesktopShortcutDefault
 #### Impedir a criação de Atalho da Área de Trabalho com a instalação padrão
 >Microsoft Edge Update 1.3.128.0 e posterior
 
@@ -276,7 +276,7 @@ Se o Microsoft Edge já estiver instalado, esta política não terá efeito.
 [Voltar ao início](#microsoft-edge---update-policies)
 
 
-### CreateDesktopShortcut
+###  <a name="createdesktopshortcut"></a>CreateDesktopShortcut
 #### Impedir a criação de Atalho da Área de Trabalho com a instalação
 >Microsoft Edge Update 1.3.128.0 e posterior
 
@@ -312,7 +312,7 @@ Se o Microsoft Edge já estiver instalado, esta política não terá efeito.
 [Voltar ao início](#microsoft-edge---update-policies)
 
 
-### RollbackToTargetVersion
+###  <a name="rollbacktotargetversion"></a>RollbackToTargetVersion
 #### Reverter para a Versão de Destino
 >Microsoft Edge Update 1.3.133.3 e posterior
 
@@ -361,7 +361,7 @@ Esta política está disponível apenas em instâncias do Windows que fazem part
 [Voltar ao início](#microsoft-edge---update-policies)
 
 
-### TargetVersionPrefix
+###  <a name="targetversionprefix"></a>TargetVersionPrefix
 #### Substituir versão de destino
 >Microsoft Edge Update 1.3.119.43 e posterior
 
@@ -402,10 +402,10 @@ Esta política está disponível apenas em instâncias do Windows que fazem part
 [Voltar ao início](#microsoft-edge---update-policies)
 
 
-## Políticas de preferências
+##  <a name="preferences-policies"></a>Políticas de preferências
 
 [Voltar ao início](#microsoft-edge---update-policies)
-### AutoUpdateCheckPeriodMinutes
+###  <a name="autoupdatecheckperiodminutes"></a>AutoUpdateCheckPeriodMinutes
 #### Atualizar automaticamente a substituição do período de verificação
 >Microsoft Edge Update 1.2.145.5 e posterior
 
@@ -430,7 +430,7 @@ Se habilitada, essa política permite definir um valor para o número mínimo de
 [Voltar ao início](#microsoft-edge---update-policies)
 
 
-### UpdatesSuppressed
+###  <a name="updatessuppressed"></a>UpdatesSuppressed
 #### Período em cada dia para suprimir a verificação de atualização automática
 >Microsoft Edge Update 1.3.33.5 e posterior
 
@@ -461,10 +461,10 @@ start min  : 0x00000002
 [Voltar ao início](#microsoft-edge---update-policies)
 
 
-## Políticas do servidor proxy
+##  <a name="proxy-server-policies"></a>Políticas do servidor proxy
 
 [Voltar ao início](#microsoft-edge---update-policies)
-### ProxyMode
+###  <a name="proxymode"></a>ProxyMode
 #### Escolher como especificar as configurações do servidor proxy
 >Microsoft Edge Update 1.3.21.81 e posterior
 
@@ -497,7 +497,7 @@ fixed_servers
 [Voltar ao início](#microsoft-edge---update-policies)
 
 
-### ProxyPacUrl
+###  <a name="proxypacurl"></a>ProxyPacUrl
 #### A URL para um arquivo .pac de proxy
 >Microsoft Edge Update 1.3.21.81 e posterior
 
@@ -526,7 +526,7 @@ https://www.microsoft.com
 [Voltar ao início](#microsoft-edge---update-policies)
 
 
-### ProxyServer
+###  <a name="proxyserver"></a>ProxyServer
 #### Endereço ou URL do servidor proxy
 >Microsoft Edge Update 1.3.21.81 e posterior
 
@@ -555,10 +555,10 @@ https://www.microsoft.com
 [Voltar ao início](#microsoft-edge---update-policies)
 
 
-## Políticas do Microsoft Edge WebView
+##  <a name="microsoft-edge-webview-policies"></a>Políticas do Microsoft Edge WebView
 
 [Voltar ao início](#microsoft-edge---update-policies)
-### Instalar (WebView)
+###  <a name="install-(webview)"></a>Instalar (WebView)
 #### Permitir instalação
 >Microsoft Edge Update 1.3.127.1 e posterior
 
@@ -586,7 +586,7 @@ Permite especificar se o Microsoft Edge WebView pode ser instalado usando o Micr
 [Voltar ao início](#microsoft-edge---update-policies)
 
 
-### Atualização (WebView)
+###  <a name="update-(webview)"></a>Atualização (WebView)
 #### Atualizar a substituição de política
 >Microsoft Edge Update 1.3.127.1 e posterior
 
@@ -617,6 +617,6 @@ As atualizações automáticas estão habilitadas por padrão. Desabilitar as at
 [Voltar ao início](#microsoft-edge---update-policies)
 
 
-## Consulte também
+##  <a name="see-also"></a>Consulte também
   - [Configurar o Microsoft Edge](configure-microsoft-edge.md)
   - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

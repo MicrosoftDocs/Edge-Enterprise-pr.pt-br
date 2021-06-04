@@ -23,7 +23,7 @@ Este artigo descreve como se preparar para implantar o Microsoft Edge quando o V
 
 De acordo com a [postagem do blog](https://aka.ms/EdgeLegacyEOS)da Equipe de Produto do Microsoft Edge, o suporte para o aplicativo de desktop Versão Prévia do Microsoft Edge terminará em 9 de Março de 2021. Quando você aplica a versão Update Tuesday (ou "B") em abril, ela remove a Versão Prévia do Microsoft Edge dos dispositivos que executam o Windows 10 RS4 até 20H1 e o substitui pelo Microsoft Edge.
 
-## Como preparar
+##  <a name="how-to-prepare"></a>Como preparar
 
 Para se preparar para a instalação do Microsoft Edge em dispositivos Windows 10 RS4 a 20H1 com o lançamento da terça-feira de atualização em abril, recomendamos a leitura de [Planeje sua implantação do Microsoft Edge](deploy-edge-plan-deployment.md).
 
@@ -33,7 +33,7 @@ Depois de planejar sua implantação, use uma das abordagens a seguir para se pr
 
 - **Remova o aplicativo de desktop Versão Prévia do Microsoft Edge antes da data de término do serviço em 9 de Março de 2021 e implante o Microsoft Edge**. Para Windows 10 RS4 a 20H1, você pode fazer isso usando as atualizações do Windows. Para obter mais informações, consulte [Implantar o Microsoft Edge com atualizações do Windows 10](deploy-edge-with-windows-10-updates.md).
 
-## Veja também
+##  <a name="see-also"></a>Veja também
 
 - [Página de destino do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Planejar sua implantação do Microsoft Edge](deploy-edge-plan-deployment.md)

@@ -6,7 +6,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 08/31/2020
 ms.locfileid: "10979016"
 ---
-## Avisos legais
+##  <a name="legal-notices"></a>Avisos legais
 A Microsoft e qualquer colaborador concede a você uma licença para a documentação da Microsoft e outros conteúdos neste repositório em [Licença pública internacional da Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/legalcode), consulte o arquivo [LICENÇA](LICENSE), and e concede a você uma licença para qualquer código no repositório em [Licença de MIT](https://opensource.org/licenses/MIT), consulte o arquivo [CÓDIGO DE LICENÇA](LICENSE-CODE).
 
 Microsoft, Windows, Microsoft Azure e/ou outros produtos e serviços da Microsoft mencionados na documentação podem ser marcas comerciais ou registradas da Microsoft nos Estados Unidos e/ou em outros países/regiões.

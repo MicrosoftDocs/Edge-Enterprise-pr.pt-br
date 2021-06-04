@@ -23,11 +23,11 @@ Este vídeo mostra as etapas para implantar o Microsoft Edge em todos os seus di
 
 [![Implantar o Microsoft Edge em centenas ou milhares de dispositivos](media/microsoft-edge-video-deploy/0.png)](http://www.youtube.com/watch?v=o90UsN6g6NE "Deploy Microsoft Edge to hundreds or thousands of devices")
 
-## Sobre o vídeo
+##  <a name="about-the-video"></a>Sobre o vídeo
 
 Veja um tour prático de como implantar o Microsoft Edge nos seus dispositivos. Saiba mais sobre as opções de pacote do Microsoft Edge para instalação automatizada, como implantar o Microsoft Edge em computadores Windows usando o Microsoft Endpoint Configuration Manager e quais são as etapas para garantir que todos os dispositivos gerenciados, inclusive os seus telefones e Macs, sejam provisionados com o Microsoft Edge.
 
-## Consulte também
+##  <a name="see-also"></a>Consulte também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Playlist do YouTube do Microsoft Edge](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)

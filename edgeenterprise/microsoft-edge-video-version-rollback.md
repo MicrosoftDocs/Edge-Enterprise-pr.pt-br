@@ -23,11 +23,11 @@ Este vídeo mostra como o Microsoft Edge dá suporte à reversões de reversões
 
 [![Reversões do Microsoft Edge](media/microsoft-edge-video-version-rollback/0.png)](http://www.youtube.com/watch?v=pXhXHvKUa_c "Microsoft Edge version rollback")
 
-## Sobre o vídeo
+##  <a name="about-the-video"></a>Sobre o vídeo
 
 A reversão permite que você substitua a versão do navegador Microsoft Edge por uma versão anterior. Veja como a redução no Microsoft Edge pode fornecer à sua empresa uma rede de segurança para ajudar a reduzir o possível impacto à medida que você solucione problemas no Microsoft Edge.
 
-## Ver também
+##  <a name="see-also"></a>Ver também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Como reverter o Microsoft Edge para uma versão anterior](edge-learnmore-rollback.md)

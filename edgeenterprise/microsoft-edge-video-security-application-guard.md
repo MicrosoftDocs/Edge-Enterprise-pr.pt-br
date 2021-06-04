@@ -23,11 +23,11 @@ Este vídeo mostra como o Microsoft Edge dá suporte para o isolamento usando o 
 
 [![Isolamento do navegador usando Application Guard]( media/microsoft-edge-video-security-application-guard/0.png)](http://www.youtube.com/watch?v=zQjaRqNXMqw "Browser isolation using Application Guard")
 
-## Sobre o vídeo
+##  <a name="about-the-video"></a>Sobre o vídeo
 
 Com o Microsoft Edge, você ajuda a reduzir a exposição da sua empresa a ataques baseados na Web. Saiba como o Microsoft Edge dá suporte ao Microsoft Defender Application Guard para usar o isolamento de navegador contra ameaças externas.
 
-## Ver também
+##  <a name="see-also"></a>Ver também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Suporte do Microsoft Edge para o Windows Defender Application Guard](microsoft-edge-security-windows-defender-application-guard.md)

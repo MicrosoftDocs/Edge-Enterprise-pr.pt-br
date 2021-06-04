@@ -29,7 +29,7 @@ Para ajudar na sua implantação inicial, use os seguintes mapeamentos de polít
 > - [Referência de política do navegador](microsoft-edge-policies.md)
 > - [Referência da política de atualização](microsoft-edge-update-policies.md)
 
-## Consulte também
+##  <a name="see-also"></a>Consulte também
 - [Configurar o Microsoft Edge no Windows](configure-microsoft-edge.md)
 - [Configurar o Microsoft Edge no macOS](configure-microsoft-edge-on-mac.md)
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

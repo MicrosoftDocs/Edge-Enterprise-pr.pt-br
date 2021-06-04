@@ -21,11 +21,11 @@ ms.locfileid: "11157684"
 
 O artigo fornece informações para o Administrador de TI que está planejando uma implantação do Microsoft Edge e precisa de informações sobre compatibilidade e suporte de aplicativos.
 
-## Compatibilidade e suporte de aplicativos Web
+##  <a name="web-application-compatibility-and-support"></a>Compatibilidade e suporte de aplicativos Web
 
 Para ajudá-lo a planejar sua implementação do Microsoft Edge, compilamos uma lista de aplicativos web que podem ser utilizados dentro de sua organização. Esta lista permite determinar se o aplicativo web está pronto para o Microsoft Edge, conforme documentado pela declaração de apoio público do fornecedor do aplicativo web.
 
-### Adicionar à lista de aplicativos
+###  <a name="add-to-the-application-list"></a>Adicionar à lista de aplicativos
 
 A lista é atualizada regularmente conforme as declarações de suporte são identificadas a partir dos comentários de envolvimento do cliente.
 
@@ -36,7 +36,7 @@ Se você for um provedor de aplicativos Web e gostaria que a declaração de sup
 - Nome do provedor
 - URL de Declaração de Suporte Público
 
-### Lista de aplicativos
+###  <a name="application-list"></a>Lista de aplicativos
 
 A Microsoft não testa ou certifica esses aplicativos no Microsoft Edge. A lista foi compilada com base em recursos disponíveis publicamente. Consulte sempre a declaração de suporte atual do fornecedor. Alguns aplicativos podem exigir o uso do Modo IE, conforme indicado pela declaração de suporte.
 
@@ -143,7 +143,7 @@ A tabela a seguir lista as declarações de suporte do provedor para Microsoft E
 | Zoom  | Zoom  | https://support.zoom.us/hc/en-us/articles/201362023-System-Requirements-for-PC-Mac-and-Linux#h_92957a85-2506-43a2-bd4a-5bb274778518  |
 | ZScaler  | Zscaler   | https://help.zscaler.com/zia/supported-browsers |
 
-## Consulte também
+##  <a name="see-also"></a>Consulte também
 
 - [Página de destino do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Planejar sua implantação do Microsoft Edge](deploy-edge-plan-deployment.md)

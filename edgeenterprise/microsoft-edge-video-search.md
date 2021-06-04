@@ -26,11 +26,11 @@ Este vídeo demonstra como o Microsoft Edge leva a experiência de compatibilida
 > [!NOTE]
 > Esse problema foi filmado no Microsoft Ignite 2019, na sessão THR2279: Microsoft Edge e Pesquisa da Microsoft: concluir o tour para usuários e administradores de TI.
 
-## Sobre o vídeo
+##  <a name="about-the-video"></a>Sobre o vídeo
 
 A Pesquisa da Microsoft adiciona resultados de pesquisa da intranet integrados e personalizados para sites, pessoas, arquivos e muito mais em toda o Edge no PC, Mac e celular. Por fim, vamos mostrar como configurar a Pesquisa da Microsoft como parte do Microsoft 365. e como implantar o Microsoft Edge a partir do Gerenciador de Configurações do Centro do Sistema e do Microsoft Intune entre plataformas.
 
-## Consulte também
+##  <a name="see-also"></a>Consulte também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Playlist do YouTube do Microsoft Edge](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)

@@ -24,7 +24,7 @@ Este artigo descreve o formato de filtro usado para as políticas baseadas em li
 > [!NOTE]
 > Este artigo aplica-se ao Microsoft Edge versão 77 ou posterior.
 
-## O formato de filtro
+##  <a name="the-filter-format"></a>O formato de filtro
 
 O formato de filtro é:
 
@@ -42,7 +42,7 @@ Os campos no formato de filtro são:
 | **caminho** (*opcional*) | Você pode usar qualquer cadeia de caracteres no caminho. |
 | **consulta** (*opcional*) | A **consulta** é de tokens chave-valor ou somente chave-valor separados por um "E" comercial ("&"). Separe os tokens de chave-valor com um sinal de igual ("="). Para indicar uma correspondência de prefixo, você pode usar um asterisco ("\*") no final da **consulta**. |
 
-## Como comprar o formato de filtro ao formato de URL
+##  <a name="comparing-the-filter-format-to-the-url-format"></a>Como comprar o formato de filtro ao formato de URL
 
 O formato do filtro é parecido com o formato da URL, exceto pelo seguinte:
 
@@ -51,7 +51,7 @@ O formato do filtro é parecido com o formato da URL, exceto pelo seguinte:
 - Você pode usar um caractere curinga ("*") como o **host** e pode prefixá-lo com um ponto (".").
 - Você pode usar uma barra ("/") ou um ponto (".") como sufixo para o **host**. Nesse caso, o sufixo é ignorado.
 
-## Critérios de seleção de filtro
+##  <a name="filter-selection-criteria"></a>Critérios de seleção de filtro
 
 O filtro selecionado para uma URL é a correspondência mais específica encontrada após o processamento das seguintes regras de seleção de filtro:
 
@@ -65,7 +65,7 @@ O filtro selecionado para uma URL é a correspondência mais específica encontr
    >[!NOTE]
    >O comportamento padrão é permitir a solicitação de URL se nenhum filtro corresponder.
 
-## Critérios de seleção de filtro de exemplo
+##  <a name="example-filter-selection-criteria"></a>Critérios de seleção de filtro de exemplo
 
 Neste exemplo, ao procurar uma correspondência para "https://sub.contoso.com/docs" a seleção de filtro:
 
@@ -75,7 +75,7 @@ Neste exemplo, ao procurar uma correspondência para "https://sub.contoso.com/do
 4. Dos filtros restantes, qualquer um que não tenha "/docs" como prefixo do **caminho** será removido.
 5. Dos filtros restantes, o filtro com o maior prefixo de caminho será selecionado e aplicado. Se um filtro não for encontrado, o processo de seleção será reiniciado novamente na etapa 1. O processo é repetido com o próximo subdomínio.
 
-### Informações adicionais de filtro
+###  <a name="additional-filter-information"></a>Informações adicionais de filtro
 
 Se um filtro tiver um ponto (".") prefixando o **host**, então somente as correspondências de **host** exatas serão filtradas. Por exemplo:
 
@@ -99,13 +99,13 @@ Qualquer outro **esquema** será tratado como um **esquema** personalizado, mas 
 
 - O filtro “http://contoso.com/path?query=A” não corresponde a “http://contoso.com/Path?query=A” ou “http://contoso.com/path?Query=A”. Ele corresponde a “http://contoso.COM/path?query=A”.
 
-## Licença de conteúdo
+##  <a name="content-license"></a>Licença de conteúdo
 
 > [!NOTE]
 > Partes desta página são modificações baseadas no trabalho criado e compartilhado pela Chromium.org e usadas de acordo com os termos descritos na [Licença Pública Creative Commons Atribuição 4.0 Internacional](http://creativecommons.org/licenses/by/4.0/). A página original do [Chromium pode ser encontrada aqui](https://www.chromium.org/administrators/url-blacklist-filter-format).
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Esse trabalho é licenciado sob uma <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licença Attribution 4.0 International (CC BY 4.0) da Creative Commons</a>.
 
-## Consulte também
+##  <a name="see-also"></a>Consulte também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

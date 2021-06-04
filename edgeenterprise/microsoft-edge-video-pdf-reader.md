@@ -23,11 +23,11 @@ Este vídeo mostra o leitor de PDF de nível empresarial do Microsoft Edge. Cliq
 
 [![Leitor de PDF de nível empresarial](media/microsoft-edge-video-pdf-reader/0.png)](http://www.youtube.com/watch?v=XWAqNQ0xAcE "Enterprise grade PDF reader")
 
-## Sobre o vídeo
+##  <a name="about-the-video"></a>Sobre o vídeo
 
 Este vídeo destaca os recursos do leitor de PDF integrado do Microsoft Edge. Veja como os usuários podem usar tinta e realçando PDFs, abrir documentos protegidos e exibir e validar Assinaturas Digitais baseadas em certificados.
 
-## Ver também
+##  <a name="see-also"></a>Ver também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Leitor de PDF no Microsoft Edge](microsoft-edge-pdf.md)

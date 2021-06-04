@@ -24,7 +24,7 @@ Este artigo descreve como definir as configurações de política no macOS usand
 Você também pode definir as configurações de política do Microsoft Edge no macOS usando um arquivo de lista de propriedades (.plist). Para saber mais, confira [Configurar para macOS usando um .plist](configure-microsoft-edge-on-mac.md)
 
 
-## Pré-requisitos
+##  <a name="prerequisites"></a>Pré-requisitos
 
 É necessário o seguinte software:
 
@@ -32,7 +32,7 @@ Você também pode definir as configurações de política do Microsoft Edge no 
 - Arquivo de Modelos de Política, versão 81.0.416.3
 - Jamf Pro, Versão 10,19
 
-## Sobre o aplicativo Jamf Pro e menu de Configurações Personalizadas
+##  <a name="about-the-jamf-pro-application-&-custom-settings-menu"></a>Sobre o aplicativo Jamf Pro e menu de Configurações Personalizadas
 
 Antes do Jamf Pro 10.18, o gerenciamento do Office 365 envolvia a criação manual de um arquivo .plist. Esse era um fluxo de trabalho demorado que exigia uma forte experiência técnica. Jamf Pro 10,18 eliminou essas barreiras simplificando o processo de configuração. No entanto, os Administradores de TI só poderiam usar essa nova interface de usuário para os aplicativos específicos e domínios de preferência especificados pelo Jamf.
 
@@ -40,7 +40,7 @@ No Jamf Pro 10.19, um usuário pode fazer upload de um manifesto JSON como um "e
 
 Para saber mais, confira [Perfis de Configuração do Computador](https://jamf.it/computer-configuration-profiles) no Guia do Administrador do Jamf Pro.
 
-## Obter o manifesto da política para uma versão específica do Microsoft Edge
+##  <a name="get-the-policy-manifest-for-a-specific-version-of-microsoft-edge"></a>Obter o manifesto da política para uma versão específica do Microsoft Edge
 
 Para obter o manifesto de política:
 
@@ -56,7 +56,7 @@ Depois de descompactar o arquivo CAB, descompacte o arquivo ZIP e navegue até o
 
 Esse manifesto será publicado em todos os pacotes de política, começando com o build 81.0.416.3. Se você deseja testar políticas no canal Dev, você pode pegar o manifesto associado a cada lançamento do Dev e testá-lo no Jamf Pro.  
 
-## Usar o manifesto de política no Jamf Pro
+##  <a name="use-the-policy-manifest-in-jamf-pro"></a>Usar o manifesto de política no Jamf Pro
 
 Use as etapas a seguir para carregar o manifesto de política para o Jamf Pro e, em seguida, crie um perfil de política para o macOS.
 
@@ -105,7 +105,7 @@ Use as etapas a seguir para carregar o manifesto de política para o Jamf Pro e,
 
 Depois de criar o novo perfil de configuração, você ainda terá que configurar o **Escopo** para o perfil.
 
-### Para configurar o escopo
+###  <a name="to-configure-the-scope"></a>Para configurar o escopo
 
 1. Para **Destinos**, forneça as seguintes configurações mínimas:
 
@@ -115,7 +115,7 @@ Depois de criar o novo perfil de configuração, você ainda terá que configura
 2. Para **Limitações**, mantenha a configuração padrão: Nenhuma. Clique em **Cancelar**.
 3. Para **Exclusões**, mantenha a configuração padrão: Nenhuma. Clique em **Cancelar**.
 
-## Confira também
+##  <a name="see-also"></a>Confira também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Configurar para macOS com Intune](configure-microsoft-edge-on-mac.md)
