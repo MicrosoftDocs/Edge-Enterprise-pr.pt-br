@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configuração e suporte à identidade do Microsoft Edge
-ms.openlocfilehash: 8b4fe3c46e0c8dd76d0e22051fb63465e34202f2
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 34a5a4aa958873a012d0a2da4184cb508af27a8a
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447535"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617911"
 ---
 # <a name="microsoft-edge-identity-support-and-configuration"></a>Configuração e suporte à identidade do Microsoft Edge
 
@@ -33,7 +33,7 @@ Com o Microsoft Edge é possível entrar em um perfil de navegador com uma conta
 | Sincronização | Sim | Não | Não | Sim |
 | SSO com Token de atualização principal | Sim | Sim | Não | Sim |
 | SSO de conexão remota | Sim | Sim | Sim | N/D |
-| Autenticação Integrada do Windows | Sim | Sim | Sim | N/D |
+| Autenticação Integrada do Windows | Sim | Sim | Sim | N/A |
 | Página Nova guia Corporativa | Requer O365 |   Requer O365 | Não | N/A |
 | Pesquisa da Microsoft | Requer O365 | Requer O365 | Não | N/D |
 
@@ -91,7 +91,7 @@ Para serviços que exigem a delegação de credenciais Negotiate, o Microsoft Ed
 
 ### <a name="proactive-authentication"></a>Autenticação Proativa
 
-A autenticação proativa é uma otimização do navegador para o SSO do site que a frontal carrega a autenticação para determinados sites de terceiros. Isso melhora o desempenho da barra de endereço se o usuário estiver usando o Bing como mecanismo de pesquisa. Isso fornece aos usuários resultados de pesquisa personalizados e do Microsoft Search for Business (MSB). Também habilita permitir a autenticação de serviços importantes, como a Página Nova Guia do Office. Você pode controlá-lo usando a política [ProactiveAuthEnabled]( https://docs.microsoft.com/deployedge/microsoft-edge-policies#proactiveauthenabled).
+A autenticação proativa é uma otimização do navegador para o SSO do site que a frontal carrega a autenticação para determinados sites de terceiros. Isso melhora o desempenho da barra de endereço se o usuário estiver usando o Bing como mecanismo de pesquisa. Isso fornece aos usuários resultados de pesquisa personalizados e do Microsoft Search for Business (MSB). Também habilita permitir a autenticação de serviços importantes, como a Página Nova Guia do Office. Você pode controlá-lo usando a política [ProactiveAuthEnabled]( /deployedge/microsoft-edge-policies#proactiveauthenabled).
 
 ### <a name="windows-hello-credui-for-ntlm-authentication"></a>Windows Hello CredUI para autenticação NTLM
 

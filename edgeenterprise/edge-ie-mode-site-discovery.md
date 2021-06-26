@@ -1,25 +1,28 @@
 ---
 title: Guia Passo a Passo do Enterprise Site Discovery
-ms.author: cjacks
+ms.author: collw
 author: appcompatguy
 manager: saudm
-ms.date: 04/07/2020
+ms.date: 05/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Usar o Enterprise Site Discovery para se Preparar para o Modo IE
-ms.openlocfilehash: 2557544a93222b03aaa0961149aa0d3c5d7d8806
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: f6298b801cceeb96d9285f3597de2a6abe8ee36e
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447715"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617471"
 ---
 # <a name="enterprise-site-discovery-step-by-step-guide"></a>Guia Passo a Passo do Enterprise Site Discovery
 
-Este artigo fornece um guia passo a passo para usar o Enterprise Site Discovery com o Gerenciador de Configurações do Microsoft Endpoint.
+>[!Note]
+> O aplicativo de área de trabalho Internet Explorer 11 será desativado e ficará sem suporte em 15 de junho de 2022 (para obter uma lista do que está no escopo, [consulte as Perguntas frequentes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. [Saiba mais aqui](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+
+Este artigo fornece um guia passo a passo para usar o Enterprise Site Discovery com o Microsoft Endpoint Configuration Manager.
 
 O Enterprise Site Discovery pode ajudá-lo a configurar sua Lista de Sites do Modo Empresarial. O Enterprise Site Discovery ajudará você a:
 

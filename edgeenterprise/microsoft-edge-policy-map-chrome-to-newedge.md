@@ -3,28 +3,28 @@ title: Mapeamento de política do Google Chrome para o Microsoft Edge
 ms.author: brianalt
 author: brianalt
 manager: srugh
-ms.date: 02/10/2020
+ms.date: 06/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Mapeamento de política do Google Chrome para o Microsoft Edge
-ms.openlocfilehash: 10253d8d18864fedf5cfaf7d064766ad641675d4
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: e6a85549ee260dbebdafd900dc4ca634dc7dbd12
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11448035"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617861"
 ---
 # <a name="google-chrome-to-microsoft-edge-policy-mapping"></a>Mapeamento de política do Google Chrome para o Microsoft Edge
 
-Este artigo mapeia as políticas do Google Chrome para as políticas relevantes do Microsoft Edge com suporte na versão 80. Para as políticas herdadas do Microsoft Edge, confira o artigo [Microsoft Edge Legacy para mapeamento de política do Microsoft Edge](microsoft-edge-policy-map-legacy-to-newedge.md).
+Este artigo mapeia as políticas do Google Chrome para as políticas relevantes do Microsoft Edge com suporte na versão 80. Para as políticas herdadas do Microsoft Edge, confira o artigo [Microsoft Edge Legacy para mapeamento de política do Microsoft Edge](/deployedge/microsoft-edge-policy-map-chrome-to-newedge?branch=master).
 
 > [!NOTE]
 > O mapeamento fornecido abaixo destina-se a ajudar com a implantação inicial do Microsoft Edge versão 80. Para obter uma lista definitiva das políticas mais recentes, consulte:
-> - [Referência de política do navegador](microsoft-edge-policies.md)
-> - [Referência da política de atualização](microsoft-edge-update-policies.md)
+> - [Referência de política do navegador](/deployedge/microsoft-edge-policies)
+> - [Referência da política de atualização](/deployedge/microsoft-edge-update-policies)
 
 ## <a name="google-chrome-to-microsoft-edge-policy-map"></a>Mapa de política do Google Chrome para o Microsoft Edge
 
@@ -94,8 +94,8 @@ Este artigo mapeia as políticas do Google Chrome para as políticas relevantes 
 |[CloudPrintProxyEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CloudPrintProxyEnabled)|Não Aplicável|
 |[CloudPrintSubmitEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CloudPrintSubmitEnabled)|Não Aplicável|
 |[CloudReportingEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CloudReportingEnabled)|Não Aplicável|
-|[CoalesceH2ConnectionsWithClientCertificatesForHosts](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CoalesceH2ConnectionsWithClientCertificatesForHosts)|[CoalesceH2ConnectionsWithClientCertificatesForHosts](./microsoft-edge-policies.md#coalesceh2connectionswithclientcertificatesforhosts)|
-|[CommandLineFlagSecurityWarningsEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CommandLineFlagSecurityWarningsEnabled)|[CommandLineFlagSecurityWarningsEnabled](./microsoft-edge-policies.md#commandlineflagsecuritywarningsenabled)|
+|[CoalesceH2ConnectionsWithClientCertificatesForHosts](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CoalesceH2ConnectionsWithClientCertificatesForHosts)
+|[CommandLineFlagSecurityWarningsEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CommandLineFlagSecurityWarningsEnabled)
 |[ComponentUpdatesEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=ComponentUpdatesEnabled)|[ComponentUpdatesEnabled](./microsoft-edge-policies.md#componentupdatesenabled)|
 |[CookiesAllowedForUrls](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CookiesAllowedForUrls)|[CookiesAllowedForUrls](./microsoft-edge-policies.md#cookiesallowedforurls)|
 |[CookiesBlockedForUrls](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CookiesBlockedForUrls)|[CookiesBlockedForUrls](./microsoft-edge-policies.md#cookiesblockedforurls)|

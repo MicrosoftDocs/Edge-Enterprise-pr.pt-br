@@ -3,19 +3,19 @@ title: Planejar sua implantação do Microsoft Edge
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 03/29/2021
+ms.date: 06/08/2021
 audience: ITPro
-ms.topic: procedural
+ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Planejar sua implantação do Microsoft Edge
-ms.openlocfilehash: 983fd74bf2150aaffe032fa9defcb0ea5000d316
-ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
+ms.openlocfilehash: 3c303893706d2fc8883da2599d5319d1bfcbc98b
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "11470189"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617491"
 ---
 # <a name="plan-your-deployment-of-microsoft-edge"></a>Planejar sua implantação do Microsoft Edge
 

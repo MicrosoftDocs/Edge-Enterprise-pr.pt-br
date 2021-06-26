@@ -3,19 +3,19 @@ title: Configurar o Microsoft Edge usando o Gerenciamento de Dispositivo Móvel
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 10/25/2019
+ms.date: 04/06/2021
 audience: ITPro
-ms.topic: technical
+ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurar o Microsoft Edge usando o Gerenciamento de Dispositivo Móvel.
-ms.openlocfilehash: c9a725b5d0e820fb907150a8f83eeb17291b9f6a
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: a24e6d171707cdc02b6dbecb573e1238f1273426
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447545"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617601"
 ---
 # <a name="configure-microsoft-edge-using-mobile-device-management"></a>Configurar o Microsoft Edge usando o Gerenciamento de Dispositivo Móvel
 
@@ -199,7 +199,7 @@ Os exemplos de OMA-URI com seu caminho do URI, tipo e um valor de exemplo.
 
 #### <a name="boolean-data-type-examples"></a>Exemplos do tipo de dados Booliano
 
-*[ShowHomeButton](./microsoft-edge-policies.md#ShowHomeButton):*
+*[ShowHomeButton](./microsoft-edge-policies.md#showhomebutton):*
 
 | Campo   | Valor                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -208,7 +208,7 @@ Os exemplos de OMA-URI com seu caminho do URI, tipo e um valor de exemplo.
 | tipo    | String                                                                               |
 | Valor   | `<enabled/>`                                                                          |
 
-*[DefaultSearchProviderEnabled](./microsoft-edge-policies.md#DefaultSearchProviderEnabled):*
+*[DefaultSearchProviderEnabled](./microsoft-edge-policies.md#defaultsearchproviderenabled):*
 
 | Campo   | Valor                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -219,7 +219,7 @@ Os exemplos de OMA-URI com seu caminho do URI, tipo e um valor de exemplo.
 
 ### <a name="integer-data-type-examples"></a>Exemplos de tipo de dados Integer
 
-*[AutoImportAtFirstRun](./microsoft-edge-policies.md#AutoImportAtFirstRun):*
+*[AutoImportAtFirstRun](./microsoft-edge-policies.md#autoimportatfirstrun):*
 
 | Campo   | Valor                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -228,7 +228,7 @@ Os exemplos de OMA-URI com seu caminho do URI, tipo e um valor de exemplo.
 | tipo    | String                                                                               |
 | Valor   | `<enabled/><data id="AutoImportAtFirstRun" value="1"/>`                             |
 
-*[DefaultImagesSetting](./microsoft-edge-policies.md#DefaultImagesSetting):*
+*[DefaultImagesSetting](./microsoft-edge-policies.md#defaultimagessetting):*
 
 | Campo   | Valor                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -237,7 +237,7 @@ Os exemplos de OMA-URI com seu caminho do URI, tipo e um valor de exemplo.
 | tipo    | String                                                                               |
 | Valor   | `<enabled/><data id="DefaultImagesSetting" value="2"/>`                             |
 
-*[DiskCacheSize](./microsoft-edge-policies.md#DiskCacheSize):*
+*[DiskCacheSize](./microsoft-edge-policies.md#diskcachesize):*
 
 | Campo   | Valor                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -255,9 +255,9 @@ Os exemplos de OMA-URI com seu caminho do URI, tipo e um valor de exemplo.
 | Name    | Microsoft Edge: NotificationsAllowedForUrls                                          |
 | OMA-URI | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge~ContentSettings/NotificationsAllowedForUrls`    |
 | Type    | String                                                                               |
-| Value   | `<enabled/><data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com"/>`<br>For multiple list items: `<data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com;[*.]contoso.edu"/>`                               |
+| Value   | `<enabled/><data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com"/>`<br>For multiple list items: `<data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com;[*.]contoso.edu"/>`                           |
 -->
-*[RestoreOnStartupURLS](./microsoft-edge-policies.md#RestoreOnStartupURLS):*
+*[RestoreOnStartupURLS](./microsoft-edge-policies.md#restoreonstartupurls):*
 
 | Campo   | Valor                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -266,7 +266,7 @@ Os exemplos de OMA-URI com seu caminho do URI, tipo e um valor de exemplo.
 | Tipo    | String                                                                               |
 | Valor   | `<enabled/><data id="RestoreOnStartupURLsDesc" value="1&#xF000;http://www.bing.com"/>`<br>Para vários itens de lista: `<enabled/><data id="RestoreOnStartupURLsDesc" value="1&#xF000;http://www.bing.com&#xF000;2&#xF000;http://www.microsoft.com"/>`  |
 
-*[ExtensionInstallForcelist](./microsoft-edge-policies.md#ExtensionInstallForcelist):*
+*[ExtensionInstallForcelist](./microsoft-edge-policies.md#extensioninstallforcelist):*
 
 | Campo   | Valor                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -277,7 +277,7 @@ Os exemplos de OMA-URI com seu caminho do URI, tipo e um valor de exemplo.
 
 #### <a name="dictionary-and-string-data-type-example"></a>Exemplo de tipo de dados Dictionary e String
 
-*[ProxyMode](./microsoft-edge-policies.md#ProxyMode):*
+*[ProxyMode](./microsoft-edge-policies.md#proxymode):*
 
 | Campo   | Valor                                                                                |
 |---------|--------------------------------------------------------------------------------------|

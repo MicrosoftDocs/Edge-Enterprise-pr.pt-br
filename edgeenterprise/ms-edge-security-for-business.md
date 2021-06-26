@@ -1,21 +1,21 @@
 ---
 title: Segurança do Microsoft Edge para a sua empresa
-ms.author: seanlynd
+ms.author: collw
 author: seanongit
 manager: chuckf
-ms.date: 02/10/2021
+ms.date: 04/20/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Segurança do Microsoft Edge para a sua empresa
-ms.openlocfilehash: 674fad396bed62058c3187e00f4938d99cc57868
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 59de0c5ddfa6b34b3d091e4832e2a8fe42dffd42
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447065"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617061"
 ---
 # <a name="microsoft-edge-security-for-your-business"></a>Segurança do Microsoft Edge para a sua empresa
 
@@ -27,9 +27,9 @@ Vamos entrar nos detalhes, começando com as **ameaças externas** e, em seguida
 
 ### <a name="highest-rated-protection-against-phishing-and-malware"></a>Proteção melhor avaliada contra phishing e malware
 
-Integrado ao Microsoft Edge, o SmartScreen bloqueia mais tentativas de [phishing](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf) e [malware](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf) do que a navegação segura do Google Chrome, de acordo com um estudo independente do NSS Labs. O SmartScreen fornece verificações de reputação de sites e downloads em tempo real à medida que os usuários trabalham online, e faz parte do [Gráfico de Segurança Inteligente da Microsoft](https://www.microsoft.com/microsoft-365/windows/intelligent-security), que desenha sinais e percepções geradas na grande rede de ativos, pesquisadores e parceiros global do Microsoft. Executando verificações contra listas dinâmicas e baseadas na nuvem de downloads e sites perigosos, o Microsoft Edge ajuda a detectar e bloquear até mesmo as ameaças indesejadas que desaparecem rapidamente.  
+Integrado ao Microsoft Edge, o SmartScreen bloqueia mais tentativas de [phishing](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWASN1) e [malware](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWANMW) do que a navegação segura do Google Chrome, de acordo com um estudo independente do NSS Labs. O SmartScreen fornece verificações de reputação de sites e downloads em tempo real à medida que os usuários trabalham online, e faz parte do [Gráfico de Segurança Inteligente da Microsoft](https://www.microsoft.com/microsoft-365/windows/intelligent-security), que desenha sinais e percepções geradas na grande rede de ativos, pesquisadores e parceiros global do Microsoft. Executando verificações contra listas dinâmicas e baseadas na nuvem de downloads e sites perigosos, o Microsoft Edge ajuda a detectar e bloquear até mesmo as ameaças indesejadas que desaparecem rapidamente.  
 
-O [Microsoft Edge com SmartScreen](//DeployEdge/microsoft-edge-security-smartscreen) bloqueou 95,5% das tentativas de phishing durante o teste de [Proteção contra phishing da NSS Labs](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf) e 98,5% de tentativas de malware durante o teste de [Proteção contra malware do NSS Labs](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf) em comparação com as taxas da Navegação Segura do Chrome de 86,9% e 86,0%, respectivamente.
+O [Microsoft Edge SmartScreen](//DeployEdge/microsoft-edge-security-smartscreen) bloqueou 95,5% das tentativas de phishing durante o teste de [Proteção contra Phishing do NSS Labs](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWASN1) e 98,5% das tentativas de malware durante o teste de [Proteção contra Malware do NSS Labs](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWANMW) em comparação com as taxas de Navegação Segura do Chrome de 86,9% e 86,0%, respectivamente.
 
 ### <a name="the-only-browser-on-windows-10-that-natively-supports-hardware-isolation"></a>O único navegador no Windows 10 compatível nativamente com isolamento de hardware
 

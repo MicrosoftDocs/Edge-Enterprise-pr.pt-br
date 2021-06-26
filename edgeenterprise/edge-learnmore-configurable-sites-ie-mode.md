@@ -5,17 +5,17 @@ author: dan-wesley
 manager: srugh
 ms.date: 05/28/2020
 audience: ITPro
-ms.topic: procedural
+ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge e sites configuráveis no modo IE
-ms.openlocfilehash: 1bffdef8c88b7a83d999b29763fcca258102ed51
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: f9ec22ec517ef5fb422a4835b3e09309920faa7b
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447325"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617271"
 ---
 # <a name="learn-about-configurable-sites-in-ie-mode"></a>Saiba mais sobre sites configuráveis no modo IE
 

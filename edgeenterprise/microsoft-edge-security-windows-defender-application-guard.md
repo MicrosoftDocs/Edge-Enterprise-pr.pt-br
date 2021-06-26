@@ -1,21 +1,21 @@
 ---
 title: Microsoft Edge e Microsoft Defender Application Guard
 ms.author: srugh
-author: dan-wesley
+author: AndreaLBarr
 manager: seanlyn
-ms.date: 02/05/2021
+ms.date: 05/06/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Suporte do Microsoft Edge para o Windows Defender Application Guard
-ms.openlocfilehash: 2dc1c5b35003c7de4fa474764c46a792bf1e3439
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 7374810eb19ada298963817844e52184c0271a8c
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447165"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617991"
 ---
 # <a name="microsoft-edge-support-for-microsoft-defender-application-guard"></a>Suporte do Microsoft Edge para o Windows Defender Application Guard
 
@@ -49,7 +49,25 @@ A próxima captura de tela mostra um exemplo de mensagem do Application Guard qu
 
 ## <a name="whats-new"></a>Novidades
 
-O suporte do Application Guard no novo navegador Microsoft Edge tem paridade funcional com o Microsoft Edge herdado e inclui vários aperfeiçoamentos.
+O suporte do Application Guard no novo navegador Microsoft Edge tem paridade funcional com a Versão Prévia do Microsoft Edge e inclui vários aperfeiçoamentos.
+
+### <a name="favorites-synchronizing-from-the-host-to-the-container"></a>Favoritos sincronizando do host para o contêiner
+
+Alguns de nossos clientes estão solicitando a sincronização de favoritos entre o navegador host e o contêiner no Application Guard. A partir do Microsoft Edge 91, os usuários agora têm a opção de configurar o Application Guard para sincronizar seus favoritos do host para o contêiner. Isso garante que novos favoritos também apareçam no contêiner.
+
+Este suporte pode ser controlado pela política. Você pode atualizar a política do Microsoft Edge [ApplicationGuardFavoritesSyncEnabled](/deployedge/microsoft-edge-policies#applicationguardfavoritessyncenabled) para habilitar ou desabilitar a sincronização de favoritos.
+
+> [!Note]
+> Por motivos de segurança, a sincronização de favoritos só é possível do host para o contêiner e não o contrário. Para garantir uma lista unificada de favoritos no host e no contêiner, desabilitamos o gerenciamento de favoritos dentro do contêiner.
+
+### <a name="identify-network-traffic-originating-from-the-container"></a>Identificar o tráfego de rede proveniente do contêiner
+
+Vários clientes estão usando o WDAG em uma configuração específica em que eles querem identificar o tráfego de rede proveniente do contêiner. Alguns dos cenários para isso são:
+
+- Para restringir o acesso a apenas alguns sites não confiáveis
+- Para permitir o acesso à Internet somente do contêiner
+
+A partir do Microsoft Edge versão 91, há suporte integrado para marcar o tráfego de rede originado de contêineres do Application Guard, permitindo que as empresas usem proxy para filtrar o tráfego e aplicar políticas específicas. Você pode usar o cabeçalho para identificar qual tráfego está por meio do contêiner ou do host usando [ApplicationGuardTrafficIdentificationEnabled](/deployedge/microsoft-edge-policies#applicationguardtrafficidentificationenabled).
 
 ### <a name="extension-support-inside-the-container"></a>Suporte à extensão dentro do contêiner
 
@@ -107,11 +125,11 @@ Os artigos a seguir fornecem as informações necessárias para instalar, config
 - [Configurar as políticas de grupo do Windows Defender](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard)
 - [Testar o Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/test-scenarios-md-app-guard)
 
-## <a name="frequently-asked-questions"></a>Perguntas frequentes
+## <a name="frequently-asked-questions"></a>Perguntas Frequentes
 
 ### <a name="does-application-guard-work-in-ie-mode"></a>O Application Guard funciona no modo IE?
 
-O modo IE é compatível com a funcionalidade do Application Guard, mas não prevemos muito o uso desse recurso no modo do IE. O modo IE deve ser implantado para uma lista de sites internos confiáveis e o Application Guard destina-se apenas a sites não confiáveis. Certifique-se de que todos os sites do modo IE ou os endereços IP também sejam adicionados à política de isolamento de rede a ser considerada um recurso confiável pelo Application Guard.
+O modo IE dá suporte à funcionalidade do Application Guard, mas não antecipamos muito uso desse recurso no modo IE. O modo IE é recomendado para ser implantado para uma lista de sites internos confiáveis, e o Application Guard é apenas para sites não confiáveis. Certifique-se de que todos os sites do modo IE ou os endereços IP também sejam adicionados à política de isolamento de rede a ser considerada um recurso confiável pelo Application Guard.
 
 ### <a name="do-i-need-to-install-the-application-guard-chrome-extension"></a>Preciso instalar a extensão do Chrome do Application Guard?
 

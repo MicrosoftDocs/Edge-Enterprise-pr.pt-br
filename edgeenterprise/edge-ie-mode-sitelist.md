@@ -3,21 +3,24 @@ title: Estratégia de configuração de site de empresa
 ms.author: shisub
 author: shisub
 manager: srugh
-ms.date: 03/29/2021
+ms.date: 05/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Um guia passo a passo para configurar a lista de Sites do Modo Empresa para o modo Internet Explorer.
-ms.openlocfilehash: 1d0b80950439fce77513413c3f5d1143538487d1
-ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
+ms.openlocfilehash: 7369e4e14f33fc37c6ded0ebc7df57d64a34df50
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "11470149"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617391"
 ---
 # <a name="enterprise-site-configuration-strategy"></a>Estratégia de configuração de site de empresa
+
+>[!Note]
+> O aplicativo de área de trabalho Internet Explorer 11 será desativado e ficará sem suporte em 15 de junho de 2022 (para obter uma lista do que está no escopo, [consulte as Perguntas frequentes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. [Saiba mais aqui](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 Este artigo descreve as alterações na Lista de Sites do Modo Empresa para dar suporte ao modo Internet Explorer para o Microsoft Edge versão 77 e posterior.
 
@@ -74,7 +77,7 @@ Step 3 – If that doesn’t cover your needs, then use Cookie sharing -->
 
 Se você já tiver uma lista de sites do Modo Empresa para o IE11 ou a Versão Prévia do Microsoft Edge, poderá reutilizar para configurar o modo IE.
 
-No entanto, se você não tiver uma lista de sites, poderá usar a [ferramenta de descoberta de sites de empresa](https://docs.microsoft.com/deployedge/edge-ie-mode-site-discovery) para preencher sua lista de sites.
+No entanto, se você não tiver uma lista de sites, poderá usar a [ferramenta de descoberta de sites de empresa](/deployedge/edge-ie-mode-site-discovery) para preencher sua lista de sites.
 
 ## <a name="configure-neutral-sites"></a>Configurar sites neutros
 
@@ -92,14 +95,14 @@ Para configurar sites neutros, configure o menu suspenso *Open In* como “Nenhu
 </site>
 ```
 
-Para identificar servidores de autenticação, inspecione o tráfego de rede de um aplicativo usando as Ferramentas de Desenvolvedor do IE11. Se precisar de mais tempo para identificar seus servidores de autenticação, você pode configurar uma política para manter todas as navegações in-page no modo IE para permitir que seus usuários continuem seus fluxos de trabalho sem interrupções. Para minimizar o uso do modo IE quando desnecessário, desabilite essa configuração depois de identificar e adicionar seus servidores de autenticação à lista de sites. Para obter mais informações, confira [Manter a navegação na página no modo IE](https://docs.microsoft.com/deployedge/edge-learnmore-inpage-nav).
+Para identificar servidores de autenticação, inspecione o tráfego de rede de um aplicativo usando as Ferramentas de Desenvolvedor do IE11. Se precisar de mais tempo para identificar seus servidores de autenticação, você pode configurar uma política para manter todas as navegações in-page no modo IE para permitir que seus usuários continuem seus fluxos de trabalho sem interrupções. Para minimizar o uso do modo IE quando desnecessário, desabilite essa configuração depois de identificar e adicionar seus servidores de autenticação à lista de sites. Para obter mais informações, confira [Manter a navegação na página no modo IE](/deployedge/edge-learnmore-inpage-nav).
 
 >[!NOTE]
    >O esquema v.1 do modo empresa não é compatível com a integração do modo IE. Se você estiver usando o esquema v.1 atualmente com o Internet Explorer 11, deverá atualizar para o esquema v.2. Para obter mais informações, confira [Diretrizes sobre o esquema v.2 do Modo Empresa](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
 
 ## <a name="optional-use-cookie-sharing-if-necessary"></a>(Opcional) Usar o compartilhamento de cookies, se necessário
 
-Por padrão, os processos do Microsoft Edge e do Internet Explorer não compartilham cookies de sessão e essa falta de compartilhamento pode ser inconveniente em alguns casos ao usar o modo IE. Por exemplo, quando um usuário precisa se autenticar novamente no modo IE quando anteriormente estava acostumado a fazê-lo ou ao sair de uma sessão do Microsoft Edge, não saia da sessão do modo Internet Explorer para transações críticas. Nesses cenários, você pode configurar cookies específicos definidos pelo SSO para serem enviados do Microsoft Edge para o Internet Explorer para que a experiência de autenticação se torne mais contínua, eliminando a necessidade de reautenticação. Para obter mais informações, confira[Compartilhamento de cookies do Microsoft Edge para o Internet Explorer](https://docs.microsoft.com/deployedge/edge-ie-mode-add-guidance-cookieshare).
+Por padrão, os processos do Microsoft Edge e do Internet Explorer não compartilham cookies de sessão e essa falta de compartilhamento pode ser inconveniente em alguns casos ao usar o modo IE. Por exemplo, quando um usuário precisa se autenticar novamente no modo IE quando anteriormente estava acostumado a fazê-lo ou ao sair de uma sessão do Microsoft Edge, não saia da sessão do modo Internet Explorer para transações críticas. Nesses cenários, você pode configurar cookies específicos definidos pelo SSO para serem enviados do Microsoft Edge para o Internet Explorer para que a experiência de autenticação se torne mais contínua, eliminando a necessidade de reautenticação. Para obter mais informações, confira[Compartilhamento de cookies do Microsoft Edge para o Internet Explorer](/deployedge/edge-ie-mode-add-guidance-cookieshare).
 
 ## <a name="see-also"></a>Confira também
 

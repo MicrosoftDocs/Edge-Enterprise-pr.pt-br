@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Sintaxe da expressão regular 2
-ms.openlocfilehash: 9654a25d2c0474601fb719b145ebb1f59241a6d9
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 5d7026a034300e098497c63911f7516f72877c5d
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979058"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617311"
 ---
-# Sintaxe da Expressão Regular 2 (re2.h)
+# <a name="regular-expression-2-re2h-syntax"></a>Sintaxe da Expressão Regular 2 (re2.h)
 
 As expressões regulares são uma notação para descrever os conjuntos de cadeias de caracteres. Quando uma cadeia de caracteres está no conjunto descrito por uma expressão regular, costumamos dizer que a expressão regular corresponde à cadeia.
 
@@ -35,7 +35,7 @@ Esta página lista a sintaxe de expressão regular aceita por RE2.
 
 Ela também lista algumas sintaxes aceitas pela PCRE, PERL e VIM.
 
-##  <a name="syntax-tables"></a>Tabelas de sintaxe
+## <a name="syntax-tables"></a>Tabelas de sintaxe
 
 | Tipos de expressões de caractere único | Exemplos |
 | --- | --- |
@@ -51,12 +51,12 @@ Ela também lista algumas sintaxes aceitas pela PCRE, PERL e VIM.
 | classe de caractere Unicode negada (nome de uma letra) | \PN |
 | classe de caractere Unicode negada | \P{Greek} |
 
-| | Compostos |
+|&nbsp;| Compostos |
 | --- | --- |
 | xy | x seguido por y |
 | x\|y | x ou y (prefira x) |
 
-| | Repetições |
+|&nbsp;| Repetições |
 | --- | --- |
 | x\* | zero ou mais x, prefira mais |
 | x+ | um ou mais x, prefira mais |
@@ -77,7 +77,7 @@ Ela também lista algumas sintaxes aceitas pela PCRE, PERL e VIM.
 
 Restrições de implementação: os formulários de contagem x{n, m}, x{n,} e x{n} rejeitam formulários que criam uma contagem mínima ou máxima de repetição acima de 1000. As repetições ilimitadas não estão sujeitas a essa restrição.
 
-| | Repetições possessivas |
+|&nbsp;| Repetições possessivas |
 | --- | --- |
 | x\*+ | zero ou mais x, possessivas (SEM SUPORTE) |
 | x++ | um ou mais x, possessivas (SEM SUPORTE) |
@@ -86,7 +86,7 @@ Restrições de implementação: os formulários de contagem x{n, m}, x{n,} e x{
 | x{n,}+ | n ou mais x, possessivas (SEM SUPORTE) |
 | x{n}+ | exatamente n x, possessivas (SEM SUPORTE) |
 
-| | Agrupamento |
+|&nbsp;| Agrupamento |
 | --- | --- |
 | (re) | grupo de captura numerada (subcorrespondência) |
 | (?P&lt;name&gt;re) | grupo de captura numerada chamado &amp; (subcorrespondência) |
@@ -101,7 +101,7 @@ Restrições de implementação: os formulários de contagem x{n, m}, x{n,} e x{
 | re@&gt; | possessivos correspondentes à re (SEM SUPORTE) |
 | %(re) | grupo de não captura (SEM SUPORTE) VIM |
 
-| | Sinalizadores |
+|&nbsp;| Sinalizadores |
 | --- | --- |
 | i | não diferencia maiúsculas de minúsculas (padrão falso) |
 | m | modo de várias linhas: ^ e $ correspondem ao início/término da linha, além do inicio/término do texto (falso padrão) |
@@ -110,7 +110,7 @@ Restrições de implementação: os formulários de contagem x{n, m}, x{n,} e x{
 
 A sintaxe do sinalizador é xyz (definir) or -xyz (desmarcar) or xy-z (definir xy, desmarcar z)
 
-|  | Cadeias de caracteres vazia |
+|&nbsp;| Cadeias de caracteres vazia |
 | --- | --- |
 | ^ | no início do texto ou linha (m=true) |
 | $ | no final do texto (como \z não \Z) ou linha (m=true) |
@@ -141,7 +141,7 @@ A sintaxe do sinalizador é xyz (definir) or -xyz (desmarcar) or xy-z (definir x
 | \%23c | na coluna 23 (SEM SUPORTE) VIM |
 | \%23v | na coluna virtual 23 (SEM SUPORTE) VIM |
 
-|  | Sequencias de escape |
+|&nbsp;| Sequencias de escape |
 | --- | --- |
 | \a | sino (≡ \007) |
 | \f | feed de formulário (≡ \014) |
@@ -182,7 +182,7 @@ A sintaxe do sinalizador é xyz (definir) or -xyz (desmarcar) or xy-z (definir x
 | \%u1234 | caractere Unicode 0x1234 (SEM SUPORTE) VIM |
 | \%U12345678 | caractere Unicode 0x12345678 (SEM SUPORTE) VIM |
 
-|  | Elementos de classe de caractere |
+|&nbsp;| Elementos de classe de caractere |
 | --- | --- |
 | x | caractere único |
 | A-Z | intervalo de caracteres (inclusivo) |
@@ -191,7 +191,7 @@ A sintaxe do sinalizador é xyz (definir) or -xyz (desmarcar) or xy-z (definir x
 | \p{Foo} | classe de caractere Unicode Foo |
 | \pF | Classe de caractere Unicode F (nome de uma letra) |
 
-|  | Classes de caractere nomeada como elementos de classe de caractere |
+|&nbsp;| Classes de caractere nomeada como elementos de classe de caractere |
 | --- | --- |
 | [\d] | dígitos (≡ \d) |
 | [^\d] | não são dígitos (≡ \D) |
@@ -232,7 +232,7 @@ A sintaxe do sinalizador é xyz (definir) or -xyz (desmarcar) or xy-z (definir x
 | [[:word:]] | caracteres de palavra (≡ [0-9A-Za-z\_]) |
 | [[:xdigit:]] | dígito hex (≡ [0-9A-Fa-f]) |
 
-| | nomes de classe de caractere Unicode -- categoria geral |
+|&nbsp;| nomes de classe de caractere Unicode -- categoria geral |
 | --- | --- |
 | C | outros |
 | Cc | control |
@@ -433,7 +433,7 @@ A sintaxe do sinalizador é xyz (definir) or -xyz (desmarcar) or xy-z (definir x
 | Yi |
 | Zanabazar\_Square |
 
-|  | classes de caractere VIM |
+|&nbsp;| classes de caractere VIM |
 | --- | --- |
 | \i | caractere identificador (SEM SUPORTE) VIM |
 | \I | \i, exceto dígitos (SEM SUPORTE) VIM |
@@ -470,7 +470,7 @@ A sintaxe do sinalizador é xyz (definir) or -xyz (desmarcar) or xy-z (definir x
 | \V | verynomagic (SEM SUPORTE) VIM |
 | \Z | ignorar diferenças na combinação de caracteres Unicode (SEM SUPORTE) VIM |
 
-|  | Magic |
+| &nbsp; | Magic |
 | --- | --- |
 | (?{code}) | código Perl arbitrário (SEM SUPORTE) PERL |
 | (??{code}) | código Perl arbitrário adiado (SEM SUPORTE) PERL |
@@ -500,13 +500,13 @@ A sintaxe do sinalizador é xyz (definir) or -xyz (desmarcar) or xy-z (definir x
 | (\*BSR\_ANYCRLF) | definir convenção \R (SEM SUPORTE) |
 | (\*BSR\_UNICODE) | (SEM SUPORTE) PCRE |
 
-##  <a name="content-license"></a>Licença de conteúdo
+## <a name="content-license"></a>Licença de conteúdo
 
 > [!NOTE]
 > Partes desta página são modificações baseadas no trabalho criado e compartilhado pela Chromium.org e usadas de acordo com os termos descritos na [Licença Pública Creative Commons Atribuição 4.0 Internacional](http://creativecommons.org/licenses/by/4.0/). A página original pode ser encontrada [aqui](https://github.com/google/re2/wiki/Syntax).
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Esse trabalho é licenciado sob uma <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licença Attribution 4.0 International (CC BY 4.0) da Creative Commons</a>.
 
-##  <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

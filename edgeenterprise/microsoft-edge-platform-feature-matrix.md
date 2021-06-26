@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Resumo do suporte de plataforma para recursos do Microsoft Edge
-ms.openlocfilehash: 3ff99e21642aaf1ffe562354ad843f8d56c45726
-ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
+ms.openlocfilehash: 3fb4fc0bc2671bdee5055fa650f191c5d3821963
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "11470279"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617721"
 ---
 # <a name="platform-support-for-microsoft-edge-features"></a>Suporte de plataforma para recursos do Microsoft Edge
 
@@ -33,40 +33,39 @@ As tabelas a seguir resumem o suporte a recursos para as plataformas Windows e m
 
 | Recursos de segurança |Win 10|Win 8.1|Win 7|macOS|URL|
 |--------|-------|--------|-----|-------|---|
-|Acesso Condicional do Azure Active Directory (Azure AD)|Sim|Sim|Sim|Sim|[Acesso Condicional do Microsoft Azure Active Directory](https://docs.microsoft.com/deployedge/ms-edge-security-conditional-access#accessing-conditional-access-protected-resources-in-microsoft-edge)|
-|Microsoft Defender Application Guard|Sim (1890+)|Não|Não|Não|[Microsoft Defender Application Guard](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-defender-application-guard) |
-|Microsoft Defender SmartScreen|Sim|Sim|Sim|Sim|[Microsoft Defender SmartScreen](https://docs.microsoft.com/deployedge/microsoft-edge-security-smartscreen) |
-|Microsoft Ponto de extremidade da DLP|Sim|Não|Não|Não|[Microsoft Ponto de extremidade da DLP](https://docs.microsoft.com/deployedge/microsoft-edge-security-dlp#microsoft-endpoint-data-loss-prevention-endpoint-dlp)|
+|Acesso Condicional do Azure Active Directory (Azure AD)|Sim|Sim|Sim|Sim|[Acesso Condicional do Microsoft Azure Active Directory](/deployedge/ms-edge-security-conditional-access#accessing-conditional-access-protected-resources-in-microsoft-edge)|
+|Microsoft Defender Application Guard|Sim (1890+)|Não|Não|Não|[Microsoft Defender Application Guard](/deployedge/microsoft-edge-security-windows-defender-application-guard) |
+|Microsoft Defender SmartScreen|Sim|Sim|Sim|Sim|[Microsoft Defender SmartScreen](/deployedge/microsoft-edge-security-smartscreen) |
+|Microsoft Ponto de extremidade da DLP|Sim|Não|Não|Não|[Microsoft Ponto de extremidade da DLP](/deployedge/microsoft-edge-security-dlp#microsoft-endpoint-data-loss-prevention-endpoint-dlp)|
 |Monitor de Senhas|Sim|Sim|Sim|Sim|[Monitor de Senhas](https://blogs.windows.com/msedgedev/2021/01/21/edge-88-privacy/)|
-|Gerador de Senhas|Sim|Sim|Sim|Sim |[Gerador de Senhas](https://blogs.windows.com/msedgedev/2021/01/21/edge-88-privacy/)|
-|Proteção de Informações do Windows (WIP)|Sim (1607+)|Não|Não|Não|[WIP](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection#system-requirements)|
-
+|Gerador de Senhas|Sim|Sim|Sim|Sim|[Gerador de Senhas](https://blogs.windows.com/msedgedev/2021/01/21/edge-88-privacy/)|
+|Proteção de Informações do Windows (WIP)|Sim (1607+)|Não|Não|Não|[WIP](/deployedge/microsoft-edge-security-windows-information-protection#system-requirements)|
 
 |Recursos de identidade| Win 10 | Win 8.1 | Win 7 | macOS | URL |
 |--|--|--|--|--|--|
-|Login Automático (híbrido / AAD-J)|Sim|Sim|Sim|Não|[híbrido/AAD-J](https://docs.microsoft.com/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
-|Login Automático (ingressou no domínio)|Sim|Sim|Sim| Não|[domínio ingressou](https://docs.microsoft.com/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
-|Login Automático (A conta padrão do sistema operacional é MSA)|Sim (1709+)|Não|Não|Não|[MSA](https://docs.microsoft.com/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
+|Login Automático (híbrido / AAD-J)|Sim|Sim|Sim|Não|[híbrido/AAD-J](/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
+|Login Automático (ingressou no domínio)|Sim|Sim|Sim|Não|[domínio ingressou](/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
+|Login Automático (A conta padrão do sistema operacional é MSA)|Sim (1709+)|Não|Não|Não|[MSA](/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
 |Navegador para Logon Único na Web (SSO)|Sim|Sim|Sim|Sim|[SSO de Navegador da Web](https://www.microsoft.com/microsoft-365/roadmap?featureid=66332)|
 |Troca guiada/"Troca Automática de Perfil"|Sim|Sim|Sim|Sim|[Usando vários perfis no trabalho e na residência](https://blogs.windows.com/msedgedev/2020/04/30/automatic-profile-switching/) |
 |Perfis Múltiplos|Sim|Sim|Sim|Sim|[Usando vários perfis no trabalho e na residência](https://blogs.windows.com/msedgedev/2020/04/30/automatic-profile-switching/) |
-|Sincronização local para Active Directory (AD)|Sim|Sim|Sim|Não|[Sincronização local para usuários do Active Directory (AD)](https://docs.microsoft.com/deployedge/microsoft-edge-on-premises-sync) |
-|SSO de conexão remota|Sim (1709+)|Sim|Sim|Sim|[SSO de conexão remota](https://docs.microsoft.com/deployedge/microsoft-edge-security-identity#seamless-sso)|
-|SSO com Token de atualização principal (PRT)|Sim (1709+)|Sim|Sim|Não|[SSO com PRT](https://docs.microsoft.com/deployedge/microsoft-edge-security-identity#sso-with-primary-refresh-token-prt)|
-|Autenticação Integrada do Windows (WIA)|Sim|Sim|Sim|Sim * (Política Obrigatória)|[WIA](https://docs.microsoft.com/deployedge/microsoft-edge-security-identity#windows-integrated-authentication-wia)|
+|Sincronização local para Active Directory (AD)|Sim|Sim|Sim|Não|[Sincronização local para usuários do Active Directory (AD)](/deployedge/microsoft-edge-on-premises-sync) |
+|SSO de conexão remota|Sim (1709+)|Sim|Sim|Sim|[SSO de conexão remota](/deployedge/microsoft-edge-security-identity#seamless-sso)|
+|SSO com Token de atualização principal (PRT)|Sim (1709+)|Sim|Sim|Não|[SSO com PRT](/deployedge/microsoft-edge-security-identity#sso-with-primary-refresh-token-prt)|
+|Autenticação Integrada do Windows (WIA)|Sim|Sim|Sim|Sim * (Política Obrigatória)|[WIA](/deployedge/microsoft-edge-security-identity#windows-integrated-authentication-wia)|
 
 |Recursos adicionais|Win 10|Win 8.1|Win 7|macOS|URL|
 |--------|-------|--------|-----|-------|---|
 |Coleções|Sim|Sim|Sim|Sim|[Coleções](https://blogs.windows.com/msedgedev/2019/12/09/improvements-collections-sync-microsoft-edge/) |
 |Página de Nova Guia de Empresa|Sim|Sim|Sim|Sim|[Página de Nova Guia](https://blogs.windows.com/msedgedev/2020/10/29/enterprise-new-tab-page-my-feed/) |
-|Modo IE|Sim|Sim|Sim|Não|[Modo IE](https://docs.microsoft.com/deployedge/edge-ie-mode#prerequisites)|
-|Modo quiosque|Sim|Não|Não|Não|[Modo quiosque](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode)|
+|Modo IE|Sim|Sim|Sim|Não|[Modo IE](/deployedge/edge-ie-mode#prerequisites)|
+|Modo quiosque|Sim|Não|Não|Não|[Modo quiosque](/deployedge/microsoft-edge-configure-kiosk-mode)|
 |Pesquisa da Microsoft no Bing|Sim|Sim|Sim|Sim|[Pesquisa Inteligente no Bing](https://www.microsoft.com/edge/business/intelligent-search-with-bing) |
-|Leitor de PDF|Sim|Sim|Sim|Sim|[Leitor de PDF](https://docs.microsoft.com/deployedge/microsoft-edge-pdf) |
+|Leitor de PDF|Sim|Sim|Sim|Sim|[Leitor de PDF](/deployedge/microsoft-edge-pdf) |
 |Compras|Sim|Sim|Sim|Sim|[Compras](https://techcommunity.microsoft.com/t5/articles/introducing-shopping-with-microsoft-edge/m-p/1870080) |
-|Guias de Insuidade|Sim|Sim|Sim|Sim|[Visão geral do recurso](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel)<br>[Última Postagem do Blog](https://blogs.windows.com/msedgedev/2021/03/04/edge-89-performance/)<br>[Políticas de Grupo](https://docs.microsoft.com/deployedge/microsoft-edge-policies#sleeping-tabs-settings)|
-|Sincronização|Sim|Sim|Sim|Sim| [Sincronização de Empresa](https://docs.microsoft.com/deployedge/microsoft-edge-enterprise-sync) |
-|Reversão de Versão|Sim|Sim|Sim|Não|[Reversão de versão](https://docs.microsoft.com/deployedge/edge-learnmore-rollback) |
+|Guias de Insuidade|Sim|Sim|Sim|Sim|[Visão geral do recurso](/deployedge/microsoft-edge-relnote-stable-channel)<br>[Última Postagem do Blog](https://blogs.windows.com/msedgedev/2021/03/04/edge-89-performance/)<br>[Políticas de Grupo](/deployedge/microsoft-edge-policies#sleeping-tabs-settings)|
+|Sincronização|Sim|Sim|Sim|Sim| [Sincronização de Empresa](/deployedge/microsoft-edge-enterprise-sync) |
+|Reversão de Versão|Sim|Sim|Sim|Não|[Reversão de versão](/deployedge/edge-learnmore-rollback) |
 |Guias Verticais|Sim|Sim|Sim|Sim| |
 
 ## <a name="see-also"></a>Confira também

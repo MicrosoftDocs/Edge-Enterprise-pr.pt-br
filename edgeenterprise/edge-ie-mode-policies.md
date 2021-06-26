@@ -1,23 +1,26 @@
 ---
 title: Configurar políticas do modo IE
 ms.author: collw
-author: dan-wesley
+author: AndreaLBarr
 manager: srugh
-ms.date: 03/29/2021
+ms.date: 05/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurar políticas do modo IE
-ms.openlocfilehash: a2abf6f6ef71c1f30786031ef19b9633bfafc43f
-ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
+ms.openlocfilehash: d73a9649619a746fd1ef382f0911ad7e45255f06
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "11470159"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617431"
 ---
 # <a name="configure-ie-mode-policies"></a>Configurar políticas do modo IE
+
+>[!Note]
+> O aplicativo de área de trabalho Internet Explorer 11 será desativado e ficará sem suporte em 15 de junho de 2022 (para obter uma lista do que está no escopo, [consulte as Perguntas frequentes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. [Saiba mais aqui](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 Este artigo explica como configurar as políticas do modo IE.
 
@@ -30,8 +33,8 @@ A configuração do modo IE tem três etapas:
 2. [Redirecionar sites do Microsoft Edge para o modo do IE](#redirect-sites-from-microsoft-edge-to-ie-mode)
 3. (Opcional) [Redirecione sites do IE para Microsoft Edge](#redirect-sites-from-ie-to-microsoft-edge)
 
-    1. Se você estiver pronto para desabilitar o aplicativo IE11, siga as etapas em [Desabilitar o Internet Explorer 11](https://docs.microsoft.com/deployedge/edge-ie-disable-ie11)
-    2. Caso contrário, siga o restante das etapas em [Redirecionar sites do IE para o Microsoft Edge](https://docs.microsoft.com/deployedge/edge-ie-mode-policies#redirect-sites-from-ie-to-microsoft-edge)
+    1. Se você estiver pronto para desabilitar o aplicativo IE11, siga as etapas em [Desabilitar o Internet Explorer 11](/deployedge/edge-ie-disable-ie11)
+    2. Caso contrário, siga o restante das etapas em [Redirecionar sites do IE para o Microsoft Edge](/deployedge/edge-ie-mode-policies#redirect-sites-from-ie-to-microsoft-edge)
 
 > [!NOTE]
 > As políticas para habilitar o modo do IE podem ser configuradas por meio do Intune. Para obter mais informações, confira [Adicionar o Microsoft Edge ao Microsoft Intune](/intune/apps/apps-windows-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json) e [Configurar as políticas do Microsoft Edge com o Microsoft Intune](./configure-edge-with-intune.md).
@@ -44,7 +47,7 @@ Você pode configurar o Internet Explorer para abrir diretamente no Microsoft Ed
 
 1. Baixar e usar o [Modelo de Política do Microsoft Edge](https://www.microsoft.com/en-us/edge/business/download) mais recente.
 2. Abra o Editor de Políticas de Grupo.
-3. Clique em **Configuração do Computador** > **Modelos Administrativos** > **Microsoft Edge**.
+3. Clique em **Configuração do Usuário/Configuração do Computador** > **Modelos Administrativos** > **Microsoft Edge**.
 4. Clique duas vezes em **Configurar integração do Internet Explorer**.
 5. Selecione **Habilitado**.
 6. Em **Opções**, defina o valor da lista suspensa como 
@@ -84,7 +87,7 @@ O modo IE pode usar a política existente que configura a Lista de Sites Empresa
 1. Criar ou reutilizar um XML de lista de sites
     1. Todos os sites que têm o elemento _\<open-in\>IE11\</open-in\>_ serão abertos no modo IE.
 2. Abra o Editor de Políticas de Grupo.
-3. Clique em **Configuração do Computador** > **Modelos Administrativos** > **Windows Components** > **Internet Explorer**.
+3. Clique em **Configuração do Usuário/Configuração do Computador** > **Modelos Administrativos** > **Componentes do Windows** > **Internet Explorer**.
 4. Clique duas vezes em **Usar a lista de sites do IE do Modo Empresarial**.
 5. Selecione **Habilitado**.
 6. Em **Opções**, digite o local da lista de sites. Você pode usar um dos seguintes locais:
@@ -100,7 +103,7 @@ Você também pode configurar o modo IE com uma política separada para o Micros
 1. Criar ou reutilizar um XML de lista de sites
     1. Todos os sites que têm o elemento _\<open-in\>IE11\</open-in\>_ serão abertos no modo IE.
 2. Abra o Editor de Políticas de Grupo.
-3. Clique em **Configuração do Computador** > **Modelos Administrativos** > **Microsoft Edge**.
+3. Clique em **Configuração do Usuário/Configuração do Computador** > **Modelos Administrativos** > **Microsoft Edge**.
 4. Clique duas vezes em **Configurar a Lista de Sites do Modo Empresarial**.
 5. Selecione **Habilitado**.
 6. Em **Opções**, digite o local da lista de sites. Você pode usar um dos seguintes locais:
@@ -118,7 +121,7 @@ O modo IE pode ser configurado como para todos os sites na zona da Intranet Loca
 > A zona da Intranet Local contém sites adicionados explicitamente, mas também atribui sites a essa zona usando heurística. Isso pode incluir nomes de host sem ponto (por exemplo, **https**:**//folhadepagamento**) e sites que o script de configuração do proxy configura para contornar o proxy. Se uma parte externa controlar o DNS ou o proxy, ela poderá forçar que os sites usem o modo IE.
 
 1. Abra o Editor de política de grupo local.
-2. Clique em **Configuração do Computador** > **Modelos Administrativos** > **Microsoft Edge**.
+2. Clique em **Configuração do Usuário/Configuração do Computador** > **Modelos Administrativos** > **Microsoft Edge**.
 3. Clique duas vezes em **Enviar todos os sites da intranet para o Internet Explorer**.
 4. Selecione **Habilitado** e clique em **OK** ou em **Aplicar** para salvar as configurações de política.
 
@@ -127,7 +130,7 @@ O modo IE pode ser configurado como para todos os sites na zona da Intranet Loca
 Você pode impedir que os usuários usem o Internet Explorer para sites que não precisam dele. O Internet Explorer pode redirecionar sites para o Microsoft Edge automaticamente se eles não estiverem na sua lista de sites.
 
 1. Abra o Editor de Políticas de Grupo.
-2. Clique em **Configuração do Computador** > **Ferramentas Administrativas** > **Componentes do Windows** > **Internet Explorer**.
+2. Clique em **Configuração do Usuário/Configuração do Computador** > **Ferramentas Administrativas** > **Componentes do Windows** > **Internet Explorer**.
 3. Clique duas vezes em **Enviar todos os sites não incluídos na Lista de Sites do Modo Empresarial para o Microsoft Edge.**
 4. Selecione **Habilitado**
 5. Clique em **OK** ou **Aplicar** para salvar essas configurações.
