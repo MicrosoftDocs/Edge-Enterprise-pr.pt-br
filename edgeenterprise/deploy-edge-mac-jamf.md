@@ -5,17 +5,17 @@ author: dan-wesley
 manager: laurawi
 ms.date: 11/30/2019
 audience: ITPro
-ms.topic: technical
+ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Como automatizar a implantação do Microsoft Edge para macOS com Jamf.
-ms.openlocfilehash: f02b9efde872082cf2301a4cf66b0a3f3782e39b
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: e56ed4c2a9c0ebb4a4341830cd09ca040e80a657
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447485"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617521"
 ---
 # <a name="deploy-to-macos-with-jamf"></a><span data-ttu-id="ad216-103">Implantar no macOS com Jamf</span><span class="sxs-lookup"><span data-stu-id="ad216-103">Deploy to macOS with Jamf</span></span>
 

@@ -1,6 +1,6 @@
 ---
 title: Sincronização local para usuários do Active Directory (AD)
-ms.author: scottbo
+ms.author: collw
 author: dan-wesley
 manager: silvanam
 ms.date: 02/12/2021
@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Sincronização local para usuários do Active Directory (AD)
-ms.openlocfilehash: 820188db94f4ab2bc9b1ad659c22c324bcea145b
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 39d13a5d9d712ce2c086112c8de453562e037293
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11448045"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617711"
 ---
 # <a name="on-premises-sync-for-active-directory-ad-users"></a><span data-ttu-id="e20e1-103">Sincronização local para usuários do Active Directory (AD)</span><span class="sxs-lookup"><span data-stu-id="e20e1-103">On-premises sync for Active Directory (AD) users</span></span>
 
