@@ -3,19 +3,19 @@ title: Planejar a transição do modo de quiosque
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 02/05/2021
+ms.date: 02/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Planejar a transição do modo de quiosque
-ms.openlocfilehash: 2a82852f10f2a842f28029738e72f72de4c53c41
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: b563f7ac773fb295d42e2b27b1259af321ce5f70
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447845"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617731"
 ---
 # <a name="plan-your-kiosk-mode-transition"></a>Planejar a transição do modo de quiosque
 
@@ -47,23 +47,29 @@ Use as etapas a seguir como guia para configurar um quiosque no Microsoft Edge.
 |[Mostrar botão Página Principal](./microsoft-edge-policies.md#showhomebutton) (política)|N|S|89|S|
 |[Gerenciar favoritos](./microsoft-edge-policies.md#managedfavorites) (política)|N|S|89|S|
 |[Habilitar impressora](./microsoft-edge-policies.md#printingenabled) (política)|S|S|89|S|
-|[Configurar a URL da página de nova guia](./microsoft-edge-policies.md#newtabpagelocation) (política)|N|S||S|
+|[Configurar a URL da página de nova guia](./microsoft-edge-policies.md#newtabpagelocation) (política)|N|S|89|S|
 |Botão encerrar sessão | N| S| 89|S|
 |Todas as URLs internas do Microsoft Edge estão bloqueadas, exceto *edge://downloads* e *edge://print* |N|S|89|S|
 | Ctrl+N bloqueado (abrir uma nova janela) | S | S | 89 |S|
 | Ctrl+T bloqueado (abrir nova guia) |S | S | 89 |S|
 |Configurações e mais (...) exibirá somente as opções necessárias  |S |S |89 |S|
-|Restringir o lançamento de outros aplicativos do navegador|S|S|90/91|S|
-|Bloqueio de configurações de impressão da IU|S|S|90/91|S|
-|[Defina a página da nova guia como a página inicial ](./microsoft-edge-policies.md#homepageisnewtabpage) (política)|-|-|A ser definido|Y|
+|Restringir o lançamento de outros aplicativos do navegador|S|S|90|S|
+|Bloqueio de configurações de impressão da IU|S|S|90|S|
+|[Defina a página da nova guia como a página inicial ](./microsoft-edge-policies.md#homepageisnewtabpage) (política)|N|S|90|S|
 
 > [!NOTE]
 > Para obter informações sobre a programação de lançamento do Microsoft Edge, confira [Agenda de lançamento do Microsoft Edge](microsoft-edge-release-schedule.md).
 
 **Etapa 2: teste o novo quiosque no Microsoft Edge.** Recomendamos que você teste a configuração do modo quiosque no Microsoft Edge. Uma maneira rápida e fácil de testar o modo quiosque é configurar um único aplicativo de acesso atribuído usando as Configurações do Windows, conforme descrito a seguir.
 
-1. Instale o Windows 10 Insider Preview mais recente, versão 20215 ou superior. Siga as instruções em [Introdução às Compilações de Visualização do Windows 10 Insider](/windows-insider/get-started).
-2. Instale a versão mais recente do [ canal Microsoft Edge Stable ](https://www.microsoft.com/edge), versão 87 ou superior.  Para testar os recursos mais recentes, você pode baixar o [ canal Microsoft Edge Beta ](https://www.microsoftedgeinsider.com/download) mais recente, versão 89 ou superior.
+1. As atualizações mínimas do sistema para os sistemas operacionais listados na tabela a seguir.
+
+|Sistema operacional|Versão|Atualizações|
+|--|--|--|
+|Windows 10 | 2004 ou posterior|[KB4601382 ou posterior](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
+|Windows 10| 1909| [KB4601380 ou posterior](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
+
+2. Para testar os recursos mais recentes, você pode baixar o [canal Microsoft Edge Beta ](https://www.microsoftedgeinsider.com/download)mais recente, versão 89 ou superior.
 
    > [!IMPORTANT]
    > Como uma instalação no nível do dispositivo é necessária, o canal Canary não é compatível.
@@ -80,15 +86,15 @@ Use as etapas a seguir como guia para configurar um quiosque no Microsoft Edge.
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="Modo de quiosque - criar conta":::
 
-6. Na página ** Escolha um aplicativo de quiosque **  , selecione ** Microsoft Edge ** e clique em  ** Avançar **.
+6. Na página ** Escolha um aplicativo de quiosque **  , selecione **Microsoft Edge** e clique em  **Avançar**.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="Modo quiosque - escolha um aplicativo":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5c-choose-a-kiosk-app.png" alt-text="Escolher um Quiosque: sinal digital de tela inteira":::
 
 7. Selecione uma das seguintes opções de exibição do Microsoft Edge durante a execução no modo quiosque:
 
    - Sinalização digital/interativa - exibe um site específico em modo de tela inteira, executando o Microsoft Edge.
    - Navegador público - Executa uma versão limitada com várias guias do Microsoft Edge.
-
+ 
     :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Exibição do modo quiosque – sinal digital de tela inteira":::
 
 8. Selecione **Próximo**.
