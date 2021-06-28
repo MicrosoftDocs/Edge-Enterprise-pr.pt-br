@@ -3,19 +3,19 @@ title: Configurar o modo de quiosque do Microsoft Edge
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 03/16/2021
+ms.date: 04/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Aprenda sobre os recursos do modo de quiosque e como configurar as opções do modo de quiosque do Microsoft Edge.
-ms.openlocfilehash: 9d76bfcaebeaf56e627a401cc4f0375bce9d17a3
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 20cb32c0cd27ad6d7437ed8ae0440560f3ed71b2
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11448125"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617851"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Configurar o modo de quiosque do Microsoft Edge
 
@@ -50,23 +50,23 @@ A tabela a seguir lista os recursos compatíveis com o modo quiosque no Microsof
 |Redefinir em inatividade|S|S|89|S|
 |[Barra de endereços somente leitura](./microsoft-edge-policies.md#kioskaddressbareditingenabled) (política) |N|S |89|N|
 |[Excluir downloads na saída](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) (política)  | S|S |89|N|
-|F11 bloqueado (entrar/sair de tela inteira) | S | S | 89 |S|
-|F12 bloqueado (iniciar Ferramentas do Desenvolvedor) | S | S | 89 |S|
-| Suporte a várias guias | N| S| 89|S|
+|F11 bloqueado (entrar/sair de tela inteira) | S | S |89|S|
+|F12 bloqueado (iniciar Ferramentas do Desenvolvedor) | S | S |89|S|
+| Suporte a várias guias | N| S|89|S|
 |[Permitir suporte de URL](./microsoft-edge-policies.md#urlallowlist) (política)|S|S|89|N|
 |[Bloquear suporte de URL](./microsoft-edge-policies.md#urlblocklist) (política)|S|S|89|N|
 |[Mostrar botão Página Principal](./microsoft-edge-policies.md#showhomebutton) (política)|N|S|89|S|
 |[Gerenciar favoritos](./microsoft-edge-policies.md#managedfavorites) (política)|N|S|89|S|
 |[Habilitar impressora](./microsoft-edge-policies.md#printingenabled) (política)|S|S|89|S|
-|[Configurar a URL da página de nova guia](./microsoft-edge-policies.md#newtabpagelocation) (política)|N|S||S|
-|Botão encerrar sessão * | N| S| 89|S|
+|[Configurar a URL da página de nova guia](./microsoft-edge-policies.md#newtabpagelocation) (política)|N|S|89|S|
+|Botão encerrar sessão * | N| S|89|S|
 |Todas as URLs internas do Microsoft Edge estão bloqueadas, exceto *edge://downloads* e *edge://print* |N|S|89|S|
-| Ctrl+N bloqueado (abrir uma nova janela) | S | S | 89 |S|
-| Ctrl+T bloqueado (abrir nova guia) |S | N | 89 |S|
-|Configurações e mais (...) exibirá somente as opções necessárias  |S |S |89 |S|
-|Restringir o lançamento de outros aplicativos do navegador|S|S|90/91|S|
-|Bloqueio de configurações de impressão da IU|S|S|90/91|S|
-|[Defina a página da nova guia como a página inicial ](./microsoft-edge-policies.md#homepageisnewtabpage) (política)|-|-|A ser definido|S|
+| Ctrl+N bloqueado (abrir uma nova janela) | S | S |89|S|
+| Ctrl+T bloqueado (abrir nova guia) |S | N |89|S|
+|Configurações e mais (...) exibirá somente as opções necessárias  |S |S |89|S|
+|Restringir o lançamento de outros aplicativos do navegador|S|S|90|S|
+|Bloqueio de configurações de impressão da IU|S|S|90|S|
+|[Definir a página da nova guia como a página inicial ](./microsoft-edge-policies.md#homepageisnewtabpage) (política)|N|S|90|S|
 
 > [!NOTE]
 > Os recursos seguidos por "*" são ativados apenas em um cenário de aplicativo único de acesso atribuído.
@@ -148,26 +148,33 @@ Use qualquer uma das políticas do Microsoft Edge listadas na tabela a seguir pa
 
 ### <a name="single-app-kiosk"></a>Quiosque de aplicativo único
 
-No momento, o Microsoft Edge tem suporte para um subconjunto de tipos de modo quiosque da Versão Prévia do Microsoft Edge para acesso atribuído a um aplicativo único com as seguintes experiências de bloqueio: com a Navegação Digital/Interativa e Pública.  
+O Microsoft Edge modo de quiosque versão 90 oferece uma extensa lista de recursos. Consulte a seção dos recursos com suporte do modo de quiosque.
+Com as atualizações Windows a seguir, você pode configurar Microsoft Edge aplicativo único de acesso atribuído.
 
-O modo quiosque do Microsoft Edge com aplicativo único de acesso atribuído está disponível atualmente para teste com o  [Windows 10 Insider Preview Build ](https://insider.windows.com/), versão 20215 ou superior, e com o [Microsoft Edge Beta Channel](https://www.microsoftedgeinsider.com/download), versão 89 ou superior.
+|Sistema operacional|Versão|Atualizações|
+|--|--|--|
+|Windows 10 | 2004 ou posterior|[KB4601382 ou posterior](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
+|Windows 10| 1909| [KB4601380 ou posterior](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
 
-**Como faço para obter a visualização do Windows Insiders?**
-
-Para instalar uma versão do Windows 10 Insider Preview Build em um computador, siga as instruções em  [Introdução às Compilações do Windows 10 Insider Preview](/windows-insider/get-started).
+Você pode gerenciar o Microsoft Edge modo de quiosque atribuído ao aplicativo único de acesso por meio [Windows Configurações](/deployedge/microsoft-edge-configure-kiosk-mode#configure-using-windows-settings) e Intune.
 
 ### <a name="multi-app-kiosk"></a>Quiosque de vários aplicativos
 
 O Microsoft Edge pode ser executado com [acesso atribuído a vários aplicativos](/windows/configuration/lock-down-windows-10-to-specific-apps) no Windows 10, que é o equivalente ao tipo de modo de quiosque "Navegação Normal" da Versão Herdada do Microsoft Edge. Para configurar o Microsoft Edge com acesso atribuído a vários aplicativos, siga as instruções sobre como [Configurar um quiosque para vários aplicativos](/windows/configuration/lock-down-windows-10-to-specific-apps). (O AUMID para o canal Estável do Microsoft Edge é **MSEdge**).
 
-Ao usar o Microsoft Edge com acesso atribuído a vários aplicativos, você poderá usar as [políticas de navegador do Microsoft Edge](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-policies) para configurar a experiência de navegação para atender aos seus requisitos exclusivos.
-
 ### <a name="configure-using-windows-settings"></a>Configurar usando as configurações do Windows
 
 As Configurações do Windows é a maneira mais simples de configurar um ou mais dispositivos em modo de quiosque de aplicativo único. Use as etapas a seguir para configurar um computador em modo de quiosque de aplicativo único.
 
-1. Instale a versão do Windows 10 Insider Preview mais recente, versão 20215 ou superior. Siga as instruções em [Introdução às Compilações de Visualização do Windows 10 Insider](/windows-insider/get-started).
-2. Para testar os recursos mais recentes, você pode baixar o [canal Microsoft Edge Beta ](https://www.microsoftedgeinsider.com/download)mais recente, versão 89 ou superior.
+1. As atualizações mínimas do sistema para os sistemas operacionais listados na tabela a seguir.
+
+|Sistema operacional|Versão|Atualizações|
+|--|--|--|
+|Windows 10 | 2004 ou posterior|[KB4601382 ou posterior](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
+|Windows 10| 1909| [KB4601380 ou posterior](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
+
+2. Para testar os recursos mais recentes, você pode baixar o canal estável mais recente do [Microsoft Edge](https://www.microsoft.com/edge/business/download), versão 89 ou superior.
+
 3. No computador modo de quiosque, abra as configurações do Windows e digite "modo de quiosque" no campo de pesquisa. Selecione  **Configurar um modo de quiosque (acesso atribuído)**, mostrada na próxima captura de tela para abrir a caixa de diálogo para criar o modo de quiosque.
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-1-assigned-access.png" alt-text="Configurar o modo de quiosque com acesso atribuído":::
@@ -185,14 +192,14 @@ As Configurações do Windows é a maneira mais simples de configurar um ou mais
    > [!NOTE]
    > Isso se aplica apenas ao Microsoft Edge Dev, Beta e a canais estáveis.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="Modo de quiosque - escolha um aplicativo":::
+     :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5c-choose-a-kiosk-app.png" alt-text="Exibição do modo quiosque – sinal digital de tela inteira":::
 
 7. Escolha uma das opções a seguir para exibir o Microsoft Edge na execução no modo de quiosque:
 
    - Sinalização digital/interativa - Exibe um site específico no modo de tela inteira executando o Microsoft Edge.
    - Navegador público - Executa uma versão limitada com várias guias do Microsoft Edge.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Exibição do modo quiosque – sinal digital de tela inteira":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Como o quiosque será usado - sinal digital de tela inteira":::
 
 8. Selecione **Próximo**.
 9. Digite a URL a ser carregada quando o quiosque for iniciado.
@@ -228,18 +235,6 @@ No momento, não oferecemos suporte aos seguintes recursos e recomendamos que vo
 - [Extensões](./microsoft-edge-policies.md#extensions-policies)
 - [BackgroundModeEnabled](./microsoft-edge-policies.md#backgroundmodeenabled)
 - [UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed)
-
-## <a name="roadmap"></a>Roteiro
-
-### <a name="in-early-2021"></a>No início de 2021
-
-Incluiremos os seguintes recursos e suporte:
-
-- Disponibilidade geral do modo de quiosque do Microsoft Edge com acesso atribuído a um único aplicativo no Windows 10 1909 ou superior.
-- Recursos adicionais para a paridade com a Versão Prévia do Microsoft Edge.
-- Integração com o Intune para configurar os dispositivos usando o Profile UX do modo de quiosque.
-- Restrinja o lançamento de outros aplicativos do navegador.
-- Bloqueio das configurações de impressão da interface do usuário.
 
 ## <a name="see-also"></a>Veja também
 

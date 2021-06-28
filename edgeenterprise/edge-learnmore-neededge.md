@@ -10,19 +10,22 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Redirecionamento do Internet Explorer para o Microsoft Edge para compatibilidade com os sites modernos
-ms.openlocfilehash: ffb295b5c844d15fee2b0fa23e78be9cd34ef03f
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 7cd74eda6d8ada7647862ea69f77a982713f0c14
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447585"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617291"
 ---
 # <a name="redirection-from-internet-explorer-to-microsoft-edge-for-compatibility-with-modern-web-sites"></a>Redirecionamento do Internet Explorer para o Microsoft Edge para compatibilidade com os sites modernos
 
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge Estável versão 87 ou posterior.
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
+
+>[!Note]
+> O aplicativo de área de trabalho Internet Explorer 11 será desativado e ficará sem suporte em 15 de junho de 2022 (para obter uma lista do que está no escopo, [consulte as Perguntas frequentes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. [Saiba mais aqui](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 Muitos sites modernos têm designs incompatíveis com o Internet Explorer. Sempre que um usuário do Internet Explorer visita um site público incompatível, ele recebe uma mensagem informando que o site não é compatível com seu navegador e que precisa mudar manualmente para um navegador diferente.
 
@@ -32,6 +35,15 @@ Quando o usuário visita um site incompatível com o Internet Explorer, ele ser�
 
 > [!NOTE]
 > A Microsoft mantém uma lista de todos os sites que são conhecidos por não serem compatíveis com o Internet Explorer. Para obter mais informações, consulte [Solicitar atualizações à lista de sites incompatíveis](/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
+
+## <a name="prerequisites"></a>Pré-requisitos
+- Microsoft Edge Estável versão 87 ou posterior
+- Versões do Windows
+    - Windows 10 versão 1709 ou posterior
+    - Windows 8.1
+    - Windows 7
+
+
 
 ## <a name="redirection-experience"></a>Experiência de redirecionamento
 
@@ -88,7 +100,7 @@ Além de precisar do BHO, há uma dependência do **RedirectSitesFromInternetExp
 >
 >Se você estiver em um dispositivo associado ao domínio ou registrado no Mobile Device Management (MDM), não verá esta opção.
 >
-> Em vez disso, se você quiser permitir que seus usuários carreguem sites no modo Internet Explorer, você pode fazê-lo configurando a política [Permitir o Internet Explorer no modo teste](./microsoft-edge-policies.md#allow-internet-explorer-mode-testing).
+> Em vez disso, se você quiser permitir que seus usuários carreguem sites no modo Internet Explorer, você pode fazê-lo configurando a política [Permitir o Internet Explorer no modo teste](./microsoft-edge-policies.md#intranetredirectbehavior).
 
 ### <a name="policy-hideinternetexplorerredirectuxforincompatiblesitesenabled"></a>Política: HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
 

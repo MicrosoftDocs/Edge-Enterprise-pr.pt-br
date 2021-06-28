@@ -10,22 +10,22 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Pronto para o Microsoft Edge
-ms.openlocfilehash: eb4f03fd831eda4b4773b87469ceeb896e3fe08a
-ms.sourcegitcommit: 2e8906d1090263efe83d628be06dbe910cb82bf7
+ms.openlocfilehash: d41408c443c9976c8cb4b3b0f537143a5f185e3c
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "11157684"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617501"
 ---
-# Pronto para o Microsoft Edge
+# <a name="ready-for-microsoft-edge"></a>Pronto para o Microsoft Edge
 
 O artigo fornece informações para o Administrador de TI que está planejando uma implantação do Microsoft Edge e precisa de informações sobre compatibilidade e suporte de aplicativos.
 
-##  <a name="web-application-compatibility-and-support"></a>Compatibilidade e suporte de aplicativos Web
+## <a name="web-application-compatibility-and-support"></a>Compatibilidade e suporte de aplicativos Web
 
 Para ajudá-lo a planejar sua implementação do Microsoft Edge, compilamos uma lista de aplicativos web que podem ser utilizados dentro de sua organização. Esta lista permite determinar se o aplicativo web está pronto para o Microsoft Edge, conforme documentado pela declaração de apoio público do fornecedor do aplicativo web.
 
-###  <a name="add-to-the-application-list"></a>Adicionar à lista de aplicativos
+### <a name="add-to-the-application-list"></a>Adicionar à lista de aplicativos
 
 A lista é atualizada regularmente conforme as declarações de suporte são identificadas a partir dos comentários de envolvimento do cliente.
 
@@ -36,7 +36,7 @@ Se você for um provedor de aplicativos Web e gostaria que a declaração de sup
 - Nome do provedor
 - URL de Declaração de Suporte Público
 
-###  <a name="application-list"></a>Lista de aplicativos
+### <a name="application-list"></a>Lista de aplicativos
 
 A Microsoft não testa ou certifica esses aplicativos no Microsoft Edge. A lista foi compilada com base em recursos disponíveis publicamente. Consulte sempre a declaração de suporte atual do fornecedor. Alguns aplicativos podem exigir o uso do Modo IE, conforme indicado pela declaração de suporte.
 
@@ -44,6 +44,7 @@ A tabela a seguir lista as declarações de suporte do provedor para Microsoft E
 
 | Provedor |  Produto | Declaração de suporte |
 |-|-|-|
+| Accurent  | TMS 5.23  | https://www.accruent.com/resources/blog-posts/accruent-enhances-tms-microsoft-edge-compatibility-new-automations?utm_source=linkedin&utm_medium=organic-social&utm_campaign=healthcare-general  |
 | Acumática  | Acumatica ERP  | https://help-2020r1.acumatica.com/Wiki/(W(1))/ShowWiki.aspx?pageid=a8d5d39d-513a-4f93-b484-a95eb33103a1  |
 | Adaptativo (Dia de trabalho)    | Planejamento Adaptativo do dia de trabalho   | https://www.adaptiveplanning.com/uk/products/adaptive-technology-foundation  |
 | Adobe  | Produtos Creative Cloud (Acrobat, Photoshop, Illustrator)  | https://helpx.adobe.com/creative-cloud/system-requirements.html?promoid=P79NQR4R&mv=other  |
@@ -143,7 +144,7 @@ A tabela a seguir lista as declarações de suporte do provedor para Microsoft E
 | Zoom  | Zoom  | https://support.zoom.us/hc/en-us/articles/201362023-System-Requirements-for-PC-Mac-and-Linux#h_92957a85-2506-43a2-bd4a-5bb274778518  |
 | ZScaler  | Zscaler   | https://help.zscaler.com/zia/supported-browsers |
 
-##  <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte também
 
 - [Página de destino do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Planejar sua implantação do Microsoft Edge](deploy-edge-plan-deployment.md)
