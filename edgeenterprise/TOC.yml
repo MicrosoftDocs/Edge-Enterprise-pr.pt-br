@@ -1,4 +1,4 @@
-# last revised 03/31/2021
+# last revised 05/03/2021
 - name: Documentação do Microsoft Edge Enterprise
   href: index.yml
 - name: Documentação do Microsoft Edge
@@ -49,8 +49,6 @@
       items:
         - name: Visão geral do mapeamento de políticas
           href: microsoft-edge-policy-map-overview.md
-        - name: Mapeamento de políticas do Microsoft Edge Legacy para o Microsoft Edge
-          href: microsoft-edge-policy-map-legacy-to-newedge.md
         - name: Mapeamento de políticas do Google Chrome para o Microsoft Edge
           href: microsoft-edge-policy-map-chrome-to-newedge.md
     - name: Sistemas operacionais com suporte
@@ -61,8 +59,6 @@
       href: microsoft-edge-supported-languages.md
     - name: Atualizações do sistema para o Microsoft Edge
       items:
-        - name: Como acessar a versão antiga do Microsoft Edge
-          href: microsoft-edge-sysupdate-access-old-edge.md
         - name: Atualizações do Windows para dar suporte ao Microsoft Edge
           href: microsoft-edge-sysupdate-windows-updates.md
 - name: Implantar o Microsoft Edge
@@ -83,6 +79,8 @@
       href: configure-microsoft-edge.md
     - name: Configurar para o Windows com o Intune
       href: /mem/intune/configuration/administrative-templates-configure-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
+    - name: Configuração por Site por Política
+      href: Per-Site-Configuration-by-Policy.md
     - name: Configurar para o Windows com Gerenciamento de Dispositivos Móveis
       href: configure-edge-with-mdm.md
     - name: Configurar para macOS usando um. plist
@@ -91,6 +89,8 @@
       href: configure-microsoft-edge-on-mac-jamf.md
 - name: Usar os recursos do Microsoft Edge para empresas
   items:
+    - name: Edge para Virtualização de infraestrutura da área de trabalho
+      href: edge-for-virtualized-desktop-infrastructure.md
     - name: Configurações e experimentação
       href: edge-configuration-and-experiments.md
     - name: Suporte e configuração de identidade
@@ -101,6 +101,18 @@
       href: microsoft-edge-kiosk-mode-transition-plan.md
     - name: Configurar o modo de quiosque do Microsoft Edge
       href: microsoft-edge-configure-kiosk-mode.md
+    - name: Gerenciar as extensões do Microsoft Edge
+      items:
+        - name: Gerenciar as extensões na empresa
+          href: microsoft-edge-manage-extensions.md
+        - name: Usar as políticas de grupo para gerenciar extensões
+          href: microsoft-edge-manage-extensions-policies.md
+        - name: Auto-hospedar as extensões do Microsoft Edge
+          href: microsoft-edge-manage-extensions-webstore.md
+        - name: Guia detalhado para a política ExtensionSettings
+          href: microsoft-edge-manage-extensions-ref-guide.md
+        - name: FAQ de extensões
+          href: microsoft-edge-manage-extensions-faq.md
     - name: Sincronização de empresa do Microsoft Edge
       items:
         - name: Configurar a sincronização do Microsoft Edge
@@ -140,17 +152,21 @@
         - name: Associar extensões de arquivo com o modo Internet Explorer
           href: edge-ie-mode-add-guidance-filetype-associations.md
         - name: Solução de problemas e perguntas frequentes do modo IE
-          href: edge-ie-mode-faq.md
+          href: edge-ie-mode-faq.yml
 - name: Segurança do Microsoft Edge
   items:
     - name: Segurança para os seus negócios
       href: ms-edge-security-for-business.md
+    - name: Interrompendo os downloads dos arquivos potencialmente perigosos
+      href: microsoft-edge-security-downloads-interruptions.md
     - name: Lista de permissões para pontos de extremidade do Microsoft Edge
       href: microsoft-edge-security-endpoints.md
     - name: Prevenção de Perda de Dados (DLP)
       href: microsoft-edge-security-dlp.md
     - name: Monitor de Senha habilitado automaticamente para usuários
       href: microsoft-edge-security-password-monitor.md
+    - name: Segurança do gerenciador de senha do Microsoft Edge
+      href: microsoft-edge-security-password-manager-security.md
     - name: Proteção contra aplicativos potencialmente indesejados
       href: microsoft-edge-potentially-unwanted-apps.md
     - name: Suporte para Acesso Condicional do Azure Active Directory
@@ -195,8 +211,10 @@
           href: edge-learnmore-neededge.md
         - name: Sintaxe da Expressão Regular 2 (re2.h)
           href: edge-learnmore-regex.md
-        - name: Redefinir dados do Microsoft Edge
+        - name: Redefinir os dados do Microsoft Edge
           href: edge-learnmore-reset-data-in-cloud.md
+        - name: Variáveis de diretório de dados do usuário
+          href: edge-learnmore-create-user-directory-vars.md
         - name: Usando a reversão do Microsoft Edge para empresas
           href: edge-learnmore-rollback.md
 - name: Vídeos do Microsoft Edge
