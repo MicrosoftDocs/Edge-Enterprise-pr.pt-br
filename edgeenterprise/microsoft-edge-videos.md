@@ -3,25 +3,25 @@ title: Vídeos do Microsoft Edge
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 09/20/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Vídeos do Microsoft Edge
-ms.openlocfilehash: 2010557e7c4500fe3bcfc36dcc6a4a0f868525a0
-ms.sourcegitcommit: 71d2e7ddcec4a34a6f052f1ccdff9431928ab4db
-ms.translationtype: HT
+ms.openlocfilehash: 4303834bc872a12f553cdda4d4d33b9ad2177bf1
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2020
-ms.locfileid: "11030542"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642477"
 ---
-# Vídeos do Microsoft Edge
+# <a name="microsoft-edge-videos"></a>Vídeos do Microsoft Edge
 
 Os vídeos descritos neste artigo abrangem vários aspectos diferentes de implantação, uso e manutenção do Microsoft Edge na empresa.
 
-##  <a name="the-microsoft-mechanics-video-series"></a>A série de vídeos do Microsoft Mechanics
+## <a name="the-microsoft-mechanics-video-series"></a>A série de vídeos do Microsoft Mechanics
 
 A série de vídeos do Microsoft Mechanics, mostrada na página a seguir do "*Guia de Implantação do MSFT Edge Enterprise - 2020*", faz parte da coleção de vídeos do Microsoft Edge para eventos e anúncios, soluções e conferências relacionados.
 
@@ -29,6 +29,6 @@ A série de vídeos do Microsoft Mechanics, mostrada na página a seguir do "*Gu
 
 Você pode exibi-los como parte da [playlist do Microsoft Edge no Mechanics](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy) ou no [Canal do Microsoft Edge no YouTube](https://www.youtube.com/channel/UCIGx7oT8p6-jUpOfg98yelA) juntamente com outros vídeos..
 
-##  <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

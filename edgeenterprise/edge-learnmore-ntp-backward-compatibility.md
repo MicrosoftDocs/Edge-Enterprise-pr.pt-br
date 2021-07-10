@@ -3,19 +3,19 @@ title: Compatibilidade com versões anteriores para a página Nova guia da empre
 ms.author: ruchir
 author: dan-wesley
 manager: vwehren
-ms.date: 10/28/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Compatibilidade com versões anteriores para a página Nova guia da empresa
-ms.openlocfilehash: 5721db16c634250b3a586f6bd1b6b531a07815a5
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
-ms.translationtype: HT
+ms.openlocfilehash: e2534f9df82aa81843d7cd292ada99a4c7574a3c
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447255"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642077"
 ---
 # <a name="backwards-compatibility-for-the-enterprise-new-tab-page"></a>Compatibilidade com versões anteriores para a página Nova guia da empresa
 

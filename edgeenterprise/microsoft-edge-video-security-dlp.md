@@ -3,31 +3,31 @@ title: Microsoft Edge e Prevenção contra perda de dados
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 02/05/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge e Prevenção contra perda de dados (DLP)
-ms.openlocfilehash: c054c911774acb027b83779588d197766c716a33
-ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
-ms.translationtype: HT
+ms.openlocfilehash: 53804ac83d3ce9d26eb9410fd0ba06f3c620871f
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314714"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642717"
 ---
-# Video: Microsoft Edge e Prevenção contra perda de dados (DLP)
+# <a name="video-microsoft-edge-and-data-loss-prevention-dlp"></a>Video: Microsoft Edge e Prevenção contra perda de dados (DLP)
 
 Este vídeo mostra como o Microsoft Edge oferece suporte à prevenção contra perda de dados. Clique na próxima captura de tela para assistir ao vídeo de Arunesh Chandra, Gerente de Programa Sênior, Segurança do Microsoft Edge.
 
 [![ Microsoft Edge e Prevenção contra perda de dados](media/microsoft-edge-security-dlp/0.png)](http://www.youtube.com/watch?v=dLD04U9eTqg " Microsoft Edge and data loss prevention")
 
-##  <a name="about-the-video"></a>Sobre o vídeo
+## <a name="about-the-video"></a>Sobre o vídeo
 
 A Prevenção contra Perda de Dados (DLP) nunca foi tão importante quanto é agora com o trabalho remoto. Saiba mais sobre os recursos nativos de DLP no Microsoft Edge e como a DLP ajuda a manter seus dados sob controle corporativo e permanecer em conformidade.
 
-##  <a name="see-also"></a>Ver também
+## <a name="see-also"></a>Ver também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Prevenção contra Perda de Dados (DLP) no Microsoft Edge](microsoft-edge-security-dlp.md)

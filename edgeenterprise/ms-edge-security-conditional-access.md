@@ -3,19 +3,19 @@ title: Microsoft Edge e acesso condicional
 ms.author: srugh
 author: srugh
 manager: seanlyn
-ms.date: 10/02/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge e acesso condicional
-ms.openlocfilehash: 898a86c8c268a8c46e80dbd5ef3a435c300fb04e
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
-ms.translationtype: HT
+ms.openlocfilehash: 27d93627f8a86ad821a00d6d78b7db352e9e557a
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447135"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642847"
 ---
 # <a name="microsoft-edge-and-conditional-access"></a>Microsoft Edge e acesso condicional
   

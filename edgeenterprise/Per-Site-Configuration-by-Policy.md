@@ -3,19 +3,19 @@ title: 'Configuração por Site por Política '
 ms.author: collw
 author: AndreaLBarr
 manager: laurawi
-ms.date: 05/03/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 'Configuração por Site por Política '
-ms.openlocfilehash: 6bba2c9b1d691c338a3146ef246de9f94e262a03
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 4f1bf9a421f0098ba8105e78f77ac4af62530239
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11618006"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641687"
 ---
 # <a name="persite-configuration-by-policy"></a>Configuração por Site por Política
 
@@ -73,7 +73,7 @@ Se você estava pensando o suficiente para estruturar sua intranet de modo que s
 
 - <div style="display: inline">`https://sharepoint.contoso-intranet.com`</div>
 
-Parabéns, você implementou uma prática recomendada. Você pode configurar cada política desejada com uma entrada ***.contoso-intranet.com** e toda a Intranet será aceita.
+Parabéns, você implementou uma prática recomendada. Você pode configurar cada política desejada com uma entrada **_.contoso-intranet.com_* e toda a   Intranet será aprovada.
 
 ## <a name="use-of-security-zones-inthe-microsoft-edge"></a>Uso de Zonas de Segurança no Microsoft Edge
 

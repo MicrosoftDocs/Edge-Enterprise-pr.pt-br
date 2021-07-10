@@ -3,31 +3,31 @@ title: Microsoft Edge e Identidade
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 02/05/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge e Identidade
-ms.openlocfilehash: fdb7d7906f03037ecbcefcffc02fbdbf51102e57
-ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
-ms.translationtype: HT
+ms.openlocfilehash: 1b9d88b0580ef792cbdca952e6f65b20b301ee91
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314574"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642857"
 ---
-# Vídeo: Microsoft Edge e Identidade
+# <a name="video-microsoft-edge-and-identity"></a>Vídeo: Microsoft Edge e Identidade
 
 Este vídeo mostra como o Microsoft Edge habilita e oferece suporte à identidade para usuários corporativos. Clique na próxima captura de tela para assistir ao vídeo feito por Avi Vaid, Gerente de Programa 2.
 
 [![Identidade no Microsoft Edge](media/microsoft-edge-video-identity/0.png)](http://www.youtube.com/watch?v=8lRUKhR7ipA "Identity in Microsoft Edge")
 
-##  <a name="about-the-video"></a>Sobre o vídeo
+## <a name="about-the-video"></a>Sobre o vídeo
 
 Este vídeo descreve como configurar uma experiência autenticada e personalizada para os usuários. Os tópicos incluem a configuração de login, um único login e vários perfis.
 
-##  <a name="see-also"></a>Ver também
+## <a name="see-also"></a>Ver também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Configuração e suporte à identidade do Microsoft Edge](microsoft-edge-security-identity.md)

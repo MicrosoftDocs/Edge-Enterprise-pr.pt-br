@@ -3,19 +3,19 @@ title: Configurar o Microsoft Edge para macOS usando um. plist
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 11/30/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Definir as configurações de política do Microsoft Edge no macOS usando .plist
-ms.openlocfilehash: 3f297c11d8009c85a1bc5e17447681ee2b9ef1e2
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
-ms.translationtype: HT
+ms.openlocfilehash: d2e604e13f0fb7f81b2fb492073eba0751407771
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447445"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641617"
 ---
 # <a name="configure-microsoft-edge-policy-settings-for-macos-using-a-plist"></a>Definir as configurações de política do Microsoft Edge no macOS usando .plist
 

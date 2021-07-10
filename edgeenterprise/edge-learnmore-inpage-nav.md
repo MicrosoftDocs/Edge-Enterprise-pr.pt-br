@@ -3,21 +3,21 @@ title: Manter a navegação na página no modo do Internet Explorer
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 05/01/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Manter a navegação na página no modo do Internet Explorer
-ms.openlocfilehash: 0acca9e05a0d09b02fa61d5ddd7de3f7c6cabb92
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
-ms.translationtype: HT
+ms.openlocfilehash: 20b18d121c3babfaacffd4a08316b25be714d95e
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979072"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641357"
 ---
-# Manter a navegação na página no modo do Internet Explorer
+# <a name="keep-in-page-navigation-in-internet-explorer-mode"></a>Manter a navegação na página no modo do Internet Explorer
 
 Você pode usar essa política como uma solução temporária para forçar toda a navegação na página de sites do modo do Internet Explorer (modo IE) para permanecer no modo do IE.
 
@@ -26,7 +26,7 @@ Uma navegação na página é iniciada a partir de um link, um script ou um form
 >[!NOTE]
 >Este artigo se aplica ao Microsoft Edge versão 81 ou posterior.
 
-##  <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 As seguintes atualizações do Windows são necessárias para esta política:
 
@@ -36,13 +36,13 @@ As seguintes atualizações do Windows são necessárias para esta política:
 - Windows 10 versão 1709 ([KB4534318](https://support.microsoft.com/help/4534318))
 
 
-##  <a name="about-this-policy"></a>Sobre essa política
+## <a name="about-this-policy"></a>Sobre essa política
 
 Essa política oferece tempo para identificar e configurar todos os servidores de autenticação usados ​​pelos seus sites no modo IE. No entanto, essa política pode resultar em uma experiência de navegação inconsistente, na qual alguns sites são renderizados no modo IE e outras vezes renderizados no modo Microsoft Edge. Essa experiência depende se a navegação do site começou em uma página de modo do IE. Qualquer site que não esteja explicitamente configurado para abrir em um mecanismo de renderização específico estará sujeito a essa inconsistência.
 
 Se você habilitar essa política, recomendamos que a desabilite depois de identificar todos os servidores de autenticação e adicioná-los à lista de sites como neutros. Isso garante que seus sites modernos nunca sejam renderizados inadvertidamente no modo do IE.
 
-##  <a name="keep-in-page-navigation-in-ie-mode"></a>Manter navegações na página no modo do IE
+## <a name="keep-in-page-navigation-in-ie-mode"></a>Manter navegações na página no modo do IE
 
 Para manter as navegações automáticas ou toda a navegação na página no modo Internet Explorer, siga estas etapas:
 
@@ -60,10 +60,10 @@ Para manter as navegações automáticas ou toda a navegação na página no mod
 
    - **Padrão** - Apenas sites configurados para abrir no modo Internet Explorer serão abertos nesse modo. Qualquer site não configurado para abrir no modo Internet Explorer será redirecionado de volta ao Microsoft Edge.
    - **Manter apenas navegações automáticas no modo Internet Explorer** - Use essa opção se desejar a experiência padrão, exceto que todas as navegações automáticas (como redirecionamentos 302) para sites não configurados serão mantidas no modo Internet Explorer.
-   - **Manter todas as navegações na página no modo Internet Explorer** ***(Menos Recomendado)*** - Todas as navegações de páginas carregadas no modo IE para sites não configurados são mantidas no modo Internet Explorer.
+   - **Manter toda a navegação na página no modo Internet Explorer**  * *_(Menos Recomendado)_*_ - Todas as navegação de páginas carregadas no modo IE para sites não configurados são mantidas no modo Internet Explorer.
 
-6. Clique em **OK** ou **Aplicar** para salvar as configurações de política.
+6. Clique em _*OK** **ou Aplicar** para salvar as configurações de política.
 
-##  <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

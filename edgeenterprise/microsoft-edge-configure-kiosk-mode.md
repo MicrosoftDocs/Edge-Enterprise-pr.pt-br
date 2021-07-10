@@ -3,19 +3,19 @@ title: Configurar o modo de quiosque do Microsoft Edge
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 04/26/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Aprenda sobre os recursos do modo de quiosque e como configurar as opções do modo de quiosque do Microsoft Edge.
-ms.openlocfilehash: 20cb32c0cd27ad6d7437ed8ae0440560f3ed71b2
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 38d94a5dfac15f810a463e43ad2fe44d51ee66c7
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617851"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642187"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Configurar o modo de quiosque do Microsoft Edge
 

@@ -3,19 +3,19 @@ title: Criar variáveis de diretório de dados do usuário do Microsoft Edge
 ms.author: brianalt
 author: AndreaLBarr
 manager: srugh
-ms.date: 04/21/2021
+ms.date: 07/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Saiba como criar variáveis de diretório de dados do usuário do Microsoft Edge
-ms.openlocfilehash: 5ec78f16c7e5cd43f01845f35b8473494cd0c4bf
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 2e85e8eebac4a636d90fd0b5da7520c9a86a2de0
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11618001"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641447"
 ---
 # <a name="create-microsoft-edge-user-data-directory-variables"></a>Criar variáveis de diretório de dados do usuário do Microsoft Edge
 
@@ -62,7 +62,7 @@ O Microsoft Edge dá suporte às variáveis de caminho a seguir.
 | **${global_app_data}** | A pasta de Dados de Aplicativos de todo o sistema. Exemplo: *C:\AppData* |
 | **${program_files}** | A pasta Arquivos de Programa do processo atual. Essa pasta depende se é um processo de 32 bits ou de 64 bits. Resolução de exemplo: *C:\Arquivos de programas (x86)* |
 | **${windows}** | A pasta Windows. Exemplo: *C:\Windows* |
-| **${client_name)** | O nome do computador cliente conectado a uma sessão RDP ou Citrix. Essa variável estará vazia se for usada em uma sessão local. Se ela for usada em um caminho, coloque um prefixo para garantir que não fique em branco. Exemplo: *C:\edge_profiles\session_${client_name}* resolve como *C:\edge_profiles\session_&lt;ForlocalSessions&gt;* e *C:\edge_profiles\session_&lt;SomePCname&gt;* para sessões remotas. |
+| **${client_name}** | O nome do computador cliente conectado a uma sessão RDP ou Citrix. Essa variável estará vazia se for usada em uma sessão local. Se ela for usada em um caminho, coloque um prefixo para garantir que não fique em branco. Exemplo: *C:\edge_profiles\session_${client_name}* resolve como *C:\edge_profiles\session_&lt;ForlocalSessions&gt;* e *C:\edge_profiles\session_&lt;SomePCname&gt;* para sessões remotas. |
 | **${session_name}** | O nome da sessão ativa. Use esse nome para diferenciar várias sessões remotas conectadas simultaneamente que estejam usando um único perfil de usuário. Exemplo: *WinSta0 para sessões de área de trabalho local* |
 
 #### <a name="macos-only"></a>Somente MacOS

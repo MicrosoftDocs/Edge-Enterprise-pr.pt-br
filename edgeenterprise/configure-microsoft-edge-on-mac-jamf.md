@@ -3,28 +3,28 @@ title: Configurar o Microsoft Edge no macOS com Jamf
 ms.author: brianalt
 author: dan-wesley
 manager: laurawi
-ms.date: 11/30/2020
+ms.date: 6/29/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Definir as configurações de política do Microsoft Edge em dispositivos Mac com o Jamf
-ms.openlocfilehash: 1859d9fb1fd3ea8ff6908c41f75df21a8b338769
-ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
-ms.translationtype: HT
+ms.openlocfilehash: 8556a5b1d0fc01feb67fc86cb016a9ed47061b55
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "11194709"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641627"
 ---
-# Definir as configurações de política do Microsoft Edge no macOS com o Jamf
+# <a name="configure-microsoft-edge-policy-settings-on-macos-with-jamf"></a>Definir as configurações de política do Microsoft Edge no macOS com o Jamf
 
 Este artigo descreve como definir as configurações de política no macOS usando um arquivo de manifesto de política do Microsoft Edge no JAMF Pro 10,19.
 
 Você também pode definir as configurações de política do Microsoft Edge no macOS usando um arquivo de lista de propriedades (.plist). Para saber mais, confira [Configurar para macOS usando um .plist](configure-microsoft-edge-on-mac.md)
 
 
-##  <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 É necessário o seguinte software:
 
@@ -32,7 +32,7 @@ Você também pode definir as configurações de política do Microsoft Edge no 
 - Arquivo de Modelos de Política, versão 81.0.416.3
 - Jamf Pro, Versão 10,19
 
-##  <a name="about-the-jamf-pro-application-&-custom-settings-menu"></a>Sobre o aplicativo Jamf Pro e menu de Configurações Personalizadas
+## <a name="about-the-jamf-pro-application--custom-settings-menu"></a>Sobre o aplicativo Jamf Pro e menu de Configurações Personalizadas
 
 Antes do Jamf Pro 10.18, o gerenciamento do Office 365 envolvia a criação manual de um arquivo .plist. Esse era um fluxo de trabalho demorado que exigia uma forte experiência técnica. Jamf Pro 10,18 eliminou essas barreiras simplificando o processo de configuração. No entanto, os Administradores de TI só poderiam usar essa nova interface de usuário para os aplicativos específicos e domínios de preferência especificados pelo Jamf.
 
@@ -40,7 +40,7 @@ No Jamf Pro 10.19, um usuário pode fazer upload de um manifesto JSON como um "e
 
 Para saber mais, confira [Perfis de Configuração do Computador](https://jamf.it/computer-configuration-profiles) no Guia do Administrador do Jamf Pro.
 
-##  <a name="get-the-policy-manifest-for-a-specific-version-of-microsoft-edge"></a>Obter o manifesto da política para uma versão específica do Microsoft Edge
+## <a name="get-the-policy-manifest-for-a-specific-version-of-microsoft-edge"></a>Obter o manifesto da política para uma versão específica do Microsoft Edge
 
 Para obter o manifesto de política:
 
@@ -56,7 +56,7 @@ Depois de descompactar o arquivo CAB, descompacte o arquivo ZIP e navegue até o
 
 Esse manifesto será publicado em todos os pacotes de política, começando com o build 81.0.416.3. Se você deseja testar políticas no canal Dev, você pode pegar o manifesto associado a cada lançamento do Dev e testá-lo no Jamf Pro.  
 
-##  <a name="use-the-policy-manifest-in-jamf-pro"></a>Usar o manifesto de política no Jamf Pro
+## <a name="use-the-policy-manifest-in-jamf-pro"></a>Usar o manifesto de política no Jamf Pro
 
 Use as etapas a seguir para carregar o manifesto de política para o Jamf Pro e, em seguida, crie um perfil de política para o macOS.
 
@@ -105,7 +105,7 @@ Use as etapas a seguir para carregar o manifesto de política para o Jamf Pro e,
 
 Depois de criar o novo perfil de configuração, você ainda terá que configurar o **Escopo** para o perfil.
 
-###  <a name="to-configure-the-scope"></a>Para configurar o escopo
+### <a name="to-configure-the-scope"></a>Para configurar o escopo
 
 1. Para **Destinos**, forneça as seguintes configurações mínimas:
 
@@ -115,7 +115,7 @@ Depois de criar o novo perfil de configuração, você ainda terá que configura
 2. Para **Limitações**, mantenha a configuração padrão: Nenhuma. Clique em **Cancelar**.
 3. Para **Exclusões**, mantenha a configuração padrão: Nenhuma. Clique em **Cancelar**.
 
-##  <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Confira também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Configurar para macOS com Intune](configure-microsoft-edge-on-mac.md)

@@ -3,19 +3,19 @@ title: Configurações de privacidade do Microsoft Edge Enterprise
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 09/09/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Definir as configurações de privacidade do Microsoft Edge Enterprise
-ms.openlocfilehash: 9af3ce14b9ee717d4c64fa3b920e8c63224613e6
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: b5b07353af558e3832cb7a08c647fa111a14a404
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617771"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642267"
 ---
 # <a name="configure-microsoft-edge-policies-to-support-enterprise-privacy"></a>Configurar as políticas do Microsoft Edge para oferecer suporte à privacidade da empresa
 

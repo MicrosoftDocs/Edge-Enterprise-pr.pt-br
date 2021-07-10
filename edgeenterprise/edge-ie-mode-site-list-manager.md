@@ -3,19 +3,19 @@ title: 'Gerenciador de Lista de Site Empresarial no Microsoft Edge '
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 05/19/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 'Habilitar e usar o Gerenciador de Lista de Site Empresarial no Microsoft Edge no Microsoft Edge '
-ms.openlocfilehash: aa468888a05753fb5b033a8b99c2f6045f4e1b12
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: add635a17d05cb4be94e710fd99ab480b992a579
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617401"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641417"
 ---
 # <a name="enterprise-site-list-manager-in-microsoft-edge"></a>Gerenciador de Lista de Sites de Empresa no Microsoft Edge
 

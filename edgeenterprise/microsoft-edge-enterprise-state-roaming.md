@@ -3,19 +3,19 @@ title: Microsoft Edge e Enterprise State Roaming
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 02/14/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge e Enterprise State Roaming
-ms.openlocfilehash: e56c59868f354c4e74f663a4d2bb5f585f9d8169
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
-ms.translationtype: HT
+ms.openlocfilehash: 34ee5bf7970834a2e2211db9e2c0bc6ae99bcd6b
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11448105"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642887"
 ---
 # <a name="microsoft-edge-and-enterprise-state-roaming"></a>Microsoft Edge e Enterprise State Roaming
 

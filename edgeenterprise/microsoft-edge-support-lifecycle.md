@@ -3,19 +3,19 @@ title: Ciclo de vida do Microsoft Edge
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 10/27/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Ciclo de vida do Microsoft Edge
-ms.openlocfilehash: 30c640fff76045be9df98ed66e23f55edf97f343
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
-ms.translationtype: HT
+ms.openlocfilehash: 7305ed148859dc458bcc94b199edfa01db4fc613
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447105"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642507"
 ---
 # <a name="microsoft-edge-lifecycle-policy"></a>Política de ciclo de vida do Microsoft Edge
 

@@ -3,19 +3,19 @@ title: Formato de filtro para políticas de URL do Microsoft Edge
 ms.author: brianalt
 author: dan-wesley
 manager: srugh
-ms.date: 05/01/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Saiba mais sobre o formato de filtro usado para as políticas URLBlocklist e URLAllowlist do Microsoft Edge.
-ms.openlocfilehash: 94378a9193269c73a7439dd019d6cb2d6ac547df
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: e178dad518ff4bee07bf89d9faca3231ee6cf246
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617261"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642017"
 ---
 # <a name="filter-format-for-url-list-based-policies"></a>Formato de filtro para políticas baseadas em lista de URL
 

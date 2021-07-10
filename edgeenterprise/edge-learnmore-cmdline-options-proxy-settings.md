@@ -3,19 +3,19 @@ title: Configurações de proxy do Microsoft Edge
 ms.author: brianalt
 author: dan-wesley
 manager: srugh
-ms.date: 05/01/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 'Usar opções de linha de comando para definir as configurações de proxy '
-ms.openlocfilehash: d0924f723aab6832e5b4eb70c60e1d329d3c7a9d
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
-ms.translationtype: HT
+ms.openlocfilehash: 99a5f0776ea42f1e26050e0d30adb48a63907b8c
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447635"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642157"
 ---
 # <a name="how-to-use-microsoft-edge-command-line-options-to-configure-proxy-settings"></a>Como usar as opções de linha de comando do Microsoft Edge para definir as configurações de proxy
 
