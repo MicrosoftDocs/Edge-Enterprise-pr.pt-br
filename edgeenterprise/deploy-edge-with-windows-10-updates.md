@@ -3,19 +3,19 @@ title: Implantar o Microsoft Edge com atualizações do Windows 10
 ms.author: ryhecht
 author: RyanHechtMSFT
 manager: tinad
-ms.date: 02/05/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Implantar o Microsoft Edge com atualizações do Windows 10
-ms.openlocfilehash: c8ea65f6c452b52b01c00d8fca418fe59db801b1
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
-ms.translationtype: HT
+ms.openlocfilehash: 9102ef37c6a5329a5cba79ed976237d7fd7e2063
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447375"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641887"
 ---
 # <a name="deploy-microsoft-edge-with-windows-10-updates"></a><span data-ttu-id="c3c2c-103">Implantar o Microsoft Edge com atualizações do Windows 10</span><span class="sxs-lookup"><span data-stu-id="c3c2c-103">Deploy Microsoft Edge with Windows 10 updates</span></span>
 

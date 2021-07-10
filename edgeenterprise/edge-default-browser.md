@@ -3,19 +3,19 @@ title: Definir o Microsoft Edge como o navegador padrão no Windows e macOS
 ms.author: brianalt
 author: dan-wesley
 manager: srugh
-ms.date: 1/15/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Saiba como definir o Microsoft Edge como o navegador padrão.
-ms.openlocfilehash: 9151294c34cb2252a7fb32e660c1e3d9e64b5f76
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
-ms.translationtype: HT
+ms.openlocfilehash: 191d7835a0c4aacfc2fde409c57622ff5a351926
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447755"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641537"
 ---
 # <a name="set-microsoft-edge-as-the-default-browser"></a><span data-ttu-id="d468e-103">Definir Microsoft Edge como o navegador padrão</span><span class="sxs-lookup"><span data-stu-id="d468e-103">Set Microsoft Edge as the default browser</span></span>
 

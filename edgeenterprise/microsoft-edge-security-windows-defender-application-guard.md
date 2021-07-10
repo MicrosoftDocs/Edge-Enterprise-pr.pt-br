@@ -3,19 +3,19 @@ title: Microsoft Edge e Microsoft Defender Application Guard
 ms.author: srugh
 author: AndreaLBarr
 manager: seanlyn
-ms.date: 05/06/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Suporte do Microsoft Edge para o Windows Defender Application Guard
-ms.openlocfilehash: 7374810eb19ada298963817844e52184c0271a8c
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: e6498ecdb0f2bf0ecb3ae12a602b73704c6c4599
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617991"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642537"
 ---
 # <a name="microsoft-edge-support-for-microsoft-defender-application-guard"></a><span data-ttu-id="9e899-103">Suporte do Microsoft Edge para o Windows Defender Application Guard</span><span class="sxs-lookup"><span data-stu-id="9e899-103">Microsoft Edge support for Microsoft Defender Application Guard</span></span>
 

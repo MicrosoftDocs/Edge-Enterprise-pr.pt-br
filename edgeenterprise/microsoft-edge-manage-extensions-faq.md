@@ -3,19 +3,19 @@ title: Perguntas frequentes sobre extensões do Microsoft Edge
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 03/29/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Perguntas frequentes sobre extensões do Microsoft Edge
-ms.openlocfilehash: eb33b6783033830d8ed317c647d4c0ec3437b64b
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 5dd2dd147e1a599e13539158cf291028497a0b29
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11618016"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642427"
 ---
 # <a name="faq-for-microsoft-edge-extensions"></a><span data-ttu-id="2b7b9-103">Perguntas frequentes sobre extensões do Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="2b7b9-103">FAQ for Microsoft Edge extensions</span></span>
 

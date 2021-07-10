@@ -3,19 +3,19 @@ title: Prevenção contra Perda de Dados no Microsoft Edge
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 03/01/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Prevenção contra Perda de Dados (DLP) no Microsoft Edge
-ms.openlocfilehash: ac34386ed1b691d7b45f30c2b2ec295955d11104
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
-ms.translationtype: HT
+ms.openlocfilehash: acbc9dab14c193f4f7cb06eb61e676083bfdf6ef
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447925"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642647"
 ---
 # <a name="data-loss-prevention-dlp-in-microsoft-edge"></a><span data-ttu-id="a3119-103">Prevenção contra Perda de Dados (DLP) no Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="a3119-103">Data Loss Prevention (DLP) in Microsoft Edge</span></span>
 

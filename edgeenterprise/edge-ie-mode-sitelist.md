@@ -3,19 +3,19 @@ title: Estratégia de configuração de site de empresa
 ms.author: shisub
 author: shisub
 manager: srugh
-ms.date: 05/19/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Um guia passo a passo para configurar a lista de Sites do Modo Empresa para o modo Internet Explorer.
-ms.openlocfilehash: 7369e4e14f33fc37c6ded0ebc7df57d64a34df50
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 72de393a5da0b4b0e2950951ae527f6ef870e110
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617391"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641807"
 ---
 # <a name="enterprise-site-configuration-strategy"></a><span data-ttu-id="43a25-103">Estratégia de configuração de site de empresa</span><span class="sxs-lookup"><span data-stu-id="43a25-103">Enterprise site configuration strategy</span></span>
 

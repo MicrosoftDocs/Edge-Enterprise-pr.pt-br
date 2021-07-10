@@ -3,19 +3,19 @@ title: Definir as configurações de política do Microsoft Edge para Windows us
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 06/18/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Definir as configurações de política do Microsoft Edge para Windows usando o Microsoft Intune.
-ms.openlocfilehash: 0189a3fc2f9dc115563e7cf6dca1df960680bf22
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
-ms.translationtype: HT
+ms.openlocfilehash: adcd80f68250a9694b9bbaa21fb7941ebcbaf15a
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447555"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641667"
 ---
 # <a name="configure-microsoft-edge-policy-settings-with-microsoft-intune"></a><span data-ttu-id="033cb-103">Definir as configurações de política do Microsoft Edge com o Microsoft Intune</span><span class="sxs-lookup"><span data-stu-id="033cb-103">Configure Microsoft Edge policy settings with Microsoft Intune</span></span>
 

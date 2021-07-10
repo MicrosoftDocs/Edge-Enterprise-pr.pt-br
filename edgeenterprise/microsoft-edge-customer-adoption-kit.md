@@ -3,19 +3,19 @@ title: Materiais de adoção do cliente Microsoft Edge
 ms.author: collw
 author: AndreaLBarr
 manager: seanlynd
-ms.date: 06/23/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Materiais de adoção do cliente Microsoft Edge
-ms.openlocfilehash: f8a37bceeee9b55587a14a97a5b64b73ec27d23f
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: d3c3fc426cf67e054aa37cabb3ac1ca42c1ab5d9
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617831"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11643187"
 ---
 # <a name="customer-adoption-materials-for-microsoft-edge"></a><span data-ttu-id="27ec5-103">Materiais de adoção do cliente para Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="27ec5-103">Customer adoption materials for Microsoft Edge</span></span>
 

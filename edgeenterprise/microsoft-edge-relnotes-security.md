@@ -3,19 +3,19 @@ title: Notas de versão para atualizações de segurança do Microsoft Edge
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/24/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão para atualizações de segurança do Microsoft Edge
-ms.openlocfilehash: 128cda35223681adf582c7caa4d1ca6e21279fa1
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+ms.openlocfilehash: 27ac597b4570fd92b6938691fbf08b0bdd20ca43
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617921"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641337"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a><span data-ttu-id="5a7ee-103">Notas de versão para atualizações de segurança do Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="5a7ee-103">Release notes for Microsoft Edge Security Updates</span></span>
 

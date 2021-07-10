@@ -3,19 +3,19 @@ title: Segurança do Microsoft Edge para a sua empresa
 ms.author: collw
 author: seanongit
 manager: chuckf
-ms.date: 04/20/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Segurança do Microsoft Edge para a sua empresa
-ms.openlocfilehash: 59de0c5ddfa6b34b3d091e4832e2a8fe42dffd42
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: d16b22b63212e3f5319b0bb7df1e457e45cd6208
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617061"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642297"
 ---
 # <a name="microsoft-edge-security-for-your-business"></a><span data-ttu-id="c525d-103">Segurança do Microsoft Edge para a sua empresa</span><span class="sxs-lookup"><span data-stu-id="c525d-103">Microsoft Edge security for your business</span></span>
 

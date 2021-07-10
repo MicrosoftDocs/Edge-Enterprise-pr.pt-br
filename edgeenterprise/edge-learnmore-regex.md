@@ -3,19 +3,19 @@ title: Sintaxe da expressão regular 2
 ms.author: comanea
 author: dan-wesley
 manager: seanlyn
-ms.date: 06/09/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Sintaxe da expressão regular 2
-ms.openlocfilehash: 5d7026a034300e098497c63911f7516f72877c5d
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 2fd0607939d4dd6ac9730390be869fa5be7149b2
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617311"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642217"
 ---
 # <a name="regular-expression-2-re2h-syntax"></a><span data-ttu-id="80d3b-103">Sintaxe da Expressão Regular 2 (re2.h)</span><span class="sxs-lookup"><span data-stu-id="80d3b-103">Regular Expression 2 (re2.h) syntax</span></span>
 

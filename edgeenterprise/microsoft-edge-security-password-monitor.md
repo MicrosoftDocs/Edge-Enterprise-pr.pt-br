@@ -3,19 +3,19 @@ title: Monitor de Senha habilitado automaticamente para usuários
 ms.author: supalsul
 author: dan-wesley
 manager: tulasim
-ms.date: 01/26/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Monitor de Senha habilitado automaticamente para usuários
-ms.openlocfilehash: d1995735ac7558c1608d427aac70081d4afed3a0
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
-ms.translationtype: HT
+ms.openlocfilehash: 76fc4f0c0ce4bb59ba6b2d4d8a82b61592585918
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447275"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11643087"
 ---
 # <a name="password-monitor-auto-enabled-for-users"></a><span data-ttu-id="d6d65-103">Monitor de Senha habilitado automaticamente para usuários</span><span class="sxs-lookup"><span data-stu-id="d6d65-103">Password Monitor auto-enabled for users</span></span>
 

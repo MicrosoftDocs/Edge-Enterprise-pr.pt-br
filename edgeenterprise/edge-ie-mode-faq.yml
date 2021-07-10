@@ -4,24 +4,24 @@ metadata:
   ms.author: shisub
   author: dan-wesley
   manager: srugh
-  ms.date: 05/19/2021
+  ms.date: 06/29/2021
   audience: ITPro
   ms.topic: conceptual
   ms.prod: microsoft-edge
-  ms.localizationpriority: high
+  ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: Solução de problemas e perguntas frequentes para o modo Microsoft Edge Internet Explorer
-  ms.openlocfilehash: d21fdf47fb1774bc69ae3b2478ff3397c3106f04
-  ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+  ms.openlocfilehash: 6248632a430f9c342624794b595f1cccc3d7d6a8
+  ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 06/25/2021
-  ms.locfileid: "11618003"
+  ms.lasthandoff: 07/09/2021
+  ms.locfileid: "11641857"
 title: Solução de problemas e perguntas frequentes do modo IE
 summary: >
   >[!Note]
 
-  > O aplicativo de área de trabalho do Internet Explorer 11 será retirado e ficará sem suporte em 15 de junho de 2022 (para uma lista do que está no escopo, consulte a perguntas [frequentes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. [Saiba mais aqui](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+  > O aplicativo de área de trabalho Internet Explorer 11 será desativado e ficará sem suporte em 15 de junho de 2022 (para obter uma lista do que está no escopo, [consulte as Perguntas frequentes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. [Saiba mais aqui](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 
   Este artigo fornece dicas de solução de problemas e perguntas frequentes sobre o Microsoft Edge versão 77 ou posterior.
@@ -123,4 +123,4 @@ sections:
 
 
       Execute Microsoft Edge com o `--ie-mode-test` sinalizador de linha de comando por exemplo. `msedge.exe --ie-mode-test`, selecione ... -> Mais Ferramentas -> "Abrir sites no modo Internet Explorer".
-additionalContent: "\n## <a name=\"see-also\"></a>Veja também\n\n- [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)\n- [Sobre o modo IE](./edge-ie-mode.md)\n- [Informações adicionais sobre o Modo Empresarial](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)"
+additionalContent: "\n## <a name=\"see-also\"></a>Consulte também\n\n- [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)\n- [Sobre o modo IE](./edge-ie-mode.md)\n- [Informações adicionais sobre o Modo Empresarial](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)"
