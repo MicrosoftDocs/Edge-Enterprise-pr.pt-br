@@ -3,23 +3,23 @@ title: Configurar a sincronização do Microsoft Edge Enterprise
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 06/28/2021
+ms.date: 03/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Opções de administrador e de usuário para configurar o Microsoft Edge para sincronizar os favoritos, senhas e outros dados do navegador.
-ms.openlocfilehash: 5e3813664d3942e84d38e4ae1b4fd17e41049cda
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 99edc97bd5f4bab7bf421e0d15e512c5f6f76cc0
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642817"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617751"
 ---
 # <a name="configure-microsoft-edge-enterprise-sync"></a>Configurar a sincronização de empresa do Microsoft Edge
 
-Este artigo explica como os administradores podem configurar o Microsoft Edge para sincronizar os favoritos, senhas e outros dados do navegador do usuário em todos os dispositivos conectados.Se você não é um administrador, visite este artigo para saber como se conectar e sincronizar o Microsoft Edge entre dispositivos. [Entrar para sincronizar Microsoft Edge entre dispositivos](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674).
+Este artigo explica como os administradores podem configurar o Microsoft Edge para sincronizar os favoritos, as senhas e outros dados do navegador do usuário em todos os dispositivos conectados. Se você não for um administrador, visite este artigo para saber como se conectar e sincronizar o Microsoft Edge entre dispositivos. [Entrar para sincronizar Microsoft Edge entre dispositivos](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674).
 
 > [!NOTE]
 > Aplica-se ao Microsoft Edge versão 77 ou posterior, a menos que indicado de outra forma.

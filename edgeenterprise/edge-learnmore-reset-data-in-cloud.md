@@ -3,19 +3,19 @@ title: Redefinir dados do Microsoft Edge
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 06/28/2021
+ms.date: 07/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Como redefinir dados do Microsoft Edge na nuvem
-ms.openlocfilehash: 19ee60926e36371bd710937fcafc43de7ea035f4
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: dc6c0ae1b1bc31228e9b9b1de315a19e99149134
+ms.sourcegitcommit: 2a00571483e1d169b2b3b59f4fce43262f460a9a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642037"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "11643736"
 ---
 # <a name="reset-microsoft-edge-data-in-the-cloud"></a>Redefinir dados do Microsoft Edge na nuvem
 
@@ -35,7 +35,7 @@ Há situações em que você vai precisar redefinir seus dados do Microsoft Edge
 
 Antes de executar uma redefinição, recomendamos que você faça backup de seus favoritos. Use as etapas a seguir para fazer backup de seus favoritos.
 
-1. No Microsoft Edge, selecione **Configurações e mais > Favoritos > Mais opções > Exportar favoritos**.
+1. No canto superior direito do Microsoft Edge, selecione **Configurações e mais > Favoritos > Mais opções > Exportar favoritos**.
 2. Escolha o arquivo no qual você deseja salvar seus favoritos. Você pode digitar seu próprio nome de arquivo ou usar o nome que o Microsoft Edge fornece por padrão, "favorites_month_day_year.html" como um nome de arquivo. Por exemplo, "favorites_12_17_20.html". Se precisar restaurar seus favoritos mais tarde, você poderá fazê-lo a partir desse arquivo.
 3. Clique em **Salvar**.
 
@@ -45,15 +45,15 @@ Se o Microsoft Edge relatar que não pode sincronizar seus dados, e sugerir que 
 
 Use as etapas a seguir para executar uma redefinição.
 
-1. Primeiro, certifique-se de que você está desconectado do Microsoft Edge em todos os seus dispositivos, incluindo seus dispositivos móveis, exceto o dispositivo em que você está executando a redefinição. Para sair do Microsoft Edge, selecione **Configurações e mais > Configurações > Sair**. Ao sair, não selecione a opção para limpar favoritos, configurações e etc. do seu dispositivo local.
-2. Depois de sair de todos os outros dispositivos, abra o Microsoft Edge no desktop. **Selecione Configurações e mais > Sincronizar > Redefinir sincronização**. Na caixa de diálogo resultante, escolha retomar a sincronização após redefinir os dados e, em seguida, selecione **Redefinir**.
+1. Primeiro, certifique-se de que você está desconectado do Microsoft Edge em todos os seus dispositivos, incluindo seus dispositivos móveis, exceto o dispositivo em que você está executando a redefinição. Para sair do Microsoft Edge, no canto superior direito do Microsoft Edge, selecione **Configurações e mais > Configurações > Sair**. Ao sair, não selecione a opção para limpar favoritos, configurações e etc. do dispositivo local.
+2. Depois de sair de todos os outros dispositivos, abra o Microsoft Edge em sua área de trabalho. No canto superior direito do Microsoft Edge, **Selecione Configurações e mais > Sincronizar > Redefinir sincronização** Na caixa de diálogo resultante, escolha retomar a sincronização depois de redefinir os dados e selecione **Redefinir**.
 
 ## <a name="perform-a-reset-to-remove-your-data-from-microsofts-cloud"></a>Executar uma redefinição para remover seus dados da nuvem da Microsoft
 
 Se você quiser remover seus dados da nuvem da Microsoft, use as etapas a seguir para fazer uma redefinição.
 
-1. Interrompa a sincronização nos dispositivos, exceto no dispositivo no qual está executando a redefinição.  No Microsoft Edge, selecione **Configurações e mais > Configurações > Sincronizar > Desativar sincronização**.  
-2. Depois de interromper a sincronização, selecione **Configurações e mais > Sincronizar > Redefinir sincronização**. Na caixa de diálogo resultante, **não** escolha retomar a sincronização após redefinir os dados. Selecione **Redefinir**.
+1. Interrompa a sincronização nos dispositivos, exceto no dispositivo no qual está executando a redefinição.  No canto superior direito do Microsoft Edge, selecione **Configurações e mais > Configurações > Sincronizar > Desativar sincronização**.  
+2. Depois de interromper a sincronização, no canto superior direito do Microsoft Edge, selecione **Configurações e mais > Sincronizar > Redefinir sincronização.** Na caixa de diálogo resultante, **não** escolha retomar a sincronização depois de redefinir os dados. Selecione **Redefinir**.
 
 ## <a name="what-to-expect-during-and-after-a-data-reset"></a>O que esperar durante e após uma redefinição de dados
 

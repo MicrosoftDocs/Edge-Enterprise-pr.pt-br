@@ -3,19 +3,19 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 07/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: 1115c8d7822fef7e3784a465d5d4ddfd7b6bd6b1
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: d5e4a4807a12cfd50cd0efaeab672361c68a1508
+ms.sourcegitcommit: e3a30351b02226aa042153f17636d64a12c4518b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11643157"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "11643937"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão do canal do Microsoft Edge beta
 
@@ -24,9 +24,20 @@ Estas notas de versão fornecem informações sobre os novos recursos e atualiza
 > [!NOTE]
 > A Plataforma da Web Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Alterações que afetam a compatibilidade do site chegando ao Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## <a name="version-92090245-july-12"></a>Versão 92.0.902.45: 12 de julho
+
+Correção de vários bugs e problemas de desempenho.
+
+## <a name="version-92090240-july-6"></a>Versão 92.0.902.40: 6 de julho
+
+Correção de vários bugs e problemas de desempenho.
+
 ## <a name="version-92090222-june-21"></a>Versão 92.0.902.22: 21 de junho
 
 ### <a name="feature-updates"></a>Atualizações de recursos
+
+- **Pesquisa de idioma natural para o histórico do navegador na barra de endereços**. Localizar o artigo/site que você está procurando agora é mais fácil graças à pesquisa de idioma natural na barra de endereços. Você pode encontrar resultados de pesquisa com base no conteúdo/descrição/tempo da página (como "receita de torta da semana passada") além de títulos/url de palavras-chave.
+Observação: esta é uma Rollout de Recursos Controlados. Se você não localizar esse recurso, volte em breve enquanto continuamos nossa distribuição.
 
 - **Os usuários podem acessar facilmente o modo Internet Explorer no Microsoft Edge**. A partir da versão 92 do Microsoft Edge, os usuários podem recarregar um site no modo Internet Explorer no Microsoft Edge em vez de depender do aplicativo autônomo do IE 11 enquanto aguardam a configuração de um site na Lista de Sites do Modo Empresarial. Os usuários serão solicitados a adicionar o site à sua lista de sites locais de forma que a navegação para a mesma página no Microsoft Edge seja renderizada automaticamente no modo IE pelos próximos 30 dias. Você pode usar a política *[InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed)* para configurar essa experiência e permitir o acesso aos pontos de entrada do modo IE, bem como a capacidade de adicionar sites à lista de sites locais. Você pode usar a política *[InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays)* para ajustar o número de dias para manter os sites na lista de sites locais.
 Observe que KB5003698 ou posterior é necessário para Windows 10, versão 1909; ou KB5003690 ou posterior é necessário para Windows 10, versão 2004, Windows 10, versão 20H2 ou Windows 10, versão 21H1 para a experiência de ponta a ponta.
@@ -34,19 +45,19 @@ Observe que KB5003698 ou posterior é necessário para Windows 10, versão 1909;
 - **Os arquivos MHTML serão abertos por padrão no modo Internet Explorer**. A partir do Microsoft Edge versão 92 Estável, os tipos de arquivo MHTML serão abertos automaticamente no modo Internet Explorer no Microsoft Edge em vez do aplicativo Internet Explorer (IE11). Isso é mais comumente observado ao tentar visualizar emails do Outlook em um navegador. Essa alteração ocorrerá apenas se o IE11 for o manipulador padrão para este tipo de arquivo. Se preferir alterar isso, você pode fazer isso antes de instalar a atualização da versão 92 Estável usando [este guia](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration).
 
 - **Os instrumentos de pagamento agora são sincronizados entre dispositivos**. A partir do Microsoft Edge versão 92, você tem a opção de sincronizar suas informações de pagamento em seus dispositivos conectados.
-Observação: esta é uma Distribuição de Recurso Controlado e atualmente estamos em 50%. Se você não localizar esse recurso, volte em breve enquanto continuamos nossa distribuição.
+Observação: esta é uma Rollout de Recursos Controlados. Se você não localizar esse recurso, volte em breve enquanto continuamos nossa distribuição.
 
 - **O aviso "Desabilitar extensões do modo de desenvolvedor" pode ser descartado permanentemente**. A partir da versão 92 do Microsoft Edge, você pode desabilitar o aviso "Desabilitar extensões do modo de desenvolvedor" clicando na opção 'Não mostrar novamente'.
-Observação: este é uma Distribuição de Recurso Controlado e atualmente estamos em 25%. Se você não localizar esse recurso, volte em breve enquanto continuamos nossa distribuição.
+Observação: esta é uma Rollout de Recursos Controlados. Se você não localizar esse recurso, volte em breve enquanto continuamos nossa distribuição.
 
 - **Gerencie suas extensões diretamente na barra de ferramentas**. O novo menu de extensões na barra de ferramentas permitirá que você oculte/fixe extensões facilmente. Os links rápidos para gerenciar extensões e encontrar novas extensões facilitarão a localização de novas extensões e o gerenciamento das existentes.
-Observação: este é uma Distribuição de Recurso Controlado e atualmente estamos em 25%. Se você não localizar esse recurso, volte em breve enquanto continuamos nossa distribuição.
+Observação: esta é uma Rollout de Recursos Controlados. Se você não localizar esse recurso, volte em breve enquanto continuamos nossa distribuição.
 
 - **HTTPS automático**. Os usuários terão a opção de atualizar a navegação de HTTP para HTTPS em domínios que provavelmente suportam este protocolo mais seguro. Esse suporte também pode ser configurado para tentar entrega HTTPS para todos os domínios.
 Observação: estamos testando esse recurso e esse comportamento não será detectado se você tiver desativado os experimentos.
 
 - **Melhorias na renderização de fontes**. Foram feitas melhorias na renderização do texto para melhorar a clareza e reduzir o borrão.
-Observação: este é uma Distribuição de Recurso Controlado e atualmente estamos em 25%. Se você não localizar esse recurso, volte em breve enquanto continuamos nossa distribuição.
+Observação: esta é uma Rollout de Recursos Controlados. Se você não localizar esse recurso, volte em breve enquanto continuamos nossa distribuição.
 
 ### <a name="policy-updates"></a>Atualizações de política
 
@@ -66,7 +77,6 @@ Oito novas políticas foram adicionadas. Baixe os Modelos Administrativos atuali
 #### <a name="obsoleted-policy"></a>Política Obsoleta
 
 - [EnableSha1ForLocalAnchors](/DeployEdge/microsoft-edge-policies#enablesha1forlocalanchors) Permitir certificados assinados usando SHA-1 quando emitidos por âncoras de confiança locais.
-
 
 ## <a name="version-9209029-june-8"></a>Versão 92.0.902.9: 8 de junho
 
