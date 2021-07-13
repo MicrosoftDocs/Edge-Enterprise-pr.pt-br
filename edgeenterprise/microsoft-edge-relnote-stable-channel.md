@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Stable Channel
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/28/2021
+ms.date: 07/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: ab599e3995641290ed806acc241b00e808f7fc1b
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: f82fdbdddb45951fd9e1eca44f90270bc06c32d1
+ms.sourcegitcommit: 2a00571483e1d169b2b3b59f4fce43262f460a9a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642527"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "11643766"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão do Microsoft Edge Stable Channel
 
@@ -29,8 +29,11 @@ Essas notas de versão fornecem informações dos novos recursos e atualizaçõe
 > [!NOTE]
 > Para o Canal Estável, as atualizações serão implantadas progressivamente por um ou mais dias. Para saber mais, consulte [Distribuições progressivas para atualizações do Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 >
-> A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Alterações que afetam a compatibilidade do site chegando ao Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+> A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites - Alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## <a name="version-91086467-july-8"></a>Versão 91.0.864.67: 8 de julho
+
+Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-91086464-july-2"></a>Versão 91.0.864.64: 2 de julho
 
