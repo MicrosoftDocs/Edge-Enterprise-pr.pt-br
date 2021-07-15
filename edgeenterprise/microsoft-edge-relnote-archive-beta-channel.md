@@ -3,19 +3,19 @@ title: Notas de versão arquivadas para o Canal Beta do Microsoft Edge
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 06/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão arquivadas para o Canal Beta do Microsoft Edge
-ms.openlocfilehash: 065c665892edc264e2ab94375bedf3af9dbc936c
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: c74a2a9f670a781d94738b6db00f84716a429a58
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642417"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617961"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-beta-channel"></a><span data-ttu-id="33c0a-103">Notas de versão arquivadas para o Canal Beta do Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="33c0a-103">Archived release notes for Microsoft Edge Beta Channel</span></span>
 
