@@ -13,7 +13,7 @@ ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
 ms.openlocfilehash: eba448024e86cd0c0ceb733b6363317d7c6ca5fb
 ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/09/2021
 ms.locfileid: "11642827"
@@ -260,7 +260,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[SmartScreenEnabled](#smartscreenenabled)|Configurar o Microsoft Defender SmartScreen|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Forçar o Microsoft Defender SmartScreen verifica downloads de fontes confiáveis|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Configura o Microsoft Defender SmartScreen para bloquear aplicativos potencialmente indesejados.|
-### [*<a name="startup-home-page-and-new-tab-page"></a>Página de inicialização&comma; página inicial e nova guia*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Página de inicialização&comma; página inicial e nova guia*](#startup-home-page-and-new-tab-page-policies)
 
 |Nome da política|Legenda|
 |-|-|
@@ -4234,10 +4234,10 @@ Se você habilitar essa configuração, as extensões externas serão bloqueadas
 
 Se você desabilitar essa configuração ou deixá-la sem definição, as extensões externas poderão ser instaladas.
 
-Extensões externas e sua instalação são documentadas [aqui](/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options).
+As extensões externas e sua instalação são documentadas [aqui](/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options).
 
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -4518,9 +4518,9 @@ O código-fonte de qualquer extensão pode ser alterado pelos usuários com ferr
 
 Cada item de lista da política é uma cadeia de caracteres que contém uma ID de extensão e, opcionalmente, uma URL de "atualização" separada por um ponto e vírgula (;). A ID da extensão é a cadeia de caracteres de 32 letras encontrada, por exemplo, no edge://extensions quando estiver no modo de desenvolvedor. Se especificado, a URL "atualizar" deve apontar para um documento XML de manifesto de atualização ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ). Por padrão, a URL de atualização do site de complementos do Microsoft Edge é usada. A URL "atualizar" definida nessa política é usada somente para a instalação inicial. Atualizações subsequentes da extensão usam a URL de atualização no manifesto da extensão.
 
-Observação: essa política não se aplica ao modo InPrivate. Leia sobre como hospedar extensões [aqui](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
+Observação: essa política não se aplica ao modo InPrivate. Leia sobre extensões de hospedagem [aqui](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -8111,7 +8111,7 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 
   [Voltar ao início](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>Página inicial&comma; de inicialização e políticas de nova guia
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>Página inicial&comma; de inicialização e políticas de nova guia
 
   [Voltar ao início](#microsoft-edge---policies)
 
@@ -8345,9 +8345,9 @@ Se você habilitar essa política, o Microsoft Edge será baixado e mostrará os
 
 Se você desabilitar ou não configurar essa política, o Microsoft Edge não mostrará o logotipo da empresa ou um logotipo da Microsoft na página nova guia.
 
-Para ajudar a determinar o hash SHA-256, vá [aqui](/powershell/module/microsoft.powershell.utility/get-filehash).
+Para obter ajuda na determinação do hash SHA-256, clique [aqui](/powershell/module/microsoft.powershell.utility/get-filehash).
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
