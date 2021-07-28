@@ -3,19 +3,19 @@ title: Notas de versão arquivadas para o Canal Estável do Microsoft Edge
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 03/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão arquivadas para o Canal Estável do Microsoft Edge
-ms.openlocfilehash: d50da924c3c78e38eb55b30cf219145d19fe9816
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: d8574e7b77babbf45a062ed9cadd4b60b616d972
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642387"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617951"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão arquivadas para o Canal Estável do Microsoft Edge
 
@@ -90,7 +90,7 @@ As atualizações de segurança do canal estável estão listadas [aqui](./micro
   - Monitor de Senhas. Quando qualquer uma das suas senhas salvas no navegador corresponder às que foram vistas na lista de credenciais vazadas, o Microsoft Edge o notificará e solicitará que atualize sua senha. O Monitor de Senhas verifica se há combinações em seu nome e está ativado por padrão.
   - Editar Senha. Agora você pode editar suas senhas salvas diretamente nas Configurações do Microsoft Edge. Sempre que uma senha for atualizada fora do Microsoft Edge, é fácil substituir a senha antiga salva pela nova editando a entrada salva em Configurações. 
 
-- **Melhore a velocidade de inicialização do Microsoft Edge com o aumento da inicialização**. Para melhorar a velocidade de inicialização do Microsoft Edge, desenvolvemos um recurso chamado aumento de inicialização. O aumento da inicialização abre o Microsoft Edge mais rapidamente, permitindo que o Microsoft Edge seja executado em segundo plano. Observação: esse recurso está limitado a um grupo de usuários selecionado aleatoriamente que habilitou o experimento. Esses usuários estão fazendo comentários para a equipe de recursos.
+- **Melhore a velocidade de inicialização do Microsoft Edge com o início rápido**. Para melhorar a velocidade de inicialização do Microsoft Edge, desenvolvemos um recurso chamado início rápido. O início rápido abre o Microsoft Edge mais rapidamente, permitindo que o Microsoft Edge seja executado em segundo plano. Observação: esse recurso está limitado a um grupo de usuários selecionado aleatoriamente que habilitou o experimento. Esses usuários estão fazendo comentários para a equipe de recursos.
 
 - **Produtividade:**
 
@@ -128,7 +128,7 @@ Foram adicionadas dezoito novas políticas. Baixe os modelos administrativos atu
 - [SleepingTabsEnabled](./microsoft-edge-policies.md#sleepingtabsenabled) - configura Guias em suspensão.
 - [SleepingTabsTimeout](./microsoft-edge-policies.md#sleepingtabstimeout) - define o tempo limite de inatividade da guia plano de fundo para Guias em suspensão.
 - [SleepingTabsBlockedForUrls](./microsoft-edge-policies.md#sleepingtabsblockedforurls) - bloqueia Guias em suspensão em sites específicos.
-- [StartupBoostEnabled](./microsoft-edge-policies.md#startupboostenabled) - habilita o aumento de inicialização.
+- [StartupBoostEnabled](./microsoft-edge-policies.md#startupboostenabled) - habilita o início rápido.
 - [TargetBlankImpliesNoOpener](./microsoft-edge-policies.md#targetblankimpliesnoopener) - não defina window.opener para links targeting _blank.
 - [UpdatePolicyOverride](./microsoft-edge-policies.md#updatepolicyoverride) - especifica como o Microsoft Edge Update manipula as atualizações disponíveis do Microsoft Edge.
 - [VerticalTabsAllowed](./microsoft-edge-policies.md#verticaltabsallowed) - configura a disponibilidade de um layout vertical para guias na lateral do navegador.

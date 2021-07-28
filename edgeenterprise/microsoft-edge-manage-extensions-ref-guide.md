@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Um guia de referência detalhado para configurar extensões do Microsoft Edge usando a política ExtensionSettings.
-ms.openlocfilehash: 3acd798be6b2b56761991d8adaf014ae614a3fd4
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 67e3cffaa842f591a3d4c3035104addd19e34fd8
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641317"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11676098"
 ---
 # <a name="detailed-guide-to-the-extensionsettings-policy"></a>Guia detalhado para a política ExtensionSettings
 
@@ -51,6 +51,7 @@ Essa política pode controlar configurações como URL de atualização, de onde
 | **update_url** | Aplica-se somente a force_installed e normal_installed. Especifica de onde Microsoft Edge deve baixar uma extensão. Se a extensão estiver hospedada no site de Complementos do Microsoft Edge, use este local: `https://edge.microsoft.com/extensionwebstorebase/v1/crx`.<br>Microsoft Edge usa a URL que você especifica para a instalação inicial da extensão. Para atualizações de extensão subsequentes, o Microsoft Edge usa a URL no manifesto da extensão.   |
 | **runtime_allowed_hosts**| Permite que as extensões interajam com sites especificados, mesmo que também estejam definidas em runtime_blocked_hosts. Você pode especificar até 100 entradas. Entradas extras são descartadas.<br>O formato de padrão de host é semelhante a  [padrões de correspondência](/microsoft-edge/extensions-chromium/enterprise/match-patterns) ,contudo você não pode definir o caminho. Por exemplo:<br>- *://*.example.com<br>- *://exemplo.*— há suporte para curingas eTLD     |
 | **runtime_blocked_hosts**| Impede que as extensões interajam ou modifiquem sites que você especificar. As modificações incluem bloqueio de injeção de JavaScript, acesso a cookie e modificações de solicitação da Web.<br>Você pode especificar até 100 entradas. Entradas extras são descartadas.<br>O formato de padrão do host é semelhante aos padrões de correspondência, contudo você não pode definir o caminho. Por exemplo:<br>- *://*.example.com<br>- *://exemplo.*— há suporte para curingas eTLD   |
+| **override_update_url**| Disponível na Borda 93<br>Se estiver definido como , Edge usará a URL de atualização especificada na política ExtensionSettings ou na política `true` ExtensionInstallForcelist, para atualizações de extensão subsequentes.<br>Se isso não estiver definido ou estiver definido como , Edge usará a URL especificada no manifesto da `false` extensão para atualizações.|
 
 
 ## <a name="configure-using-a-json-string-in-windows-group-policy-editor"></a>Configurar usando uma cadeia de caracteres JSON no Editor de Política de Grupo do Windows

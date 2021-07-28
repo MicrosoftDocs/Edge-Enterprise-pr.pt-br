@@ -213,7 +213,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 
 |Nome da política|Legenda|
 |-|-|
-|[StartupBoostEnabled](#startupboostenabled)|Habilitar impulso de inicialização|
+|[StartupBoostEnabled](#startupboostenabled)|Habilitar início rápido|
 ### [*<a name="printing"></a>Impressão*](#printing-policies)
 
 |Nome da política|Legenda|
@@ -260,7 +260,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[SmartScreenEnabled](#smartscreenenabled)|Configurar o Microsoft Defender SmartScreen|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Forçar o Microsoft Defender SmartScreen verifica downloads de fontes confiáveis|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Configura o Microsoft Defender SmartScreen para bloquear aplicativos potencialmente indesejados.|
-### [*<a name="startup-home-page-and-new-tab-page"></a>Página de inicialização&comma; página inicial e nova guia*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Página de inicialização&comma; página inicial e nova guia*](#startup-home-page-and-new-tab-page-policies)
 
 |Nome da política|Legenda|
 |-|-|
@@ -6205,7 +6205,7 @@ Essa política só afeta o botão revelar senha do navegador, mas não afeta os 
 
   ### <a name="startupboostenabled"></a>StartupBoostEnabled
 
-  #### <a name="enable-startup-boost"></a>Habilitar impulso de inicialização
+  #### <a name="enable-startup-boost"></a>Habilitar início rápido
 
   
   
@@ -6219,13 +6219,13 @@ Essa política só afeta o botão revelar senha do navegador, mas não afeta os 
 
 Se o Microsoft Edge estiver sendo executado no modo de tela de fundo, o navegador pode não fechar quando a última janela for fechada e o navegador não será reiniciado em tela de fundo quando a janela for fechada. Confira a política [BackgroundModeEnabled](#backgroundmodeenabled) para obter informações sobre o que acontece depois de configurar o comportamento do modo de tela de fundo do Microsoft Edge.
 
-Se você habilitar esta política, o impulso de inicialização será ativado.
+Se você habilitar esta política, o início rápido será ativado.
 
-Se você desabilitar esta política, o impulso de inicialização será desativado.
+Se você desabilitar esta política, o início rápido será desativado.
 
-Se você não configurar esta política, o impulso de inicialização pode ser inicialmente desligado ou ligado. O usuário pode configurar seu comportamento em edge://settings/system.
+Se você não configurar esta política, o início rápido pode ser inicialmente desligado ou ligado. O usuário pode configurar seu comportamento em edge://settings/system.
 
-Saiba mais sobre o impulso de inicialização: [https://go.microsoft.com/fwlink/?linkid=2147018](https://go.microsoft.com/fwlink/?linkid=2147018)
+Saiba mais sobre o início rápido: [https://go.microsoft.com/fwlink/?linkid=2147018](https://go.microsoft.com/fwlink/?linkid=2147018)
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -6242,7 +6242,7 @@ Saiba mais sobre o impulso de inicialização: [https://go.microsoft.com/fwlink/
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
   - Nome exclusivo do GP: StartupBoostEnabled
-  - Nome do GP: Habilitar impulso de inicialização
+  - Nome do GP: Habilitar início rápido
   - Caminho do GP (Obrigatório): Modelos Administrativos/Microsoft Edge/Desempenho
   - Caminho do GP (Recomendado): Modelos Administrativos /Microsoft Edge - Configurações Padrão (os usuários podem substituir)/Desempenho
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
@@ -8111,7 +8111,7 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 
   [Voltar ao início](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>Página inicial&comma; de inicialização e políticas de nova guia
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>Página inicial&comma; de inicialização e políticas de nova guia
 
   [Voltar ao início](#microsoft-edge---policies)
 

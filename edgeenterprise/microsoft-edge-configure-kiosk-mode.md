@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Aprenda sobre os recursos do modo de quiosque e como configurar as opções do modo de quiosque do Microsoft Edge.
-ms.openlocfilehash: 38d94a5dfac15f810a463e43ad2fe44d51ee66c7
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 3483c402d9cd7e0d4a7542bcda98672523c0dfb6
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642187"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11676118"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Configurar o modo de quiosque do Microsoft Edge
 
@@ -99,7 +99,7 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
   msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing --no-first-run
   ```
 
-- **--kiosk-idle-timeout-minutes =**: Altere o tempo (em minutos) da última atividade do usuário antes que o modo quiosque do Microsoft Edge redefina a sessão do usuário. Substitua "valor" no próximo exemplo pelo número de minutos.
+- **--kiosk-idle-timeout-minutes=**: Altere o tempo (em minutos) da última atividade do usuário antes de Microsoft Edge modo de quiosque redefine a sessão do usuário fechando o navegador. Observação: esse sinalizador não será reiniciado Microsoft Edge depois que ele for fechado. Uma tecnologia separada, como Acesso Atribuído ou Início do Shell, é necessária para reiniciar automaticamente a Borda após o tempo limite ocioso. Substitua "valor" no próximo exemplo pelo número de minutos.
 
    ```
    --kiosk-idle-timeout-minutes=value
@@ -160,7 +160,9 @@ Você pode gerenciar o Microsoft Edge modo de quiosque atribuído ao aplicativo 
 
 ### <a name="multi-app-kiosk"></a>Quiosque de vários aplicativos
 
-O Microsoft Edge pode ser executado com [acesso atribuído a vários aplicativos](/windows/configuration/lock-down-windows-10-to-specific-apps) no Windows 10, que é o equivalente ao tipo de modo de quiosque "Navegação Normal" da Versão Herdada do Microsoft Edge. Para configurar o Microsoft Edge com acesso atribuído a vários aplicativos, siga as instruções sobre como [Configurar um quiosque para vários aplicativos](/windows/configuration/lock-down-windows-10-to-specific-apps). (O AUMID para o canal Estável do Microsoft Edge é **MSEdge**).
+O Microsoft Edge pode ser executado com [acesso atribuído a vários aplicativos](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) no Windows 10, que é o equivalente ao tipo de modo de quiosque "Navegação Normal" da Versão Herdada do Microsoft Edge. Para configurar o Microsoft Edge com acesso atribuído a vários aplicativos, siga as instruções sobre como [Configurar um quiosque para vários aplicativos](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps). (O AUMID para o canal estável Microsoft Edge é **Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe! MSEDGE**).
+
+Ao usar o Microsoft Edge com acesso atribuído a vários aplicativos, você poderá usar as [políticas de navegador do Microsoft Edge](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-policies) para configurar a experiência de navegação para atender aos seus requisitos exclusivos.
 
 ### <a name="configure-using-windows-settings"></a>Configurar usando as configurações do Windows
 

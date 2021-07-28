@@ -1,9 +1,9 @@
 ---
 title: Documentação da política do Microsoft Edge Update
 ms.author: stmoody
-author: dan-wesley
+author: AndreaLBarr
 manager: tahills
-ms.date: 06/29/2021
+ms.date: 07/23/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação para todas as políticas compatíveis com o Microsoft Edge Update
-ms.openlocfilehash: a9808981acad544042c6e0ccb59ff755a670c848
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 9c7eca4d5bdd7c87bea141a422dce3b17f22067c
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642317"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11675938"
 ---
 # <a name="microsoft-edge---update-policies"></a>Microsoft Edge - Políticas de atualização
 
@@ -41,7 +41,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas a atualizações 
 |[CreateDesktopShortcut](#createdesktopshortcut)|Impedir a criação de Atalho da Área de Trabalho com a instalação (por canal)|
 |[RollbackToTargetVersion](#rollbacktotargetversion)|Reverter para a Versão de Destino (por canal)|
 |[TargetVersionPrefix](#targetversionprefix)|Substituir versão de destino (por canal)|
-
+|[UpdaterExperimentationAndConfigurationServiceControl](#UpdaterExperimentationAndConfigurationServiceControl)| Recuperar configurações e experimentos|
 ### [<a name="preferences"></a>Preferências](#preferences-policies)
 |Nome da política|Legenda|
 |-|-|
@@ -201,7 +201,7 @@ Esta política está disponível apenas em instâncias do Windows que fazem part
 - Nome do arquivo GP ADMX: msedgeupdate.admx
 ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
 - Caminho: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- Nome do valor: 
+- Nome do valor:
   - (Estável): Update{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
   - (Beta): Update{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
   - (Canary): Update{65C35B14-6C1D-4122-AC46-7148CC9D6497}
@@ -246,7 +246,6 @@ Para que essa política de grupo entre em vigor, ela deve ser configurada antes 
 0x00000001
 ```
 [Voltar ao início](#microsoft-edge---update-policies)
-
 
 ### <a name="createdesktopshortcutdefault"></a>CreateDesktopShortcutDefault
 #### <a name="prevent-desktop-shortcut-creation-upon-install-default"></a>Impedir a criação de Atalho da Área de Trabalho com a instalação padrão
@@ -401,6 +400,38 @@ Esta política está disponível apenas em instâncias do Windows que fazem part
 ```
 [Voltar ao início](#microsoft-edge---update-policies)
 
+### <a name="updaterexperimentationandconfigurationservicecontrol"></a>UpdaterExperimentationAndConfigurationServiceControl
+#### <a name="retrieve-configurations-and-experiments"></a>Recuperar configurações e experimentos
+>Microsoft Edge Update 1.3.145.1 e posterior
+
+#### <a name="description"></a>Descrição
+No Microsoft Edge Update, o Serviço de Experimentação e Configuração é usado para implantar a carga de experimentação.
+
+A carga de experimentação consiste em uma lista de recursos de desenvolvimento que a Microsoft está habilitando para testar comentários.
+
+Se você habilitar essa política, a carga de experimentação será baixada do Serviço de Experimentação e Configuração.
+
+Se você desabilitar essa política, a comunicação com o Serviço de Experimentação e Configuração será interrompida completamente.
+
+Se você não configurar essa política, em um dispositivo gerenciado, o comportamento será igual ao da política "desabilitada".
+
+Se você não configurar essa política, em um dispositivo não habilitado, o comportamento será igual ao da política "habilitada".
+
+#### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+- Nome exclusivo da GP: UpdateExperimentationAndConfigureationServiceControl
+- Nome da Política de Grupo: Comunicação do atualizador de controle com o Serviço de Experimentação e Configuração
+- Caminho da GP: Modelos Administrativos/Microsoftt Edge Update/Microsoft Edge Update
+- Nome do arquivo GP ADMX: msedgeupdate.admx
+##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+- Caminho: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Nome do valor: UpdaterExperimentationAndConfigurationServiceControl
+- Tipo de Valor: REG_DWORD
+##### <a name="example-value"></a>Valor de exemplo:
+```
+0x00000001
+```
+[Voltar ao início](#microsoft-edge---update-policies)
 
 ## <a name="preferences-policies"></a>Políticas de preferências
 
@@ -459,7 +490,6 @@ start hour : 0x00000001
 start min  : 0x00000002
 ```
 [Voltar ao início](#microsoft-edge---update-policies)
-
 
 ## <a name="proxy-server-policies"></a>Políticas do servidor proxy
 

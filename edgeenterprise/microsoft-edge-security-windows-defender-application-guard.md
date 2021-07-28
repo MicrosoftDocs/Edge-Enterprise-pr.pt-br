@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Suporte do Microsoft Edge para o Windows Defender Application Guard
-ms.openlocfilehash: e6498ecdb0f2bf0ecb3ae12a602b73704c6c4599
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 6273204cc66fa90b1840f279106b3a26d895ca96
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642537"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11675958"
 ---
 # <a name="microsoft-edge-support-for-microsoft-defender-application-guard"></a>Suporte do Microsoft Edge para o Windows Defender Application Guard
 
@@ -134,6 +134,32 @@ O modo IE dá suporte à funcionalidade do Application Guard, mas não antecipam
 ### <a name="do-i-need-to-install-the-application-guard-chrome-extension"></a>Preciso instalar a extensão do Chrome do Application Guard?
 
 Não, o recurso Application Guard tem suporte nativo no Microsoft Edge. Na verdade, não há suporte para a extensão de Chrome do Application Guard no Microsoft Edge.
+
+### <a name="can-employees-download-documents-from-the-application-guard-edge-session-onto-host-devices"></a>Os funcionários podem baixar documentos da sessão Application Guard Edge nos dispositivos host?
+
+Na Windows 10 Enterprise, versão 1803, os usuários podem baixar documentos do contêiner isolado do Application Guard para o computador host. Esse recurso é gerenciado pela política.
+
+Na Windows 10 Enterprise, versão 1709 ou Windows 10 Professional, versão 1803, não é possível baixar arquivos do contêiner isolado do Application Guard para o computador host. No entanto, os funcionários podem usar as opções Imprimir em PDF ou Imprimir como XPS e salvar esses arquivos no dispositivo host.
+
+### <a name="can-employees-copy-and-paste-between-the-host-device-and-the-application-guard-edge-session"></a>Os funcionários podem copiar e colar entre o dispositivo host e a sessão Application Guard Edge?
+
+Dependendo das configurações da sua organização, os funcionários podem copiar e colar imagens (.bmp) e texto de e para o contêiner isolado.
+
+### <a name="why-dont-employees-see-their-favorites-in-the-application-guard-edge-session"></a>Por que os funcionários não veem seus favoritos na sessão de Borda do Application Guard?
+
+Dependendo das configurações da sua organização, pode ser que a Sincronização de Favoritos está desligada. Para gerenciar a política, consulte: Microsoft Edge e Microsoft Defender Application Guard | Microsoft Docs.
+
+### <a name="why-arent-employees-able-to-see-their-extensions-in-the-application-guard-edge-session"></a>Por que os funcionários não conseguem ver suas extensões na sessão de Borda do Application Guard?
+
+Certifique-se de habilitar a política de extensões na configuração do Application Guard.
+
+### <a name="my-extension-doesnt-seem-to-work-in-edge-application-guard"></a>Minha extensão não parece funcionar no Edge Application Guard?
+
+Se a política de extensões estiver habilitada para o MDAG na configuração, verifique se sua extensão requer componentes de Tratamento de Mensagens Nativas, essas extensões não são suportadas no contêiner do Application Guard.
+
+### <a name="im-trying-to-watch-playback-video-with-hdr-why-is-the-hdr-option-missing"></a>Estou tentando ver vídeo de reprodução com HDR, por que a opção HDR está ausente?
+
+Para que a reprodução de vídeo HDR funcione no contêiner, a Aceleração de Hardware vGPU precisa ser habilitada no Application Guard.
 
 ### <a name="are-there-any-other-platform-related-faqs"></a>Há outras perguntas frequentes relacionadas a plataformas?
 

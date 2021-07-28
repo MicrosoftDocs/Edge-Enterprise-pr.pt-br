@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Saiba como empacotar e hospedar extensões do Microsoft Edge na empresa.
-ms.openlocfilehash: aef4438212829006e39572fa938462f13721c580
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 8b0e9ed346848f7ee9330c51f6a1c9274df89371
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642867"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11676108"
 ---
 # <a name="self-host-microsoft-edge-extensions"></a>Extensões de auto-hospedagem do Microsoft Edge
 
@@ -82,7 +82,7 @@ Depois de alterar e testar a extensão atualizada, você pode publicá-la. Use a
    > [!IMPORTANT]
    > Use o mesmo arquivo PEM que foi gerado e salvo na primeira vez que o arquivo CRX foi criado. Se você não usar o mesmo arquivo PEM, a ID do aplicativo da extensão será mudada e a atualização será tratada como uma nova extensão.
 
-5. Arraste e solte o arquivo CRX na janela de extensões e verifique se ele é carregado.
+5. Arraste e solte o arquivo CRX na janela de extensões e verifique se ele é carregado. A extensão será desabilitada após essa operação. Para habilita-lo, adicione a ID CRX da extensão à política ExtensionInstallAllowList. 
 6. Teste a extensão atualizada.
 7. Substitua o arquivo CRX antigo e o arquivo XML pelos novos arquivos para a extensão atualizada.
 
@@ -90,7 +90,7 @@ As alterações da extensão serão escolhidas durante o próximo ciclo de sincr
 
 ## <a name="distribute-a-privately-hosted-extension"></a>Distribuir uma extensão hospedada privadamente
 
-Você pode compartilhar o link do local onde o arquivo CRX está hospedado e, assim que os usuários inserirem a URL em seu navegador, a extensão será baixada e instalada. Os usuários podem habilitar a extensão da página edge://extensions. Para permitir que os usuários instalem extensões auto-hospedadas, você precisa adicionar as IDs CRX de extensão à política [ExtensionInstallAllowList.](/deployedge/microsoft-edge-policies#extensioninstallallowlist)
+Você pode compartilhar o link do local onde o arquivo CRX está hospedado e, assim que os usuários inserirem a URL em seu navegador, a extensão será baixada e instalada. Os usuários podem habilitar a extensão da página edge://extensions. Para permitir que os usuários instalem extensões auto-hospedadas, você precisa adicionar as IDs CRX de extensão à política [ExtensionInstallAllowList](/deployedge/microsoft-edge-policies#extensioninstallallowlist) e adicionar a URL do local onde o arquivo CRX está hospedado à política [ExtensionInstallSources.](/deployedge/microsoft-edge-policies#extensioninstallsources)
 
 Como alternativa, você pode usar a política de grupo [ExtensionInstallForceList](/deployedge/microsoft-edge-manage-extensions-policies#force-install-an-extension) para forçar a instalação de uma extensão nos dispositivos de seus usuários.
 

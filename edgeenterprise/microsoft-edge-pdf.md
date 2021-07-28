@@ -1,21 +1,21 @@
 ---
 title: Leitor de PDF no Microsoft Edge
 ms.author: adigan
-author: dan-wesley
+author: AndreaLBarr
 manager: balajek
-ms.date: 06/28/2021
+ms.date: 07/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Saiba mais sobre o leitor de PDF no Microsoft Edge.
-ms.openlocfilehash: 0b1cffceb63c1829c39bdd3fa658df2e5f776584
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: e8cf690f818e0fa103aa4f17154d9f95431287b5
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11643177"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11675978"
 ---
 # <a name="pdf-reader-in-microsoft-edge"></a>Leitor de PDF no Microsoft Edge
 
@@ -35,16 +35,17 @@ A tabela a seguir mostra quais canais e versões do Microsoft Edge oferecem supo
 | Exibir e imprimir arquivos PDF locais, on-line e incorporados | 79.0.309.71                |
 | Preenchimento do formulário básico<br>(Os formulários JavaScript não possuem suporte) | 79.0.309.71           |
 |Sumário| 86.0.622.38 |
-| Visão da página |Sendo promovido agora nos canais [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/) |
-| Modo navegação com cursor |87.0.664.41 |
+| Visão da página | 88.0.705.50 |
+| Navegação no modo de cursor |87.0.664.41 |
 | Escrita à tinta  | 80.0.361.48            |
 | Personalização de tinta | 83.0.478.54  |
 | Highlight  | 81.0.416.53         |
-| Notas de texto | Sendo promovido agora nos canais [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/) |
+| Notas de texto | 88.0.705.50 |
 | Ler em voz alta | 84.0.522.63  |
-| Exibir arquivos protegidos da Proteção de Informações da Microsoft (MIP) | Suporte ao Windows na versão 80.0.361.48<br>Suporte ao Mac na versão 81.0.416.53 |
-|  Visualizar arquivos protegidos por IRM (Gerenciamento de Direitos de Informação)  | 83.0.478.37            |
-| Visualizar e validar Assinaturas Digitais | Disponível nos canais Canary e Dev. Sendo trabalhado ativamente. |
+| Exibir os arquivos protegidos da Proteção de Informações da Microsoft (MIP) no mesmo locatário comercial | Suporte ao Windows na versão 80.0.361.48<br>Suporte ao Mac na versão 81.0.416.53 |
+| Exibir a Proteção de Informações da Microsoft (MIP) protegidos em locatários comerciais | 91.0.864.37  |
+|  Visualizar arquivos protegidos pelo Gerenciamento de Direitos de Informação (IRM)  | 83.0.478.37            |
+
 
 ### <a name="constraints"></a>Restrições
 
@@ -115,6 +116,7 @@ A [Proteção de informações da Microsoft (MIP)](/microsoft-365/compliance/pro
 > Uma licença é necessária para o MIP. Para saber mais, confira este [Guia de licenciamento do Microsoft 365.](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)
 
 Esses arquivos podem ser abertos diretamente no navegador sem precisar baixar qualquer outro software ou instalar um suplemento. Esse recurso integra a segurança fornecida pelo MIP diretamente no navegador, fornecendo um fluxo de trabalho contínuo.
+Você pode exibir arquivos protegidos pelo MIP em locatários comerciais. A visualização de arquivos usando identidades de consumidores atualmente não possui suporte.
 
 ![Documento em PDF protegido.](media/microsoft-edge-pdf/pdf-reader-protected-pdf2.png)
 

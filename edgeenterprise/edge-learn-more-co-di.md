@@ -1,25 +1,25 @@
 ---
 title: ClickOnce e DirectInvoke no Microsoft Edge
 ms.author: collw
-author: dan-wesley
+author: AndreaLBarr
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 07/16/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Saiba mais sobre o ClickOnce e o DirectInvoke no Microsoft Edge.
-ms.openlocfilehash: 3d124f141e9212ba5ab25d4b725d32add62077a3
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 2da2892a958946ad73d362e6ea929bcfbc2af6a8
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642047"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11675968"
 ---
 # <a name="understand-the-clickonce-and-directinvoke-features-in-microsoft-edge"></a>Noções básicas sobre os recursos ClickOnce e DirectInvoke no Microsoft Edge
 
-ClickOnce e DirectInvoke são recursos disponíveis no IE e no Microsoft Edge (versão 45 e anterior) que oferecem suporte ao uso de um manipulador de arquivos para baixar arquivos de um site. Embora eles atendam a diferentes finalidades, os dois recursos permitem que sites especifiquem que um arquivo solicitado para download seja passado para um manipulador de arquivos no dispositivo do usuário. As solicitações do ClickOnce são manipuladas pelo manipulador de arquivos nativo no Windows. As solicitações do DirectInvoke são manipuladas por um manipulador de arquivos registrado pelo site que hospeda o arquivo.
+ClickOnce e DirectInvoke são recursos disponíveis no IE e Microsoft Edge que suportam o uso de um manipulador de arquivos para baixar arquivos de um site. Embora eles atendam a diferentes finalidades, os dois recursos permitem que sites especifiquem que um arquivo solicitado para download seja passado para um manipulador de arquivos no dispositivo do usuário. As solicitações do ClickOnce são manipuladas pelo manipulador de arquivos nativo no Windows. As solicitações do DirectInvoke são manipuladas por um manipulador de arquivos registrado pelo site que hospeda o arquivo.
 
 Para obter mais informações sobre esses recursos, consulte:
 

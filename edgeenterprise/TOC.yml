@@ -1,4 +1,4 @@
-# last revised 05/03/2021
+# last revised 05/03/2021 
 - name: Documentação do Microsoft Edge Enterprise
   href: index.yml
 - name: Documentação do Microsoft Edge
@@ -133,8 +133,10 @@
           href: edge-ie-mode.md
         - name: Estratégia de configuração de site de empresa
           href: edge-ie-mode-sitelist.md
-        - name: Configurar Políticas do modo IE
+        - name: Configurar Políticas do modo Internet Explorer
           href: edge-ie-mode-policies.md
+        - name: Lista de sites locais do modo Internet Explorer
+          href: edge-ie-mode-local-site-list.md
         - name: Desabilitar o Internet Explorer 11
           href: edge-ie-disable-ie11.md
         - name: Descoberta de Site e gerenciamento de lista
@@ -239,5 +241,5 @@
       href: microsoft-edge-video-security-smartscreen.md
     - name: 'Vídeo - Segurança, compatibilidade e capacidade de gerenciamento'
       href: microsoft-edge-video-security-compatibility-manageability.md
-- name: Perguntas frequentes
-  href: faqs-edge-in-the-enterprise.yml
+    - name: Perguntas frequentes
+      href: faqs-edge-in-the-enterprise.yml
