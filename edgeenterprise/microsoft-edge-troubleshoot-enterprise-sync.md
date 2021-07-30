@@ -1,21 +1,21 @@
 ---
 title: Diagnosticar e corrigir problemas de sincronização do Microsoft Edge
 ms.author: collw
-author: dan-wesley
+author: AndreaLBarr
 manager: silvanam
-ms.date: 06/29/2021
+ms.date: 07/27/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Diretrizes e ferramentas que um administrador do Microsoft Edge pode usar para solucionar e corrigir problemas comuns de sincronização empresarial
-ms.openlocfilehash: 0aca8c98492aead0673b5738aa5dba85c3a34314
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: c46fc716424faf361ea0a3bfab68737b64725473
+ms.sourcegitcommit: cb264068ccad14eb8ca8393ea04dd3dc8682527a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642227"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "11708650"
 ---
 # <a name="diagnose-and-fix-microsoft-edge-sync-issues"></a>Diagnosticar e corrigir problemas de sincronização do Microsoft Edge
 
@@ -52,10 +52,10 @@ Se este erro for encontrado para uma conta do Azure Active Directory, ou se DISA
 1. Verifique se o locatário corporativo tem uma assinatura do M365 com suporte. A lista atual dos tipos de assinatura disponíveis está [fornecida aqui](/azure/information-protection/activate-office365). Se o locatário não tiver uma assinatura com suporte, é possível comprar a Proteção de Informações do Azure separadamente, ou atualizar para uma das assinaturas com suporte.
 2. Se uma assinatura com suporte estiver disponível, verifique se o locatário tem a AIP (Proteção de Informações do Microsoft Azure) disponível. As instruções para verificar o status da AIP e, se necessário, ativar a AIP estão [aqui](/azure/information-protection/activate-office365).
 3. Se a etapa 2 mostrar que a AIP está ativa, mas a sincronização ainda não funciona, ative o ESR (Enterprise State Roaming). As instruções para habilitar o ESR estão [aqui](/azure/active-directory/devices/enterprise-state-roaming-enable). Observe que o ESR não precisa permanecer ativado. Você pode desativar o ESR se esta etapa corrigir o problema.
-4. Confirme se a Proteção de Informações do Azure não tem escopo por meio de uma política de integração. Use o miniaplicativo [Get-AadrmOnboardingControlPolicy](/powershell/module/aadrm/get-aadrmonboardingcontrolpolicy?view=azureipps) do PowerShell para ver se o escopo está habilitado. Os dois exemplos a seguir mostram uma configuração com escopo e outra sem escopo para um grupo de segurança específico.
+4. Confirme se a Proteção de Informações do Azure não tem escopo por meio de uma política de integração. Você pode usar o cmdlet [Get-AIPServiceOnboardingControlPolicy](/powershell/module/aipservice/get-aipserviceonboardingcontrolpolicy?view=azureipps) PowerShell para ver se a scoping está habilitada. Certifique-se de que o monitor do aIPService PowerShell está instalado. Você pode fazer isso aqui: Instale o módulo [do AIPService PowerShell para a Proteção de Informações do Azure.](/azure/information-protection/install-powershell) Os dois exemplos a seguir mostram uma configuração com escopo e outra sem escopo para um grupo de segurança específico.
 
    ```powershell
-    PS C:\Work\scripts\PowerShell> Get-AadrmOnboardingControlPolicy
+    PS C:\Work\scripts\PowerShell> Get-AIPServiceOnboardingControlPolicy
  
     UseRmsUserLicense SecurityGroupObjectId                Scope
     ----------------- ---------------------                -----
@@ -64,16 +64,16 @@ Se este erro for encontrado para uma conta do Azure Active Directory, ou se DISA
 
    ```powershell
 
-    PS C:\Work\scripts\PowerShell> Get-AadrmOnboardingControlPolicy
+    PS C:\Work\scripts\PowerShell> Get-AIPServiceOnboardingControlPolicy
  
     UseRmsUserLicense SecurityGroupObjectId                Scope
     ----------------- ---------------------                -----
                 False f1488a05-8196-40a6-9483-524948b90282   All
    ```
 
-   Se o escopo estiver habilitado, o usuário afetado deverá ser adicionado ao grupo de segurança para o escopo, ou o escopo deverá ser removido. No exemplo abaixo, a integração definiu a AIP para o grupo de segurança indicado e o escopo deve ser removido com o miniplicativo [Set-AadrmOnboardingControlPolicy](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps) do PowerShell.
+   Se o escopo estiver habilitado, o usuário afetado deverá ser adicionado ao grupo de segurança para o escopo, ou o escopo deverá ser removido. No exemplo abaixo, a integração tem o escopo AIP para o grupo de segurança indicado e a escopo deve ser removida com o applet [Set-AIPServiceOnboardingControlPolicy](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy?view=azureipps) PowerShell.
 
-5. Confirme se o IPCv3Service está ativado no locatário. O miniaplicativo [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration?view=azureipps) do PowerShell mostra o status do serviço.
+5. Confirme se o IPCv3Service está ativado no locatário. O cmdlet [Get-AIPServiceConfiguration ](/powershell/module/aipservice/get-aipserviceconfiguration?view=azureipps)  PowerShell mostra o status do serviço.
 
    :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-scoped-cfg-example.png" alt-text="Verifique se IPCv3Service está habilitado.":::
 
