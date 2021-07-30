@@ -400,7 +400,7 @@ Esta política está disponível apenas em instâncias do Windows que fazem part
 ```
 [Voltar ao início](#microsoft-edge---update-policies)
 
-### <a name="updaterexperimentationandconfigurationservicecontrol"></a>UpdaterExperimentationAndConfigurationServiceControl
+### <a name="UpdaterExperimentationAndConfigurationServiceControl"></a>UpdaterExperimentationAndConfigurationServiceControl
 #### <a name="retrieve-configurations-and-experiments"></a>Recuperar configurações e experimentos
 >Microsoft Edge Update 1.3.145.1 e posterior
 
