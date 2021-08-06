@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Visão geral do mapeamento de políticas do Microsoft Edge
-ms.openlocfilehash: da10a1cf099a39ef03002bc539e3cf01eb9ccba3
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 81360f9f505aada047f7832a29cb5d44a79beb29f40c0887d6e1c5501ca708a7
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642567"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11727544"
 ---
 # <a name="microsoft-edge-policy-mapping-overview"></a>Visão geral do mapeamento de políticas do Microsoft Edge
 

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Resumo do suporte de plataforma para recursos do Microsoft Edge
-ms.openlocfilehash: c34249e126a1fb27c84a2f025c826654bb9df358
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 1ac512d4e9e6279ce2d6fcff5aebede0974eb5cdcf9211c957ace9f015b95010
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11643117"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11727464"
 ---
 # <a name="platform-support-for-microsoft-edge-features"></a>Suporte de plataforma para recursos do Microsoft Edge
 

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Distribuições progressivas para atualizações do canal estável do Microsoft Edge
-ms.openlocfilehash: bdcefdc118125d67057fa77513bd732cff6882e3
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: d11fd825c7f4de37fe0b6555f503d9a496fb2b427a9645489a165c91490ff5d7
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642287"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11724854"
 ---
 # <a name="progressive-rollouts-for-microsoft-edge-stable-channel-updates"></a>Distribuições progressivas para atualizações do canal estável do Microsoft Edge
 

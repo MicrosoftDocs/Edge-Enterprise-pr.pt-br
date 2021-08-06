@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Como reverter o Microsoft Edge para uma versão anterior
-ms.openlocfilehash: 1d20cfe920f8c0b5a8c1c253276555acb11e7916
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: e4f1847e40cedb8c551476893fedb64ec55769948edf3cf850c56dc7df9d29c4
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641697"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11725964"
 ---
 # <a name="how-to-roll-back-microsoft-edge-to-a-previous-version"></a>Como reverter o Microsoft Edge para uma versão anterior
 

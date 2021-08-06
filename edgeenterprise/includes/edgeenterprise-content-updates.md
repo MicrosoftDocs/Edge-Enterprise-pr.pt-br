@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 65c8e841953b48673f54a083848233fb97aeaa96
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: c055f9d094f9c13ce9b5fa283a26b5c2d69860e50fa16ad456d6e4743d45bd1e
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617782"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11726835"
 ---
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
 

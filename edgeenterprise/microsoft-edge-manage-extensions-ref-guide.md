@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Um guia de referência detalhado para configurar extensões do Microsoft Edge usando a política ExtensionSettings.
-ms.openlocfilehash: 67e3cffaa842f591a3d4c3035104addd19e34fd8
-ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
+ms.openlocfilehash: 8634d16c9519ccc5fbdb61baf7f3c4282ff44d995311c6eab2931683bca58309
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "11676098"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11726724"
 ---
 # <a name="detailed-guide-to-the-extensionsettings-policy"></a>Guia detalhado para a política ExtensionSettings
 

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Planejar sua implantação do Microsoft Edge
-ms.openlocfilehash: be85aa5182bbee51f90fe42e80cdee0b9c793b4e
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 826fe0b3961de575e158342a9e9df446acb4f37535e417eef685922af82ea52c
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641937"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11724784"
 ---
 # <a name="plan-your-deployment-of-microsoft-edge"></a>Planejar sua implantação do Microsoft Edge
 

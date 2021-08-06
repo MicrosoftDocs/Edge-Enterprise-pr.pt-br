@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Segurança do gerenciador de senhas do Microsoft Edge
-ms.openlocfilehash: 816bbd2c18fcae0a20a19fb0feab199454aa67b6
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 41f1b269622e0053703af05f344a2d15e8a4b10e72e9507297b877f8047ccccb
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11643067"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11727054"
 ---
 # <a name="microsoft-edge-password-manager-security"></a>Segurança do gerenciador de senhas do Microsoft Edge 
 

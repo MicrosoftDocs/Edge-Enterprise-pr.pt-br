@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Segurança, compatibilidade e capacidade de gerenciamento do Microsoft Edge
-ms.openlocfilehash: 480efbef308a68849ec3ea99d8a097a1a01a18c6
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 7626e2221445f017afac2a43d4f29d234d9209b3789852a4a8f8810edef72347
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11643167"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11727584"
 ---
 # <a name="video-microsoft-edge-security-compatibility-and-manageability"></a>Vídeo: segurança, compatibilidade e capacidade de gerenciamento do Microsoft Edge
 

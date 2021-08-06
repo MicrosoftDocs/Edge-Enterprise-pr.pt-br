@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Suporte do Microsoft Edge para Proteção de Informações do Windows
-ms.openlocfilehash: 53564d6089e84969501ac4802cf96dbdb1b24361
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 0ccb75384a1bf38aaaf2216813bff336e59e278b33da7d8267183442f9a31a16
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642237"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11726964"
 ---
 # <a name="microsoft-edge-support-for-windows-information-protection-wip"></a>Suporte do Microsoft Edge para Proteção de Informações do Windows (WIP)
 

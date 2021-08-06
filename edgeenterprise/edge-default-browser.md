@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Saiba como definir o Microsoft Edge como o navegador padrão.
-ms.openlocfilehash: 191d7835a0c4aacfc2fde409c57622ff5a351926
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 31db8d2c5ebf256c5cc041a2716ddd954a3219106b5eb1b083cc71c062abec76
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641537"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11724734"
 ---
 # <a name="set-microsoft-edge-as-the-default-browser"></a>Definir Microsoft Edge como o navegador padrão
 

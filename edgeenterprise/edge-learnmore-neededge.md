@@ -3,19 +3,19 @@ title: Redirecionamento do Internet Explorer para o Microsoft Edge para compatib
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 11/16/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Redirecionamento do Internet Explorer para o Microsoft Edge para compatibilidade com os sites modernos
-ms.openlocfilehash: 7cd74eda6d8ada7647862ea69f77a982713f0c14
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+ms.openlocfilehash: 0d60dd2bdef87942087399afd5034454eead66ddc8e244df04c6e86ae2a73700
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617291"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11724234"
 ---
 # <a name="redirection-from-internet-explorer-to-microsoft-edge-for-compatibility-with-modern-web-sites"></a>Redirecionamento do Internet Explorer para o Microsoft Edge para compatibilidade com os sites modernos
 

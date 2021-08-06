@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Mapeamento de política do Google Chrome para o Microsoft Edge
-ms.openlocfilehash: 9c422c66df9f2892e54ad9d935f4d6de6f88eae3
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: a0e0678d1a658804099e7106164806dbea61187dad87b13d5cd9b4831d2b71fc
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642837"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11724044"
 ---
 # <a name="google-chrome-to-microsoft-edge-policy-mapping"></a>Mapeamento de política do Google Chrome para o Microsoft Edge
 

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Saiba como empacotar e hospedar extensões do Microsoft Edge na empresa.
-ms.openlocfilehash: 8b0e9ed346848f7ee9330c51f6a1c9274df89371
-ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
+ms.openlocfilehash: c258a2aafca83ed19ffea9160efe09b4a73c920da07b5aac7a0d5ef546db4822
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "11676108"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11726804"
 ---
 # <a name="self-host-microsoft-edge-extensions"></a>Extensões de auto-hospedagem do Microsoft Edge
 

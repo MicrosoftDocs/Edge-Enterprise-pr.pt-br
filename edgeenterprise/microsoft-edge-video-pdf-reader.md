@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Leitor de PDF de nível empresarial Microsoft Edge
-ms.openlocfilehash: 5e2f70e9ab488be9ad392f0480d937cabcb45533
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: d9542d8a49b561d31f96a8737d0ba7c7fda0fa9ff91500d26169c0a331445562
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642737"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11724055"
 ---
 # <a name="video-microsoft-edge-enterprise-grade-pdf-reader"></a>Vídeo: leitor de PDF de nível empresarial do Microsoft Edge
 

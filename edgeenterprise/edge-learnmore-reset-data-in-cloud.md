@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Como redefinir dados do Microsoft Edge na nuvem
-ms.openlocfilehash: 65984daea523a7749a28d8ab6a4dd990c5fea849
-ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
+ms.openlocfilehash: 7b1b54bd3e59190d6ff3bdfeb71b8f97080538c224b7dbddb73b9d11708706ac
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "11675918"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11725984"
 ---
 # <a name="reset-microsoft-edge-data-in-the-cloud"></a>Redefinir dados do Microsoft Edge na nuvem
 

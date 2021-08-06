@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Roteiro do Microsoft Edge Enterprise
-ms.openlocfilehash: 0286b1d23e1645cc87abbdef241a1bdd1ddb5a5b
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 9a7902b583c49817d828a80233a8efa11193024f8e45f74a59e1b50719a2c6f8
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11643147"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11727274"
 ---
 # <a name="microsoft-edge-enterprise-roadmap"></a>Roteiro do Microsoft Edge Enterprise
 

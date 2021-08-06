@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Provisionar favoritos para o Microsoft Edge
-ms.openlocfilehash: 2d75e9c22a8aa9cc70d8b96c280934137396620a
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 9b84c883ffd6ac39339c05a9a54a1912910341870cb35d7e338e6fde1e9ff5f3
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642177"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11726004"
 ---
 # <a name="provision-favorites-for-microsoft-edge"></a>Provisionar favoritos para o Microsoft Edge
 

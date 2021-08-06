@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Vídeos do Microsoft Edge
-ms.openlocfilehash: 4303834bc872a12f553cdda4d4d33b9ad2177bf1
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 33b0c6da1c65732530a301ab54f13f9a4a7d82e375c565554d4224a791bcc8ad
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642477"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11727394"
 ---
 # <a name="microsoft-edge-videos"></a>Vídeos do Microsoft Edge
 

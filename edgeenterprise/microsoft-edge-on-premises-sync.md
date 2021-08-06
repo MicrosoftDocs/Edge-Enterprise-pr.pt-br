@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Sincronização local para usuários do Active Directory (AD)
-ms.openlocfilehash: f595c863193f2b3d383a6215ab7817a53bbf5ca6
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: e6b123122e6fb5cd97f72423cff079f61eee2f1836f217fe1970bc05492a0f69
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642437"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11727554"
 ---
 # <a name="on-premises-sync-for-active-directory-ad-users"></a>Sincronização local para usuários do Active Directory (AD)
 

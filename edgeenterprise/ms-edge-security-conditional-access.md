@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge e acesso condicional
-ms.openlocfilehash: 27d93627f8a86ad821a00d6d78b7db352e9e557a
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: bee6aa73e078037adf28af05755bd0a74b30a65b5122eeca16fb7f6c2af1ae4a
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642847"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11726704"
 ---
 # <a name="microsoft-edge-and-conditional-access"></a>Microsoft Edge e acesso condicional
   

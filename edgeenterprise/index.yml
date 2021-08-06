@@ -12,12 +12,12 @@ metadata:
   author: dan-wesley
   ms.author: kvice
   ms.date: 02/02/2021
-  ms.openlocfilehash: 807aaa38da97222da8d52e36ad55995ef1c44e80
-  ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+  ms.openlocfilehash: 2aeb0e2452ce009c5c798bdee3c07ed324c6efbe2d96fa12e5fe92d6dd020e54
+  ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 03/24/2021
-  ms.locfileid: "11448135"
+  ms.lasthandoff: 08/05/2021
+  ms.locfileid: "11725944"
 landingContent:
 - title: Saiba mais sobre o Microsoft Edge na empresa
   linkLists:
@@ -33,13 +33,13 @@ landingContent:
     links:
     - text: Vídeos do Microsoft Edge
       url: microsoft-edge-videos.md
-    - text: Canal do Microsoft Edge no YouTube
+    - text: Microsoft Edge Canal do YouTube
       url: https://www.youtube.com/channel/UCIGx7oT8p6-jUpOfg98yelA
 - title: Implantar e atualizar o Microsoft Edge
   linkLists:
   - linkListType: deploy
     links:
-    - text: Planejar sua implantação do Microsoft Edge
+    - text: Planejar a implantação do Microsoft Edge
       url: deploy-edge-plan-deployment.md
     - text: Vídeo - Implantar o Microsoft Edge
       url: microsoft-edge-video-deploy.md
@@ -51,9 +51,9 @@ landingContent:
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Configurar o Microsoft Edge no Windows
+    - text: Configurar Microsoft Edge no Windows
       url: configure-microsoft-edge.md
-    - text: Configurar o Microsoft Edge no macOS
+    - text: Configurar Microsoft Edge no macOS
       url: configure-microsoft-edge-on-mac.md
     - text: Definir o Microsoft Edge como o navegador padrão
       url: edge-default-browser.md

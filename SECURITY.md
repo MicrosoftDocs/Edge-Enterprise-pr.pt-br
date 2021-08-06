@@ -1,49 +1,49 @@
 ---
-ms.openlocfilehash: bc66462291f4b1959fe1080ab33849c935218ebd
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: e9faa9064a6be1582ac63de2869d0df12d111f4e40486fdd2ede1d76edbd81dc
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979015"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11725634"
 ---
 <!-- BEGIN MICROSOFT SECURITY.MD V0.0.5 BLOCK -->
 
-##  <a name="security"></a>Segurança
+## <a name="security"></a>Segurança
 
-A Microsoft assume a segurança dos nossos produtos e serviços de software com seriedade, que inclui todos os repositórios de código-fonte gerenciados por meio de nossas organizações do GitHub, que incluem [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [dotnet](https://github.com/dotnet), [ASPNET](https://github.com/aspnet), [Xamarin](https://github.com/xamarin)e [nossas organizações do GitHub](https://opensource.microsoft.com/).
+A Microsoft leva a segurança de nossos produtos e serviços de software a sério, o que inclui todos os repositórios de código-fonte gerenciados por meio de nossas organizações do GitHub, que incluem [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet,](https://github.com/aspnet) [Xamarin](https://github.com/xamarin)e nossas organizações GitHub [.](https://opensource.microsoft.com/)
 
-Se você acha que encontrou uma vulnerabilidade de segurança em qualquer repositório de propriedade da Microsoft que atenda à [definição de uma vulnerabilidade de segurança da Microsoft](https://docs.microsoft.com/en-us/previous-versions/tn-archive/cc751383(v=technet.10)), informe-nos como descrito abaixo.
+Se você acredita ter encontrado uma vulnerabilidade de segurança em qualquer repositório de propriedade da Microsoft que atenda à definição da [Microsoft](https://docs.microsoft.com/en-us/previous-versions/tn-archive/cc751383(v=technet.10))de uma vulnerabilidade de segurança, informe-a como descrito abaixo.
 
-##  <a name="reporting-security-issues"></a>Relatar problemas de segurança
+## <a name="reporting-security-issues"></a>Relatórios de problemas de segurança
 
-**Não relate vulnerabilidades de segurança por meio de problemas públicos do GitHub.**
+**Não informe vulnerabilidades de segurança por meio de problemas GitHub públicos.**
 
-Em vez disso, informe-os ao Microsoft Security Response Center (MSRC) em [https://msrc.microsoft.com/create-report](https://msrc.microsoft.com/create-report) .
+Em vez disso, reporte-os ao Centro de Resposta de Segurança da Microsoft (MSRC) em [https://msrc.microsoft.com/create-report](https://msrc.microsoft.com/create-report) .
 
-Se preferir enviar sem fazer logon, envie um email para [Secure@microsoft.com](mailto:secure@microsoft.com).  Se possível, criptografe sua mensagem com nossa chave PGP; Baixe-o na [página da chave PGP do centro de resposta de segurança da Microsoft](https://www.microsoft.com/en-us/msrc/pgp-key-msrc).
+Se você preferir enviar sem fazer logor, envie email [para](mailto:secure@microsoft.com)secure@microsoft.com .  Se possível, criptografe sua mensagem com nossa chave PGP; baixe-o na página Chave [PGP do Centro](https://www.microsoft.com/en-us/msrc/pgp-key-msrc)de Resposta de Segurança da Microsoft.
 
-Você deve receber uma resposta dentro de 24 horas. Se, por algum motivo, você não fizer isso, entre em contato por email para garantir que recebemos sua mensagem original. Informações adicionais podem ser encontradas em [Microsoft.com/MSRC](https://www.microsoft.com/msrc). 
+Você deve receber uma resposta dentro de 24 horas. Se, por algum motivo, você não fizer isso, faça o acompanhamento por email para garantir que recebemos sua mensagem original. Informações adicionais podem ser encontradas em [microsoft.com/msrc](https://www.microsoft.com/msrc). 
 
-Inclua as informações solicitadas abaixo (quanto você puder fornecer) para nos ajudar a entender melhor a natureza e o escopo do possível problema:
+Inclua as informações solicitadas listadas abaixo (tanto quanto você pode fornecer) para nos ajudar a entender melhor a natureza e o escopo do problema possível:
 
-  * Tipo de problema (por exemplo, estouro de buffer, injeção de SQL, script entre sites, etc.)
-  * Caminhos completos do (s) arquivo (s) de origem relacionados à manifestação do problema
-  * O local do código-fonte afetado (marcação/ramificação/confirmação ou URL direta)
+  * Tipo de problema (por exemplo, estouro de buffer, SQL injeção, script entre sites etc.)
+  * Caminhos completos dos arquivos de origem relacionados à manifestação do problema
+  * O local do código-fonte afetado (tag/branch/commit ou URL direta)
   * Qualquer configuração especial necessária para reproduzir o problema
   * Instruções passo a passo para reproduzir o problema
-  * Prova de conceito ou código de exploração (se possível)
+  * Código de prova de conceito ou exploração (se possível)
   * Impacto do problema, incluindo como um invasor pode explorar o problema
 
-Essas informações nos ajudarão a fazer a triagem de seu relatório mais rapidamente.
+Essas informações nos ajudarão a triagem de seu relatório mais rapidamente.
 
-Se você estiver denunciando um bug inúmeros, os relatórios mais completos podem contribuir para um prêmio de inúmeros superior. Acesse nossa página de [programa Microsoft bug inúmeros](https://microsoft.com/msrc/bounty) para obter mais informações sobre nossos programas ativos.
+Se você estiver relatando uma recompensa por bugs, relatórios mais completos podem contribuir para um prêmio de recompensa maior. Visite nossa página [programa de recompensa de bug](https://microsoft.com/msrc/bounty) da Microsoft para obter mais detalhes sobre nossos programas ativos.
 
-##  <a name="preferred-languages"></a>Idiomas preferenciais
+## <a name="preferred-languages"></a>Idiomas Preferenciais
 
-Preferimos que todas as comunicações estejam em inglês.
+Preferimos que todas as comunicações sejam em inglês.
 
-##  <a name="policy"></a>Política
+## <a name="policy"></a>Política
 
-A Microsoft segue o princípio da [divulgação de vulnerabilidade coordenada](https://www.microsoft.com/en-us/msrc/cvd).
+A Microsoft segue o princípio de [Divulgação de Vulnerabilidade Coordenada.](https://www.microsoft.com/en-us/msrc/cvd)
 
 <!-- END MICROSOFT SECURITY.MD BLOCK -->

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Saiba como habilitar listas de sites locais e acesso fácil ao modo IE
-ms.openlocfilehash: 0c79622a1f96cad83a2436f5e79e69914f4a2c40
-ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
+ms.openlocfilehash: db9246fc719648d34b5f54c7d123461b26f1c29f8268c08a1731ef8e6b516331
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "11676130"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11724604"
 ---
 ## <a name="local-site-list-for-ie-mode"></a>Lista de sites locais para modo IE
 
@@ -37,7 +37,7 @@ Este artigo explica como configurar o acesso fácil ao modo Internet Explorer (m
 
 2. Microsoft Edge versão 92 (92.0.925.0 ou posterior)
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 O modo IE é alimentado pela configuração da lista de sites Enterprise Modo. Enquanto você está identificando e configurando sites na lista de sites para usar o modo IE, os usuários não precisam mais esperar ou voltar para o aplicativo IE11 autônomo.
 

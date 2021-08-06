@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Usar o Microsoft Edge para se proteger contra aplicativos potencialmente indesejados
-ms.openlocfilehash: 68cd87e85408933212c4b25baa01a9ff8d994089
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 677ca79b66f23e166461340876e9ce9da64c6cdd814be9eacb613c053e4ec858
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11643097"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11724874"
 ---
 # <a name="protect-against-potentially-unwanted-applications-puas"></a>Proteger-se contra aplicativos potencialmente indesejados (PUAs)
 

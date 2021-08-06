@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Suporte do Microsoft Edge para o Microsoft Defender SmartScreen
-ms.openlocfilehash: 363605200c61807ca526818ab417301273d64f91
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: c09664e6c7785607e40ac53e26c2f377a66f6cef7a6da2b1d53cf15baad29616
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642627"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11727125"
 ---
 # <a name="microsoft-edge-support-for-microsoft-defender-smartscreen"></a>Suporte do Microsoft Edge para o Microsoft Defender SmartScreen
 

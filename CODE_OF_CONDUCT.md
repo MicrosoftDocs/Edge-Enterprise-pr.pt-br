@@ -1,17 +1,17 @@
 ---
-ms.openlocfilehash: 71d25157130742dc22171ceb7bbcda563b3f93ae
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 539b1bfc810aa62738af95866bfe584d568b0dca71aebed0bd81db0bdaebade3
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10978958"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11724814"
 ---
-# Código de conduta do Microsoft Open Source
+# <a name="microsoft-open-source-code-of-conduct"></a>Código de Conduta do Microsoft Open Source
 
-Este projeto adotou o [código de conduta do Microsoft Open Source](https://opensource.microsoft.com/codeofconduct/).
+Este projeto adotou o [Código de Conduta do Microsoft Open Source](https://opensource.microsoft.com/codeofconduct/).
 
 Recursos:
 
-- [Código de conduta do Microsoft Open Source](https://opensource.microsoft.com/codeofconduct/)
-- [Perguntas frequentes sobre o código de conduta da Microsoft](https://opensource.microsoft.com/codeofconduct/faq/)
-- Entre em contato com a [opencode@microsoft.com](mailto:opencode@microsoft.com) com perguntas ou problemas
+- [Código de Conduta do Microsoft Open Source](https://opensource.microsoft.com/codeofconduct/)
+- [Perguntas frequentes sobre o Código de Conduta da Microsoft](https://opensource.microsoft.com/codeofconduct/faq/)
+- Contatar [opencode@microsoft.com](mailto:opencode@microsoft.com) com perguntas ou preocupações

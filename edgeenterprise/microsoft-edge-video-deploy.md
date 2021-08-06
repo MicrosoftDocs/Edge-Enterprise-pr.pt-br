@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Implantar o Microsoft Edge em centenas ou milhares de dispositivos
-ms.openlocfilehash: 43aa5dafab6e29a064b969eefb3917121d6b4736
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 12e8f7be8ebcac28cfbc0b18d6c2559d6d7affb7828e5b05935396cfbe07f2fa
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11643027"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11724834"
 ---
 # <a name="video-deploy-microsoft-edge-to-hundreds-or-thousands-of-devices"></a>Vídeo: Implantar o Microsoft Edge em centenas ou milhares de dispositivos
 

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Ciclo de vida do Microsoft Edge
-ms.openlocfilehash: 941b77920978bba82dd5edcb192ddfab898f4053
-ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
+ms.openlocfilehash: c9967a093168e0a289cd26f8c3927fc4188f916564e221b66394c6a510083ed1
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "11676083"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11726954"
 ---
 # <a name="microsoft-edge-lifecycle-policy"></a>Política de ciclo de vida do Microsoft Edge
 
@@ -25,7 +25,7 @@ Este artigo descreve a política de ciclo de vida que se aplica ao Microsoft Edg
 > Este artigo se aplica ao Microsoft Edge versões 77 e superiores.
 
 > [!NOTE]
-> Começando com a versão 94 do canal Estável, o Microsoft Edge está passando para um ciclo de lançamento principal de 4 semanas. No entanto, reconhecemos que os clientes corporativos que gerenciam ambientes complexos precisam de mais tempo para planejar e testar as atualizações do Microsoft Edge. Para ajudar nossos clientes corporativos que precisam de uma linha do tempo estendida para gerenciar as atualizações, o Microsoft Edge oferecerá uma opção Estável Estendida alinhada a um ciclo de lançamento maior, de **8 semanas;** essa opção estará disponível apenas para clientes com ambientes gerenciados. [Consulte nossa postagem de blog de anúncio](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)
+> Começando com a versão 94 do canal Estável, o Microsoft Edge está passando para um ciclo de lançamento principal de 4 semanas. No entanto, reconhecemos que os clientes corporativos que gerenciam ambientes complexos precisam de mais tempo para planejar e testar as atualizações do Microsoft Edge. Para ajudar nossos clientes corporativos que precisam de uma linha do tempo estendida para gerenciar as atualizações, o Microsoft Edge oferecerá uma opção Estável Estendida alinhada a um ciclo de lançamento maior, de **8 semanas;** essa opção estará disponível apenas para clientes com ambientes gerenciados. [Consulte nossa postagem do blog de anúncio](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)
 
 ## <a name="overview-of-the-lifecycle-policy-for-microsoft-edge"></a>Visão geral da política de ciclo de vida para o Microsoft Edge
 
@@ -57,7 +57,7 @@ Reconhecemos que os clientes corporativos que gerenciam ambientes complexos prec
 |     4 semanas "Estável"             |     Atual e 2 anteriores             |     Atual                           |     12 semanas                            |     4 semanas               |
 |     8 semanas "Estável Estendido"    |     Atual e 1 anterior             |     Atual                           |     16 semanas                            |     8 semanas               |
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Documentação do Microsoft Edge](./index.yml)

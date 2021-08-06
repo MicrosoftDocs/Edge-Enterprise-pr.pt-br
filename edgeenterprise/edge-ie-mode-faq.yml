@@ -11,12 +11,12 @@ metadata:
   ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: Solução de problemas e perguntas frequentes para o modo Microsoft Edge Internet Explorer
-  ms.openlocfilehash: 6248632a430f9c342624794b595f1cccc3d7d6a8
-  ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+  ms.openlocfilehash: b5fa1666a83b4e687faf1075ea57a9f65dbbeffb3242eb2bce5ea13dd42c422f
+  ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 07/09/2021
-  ms.locfileid: "11641857"
+  ms.lasthandoff: 08/05/2021
+  ms.locfileid: "11724584"
 title: Solução de problemas e perguntas frequentes do modo IE
 summary: >
   >[!Note]
@@ -123,4 +123,4 @@ sections:
 
 
       Execute Microsoft Edge com o `--ie-mode-test` sinalizador de linha de comando por exemplo. `msedge.exe --ie-mode-test`, selecione ... -> Mais Ferramentas -> "Abrir sites no modo Internet Explorer".
-additionalContent: "\n## <a name=\"see-also\"></a>Consulte também\n\n- [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)\n- [Sobre o modo IE](./edge-ie-mode.md)\n- [Informações adicionais sobre o Modo Empresarial](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)"
+additionalContent: "\n## <a name=\"see-also\"></a>Veja também\n\n- [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)\n- [Sobre o modo IE](./edge-ie-mode.md)\n- [Informações adicionais sobre o Modo Empresarial](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)"

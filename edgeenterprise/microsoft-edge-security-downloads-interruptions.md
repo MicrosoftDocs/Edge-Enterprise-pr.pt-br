@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Interrompendo downloads de arquivos potencialmente perigosos
-ms.openlocfilehash: 527b98b54cf03f6c116624296c63803b57a7f0c4
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 2c2827185cad83b3878139ee82dcbc8407a2a6eebcf73f69a9481430c29f3db9
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642667"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11727234"
 ---
 # <a name="interrupting-downloads-of-potentially-dangerous-files"></a>Interrompendo downloads de arquivos potencialmente perigosos
 

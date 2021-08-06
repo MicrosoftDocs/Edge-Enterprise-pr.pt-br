@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Isolamento de navegador Microsoft Edge usando o Application Guard
-ms.openlocfilehash: b7056a4d1081bab576094f9bc0b5b86d17395408
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: bbf8b39d4cf7f1b22ee696882e20a98d4e10d5c9a6453a6bdb76c312b3549947
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642997"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11727414"
 ---
 # <a name="video-microsoft-edge-browser-isolation-using-application-guard"></a>Vídeo: Isolamento de navegador Microsoft Edge usando o Application Guard
 

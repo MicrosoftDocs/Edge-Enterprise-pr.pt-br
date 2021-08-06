@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Manter a navegação na página no modo do Internet Explorer
-ms.openlocfilehash: 20b18d121c3babfaacffd4a08316b25be714d95e
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: f1c40977ba07f0a85bc64aab8e609163f9a68dd2eb7487adff6b6a1fcbd110f2
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641357"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11724274"
 ---
 # <a name="keep-in-page-navigation-in-internet-explorer-mode"></a>Manter a navegação na página no modo do Internet Explorer
 
@@ -60,9 +60,9 @@ Para manter as navegações automáticas ou toda a navegação na página no mod
 
    - **Padrão** - Apenas sites configurados para abrir no modo Internet Explorer serão abertos nesse modo. Qualquer site não configurado para abrir no modo Internet Explorer será redirecionado de volta ao Microsoft Edge.
    - **Manter apenas navegações automáticas no modo Internet Explorer** - Use essa opção se desejar a experiência padrão, exceto que todas as navegações automáticas (como redirecionamentos 302) para sites não configurados serão mantidas no modo Internet Explorer.
-   - **Manter toda a navegação na página no modo Internet Explorer**  * *_(Menos Recomendado)_*_ - Todas as navegação de páginas carregadas no modo IE para sites não configurados são mantidas no modo Internet Explorer.
+   - **Mantenha toda a navegação** na página no modo Internet Explorer **_(Menos Recomendado)_** – Todas as navegação de páginas carregadas no modo IE para sites não configurados são mantidas no modo Internet Explorer.
 
-6. Clique em _*OK** **ou Aplicar** para salvar as configurações de política.
+6. Clique em **OK** ou **Aplicar** para salvar as configurações de política.
 
 ## <a name="see-also"></a>Consulte também
 

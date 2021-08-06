@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Atualizações do Windows para o Microsoft Edge
-ms.openlocfilehash: b99d3d7ed048cb829fd2328be9e4e7376334652c
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: a9751b45a76ec52aca034e62b06cec4e7d7f5e30abafdfebd10595a0c50e6e32
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642377"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11727604"
 ---
 # <a name="windows-updates-to-support-the-next-version-of-microsoft-edge"></a>Atualizações do Windows para oferecer suporte à próxima versão do Microsoft Edge
 

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Configurar o Microsoft Edge usando o Gerenciamento de Dispositivo Móvel.
-ms.openlocfilehash: 0927d64366652986b87c2f517ca8ebafd4c9ac55
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 8661bab05b5ebad853066eb960389e342cbca3d44d192836cbaf1f07d2220cf3
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641647"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11725354"
 ---
 # <a name="configure-microsoft-edge-using-mobile-device-management"></a>Configurar o Microsoft Edge usando o Gerenciamento de Dispositivo Móvel
 

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Sintaxe da expressão regular 2
-ms.openlocfilehash: 2fd0607939d4dd6ac9730390be869fa5be7149b2
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 48c19aaf039d239c05ef1b7e35faa8cfd6cb37349e53066b45d8183f6c64638d
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642217"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11725994"
 ---
 # <a name="regular-expression-2-re2h-syntax"></a>Sintaxe da Expressão Regular 2 (re2.h)
 
