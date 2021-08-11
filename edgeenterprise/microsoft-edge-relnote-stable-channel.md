@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Stable Channel
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/26/2021
+ms.date: 08/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: c1556f18520c4b7101ea7296a2a1be67ad6ae0d2
-ms.sourcegitcommit: cb264068ccad14eb8ca8393ea04dd3dc8682527a
+ms.openlocfilehash: 02841bd8574a71be63181d474d076dab9c48642e208e7a9c016f330bb1d68e08
+ms.sourcegitcommit: 6e9ce486955bd90db09744307b72245dd4890d01
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "11708660"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "11810211"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão do Microsoft Edge Stable Channel
 
@@ -29,7 +29,19 @@ Essas notas de versão fornecem informações dos novos recursos e atualizaçõe
 > [!NOTE]
 > Para o Canal Estável, as atualizações serão implantadas progressivamente por um ou mais dias. Para saber mais, consulte [Distribuições progressivas para atualizações do Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 >
-> A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites - alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+> A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-92090267-august-5"></a>Versão 92.0.902.67: 5 de agosto
+
+As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#august-05-2021).
+
+## <a name="version-92090262-july-29"></a>Versão 92.0.902.62: 29 de julho
+
+Vários bugs e problemas de desempenho corrigidos.
+
+### <a name="modified-policy"></a>Política modificada
+
+- AutoplayAllowed: definir como “Desabilitado” agora define a reprodução automática de mídia como “Limite”
 
 ## <a name="version-92090255-july-22"></a>Versão 92.0.902.55: 22 de julho
 
@@ -37,7 +49,7 @@ As atualizações de segurança do canal Estável estão listadas [aqui](/deploy
 
 ### <a name="feature-updates"></a>Atualizações de recursos
 
-**Os usuários podem acessar facilmente o modo Internet Explorer no Microsoft Edge**. A partir da versão 92 do Microsoft Edge, os usuários podem recarregar um site no modo Internet Explorer no Microsoft Edge em vez de depender do aplicativo autônomo do IE 11 enquanto aguardam a configuração de um site na Lista de Sites do Modo Empresarial. Os usuários serão solicitados a adicionar o site à sua lista de sites locais de forma que a navegação para a mesma página no Microsoft Edge seja renderizada automaticamente no modo IE pelos próximos 30 dias. Você pode usar a política [InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) para configurar essa experiência e permitir o acesso aos pontos de entrada do modo IE, bem como a capacidade de adicionar sites à lista de sites locais. Você pode usar a política [InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationday) para ajustar o número de dias para manter os sites na lista de sites locais. Observe que KB5003698 ou posterior é necessário para Windows 10, versão 1909; ou KB5003690 ou posterior é necessário para Windows 10, versão 2004, Windows 10, versão 20H2 ou Windows 10, versão 21H1 para a experiência de ponta a ponta.
+**Os usuários podem acessar facilmente o modo Internet Explorer no Microsoft Edge**. A partir da versão 92 do Microsoft Edge, os usuários podem recarregar um site no modo Internet Explorer no Microsoft Edge em vez de depender do aplicativo autônomo do IE 11 enquanto aguardam a configuração de um site na Lista de Sites do Modo Empresarial. Os usuários serão solicitados a adicionar o site à sua lista de sites locais de forma que a navegação para a mesma página no Microsoft Edge seja renderizada automaticamente no modo IE pelos próximos 30 dias. Você pode usar a política [InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) para configurar essa experiência e permitir o acesso aos pontos de entrada do modo IE, bem como a capacidade de adicionar sites à lista de sites locais. Você pode usar a política [InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays) para ajustar o número de dias para manter os sites na lista de sites locais. Observe que KB5003698 ou posterior é necessário para Windows 10, versão 1909; ou KB5003690 ou posterior é necessário para Windows 10, versão 2004, Windows 10, versão 20H2 ou Windows 10, versão 21H1 para a experiência de ponta a ponta. Para obter mais informações, [consulte Lista de sites local no modo IE](/deployedge/edge-ie-mode-local-site-list).
 
 **Os arquivos MHTML serão abertos por padrão no modo Internet Explorer**. A partir do Microsoft Edge versão 92 Estável, os tipos de arquivo MHTML serão abertos automaticamente no modo Internet Explorer no Microsoft Edge em vez do aplicativo Internet Explorer (IE11). Isso é mais comumente observado ao tentar visualizar emails do Outlook em um navegador. Essa alteração ocorrerá apenas se o IE11 for o manipulador padrão para este tipo de arquivo. Se você preferir alterar isso, você pode fazê-lo antes de instalar a atualização da versão Estável 92 usando [ esta diretrizes](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration).
 
@@ -64,24 +76,26 @@ Com esta versão mais recente do Microsoft Edge, sua tarefa de usar senhas forte
 
 **Extensão do Outlook**.  Fique por dentro da caixa de entrada do Microsoft Outlook, calendário, tarefas e muito mais sem precisar abrir uma nova janela do navegador.  Você pode obter a nova extensão do Outlook aqui: [Microsoft Outlook - Complementos do Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/microsoft-outlook/kkpalkknhlklpbflpcpkepmmbnmfailf?hl=en-US)
 
+**Em alinhamento com o Chromium de código aberto, Microsoft Edge atualiza a maneira como renderiza tabelas em páginas da Web.** Essa alteração corrige problemas conhecidos e Microsoft Edge mais perto da maneira especificada como as tabelas devem ser renderizações na Web/outros navegadores. Recomendamos que você teste fluxos de trabalho importantes em seu ambiente para problemas inesperados. Um explicador completo está disponível [aqui](https://docs.google.com/document/d/16PFD1GtMI9Zgwu0jtPaKZJ75Q2wyZ9EZnVbBacOfiNA/edit).
+
 ### <a name="new-policies"></a>Novas políticas
 
-- [AADWebSiteSSOUsingThisProfileEnabled](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#aadwebsitessousingthisprofileenabled)Logon único para sites de trabalho ou escola usando este perfil habilitado.
-- [AutomaticHttpsDefault](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#automatichttpsdefault) Configurar HTTPS Automático
-- [HeadlessModeEnabled](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#headlessmodeenabled) Controle o uso do Modo Sem Periféricos
-- [InsecurePrivateNetworkRequestsAllowed](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) Especifica se deve permitir que sites inseguros façam solicitações para pontos de extremidade de rede mais privada.
-- [InsecurePrivateNetworkRequestsAllowedForUrls](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls) Permite que os sites listados façam solicitações para pontos de extremidade de rede mais privada a partir de contextos inseguros
-- [InternetExplorerIntegrationLocalSiteListExpirationDays](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays) Especifique o número de dias que um site permanece na lista de sites do modo IE local
-- [InternetExplorerIntegrationReloadInIEModeAllowed](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) Permite que sites não configurados sejam recarregados no modo Internet Explorer
-- [SharedArrayBufferUnrestrictedAccessAllowed](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#sharedarraybufferunrestrictedaccessallowed) Especifica se SharedArrayBuffers pode ser usado em um contexto não isolado de origem cruzada
+- [AADWebSiteSSOUsingThisProfileEnabled](/DeployEdge/microsoft-edge-policies#aadwebsitessousingthisprofileenabled)Logon único para sites de trabalho ou escola usando este perfil habilitado.
+- [AutomaticHttpsDefault](/DeployEdge/microsoft-edge-policies#automatichttpsdefault) Configurar HTTPS Automático
+- [HeadlessModeEnabled](/DeployEdge/microsoft-edge-policies#headlessmodeenabled) Controle o uso do Modo Sem Periféricos
+- [InsecurePrivateNetworkRequestsAllowed](/DeployEdge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) Especifica se deve permitir que sites inseguros façam solicitações para pontos de extremidade de rede mais privada.
+- [InsecurePrivateNetworkRequestsAllowedForUrls](/DeployEdge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls) Permite que os sites listados façam solicitações para pontos de extremidade de rede mais privada a partir de contextos inseguros
+- [InternetExplorerIntegrationLocalSiteListExpirationDays](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays) Especifique o número de dias que um site permanece na lista de sites do modo IE local
+- [InternetExplorerIntegrationReloadInIEModeAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) Permite que sites não configurados sejam recarregados no modo Internet Explorer
+- [SharedArrayBufferUnrestrictedAccessAllowed](/DeployEdge/microsoft-edge-policies#sharedarraybufferunrestrictedaccessallowed) Especifica se SharedArrayBuffers pode ser usado em um contexto não isolado de origem cruzada
 
 ### <a name="deprecated-policy"></a>Política Preterida
 
-- [InternetExplorerIntegrationTestingAllowed](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) - Permitir teste no modo Internet Explorer.
+- [InternetExplorerIntegrationTestingAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) - Permitir teste no modo Internet Explorer.
 
 ### <a name="obsoleted-policy"></a>Política Obsoleta
 
-- [EnableSha1ForLocalAnchors](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#enablesha1forlocalanchors) Permitir certificados assinados usando SHA-1 quando emitidos por âncoras de confiança locais.
+- [EnableSha1ForLocalAnchors](/DeployEdge/microsoft-edge-policies#enablesha1forlocalanchors) Permitir certificados assinados usando SHA-1 quando emitidos por âncoras de confiança locais.
 
 ## <a name="version-91086471-july-19"></a>Versão 91.0.864.71: 19 de julho
 

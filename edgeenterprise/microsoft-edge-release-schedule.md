@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Agenda de lançamento do Microsoft Edge
-ms.openlocfilehash: 86bdc63be6ebdf182525186efd23ca23def14925
-ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
+ms.openlocfilehash: 297f39ccb58f282682cee858148606b8c19ab12cf22ad4fb2f3c410fd8a50301
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "11675919"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11727324"
 ---
 # <a name="microsoft-edge-release-schedule"></a>Agenda de lançamento do Microsoft Edge
 

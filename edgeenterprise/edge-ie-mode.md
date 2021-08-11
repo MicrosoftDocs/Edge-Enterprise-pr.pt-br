@@ -3,19 +3,19 @@ title: O que é o modo Internet Explorer?
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 06/28/2021
+ms.date: 08/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Saiba como o modo Internet Explorer no Microsoft Edge fornece acesso a sites que precisam do Internet Explorer 11 e acesso a sites modernos.
-ms.openlocfilehash: 5903e8a50f0afa50daa5921f3c97f3dbcbf0c3c5
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: cc88c6745d40bfd33a345d76e2b2090f0f33243271350e4449d698d4a0fab71e
+ms.sourcegitcommit: 6e9ce486955bd90db09744307b72245dd4890d01
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641387"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "11810191"
 ---
 # <a name="what-is-internet-explorer-ie-mode"></a>O que é o modo Internet Explorer (IE)?
 
@@ -46,18 +46,18 @@ Somente os sites que você configurou especificamente (via política) usarão o 
 
 ### <a name="ie-mode-supports-the-following-internet-explorer-functionality"></a>O modo IE oferece suporte à seguinte funcionalidade do Internet Explorer
 
-- Todos os modos de documento e modos corporativos.
-- Controle ActiveX (como por exemplo, Java e Silverlight)
-- Objetos Auxiliares de Navegador 
-- Configurações do Internet Explorer e Políticas de Grupo que afetam as configurações da zona de segurança e o Modo Protegido
-- As ferramentas de desenvolvedor F12 para o IE, quando iniciadas com o [IEChooser](/office/dev/add-ins/testing/debug-add-ins-using-f12-developer-tools-on-windows-10)
-- Extensões do Microsoft Edge (extensões que interagem com o conteúdo da página do IE diretamente não têm suporte.)
+- Todos os modos do documento e modos corporativos.
+- Controles do ActiveX (como Java ou Silverlight). **Observação**: o Silverlight não [terá mais suporte](https://support.microsoft.com/windows/silverlight-end-of-support-0a3be3c7-bead-e203-2dfd-74f0a64f1788) a partid do dia 12 de outubro de 2021. 
+- Objetos auxiliares do navegador 
+- Configurações do Internet Explorer e políticas de grupo que afetam as configurações da zona de segurança e o Modo Protegido
+- Ferramentas de desenvolvedor F12 para IE, quando lançadas com [IEChooser](/deployedge/edge-ie-mode-faq#how-can-i-debug-my-legacy-application-while-using-ie-mode-on-microsoft-edge-)
+- Extensões do Microsoft Edge (Extensões que interagem com o conteúdo da página do IE diretamente não recebem suporte.)
 
 ### <a name="ie-mode-doesnt-support-the-following-internet-explorer-functionality"></a>O modo IE não oferece suporte à seguinte funcionalidade do Internet Explorer
 
 - Barras de ferramentas do Internet Explorer
-- Configurações do Internet Explorer e Políticas de Grupo que afetam o menu de navegação (por exemplo, mecanismos de pesquisa e home pages).
-- Ferramentas de desenvolvedor F12 do IE11 ou Microsoft Edge
+- Configurações do Internet Explorer e políticas de grupo que controlam o menu de navegação.
+- Ferramentas de desenvolvedor do IE11 ou Microsoft Edge F12
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

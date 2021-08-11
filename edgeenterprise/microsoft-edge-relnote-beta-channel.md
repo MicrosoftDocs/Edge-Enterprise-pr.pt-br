@@ -3,19 +3,19 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/03/2021
+ms.date: 08/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: 8b76fc92fc5db3433990435e78ee14dcbe306b4096a6c1a6ba919faebc074768
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: bea9c325471617c0ad680b0dabe8cd0d847d5ac0d95941f773471f74ffd0f771
+ms.sourcegitcommit: b5093c47bd5e927cde1d486eb71e0ee2483a8bd8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11725754"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "11810465"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão do canal do Microsoft Edge beta
 
@@ -28,17 +28,17 @@ Estas notas de versão fornecem informações sobre os novos recursos e atualiza
 
 ### <a name="feature-updates"></a>Atualizações de recursos
 
-- **Preferências iniciais Microsoft Edge.**  A implantação Microsoft Edge sua empresa se tornará mais fácil a partir da versão 93, com a adição de Preferências Iniciais.
+- **Preferências iniciais Microsoft Edge.**  A partir Microsoft Edge versão 93, a implantação de Microsoft Edge para sua empresa se tornará mais fácil com a adição de Preferências Iniciais.
 
-- **O modo IE no Microsoft Edge dará suporte ao comportamento de "nomerge".**  A partir da Borda 93, o modo IE no Microsoft Edge dará suporte à nomegem. Para um usuário final, quando uma nova janela do navegador é lançada de um aplicativo de modo IE, ela estará em uma sessão separada, semelhante ao comportamento de nomeagem no IE11. Você precisará ajustar sua lista de sites para configurar sites que precisam impedir o compartilhamento de sessão como "nomerge". Nos bastidores, para cada janela do Microsoft Edge, a primeira vez que uma guia de modo IE é visitada dentro dessa janela, se for um dos sites designados de "nomerge", essa janela será bloqueada em uma sessão IE "nomerge" diferente de todas as outras janelas Microsoft Edge pelo menos até que a última guia modo IE seja fechada nessa janela. Isso segue o comportamento anterior em que os usuários podiam iniciar o IE com nomerge e também Microsoft Edge sem nomeação por meio de outros mecanismos.
+- **O modo IE no Microsoft Edge dará suporte ao comportamento de "nomerge".**  A partir Microsoft Edge versão 93, o modo IE no Microsoft Edge dará suporte à _nomegem_. Para um usuário final, quando uma nova janela do navegador é lançada de um aplicativo de modo IE, ela estará em uma sessão separada, semelhante ao comportamento no IE11. Você precisará ajustar sua lista de sites para configurar sites que precisam impedir o compartilhamento de sessão. Nos bastidores, para cada janela do Microsoft Edge, a primeira vez que uma guia de modo IE é visitada dentro dessa janela, se for um dos sites designados de "nomerge", essa janela será bloqueada em uma sessão IE "nomerge" diferente de todas as outras janelas Microsoft Edge pelo menos até que a última guia modo IE seja fechada nessa janela. Saiba mais [aqui](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--nomerge--option-that-was-supported-in-internet-explorer-11-).
 
-- **Grupos de guias.**  A capacidade de categorizar guias em grupos definidos pelo usuário ajuda você a encontrar, alternar e gerenciar guias em vários fluxos de trabalho. Para habilitar isso, estamos ativando o grupo de guias começando com Microsoft Edge versão 93.
+- **Grupos de guias.**  A capacidade de categorizar guias em grupos definidos pelo usuário ajuda você a encontrar, alternar e gerenciar guias com mais eficiência em vários fluxos de trabalho. Para habilitar isso, estamos ativando o grupo de guias começando com Microsoft Edge versão 93.
 
 - **Ocultar a barra de título ao usar guias verticais.**  Obter os pixels extras de volta ocultando a barra de título do navegador, enquanto estiver em Guias Verticais. A partir Microsoft Edge versão 93, você pode ir para o edge://settings/appearance e, na seção Personalizar Barra de Ferramentas, selecione a opção para ocultar a barra de título enquanto estiver no modo Guia Vertical.
 
-- **Imagem de vídeo em Imagem (PiP) da barra de ferramentas de foco.**  A partir do Edge versão 93, será ainda mais fácil inserir a imagem no modo Imagem (PiP). Quando você passar o mouse sobre um vídeo com suporte, aparecerá uma barra de ferramentas que permite que você veja esse vídeo em uma janela PiP.  Observe que, no momento, isso está disponível para Microsoft Edge usuários no macOS.  Volte logo à medida que continuarmos nossa versão para Windows usuários.
+- **Imagem de vídeo em Imagem (PiP) da barra de ferramentas de foco.**  A partir Microsoft Edge versão 93, ficará ainda mais fácil inserir Imagem no modo Imagem (PiP). Quando você passar o mouse sobre um vídeo com suporte, aparecerá uma barra de ferramentas que permite que você veja esse vídeo em uma janela PiP.  Observação: isso está disponível atualmente para Microsoft Edge usuários no macOS.  Volte logo à medida que continuarmos nossa adoção para Windows usuários.
 
-- **Remoção do 3DES no TLS.**  A partir do Edge v93, o suporte para o TLS_RSA_WITH_3DES_EDE_CBC_SHA de codificação será removido. Essa alteração está ocorrendo no projeto Chromium, no qual Microsoft Edge se baseia. Para obter mais informações, navegue até a entrada [Status da Plataforma Chrome.](https://chromestatus.com/feature/6678134168485888) Além disso, no Edge v93, a política [TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) estará disponível para dar suporte a cenários que precisam preservar a compatibilidade com servidores desatualizados. Essa política de compatibilidade se tornará obsoleta e interromperá o trabalho no Edge v95. Certifique-se de atualizar os servidores afetados antes disso.
+- **Remoção do 3DES no TLS.**  A partir Microsoft Edge versão 93, o suporte para o TLS_RSA_WITH_3DES_EDE_CBC_SHA de codificação será removido. Essa alteração está ocorrendo no projeto Chromium, no qual Microsoft Edge se baseia. Para obter mais informações, navegue até a entrada [Status da Plataforma Chrome.](https://chromestatus.com/feature/6678134168485888) Além disso, na Microsoft Edge versão 93, a política [TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) estará disponível para dar suporte a cenários que precisam preservar a compatibilidade com servidores desatualizados. Essa política de compatibilidade se tornará obsoleta e não funcionará Microsoft Edge versão 95. Certifique-se de atualizar os servidores afetados antes disso.
 
 ### <a name="new-policies"></a>Novas políticas
 
@@ -106,19 +106,19 @@ Observe que KB5003698 ou posterior é necessário para Windows 10, versão 1909;
 - **Os arquivos MHTML serão abertos por padrão no modo Internet Explorer**. A partir do Microsoft Edge versão 92 Estável, os tipos de arquivo MHTML serão abertos automaticamente no modo Internet Explorer no Microsoft Edge em vez do aplicativo Internet Explorer (IE11). Isso é mais comumente observado ao tentar visualizar emails do Outlook em um navegador. Essa alteração ocorrerá apenas se o IE11 for o manipulador padrão para este tipo de arquivo. Se preferir alterar isso, você pode fazer isso antes de instalar a atualização da versão 92 Estável usando [este guia](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration).
 
 - **Os instrumentos de pagamento agora são sincronizados entre dispositivos**. A partir do Microsoft Edge versão 92, você tem a opção de sincronizar suas informações de pagamento em seus dispositivos conectados.
-Observação: esta é uma Distribuição de Recursos Controlados. Se você não localizar esse recurso, volte em breve enquanto continuamos nossa distribuição.
+Observação: esta é uma Distribuição de Recursos Controlados. Se você não vir esse recurso, volte logo à medida que continuarmos nossa versão.
 
 - **O aviso "Desabilitar extensões do modo de desenvolvedor" pode ser descartado permanentemente**. A partir da versão 92 do Microsoft Edge, você pode desabilitar o aviso "Desabilitar extensões do modo de desenvolvedor" clicando na opção 'Não mostrar novamente'.
-Observação: esta é uma Distribuição de Recursos Controlados. Se você não localizar esse recurso, volte em breve enquanto continuamos nossa distribuição.
+Observação: esta é uma Distribuição de Recursos Controlados. Se você não vir esse recurso, volte logo à medida que continuarmos nossa versão.
 
-- **Gerencie suas extensões diretamente na barra de ferramentas**. O novo menu de extensões na barra de ferramentas permitirá que você oculte/fixe extensões facilmente. Os links rápidos para gerenciar extensões e encontrar novas extensões facilitarão a localização de novas extensões e o gerenciamento das existentes.
-Observação: esta é uma Distribuição de Recursos Controlados. Se você não localizar esse recurso, volte em breve enquanto continuamos nossa distribuição.
+- **Gerenciar suas extensões diretamente da barra de ferramentas**. O novo menu de extensões na barra de ferramentas permitirá que você oculte/fixe extensões facilmente. Os links rápidos para gerenciar extensões e encontrar novas extensões facilitarão a localização de novas extensões e o gerenciamento das existentes.
+Observação: esta é uma Distribuição de Recursos Controlados. Se você não vir esse recurso, volte logo à medida que continuarmos nossa versão.
 
 - **HTTPS automático**. Os usuários terão a opção de atualizar a navegação de HTTP para HTTPS em domínios que provavelmente suportam este protocolo mais seguro. Esse suporte também pode ser configurado para tentar entrega HTTPS para todos os domínios.
 Observação: estamos testando esse recurso e esse comportamento não será detectado se você tiver desativado os experimentos.
 
 - **Melhorias na renderização de fontes**. Foram feitas melhorias na renderização do texto para melhorar a clareza e reduzir o borrão.
-Observação: esta é uma Distribuição de Recursos Controlados. Se você não localizar esse recurso, volte em breve enquanto continuamos nossa distribuição.
+Observação: esta é uma Distribuição de Recursos Controlados. Se você não vir esse recurso, volte logo à medida que continuarmos nossa versão.
 
 ### <a name="policy-updates"></a>Atualizações de política
 
