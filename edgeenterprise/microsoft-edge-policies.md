@@ -245,7 +245,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[SmartScreenEnabled](#smartscreenenabled)|Configurar o Microsoft Defender SmartScreen|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Forçar o Microsoft Defender SmartScreen verifica downloads de fontes confiáveis|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Configura o Microsoft Defender SmartScreen para bloquear aplicativos potencialmente indesejados.|
-### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Página de inicialização&comma; página inicial e nova guia*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startup-home-page-and-new-tab-page"></a>Página de inicialização&comma; página inicial e nova guia*](#startup-home-page-and-new-tab-page-policies)
 
 |Nome da política|Legenda|
 |-|-|
@@ -8771,7 +8771,7 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 
   [Voltar ao início](#microsoft-edge---policies)
 
-  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>Página inicial&comma; de inicialização e políticas de nova guia
+  ## <a name="startup-home-page-and-new-tab-page-policies"></a>Página inicial&comma; de inicialização e políticas de nova guia
 
   [Voltar ao início](#microsoft-edge---policies)
 
