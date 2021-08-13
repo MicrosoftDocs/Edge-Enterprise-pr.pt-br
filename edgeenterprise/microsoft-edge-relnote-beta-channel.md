@@ -10,19 +10,19 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: bea9c325471617c0ad680b0dabe8cd0d847d5ac0d95941f773471f74ffd0f771
-ms.sourcegitcommit: b5093c47bd5e927cde1d486eb71e0ee2483a8bd8
+ms.openlocfilehash: 8d76d11f40f179534120429d3494a50cc19f4a32
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "11810465"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882227"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão do canal do Microsoft Edge beta
 
 Estas notas de versão fornecem informações sobre os novos recursos e atualizações não relacionadas à segurança que estão inclusos no canal Beta do Microsoft Edge. Versões arquivadas dessas notas de versão estão disponíveis [aqui](microsoft-edge-relnote-archive-beta-channel.md).
 
 > [!NOTE]
-> A Plataforma da Web Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites - alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+> A Plataforma da Web Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
 ## <a name="version-93096111-august-3"></a>Versão 93.0.961.11: 3 de agosto
 
@@ -76,6 +76,10 @@ Estas notas de versão fornecem informações sobre os novos recursos e atualiza
 #### <a name="additional-change"></a>Alteração adicional
 
 - [ConfigureShare](/DeployEdge/microsoft-edge-policies#configureshare) Adicionar suporte à plataforma mac
+
+## <a name="version-93096118-august-10"></a>Versão 93.0.961.18: 10 de agosto
+
+Correção de vários bugs e problemas de desempenho.
 
 ## <a name="version-92090262-july-29"></a>Versão 92.0.902.62: 29 de julho
 

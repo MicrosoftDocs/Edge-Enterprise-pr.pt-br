@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: As preferências iniciais dão suporte Microsoft Edge navegador.
-ms.openlocfilehash: 4ac5e69ad1efa61752097348324f917d9155d4f823d520895296c8ab01d7065c
-ms.sourcegitcommit: 6e9ce486955bd90db09744307b72245dd4890d01
+ms.openlocfilehash: 39af88d21107ad548166c749c3ba765754270b48
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2021
-ms.locfileid: "11810221"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882257"
 ---
-# <a name="configure-microsoft-edge-using-initial-preferences-settings-for-the-first-run"></a>Configurar Microsoft Edge configurações de Preferências Iniciais para a primeira executar
+# <a name="configure-microsoft-edge-using-initial-preferences-settings-for-the-first-run"></a>Configurar Microsoft Edge usando as configurações de Preferências Iniciais para a primeira execução
 
 Use as informações a seguir para configurar Microsoft Edge configurações de Preferências Iniciais em seus Windows dispositivos.
 
@@ -86,6 +86,6 @@ Implante o *arquivo initial_preferences* nos dispositivos dos usuários ao mesmo
 
 As preferências iniciais só entrarão em vigor quando o arquivo initial_preferences for implantado antes que o navegador seja executado pela primeira vez pelos usuários finais.  
 
-## <a name="see-also"></a>Conferir também
+## <a name="see-also"></a>Consulte também
 
 - [O *initial_prefrences* de modelo de exemplo](https://www.microsoft.com/edge/business/download)

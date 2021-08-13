@@ -11,12 +11,12 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 3f09367758876662038149627e25e1af70dd9d845999d230f72bb0f07239521f
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: e8af12f6c8093ca06a39527659c61f5a3941cc1d
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726614"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882267"
 ---
 # <a name="microsoft-edge-webview2---policies"></a>Políticas do Microsoft Edge WebView2
 

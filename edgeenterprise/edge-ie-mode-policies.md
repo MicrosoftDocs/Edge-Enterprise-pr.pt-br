@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Configurar políticas do modo IE
-ms.openlocfilehash: a4b5e029935aed7e5d3cf23cc681448464b2f4e4a96d9d380d9cfb60ced88b2b
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 7ca8dffb0bc20acf954cf0f272f3894b39355846
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726104"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882127"
 ---
 # <a name="configure-ie-mode-policies"></a>Configurar políticas do modo IE
 
@@ -75,10 +75,8 @@ Você pode usar as seguintes políticas de grupo para configurar sites específi
     > [!NOTE]
     > Não é obrigatório configurar a política do Microsoft Edge. Muitas organizações usam isso como uma substituição, permitindo-as direcionar a Lista de Sites atual para todos os usuários com a política do IE e direcionar mais facilmente uma versão atualizada para usos piloto com a política do Microsoft Edge.
 
-Para obter mais informações sobre as listas de sites do Modo Empresarial, consulte:
+Para obter mais informações sobre Enterprise de sites do modo, consulte [Use the Enterprise Site List Manager](/deployedge/edge-ie-mode-site-list-manager).
 
-- [Usar o Enterprise Mode Site List Manager](/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager)
-- [Adicionar vários sites à lista de sites do Modo Empresarial usando um arquivo e o Enterprise Mode Site List Manager (esquema v.2)](/internet-explorer/ie11-deploy-guide/add-multiple-sites-to-enterprise-mode-site-list-using-the-version-2-schema-and-enterprise-mode-tool).
 
 ### <a name="configure-using-the-use-the-enterprise-mode-ie-website-list-policy"></a>Configurar usando a política de lista de sites Usar o Modo Empresarial IE
 

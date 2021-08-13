@@ -11,12 +11,12 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 61ea386b4a0762f6b95a0f2c1944ca35d0749ea9d75f85330f85472414988200
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 9693195b466da999c7ada8f6a4453401e684326f
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11724164"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882247"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -245,7 +245,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[SmartScreenEnabled](#smartscreenenabled)|Configurar o Microsoft Defender SmartScreen|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Forçar o Microsoft Defender SmartScreen verifica downloads de fontes confiáveis|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Configura o Microsoft Defender SmartScreen para bloquear aplicativos potencialmente indesejados.|
-### [*<a name="startup-home-page-and-new-tab-page"></a>Página de inicialização&comma; página inicial e nova guia*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Página de inicialização&comma; página inicial e nova guia*](#startup-home-page-and-new-tab-page-policies)
 
 |Nome da política|Legenda|
 |-|-|
@@ -8771,7 +8771,7 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 
   [Voltar ao início](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>Página inicial&comma; de inicialização e políticas de nova guia
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>Página inicial&comma; de inicialização e políticas de nova guia
 
   [Voltar ao início](#microsoft-edge---policies)
 

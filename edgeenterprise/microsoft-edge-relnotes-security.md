@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão para atualizações de segurança do Microsoft Edge
-ms.openlocfilehash: ad0d3c20c5ebcf79e4624e7b02721a674e39000dfb1082e630c7dfa5e366b531
-ms.sourcegitcommit: 6e9ce486955bd90db09744307b72245dd4890d01
+ms.openlocfilehash: efe0bbb1b8b771e92e439f9452696f6d424e4465
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2021
-ms.locfileid: "11810181"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882157"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Notas de versão para atualizações de segurança do Microsoft Edge
 

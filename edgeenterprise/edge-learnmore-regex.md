@@ -1,33 +1,33 @@
 ---
 title: Sintaxe da expressão regular 2
 ms.author: comanea
-author: dan-wesley
+author: AndreaLBarr
 manager: seanlyn
-ms.date: 06/29/2021
+ms.date: 08/12/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Sintaxe da expressão regular 2
-ms.openlocfilehash: 48c19aaf039d239c05ef1b7e35faa8cfd6cb37349e53066b45d8183f6c64638d
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 78f21846c142d67470cd421a34baafa9d0021bd0
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11725994"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882137"
 ---
 # <a name="regular-expression-2-re2h-syntax"></a>Sintaxe da Expressão Regular 2 (re2.h)
 
 As expressões regulares são uma notação para descrever os conjuntos de cadeias de caracteres. Quando uma cadeia de caracteres está no conjunto descrito por uma expressão regular, costumamos dizer que a expressão regular corresponde à cadeia.
 
-A expressão regular mais simples é um único caractere literal. Exceto pelos metacaracteres, como *\ * *? ()|*, os caracteres correspondem a si próprios. Para corresponder a um metacaractere, entre com uma barra invertida: \+ corresponde a um caractere literal de adição.
+A expressão regular mais simples é um único caractere literal. Exceto pelos metacaracteres, como `\*+?()|`, os caracteres correspondem a si próprios. Para corresponder a um metacharacter, escape-o com uma reação invertida: `\+` corresponde a um caractere literal a mais.
 
 Duas expressões regulares podem ser alteradas ou concatenadas para formar uma nova expressão regular se: *e<sub>1</sub>* corresponde a _s_ e *e<sub>2</sub>* corresponde a _t_, nesse caso, *e<sub>1</sub>* | *e<sub>2</sub>* correspondem a _s_ ou _t_, e *e<sub>1</sub>* *e<sub>2</sub>*  correspondem a _st_.
 
-Os metacaracteres _\*_, _+_ e _?_ são operadores de repetição: *e<sub>1</sub>* _\*_ corresponde a uma cadeia de caracteres zero ou mais (possivelmente diferentes), cada uma das quais correspondem a *e<sub>1</sub>*; *e<sub>1</sub>* _+_ corresponde a um ou mais; *e<sub>1</sub>* _?_ iguala zero ou um.
+Os metacaracteres _`\`_, _+_ e _?_ são operadores de repetição: *e<sub>1</sub>* _`\`_ corresponde a uma cadeia de caracteres zero ou mais (possivelmente diferentes), cada uma das quais correspondem a *e<sub>1</sub>*; *e<sub>1</sub>* _+_ corresponde a um ou mais; *e<sub>1</sub>* _?_ iguala zero ou um.
 
-A precedência do operador, da associação mais fraca para a mais forte, é primeiro a alternância, depois a concatenação e, por fim, os operadores de repetição. Os parênteses explícitos podem ser usados para forçar diferentes significados, como nas expressões aritméticas. Alguns exemplos: _ab|cd_ é equivalente a _(ab)|(cd)_ ; _ab\*_ é equivalente a _a(b\*)_ .
+A precedência do operador, da associação mais fraca para a mais forte, é primeiro a alternância, depois a concatenação e, por fim, os operadores de repetição. Os parênteses explícitos podem ser usados para forçar diferentes significados, como nas expressões aritméticas. Alguns exemplos: _ab|cd_ é equivalente _a (ab)|( cd)_ ; _`ab\`_ é equivalente a _`a(b\)`_ .
 
 A sintaxe descrita até o momento é a maior parte da sintaxe de expressão regular _egrep_ do Unix. Esse subconjunto é suficiente para descrever todas as linguagens regulares: uma linguagem regular é um conjunto de cadeias de caracteres que podem ser correspondidos em uma única passagem do texto usando apenas uma quantidade fixa de memória. As facilidades de expressão regular mais recentes (notadamente Perl e aquelas que o copiaram) adicionaram muitos novos operadores e sequências de escape, o que torna as expressões regulares mais concisas e, às vezes, mais irregulares, mas, geralmente, não mais robustas.
 
