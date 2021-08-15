@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Stable Channel
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/05/2021
+ms.date: 08/06/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: 02841bd8574a71be63181d474d076dab9c48642e208e7a9c016f330bb1d68e08
-ms.sourcegitcommit: 6e9ce486955bd90db09744307b72245dd4890d01
+ms.openlocfilehash: ab373397b49405ec608e27e8f51309489715d940
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2021
-ms.locfileid: "11810211"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882117"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão do Microsoft Edge Stable Channel
 
@@ -57,7 +57,7 @@ As atualizações de segurança do canal Estável estão listadas [aqui](/deploy
 
 **Gerenciar suas extensões diretamente da barra de ferramentas**. O novo menu de extensões na barra de ferramentas permitirá que você oculte/fixe extensões facilmente. Os links rápidos para gerenciar extensões e encontrar novas extensões facilitarão a localização de novas extensões e o gerenciamento das existentes.
 
-**O padrão para reprodução automática será definido como Limitado**.  Para ajudá-lo a manter seu foco online, mudamos o padrão para reprodução automática de mídia para Limite de Permitir, começando com a versão 92 do Microsoft Edge.
+**O padrão para reprodução automática será definido como Limite**.  Para ajudá-lo a manter seu foco online, mudamos o padrão para reprodução automática de mídia para Limite de Permitir, começando com a versão 92 do Microsoft Edge.
 
 **Os instrumentos de pagamento agora são sincronizados entre dispositivos**. A partir do Microsoft Edge versão 92, você tem a opção de sincronizar suas informações de pagamento em seus dispositivos conectados. Observação: esta é uma Distribuição de Recursos Controlados. Se você não localizar esse recurso, volte em breve enquanto continuamos nossa distribuição.
 Atualmente, esse recurso está disponível apenas nos EUA e somente para usuários MSA (não AAD)
