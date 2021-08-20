@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Definir as configurações de política do Microsoft Edge para Windows usando o Microsoft Intune.
-ms.openlocfilehash: cd11c8c92d67197d9cf1a24691615b0a56dd727626b9741b5664a5d1080ba950
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 63eb29018bf4ec9c5a32d11b215f422e150383c9
+ms.sourcegitcommit: e811be46e3236534c5fa17c728ffc1005c5cc295
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11725444"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "11907255"
 ---
 # <a name="configure-microsoft-edge-policy-settings-with-microsoft-intune"></a>Definir as configurações de política do Microsoft Edge com o Microsoft Intune
 
@@ -53,7 +53,8 @@ Esse procedimento alavanca os Modelos Administrativos (que você pode estar fami
 3. Em **Dispositivos** | **Visão geral**, selecione **Perfis de configuração** (em Título da política).
 4. Na barra de comandos superior, selecione **Criar perfil**.
 5. Na lista suspensa abaixo **Plataforma**, selecione **Windows 10 e versão posterior**.
-6. Na lista suspensa abaixo **Perfil**, selecione **Modelos administrativos** e clique no botão **Criar**. A próxima captura de tela mostra as listas suspensas para selecionar a plataforma e o tipo de perfil.
+6. Na lista lista lista abaixo Tipo de **Perfil,** selecione **Modelos**.
+7. Em Em **Nome do Modelo,** selecione **Modelos Administrativos** e clique no **botão Criar.** A próxima captura de tela mostra as listas suspensas para selecionar a plataforma e o tipo de perfil.
 
     ![Selecionar a plataforma e o tipo de perfil](./media/configure-edge-with-intune/create-profile-platform.png)
 
