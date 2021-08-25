@@ -3,19 +3,19 @@ title: Agenda de lançamento do Microsoft Edge
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/15/2021
+ms.date: 08/24/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Agenda de lançamento do Microsoft Edge
-ms.openlocfilehash: 297f39ccb58f282682cee858148606b8c19ab12cf22ad4fb2f3c410fd8a50301
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 393203cf7b4036fc5163c8f45f76d1d104f34bc4
+ms.sourcegitcommit: ba073a0f8bc552d12539bdc7a83b49c5d730ac7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11727324"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "11925228"
 ---
 # <a name="microsoft-edge-release-schedule"></a>Agenda de lançamento do Microsoft Edge
 
@@ -43,10 +43,10 @@ A tabela a seguir apenas rastreia e fornece informações para versões principa
 |---------|-----|------|--------|
 | 88 | Lançada<br>Versão | 09 de novembro de 2020<br>[88.0.705.18](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-88070518-december-9) | 21 de janeiro de 2021<br>[88.0.705.50](/deployedge/microsoft-edge-relnote-archive-stable-channel#version-88070550-january-21)|
 | 89 | Lançada<br>Versão | 03 de fevereiro de 2021<br>[89.0.774.18](/deployedge/microsoft-edge-relnote-beta-channel#version-89077423-february-8) | 04-mar-2021<br>[89.0.774.45](/deployedge/microsoft-edge-relnote-stable-channel#version-89077445-march-4) |
-| **90** | Liberado<br>Versão | 16 de março de 2021<br>[90.0.818.8](/deployedge/microsoft-edge-relnote-beta-channel#version-9008188-march-16) | **15 de abril de 2021**<BR>**[90.0.818.39](/deployedge/microsoft-edge-relnote-stable-channel#version-90081839-april-15)** |
-| **91** | Liberado<br>Versão | **30 de abril de 2021**<br>[91.0.864.11](/deployedge/microsoft-edge-relnote-beta-channel#version-91086411-april-30) | **27 de maio de 2021**<BR>**[91.0.864.37](/deployedge/microsoft-edge-relnote-stable-channel#version-91086437-may-27)** |
-| 92 | Liberado<br>Versão | 08-Jun-2021<br>[92.0.902.9](/deployedge/microsoft-edge-relnote-beta-channel#version-9209029-june-08) | Liberado |
-| 93 | Lançamento previsto | Semana de 03 de agosto de 2021 | Semana de 02 de setembro de 2021 |
+| 90 | Liberado<br>Versão | 16 de março de 2021<br>[90.0.818.8](/deployedge/microsoft-edge-relnote-beta-channel#version-9008188-march-16) | 15 de abril de 2021<BR>[90.0.818.39](/deployedge/microsoft-edge-relnote-stable-channel#version-90081839-april-15) |
+| 91 | Liberado<br>Versão | 30 de abril de 2021<br>[91.0.864.11](/deployedge/microsoft-edge-relnote-beta-channel#version-91086411-april-30) | 27 de maio de 2021<BR>[91.0.864.37](/deployedge/microsoft-edge-relnote-stable-channel#version-91086437-may-27) |
+| 92 | Liberado<br>Versão | 08-Jun-2021<br>[92.0.902.9](/deployedge/microsoft-edge-relnote-beta-channel#version-9209029-june-08) | 22-Julho-2021<BR>[92.0.902.55](/deployedge/microsoft-edge-relnote-stable-channel#version-92090255-july-22) |
+| 93 | Liberado<br>Versão | 03-Ago-2021<br>[93.0.961.11](/deployedge/microsoft-edge-relnote-beta-channel#version-93096111-August-03) | Semana de 02 de setembro de 2021 |
 | 94 | Lançamento previsto | Semana de 01 de setembro de 2021 | Semana de 23 de setembro de 2021 |
 | 95 | Lançamento previsto | Semana de 28 de setembro de 2021 | Semana de 21 de outubro de 2021 |
 | 96 | Lançamento previsto | Semana de 26 de outubro de 2021 | Semana de 18 de novembro de 2021 |
@@ -62,7 +62,7 @@ A referência de data (lançado/semana do lançamento) para o canal estável ref
 
 Usamos um modelo de implantação progressiva, o que significa que a nova disponibilidade de versão para um determinado dispositivo poderia ser escalonada nos próximos dias. Para obter mais informações, confira [distribuições progressivas para o canal estável do Microsoft Edge](/deployedge/microsoft-edge-update-progressive-rollout).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Canais do Microsoft Edge](/deployedge/microsoft-edge-channels)
