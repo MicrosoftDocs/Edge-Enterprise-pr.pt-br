@@ -3,19 +3,19 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/20/2021
+ms.date: 08/25/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: 5bf7a834343c4a5531f1c73cc77996e6e016eb2e
-ms.sourcegitcommit: 81ecf79c5fd604cae91aaec3786859172c83ec79
+ms.openlocfilehash: d6912d275ca74bdd46b4d5997e34d62502562986
+ms.sourcegitcommit: 43e123dcb1a871e3fb9e0fdab096b8ea3d372bc7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "11909906"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "11925318"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão do canal do Microsoft Edge beta
 
@@ -47,6 +47,14 @@ Correção de vários bugs e problemas de desempenho.
 - **Imagem de vídeo em Imagem (PiP) da barra de ferramentas de foco.**  A partir Microsoft Edge versão 93, ficará ainda mais fácil inserir Imagem no modo Imagem (PiP). Quando você passar o mouse sobre um vídeo com suporte, aparecerá uma barra de ferramentas que permite que você veja esse vídeo em uma janela PiP.  Observação: isso está disponível atualmente para Microsoft Edge usuários no macOS.  Volte logo à medida que continuarmos nossa adoção para Windows usuários.
 
 - **Remoção do 3DES no TLS.**  A partir Microsoft Edge versão 93, o suporte para o TLS_RSA_WITH_3DES_EDE_CBC_SHA de codificação será removido. Essa alteração está ocorrendo no projeto Chromium, no qual Microsoft Edge se baseia. Para obter mais informações, navegue até a entrada [Status da Plataforma Chrome.](https://chromestatus.com/feature/6678134168485888) Além disso, na Microsoft Edge versão 93, a política [TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) estará disponível para dar suporte a cenários que precisam preservar a compatibilidade com servidores desatualizados. Essa política de compatibilidade se tornará obsoleta e não funcionará Microsoft Edge versão 95. Certifique-se de atualizar os servidores afetados antes disso.
+
+- **Políticas para ignorar ClickOnce e prompts do DirectInvoke.**  Atualizamos nossas políticas para habilitar o bypass ClickOnce prompts do ClickOnce e o aplicativo do DirectInvoke para tipos de arquivo especificados, de domínios especificados. Para fazer isso, você precisará:
+
+  - [Habilitar ClickOnceEnabled](/deployedge/microsoft-edge-policies#clickonceenabled) [ou DirectInvokeEnabled](/deployedge/microsoft-edge-policies#directinvokeenabled)
+  - [Habilitar a política AutoOpenFileTypes](/deployedge/microsoft-edge-policies#autoopenfiletypes) e definir a lista de tipos de arquivo específicos para os quais ClickOnce e DirectInvoke devem ser desabilitados
+  - Habilita [a política AutoOpenAllowedForURLs](/deployedge/microsoft-edge-policies#autoopenallowedforurls) e defina a lista de domínios específicos para os ClickOnce e o DirectInvoke serão desabilitados
+
+  Observação: AutoOpenAllowedForURLs é uma política de suporte para AutoOpenFileTypes. Se AutoOpenAllowedForURLs não estiver definido e AutoOpenFileTypes estiver definido, os tipos de arquivo listados abrirão automaticamente de todas as URLs.
 
 ### <a name="new-policies"></a>Novas políticas
 
