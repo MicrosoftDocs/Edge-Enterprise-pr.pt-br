@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: d6912d275ca74bdd46b4d5997e34d62502562986
-ms.sourcegitcommit: 43e123dcb1a871e3fb9e0fdab096b8ea3d372bc7
+ms.openlocfilehash: dc2eebb2faabd4c04e0db4a5be4ffaaaff8aebcf
+ms.sourcegitcommit: 51a858ee4b1f837df85dbcca335f4abebae7771b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "11925318"
+ms.lasthandoff: 08/27/2021
+ms.locfileid: "11925997"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão do canal do Microsoft Edge beta
 
@@ -23,6 +23,10 @@ Estas notas de versão fornecem informações sobre os novos recursos e atualiza
 
 > [!NOTE]
 > A Plataforma da Web Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-93096133-august-27"></a>Versão 93.0.961.33: 27 de agosto
+
+Correção de vários bugs e problemas de desempenho.
 
 ## <a name="version-93096127-august-20"></a>Versão 93.0.961.27: 20 de agosto
 

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Suporte do Microsoft Edge para o Windows Defender Application Guard
-ms.openlocfilehash: 4bb8f48bd5ccdfd555d44cecc8cfe9253a6ba17e42f60e2b8a0086411c10e9fb
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 4d9f5b0590199a9938b19e60fdd38e7c0098ac76
+ms.sourcegitcommit: 51a858ee4b1f837df85dbcca335f4abebae7771b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11727004"
+ms.lasthandoff: 08/27/2021
+ms.locfileid: "11925987"
 ---
 # <a name="microsoft-edge-support-for-microsoft-defender-application-guard"></a>Suporte do Microsoft Edge para o Windows Defender Application Guard
 
@@ -50,6 +50,13 @@ A próxima captura de tela mostra um exemplo de mensagem do Application Guard qu
 ## <a name="whats-new"></a>Novidades
 
 O suporte do Application Guard no novo navegador Microsoft Edge tem paridade funcional com a Versão Prévia do Microsoft Edge e inclui vários aperfeiçoamentos.
+
+### <a name="enable-application-guard-in-passive-mode-and-browse-edge-normally"></a>Habilitar o Application Guard no modo passivo e procurar Borda normalmente
+
+A partir Microsoft Edge 94, os usuários agora têm a opção de configurar o modo passivo, o que significa que o Application Guard ignora a configuração da lista de sites e os usuários podem navegar no Edge normalmente. Este suporte pode ser controlado pela política. Você pode atualizar a política de borda [ApplicationGuardPassiveModeEnabled](/deployedge/microsoft-edge-policies#applicationguardpassivemodeenabled) para habilitar ou desabilitar o modo passivo.
+
+> [!Note]
+> Essa política AFETA SOMENTE o Edge, portanto, as navegação de outros navegadores podem ser redirecionadas para o Contêiner do Application Guard se você tiver as extensões correspondentes habilitadas.
 
 ### <a name="favorites-synchronizing-from-the-host-to-the-container"></a>Favoritos sincronizando do host para o contêiner
 
