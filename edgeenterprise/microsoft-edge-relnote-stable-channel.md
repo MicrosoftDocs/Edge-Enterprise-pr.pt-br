@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: 6a4c65d253a88384da7393ab846777093dc86e86
-ms.sourcegitcommit: 584a6a9877ae0c3fcb9acc0b8c158e280b0360ff
+ms.openlocfilehash: 3c21b06358d4aa563b67027d65a1aa5fec5f5dfc
+ms.sourcegitcommit: 51a858ee4b1f837df85dbcca335f4abebae7771b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2021
-ms.locfileid: "11912056"
+ms.lasthandoff: 08/27/2021
+ms.locfileid: "11926007"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão do Microsoft Edge Stable Channel
 
@@ -29,7 +29,11 @@ Essas notas de versão fornecem informações dos novos recursos e atualizaçõe
 > [!NOTE]
 > Para o Canal Estável, as atualizações serão implantadas progressivamente por um ou mais dias. Para saber mais, consulte [Distribuições progressivas para atualizações do Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 >
-> A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+> A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que estão chegando e afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-92090284-august-26"></a>Versão 92.0.902.84: 26 de agosto
+
+Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-92090278-august-19"></a>Versão 92.0.902.78: 19 de agosto
 
