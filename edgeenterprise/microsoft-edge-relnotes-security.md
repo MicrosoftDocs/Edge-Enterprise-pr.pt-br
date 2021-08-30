@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão para atualizações de segurança do Microsoft Edge
-ms.openlocfilehash: b4f4a217a56bfb37a7f623e5040876ac268ff561
-ms.sourcegitcommit: 81ecf79c5fd604cae91aaec3786859172c83ec79
+ms.openlocfilehash: 28069b5693e0314ec5c99ea41f3ddedef9fe5ff2
+ms.sourcegitcommit: af1b1bad562dfd71c20bfab4fe00512cf956beb7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "11909916"
+ms.lasthandoff: 08/27/2021
+ms.locfileid: "11926027"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Notas de versão para atualizações de segurança do Microsoft Edge
 
@@ -104,7 +104,6 @@ A Microsoft lançou o **Canal Estável do mais recente do Microsoft Edge(versão
 
 A Microsoft lançou o Canal Estável mais recente do **Microsoft Edge (versão 89.0.774.68)**, que incorpora as Atualizações de Segurança mais recentes do projeto Chromium. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
 
-
 ## <a name="march-13-2021"></a>13 de março de 2021
 
 A Microsoft lançou o **Microsoft Edge Stable Channel (versão 89.0.774.54 )**, que incorpora as atualizações de segurança mais recentes do projeto Chromium. Esta atualização contém [CVE-2021-21193](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21193) que foi relatada pela equipe do Chromium como tendo uma exploração na natureza. Para obter mais informações, consulte o [Guia de atualização de segurança](https://msrc.microsoft.com/update-guide).
@@ -123,7 +122,11 @@ A Microsoft lançou o canal mais recente do **Microsoft Edge (versão 88.0.705.6
 
 ## <a name="february-4-2021"></a>4 de Fevereiro de 2021
 
-A Microsoft lançou o mais recente **Microsoft Edge Stable Channel (versão 88.0.705.62)**, que incorpora as atualizações de segurança mais recentes do projeto Chromium. Para obter mais informações, consulte o [Guia de atualização de segurança](https://msrc.microsoft.com/update-guide).
+A Microsoft lançou o  **Canal Estável mais recente do Microsoft Edge (versão 88.0.705.62)**, que incorpora as atualizações de segurança mais recentes do projeto Chromium. Para obter mais informações, confira [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
+
+Esta instalação contém a seguinte atualização específica do Microsoft Edge:
+
+- [CVE-2021-24113](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-24113)
 
 ## <a name="january-21-2021"></a>21 de janeiro de 2021
 
