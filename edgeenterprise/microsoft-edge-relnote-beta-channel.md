@@ -3,26 +3,26 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/25/2021
+ms.date: 08/31/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: dc2eebb2faabd4c04e0db4a5be4ffaaaff8aebcf
-ms.sourcegitcommit: 51a858ee4b1f837df85dbcca335f4abebae7771b
+ms.openlocfilehash: 1fad7c52819ce5ca6516d400ea00151a54bc66e7
+ms.sourcegitcommit: 822db9d312a13a13928ff1c10c2b35b6b46598fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2021
-ms.locfileid: "11925997"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "11934621"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão do canal do Microsoft Edge beta
 
 Estas notas de versão fornecem informações sobre os novos recursos e atualizações não relacionadas à segurança que estão inclusos no canal Beta do Microsoft Edge. Versões arquivadas dessas notas de versão estão disponíveis [aqui](microsoft-edge-relnote-archive-beta-channel.md).
 
 > [!NOTE]
-> A Plataforma da Web Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+> A Plataforma da Web Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que estão chegando e afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
 ## <a name="version-93096133-august-27"></a>Versão 93.0.961.33: 27 de agosto
 
@@ -30,7 +30,7 @@ Correção de vários bugs e problemas de desempenho.
 
 ## <a name="version-93096127-august-20"></a>Versão 93.0.961.27: 20 de agosto
 
-Correção de vários bugs e problemas de desempenho.
+Vários bugs corrigidos e problemas de desempenho.
 
 ## <a name="version-93096124-august-18"></a>Versão 93.0.961.24: 18 de agosto
 
@@ -42,7 +42,7 @@ Correção de vários bugs e problemas de desempenho.
 
 - **Preferências iniciais Microsoft Edge.**  A partir Microsoft Edge versão 93, a implantação de Microsoft Edge para sua empresa se tornará mais fácil com a adição de Preferências Iniciais.
 
-- **O modo IE no Microsoft Edge dará suporte ao comportamento de "nomerge".**  A partir Microsoft Edge versão 93, o modo IE no Microsoft Edge dará suporte à _nomegem_. Para um usuário final, quando uma nova janela do navegador é lançada de um aplicativo de modo IE, ela estará em uma sessão separada, semelhante ao comportamento no IE11. Você precisará ajustar sua lista de sites para configurar sites que precisam impedir o compartilhamento de sessão. Nos bastidores, para cada janela do Microsoft Edge, a primeira vez que uma guia de modo IE é visitada dentro dessa janela, se for um dos sites designados de "nomerge", essa janela será bloqueada em uma sessão IE "nomerge" diferente de todas as outras janelas Microsoft Edge pelo menos até que a última guia modo IE seja fechada nessa janela. Saiba mais [aqui](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--nomerge--option-that-was-supported-in-internet-explorer-11-).
+- **O modo IE no Microsoft Edge dará suporte ao comportamento "não mesclar".**  A partir Microsoft Edge versão 93, o modo IE no Microsoft Edge dará suporte a "no-merge". Para um usuário final, quando uma nova janela do navegador é lançada de um aplicativo de modo IE, ela estará em uma sessão separada, semelhante ao comportamento no IE11. Você precisará ajustar sua lista de sites para configurar sites que precisam impedir o compartilhamento de sessão. Nos bastidores, para cada janela do Microsoft Edge, a primeira vez que uma guia de modo IE é visitada dentro dessa janela, se for um dos sites designados "sem mesclagem", essa janela será bloqueada em uma sessão do IE "sem mesclagem" diferente de todas as outras janelas Microsoft Edge pelo menos até que a última guia modo IE seja fechada nessa janela. Saiba mais [aqui](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--no-merge--option-that-was-supported-in-internet-explorer-11-).
 
 - **Grupos de guias.**  A capacidade de categorizar guias em grupos definidos pelo usuário ajuda você a encontrar, alternar e gerenciar guias com mais eficiência em vários fluxos de trabalho. Para habilitar isso, estamos ativando o grupo de guias começando com Microsoft Edge versão 93.
 
@@ -99,11 +99,11 @@ Correção de vários bugs e problemas de desempenho.
 
 ## <a name="version-93096118-august-10"></a>Versão 93.0.961.18: 10 de agosto
 
-Correção de vários bugs e problemas de desempenho.
+Vários bugs corrigidos e problemas de desempenho.
 
 ## <a name="version-92090262-july-29"></a>Versão 92.0.902.62: 29 de julho
 
-Correção de vários bugs e problemas de desempenho.
+Vários bugs corrigidos e problemas de desempenho.
 
 ## <a name="version-92090255-july-21"></a>Versão 92.0.902.55: 21 de julho
 
@@ -111,11 +111,11 @@ Correção de vários bugs e problemas de desempenho.
 
 ## <a name="version-92090245-july-12"></a>Versão 92.0.902.45: 12 de julho
 
-Correção de vários bugs e problemas de desempenho.
+Vários bugs corrigidos e problemas de desempenho.
 
 ## <a name="version-92090240-july-6"></a>Versão 92.0.902.40: 6 de julho
 
-Correção de vários bugs e problemas de desempenho.
+Vários bugs corrigidos e problemas de desempenho.
 
 ## <a name="version-92090222-june-21"></a>Versão 92.0.902.22: 21 de junho
 
