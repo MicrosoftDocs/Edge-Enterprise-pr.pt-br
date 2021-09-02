@@ -1,22 +1,22 @@
 ---
 title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
-author: dan-wesley
+author: AndreaLBarr
 manager: tahills
-ms.date: 08/01/2021
+ms.date: 08/31/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 9693195b466da999c7ada8f6a4453401e684326f
-ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
-ms.translationtype: MT
+ms.openlocfilehash: 9b71e641af62b0ad56e4f2e9bf52a061dafa52a3
+ms.sourcegitcommit: 5aeaeb85eba7572d1871ad55568a8bea4d4a4e5f
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "11882247"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "11934570"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -33,6 +33,7 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 
 Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disponíveis nesta versão do Microsoft Edge. Use os links na tabela a seguir para obter mais detalhes sobre políticas específicas.
 
+- [Permitir ou negar captura de tela](#allow-or-deny-screen-capture)
 - [Configurações do Application Guard](#application-guard-settings)
 - [Cast](#cast)
 - [Configurações de conteúdo](#content-settings)
@@ -40,7 +41,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 - [Experimentação](#experimentation)
 - [Extensões](#extensions)
 - [Autenticação HTTP](#http-authentication)
-- [Identidade e login](#identity-and-sign-in)
+- [Identidade e credenciais](#identity-and-sign-in)
 - [Configurações do modo de quiosque](#kiosk-mode-settings)
 - [Capacidade de gerenciamento](#manageability)
 - [Sistema de mensagens nativo](#native-messaging)
@@ -55,12 +56,18 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 - [Adicional](#additional)
 
 
+### [*<a name="allow-or-deny-screen-capture"></a>Permitir ou negar captura de tela*](#allow-or-deny-screen-capture-policies)
+
+|Nome da política|Legenda|
+|-|-|
+|[ScreenCaptureAllowed](#screencaptureallowed)|Permitir ou negar captura de tela|
 ### [*<a name="application-guard-settings"></a>Configurações do Application Guard*](#application-guard-settings-policies)
 
 |Nome da política|Legenda|
 |-|-|
 |[ApplicationGuardContainerProxy](#applicationguardcontainerproxy)|Proxy de contêiner do Application Guard|
 |[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Habilitada a Sincronização de Favoritos do Application Guard|
+|[ApplicationGuardPassiveModeEnabled](#applicationguardpassivemodeenabled)|Ignorar a configuração de lista do Application Guard configuração e navegar no Edge normalmente|
 |[ApplicationGuardTrafficIdentificationEnabled](#applicationguardtrafficidentificationenabled)|Identificação de Tráfego de Proteção de Aplicativo|
 ### [*<a name="cast"></a>Reproduzir em*](#cast-policies)
 
@@ -82,7 +89,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[DefaultGeolocationSetting](#defaultgeolocationsetting)|Configuração de geolocalização padrão|
 |[DefaultImagesSetting](#defaultimagessetting)|Configuração de imagens padrão|
 |[DefaultInsecureContentSetting](#defaultinsecurecontentsetting)|Controlar o uso de exceções de conteúdo não seguro|
-|[DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting)|Controle o uso do JavaScript JIT|
+|[DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting)|Controlar o uso do JIT do JavaScript|
 |[DefaultJavaScriptSetting](#defaultjavascriptsetting)|Configuração padrão de JavaScript|
 |[DefaultNotificationsSetting](#defaultnotificationssetting)|Configuração de notificação padrão|
 |[DefaultPluginsSetting](#defaultpluginssetting)|Configuração padrão do Adobe Flash (obsoleta)|
@@ -99,8 +106,8 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[InsecureContentBlockedForUrls](#insecurecontentblockedforurls)|Bloquear conteúdo inseguro em sites especificados|
 |[JavaScriptAllowedForUrls](#javascriptallowedforurls)|Permitir JavaScript em sites específicos|
 |[JavaScriptBlockedForUrls](#javascriptblockedforurls)|Bloquear o JavaScript em sites específicos|
-|[JavaScriptJitAllowedForSites](#javascriptjitallowedforsites)|Permitir que JavaScript use JIT nesses sites|
-|[JavaScriptJitBlockedForSites](#javascriptjitblockedforsites)|Impedir que o JavaScript use JIT nesses sites|
+|[JavaScriptJitAllowedForSites](#javascriptjitallowedforsites)|Permitir que o JavaScript use o JIT nesses sites|
+|[JavaScriptJitBlockedForSites](#javascriptjitblockedforsites)|Impedir que o JavaScript use o JIT nesses sites|
 |[LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)|Habilitar a configuração de comportamento de cookie SameSite herdado padrão (preterido)|
 |[LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist)|Reverter para o comportamento herdado SameSite para cookies em sites especificados|
 |[NotificationsAllowedForUrls](#notificationsallowedforurls)|Permitir notificações em sites específicos|
@@ -110,7 +117,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[PopupsAllowedForUrls](#popupsallowedforurls)|Permitir janelas pop-up em sites específicos|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|Bloquear janelas pop-up em sites específicos|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|Registrar manipuladores de protocolo|
-|[ShowPDFDefaultRecommendationsEnabled](#showpdfdefaultrecommendationsenabled)|Permitir que as notificações deem Microsoft Edge como leitor de PDF padrão|
+|[ShowPDFDefaultRecommendationsEnabled](#showpdfdefaultrecommendationsenabled)|Permitir que as notificações definam o Microsoft Edge como leitor de PDF padrão|
 |[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Escolher se os usuários podem receber imagens de plano de fundo, textos, sugestões, notificações e dicas personalizados para serviços Microsoft|
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|Conceder acesso a sites específicos para conectar-se a dispositivos USB específicos|
 |[WebUsbAskForUrls](#webusbaskforurls)|Permitir WebUSB em sites específicos|
@@ -132,7 +139,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 
 |Nome da política|Legenda|
 |-|-|
-|[FeatureFlagOverridesControl](#featureflagoverridescontrol)|Configurar a capacidade dos usuários de substituir sinalizadores de recursos|
+|[FeatureFlagOverridesControl](#featureflagoverridescontrol)|Configurar a capacidade dos usuários de substituir sinalizadores de recurso|
 ### [*<a name="extensions"></a>Extensões*](#extensions-policies)
 
 |Nome da política|Legenda|
@@ -157,12 +164,14 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[EnableAuthNegotiatePort](#enableauthnegotiateport)|Incluir porta não padrão no SPN Kerberos|
 |[NtlmV2Enabled](#ntlmv2enabled)|Controlar se a autenticação NTLMv2 está habilitada|
 |[WindowsHelloForHTTPAuthEnabled](#windowshelloforhttpauthenabled)|Windows Hello Para Autenticação HTTP Habilitada|
-### [*<a name="identity-and-sign-in"></a>Identidade e login*](#identity-and-sign-in-policies)
+### [*<a name="identity-and-sign-in"></a>Identidade e credenciais*](#identity-and-sign-in-policies)
 
 |Nome da política|Legenda|
 |-|-|
-|[ImplicitSignInEnabled](#implicitsigninenabled)|Habilitar a login implícito|
-|[OneAuthAuthenticationEnforced](#oneauthauthenticationenforced)|Autenticação do OneAuth Flow imposta para entrar|
+|[ImplicitSignInEnabled](#implicitsigninenabled)|Habilitar entrada implícita|
+|[OneAuthAuthenticationEnforced](#oneauthauthenticationenforced)|Fluxo de Autenticação OneAuth Imposto para entrada|
+|[OnlyOnPremisesImplicitSigninEnabled](#onlyonpremisesimplicitsigninenabled)|Somente conta local habilitada para entrada implícita|
+|[WAMAuthBelowWin10RS3Enabled](#wamauthbelowwin10rs3enabled)|WAM para autenticação abaixo do Windows 10 RS3 habilitado|
 ### [*<a name="kiosk-mode-settings"></a>Configurações do modo de quiosque*](#kiosk-mode-settings-policies)
 
 |Nome da política|Legenda|
@@ -185,14 +194,14 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 
 |Nome da política|Legenda|
 |-|-|
-|[PasswordGeneratorEnabled](#passwordgeneratorenabled)|Permitir que os usuários recebam uma forte sugestão de senha sempre que eles estão criando uma conta online|
+|[PasswordGeneratorEnabled](#passwordgeneratorenabled)|Permitir que os usuários obtenham uma sugestão de senha forte sempre que estiverem criando uma conta online|
 |[PasswordManagerEnabled](#passwordmanagerenabled)|Habilitar o salvamento de senhas no gerenciador de senhas|
 |[PasswordMonitorAllowed](#passwordmonitorallowed)|Permitir que os usuários sejam alertados caso suas senhas não sejam seguras|
 |[PasswordProtectionChangePasswordURL](#passwordprotectionchangepasswordurl)|Configurar a URL de alteração de senha|
 |[PasswordProtectionLoginURLs](#passwordprotectionloginurls)|Configurar a lista de URLs de logon corporativos onde o serviço de proteção por senha deve capturar os hashes com sal de uma senha|
 |[PasswordProtectionWarningTrigger](#passwordprotectionwarningtrigger)|Configurar o gatilho de aviso de proteção por senha|
 |[PasswordRevealEnabled](#passwordrevealenabled)|Habilitar botão Mostrar senha|
-|[PrimaryPasswordSetting](#primarypasswordsetting)|Configura uma configuração que solicita que os usuários insiram a senha do dispositivo ao usarem o preenchimento automático de senha|
+|[PrimaryPasswordSetting](#primarypasswordsetting)|Define uma configuração que solicita que os usuários insiram a senha do dispositivo ao usar o preenchimento automático de senha|
 ### [*<a name="performance"></a>Desempenho*](#performance-policies)
 
 |Nome da política|Legenda|
@@ -211,7 +220,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)|Modo padrão de impressão de elementos gráficos de plano de fundo|
 |[PrintingEnabled](#printingenabled)|Habilitar impressão|
 |[PrintingPaperSizeDefault](#printingpapersizedefault)|Tamanho da página de impressão padrão|
-|[PrintingWebpageLayout](#printingwebpagelayout)|Define layout para impressão|
+|[PrintingWebpageLayout](#printingwebpagelayout)|Define o layout para impressão|
 |[UseSystemPrintDialog](#usesystemprintdialog)|Imprimir usando a caixa de diálogo de impressão do sistema|
 ### [*<a name="private-network-request-settings"></a>Configurações de solicitação de rede privada*](#private-network-request-settings-policies)
 
@@ -245,7 +254,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[SmartScreenEnabled](#smartscreenenabled)|Configurar o Microsoft Defender SmartScreen|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Forçar o Microsoft Defender SmartScreen verifica downloads de fontes confiáveis|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Configura o Microsoft Defender SmartScreen para bloquear aplicativos potencialmente indesejados.|
-### [*<a name="startup-home-page-and-new-tab-page"></a>Página de inicialização&comma; página inicial e nova guia*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Página de inicialização&comma; página inicial e nova guia*](#startup-home-page-and-new-tab-page-policies)
 
 |Nome da política|Legenda|
 |-|-|
@@ -320,7 +329,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[ConfigureOnPremisesAccountAutoSignIn](#configureonpremisesaccountautosignin)|Configura o login automático com uma conta de domínio do Active Directory quando não houver nenhuma conta de domínio do Azure AD.|
 |[ConfigureOnlineTextToSpeech](#configureonlinetexttospeech)|Configurar Conversão de Texto em Fala online|
 |[ConfigureShare](#configureshare)|Configurar a experiência de compartilhamento|
-|[ConfigureViewInFileExplorer](#configureviewinfileexplorer)|Configure o recurso Exibir no Explorador de Arquivos para SharePoint páginas no Microsoft Edge|
+|[ConfigureViewInFileExplorer](#configureviewinfileexplorer)|Configurar o recurso Exibir no Explorador de Arquivos para páginas do SharePoint no Microsoft Edge|
 |[CustomHelpLink](#customhelplink)|Especificar um link de ajuda personalizado|
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|Verificações de interceptações DNS habilitadas|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Definir o Microsoft Edge como o navegador padrão|
@@ -389,7 +398,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[InPrivateModeAvailability](#inprivatemodeavailability)|Configurar a disponibilidade do modo InPrivate|
 |[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Habilitar avisos para formulários inseguros|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Controlar o recurso IntensiveWakeUpThrottling|
-|[InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist)|Configurar a lista Enterprise de sites de nuvem do modo Enterprise|
+|[InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist)|Configurar a lista de sites de nuvem do Modo empresarial|
 |[InternetExplorerIntegrationEnhancedHangDetection](#internetexplorerintegrationenhancedhangdetection)|Configurar a detecção de trava avançada para o modo do Internet Explorer|
 |[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Configurar a integração do Internet Explorer|
 |[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Permitir a inicialização de arquivos locais no modo Internet Explorer|
@@ -397,16 +406,16 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Mostrar o menu de contexto para abrir um link file:// no modo Internet Explorer|
 |[InternetExplorerIntegrationLocalSiteListExpirationDays](#internetexplorerintegrationlocalsitelistexpirationdays)|Especificar o número de dias que um site permanece na lista de sites do modo IE local|
 |[InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed)|Permitir que sites não configurados sejam recarregados no modo Internet Explorer|
-|[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|Configurar a lista de sites do modo Empresarial|
-|[InternetExplorerIntegrationSiteListRefreshInterval](#internetexplorerintegrationsitelistrefreshinterval)|Configurar com que frequência a lista Enterprise site do modo de usuário é atualizada|
+|[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|Configurar a lista de sites do Modo empresarial|
+|[InternetExplorerIntegrationSiteListRefreshInterval](#internetexplorerintegrationsitelistrefreshinterval)|Configurar a frequência com que a lista de sites do Modo empresarial é atualizada|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Especificar como as navegações "na página" para sites não configurados se comportam quando iniciadas nas páginas do modo Internet Explorer.|
 |[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Permitir teste de modo Internet Explorer (preterido)|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Comportamento de redirecionamento da intranet|
 |[IsolateOrigins](#isolateorigins)|Habilitar o isolamento de sites para determinadas origens|
 |[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Habilitar o Windows a pesquisar dados locais de navegação do Microsoft Edge|
 |[LocalProvidersEnabled](#localprovidersenabled)|Permitir sugestões de provedores locais|
-|[MAUEnabled](#mauenabled)|Sempre use o Microsoft AutoUpdate como o atualizador para Microsoft Edge|
-|[MSAWebSiteSSOUsingThisProfileAllowed](#msawebsitessousingthisprofileallowed)|Permitir o login único para sites da Microsoft usando este perfil|
+|[MAUEnabled](#mauenabled)|Sempre usar o Microsoft AutoUpdate como atualizador para o Microsoft Edge|
+|[MSAWebSiteSSOUsingThisProfileAllowed](#msawebsitessousingthisprofileallowed)|Permitir logon único para sites da Microsoft usando este perfil|
 |[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Define valores de configuração gerenciados para websites de origens específicas|
 |[ManagedFavorites](#managedfavorites)|Configurar Favoritos|
 |[ManagedSearchEngines](#managedsearchengines)|Gerenciar mecanismos de pesquisa|
@@ -431,8 +440,8 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[RedirectSitesFromInternetExplorerRedirectMode](#redirectsitesfrominternetexplorerredirectmode)|Redirecione os sites incompatíveis do Internet Explorer para o Microsoft Edge|
 |[RelaunchNotification](#relaunchnotification)|Notificar um usuário que uma reinicialização do navegador é recomendada ou necessária para atualizações pendentes|
 |[RelaunchNotificationPeriod](#relaunchnotificationperiod)|Definir o período de tempo das notificações de atualização|
-|[RelaunchWindow](#relaunchwindow)|Definir o intervalo de tempo para relançamento|
-|[RemoteDebuggingAllowed](#remotedebuggingallowed)|Permitir depuração remota|
+|[RelaunchWindow](#relaunchwindow)|Definir o intervalo de tempo para reinicialização|
+|[RemoteDebuggingAllowed](#remotedebuggingallowed)|Configurar a depuração remota|
 |[RendererCodeIntegrityEnabled](#renderercodeintegrityenabled)|Habilitar integridade de código de renderizador|
 |[RequireOnlineRevocationChecksForLocalAnchors](#requireonlinerevocationchecksforlocalanchors)|Especificar se serão necessárias verificações OCSP/CRL online para âncoras de confiança locais|
 |[ResolveNavigationErrorsUseWebService](#resolvenavigationerrorsusewebservice)|Habilitar a resolução de erros de navegação usando um serviço Web|
@@ -445,7 +454,6 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[SSLVersionMin](#sslversionmin)|Versão mínima de TLS habilitada (obsoleta)|
 |[SaveCookiesOnExit](#savecookiesonexit)|Salvar os cookies ao fechar o Microsoft Edge|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|Desabilitar o salvamento do histórico do navegador|
-|[ScreenCaptureAllowed](#screencaptureallowed)|Permitir ou negar captura de tela|
 |[ScrollToTextFragmentEnabled](#scrolltotextfragmentenabled)|Ativar a rolagem para o texto especificado nos fragmentos de URL.|
 |[SearchSuggestEnabled](#searchsuggestenabled)|Permitir sugestões de pesquisa|
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Sites ou domínios que não precisam de permissão para usar o atestado de chave de segurança direta|
@@ -477,13 +485,13 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[TaskManagerEndProcessEnabled](#taskmanagerendprocessenabled)|Habilitar processos finais no Gerenciador de tarefas do navegador|
 |[TotalMemoryLimitMb](#totalmemorylimitmb)|Definir o limite em megabytes de memória que uma única instância do Microsoft Edge pode usar.|
 |[TrackingPrevention](#trackingprevention)|Bloquear o acompanhamento de atividades de navegação na Web do usuário|
-|[TranslateEnabled](#translateenabled)|Habilitar traduzir|
+|[TranslateEnabled](#translateenabled)|Habilitar Tradução|
 |[TravelAssistanceEnabled](#travelassistanceenabled)|Habilitar assistência de viagem|
 |[TripleDESEnabled](#tripledesenabled)|Habilitar pacotes de codificação 3DES no TLS|
 |[URLAllowlist](#urlallowlist)|Definir uma lista de URLs permitidas|
 |[URLBlocklist](#urlblocklist)|Bloquear o acesso a uma lista de URLs|
 |[UpdatePolicyOverride](#updatepolicyoverride)|Especifica como o Microsoft Edge Update lida com as atualizações disponíveis do Microsoft Edge|
-|[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|Habilitar o recurso de Dicas do Cliente Usuário-Agente (descontinuado)|
+|[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|Habilitar o recurso Dicas do cliente usuário-agente (obsoleto)|
 |[UserDataDir](#userdatadir)|Definir o diretório de dados de usuário|
 |[UserDataSnapshotRetentionLimit](#userdatasnapshotretentionlimit)|Limita o número de instantâneos de dados do usuário mantidos para uso no caso de uma reversão de emergência|
 |[UserFeedbackAllowed](#userfeedbackallowed)|Permitir comentários do usuário|
@@ -498,14 +506,78 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|Permitir downgrade TLS/DTLS herdado no WebRTC (preterido)|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Gerenciar a exposição de endereço IP local por WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restringir a exposição de endereço IP local por WebRTC|
+|[WebRtcRespectOsRoutingTableEnabled](#webrtcrespectosroutingtableenabled)|Habilitar o suporte para regras de tabela de roteamento do sistema operacional Windows ao fazer conexões ponto a ponto via WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restringir o intervalo de portas UDP locais usado por WebRTC|
 |[WebWidgetAllowed](#webwidgetallowed)|Habilitar o widget da web|
 |[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Permitir o widget da Web na inicialização do Windows|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Usar o solucionador de proxy do Windows (preterida)|
-|[WindowOcclusionEnabled](#windowocclusionenabled)|Habilitar Oclusão de Janela|
+|[WindowOcclusionEnabled](#windowocclusionenabled)|Habilitar Oclusão de janela|
 
 
 
+
+  ## <a name="allow-or-deny-screen-capture-policies"></a>Permitir ou negar políticas de captura de tela
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="screencaptureallowed"></a>ScreenCaptureAllowed
+
+  #### <a name="allow-or-deny-screen-capture"></a>Permitir ou negar captura de tela
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e no macOS desde 83 ou mais recente
+
+  #### <a name="description"></a>Descrição
+
+  Se você habilitar essa política ou não configurar essa política, uma página da Web poderá usar APIs de compartilhamento de tela (por exemplo, getDisplayMedia () ou a API da extensão de captura da área de trabalho) para uma captura de tela.
+Se você desabilitar essa política, as chamadas a APIs de compartilhamento de tela falharão. Por exemplo, se você estiver usando uma reunião online baseada na Web, o vídeo ou o compartilhamento de tela não funcionarão.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome Exclusivo da Política de Grupo: ScreenCaptureAllowed
+  - Nome da Política de Grupo: Permitir ou negar captura de tela
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/Permitir ou negar captura de tela
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: ScreenCaptureAllowed
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: ScreenCaptureAllowed
+  - Valor de exemplo:
+``` xml
+<false/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
 
   ## <a name="application-guard-settings-policies"></a>Políticas de configurações do Application Guard
 
@@ -639,6 +711,62 @@ Se você desativar ou não configurar esta política, os favoritos no host não 
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): N/A
   - Nome do Valor: ApplicationGuardFavoritesSyncEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="applicationguardpassivemodeenabled"></a>ApplicationGuardPassiveModeEnabled
+
+  #### <a name="ignore-application-guard-site-list-configuration-and-browse-edge-normally"></a>Ignorar a configuração de lista do Application Guard configuração e navegar no Edge normalmente
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows desde 94 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Defina se o Edge deve ignorar a configuração de lista de site do Application Guard para sites confiáveis e não confiáveis.
+
+Se você habilitar essa política, todas a navegação do Edge, incluindo a navegação em sites não confiáveis, serão acessadas normalmente no Edge sem redirecionar para o contêiner do Application Guard. Observação: essa política afeta APENAS o Edge, portanto, a navegação de outros navegadores pode ser redirecionada para o contêiner do Application Guard se você tiver as extensões correspondentes habilitadas.
+
+Se você desabilitar ou não configurar essa política, o Edge não ignorará a lista de sites do Application Guard. Se os usuários tentarem navegar para um site não confiável no host, o site será aberto no contêiner.
+
+
+  #### <a name="supported-features"></a>Recursos com suporte:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: ApplicationGuardPassiveModeEnabled
+  - Nome da Política de Grupo: ignorar a lista de sites do Application Guard e navegar normalmente no Edge
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/Configurações do Application Guard
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: ApplicationGuardPassiveModeEnabled
   - Tipo de valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
@@ -1564,7 +1692,7 @@ Use as informações anteriores ao configurar essa política.
 
   ### <a name="defaultjavascriptjitsetting"></a>DefaultJavaScriptJitSetting
 
-  #### <a name="control-use-of-javascript-jit"></a>Controle o uso do JavaScript JIT
+  #### <a name="control-use-of-javascript-jit"></a>Controlar o uso do JIT do JavaScript
 
   
   
@@ -1574,19 +1702,19 @@ Use as informações anteriores ao configurar essa política.
 
   #### <a name="description"></a>Descrição
 
-  Permite definir se o Microsoft Edge executará o mecanismo JavaScript v8 com o compilador JIT (Just In Time) habilitado ou não.
+  Permite definir se o Microsoft Edge executará a engine JavaScript v8 com o compilador JIT (Just In Time) habilitado ou não.
 
-Desabilitar o JavaScript JIT significa que Microsoft Edge pode renderizar o conteúdo da Web mais lentamente e também pode desabilitar partes do JavaScript, incluindo WebAssembly. Desabilitar o JIT JavaScript pode permitir Microsoft Edge renderizar conteúdo da Web em uma configuração mais segura.
+Desabilitar o JIT do JavaScript significa que Microsoft Edge poderá renderizar conteúdo da Web mais lentamente e também pode desabilitar partes do JavaScript, incluindo WebAssembly. Desabilitar o JIT do JavaScript pode permitir que o Microsoft Edge renderize o conteúdo da Web em uma configuração mais segura.
 
-Essa política pode ser substituida por padrões de URL específicos usando as [políticas JavaScriptJitAllowedForSites](#javascriptjitallowedforsites) e [JavaScriptJitBlockedForSites.](#javascriptjitblockedforsites)
+Essa política pode ser substituída por padrões de URL específicos usando as políticas [JavaScriptJitAllowedForSites](#javascriptjitallowedforsites) e [JavaScriptJitBlockedForSites](#javascriptjitblockedforsites).
 
-Se você não configurar essa política, o JavaScript JIT será habilitado.
+Se você não configurar essa política, o JavaScript JIT estará habilitado.
 
 Mapeamento das opções de política:
 
-* AllowJavaScriptJit (1) = Permitir que qualquer site execute o JavaScript JIT
+* AllowJavaScriptJit (1) = Permitir que qualquer site execute o JIT do JavaScript
 
-* BlockJavaScriptJit (2) = Não permitir que nenhum site execute o JavaScript JIT
+* BlockJavaScriptJit (2) = Não permitir que nenhum site execute o JIT do JavaScript
 
 Use as informações anteriores ao configurar essa política.
 
@@ -1604,18 +1732,18 @@ Use as informações anteriores ao configurar essa política.
 
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
-  - Nome exclusivo da GP: DefaultJavaScriptJitSetting
-  - Nome da GP: Controlar o uso do JavaScript JIT
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Content settings
+  - Nome exclusivo da Política de Grupo: DefaultJavaScriptSetting
+  - Nome da Política de Grupo: Controlar o uso do JIT do JavaScript
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/Configurações de conteúdo
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
 
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
-  - Caminho (Recomendado): N/A
+  - Caminho (recomendado): N/A
   - Nome do valor: DefaultJavaScriptJitSetting
-  - Tipo de Valor: REG_DWORD
+  - Tipo de valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -1625,7 +1753,7 @@ Use as informações anteriores ao configurar essa política.
 
   #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
   
-  - Nome da chave de preferência: DefaultJavaScriptJitSetting
+  - Nome da chave de preferência: DefaultJavaScriptSetting
   - Valor de exemplo:
 ``` xml
 <integer>1</integer>
@@ -2472,7 +2600,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
   #### <a name="description"></a>Descrição
 
-  Crie uma lista de padrões de URL para especificar sites que podem exibir conteúdo misto inseguro (ou seja, conteúdo HTTP em sites HTTPS).
+  Crie uma lista de padrões de URL para especificar sites que podem exibir ou, na versão 94, baixar conteúdo misto inseguro (ou seja, conteúdo HTTP em sites HTTPS).
 
 Se você não configurar essa política, o conteúdo misto bloqueável será bloqueado, e o conteúdo misto opcionalmente bloqueável será atualizado. No entanto, os usuários poderão definir exceções para permitir conteúdo misto não seguro para sites específicos.
 
@@ -2730,7 +2858,7 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
   ### <a name="javascriptjitallowedforsites"></a>JavaScriptJitAllowedForSites
 
-  #### <a name="allow-javascript-to-use-jit-on-these-sites"></a>Permitir que JavaScript use JIT nesses sites
+  #### <a name="allow-javascript-to-use-jit-on-these-sites"></a>Permitir que o JavaScript use o JIT nesses sites
 
   
   
@@ -2740,17 +2868,17 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
   #### <a name="description"></a>Descrição
 
-  Permite definir uma lista de padrões de url de site que especificam sites que têm permissão para executar JavaScript com compilador JIT (Just In Time) habilitado.
+  Permite definir uma lista de padrões de URL do site que especificam sites que têm permissão para executar o JavaScript com o compilador JIT (Just In Time) habilitado.
 
-Para obter informações detalhadas sobre padrões de url de site válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) . * não é um valor aceito para esta política.
+Para obter informações detalhadas sobre os padrões de URL válidos, confira [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
 
-As exceções de política JIT do JavaScript serão impostas somente em uma granularidade de site (eTLD+1). Um conjunto de políticas para apenas subdomain.contoso.com não se aplicará corretamente ao contoso.com ou subdomain.contoso.com já que ambos resolvem o mesmo eTLD+1 (contoso.com) para o qual não há política. Nesse caso, a política deve ser definida contoso.com aplicar corretamente para contoso.com e subdomain.contoso.com.
+As exceções de política JIT do JavaScript serão impostas somente em uma granularidade de site (eTLD+1). Uma política definida apenas para subdomain.contoso.com não se aplicará corretamente ao contoso.com ou ao subdomain.contoso.com, pois ambos são resolvidos para o mesmo eTLD+1 (contoso.com) para o qual não há nenhuma política. Nesse caso, a política deve ser definida em contoso.com para ser aplicada corretamente a contoso.com e subdomain.contoso.com.
 
-Essa política aplica-se em uma base quadro a quadro e não com base apenas na URL de origem de nível superior, portanto, por exemplo, se o contoso.com estiver listado na política JavaScriptJitAllowedForSites, mas contoso.com carrega um quadro que contém fabrikam.com, então o contoso.com terá JavaScript JIT habilitado, mas o fabrikam.com usará a política de [DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting), se definido ou padrão para JavaScript JIT habilitado.
+Essa política se aplica quadro a quadro e não com base apenas na URL de origem de nível superior, por exemplo, se o contoso.com estiver listado na política JavaScriptJitAllowedForSites, mas contoso.com carrega um quadro que contém fabrikam.com. Então, contoso.com terá o JIT do JavaScript habilitado, mas o fabrikam.com usará a política de [DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting), se definido, ou por padrão para o JIT do JavaScript JIT.
 
-Se você não configurar essa política para um site, a política de [DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting) se aplicará ao site, se definido, caso contrário, o JIT Javascript será habilitado para o site.
+Se você não configurar essa política para um site, a política de [DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting) se aplicará ao site, se definida, caso contrário, o JIT do Javascript será habilitado para o site.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -2764,16 +2892,16 @@ Se você não configurar essa política para um site, a política de [DefaultJav
 
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
-  - Nome exclusivo da GP: JavaScriptJitAllowedForSites
-  - Nome da GP: Permitir que JavaScript use JIT nesses sites
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Content settings
+  - Nome exclusivo da Política de Grupo: JavaScriptJitAllowedForSites
+  - Nome da Política de Grupo: Permitir que o JavaScript use o JIT nesses sites
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/Configurações de conteúdo
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
-  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+  ##### <a name="windows-registry-settings"></a>Configurações de Registro do Windows
 
-  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitAllowedForSites
-  - Caminho (Recomendado): N/A
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls
+  - Caminho (recomendado): N/A
   - Nome do valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
@@ -2799,7 +2927,7 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitAllowedForSites\1 = "[*.]example.e
 
   ### <a name="javascriptjitblockedforsites"></a>JavaScriptJitBlockedForSites
 
-  #### <a name="block-javascript-from-using-jit-on-these-sites"></a>Impedir que o JavaScript use JIT nesses sites
+  #### <a name="block-javascript-from-using-jit-on-these-sites"></a>Impedir que o JavaScript use o JIT nesses sites
 
   
   
@@ -2809,19 +2937,19 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitAllowedForSites\1 = "[*.]example.e
 
   #### <a name="description"></a>Descrição
 
-  Permite definir uma lista de padrões de url de site que especificam sites que não têm permissão para executar o compilador javaScript JIT (Just In Time) habilitado.
+  Permite definir uma lista de padrões de URL do site que especificam sites que não têm permissão para executar o compilador JIT (Just In Time) do JavaScript habilitado.
 
-Desabilitar o JavaScript JIT significa que Microsoft Edge pode renderizar o conteúdo da Web mais lentamente e também pode desabilitar partes do JavaScript, incluindo WebAssembly. Desabilitar o JIT JavaScript pode permitir Microsoft Edge renderizar conteúdo da Web em uma configuração mais segura.
+Desabilitar o JIT do JavaScript significa que Microsoft Edge poderá renderizar conteúdo da Web mais lentamente e também pode desabilitar partes do JavaScript, incluindo WebAssembly. Desabilitar o JIT do JavaScript pode permitir que o Microsoft Edge renderize o conteúdo da Web em uma configuração mais segura.
 
 Para obter informações detalhadas sobre os padrões de URL válidos, confira [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
 
-As exceções de política JIT do JavaScript serão impostas somente em uma granularidade de site (eTLD+1). Um conjunto de políticas para apenas subdomain.contoso.com não se aplicará corretamente ao contoso.com ou subdomain.contoso.com já que ambos resolvem o mesmo eTLD+1 (contoso.com) para o qual não há política. Nesse caso, a política deve ser definida contoso.com aplicar corretamente para contoso.com e subdomain.contoso.com.
+As exceções de política JIT do JavaScript serão impostas somente em uma granularidade de site (eTLD+1). Uma política definida apenas para subdomain.contoso.com não se aplicará corretamente ao contoso.com ou ao subdomain.contoso.com, pois ambos são resolvidos para o mesmo eTLD+1 (contoso.com) para o qual não há nenhuma política. Nesse caso, a política deve ser definida em contoso.com para ser aplicada corretamente a contoso.com e subdomain.contoso.com.
 
-Essa política aplica-se em uma base quadro a quadro e não com base apenas na URL de origem de nível superior, portanto, por exemplo, se o contoso.com estiver listado na política JavaScriptJitBlockedForSites, mas contoso.com carregar um quadro que contém fabrikam.com, o contoso.com terá o JIT JavaScript desabilitado, mas o fabrikam.com usará a política de [DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting), se definido ou padrão para JavaScript JIT habilitado.
+Essa política se aplica quadro a quadro e não com base apenas na URL de origem de nível superior, por exemplo, se o contoso.com estiver listado na política JavaScriptJitBlockedForSites, mas contoso.com carrega um quadro contendo fabrikam.com, então contoso.com terá o JIT do JavaScript desabilitado, mas fabrikam.com usará a política de [DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting), se definido, ou como padrão para JavaScript JIT habilitado.
 
-Se você não configurar essa política para um site, a política de [DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting) se aplicará ao site, se definido, caso contrário, o JIT JavaScript será habilitado para o site.
+Se você não configurar essa política para um site, a política de [DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting) se aplicará ao site, se definida, caso contrário, o JIT do JavaScript será habilitado para o site.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -2835,16 +2963,16 @@ Se você não configurar essa política para um site, a política de [DefaultJav
 
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
-  - Nome exclusivo da GP: JavaScriptJitBlockedForSites
-  - Nome da GP: Impedir que o JavaScript use JIT nesses sites
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Content settings
+  - Nome exclusivo da Política de Grupo: JavaScriptJitBlockedForSites
+  - Nome da Política de Grupo: Impedir que o JavaScript use JIT nesses sites
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/Configurações de conteúdo
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
-  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+  ##### <a name="windows-registry-settings"></a>Configurações de Registro do Windows
 
-  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitBlockedForSites
-  - Caminho (Recomendado): N/A
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls
+  - Caminho (recomendado): N/A
   - Nome do valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
@@ -2857,7 +2985,7 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitBlockedForSites\1 = "[*.]example.e
 
   #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
   
-  - Nome da chave de preferência: JavaScriptJitBlockedForSites
+  - Nome da chave de preferência: JavaScriptJitBlockedForsites
   - Valor de exemplo:
 ``` xml
 <array>
@@ -3499,7 +3627,7 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
 
   ### <a name="showpdfdefaultrecommendationsenabled"></a>ShowPDFDefaultRecommendationsEnabled
 
-  #### <a name="allow-notifications-to-set-microsoft-edge-as-default-pdf-reader"></a>Permitir que as notificações deem Microsoft Edge como leitor de PDF padrão
+  #### <a name="allow-notifications-to-set-microsoft-edge-as-default-pdf-reader"></a>Permitir que as notificações definam o Microsoft Edge como leitor de PDF padrão
 
   
   
@@ -3509,13 +3637,13 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
 
   #### <a name="description"></a>Descrição
 
-  Essa configuração de política permite que você decida se os funcionários devem receber recomendações para definir Microsoft Edge como manipulador de PDF.
+  Essa configuração de política permite que você decida se os funcionários devem receber recomendações para definir o Microsoft Edge como manipulador de PDF.
 
-Se você habilitar ou não definir essa configuração, os funcionários receberão recomendações Microsoft Edge definir a si mesmo como o manipulador PDF padrão.
+Se você habilitar ou não definir essa configuração, os funcionários receberão recomendações do Microsoft Edge para definir a si mesmo como o manipulador de PDF padrão.
 
-Se você desabilitar essa configuração, os funcionários não receberão nenhuma notificação Microsoft Edge definir a si mesmo como o manipulador PDF padrão.
+Se você desabilitar essa configuração, os funcionários não receberão nenhuma notificação do Microsoft Edge para definir a si mesmo como o manipulador de PDF padrão.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -3529,18 +3657,18 @@ Se você desabilitar essa configuração, os funcionários não receberão nenhu
 
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
-  - Nome exclusivo da GP: ShowPDFDefaultRecommendationsEnabled
-  - Nome da Gp: Permitir que as notificações deem Microsoft Edge como leitor de PDF padrão
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Content settings
+  - Nome exclusivo da Política de Grupo: ShowPDFDefaultRecommendationsEnabled
+  - Nome da Política de Grupo: Permitir que as notificações definam o Microsoft Edge como leitor de PDF padrão
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/Configurações de conteúdo
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
 
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
-  - Caminho (Recomendado): N/A
+  - Caminho (recomendado): N/A
   - Nome do valor: ShowPDFDefaultRecommendationsEnabled
-  - Tipo de Valor: REG_DWORD
+  - Tipo de valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -4486,7 +4614,7 @@ Use as informações anteriores ao configurar essa política.
 
   ### <a name="featureflagoverridescontrol"></a>FeatureFlagOverridesControl
 
-  #### <a name="configure-users-ability-to-override-feature-flags"></a>Configurar a capacidade dos usuários de substituir sinalizadores de recursos
+  #### <a name="configure-users-ability-to-override-feature-flags"></a>Configurar a capacidade dos usuários de substituir sinalizadores de recurso
 
   
   
@@ -4496,22 +4624,22 @@ Use as informações anteriores ao configurar essa política.
 
   #### <a name="description"></a>Descrição
 
-  Configura a capacidade dos usuários de substituir o estado dos sinalizadores de recursos.
-Se você definir essa política como 'CommandLineOverridesEnabled', os usuários poderão substituir o estado dos sinalizadores de recurso usando argumentos de linha de comando, mas não edge://flags página.
+  Configura a capacidade dos usuários de substituir o estado dos sinalizadores de recurso.
+Se você definir essa política como “CommandLineOverridesEnabled”, os usuários poderão substituir o estado dos sinalizadores de recurso usando argumentos de linha de comando, mas não edge://flags página.
 
-Se você definir essa política como 'OverridesEnabled', os usuários poderão substituir o estado dos sinalizadores de recurso usando argumentos de linha de comando ou edge://flags página.
+Se você definir essa política como “OverridesEnabled”, os usuários poderão substituir o estado dos sinalizadores de recurso usando argumentos de linha de comando ou a página edge://flags.
 
-Se você definir essa política como 'OverridesDisabled', os usuários não poderão substituir o estado dos sinalizadores de recurso usando argumentos de linha de comando ou edge://flags página.
+Se você definir essa política como “OverridesDisabled”, os usuários não poderão substituir o estado dos sinalizadores de recurso usando argumentos de linha de comando ou a página edge://flags.
 
-Se você não configurar essa política, o comportamento será o mesmo que o "OverridesEnabled".
+Se você não configurar essa política, o comportamento será o mesmo que “OverridesEnabled”.
 
 Mapeamento das opções de política:
 
-* CommandLineOverridesEnabled (2) = Permitir que os usuários substituam sinalizadores de recursos usando apenas argumentos de linha de comando
+* CommandLineOverridesEnabled (2) = Permitir que os usuários substituam sinalizadores de recurso usando apenas argumentos de linha de comando
 
-* OverridesEnabled (1) = Permitir que os usuários substituam sinalizadores de recursos
+* OverridesEnabled (1) = Permitir que os usuários substituam sinalizadores de recurso
 
-* OverridesDisabled (0) = Impedir que os usuários substituam sinalizadores de recursos
+* OverridesDisabled (0) = Impedir que os usuários substituam sinalizadores de recurso
 
 Use as informações anteriores ao configurar essa política.
 
@@ -4529,18 +4657,18 @@ Use as informações anteriores ao configurar essa política.
 
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
-  - Nome exclusivo da GP: FeatureFlagOverridesControl
-  - Nome da Gp: Configurar a capacidade dos usuários de substituir sinalizadores de recursos
-  - Caminho da GP (Obrigatório): Modelos Administrativos/Microsoft Edge/Experimentação
+  - Nome exclusivo da Política de Grupo: FeatureFlagOverridesControl
+  - Nome da Política de Grupo: Configurar a capacidade dos usuários de substituir sinalizadores de recurso
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/Experimentação
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
 
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
-  - Caminho (Recomendado): N/A
+  - Caminho (recomendado): N/A
   - Nome do valor: FeatureFlagOverridesControl
-  - Tipo de Valor: REG_DWORD
+  - Tipo de valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -4855,9 +4983,9 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
 Se você não definir essa política, não será possível instalar aplicativos ou extensões e os usuários poderão desinstalar qualquer aplicativo no Microsoft Edge.
 
-Essa política substitui a política [ExtensionInstallBlocklist](#extensioninstallblocklist). Se um aplicativo ou uma extensão instalada anteriormente à força for removida da lista, o Microsoft Edge o desinstalará automaticamente.
+Essa política substitui a política [ExtensionInstallBlocklist](#extensioninstallblocklist). Se um aplicativo ou uma extensão instalada à força anteriormente for removida da lista, o Microsoft Edge o desinstalará automaticamente.
 
-Para Windows instâncias não ingressadas em um domínio do Microsoft Active Directory, a instalação forçada é limitada a aplicativos e extensões listados no site Microsoft Edge complementos.
+Observação: para caso de instâncias do Windows que não fazem parte de um domínio do Microsoft Active Directory, a instalação forçada fica limitada a aplicativos e extensões listados no site de Complementos do Microsoft Edge.
 
 Em instâncias do macOS, aplicativos e extensões de fora do site de complementos do Microsoft Edge só podem ser instalados à força se a instância for gerenciada via MDM ou ingressada em um domínio via MCX.
 
@@ -4997,7 +5125,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   A definição desta política controla as configurações de gerenciamento de extensão do Microsoft Edge, incluindo qualquer uma controlada por políticas relacionadas à extensão existentes. Essa política substitui qualquer política herdada que possa ser definida.
 
-Essa política mapeia um ID de extensão ou uma URL de atualização apenas para sua configuração específica. Uma configuração padrão pode ser definida para a ID especial "*", que se aplica a todas as extensões sem uma configuração personalizada nesta política. Com uma URL de atualização, a configuração se aplica a extensões com a URL de atualização exata, conforme indicado no manifesto da extensão. Se o sinalizador "override_update_url" estiver definido como true, a extensão será instalada e atualizada usando a URL de atualização especificada na política [ExtensionInstallForcelist](#extensioninstallforcelist) ou no campo 'update_url' nesta política. O sinalizador "override_update_url" será ignorado se o "update_url" for a URL de atualização de site de Complementos de Borda. Para obter mais detalhes, confira o guia detalhado da política ExtensionSettings disponível em [https://go.microsoft.com/fwlink/?linkid=2161555](https://go.microsoft.com/fwlink/?linkid=2161555).
+Essa política mapeia um ID de extensão ou uma URL de atualização apenas para sua configuração específica. Uma configuração padrão pode ser definida para a ID especial "*", que se aplica a todas as extensões sem uma configuração personalizada nesta política. Com uma URL de atualização, a configuração se aplica a extensões com a URL de atualização exata, conforme indicado no manifesto da extensão. Se o sinalizador “override_update_url“ estiver definido como verdadeiro, a extensão será instalada e atualizada usando a URL de atualização especificada na política [ExtensionInstallForcelist](#extensioninstallforcelist) ou no campo “update_url“ nesta política. O sinalizador “override_update_url” será ignorado se o  “update_url” for a URL de atualização do site de Complementos do Edge. Para obter mais detalhes, confira o guia detalhado da política ExtensionSettings disponível em [https://go.microsoft.com/fwlink/?linkid=2161555](https://go.microsoft.com/fwlink/?linkid=2161555).
 
 Para bloquear extensões de um determinado armazenamento de terceiros, você só precisa bloquear o update_url para esse armazenamento. Por exemplo, se quiser bloquear extensões da Chrome Web Store, você pode usar o seguinte JSON.
 
@@ -5078,6 +5206,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
     "runtime_blocked_hosts": [
       "*://*.contoso.com"
     ],
+    "toolbar_state": "force_shown",
     "update_url": "https://contoso.com/update_url"
   },
   "cdefghijklmnopabcdefghijklmnopab": {
@@ -5107,7 +5236,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   ##### <a name="compact-example-value"></a>Valor do exemplo de compactação:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {"*": {"allowed_types": ["hosted_app"], "blocked_install_message": "Custom error message.", "blocked_permissions": ["downloads", "bookmarks"], "install_sources": ["https://company-intranet/apps"], "installation_mode": "blocked", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"]}, "abcdefghijklmnopabcdefghijklmnop": {"blocked_permissions": ["history"], "installation_mode": "allowed", "minimum_version_required": "1.0.1"}, "bcdefghijklmnopabcdefghijklmnopa": {"allowed_permissions": ["downloads"], "installation_mode": "force_installed", "override_update_url": true, "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"], "update_url": "https://contoso.com/update_url"}, "cdefghijklmnopabcdefghijklmnopab": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "defghijklmnopabcdefghijklmnopabc,efghijklmnopabcdefghijklmnopabcd": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "fghijklmnopabcdefghijklmnopabcde": {"blocked_install_message": "Custom removal message.", "installation_mode": "removed"}, "update_url:https://www.contoso.com/update.xml": {"allowed_permissions": ["downloads"], "blocked_permissions": ["wallpaper"], "installation_mode": "allowed"}}
+  SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {"*": {"allowed_types": ["hosted_app"], "blocked_install_message": "Custom error message.", "blocked_permissions": ["downloads", "bookmarks"], "install_sources": ["https://company-intranet/apps"], "installation_mode": "blocked", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"]}, "abcdefghijklmnopabcdefghijklmnop": {"blocked_permissions": ["history"], "installation_mode": "allowed", "minimum_version_required": "1.0.1"}, "bcdefghijklmnopabcdefghijklmnopa": {"allowed_permissions": ["downloads"], "installation_mode": "force_installed", "override_update_url": true, "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"], "toolbar_state": "force_shown", "update_url": "https://contoso.com/update_url"}, "cdefghijklmnopabcdefghijklmnopab": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "defghijklmnopabcdefghijklmnopabc,efghijklmnopabcdefghijklmnopabcd": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "fghijklmnopabcdefghijklmnopabcde": {"blocked_install_message": "Custom removal message.", "installation_mode": "removed"}, "update_url:https://www.contoso.com/update.xml": {"allowed_permissions": ["downloads"], "blocked_permissions": ["wallpaper"], "installation_mode": "allowed"}}
   ```
   
 
@@ -5175,6 +5304,8 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
     <array>
       <string>*://*.contoso.com</string>
     </array>
+    <key>toolbar_state</key>
+    <string>force_shown</string>
     <key>update_url</key>
     <string>https://contoso.com/update_url</string>
   </dict>
@@ -5748,13 +5879,13 @@ Se você desabilitar esta política, um nome de usuário básico e uma senha ser
 
   [Voltar ao início](#microsoft-edge---policies)
 
-  ## <a name="identity-and-sign-in-policies"></a>Políticas de identidade e de login
+  ## <a name="identity-and-sign-in-policies"></a>Políticas de identidade e entrada
 
   [Voltar ao início](#microsoft-edge---policies)
 
   ### <a name="implicitsigninenabled"></a>ImplicitSignInEnabled
 
-  #### <a name="enable-implicit-sign-in"></a>Habilitar a login implícito
+  #### <a name="enable-implicit-sign-in"></a>Habilitar entrada implícita
 
   
   
@@ -5764,15 +5895,15 @@ Se você desabilitar esta política, um nome de usuário básico e uma senha ser
 
   #### <a name="description"></a>Descrição
 
-  Configure essa política para permitir/não permitir a login implícito.
+  Configure esta política para permitir/não permitir a entrada implícita.
 
-Se você configurou a [política BrowserSignin](#browsersignin) como "Desabilitar a login do navegador", essa política não terá efeito algum.
+Se você configurou a política [BrowserSignin](#browsersignin) como desabilitada, essa política não terá efeito.
 
-Se você habilitar ou não configurar essa configuração, a entrada implícita será habilitada, o Edge tentará entrar no perfil do usuário com base no que e como ele entra no sistema operacional.
+Se você habilitar ou não definir essa configuração, a entrada implícita será habilitada. O Edge tentará conectar o usuário ao perfil com base no que e como ele entra no sistema operacional.
 
-Se você desabilitar essa configuração, a login implícita será desabilitada.
+Se você desabilitar essa configuração, a entrada implícita será desabilitada.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -5786,18 +5917,18 @@ Se você desabilitar essa configuração, a login implícita será desabilitada.
 
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
-  - Nome exclusivo da GP: ImplicitSignInEnabled
-  - Nome da GP: Habilitar a login implícito
-  - Caminho da GP (Obrigatório): Modelos Administrativos/Microsoft Edge/Identidade e login
+  - Nome exclusivo da Política de Grupo: ImplicitSignInEnabled
+  - Nome da Política de Grupo: Habilitar entrada implícita
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/Identidade e entrada
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
 
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
-  - Caminho (Recomendado): N/A
+  - Caminho (recomendado): N/A
   - Nome do valor: ImplicitSignInEnabled
-  - Tipo de Valor: REG_DWORD
+  - Tipo de valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -5811,7 +5942,7 @@ Se você desabilitar essa configuração, a login implícita será desabilitada.
 
   ### <a name="oneauthauthenticationenforced"></a>OneAuthAuthenticationEnforced
 
-  #### <a name="oneauth-authentication-flow-enforced-for-signin"></a>Autenticação do OneAuth Flow imposta para entrar
+  #### <a name="oneauth-authentication-flow-enforced-for-signin"></a>Fluxo de Autenticação OneAuth Imposto para entrada
 
   
   
@@ -5821,14 +5952,15 @@ Se você desabilitar essa configuração, a login implícita será desabilitada.
 
   #### <a name="description"></a>Descrição
 
-  Essa política permite que os usuários decidam se usarão a biblioteca do OneAuth para entrar e buscar token no Microsoft Edge no Windows 10 RS3 e acima.
+  Essa política permite que os usuários decidam se devem usar a biblioteca OneAuth para entrada e busca de token no Microsoft Edge no Windows 10 RS3 e superior.
 
-Se você desabilitar ou não configurar essa política, o processo de assinatura usará Windows Account Manager. Microsoft Edge seria possível usar contas que você fez logon em Windows, Microsoft Office ou outros aplicativos microsoft para logon, sem a necessidade de senha. Ou você pode fornecer uma conta e senha válidas para entrar, que serão armazenadas no Windows Account Manager para uso futuro. Você poderá investigar todas as contas armazenadas no Gerenciador de Contas Windows por meio Windows Configurações -> Contas -> Email e contas.
+Se você desabilitar ou não configurar essa política, o processo de entrada usará o Gerenciador de Contas do Windows. O Microsoft Edge seria capaz de usar contas com as quais você fez logon no Windows, Microsoft Office ou outros aplicativos da Microsoft para entrar sem a necessidade de senha. Ou você pode fornecer uma conta e senha válidas para entrar, que serão armazenadas no Gerenciador de Contas do Windows para uso futuro. Você poderá investigar todas as contas armazenadas no Gerenciador de Contas do Windows por meio das Configurações do Windows -> Contas -> Página de email e contas.
 
-Se você habilitar essa política, o fluxo de autenticação do OneAuth será usado para entrar na conta. O fluxo de autenticação do OneAuth tem menos dependências e pode funcionar sem Windows shell. A conta que você usa não seria armazenada na página Email e contas.
+Se você habilitar essa política, o fluxo de autenticação do OneAuth será usado para entrada na conta. O fluxo de autenticação do OneAuth tem menos dependências e pode funcionar sem o shell do Windows. A conta que você usa não seria armazenada na página Email e contas.
 
+Essa política só terá efeito sobre Windows 10 RS3 e superior. No Windows 10 inferior ao RS3, o OneAuth é usado para autenticação no Microsoft Edge por padrão.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -5842,23 +5974,139 @@ Se você habilitar essa política, o fluxo de autenticação do OneAuth será us
 
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
-  - Nome exclusivo da GP: OneAuthAuthenticationEnforced
-  - Nome da GP: Autenticação do OneAuth Flow imposta para entrar
-  - Caminho da GP (Obrigatório): Modelos Administrativos/Microsoft Edge/Identidade e login
+  - Nome exclusivo da Política de Grupo: OneAuthAuthenticationEnforced
+  - Nome da Política de Grupo: Fluxo de Autenticação OneAuth Imposto para entrada
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/Identidade e entrada
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
 
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
-  - Caminho (Recomendado): N/A
+  - Caminho (recomendado): N/A
   - Nome do valor: OneAuthAuthenticationEnforced
-  - Tipo de Valor: REG_DWORD
+  - Tipo de valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
 ```
 0x00000000
+```
+
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="onlyonpremisesimplicitsigninenabled"></a>OnlyOnPremisesImplicitSigninEnabled
+
+  #### <a name="only-on-premises-account-enabled-for-implicit-sign-in"></a>Somente conta local habilitada para entrada implícita
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows desde 94 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Configure essa política para decidir se apenas contas locais estão habilitadas para entrada implícita.
+
+Se você habilitar essa política, somente as contas locais serão habilitadas para entrada implícita. O Microsoft Edge não tentará entrar implicitamente em contas MSA ou AAD. A atualização de contas locais para contas do AAD também será interrompida.
+
+Se você desabilitar ou não configurar essa política, todas as contas serão habilitadas para entrada implícita.
+
+Essa política só terá efeito quando a política[ConfigureOnPremisesAccountAutoSignIn](#configureonpremisesaccountautosignin) estiver habilitada e definida como “SignInAndMakeDomainAccountNonRemovable”.
+
+  #### <a name="supported-features"></a>Recursos com suporte:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: OnlyOnPremisesImplicitSigninEnabled
+  - Nome da Política de Grupo: somente conta local habilitada para entrada implícita
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/Identidade e entrada
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: OnlyOnPremisesImplicitSigninEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000000
+```
+
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="wamauthbelowwin10rs3enabled"></a>WAMAuthBelowWin10RS3Enabled
+
+  #### <a name="wam-for-authentication-below-windows-10-rs3-enabled"></a>WAM para autenticação abaixo do Windows 10 RS3 habilitado
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows desde 93 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Configure essa política para decidir se o WAM é usado para autenticação no Microsoft Edge no Windows 10 RS1 e RS2.
+
+Se você habilitar essa configuração, o WAM será usado no fluxo de autenticação do Windows 10 RS1 e RS2.
+
+Se você desabilitar ou não definir essa configuração, as bibliotecas do OneAuth serão usadas em vez do WAM no Windows 10 RS1 e RS2.
+
+Observe que, se essa política estiver habilitada, as sessões de entrada anteriores (que usaram o OneAuth por padrão) não poderão ser usadas. Saia desses perfis.
+
+Essa política só terá efeito no Windows 10 RS1 e RS2. No Windows 10 RS3 e superior, o WAM é usado para autenticação no Microsoft Edge por padrão.
+
+  #### <a name="supported-features"></a>Recursos com suporte:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: WAMAuthBelowWin10RS3Enabled
+  - Nome da Política de Grupo: WAM para autenticação em versões inferiores ao Windows 10 RS3 habilitado
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/Identidade e entrada
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: WAMAuthBelowWin10RS3Enabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
 ```
 
   
@@ -6256,23 +6504,23 @@ Se você definir essa política como Desabilitada, o Microsoft Edge só poderá 
 
   ### <a name="passwordgeneratorenabled"></a>PasswordGeneratorEnabled
 
-  #### <a name="allow-users-to-get-a-strong-password-suggestion-whenever-they-are-creating-an-account-online"></a>Permitir que os usuários recebam uma forte sugestão de senha sempre que eles estão criando uma conta online
+  #### <a name="allow-users-to-get-a-strong-password-suggestion-whenever-they-are-creating-an-account-online"></a>Permitir que os usuários obtenham uma sugestão de senha forte sempre que estiverem criando uma conta online
 
   
   
   #### <a name="supported-versions"></a>Versões com suporte:
 
-  - No Windows desde 93 ou posterior
+  - No Windows e no macOS desde 93 ou posterior
 
   #### <a name="description"></a>Descrição
 
-  Configura a alternância Gerador de Senha Configurações que habilita/desabilita o recurso para usuários.
+  Define a alternância Configurações do Gerador de Senha que habilita/desabilita o recurso para os usuários.
 
-Se você habilitar ou não configurar essa política, o Gerador de Senhas oferecerá aos usuários uma sugestão de senha forte e exclusiva (por meio de uma lista suspensa) nas páginas Inscrever e Alterar Senha.
+Se você habilitar ou não configurar essa política, o Gerador de Senhas oferecerá aos usuários uma sugestão de senha forte e exclusiva (por meio de uma lista suspensa) nas páginas Inscreva-se e Alteração de senha.
 
-Se você desabilitar essa política, os usuários não verão mais sugestões fortes de senha nas páginas Inscrever ou Alterar Senha.
+Se você desabilitar essa política, os usuários não verão mais sugestões de senha forte nas páginas Inscreva-se ou Alteração de senha.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -6286,18 +6534,18 @@ Se você desabilitar essa política, os usuários não verão mais sugestões fo
 
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
-  - Nome exclusivo da GP: PasswordGeneratorEnabled
-  - Nome da GP: Permitir que os usuários recebam uma sugestão de senha forte sempre que eles estão criando uma conta online
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Password manager and protection
+  - Nome exclusivo da Política de Grupo: PasswordGeneratorEnabled
+  - Nome da Política de Grupo: Permitir que os usuários obtenham uma sugestão de senha forte sempre que estiverem criando uma conta online
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/Gerenciador de senha e proteção
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
 
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
-  - Caminho (Recomendado): N/A
+  - Caminho (recomendado): N/A
   - Nome do valor: PasswordGeneratorEnabled
-  - Tipo de Valor: REG_DWORD
+  - Tipo de valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -6305,6 +6553,13 @@ Se você desabilitar essa política, os usuários não verão mais sugestões fo
 0x00000000
 ```
 
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: PasswordGeneratorEnabled
+  - Valor de exemplo:
+``` xml
+<false/>
+```
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -6382,6 +6637,7 @@ Se você habilitar ou desabilitar essa política, os usuários não podem alter�
   #### <a name="supported-versions"></a>Versões com suporte:
 
   - No Windows desde 85 ou posterior
+  - No macOS desde 93 ou posterior
 
   #### <a name="description"></a>Descrição
 
@@ -6440,6 +6696,13 @@ Obrigatório e Recomendado desabilitado: esses estados funcionam de maneira norm
 0x00000001
 ```
 
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: PasswordMonitorAllowed
+  - Valor de exemplo:
+``` xml
+<true/>
+```
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -6723,29 +6986,29 @@ Essa política só afeta o botão revelar senha do navegador, mas não afeta os 
 
   ### <a name="primarypasswordsetting"></a>PrimaryPasswordSetting
 
-  #### <a name="configures-a-setting-that-asks-users-to-enter-their-device-password-while-using-password-autofill"></a>Configura uma configuração que solicita que os usuários insiram a senha do dispositivo ao usarem o preenchimento automático de senha
+  #### <a name="configures-a-setting-that-asks-users-to-enter-their-device-password-while-using-password-autofill"></a>Define uma configuração que solicita que os usuários insiram a senha do dispositivo ao usar o preenchimento automático de senha
 
   
   
   #### <a name="supported-versions"></a>Versões com suporte:
 
-  - No Windows desde 93 ou posterior
+  - No Windows e no macOS desde 93 ou posterior
 
   #### <a name="description"></a>Descrição
 
-  O recurso ajuda os usuários a adicionar uma camada adicional de privacidade às suas contas online, exigindo autenticação de dispositivo (como forma de confirmar a identidade do usuário) antes que a senha salva seja preenchida automaticamente em um formulário da Web. Isso garante que pessoas não autorizadas não possam usar senhas salvas para preenchimento automático.
+  O recurso ajuda os usuários a adicionar uma camada adicional de privacidade às suas contas online exigindo autenticação de dispositivo, como uma maneira de confirmar a identidade do usuário, antes que a senha salva seja preenchida automaticamente em um formulário da Web. Isso garante que pessoas não autorizadas não possam usar senhas salvas para preenchimento automático.
 
-Esta política de grupo configura o seletor de botão de opção que habilita esse recurso para usuários. Ele também tem um controle de frequência onde os usuários podem especificar com que frequência eles querem ser solicitados a autenticação.
+Essa política de grupo configura o seletor de botão de opção que habilita esse recurso para os usuários. Ele também tem um controle de frequência em que os usuários podem especificar com que frequência eles gostaria de receber uma solicitação de autenticação.
 
-Se você definir essa política como "Automaticamente, desabilite essa política ou não configure essa política, o preenchimento automático não terá nenhum fluxo de autenticação."
+Se você definir essa política como “Automaticamente, desabilitar essa política ou não configurar essa política, o preenchimento automático não terá nenhum fluxo de autenticação”.
 
-Se você definir essa política como "Com senha de dispositivo", os usuários precisarão inserir a senha do dispositivo (ou o modo preferencial de autenticação em Windows Hello se estiver em Windows - PIN, reconhecimento de rosto ou impressão digital e opções equivalentes no mac) para comprovar sua identidade e, somente então, sua senha será preenchida automaticamente. Além disso, a frequência do prompt de autenticação seria definida como "Always" por padrão, no entanto, os usuários também podem alterá-la para a outra opção, que é "Uma vez em cada sessão de navegação".
+Se você definir essa política como “Com senha do dispositivo”, os usuários precisarão inserir a senha do dispositivo (ou o modo preferencial de autenticação em Windows Hello se estiver no Windows - PIN, reconhecimento facial ou impressão digital e opções equivalentes no mac) para provar sua identidade e, somente então, a senha será preenchida automaticamente. Além disso, a frequência do aviso de autenticação seria definida como “Sempre” por padrão. No entanto, os usuários podem alterá-la para a outra opção, que é “Uma vez a cada sessão de navegação”.
 
 Mapeamento das opções de política:
 
 * Automaticamente (0) = Automaticamente
 
-* WithDevicePassword (1) = Com senha de dispositivo
+* WithDevicePassword (1) = Com senha do dispositivo
 
 Use as informações anteriores ao configurar essa política.
 
@@ -6763,18 +7026,18 @@ Use as informações anteriores ao configurar essa política.
 
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
-  - Nome exclusivo da GP: PrimaryPasswordSetting
-  - Nome da GP: configura uma configuração que solicita que os usuários insiram a senha do dispositivo enquanto usam o preenchimento automático de senha
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Password manager and protection
+  - Nome exclusivo da Política de Grupo: PrimaryPasswordSetting
+  - Nome da Política de Grupo: define uma configuração que solicita aos usuários que insiram a senha do dispositivo ao usar o preenchimento automático de senha
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/Gerenciador de senha e proteção
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
 
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
-  - Caminho (Recomendado): N/A
+  - Caminho (recomendado): N/A
   - Nome do valor: PrimaryPasswordSetting
-  - Tipo de Valor: REG_DWORD
+  - Tipo de valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -6782,6 +7045,13 @@ Use as informações anteriores ao configurar essa política.
 0x00000000
 ```
 
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: PrimaryPasswordSetting
+  - Valor de exemplo:
+``` xml
+<integer>0</integer>
+```
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -7133,17 +7403,17 @@ Se você não configurar esta política ou a lista de impressoras estiver vazia,
 Os destinos da impressora incluem impressoras de extensão e impressoras locais. As impressoras de extensão também são conhecidas como destinos de provedores de impressão e incluem qualquer destino que pertença a uma extensão do Microsoft Edge.
 As impressoras locais também são conhecidas como destinos de impressão nativos e incluem destinos disponíveis ao computador local e impressoras de rede compartilhadas.
 
-Na Versão 93 ou posterior da Microsoft, se você definir essa política como 'pdf' ela também desabilita a opção 'salvar como Pdf' no menu de contexto com o botão direito do mouse.
+Na versão 93 ou posterior da Microsoft, se você definir essa política como “salvar como pdf”, ela também desabilitará a opção “salvar como pdf” no menu de contexto do clique com o botão direito do mouse.
 
 Mapeamento das opções de política:
 
 * privet (privet) = destinos de protocolo baseados em zeroconf (mDNS + DNS-SD)
 
-* extensão (extensão) = destinos baseados em extensão
+* extensão (extensão) = Destinos baseados em extensão
 
-* pdf (pdf) = O destino 'Salvar como PDF'. (93 ou posterior, também desabilita do menu de contexto)
+* pdf (pdf) = o destino “Salvar como PDF”. (93 ou posterior, também desabilita no menu de contexto)
 
-* local (local) = destinos da impressora local
+* local (local) = Destinos da impressora local
 
 Use as informações anteriores ao configurar essa política.
 
@@ -7482,7 +7752,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   ### <a name="printingwebpagelayout"></a>PrintingWebpageLayout
 
-  #### <a name="sets-layout-for-printing"></a>Define layout para impressão
+  #### <a name="sets-layout-for-printing"></a>Define o layout para impressão
 
   
   
@@ -7492,9 +7762,9 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   #### <a name="description"></a>Descrição
 
-  A configuração dessa política define o layout para impressão de páginas da Web.
+  Configurar essa política define o layout para imprimir páginas da Web.
 
-Se você desabilitar ou não configurar essa política, os usuários poderão decidir se imprimirá páginas da Web no layout retrato ou paisagem.
+Se você desabilitar ou não configurar essa política, os usuários poderão decidir se imprimem páginas da Web no layout Retrato ou Paisagem.
 
 Se você habilitar essa política, a opção selecionada será definida como a opção de layout.
 
@@ -7502,7 +7772,7 @@ Mapeamento das opções de política:
 
 * retrato (0) = Define a opção de layout como retrato
 
-* paisagem (1) = Define a opção layout como paisagem
+* paisagem (1) = Define a opção de layout como paisagem
 
 Use as informações anteriores ao configurar essa política.
 
@@ -7520,9 +7790,9 @@ Use as informações anteriores ao configurar essa política.
 
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
-  - Nome exclusivo da GP: PrintingWebpageLayout
-  - Nome da GP: define layout para impressão
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Printing
+  - Nome exclusivo da Política de Grupo: PrintingWebpageLayout
+  - Nome da Política de Grupo: Define o layout para impressão
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/Impressão
   - Caminho da Política de Grupo (recomendado): Administrative Templates/Microsoft Edge - Default Settings (usuários podem substituir)/Printing
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -7531,7 +7801,7 @@ Use as informações anteriores ao configurar essa política.
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Nome do valor: PrintingWebpageLayout
-  - Tipo de Valor: REG_DWORD
+  - Tipo de valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -7630,7 +7900,7 @@ Se você não configurar ou desabilitar essa política, os comandos de impressã
 
   Controla se sites inseguros têm permissão para fazer solicitações a pontos de extremidade de rede mais privados.
 
-Esta política está relacionada à especificação CORS-RFC1918. Confira https://wicg.github.io/cors-rfc1918 para obter mais detalhes.
+Esta política está relacionada à especificação de Acesso à Rede Privada. Confira https://wicg.github.io/private-network-access/ para obter mais detalhes.
 
 Um ponto de extremidade de rede é mais privado do que outro se:
 1) Seu endereço IP for localhost e o outro não.
@@ -7707,7 +7977,7 @@ Para origens não cobertas pelos padrões aqui especificados, o valor padrão gl
 
 Observe que essa política só afeta origens inseguras, portanto, as origens seguras, por exemplo https://example.com), incluídas nesta lista serão ignoradas.
 
-Para obter informações detalhadas sobre padrões de URL válidos, acesse [aqui](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Para obter informações detalhadas sobre os padrões de URL válidos, confira https://docs.microsoft.com/en-us/DeployEdge/edge-learnmmore-url-list-filter%20format.
 
   #### <a name="supported-features"></a>Recursos com suporte:
 
@@ -8080,17 +8350,17 @@ Essa política substitui as seguintes políticas individuais:
 
 A configuração da política [ProxySettings](#proxysettings) aceita os seguintes campos:
   * ProxyMode, que permite especificar o servidor proxy usado pelo Microsoft Edge e evita que os usuários alterem as configurações de proxy
-  * ProxyPacUrl, um URL para um arquivo proxy .pac
+  * ProxyPacUrl: um URL para um arquivo proxy .pac
   * ProxyPacMandatory, que impede que a pilha de rede volte para conexões diretas com script PAC inválido ou indisponível
-  * ProxyServer, um URL para o servidor proxy
+  * ProxyServer: um URL para o servidor proxy
   * ProxyBypassList, uma lista de hosts proxy que o Microsoft Edge ignora
 
 Para ProxyMode, se você escolher o valor:
   * direto, um proxy nunca é usado e todos os outros campos são ignorados.
   * sistema, o proxy do sistema é usado e todos os outros campos são ignorados.
   * auto_detect, todos os outros campos são ignorados.
-  * fixed_server, os campos ProxyServer e ProxyBypassList são usados.
-  * pac_script, os campos ProxyPacUrl, ProxyPacMandatory e ProxyBypassList são usados.
+  * fixed_server: os campos ProxyServer e ProxyBypassList são usados.
+  * pac_script: os campos ProxyPacUrl, ProxyPacMandatory e ProxyBypassList são usados.
 
 Para obter exemplos mais detalhados, acesse [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
@@ -8771,7 +9041,7 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 
   [Voltar ao início](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>Página inicial&comma; de inicialização e políticas de nova guia
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>Página inicial&comma; de inicialização e políticas de nova guia
 
   [Voltar ao início](#microsoft-edge---policies)
 
@@ -8789,13 +9059,13 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 
   Configura a página inicial padrão no Microsoft Edge. Você pode definir a página inicial para uma URL que você especificar ou para a página nova guia.
 
-Se você habilitar essa política, a página nova guia sempre será usada para a página inicial e o local da URL da página inicial será ignorado.
+Se você habilitar essa política, o botão Página Inicial será definido como a nova página de guia conforme configurado pelo usuário ou com a política [NewTabPageLocation](#newtabpagelocation) e a URL definida com a política [HomepageLocation](#homepagelocation) não será levada em consideração.
 
-Se você desabilitar essa política, a página inicial do usuário não poderá ser a página nova guia, a menos que a URL esteja definida como "edge://newtab".
+Se você desabilitar essa política, o botão Página Inicial será a URL definida conforme configurado pelo usuário ou conforme configurado na política [HomepageLocation](#homepagelocation).
 
-Se não for configurada, os usuários poderão escolher se a página nova guia é a página inicial.
+Se você não configurar essa política, os usuários poderão escolher se a URL definida ou a nova página da guia é sua home page.
 
-Essa política está disponível apenas nas instâncias do Windows que fazem parte de um domínio do Microsoft Active Directory, em instâncias do Windows 10 Pro ou Enterprise que estejam inscritas no gerenciamento de dispositivos ou em instâncias do macOS que são gerenciadas por meio do MDM ou passaram a fazer parte de um domínio por meio de MCX.
+Essa política só está disponível em instâncias do Windows que fazem parte de um domínio do Microsoft Active Directory ou instâncias do Windows 10 Pro ou Enterprise inscritas no gerenciamento de dispositivos.
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -8857,15 +9127,15 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 
 A página inicial é a página aberta pelo botão página inicial. As páginas que abrem na inicialização são controladas pelas políticas [RestoreOnStartup](#restoreonstartup).
 
-Você pode definir uma URL aqui ou definir a página inicial para abrir a página da nova guia. Se você optar por abrir a página nova guia, essa política não entrará em vigor.
+Você pode definir uma URL aqui ou definir a página inicial para abrir a página da nova guia. Por padrão, o botão Página Inicial abrirá a nova página da guia (conforme configurado pelo usuário ou com a política [NewTabPageLocation](#newtabpagelocation)) e o usuário poderá escolher entre a URL configurada por essa política e a nova página da guia.
 
-Se você habilitar essa política, os usuários não poderão alterar a URL da Home Page, mas poderão usar a página nova guia como página inicial.
+Se você habilitar essa política, os usuários não poderão alterar a URL da home page, mas poderão escolher o comportamento do botão Página Inicial para abrir a URL definida ou a nova página da guia. Se você quiser impor o uso da URL definida, também deverá configurar [HomepageIsNewTabPage](#homepageisnewtabpage)=Disabled.
 
 Se você desabilitar ou não configurar essa política, os usuários poderão escolher a própria página inicial, desde que a política [HomepageIsNewTabPage](#homepageisnewtabpage) não esteja habilitada.
 
-Essa política está disponível apenas nas instâncias do Windows que fazem parte de um domínio do Microsoft Active Directory, em instâncias do Windows 10 Pro ou Enterprise que estejam inscritas no gerenciamento de dispositivos ou em instâncias do macOS que são gerenciadas por meio do MDM ou passaram a fazer parte de um domínio por meio de MCX.
+Essa política só está disponível em instâncias do Windows que fazem parte de um domínio do Microsoft Active Directory ou instâncias do Windows 10 Pro ou Enterprise inscritas no gerenciamento de dispositivos.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: Sim
@@ -11559,7 +11829,7 @@ A configuração padrão, "Não configurada", respeita as configurações de rep
 
 A configuração "Habilitada" define a reprodução automática de mídia como "Permitir".  Todos os sites podem ser reproduzidos em mídia. Os usuários não podem substituir esta política.
 
-A configuração como "Desabilitada" define a reprodução automática de mídia como "Limite".  Isso limita sites que têm permissão para reprodução automática de mídia em páginas da Web com alto envolvimento de mídia e fluxos WebRTC ativos. Antes de Microsoft Edge versão 92, isso definiria a reprodução automática de mídia como "Bloquear". Os usuários não podem substituir esta política.
+Configurar como "Desabilitado" define a reprodução automática de mídia como "Limitar".  Isso limita os sites que têm permissão para reproduzir mídia automaticamente em páginas da Web com alto envolvimento de mídia e fluxos WebRTC ativos. Antes do Microsoft Edge versão 92, isso definiria a reprodução automática de mídia como " Bloquear". Os usuários não podem substituir esta política.
 
 Será necessário fechar uma guia e abri-la novamente para que essa política tenha efeito.
 
@@ -11620,15 +11890,15 @@ Será necessário fechar uma guia e abri-la novamente para que essa política te
 
   #### <a name="description"></a>Descrição
 
-  Defina uma lista de sites, com base em padrões de URL, que têm permissão para reprodução automática de mídia.
+  Defina uma lista de sites, com base em padrões de URL, que podem reproduzir mídia automaticamente.
 
-Se você não configurar essa política, o valor padrão global da política [AutoplayAllowed](#autoplayallowed) (se definido) ou a configuração pessoal do usuário será usado para todos os sites.
+Se você não configurar essa política, o valor padrão global da política [DefaultPopupsSetting](#autoplayallowed) (se definida) ou a configuração pessoal do usuário será usada para todos os sites.
 
-Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Para obter informações detalhadas sobre padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
 Observação: * não é um valor aceito para esta política.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -11642,16 +11912,16 @@ Observação: * não é um valor aceito para esta política.
 
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
-  - Nome exclusivo da GP: AutoplayAllowlist
-  - Nome da GP: Permitir reprodução automática de mídia em sites específicos
-  - Caminho da GP (obrigatório): Administrative Templates/Microsoft Edge/
+  - Nome Exclusivo da Política de Grupo: AutoplayAllowed
+  - Nome da Política de Grupo: Permitir reprodução automática de mídia em sites específicos
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
-  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+  ##### <a name="windows-registry-settings"></a>Configurações de Registro do Windows
 
-  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge\AutoplayAllowlist
-  - Caminho (Recomendado): N/A
+  - Caminho (obrigatório): SOFTWARE\Políticas\Microsoft\Edge\URLAllowlist
+  - Caminho (recomendado): N/A
   - Nome do valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
@@ -11665,7 +11935,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoplayAllowlist\2 = "[*.]contoso.edu"
 
   #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
   
-  - Nome da chave de preferência: AutoplayAllowlist
+  - Nome da chave de preferência: AutoplayAllowed
   - Valor de exemplo:
 ``` xml
 <array>
@@ -13047,7 +13317,12 @@ Se você desabilitar essa política ou defini-la como falsa, as atualizações d
 
 No entanto, alguns componentes estão isentos desta política. Isso inclui qualquer componente que não contenha um código executável, que não altere significativamente o comportamento do navegador, ou que seja essencial para a segurança. Ou seja, as atualizações consideradas "essenciais para segurança" ainda serão aplicadas, mesmo que você desabilite essa política.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+Exemplos desses componentes incluem listas de certificados revogados e listas de segurança, como listas de prevenção de rastreamento.
+
+Observe que desabilitar essa política pode potencialmente impedir que os desenvolvedores do Microsoft Edge forneçam correções de segurança críticas em tempo hábil e, portanto, não é recomendado.
+
+
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -13260,9 +13535,11 @@ Se você habilitar essa política e configurá-la para "SignInAndMakeDomainAccou
 
 Se você definir essa política como "Desabilitada" ou não a definir, o Microsoft Edge não entrará automaticamente em usuários que estejam em computadores ingressados no domínio com contas do Active Directory.
 
-A partir do Microsoft Edge 89, se houver um perfil local existente com a política [RoamingProfileSupportEnabled](#roamingprofilesupportenabled) desabilitada e a máquina agora for junção híbrida, ou seja se tiver uma conta do Azure AD, ele atualizará automaticamente o perfil local para o perfil do Azure AD para obter recursos completos de sincronização do Microsoft Azure Active Directory.
+A partir do Microsoft Edge 89, se houver um perfil local existente com a política [RoamingProfileSupportEnabled](#roamingprofilesupportenabled) desabilitada e a máquina agora for junção híbrida, ou seja , se tiver uma conta do Azure AD, ele atualizará automaticamente o perfil local para o perfil do Azure AD para obter recursos completos de sincronização do Microsoft Azure Active Directory.
 
-De Microsoft Edge 93 em diante, se a política [ImplicitSignInEnabled](#implicitsigninenabled) estiver desabilitada, essa política não terá efeito algum.
+Do Microsoft Edge 93 em diante, se a política [ImplicitSignInEnabled](#implicitsigninenabled) estiver desabilitada, essa política não terá nenhum efeito.
+
+Do Microsoft Edge 94 em diante, se a política [OnlyOnPremisesImplicitSigninEnabled](#onlyonpremisesimplicitsigninenabled) estiver habilitada e essa política estiver definida como “SignInAndMakeDomainAccountNonRemovable”, ela terá efeito mesmo no ambiente híbrido ingressado. O Microsoft Edge conectará automaticamente os usuários usando sua conta de domínio do Active Directory mesmo que haja contas MSA ou AAD.
 
 Mapeamento das opções de política:
 
@@ -13381,14 +13658,14 @@ Leia mais sobre este recurso aqui: API do SpeechSynthesis: [https://go.microsoft
   
   #### <a name="supported-versions"></a>Versões com suporte:
 
-  - No Windows desde 83 ou posterior
-  - No macOS desde 93 ou posterior
+  - No Windows desde o 83 ou posterior
+  - No macOS desde o 93 ou posterior
 
   #### <a name="description"></a>Descrição
 
-  Se você definir essa política como 'ShareAllowed' (o padrão), os usuários poderão acessar a experiência de Compartilhamento no menu Configurações e Mais no Microsoft Edge para compartilhar com outros aplicativos no sistema.
+  Se você definir essa política como “ShareAllowed” (o padrão), os usuários poderão acessar a experiência de compartilhamento do Windows 10 no menu Configurações e Mais no Microsoft Edge para compartilhar com outros aplicativos no sistema.
 
-Se você definir essa política como 'ShareDisallowed', os usuários não poderão acessar a experiência de Compartilhamento. Se o botão compartilhar estiver na barra de ferramentas, ele também será ocultado.
+Se você definir essa política como "ShareDisallowed", os usuários não conseguirão acessar a experiência de Compartilhamento do Windows 10. Se o botão Compartilhar estiver na barra de ferramentas, ele também será ocultado.
 
 Mapeamento das opções de política:
 
@@ -13444,7 +13721,7 @@ Use as informações anteriores ao configurar essa política.
 
   ### <a name="configureviewinfileexplorer"></a>ConfigureViewInFileExplorer
 
-  #### <a name="configure-the-view-in-file-explorer-feature-for-sharepoint-pages-in-microsoft-edge"></a>Configure o recurso Exibir no Explorador de Arquivos para SharePoint páginas no Microsoft Edge
+  #### <a name="configure-the-view-in-file-explorer-feature-for-sharepoint-pages-in-microsoft-edge"></a>Configurar o recurso Exibir no Explorador de Arquivos para páginas do SharePoint no Microsoft Edge
 
   
   
@@ -13454,20 +13731,20 @@ Use as informações anteriores ao configurar essa política.
 
   #### <a name="description"></a>Descrição
 
-  Essa configuração permite configurar o recurso Exibir no Explorador de Arquivos para gerenciamento de arquivos no SharePoint Online enquanto usa Microsoft Edge.
+  Essa configuração permite que você configure a funcionalidade Exibir Explorador de Arquivos para gerenciamento de arquivos no SharePoint Online enquanto usa Microsoft Edge.
 
-Você precisará listar os domínios específicos em que isso é permitido e listar cookies necessários para SharePoint autenticação (rtFa e FedAuth).
+Você precisará listar os domínios específicos em que isso é permitido e listar os cookies necessários para a autenticação do SharePoint (rtFa e FedAuth).
 
-Nos bastidores, a política permite URLs com o esquema viewinfileexplorer: para abrir URLs do WebDAV no Explorador de Arquivos do Windows em páginas correspondentes à lista de domínios e usa os cookies especificados para autenticação WebDAV.
+Nos bastidores, a política permite URLs com o esquema viewinfileexplorer: para abrir URLs WebDAV no Windows Explorador de Arquivos em páginas que correspondem à lista de domínios e usa os cookies especificados para autenticação WebDAV.
 
-Se você habilitar essa política, poderá usar o recurso "Exibir no Explorador de Arquivos" nas SharePoint de documentos listadas. Você precisará especificar os cookies de SharePoint de autenticação e domínio. Consulte o valor de exemplo abaixo.
+Se você habilitar essa política, poderá usar o recurso "Exibir no Explorador de Arquivos" nas bibliotecas de documentos do SharePoint listadas. Você precisará especificar o domínio do SharePoint e os cookies de autenticação. Veja o valor de exemplo abaixo.
 
-Se você desabilitar ou não configurar essa política, não poderá usar o recurso "Exibir no Explorador de Arquivos" em SharePoint de documentos.
+Se você desabilitar ou não configurar essa política, não poderá usar o recurso " Exibir no Explorador de Arquivos" em bibliotecas de documentos do SharePoint.
 
-Observe que, embora essa seja uma opção disponível por meio do Microsoft Edge, em vez de usar a opção Exibir no Explorador de Arquivos, a abordagem recomendada para gerenciar arquivos e pastas fora do SharePoint é sincronizar seus arquivos SharePoint ou mover ou copiar arquivos no SharePoint.
-Sincronizar seus arquivos SharePoint: https://go.microsoft.com/fwlink/p/?linkid=2166983 Mover ou copiar arquivos em SharePoint:https://go.microsoft.com/fwlink/p/?linkid=2167123
+Observe que, embora essa seja uma opção disponível por meio do Microsoft Edge, em vez de usar a opção Exibir no Explorador de Arquivos, a abordagem recomendada para gerenciar arquivos e pastas fora do SharePoint é sincronizar seus arquivos do SharePoint ou mover ou copiar arquivos no SharePoint.
+Sincronizar seus arquivos do SharePoint: https://go.microsoft.com/fwlink/p/?linkid=2166983 Mover ou copiar arquivos no SharePoint: https://go.microsoft.com/fwlink/p/?linkid=2167123
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -13481,18 +13758,18 @@ Sincronizar seus arquivos SharePoint: https://go.microsoft.com/fwlink/p/?linkid=
 
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
-  - Nome exclusivo da GP: ConfigureViewInFileExplorer
-  - Nome da GP: Configure o recurso Exibir no Explorador de Arquivos para SharePoint páginas no Microsoft Edge
-  - Caminho da GP (obrigatório): Administrative Templates/Microsoft Edge/
+  - Nome exclusivo da Política de Grupo: ConfigureViewInFileExplorer
+  - Nome da Política de Grupo: configurar o recurso Exibir Explorador de Arquivos para páginas do SharePoint no Microsoft Edge
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
 
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
-  - Caminho (Recomendado): N/A
+  - Caminho (recomendado): N/A
   - Nome do valor: ConfigureViewInFileExplorer
-  - Tipo do valor: REG_SZ
+  - Tipo do Valor: REG_SZ
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -15483,7 +15760,7 @@ Observe que, enquanto o exemplo anterior mostra a supressão de avisos de downlo
 
   #### <a name="data-type"></a>Tipo de dados:
 
-  - Lista de cadeias de caracteres
+  - Dictionary
 
   #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
 
@@ -15497,27 +15774,62 @@ Observe que, enquanto o exemplo anterior mostra a supressão de avisos de downlo
 
   ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
 
-  - Caminho (Obrigatório): SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): N/A
-  - Nome do valor: 1, 2, 3, ...
-  - Tipo de valor: lista de REG_SZ
+  - Nome exclusivo da Política de Grupo: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
+  - Tipo do Valor: REG_SZ
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"file_extension": "jnlp", "domains": ["https://contoso.com", "contoso2.com"]}
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"file_extension": "swf", "domains": ["*"]}
-
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings = [
+  {
+    "domains": [
+      "https://contoso.com",
+      "contoso2.com"
+    ],
+    "file_extension": "jnlp"
+  },
+  {
+    "domains": [
+      "*"
+    ],
+    "file_extension": "swf"
+  }
+]
 ```
+
+  ##### <a name="compact-example-value"></a>Valor do exemplo de compactação:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings = [{"domains": ["https://contoso.com", "contoso2.com"], "file_extension": "jnlp"}, {"domains": ["*"], "file_extension": "swf"}]
+  ```
+  
 
   #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
   
   - Nome da chave de preferência: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - Valor de exemplo:
 ``` xml
+<key>ExemptDomainFileTypePairsFromFileTypeDownloadWarnings</key>
 <array>
-  <string>{'file_extension': 'jnlp', 'domains': ['https://contoso.com', 'contoso2.com']}</string>
-  <string>{'file_extension': 'swf', 'domains': ['*']}</string>
+  <dict>
+    <key>domains</key>
+    <array>
+      <string>https://contoso.com</string>
+      <string>contoso2.com</string>
+    </array>
+    <key>file_extension</key>
+    <string>jnlp</string>
+  </dict>
+  <dict>
+    <key>domains</key>
+    <array>
+      <string>*</string>
+    </array>
+    <key>file_extension</key>
+    <string>swf</string>
+  </dict>
 </array>
 ```
   
@@ -15620,13 +15932,13 @@ Use as informações anteriores ao configurar essa política.
 
   #### <a name="description"></a>Descrição
 
-  Há uma lista de portas restritas criadas em Microsoft Edge. As conexões com essas portas falharão. Essa política permite ignorar essa lista. O conjunto de portas é definido como uma lista separada por vírgulas na qual as conexões de saída devem ser permitidas.
+  Há uma lista de portas restritas integradas ao Microsoft Edge. As conexões com essas portas falharão. Essa política permite ignorar essa lista. O conjunto de portas é definido como uma lista separada por vírgulas na qual as conexões de saída devem ser permitidas.
 
 As portas são restritas para impedir que o Microsoft Edge seja usado como vetor para explorar várias vulnerabilidades de rede. Definir essa política pode expor sua rede a ataques. Essa política destina-se a uma solução alternativa temporária para o código de erro "ERR_UNSAFE_PORT" ao migrar um serviço em execução em uma porta bloqueada para uma porta padrão (por exemplo, porta 80 ou 443).
 
 Sites mal-intencionados podem detectar facilmente que essa política está definida e para quais portas usam essas informações para direcionar ataques.
 
-Cada porta listada nesta política é rotulada com uma data que pode ser desbloqueada até. Após essa data, a porta será restrita, independentemente de ser especificada pelo valor dessa política.
+Cada porta listada nesta política é rotulada com uma data em que ela pode ser desbloqueada até. Após essa data, a porta estará restrita, independentemente de ser especificada pelo valor dessa política.
 
 Deixar o valor vazio ou não definido significa que todas as portas restritas serão bloqueadas. Valores de porta inválidos definidos por meio dessa política serão ignorados enquanto os válidos ainda serão aplicados.
 
@@ -15634,15 +15946,15 @@ Essa política substitui a opção de linha de comando "--explicitly-allowed-por
 
 Mapeamento das opções de política:
 
-* 554 (554) = porta 554 (pode ser desbloqueado até 15/10/2021)
+* 554 (554) = porta 554 (pode ser desbloqueada até 15/10/2021)
 
-* 10080 (10080) = porta 10080 (pode ser desbloqueado até 2022/04/01)
+* 10080 (10080) = porta 10080 (pode ser desbloqueada até 01/04/2022)
 
-* 6566 (6566) = porta 6566 (pode ser desbloqueado até 15/10/2021)
+* 6566 (6566) = porta 6566 (pode ser desbloqueada até 15/10/2021)
 
-* 989 (989) = porta 989 (pode ser desbloqueado até 2022/02/01)
+* 989 (989) = porta 989 (pode ser desbloqueado até 01/02/2022)
 
-* 990 (990) = porta 990 (pode ser desbloqueado até 2022/02/01)
+* 990 (990) = porta 990 (pode ser desbloqueado até 01/02/2022)
 
 Use as informações anteriores ao configurar essa política.
 
@@ -18068,7 +18380,7 @@ Observe que a política é aplicada por processo de processamento, com o valor m
 
   ### <a name="internetexplorerintegrationcloudsitelist"></a>InternetExplorerIntegrationCloudSiteList
 
-  #### <a name="configure-the-enterprise-mode-cloud-site-list"></a>Configurar a lista Enterprise de sites de nuvem do modo Enterprise
+  #### <a name="configure-the-enterprise-mode-cloud-site-list"></a>Configurar a lista de sites de nuvem do Modo empresarial
 
   
   
@@ -18078,13 +18390,13 @@ Observe que a política é aplicada por processo de processamento, com o valor m
 
   #### <a name="description"></a>Descrição
 
-  A configuração Microsoft Edge Listas de Sites no Centro de Administração do M365 permite que você hospede suas listas de sites em um local de nuvem compatível e gerencie o conteúdo de suas listas de sites por meio da experiência embutida. Essa configuração permite especificar qual lista de sites no Centro de Administração do M365 deve ser implantada para seus usuários. O usuário deve estar Microsoft Edge com uma conta de trabalho ou de estudante válida. Caso contrário, Microsoft Edge não baixará a lista de sites do local da nuvem.
+  A configuração de Listas de Sites do Microsoft Edge no Centro de Administração do M365 permite hospedar suas listas de sites em um local de nuvem compatível e gerenciar o conteúdo de suas listas de sites por meio da experiência interna. Essa configuração permite que você especifique qual lista de sites no Centro de Administração do M365 implantar para seus usuários. O usuário deve estar conectado Microsoft Edge uma conta corporativa ou de estudante válida. Caso contrário, o Microsoft Edge não baixará a lista de sites do local da nuvem.
 
-Essa configuração só será aplicável quando a [configuração InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) estiver configurada.
+Essa configuração é aplicável somente quando a configuração[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) estiver definida.
 
-Se você configurar essa política, Microsoft Edge usará a lista de sites especificada. Quando habilitado, você pode inserir o identificador da lista de sites que você criou e publicou na nuvem no Centro de Administração do M365.
+Se você configurar essa política, Microsoft Edge usará a lista de sites especificada. Quando habilitado, você pode inserir o identificador da lista de sites que criou e publicou na nuvem no Centro de Administração do M365.
 
-Essa configuração tem precedência sobre Microsoft Edge política [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) do Microsoft Edge, bem como a configuração da lista de sites do Internet Explorer (Use a lista de sites do IE do modo Enterprise). Se você desabilitar ou não configurar essa política, Microsoft Edge usará a política [InternetExplorerIntegrationSiteList.](#internetexplorerintegrationsitelist)
+Essa configuração tem Microsoft Edge precedência sobre a política [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) bem como a configuração de lista de sites do Internet Explorer (use a lista de sites do IE do modo Empresarial). Se você desabilitar ou não configurar essa política, o Microsoft Edge usará a política [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) em vez disso.
 
 Para saber mais sobre o modo Internet Explorer, confira [https://go.microsoft.com/fwlink/?linkid=2165707](https://go.microsoft.com/fwlink/?linkid=2165707)
 
@@ -18102,18 +18414,18 @@ Para saber mais sobre o modo Internet Explorer, confira [https://go.microsoft.co
 
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
-  - Nome exclusivo da POLÍTICA: InternetExplorerIntegrationCloudSiteList
-  - Nome da Política de Usuário: Configurar a lista Enterprise site de nuvem do modo de usuário
-  - Caminho da GP (obrigatório): Administrative Templates/Microsoft Edge/
+  - Nome Exclusivo da Política de Grupo: InternetExplorerIntegrationSiteList
+  - Nome da Política de Grupo: Configurar a lista de sites do modo Empresarial
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
 
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
-  - Caminho (Recomendado): N/A
+  - Caminho (recomendado): N/A
   - Nome do valor: InternetExplorerIntegrationCloudSiteList
-  - Tipo do valor: REG_SZ
+  - Tipo do Valor: REG_SZ
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -18616,7 +18928,7 @@ Para saber mais sobre o modo Internet Explorer, confira [https://go.microsoft.co
 
   ### <a name="internetexplorerintegrationsitelistrefreshinterval"></a>InternetExplorerIntegrationSiteListRefreshInterval
 
-  #### <a name="configure-how-frequently-the-enterprise-mode-site-list-is-refreshed"></a>Configurar com que frequência a lista Enterprise site do modo de usuário é atualizada
+  #### <a name="configure-how-frequently-the-enterprise-mode-site-list-is-refreshed"></a>Configurar a frequência com que a lista de sites do Modo empresarial é atualizada
 
   
   
@@ -18626,15 +18938,15 @@ Para saber mais sobre o modo Internet Explorer, confira [https://go.microsoft.co
 
   #### <a name="description"></a>Descrição
 
-  Essa configuração permite que você especifique um intervalo de atualização personalizado para a lista de sites Enterprise modo. O intervalo de atualização é especificado em minutos.
+  Essa configuração permite especificar um intervalo de atualização personalizado para a Lista de sites do modo Empresarial. O intervalo de atualização é especificado em minutos.
 
-Essa configuração só será aplicável quando a [configuração InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) ou [InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist) estiver configurada.
+Essa configuração é aplicável somente quando a configuração [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) ou [InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist) está definida.
 
-Se você configurar essa política, Microsoft Edge tentará recuperar uma versão atualizada da lista de sites do modo Enterprise configurada usando o intervalo de atualização especificado.
+Se você configurar essa política, Microsoft Edge tentará recuperar uma versão atualizada da Lista de sites do Modo empresarial configurada usando o intervalo de atualização especificado.
 
-Se você desabilitar ou não configurar essa política, Microsoft Edge usará um intervalo de atualização padrão, atualmente de 120 minutos.
+Se você desabilitar ou não configurar essa política, o Microsoft Edge usará um intervalo de atualização padrão, atualmente de 120 minutos.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -18648,18 +18960,18 @@ Se você desabilitar ou não configurar essa política, Microsoft Edge usará um
 
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
-  - Nome exclusivo da POLÍTICA: InternetExplorerIntegrationSiteListRefreshInterval
-  - Nome da Política de Usuário: Configure a frequência com que a lista de sites do modo Enterprise é atualizada
-  - Caminho da GP (obrigatório): Administrative Templates/Microsoft Edge/
+  - Nome exclusivo da Política de Grupo:  InternetExplorerIntegrationSiteListRefreshInterval
+  - Nome da Política de Grupo: configurar a frequência com que a Lista de sites do Modo empresarial é atualizada
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
 
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
-  - Caminho (Recomendado): N/A
+  - Caminho (recomendado): N/A
   - Nome do valor: InternetExplorerIntegrationSiteListRefreshInterval
-  - Tipo de Valor: REG_DWORD
+  - Tipo de valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -19078,24 +19390,24 @@ Essa política exige uma reinicialização do navegador para concluir a aplicaç
 
   ### <a name="mauenabled"></a>MAUEnabled
 
-  #### <a name="always-use-microsoft-autoupdate-as-the-updater-for-microsoft-edge"></a>Sempre use o Microsoft AutoUpdate como o atualizador para Microsoft Edge
+  #### <a name="always-use-microsoft-autoupdate-as-the-updater-for-microsoft-edge"></a>Sempre usar o Microsoft AutoUpdate como atualizador para o Microsoft Edge
 
   
   
   #### <a name="supported-versions"></a>Versões com suporte:
 
-  - No macOS desde 93 ou posterior
+  - No macOS desde o 93 ou posterior
 
   #### <a name="description"></a>Descrição
 
   Essa política permite configurar o atualizador que Microsoft Edge usa.
 
-Se você habilitar essa política, Microsoft Edge será atualizado apenas pelo Microsoft AutoUpdate.
+Se você habilitar essa política, o Microsoft Edge será atualizado apenas pelo Microsoft AutoUpdate.
 
-Se você desabilitar ou não configurar essa política, Microsoft Edge será atualizado por Microsoft Edge Update.
+Se você desabilitar ou não configurar essa política, o Microsoft Edge será atualizado pelo Microsoft Edge Update.
 
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -19109,7 +19421,7 @@ Se você desabilitar ou não configurar essa política, Microsoft Edge será atu
 
   #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
   
-  - Nome da chave de preferência: MAUEnabled
+  - Nome da Chave de Preferência: MAMEnabled
   - Valor de exemplo:
 ``` xml
 <true/>
@@ -19120,7 +19432,7 @@ Se você desabilitar ou não configurar essa política, Microsoft Edge será atu
 
   ### <a name="msawebsitessousingthisprofileallowed"></a>MSAWebSiteSSOUsingThisProfileAllowed
 
-  #### <a name="allow-single-sign-on-for-microsoft-sites-using-this-profile"></a>Permitir o login único para sites da Microsoft usando este perfil
+  #### <a name="allow-single-sign-on-for-microsoft-sites-using-this-profile"></a>Permitir logon único para sites da Microsoft usando este perfil
 
   
   
@@ -19130,13 +19442,13 @@ Se você desabilitar ou não configurar essa política, Microsoft Edge será atu
 
   #### <a name="description"></a>Descrição
 
-  A opção "Permitir o login único para sites da Microsoft usando esse perfil" permite que perfis não-MSA sejam capazes de usar o login único para sites da Microsoft usando credenciais MSA presentes no computador. Essa opção aparece para usuários finais como uma alternância no Configurações -> Profiles -> Preferências de Perfil para perfis não MSA somente.
+  A opção “Permitir logon único para sites da Microsoft usando este perfil” permite que perfis não MSA possam usar o logon único para sites da Microsoft usando credenciais MSA presentes no computador. Essa opção aparece para os usuários finais como uma alternância em Configurações -> Perfis -> Preferências de Perfil somente para perfis que não AAD.
 
-Se você desabilitar essa política, os perfis não MSA não poderão usar o login único para sites da Microsoft usando credenciais MSA presentes no computador.
+Se você desabilitar essa política, os perfis não MSA não poderão usar o logon único para sites da Microsoft usando credenciais MSA presentes no computador.
 
-Se você habilitar essa política ou não configurá-la, os usuários poderão usar a opção Configurações para garantir que perfis que não sejam do MSA sejam capazes de usar o login único para sites da Microsoft usando credenciais MSA presentes no computador, desde que exista apenas uma única conta MSA no computador.
+Se você habilitar essa política ou não a configurar, os usuários poderão usar a opção Configurações para garantir que perfis não MSA possam usar o logon único para sites da Microsoft usando credenciais MSA presentes no computador, desde que exista apenas uma única conta MSA no computador.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: Sim
@@ -19150,9 +19462,9 @@ Se você habilitar essa política ou não configurá-la, os usuários poderão u
 
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
-  - Nome exclusivo da GP: MSAWebSiteSSOUsingThisProfileAllowed
-  - Nome da GP: Permitir o login único para sites da Microsoft usando este perfil
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Nome exclusivo da Política de Grupo: MSAWebSiteSSOUsingThisProfileAllowed
+  - Nome da Política de Grupo: Permitir logon único para sites da Microsoft usando este perfil
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): Administrative Templates/Microsoft Edge - Default Settings (usuários podem substituir)/
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -19161,7 +19473,7 @@ Se você habilitar essa política ou não configurá-la, os usuários poderão u
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Nome do valor: MSAWebSiteSSOUsingThisProfileAllowed
-  - Tipo de Valor: REG_DWORD
+  - Tipo de valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -20048,9 +20360,9 @@ Essa política só está disponível em instâncias do Windows que fazem parte d
 
 Do Microsoft Edge 89 em diante, se houver um perfil local existente com a sincronização desabilitada e a máquina tiver ingressado de forma híbrida, ele atualizará automaticamente o perfil local para o perfil do Azure AD e o tornará não removível em vez de criar um novo perfil não removível do Azure AD.
 
-De Microsoft Edge 93 em diante, se a política [ImplicitSignInEnabled](#implicitsigninenabled) estiver desabilitada, essa política não terá efeito algum.
+Do Microsoft Edge 93 em diante, se a política [ImplicitSignInEnabled](#implicitsigninenabled) estiver desabilitada, essa política não terá nenhum efeito.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -20919,7 +21231,7 @@ Caso contrário, o período padrão de 604,8 milhões milissegundos (uma semana)
 
   ### <a name="relaunchwindow"></a>RelaunchWindow
 
-  #### <a name="set-the-time-interval-for-relaunch"></a>Definir o intervalo de tempo para relançamento
+  #### <a name="set-the-time-interval-for-relaunch"></a>Definir o intervalo de tempo para reinicialização
 
   
   
@@ -20929,16 +21241,16 @@ Caso contrário, o período padrão de 604,8 milhões milissegundos (uma semana)
 
   #### <a name="description"></a>Descrição
 
-  Especifica uma janela de tempo de destino para o final do período de notificação de relançamento.
+  Especifica uma janela de tempo de destino para o final do período de notificação de reinicialização.
 
-Os usuários são notificados sobre a necessidade de um relançamento de navegador ou reinicialização de dispositivo com base nas configurações de política [RelaunchNotification](#relaunchnotification) e [RelaunchNotificationPeriod.](#relaunchnotificationperiod) Os navegadores e dispositivos são reiniciados à força no final do período de notificação quando a política [RelaunchNotification](#relaunchnotification) é definida como 'Obrigatório'. Essa política RelaunchWindow pode ser usada para adiar o final do período de notificação para que ela se enquadra dentro de uma janela de tempo específica.
+Os usuários são notificados sobre a necessidade de uma reinicialização do navegador ou reinicialização do dispositivo com base nas configurações da política [RelaunchNotification](#relaunchnotification) e [RelaunchNotificationPeriod](#relaunchnotificationperiod). Navegadores e dispositivos são reiniciados à força no final do período de notificação quando a política [RelaunchNotification](#relaunchnotification) está definida como “Obrigatória”. Essa política RelaunchWindow pode ser usada para adiar o fim do período de notificação para que ele se encaixe em uma janela de tempo específica.
 
-Se você não configurar essa política, a janela de tempo de destino padrão para o Microsoft Edge está entre 2h e 4h. A janela de tempo de destino padrão para Microsoft Edge é o dia inteiro (ou seja, o final do período de notificação nunca é adiado).
+Se você não configurar essa política, a janela de tempo de destino padrão para o Microsoft Edge será entre 2h e 4h. A janela de tempo de destino padrão para Microsoft Edge é o dia inteiro, ou seja, o fim do período de notificação nunca é adiado.
 
-Observação: Embora a política possa aceitar vários itens nas entradas, todos, menos o primeiro item, são ignorados.
-Aviso: a configuração dessa política pode atrasar o aplicativo de atualizações de software.
+Observação: embora a política possa aceitar vários itens em entradas, todos, exceto o primeiro item, são ignorados.
+Aviso: definir essa política pode atrasar a aplicação de atualizações de software.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -20952,18 +21264,18 @@ Aviso: a configuração dessa política pode atrasar o aplicativo de atualizaç�
 
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
-  - Nome exclusivo da GP: RelaunchWindow
-  - Nome da GP: definir o intervalo de tempo para relançamento
-  - Caminho da GP (obrigatório): Administrative Templates/Microsoft Edge/
+  - Nome exclusivo da Política de Grupo: RelaunchWindow
+  - Nome da Política de Grupo: Definir o intervalo de tempo para reinicialização
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
 
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
-  - Caminho (Recomendado): N/A
+  - Caminho (recomendado): N/A
   - Nome do valor: RelaunchWindow
-  - Tipo do valor: REG_SZ
+  - Tipo do Valor: REG_SZ
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -21017,7 +21329,7 @@ SOFTWARE\Policies\Microsoft\Edge\RelaunchWindow = {
 
   ### <a name="remotedebuggingallowed"></a>RemoteDebuggingAllowed
 
-  #### <a name="allow-remote-debugging"></a>Permitir depuração remota
+  #### <a name="allow-remote-debugging"></a>Configurar a depuração remota
 
   
   
@@ -21029,11 +21341,11 @@ SOFTWARE\Policies\Microsoft\Edge\RelaunchWindow = {
 
   Controla se os usuários podem usar a depuração remota.
 
-Se você habilitar ou não configurar essa política, os usuários poderão usar a depuração remota especificando -remote-debug-port e --remote-debugging-pipe command line switches.
+Se você habilitar ou não configurar essa política, os usuários poderão usar a depuração remota especificando as opções de linha de comando --remote-debug-port e --remote-debugging-pipe.
 
 Se você desabilitar essa política, os usuários não poderão usar a depuração remota.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -21047,18 +21359,18 @@ Se você desabilitar essa política, os usuários não poderão usar a depuraç�
 
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
-  - Nome exclusivo da GP: RemoteDebuggingAllowed
-  - Nome da GP: Permitir depuração remota
-  - Caminho da GP (obrigatório): Administrative Templates/Microsoft Edge/
+  - Nome exclusivo da Política de Grupo: RemoteDebuggingAllowed
+  - Nome da Política de Grupo: Permitir depuração remota
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
 
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
-  - Caminho (Recomendado): N/A
+  - Caminho (recomendado): N/A
   - Nome do valor: RemoteDebuggingAllowed
-  - Tipo de Valor: REG_DWORD
+  - Tipo de valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -21832,65 +22144,6 @@ Se você desabilitar essa política ou não a configurar, o histórico de navega
 
   [Voltar ao início](#microsoft-edge---policies)
 
-  ### <a name="screencaptureallowed"></a>ScreenCaptureAllowed
-
-  #### <a name="allow-or-deny-screen-capture"></a>Permitir ou negar captura de tela
-
-  
-  
-  #### <a name="supported-versions"></a>Versões com suporte:
-
-  - No Windows e no macOS desde 83 ou mais recente
-
-  #### <a name="description"></a>Descrição
-
-  Se você habilitar essa política ou não configurar essa política, uma página da Web poderá usar APIs de compartilhamento de tela (por exemplo, getDisplayMedia () ou a API da extensão de captura da área de trabalho) para uma captura de tela.
-Se você desabilitar essa política, as chamadas a APIs de compartilhamento de tela falharão. Por exemplo, se você estiver usando uma reunião online baseada na Web, o vídeo ou o compartilhamento de tela não funcionarão.
-
-  #### <a name="supported-features"></a>Recursos compatíveis:
-
-  - Pode ser obrigatório: Sim
-  - Pode ser recomendável: não
-  - Atualização dinâmica das políticas: Sim
-
-  #### <a name="data-type"></a>Tipo de dados:
-
-  - Booliano
-
-  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
-
-  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
-
-  - Nome Exclusivo da Política de Grupo: ScreenCaptureAllowed
-  - Nome da Política de Grupo: Permitir ou negar captura de tela
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
-  - Caminho da Política de Grupo (recomendado): N/A
-  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
-
-  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
-
-  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
-  - Caminho (recomendado): N/A
-  - Nome do valor: ScreenCaptureAllowed
-  - Tipo de valor: REG_DWORD
-
-  ##### <a name="example-value"></a>Valor de exemplo:
-
-```
-0x00000000
-```
-
-  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
-  
-  - Nome da chave de preferência: ScreenCaptureAllowed
-  - Valor de exemplo:
-``` xml
-<false/>
-```
-  
-
-  [Voltar ao início](#microsoft-edge---policies)
-
   ### <a name="scrolltotextfragmentenabled"></a>ScrollToTextFragmentEnabled
 
   #### <a name="enable-scrolling-to-text-specified-in-url-fragments"></a>Ativar a rolagem para o texto especificado nos fragmentos de URL.
@@ -22497,11 +22750,11 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   Especifica se SharedArrayBuffers pode ser usado em um contexto não isolado de origem cruzada.  Um SharedArrayBuffer é um buffer de dados binário que pode ser usado para criar exibições na memória compartilhada.  O SharedArrayBuffers têm uma vulnerabilidade de acesso à memória em várias CPUs populares.
 
-Se você habilitar essa política, os sites poderão usar SharedArrayBuffers sem restrições.
+Se você habilitar essa política, os sites poderão usar SharedArrayBuffers.
 
 Se você desabilitar ou não configurar essa política, os sites poderão usar SharedArrayBuffers somente quando isolados entre origens.
 
-O Microsoft Edge exigirá isolamento de origem cruzada ao usar SharedArrayBuffers do Microsoft Edge 91 em diante por motivos de Compatibilidade com a Web.
+O Microsoft Edge exigirá isolamento de origem cruzada ao usar o SharedArrayBuffers do Microsoft Edge 91 em diante por motivos de Compatibilidade com a Web.
 
   #### <a name="supported-features"></a>Recursos com suporte:
 
@@ -23977,15 +24230,15 @@ Se você não configurar a política, os usuários poderão escolher se desejam 
 
   #### <a name="description"></a>Descrição
 
-  Configure essa política para permitir/não permitir assistência de viagem.
+  Configure esta política para permitir/não permitir assistência de viagem.
 
-O recurso de assistência de viagem fornece informações úteis e relevantes para um usuário que executa tarefas relacionadas a Viagens no navegador. Esse recurso fornece sugestões/informações confiáveis e validadas para os usuários de várias fontes coletadas pela Microsoft.
+O recurso de assistência de viagem fornece informações úteis e relevantes para um usuário que executa tarefas relacionadas a Viagens no navegador. Esse recurso fornece sugestões e informações confiáveis e validadas para os usuários de várias fontes coletadas pela Microsoft.
 
-Se você habilitar ou não definir essa configuração, a assistência de viagem será habilitada para os usuários quando eles estão executando tarefas relacionadas à viagem.
+Se você habilitar ou não definir essa configuração, a assistência de viagem será habilitada para os usuários quando eles estiverem executando tarefas relacionadas à viagem.
 
-Se você desabilitar essa configuração, a assistência de viagem será desabilitada e os usuários não poderão ver recomendações relacionadas a viagens.
+Se você desabilitar essa configuração, a assistência de viagem será desabilitada e os usuários não poderão ver nenhuma recomendação relacionada à viagem.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: Sim
@@ -23999,9 +24252,9 @@ Se você desabilitar essa configuração, a assistência de viagem será desabil
 
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
-  - Nome exclusivo da GP: TravelAssistanceEnabled
-  - Nome da GP: Habilitar assistência de viagem
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Nome exclusivo da Política de Grupo: TravelAssistanceEnabled
+  - Nome da Política de Grupo: Habilitar assistência de viagem
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): Administrative Templates/Microsoft Edge - Default Settings (usuários podem substituir)/
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -24010,7 +24263,7 @@ Se você desabilitar essa configuração, a assistência de viagem será desabil
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Nome do valor: TravelAssistanceEnabled
-  - Tipo de Valor: REG_DWORD
+  - Tipo de valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -24311,17 +24564,17 @@ Use as informações anteriores ao configurar essa política.
 
   ### <a name="useragentclienthintsenabled"></a>UserAgentClientHintsEnabled
 
-  #### <a name="enable-the-user-agent-client-hints-feature-deprecated"></a>Habilitar o recurso de Dicas do Cliente Usuário-Agente (descontinuado)
+  #### <a name="enable-the-user-agent-client-hints-feature-obsolete"></a>Habilitar o recurso Dicas do cliente usuário-agente (obsoleto)
 
-  >SUBSTITUÍDO: Essa política está preterida. Ela tem suporte no momento, mas se tornará obsoleta em uma versão futura.
   
+  >OBSOLETO: esta política está obsoleta e não funciona após a versão 93 do Microsoft Edge.
   #### <a name="supported-versions"></a>Versões com suporte:
 
-  - No Windows e no macOS desde 86 ou mais recente
+  - No Windows e no macOS desde 86 até 93
 
   #### <a name="description"></a>Descrição
 
-  Essa política foi descontinuada porque se destinava a ser um mecanismo de curto prazo para dar às empresas mais tempo para atualizar seu conteúdo na web se e quando fosse constatado que era incompatível com o recurso Dicas do Cliente Usuário-Agente. Ela não funcionará no Microsoft Edge versão 94.
+  Essa política está obsoleta porque foi destinada apenas para fins de adaptação de curto prazo. Ela não funciona no Microsoft Edge após a versão 93.
 
 Quando habilitada, o recurso Dicas de Cliente Agente-Usuário envia cabeçalhos granulares que fornecem informações sobre o navegador do usuário (por exemplo, a versão do navegador) e ambiente (por exemplo, a arquitetura do sistema).
 
@@ -24343,9 +24596,9 @@ Se você habilitar ou não configurar essa política, o recurso Dicas de Cliente
 
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
-  - Nome exclusivo da GP: UserAgentClientHintsEnabled
-  - Nome da Política de Grupo: Habilitar o recurso de Dicas do Cliente Usuário-Agente (descontinuada)
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Nome exclusivo da Política de Grupo: UserAgentClientHintsEnabled
+  - Nome da Política de Grupo: Habilitar o recurso de Dicas do Cliente de Usuário-Agente
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -25319,6 +25572,64 @@ Use as informações anteriores ao configurar essa política.
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### <a name="webrtcrespectosroutingtableenabled"></a>WebRtcRespectOsRoutingTableEnabled
+
+  #### <a name="enable-support-for-windows-os-routing-table-rules-when-making-peer-to-peer-connections-via-webrtc"></a>Habilitar o suporte para regras de tabela de roteamento do sistema operacional Windows ao fazer conexões ponto a ponto via WebRTC
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows desde 94 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Controla se o WebRTC respeitará as regras de tabela de roteamento do sistema operacional Windows ao fazer conexões ponto a ponto.
+
+Se você desabilitar essa política ou não a configurar, o WebRTC não considerará a tabela de roteamento e poderá fazer conexões ponto a ponto em qualquer rede disponível.
+
+Se você habilitar essa política, o WebRTC preferirá fazer conexões ponto a ponto usando o adaptador de rede indicado para o endereço remoto, conforme indicado na tabela de roteamento.
+
+Esta política só está disponível no Windows.
+
+
+  #### <a name="supported-features"></a>Recursos com suporte:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: WebRtcRespectOsRoutingTableEnabled
+  - Nome da Política de Grupo: Habilitar suporte para regras de tabela de roteamento do sistema operacional Windows ao fazer conexões ponto a ponto via WebRTC
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: WebRtcRespectOsRoutingTableEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### <a name="webrtcudpportrange"></a>WebRtcUdpPortRange
 
   #### <a name="restrict-the-range-of-local-udp-ports-used-by-webrtc"></a>Restringir o intervalo de portas UDP locais usado por WebRTC
@@ -25622,7 +25933,7 @@ Se essa política não estiver definida, a detecção de ocultação da janela s
   [Voltar ao início](#microsoft-edge---policies)
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Configurar o Microsoft Edge](configure-microsoft-edge.md)
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
