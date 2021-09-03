@@ -1,9 +1,9 @@
 ---
 title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
-author: AndreaLBarr
+author: dan-wesley
 manager: tahills
-ms.date: 08/31/2021
+ms.date: 08/30/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 9b71e641af62b0ad56e4f2e9bf52a061dafa52a3
-ms.sourcegitcommit: 5aeaeb85eba7572d1871ad55568a8bea4d4a4e5f
+ms.openlocfilehash: cd59eca6d07284c61a0c61537f45d36771d133f3
+ms.sourcegitcommit: e83b355a9d95f2c8ec858b05e5b7cf8837f8a82b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "11934570"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "11936559"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -254,7 +254,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[SmartScreenEnabled](#smartscreenenabled)|Configurar o Microsoft Defender SmartScreen|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Forçar o Microsoft Defender SmartScreen verifica downloads de fontes confiáveis|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Configura o Microsoft Defender SmartScreen para bloquear aplicativos potencialmente indesejados.|
-### [*<a name="startup-home-page-and-new-tab-page"></a>Página de inicialização&comma; página inicial e nova guia*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Página de inicialização&comma; página inicial e nova guia*](#startup-home-page-and-new-tab-page-policies)
 
 |Nome da política|Legenda|
 |-|-|
@@ -3236,7 +3236,7 @@ Se você não definir essa política, o valor padrão global será utilizado par
 
   - Nome exclusivo da Política de Grupo: NotificationsBlockedForUrls
   - Nome da Política de Grupo: Bloquear notificações em sites específicos
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Content settings
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/configurações do conteúdo
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -5136,7 +5136,7 @@ Observe que você ainda pode usar [ExtensionInstallForcelist](#extensioninstallf
 Observação: para caso de instâncias do Windows que não fazem parte de um domínio do Microsoft Active Directory, a instalação forçada fica limitada a aplicativos e extensões listados no site Complementos do Microsoft Edge.
 
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -7574,7 +7574,7 @@ Use as informações anteriores ao configurar essa política.
 
   - Nome exclusivo da Política de Grupo: PrintingBackgroundGraphicsDefault
   - Nome da Política de Grupo: modo de impressão de gráficos em segundo plano padrão
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Printing
+  - Caminho da Política de Grupo (obrigatório): Modelos administrativos/Microsoft Edge/Impressão
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -9041,7 +9041,7 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 
   [Voltar ao início](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>Página inicial&comma; de inicialização e políticas de nova guia
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>Página inicial&comma; de inicialização e políticas de nova guia
 
   [Voltar ao início](#microsoft-edge---policies)
 
@@ -10145,7 +10145,7 @@ Se você habilitar essa política ou não configurá-la, os perfis não AAD pode
 Se você desabilitar essa política, os usuários não poderão ver os resultados internos na lista de sugestões da barra de endereço do Microsoft Edge.
 A partir da versão 89 do Microsoft Edge, as sugestões da Pesquisa da Microsoft no Bing estarão disponíveis mesmo se o Bing não for o provedor de pesquisa padrão do usuário.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -10339,7 +10339,7 @@ Se você habilitar ou não configurar essa política, os usuários poderão abri
 
 Se você desabilitar essa política, sempre que o usuário executar uma ação que acione uma caixa de diálogo de seleção de arquivo (como importar favoritos, carregar arquivos ou salvar links), uma mensagem será exibida, e o usuário deverá clicar em Cancelar na caixa de diálogo de seleção de arquivo.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -19039,7 +19039,7 @@ Use as informações anteriores ao configurar essa política.
 
   - Nome Exclusivo da Política de Grupo: InternetExplorerIntegrationSiteRedirect
   - Nome da Política de Grupo: Especificar como as navegações "na página" para sites não configurados se comportam quando iniciadas nas páginas do modo Internet Explorer.
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -19171,7 +19171,7 @@ Use as informações anteriores ao configurar essa política.
 
   - Nome exclusivo da política de grupo: IntranetRedirectBehavior
   - Nome da política de grupo: comportamento de redirecionamento da intranet
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -21245,7 +21245,7 @@ Caso contrário, o período padrão de 604,8 milhões milissegundos (uma semana)
 
 Os usuários são notificados sobre a necessidade de uma reinicialização do navegador ou reinicialização do dispositivo com base nas configurações da política [RelaunchNotification](#relaunchnotification) e [RelaunchNotificationPeriod](#relaunchnotificationperiod). Navegadores e dispositivos são reiniciados à força no final do período de notificação quando a política [RelaunchNotification](#relaunchnotification) está definida como “Obrigatória”. Essa política RelaunchWindow pode ser usada para adiar o fim do período de notificação para que ele se encaixe em uma janela de tempo específica.
 
-Se você não configurar essa política, a janela de tempo de destino padrão para o Microsoft Edge será entre 2h e 4h. A janela de tempo de destino padrão para Microsoft Edge é o dia inteiro, ou seja, o fim do período de notificação nunca é adiado.
+Se você não configurar essa política, a janela de tempo de destino padrão será o dia inteiro, ou seja, o fim do período de notificação nunca será adiado.
 
 Observação: embora a política possa aceitar vários itens em entradas, todos, exceto o primeiro item, são ignorados.
 Aviso: definir essa política pode atrasar a aplicação de atualizações de software.
@@ -22616,7 +22616,7 @@ Os padrões de URL definidos nessa política não podem entrar em conflito com a
 
 Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -22825,7 +22825,7 @@ Se você não configurar esta política:
    - Os usuários da conta Microsoft (exclui contas do Azure AD) em busca e conquista de mercados verão a experiência do Microsoft Rewards em seu perfil de usuário do Microsoft Edge.
    - A configuração para habilitar o Microsoft Rewards nas configurações do Microsoft Edge será habilitada e alternada.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: Sim
@@ -23918,7 +23918,7 @@ Se você desabilitar esta política, os pop-ups que direcionam _blank têm permi
 
 Essa política será obsoleta no Microsoft Edge versão 95.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -24951,7 +24951,7 @@ Essa política afeta todos os tipos de entradas de vídeo, não apenas a câmera
 
   Especificar sites, com base em padrões de URL, que podem usar dispositivos de captura de vídeo sem pedir permissão ao usuário. Os padrões nesta lista são comparados com a origem de segurança da URL da solicitação. Se elas corresponderem, o site recebe acesso automaticamente aos dispositivos de captura de vídeo.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -25271,7 +25271,7 @@ Se você definir essa política como falsa ou não definir essa política, os re
 
   - Nome Exclusivo da Política de Grupo: WebComponentsV0Enabled
   - Nome da Política de Grupo: Reabilitar a API de componentes Web V0 até M84 (obsoleta)
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
