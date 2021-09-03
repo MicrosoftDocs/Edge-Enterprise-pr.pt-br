@@ -3,19 +3,19 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/31/2021
+ms.date: 09/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: 1fad7c52819ce5ca6516d400ea00151a54bc66e7
-ms.sourcegitcommit: 822db9d312a13a13928ff1c10c2b35b6b46598fd
+ms.openlocfilehash: 993e91faeadf9e734af421bf46c4fca9953fa320
+ms.sourcegitcommit: 9f7324ff156de0a0c75e2217104e543f182649f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "11934621"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "11938296"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão do canal do Microsoft Edge beta
 
@@ -24,9 +24,31 @@ Estas notas de versão fornecem informações sobre os novos recursos e atualiza
 > [!NOTE]
 > A Plataforma da Web Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que estão chegando e afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## <a name="version-9409929-september-2"></a>Versão 94.0.992.9: 2 de setembro
+
+### <a name="feature-updates"></a>Atualizações de recursos
+
+- **Microsoft Edge mudar para uma cadência de 4 semanas para atualizações nos canais Beta e Estável.**  Adotaremos um novo ciclo de lançamento de quatro semanas para versões principais. Você pode ler mais sobre a decisão aqui: https://blogs.windows.com/msedgedev/2021/03/12/new-release-cycles-microsoft-edge-extended-stable/
+
+- **Nova opção estável estendida sendo oferecida.**  Estamos oferecendo uma nova opção Estável Estendida para nossos clientes Enterprise gerenciados. A opção Estável Estendida permanece em revisões numeradas e atualizadas a cada 8 semanas. Haverá uma atualização de segurança quinzenal.  Informações adicionais aqui: https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/
+
+- **Melhorias no comportamento padrão de abertura de arquivos MHTML.**  Os arquivos MHTML continuarão a ser abertos no modo IE se o modo IE estiver habilitado, a menos que o arquivo MHTML tenha sido salvo do Microsoft Edge (usando as opções Salvar como ou Salvar Página Como no Microsoft Edge). Se o arquivo tiver sido salvo Microsoft Edge, ele será aberto Microsoft Edge.  Essa alteração corrigirá um problema de renderização que foi observado ao abrir um arquivo MHTML no modo IE quando salvo do Microsoft Edge.
+
+- **Restringir solicitações de rede privada para proteger contextos.** O acesso a recursos em redes locais (intranet) a partir de páginas na Internet exige que essas páginas sejam entregues por HTTPS. Essa alteração está ocorrendo no projeto Chromium, no qual Microsoft Edge se baseia. Para obter mais informações, navegue até a entrada [Status da Plataforma Chrome.](https://chromestatus.com/feature/5436853517811712) Duas políticas de compatibilidade estão disponíveis para dar suporte a cenários que precisam preservar a compatibilidade com páginas não seguras: [InsecurePrivateNetworkRequestAllowed](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) e [InsecurePrivateNetworkRequestAllowedForUrls](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls).
+
+- **Bloquear downloads de conteúdo misto.** As páginas seguras só baixarão arquivos hospedados em outras páginas seguras e os downloads hospedados em páginas não seguras (não-HTTPS) serão bloqueados se iniciados em uma página segura. Essa alteração está ocorrendo no projeto Chromium, no qual Microsoft Edge se baseia. Para obter mais informações, navegue até a entrada do [blog de segurança do Google](https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html).
+
+- **Habilitar a login implícito para contas locais.**   Ao habilitar a política OnlyOnPremisesImplicitSigninEnabled, somente as contas locais serão habilitadas para entrar implícito.  O Microsoft Edge não tentará entrar implicitamente em contas MSA ou AAD. A atualização de contas locais para contas do AAD também será interrompida.
+
+- **Caixas de texto de formulário gratuito adicionadas a documentos PDF.**  Agora, temos suporte para adicionar caixas de texto de formulário gratuitos a documentos PDF que você pode usar para preencher formulários e adicionar anotações visíveis.
+
+- **Atualize suas senhas com facilidade.**  O navegador agora o levará diretamente para a página Alterar Senha para um determinado site economizando tempo e clicando evitando a necessidade de navegar até a página manualmente. Depois de estar nessa página, o navegador também irá autofiliá-la e sugerir uma nova senha forte e exclusiva.  Observe que, no momento, esse recurso está disponível em um número limitado de sites.  
+
+- **Nova página de configurações de acessibilidade.** Unimos as configurações relacionadas à acessibilidade em uma única página. Você pode encontrar a nova página edge://settings/accessibility na lista de configurações principais. Aqui você pode encontrar configurações para aumentar a página da Web, mostrar um contorno de alta visibilidade em torno da área de foco e outras configurações que podem ajudar a melhorar sua experiência de navegação na Web. Continuaremos a adicionar novas configurações aqui em versões futuras do Microsoft Edge.
+
 ## <a name="version-93096133-august-27"></a>Versão 93.0.961.33: 27 de agosto
 
-Correção de vários bugs e problemas de desempenho.
+Vários bugs corrigidos e problemas de desempenho.
 
 ## <a name="version-93096127-august-20"></a>Versão 93.0.961.27: 20 de agosto
 
@@ -34,13 +56,13 @@ Vários bugs corrigidos e problemas de desempenho.
 
 ## <a name="version-93096124-august-18"></a>Versão 93.0.961.24: 18 de agosto
 
-Correção de vários bugs e problemas de desempenho.
+Vários bugs corrigidos e problemas de desempenho.
 
 ## <a name="version-93096111-august-3"></a>Versão 93.0.961.11: 3 de agosto
 
 ### <a name="feature-updates"></a>Atualizações de recursos
 
-- **Preferências iniciais Microsoft Edge.**  A partir Microsoft Edge versão 93, a implantação de Microsoft Edge para sua empresa se tornará mais fácil com a adição de Preferências Iniciais.
+- **Preferências iniciais Microsoft Edge.**  A partir Microsoft Edge versão 93, a implantação de Microsoft Edge para sua empresa se tornará mais fácil com a adição de [Preferências Iniciais.](/deployedge/initial-preferences-support-on-microsoft-edge-browser)
 
 - **O modo IE no Microsoft Edge dará suporte ao comportamento "não mesclar".**  A partir Microsoft Edge versão 93, o modo IE no Microsoft Edge dará suporte a "no-merge". Para um usuário final, quando uma nova janela do navegador é lançada de um aplicativo de modo IE, ela estará em uma sessão separada, semelhante ao comportamento no IE11. Você precisará ajustar sua lista de sites para configurar sites que precisam impedir o compartilhamento de sessão. Nos bastidores, para cada janela do Microsoft Edge, a primeira vez que uma guia de modo IE é visitada dentro dessa janela, se for um dos sites designados "sem mesclagem", essa janela será bloqueada em uma sessão do IE "sem mesclagem" diferente de todas as outras janelas Microsoft Edge pelo menos até que a última guia modo IE seja fechada nessa janela. Saiba mais [aqui](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--no-merge--option-that-was-supported-in-internet-explorer-11-).
 
@@ -99,7 +121,7 @@ Correção de vários bugs e problemas de desempenho.
 
 ## <a name="version-93096118-august-10"></a>Versão 93.0.961.18: 10 de agosto
 
-Vários bugs corrigidos e problemas de desempenho.
+Correção de vários bugs e problemas de desempenho.
 
 ## <a name="version-92090262-july-29"></a>Versão 92.0.902.62: 29 de julho
 
@@ -107,7 +129,7 @@ Vários bugs corrigidos e problemas de desempenho.
 
 ## <a name="version-92090255-july-21"></a>Versão 92.0.902.55: 21 de julho
 
-Correção de vários bugs e problemas de desempenho.
+Vários bugs corrigidos e problemas de desempenho.
 
 ## <a name="version-92090245-july-12"></a>Versão 92.0.902.45: 12 de julho
 

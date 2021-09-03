@@ -11,12 +11,12 @@ metadata:
   ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: Perguntas frequentes sobre a implantação de Microsoft Edge na empresa
-  ms.openlocfilehash: edf0ec730ece83126619519cdd45d20f3271dd99845f4786f29dde32befec2b6
-  ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+  ms.openlocfilehash: d4d707533c8733059e8fadc8fe8de9a85b8dc64d
+  ms.sourcegitcommit: 0b23434b719dbeb302edf200a47550ee7b62a86a
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 08/05/2021
-  ms.locfileid: "11725954"
+  ms.lasthandoff: 09/03/2021
+  ms.locfileid: "11938828"
 title: Perguntas frequentes (perguntas frequentes) sobre Microsoft Edge na empresa
 summary: >
   > [!NOTE]
@@ -28,7 +28,7 @@ sections:
   - question: Como sei que versão do Microsoft Edge tenho?
     answer: >
       No canto superior direito da Microsoft Edge, selecione o ícone de releitos (**...**) e selecione **Configurações**. Escolha **Sobre o Microsoft Edge** para ver sua versão do Microsoft Edge.
-  - question: E o Internet Explore 11?
+  - question: E o Internet Explorer 11?
     answer: >
       O aplicativo de área de trabalho do Internet Explorer 11 será retirado e ficará sem suporte em 15 de junho de 2022 (para uma lista do que está no escopo, consulte a perguntas [frequentes](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)). Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. Saiba mais [aqui](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549).
   - question: O Microsoft Edge (Chromium-based) oferece suporte aos controles ActiveX ou BHOs, como o Silverlight ou o Java?
