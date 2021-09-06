@@ -3,23 +3,35 @@ title: Notas de versão para atualizações de segurança do Microsoft Edge
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/15/2021
+ms.date: 09/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão para atualizações de segurança do Microsoft Edge
-ms.openlocfilehash: 28069b5693e0314ec5c99ea41f3ddedef9fe5ff2
-ms.sourcegitcommit: af1b1bad562dfd71c20bfab4fe00512cf956beb7
+ms.openlocfilehash: e44339eed45620fa6fe4b76e5b201e2308baa69f
+ms.sourcegitcommit: 9f7324ff156de0a0c75e2217104e543f182649f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2021
-ms.locfileid: "11926027"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "11938295"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Notas de versão para atualizações de segurança do Microsoft Edge
 
 Estas notas de versão fornecem informações sobre correções de segurança incluídas nas atualizações para o canal estável do Microsoft Edge.
+
+## <a name="september-2-2021"></a>2 de setembro de 2021
+
+A Microsoft lançou o  **canal estável mais recente do Microsoft Edge (versão 93.0.961.38)**, que incorpora as atualizações de segurança mais recentes do projeto Chromium. Para obter mais informações, consulte o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide)
+
+Esta instalação contém a seguinte atualização específica do Microsoft Edge:
+
+- [CVE-2021-26436](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-26436)
+- [CVE-2021-36930](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36930)
+- [CVE-2021-38641](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38641)
+- [CVE-2021-38642](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38642)
+- [CVE-2021-38670](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38670)
 
 ## <a name="august-19-2021"></a>19 de agosto de 2021
 
