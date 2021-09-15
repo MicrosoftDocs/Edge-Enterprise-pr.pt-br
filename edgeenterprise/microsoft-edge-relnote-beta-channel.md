@@ -3,19 +3,19 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/09/2021
+ms.date: 09/13/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: d455b2ccab734ba8792754b81994ac381b974f73
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 93fbb135befd1691220a1d9b4499d0713b1740f3
+ms.sourcegitcommit: c3d63d913eb15e7dbeb9f45b5f28fc841b46bce1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978733"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "12016460"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão do canal do Microsoft Edge beta
 
@@ -23,6 +23,10 @@ Estas notas de versão fornecem informações sobre os novos recursos e atualiza
 
 > [!NOTE]
 > A Plataforma da Web Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-94099219-september-13"></a>Versão 94.0.992.19: 13 de setembro
+
+Correção de vários bugs e problemas de desempenho.
 
 ## <a name="version-94099214-september-7"></a>Versão 94.0.992.14: 7 de setembro
 
@@ -62,7 +66,7 @@ Vários bugs corrigidos e problemas de desempenho.
 
 ## <a name="version-93096133-august-27"></a>Versão 93.0.961.33: 27 de agosto
 
-Correção de vários bugs e problemas de desempenho.
+Vários bugs corrigidos e problemas de desempenho.
 
 ## <a name="version-93096127-august-20"></a>Versão 93.0.961.27: 20 de agosto
 
@@ -70,7 +74,7 @@ Vários bugs corrigidos e problemas de desempenho.
 
 ## <a name="version-93096124-august-18"></a>Versão 93.0.961.24: 18 de agosto
 
-Vários bugs corrigidos e problemas de desempenho.
+Correção de vários bugs e problemas de desempenho.
 
 ## <a name="version-93096111-august-3"></a>Versão 93.0.961.11: 3 de agosto
 
@@ -139,11 +143,11 @@ Vários bugs corrigidos e problemas de desempenho.
 
 ## <a name="version-92090262-july-29"></a>Versão 92.0.902.62: 29 de julho
 
-Correção de vários bugs e problemas de desempenho.
+Vários bugs corrigidos e problemas de desempenho.
 
 ## <a name="version-92090255-july-21"></a>Versão 92.0.902.55: 21 de julho
 
-Vários bugs corrigidos e problemas de desempenho.
+Correção de vários bugs e problemas de desempenho.
 
 ## <a name="version-92090245-july-12"></a>Versão 92.0.902.45: 12 de julho
 

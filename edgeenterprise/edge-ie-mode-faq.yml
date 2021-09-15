@@ -4,19 +4,19 @@ metadata:
   ms.author: shisub
   author: AndreaLBarr
   manager: srugh
-  ms.date: 08/31/2021
+  ms.date: 09/31/2021
   audience: ITPro
   ms.topic: conceptual
   ms.prod: microsoft-edge
   ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: Solução de problemas e perguntas frequentes para o modo Microsoft Edge Internet Explorer
-  ms.openlocfilehash: 591d963ed807c65b580e74fe10ad989bdceb852e
-  ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+  ms.openlocfilehash: b332f6b7399627e91d7dd51c624c3d56f9317ee5
+  ms.sourcegitcommit: c3d63d913eb15e7dbeb9f45b5f28fc841b46bce1
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 09/12/2021
-  ms.locfileid: "11978636"
+  ms.lasthandoff: 09/15/2021
+  ms.locfileid: "12016530"
 title: Solução de problemas e perguntas frequentes do modo IE
 summary: >
   >[!Note]
@@ -79,8 +79,7 @@ sections:
 
 
       Para verificar se o Microsoft Edge está instalado no nível do sistema, digite "edge://versão" na barra de endereços do Microsoft Edge. O caminho do executável mostrará um caminho que começa com *C:\Arquivos de Programas*, o que indica uma instalação do sistema. Se o caminho do executável começar com *C:\Users\*, desinstale e reinstale o Microsoft Edge com privilégios de administrador.
-  - question: >
-      Mensagem de erro: "para abrir esta página no modo IE, tente reiniciar o Microsoft Edge".
+  - question: Receber mensagem de erro "Para abrir essa página no modo IE, tente reiniciar Microsoft Edge".
     answer: >
       Esse erro pode ocorrer se houver um erro inesperado no Internet Explorer. Reiniciar o Microsoft Edge geralmente corrige esse erro.
   - question: >
@@ -99,7 +98,18 @@ sections:
       Sim, o aplicativo de área de trabalho do Internet Explorer 11 será retirado e ficará sem suporte em 15 de junho de 2022 (para uma lista do que está no escopo, Perguntas frequentes sobre ciclo de vida [- Internet Explorer](https://support.microsoft.com/help/17454/). Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. [Saiba mais aqui](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
   - question: >
       Como posso depurar meu aplicativo herdável usando o modo IE no Microsoft Edge?
-    answer: "Você pode usar o IEChooser para iniciar o Internet Explorer DevTools para depurar o conteúdo de suas guias de modo IE. Para usar o IEChooser, execute as etapas a seguir.\n1. Abra IEChooser.\n    - Abra a caixa de diálogo Executar. Por exemplo, pressione `Windows logo key`  +  `R` o .\n    - Insira `%systemroot%\\system32\\f12\\IEChooser.exe` e selecione **Ok**.\n2. No IEChooser, selecione a entrada para a guia Modo IE.\n  \n"
+    answer: >
+      Você pode usar o IEChooser para iniciar o Internet Explorer DevTools para depurar o conteúdo de suas guias de modo IE. Para usar o IEChooser, execute as etapas a seguir.
+
+      1. Abra IEChooser.
+          - Abra a caixa de diálogo Executar. Por exemplo, pressione `Windows logo key`  +  `R` o .
+          - Insira `%systemroot%\system32\f12\IEChooser.exe` e selecione **Ok**.
+      2. No IEChooser, selecione a entrada para a guia Modo IE.
+  - question: Posso testar um site em Microsoft Edge enquanto ele está configurado para abrir o modo IE na lista de sites Enterprise modo?
+    answer: >-
+      Sim, enquanto você está modernizando seus sites herdados, você pode testar aplicativos configurados no modo IE Microsoft Edge. Para fazer isso, você pode executar Microsoft Edge com o sinalizador `--ie-mode-test` de linha de comando. Certifique-se de que não haja Microsoft Edge instâncias em execução.
+
+      Em seguida, você pode selecionar Configurações e mais (o ícone de replicação ...) > Mais Ferramentas > abrir sites no modo de Borda.
   - question: >
       Posso usar "Abrir com o Explorer" ou "Exibir no Explorador de Arquivos" no SharePoint com o modo IE?
     answer: >

@@ -3,19 +3,19 @@ title: Lista de sites locais para modo IE
 ms.author: shisub
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/20/2021
+ms.date: 09/13/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Saiba como habilitar listas de sites locais e acesso fácil ao modo IE
-ms.openlocfilehash: 0c79622a1f96cad83a2436f5e79e69914f4a2c40
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 8130a835cd803f5cdeb50f825ccee895f35f62e3
+ms.sourcegitcommit: c3d63d913eb15e7dbeb9f45b5f28fc841b46bce1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978583"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "12016560"
 ---
 ## <a name="local-site-list-for-ie-mode"></a>Lista de sites locais para modo IE
 
@@ -53,9 +53,10 @@ Para habilitar a experiência de lista de sites locais, os usuários podem ir pa
 
 :::image type="content" source="media/Edge-hybrid-IE-mode/internet-explorer-compatibilitiy.png" alt-text="Compatibilidade com o Internet Explorer":::
 
->[! Observação:]  
-
->1. Se você habilitar o teste do modo IE por meio da política *InternetExplorerIntegrationTestingAllowed,* você verá essa configuração, mas ela será esnobada, a menos que você habilita explicitamente a política *InternetExplorerIntegrationReloadInIEModeAllowed.*  
+>[!Note]  
+>
+>1. Se você habilitar o teste do modo IE por meio da política *InternetExplorerIntegrationTestingAllowed,* você verá essa configuração, mas ela será esnobada, a menos que você habilita explicitamente a política *InternetExplorerIntegrationReloadInIEModeAllowed.*
+>
 >2. Se **Permitir que sites** sejam recarregados no modo Internet Explorer esteja definido como **Padrão,** os usuários poderão recarregar sites no modo IE se eles têm uso existente do Internet Explorer 11.  
 
 Quando essa configuração estiver habilitada, os usuários poderão recarregar um site no modo IE selecionando Configurações e mais (o ícone de releições **...)**> Recarregar no modo Internet Explorer . Os usuários também podem selecionar a guia Recarregar no modo **Internet Explorer** quando clicam com o botão direito do mouse em uma guia ou escolhem Abrir link na nova guia modo **Internet Explorer** quando clicam com o botão direito do mouse em um link.
