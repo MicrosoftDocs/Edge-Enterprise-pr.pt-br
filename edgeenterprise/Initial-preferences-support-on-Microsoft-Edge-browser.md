@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: As preferências iniciais dão suporte Microsoft Edge navegador.
-ms.openlocfilehash: 39af88d21107ad548166c749c3ba765754270b48
-ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
+ms.openlocfilehash: 7a497fd2f3305b0c027a396936ef86bacbcb5b20
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "11882257"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11978595"
 ---
 # <a name="configure-microsoft-edge-using-initial-preferences-settings-for-the-first-run"></a>Configurar Microsoft Edge usando as configurações de Preferências Iniciais para a primeira execução
 
@@ -52,7 +52,7 @@ A seguir está a lista de configurações de preferências que atualmente são s
 
 ## <a name="1-download-an-example-initial_preferences-file"></a>1: Baixar um exemplo initial_preferences arquivo
 
-Para começar, baixe o exemplo *initial_preferences* formulário de arquivo neste local na página inicial Microsoft Edge Enterprise [e](https://www.microsoft.com/edge/business/download) **siga** as etapas abaixo.
+Para começar, baixe o arquivo "Política" da página [Microsoft Edge Enterprise inicial](https://www.microsoft.com/edge/business/download). Extraia os arquivos e abra `initial_preferences` o arquivo dentro da `examples` pasta.
 
 ## <a name="2-customize-and-validate-the-initial_preferences-file"></a>2: Personalizar e validar o initial_preferences arquivo
 

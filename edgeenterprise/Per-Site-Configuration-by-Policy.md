@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 'Configuração por Site por Política '
-ms.openlocfilehash: d7cc68264c9fca9e667908ff4988f512c152bfc4857fd14166519fb3eb337a5a
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 4f1bf9a421f0098ba8105e78f77ac4af62530239
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11725584"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11978594"
 ---
 # <a name="persite-configuration-by-policy"></a>Configuração por Site por Política
 
