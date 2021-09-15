@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Configurações e experimentação do Microsoft Edge
-ms.openlocfilehash: d6aee10133b5cbc0f7a784fab561864303d3dc6eb4e1cb6547562b9e6107961a
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 1ebfe5fc1da107aa7e9e20b629f14aff468bdd6d
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726164"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11978562"
 ---
 # <a name="microsoft-edge-configurations-and-experimentation"></a>Configurações e experimentação do Microsoft Edge
 

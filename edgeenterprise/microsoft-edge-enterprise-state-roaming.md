@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge e Enterprise State Roaming
-ms.openlocfilehash: 664478f6c79d5710c4c0441fc33862d20cda0d1cfbcfefc7c944739cc7f539dd
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 34ee5bf7970834a2e2211db9e2c0bc6ae99bcd6b
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11727444"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11978750"
 ---
 # <a name="microsoft-edge-and-enterprise-state-roaming"></a>Microsoft Edge e Enterprise State Roaming
 

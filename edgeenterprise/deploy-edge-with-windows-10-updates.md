@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Implantar o Microsoft Edge com atualizações do Windows 10
-ms.openlocfilehash: 8ef5bd79059f31eb368a415ccca456fcea43788aed5738ed626a476b71a7d1ad
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 9102ef37c6a5329a5cba79ed976237d7fd7e2063
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726174"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11978565"
 ---
 # <a name="deploy-microsoft-edge-with-windows-10-updates"></a>Implantar o Microsoft Edge com atualizações do Windows 10
 

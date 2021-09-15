@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Configuração e suporte à identidade do Microsoft Edge
-ms.openlocfilehash: 5829082ba52b026acd53164cce82ed04d843d53c10aaff1e1e9552cac82f06f9
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 18b82c3f0c4af0e383dd50266c3d9184c76b23af
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11727114"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11978558"
 ---
 # <a name="microsoft-edge-identity-support-and-configuration"></a>Configuração e suporte à identidade do Microsoft Edge
 
@@ -33,7 +33,7 @@ Com o Microsoft Edge é possível entrar em um perfil de navegador com uma conta
 | Sincronização | Sim | Não | Não | Sim |
 | SSO com Token de atualização principal | Sim | Sim | Não | Sim |
 | SSO de conexão remota | Sim | Sim | Sim | N/D |
-| Autenticação Integrada do Windows | Sim | Sim | Sim | N/D |
+| Autenticação Integrada do Windows | Sim | Sim | Sim | N/A |
 | Página Nova guia Corporativa | Requer O365 |   Requer O365 | Não | N/A |
 | Pesquisa da Microsoft | Requer O365 | Requer O365 | Não | N/D |
 

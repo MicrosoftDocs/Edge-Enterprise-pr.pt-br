@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Saiba como implantar Microsoft Edge com o SCCM (System Center Configuration Manager).
-ms.openlocfilehash: 0e3011178853a13562bd41a1f149975ab10317d07a48b5e19c3d6cf9d791a48e
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: b0efa986c7f230f455d052f8e003616e081e324a
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726394"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11978564"
 ---
 # <a name="deploy-microsoft-edge-using-system-center-configuration-manager"></a>Implantar o Microsoft Edge usando o System Center Configuration Manager
 

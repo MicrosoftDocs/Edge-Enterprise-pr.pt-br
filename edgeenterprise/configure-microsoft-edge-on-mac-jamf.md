@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Definir as configurações de política do Microsoft Edge em dispositivos Mac com o Jamf
-ms.openlocfilehash: be706795d093b9dcecf33ee1bf7071286082fad1fea98a98b34145e87a9b7393
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 8556a5b1d0fc01feb67fc86cb016a9ed47061b55
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11725284"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11978580"
 ---
 # <a name="configure-microsoft-edge-policy-settings-on-macos-with-jamf"></a>Definir as configurações de política do Microsoft Edge no macOS com o Jamf
 

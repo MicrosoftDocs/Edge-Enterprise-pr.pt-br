@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Definir configurações de política do Microsoft Edge em dispositivos Windows
-ms.openlocfilehash: a962a42c8dc40589c9275625007827ec2f76450002115a0c6d8c9e2d733df2e8
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: a5db4352e723539843a5ad80a7b067e670bced5c
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11725234"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11978579"
 ---
 # <a name="configure-microsoft-edge-policy-settings-on-windows"></a>Definir configurações de política do Microsoft Edge no Windows
 

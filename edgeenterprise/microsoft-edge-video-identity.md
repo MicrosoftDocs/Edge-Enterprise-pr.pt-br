@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge e Identidade
-ms.openlocfilehash: a89e3bf6097ce16e749f412b894b1365515f56b4ad7ac90c89acbd4644aea688
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 1b9d88b0580ef792cbdca952e6f65b20b301ee91
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726634"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11978770"
 ---
 # <a name="video-microsoft-edge-and-identity"></a>Vídeo: Microsoft Edge e Identidade
 

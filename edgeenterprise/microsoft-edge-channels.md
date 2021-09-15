@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Visão geral de canal do Microsoft Edge
-ms.openlocfilehash: f0b6b3dfbec9f5ec68a41f9f5f14680329d1dd2338e98228d0c84866313f5f48
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 7d1fb72b458569cb4e4c6f44a6d89be7f65984df
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11727334"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11978752"
 ---
 # <a name="overview-of-the-microsoft-edge-channels"></a>Visão geral dos canais do Microsoft Edge
 

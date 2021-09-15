@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge e sites configuráveis no modo IE
-ms.openlocfilehash: 4f9a2b3f1d45b11f3ec299343cd57a89ecb0356179e6884064333d4b8f12e6cc
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 0248ecd394acee5773751c0685969e3d40940431
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11724304"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11978629"
 ---
 # <a name="learn-about-configurable-sites-in-ie-mode"></a>Saiba mais sobre sites configuráveis no modo IE
 

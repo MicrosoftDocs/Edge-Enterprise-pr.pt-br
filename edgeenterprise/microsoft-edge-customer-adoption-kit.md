@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Materiais de adoção do cliente Microsoft Edge
-ms.openlocfilehash: e3af7fb7c6ba3cb1b376e6e7d69c30ac10b897ffb8edda6e7f8ce90fa08519e6
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: d3c3fc426cf67e054aa37cabb3ac1ca42c1ab5d9
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11725764"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11978753"
 ---
 # <a name="customer-adoption-materials-for-microsoft-edge"></a>Materiais de adoção do cliente para Microsoft Edge
 

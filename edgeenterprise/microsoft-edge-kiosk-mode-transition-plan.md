@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Planejar a transição do modo de quiosque
-ms.openlocfilehash: 31a127de166e5bff53ad73951b0fd0f29eed094cae5026bf57995ccebcd5784c
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 95c50b39eb6e844ae4309b260087931232276d45
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726744"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11978758"
 ---
 # <a name="plan-your-kiosk-mode-transition"></a>Planejar a transição do modo de quiosque
 
