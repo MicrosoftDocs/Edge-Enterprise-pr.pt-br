@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Perguntas frequentes sobre extensões do Microsoft Edge
-ms.openlocfilehash: 14256cf63c05e772f977753dca973c910d672dd45de97748c7148a405f2062a7
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 5dd2dd147e1a599e13539158cf291028497a0b29
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726734"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11978721"
 ---
 # <a name="faq-for-microsoft-edge-extensions"></a>Perguntas frequentes sobre extensões do Microsoft Edge
 

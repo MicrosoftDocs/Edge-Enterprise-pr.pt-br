@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 'Microsoft Edge: estado do navegador 2020'
-ms.openlocfilehash: febeb15d5b290aa7f47c466e5c875b51847375f75e7ac5ca53b35b3edf9cdb78
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 8b87bfd23b7b95513e69d733590a12d0b974ddf1
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11724074"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11978657"
 ---
 # <a name="video-microsoft-edge-state-of-the-browser-2020"></a>Vídeo: Microsoft Edge: estado do navegador 2020
 

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Saiba como obter um relatório de uso do navegador para sua organização.
-ms.openlocfilehash: 90227be3d5d5372227e24b62e63d09e70e229e51b34e9143d92afb6d9ebfbd0c
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 6592ee04439fb37a034f148bcbef00ad967d3f7e
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726624"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11978736"
 ---
 # <a name="microsoft-browser-usage-report"></a>Relatório de uso do navegador da Microsoft
 

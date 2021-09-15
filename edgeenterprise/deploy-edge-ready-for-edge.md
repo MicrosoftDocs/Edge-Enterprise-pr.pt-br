@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Pronto para o Microsoft Edge
-ms.openlocfilehash: 2caa9f9aa07a8d775f5647845f1ffa387cbde74371616c380bd61cacb9f3ba48
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 4a5758e94e61776c98e4e3421e09b32815670b4b
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726194"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11978599"
 ---
 # <a name="ready-for-microsoft-edge"></a>Pronto para o Microsoft Edge
 

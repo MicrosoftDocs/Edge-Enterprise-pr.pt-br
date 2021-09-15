@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Manter a navegação na página no modo do Internet Explorer
-ms.openlocfilehash: f1c40977ba07f0a85bc64aab8e609163f9a68dd2eb7487adff6b6a1fcbd110f2
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 20b18d121c3babfaacffd4a08316b25be714d95e
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11724274"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11978604"
 ---
 # <a name="keep-in-page-navigation-in-internet-explorer-mode"></a>Manter a navegação na página no modo do Internet Explorer
 

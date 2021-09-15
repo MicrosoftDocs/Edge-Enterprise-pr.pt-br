@@ -11,11 +11,11 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Definir as configurações de política do Microsoft Edge para Windows usando o Microsoft Intune.
 ms.openlocfilehash: 63eb29018bf4ec9c5a32d11b215f422e150383c9
-ms.sourcegitcommit: e811be46e3236534c5fa17c728ffc1005c5cc295
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "11907255"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11978598"
 ---
 # <a name="configure-microsoft-edge-policy-settings-with-microsoft-intune"></a>Definir as configurações de política do Microsoft Edge com o Microsoft Intune
 

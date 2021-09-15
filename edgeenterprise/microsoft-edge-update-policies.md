@@ -11,12 +11,12 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação para todas as políticas compatíveis com o Microsoft Edge Update
-ms.openlocfilehash: 7b6043ecb96cb30ee9b51fc9966f925b223e72f29ac325ad06208d743f60e18f
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 9c7eca4d5bdd7c87bea141a422dce3b17f22067c
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11724864"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11978647"
 ---
 # <a name="microsoft-edge---update-policies"></a>Microsoft Edge - Políticas de atualização
 
@@ -400,7 +400,7 @@ Esta política está disponível apenas em instâncias do Windows que fazem part
 ```
 [Voltar ao início](#microsoft-edge---update-policies)
 
-### <a name="UpdaterExperimentationAndConfigurationServiceControl"></a>UpdaterExperimentationAndConfigurationServiceControl
+### <a name="updaterexperimentationandconfigurationservicecontrol"></a>UpdaterExperimentationAndConfigurationServiceControl
 #### <a name="retrieve-configurations-and-experiments"></a>Recuperar configurações e experimentos
 >Microsoft Edge Update 1.3.145.1 e posterior
 
@@ -426,7 +426,7 @@ Se você não configurar essa política, em um dispositivo não habilitado, o co
 ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
 - Caminho: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Nome do valor: UpdaterExperimentationAndConfigurationServiceControl
-- Tipo de Valor: REG_DWORD
+- Tipo de valor: REG_DWORD
 ##### <a name="example-value"></a>Valor de exemplo:
 ```
 0x00000001

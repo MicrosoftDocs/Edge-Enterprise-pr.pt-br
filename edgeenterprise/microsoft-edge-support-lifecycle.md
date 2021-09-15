@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Ciclo de vida do Microsoft Edge
-ms.openlocfilehash: c9967a093168e0a289cd26f8c3927fc4188f916564e221b66394c6a510083ed1
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 941b77920978bba82dd5edcb192ddfab898f4053
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726954"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11978645"
 ---
 # <a name="microsoft-edge-lifecycle-policy"></a>Política de ciclo de vida do Microsoft Edge
 
@@ -57,7 +57,7 @@ Reconhecemos que os clientes corporativos que gerenciam ambientes complexos prec
 |     4 semanas "Estável"             |     Atual e 2 anteriores             |     Atual                           |     12 semanas                            |     4 semanas               |
 |     8 semanas "Estável Estendido"    |     Atual e 1 anterior             |     Atual                           |     16 semanas                            |     8 semanas               |
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Documentação do Microsoft Edge](./index.yml)

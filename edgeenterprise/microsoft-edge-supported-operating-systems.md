@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Sistemas operacionais com suporte do Microsoft Edge
-ms.openlocfilehash: 37942c12de7570774072f6ae963b3681be636378c8e5c97a6acb11d570127a8d
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 3c5af933e6a9e6bf66f0f486f77c8ddd9364a53e
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11727534"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11978659"
 ---
 # <a name="microsoft-edge-supported-operating-systems"></a>Sistemas operacionais com suporte do Microsoft Edge
 
