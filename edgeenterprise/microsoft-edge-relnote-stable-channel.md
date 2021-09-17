@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Stable Channel
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/09/2021
+ms.date: 09/16/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: e13778ee9a93a4621ad77a00da1d85def3f97225
-ms.sourcegitcommit: 6eefb7cb134f25a1e2d1f515a3a8600524a4b6e3
+ms.openlocfilehash: cf37c34aa1c0d61e2118acf8a599ff574d6ff156
+ms.sourcegitcommit: dbe3fb9932022554c118ac02d4e9ab5f09c53709
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2021
-ms.locfileid: "12017965"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "12018981"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão do Microsoft Edge Stable Channel
 
@@ -30,6 +30,13 @@ Essas notas de versão fornecem informações dos novos recursos e atualizaçõe
 > Para o Canal Estável, as atualizações serão implantadas progressivamente por um ou mais dias. Para saber mais, consulte [Distribuições progressivas para atualizações do Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 >
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-93096152-september-16"></a>Versão 93.0.961.52: 16 de setembro
+
+>[!Important]
+>Esta atualização contém uma correção para [CVE-2021-30633](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30632) que foi relatada pela equipe Chromium como tendo uma exploração em execução. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
+
+As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#september-16-2021).
 
 ## <a name="version-93096147-september-11"></a>Versão 93.0.961.47: 11 de setembro
 
