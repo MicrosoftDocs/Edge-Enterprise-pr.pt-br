@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: cd59eca6d07284c61a0c61537f45d36771d133f3
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 44dac3dd6bb489ac43e50433319b0a7908495df5
+ms.sourcegitcommit: 6eefb7cb134f25a1e2d1f515a3a8600524a4b6e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978620"
+ms.lasthandoff: 09/16/2021
+ms.locfileid: "12017985"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -254,7 +254,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[SmartScreenEnabled](#smartscreenenabled)|Configurar o Microsoft Defender SmartScreen|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Forçar o Microsoft Defender SmartScreen verifica downloads de fontes confiáveis|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Configura o Microsoft Defender SmartScreen para bloquear aplicativos potencialmente indesejados.|
-### [*<a name="startup-home-page-and-new-tab-page"></a>Página de inicialização&comma; página inicial e nova guia*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Página de inicialização&comma; página inicial e nova guia*](#startup-home-page-and-new-tab-page-policies)
 
 |Nome da política|Legenda|
 |-|-|
@@ -1914,7 +1914,8 @@ Use as informações anteriores ao configurar essa política.
 
   Esta política não funciona porque o Microsoft Edge não oferece mais suporte ao Flash.
 
-[PluginsAllowedForUrls](#pluginsallowedforurls) e [PluginsBlockedForUrls](#pluginsblockedforurls) são verificados primeiro e, em seguida, esta política. As opções são 'ClickToPlay' e 'BlockPlugins'. Se você definir essa política como 'BlockPlugins', esse plug-in será negado para todos os sites. 'ClickToPlay' permite a execução do plug-in do Flash, mas os usuários clicam no espaço reservado para iniciá-lo.
+
+            [PluginsAllowedForUrls](#pluginsallowedforurls) e [PluginsBlockedForUrls](#pluginsblockedforurls) são verificados primeiro e, em seguida, esta política. As opções são 'ClickToPlay' e 'BlockPlugins'. Se você definir essa política como 'BlockPlugins', esse plug-in será negado para todos os sites. 'ClickToPlay' permite a execução do plug-in do Flash, mas os usuários clicam no espaço reservado para iniciá-lo.
 
 Se você não configurar essa política, o usuário poderá alterar essa configuração manualmente.
 
@@ -8343,10 +8344,18 @@ Se você não configurar essa política, os usuários poderão escolher suas pr�
 
 Essa política substitui as seguintes políticas individuais:
 
-[ProxyMode](#proxymode)
-[ProxyPacUrl](#proxypacurl)
-[ProxyServer](#proxyserver)
-[ProxyBypassList](#proxybypasslist)
+
+            [ProxyMode](#proxymode)
+            
+
+            [ProxyPacUrl](#proxypacurl)
+            
+
+            [ProxyServer](#proxyserver)
+            
+
+            [ProxyBypassList](#proxybypasslist)
+          
 
 A configuração da política [ProxySettings](#proxysettings) aceita os seguintes campos:
   * ProxyMode, que permite especificar o servidor proxy usado pelo Microsoft Edge e evita que os usuários alterem as configurações de proxy
@@ -9041,7 +9050,7 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 
   [Voltar ao início](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>Página inicial&comma; de inicialização e políticas de nova guia
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>Página inicial&comma; de inicialização e políticas de nova guia
 
   [Voltar ao início](#microsoft-edge---policies)
 
@@ -13721,11 +13730,13 @@ Use as informações anteriores ao configurar essa política.
 
   ### <a name="configureviewinfileexplorer"></a>ConfigureViewInFileExplorer
 
-  #### <a name="configure-the-view-in-file-explorer-feature-for-sharepoint-pages-in-microsoft-edge"></a>Configurar o recurso Exibir no Explorador de Arquivos para páginas do SharePoint no Microsoft Edge
+  #### <a name="configure-the-view-in-file-explorer-feature-for-sharepoint-pages-in-microsoft-edge"></a>Configurar o recurso View in File Explorer para páginas do SharePoint no Microsoft Edge
+
+> [!NOTE]
+> Atualmente, a política ConfigureViewInFileExplorer só pode ser aplicada a instâncias do Windows que estejam ligadas a um domínio Microsoft Active Directory, Windows 10 Pro, ou instâncias empresariais inscritas para gerenciamento de dispositivos.
 
   
-  
-  #### <a name="supported-versions"></a>Versões com suporte:
+  #### <a name="supported-versions"></a>Versões suportadas:
 
   - No Windows desde 93 ou posterior
 
@@ -16662,7 +16673,8 @@ Se você não configurar essa política, os usuários poderão ativar ou desativ
 
 Para que essa política funcione conforme o esperado, a política [BrowserSignin](#browsersignin) não deve ser configurada, ou deve ser definida como habilitada. Se [BrowserSignin](#browsersignin) estiver definida como desabilitada, [ForceSync](#forcesync) não terá efeito.
 
-[SyncDisabled](#syncdisabled) não deve ser configurada ou deve ser definida como false. Se ela estiver definida como true, [ForceSync](#forcesync) não terá efeito.
+
+            [SyncDisabled](#syncdisabled) não deve ser configurada ou deve ser definida como false. Se ela estiver definida como true, [ForceSync](#forcesync) não terá efeito.
 
 0 = não inicia automaticamente a sincronização e mostra o consentimento da sincronização (padrão) 
 1 = forçar a sincronização para o Azure AD/Azure AD- no perfil degradado de usuário e não mostrar a solicitação de consentimento da sincronização
@@ -17183,25 +17195,46 @@ Para as opções de configuração exibidas na primeira experiência de execuç�
 
 - O usuário ainda será automaticamente conectado ao Microsoft Edge se a conta do Windows for do tipo Azure AD ou MSA.
 
--A sincronização não será habilitada por padrão, e os usuários serão instruídos a escolher se deseja sincronizar na inicialização do navegador. Você pode usar as[](#forcesync)ForceSync[ ou a política [SyncDisabled](#syncdisabled) para configurar a sincronização e o aviso de consentimento de sincronização.](#forcesync)
+-A sincronização não será habilitada por padrão, e os usuários serão instruídos a escolher se deseja sincronizar na inicialização do navegador. Você pode usar as[](#forcesync)ForceSync ou a política [SyncDisabled](#syncdisabled) para configurar a sincronização e o aviso de consentimento de sincronização.
 
 Se você desabilitar ou não configurar essa política, a primeira experiência de execução e a tela inicial Splash serão exibidas.
 
 Observação: as opções de configuração específicas exibidas para o usuário na primeira experiência de execução também podem ser gerenciadas usando outras políticas específicas. Você pode usar a política HideFirstRunExperience em conjunto com essas políticas para configurar uma experiência específica de navegador em seus dispositivos gerenciados. Algumas dessas outras políticas são:
 
--[AutoImportAtFirstRun](#autoimportatfirstrun)
 
--[NewTabPageLocation](#newtabpagelocation)
+            -
+            [AutoImportAtFirstRun](#autoimportatfirstrun)
+          
 
--[NewTabPageSetFeedType](#newtabpagesetfeedtype)
 
--[ForceSync](#forcesync)
+            -
+            [NewTabPageLocation](#newtabpagelocation)
+          
 
--[SyncDisabled](#syncdisabled)
 
--[BrowserSignin](#browsersignin)
+            -
+            [NewTabPageSetFeedType](#newtabpagesetfeedtype)
+          
 
--[NonRemovableProfileEnabled](#nonremovableprofileenabled)
+
+            -
+            [ForceSync](#forcesync)
+          
+
+
+            -
+            [SyncDisabled](#syncdisabled)
+          
+
+
+            -
+            [BrowserSignin](#browsersignin)
+          
+
+
+            -
+            [NonRemovableProfileEnabled](#nonremovableprofileenabled)
+          
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -17326,7 +17359,8 @@ Se você não configurar essa política, os dados de Autopreenchimento serão im
 
 Você pode definir essa política como uma recomendação. Isso significa que o Microsoft Edge importará os dados de Autopreenchimento na primeira execução, mas os usuários poderão marcar ou desmarcar os **dados de Autopreenchimento** na opção de importação manual.
 
-**Observação**: essa política atualmente gerencia a importação do Google Chrome (no Windows 7, 8 e 10 e no macOS) e nos navegadores Mozilla Firefox (no Windows 7, 8 e 10 e no macOS).
+
+            **Observação**: essa política atualmente gerencia a importação do Google Chrome (no Windows 7, 8 e 10 e no macOS) e nos navegadores Mozilla Firefox (no Windows 7, 8 e 10 e no macOS).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -17394,7 +17428,8 @@ Se você não configurar essa política, as configurações do navegador serão 
 
 Você também pode definir essa política como uma recomendação. Isso significa que o Microsoft Edge importa as configurações na primeira execução, mas os usuários podem marcar ou desmarcar as **configurações de navegador** na importação manual.
 
-**Observação**: essa política atualmente gerencia a importação do Google Chrome (no Windows 7, 8 e 10 e no macOS).
+
+            **Observação**: essa política atualmente gerencia a importação do Google Chrome (no Windows 7, 8 e 10 e no macOS).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -17460,7 +17495,8 @@ Se você não configurar essa política, os cookies serão importados na primeir
 
 Você também pode definir essa política como uma recomendação. Isso significa que o Microsoft Edge importa cookies na primeira execução.
 
-**Observação**: essa política atualmente gerencia a importação do Google Chrome (no Windows 7, 8 e 10 e no macOS).
+
+            **Observação**: essa política atualmente gerencia a importação do Google Chrome (no Windows 7, 8 e 10 e no macOS).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -17528,7 +17564,8 @@ Se você não configurar essa política, as extensões serão importadas na prim
 
 Você também pode definir essa política como uma recomendação. Isso significa que o Microsoft Edge importa extensões na primeira execução, mas os usuários podem marcar ou desmarcar a opção **favoritos** durante a importação manual.
 
-**Observação**: essa política atualmente oferece suporte à importação do Google Chrome (no Windows 7, 8 e 10 e no macOS).
+
+            **Observação**: essa política atualmente oferece suporte à importação do Google Chrome (no Windows 7, 8 e 10 e no macOS).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -17596,7 +17633,8 @@ Se você não configurar essa política, os favoritos serão importados na prime
 
 Você também pode definir essa política como uma recomendação. Isso significa que o Microsoft Edge importa os favoritos na primeira execução, mas os usuários podem marcar ou desmarcar a opção **Favoritos** durante uma importação manual.
 
-**Observação**: essa política atualmente gerencia a importação dos navegadores Internet Explorer (no Windows 7, 8 e 10), Google Chrome (no Windows 7, 8 e 10 e no macOS) e o Mozilla Firefox (no Windows 7, 8 e 10 e no macOS) e no Apple Safari (macOs).
+
+            **Observação**: essa política atualmente gerencia a importação dos navegadores Internet Explorer (no Windows 7, 8 e 10), Google Chrome (no Windows 7, 8 e 10 e no macOS) e o Mozilla Firefox (no Windows 7, 8 e 10 e no macOS) e no Apple Safari (macOs).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -17664,7 +17702,8 @@ Se você não configurar essa política, os dados do histórico de navegação s
 
 Você também pode definir essa política como uma recomendação. Isso significa que o Microsoft Edge importa o histórico de navegação na primeira execução, mas os usuários podem marcar ou desmarcar a opção **histórico** durante a importação manual.
 
-**Observação**: essa política atualmente gerencia a importação dos navegadores Internet Explorer (no Windows 7, 8 e 10), Google Chrome (no Windows 7, 8 e 10 e no macOS) e o Mozilla Firefox (no Windows 7, 8 e 10 e no macOS) e no Apple Safari (macOs).
+
+            **Observação**: essa política atualmente gerencia a importação dos navegadores Internet Explorer (no Windows 7, 8 e 10), Google Chrome (no Windows 7, 8 e 10 e no macOS) e o Mozilla Firefox (no Windows 7, 8 e 10 e no macOS) e no Apple Safari (macOs).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -17732,7 +17771,8 @@ Se você não configurar essa política, a configuração da página inicial ser
 
 Você pode definir essa política como uma recomendação. Isso significa que o Microsoft Edge importa a configuração da página inicial na primeira execução, mas os usuários podem marcar ou desmarcar a **página inicial** durante a importação manual.
 
-**Observação**: essa política atualmente gerencia a importação do Internet Explorer (no Windows 7, 8 e 10).
+
+            **Observação**: essa política atualmente gerencia a importação do Internet Explorer (no Windows 7, 8 e 10).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -17800,7 +17840,8 @@ Se você não configurar essa política, as guias abertas serão importadas na p
 
 Você também pode definir essa política como uma recomendação. Isso significa que o Microsoft Edge importa as guias abertas na primeira execução, mas os usuários podem marcar ou desmarcar as **Guias abertas** durante a importação manual.
 
-**Observação**: essa política atualmente oferece suporte à importação do Google Chrome (no Windows 7, 8 e 10 e no macOS).
+
+            **Observação**: essa política atualmente oferece suporte à importação do Google Chrome (no Windows 7, 8 e 10 e no macOS).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -17868,7 +17909,8 @@ Se você não configurar essa política, as informações de pagamento serão im
 
 Você também pode definir essa política como uma recomendação. Isso significa que o Microsoft Edge importa informações de pagamento na primeira execução, mas os usuários podem marcar ou desmarcar a opção **informações de pagamento** durante uma importação manual.
 
-**Observação:** essa política atualmente gerencia a importação do Google Chrome (no Windows 7, 8 e 10 e no macOS).
+
+            **Observação:** essa política atualmente gerencia a importação do Google Chrome (no Windows 7, 8 e 10 e no macOS).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -17936,7 +17978,8 @@ Se você não configurar essa política, as senhas serão importadas na primeira
 
 Você pode definir essa política como uma recomendação. Isso significa que o Microsoft Edge importa senhas na primeira execução, mas os usuários podem marcar ou desmarcar as **senhas** na importação manual.
 
-**Observação**: essa política atualmente gerencia a importação dos navegadores Internet Explorer (no Windows 7, 8 e 10), Google Chrome (no Windows 7, 8 e 10 e no macOS) e o Mozilla Firefox (no Windows 7, 8 e 10 e no macOS).
+
+            **Observação**: essa política atualmente gerencia a importação dos navegadores Internet Explorer (no Windows 7, 8 e 10), Google Chrome (no Windows 7, 8 e 10 e no macOS) e o Mozilla Firefox (no Windows 7, 8 e 10 e no macOS).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -18004,7 +18047,8 @@ Se você não definir essa política, as configurações do mecanismo de pesquis
 
 Você pode definir essa política como uma recomendação. Isso significa que o Microsoft Edge importa configurações de mecanismo de pesquisa na primeira execução, mas os usuários podem marcar ou desmarcar a opção **mecanismo de pesquisa** durante uma importação manual.
 
-**Observação**: essa política atualmente gerencia a importação do Internet Explorer (no Windows 7, 8 e 10).
+
+            **Observação**: essa política atualmente gerencia a importação do Internet Explorer (no Windows 7, 8 e 10).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -18070,7 +18114,8 @@ Se você não configurar essa política, os atalhos serão importados na primeir
 
 Você também pode definir essa política como uma recomendação. Isso significa que o Microsoft Edge importa os atalhos na primeira execução.
 
-**Observação**: essa política atualmente gerencia a importação do Google Chrome (no Windows 7, 8 e 10 e no macOS).
+
+            **Observação**: essa política atualmente gerencia a importação do Google Chrome (no Windows 7, 8 e 10 e no macOS).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -18138,7 +18183,8 @@ Se você não configurar essa política, as configurações de inicialização s
 
 Você pode definir essa política como uma recomendação. Isso significa que o Microsoft Edge importa as configurações de inicialização na primeira execução, mas os usuários podem marcar ou desmarcar a opção de **configurações de navegador** na importação manual.
 
-**Observação**: atualmente, essa política gerencia a importação dos navegadores Microsoft Edge Legacy e Google Chrome (no Windows 7, 8 e 10).
+
+            **Observação**: atualmente, essa política gerencia a importação dos navegadores Microsoft Edge Legacy e Google Chrome (no Windows 7, 8 e 10).
 
   #### <a name="supported-features"></a>Recursos com suporte:
 
@@ -19139,7 +19185,8 @@ Se você desabilitar ou não configurar esta política, os usuários não poder�
 
 Se esta política não for configurada, o navegador usará o comportamento padrão de verificações de interceptação DNS e sugestões de redirecionamento de intranet. No M88, elas são habilitadas por padrão, mas serão desabilitadas por padrão na versão futura.
 
-[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled) é uma política relacionada que também pode desabilitar as verificações de interceptação DNS. No entanto, esta política é uma versão mais flexível que pode controlar separadamente barras de informações de redirecionamento de intranet e pode ser expandida no futuro.
+
+            [DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled) é uma política relacionada que também pode desabilitar as verificações de interceptação DNS. No entanto, esta política é uma versão mais flexível que pode controlar separadamente barras de informações de redirecionamento de intranet e pode ser expandida no futuro.
 Se [DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled) ou esta política fizer uma solicitação para desabilitar as verificações de interceptação, as verificações serão desabilitadas.
 Se as verificações de interceptação DNS forem desabilitadas por esta política, mas [GoToIntranetSiteForSingleWordEntryInAddressBar](#gotointranetsiteforsinglewordentryinaddressbar) estiver habilitada, as consultas de uma única palavra ainda resultarão em navegações na intranet.
 
@@ -21514,7 +21561,8 @@ Se você habilitar essa política, um serviço web será usado para testes de co
 
 Se você desabilitar essa política, o Microsoft Edge usará APIs nativas para tentar resolver problemas de navegação e conectividade de rede.
 
-**Observação**: exceto no Windows 8 e nas versões posteriores do Windows, o Microsoft Edge *sempre* usa APIs nativas para resolver problemas de conectividade.
+
+            **Observação**: exceto no Windows 8 e nas versões posteriores do Windows, o Microsoft Edge *sempre* usa APIs nativas para resolver problemas de conectividade.
 
 Se você não configurar essa política, o Microsoft Edge respeitará a preferência do usuário definida em serviços em edge://settings/privacy.
 Especificamente, há um botão de alternância**Usar um serviço web para ajudar a resolver erros de navegação**, que o usuário pode ativar ou desativar. Lembre-se de que, se você tiver habilitado essa política (ResolveNavigationErrorsUseWebService), a configuração **Usar um serviço Web para resolver erros de navegação** estará ativada, mas o usuário não poderá alterar a configuração usando o botão de alternância. Se você tiver desabilitado essa política, a configuração **Usar um serviço Web para resolver erros de navegação** a configuração estará desativada, e o usuário não poderá alterar a configuração usando o botão de alternância.
