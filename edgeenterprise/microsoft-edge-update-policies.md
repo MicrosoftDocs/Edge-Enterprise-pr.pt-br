@@ -1,9 +1,9 @@
 ---
 title: Documentação da política do Microsoft Edge Update
 ms.author: stmoody
-author: AndreaLBarr
+author: RyanHechtMSFT
 manager: tahills
-ms.date: 07/23/2021
+ms.date: 09/23/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação para todas as políticas compatíveis com o Microsoft Edge Update
-ms.openlocfilehash: 9c7eca4d5bdd7c87bea141a422dce3b17f22067c
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: b96fc0e44434b5ab36a16b1bc14f0aebe0deacf4
+ms.sourcegitcommit: 8e5294e82cf62abc916cfd24692f55925330d42b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978647"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "12037211"
 ---
 # <a name="microsoft-edge---update-policies"></a>Microsoft Edge - Políticas de atualização
 
@@ -41,6 +41,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas a atualizações 
 |[CreateDesktopShortcut](#createdesktopshortcut)|Impedir a criação de Atalho da Área de Trabalho com a instalação (por canal)|
 |[RollbackToTargetVersion](#rollbacktotargetversion)|Reverter para a Versão de Destino (por canal)|
 |[TargetVersionPrefix](#targetversionprefix)|Substituir versão de destino (por canal)|
+|[TargetChannelOverride](#targetchanneloverride)|Substituição de canal de destino (somente estável)|
 |[UpdaterExperimentationAndConfigurationServiceControl](#UpdaterExperimentationAndConfigurationServiceControl)| Recuperar configurações e experimentos|
 ### [<a name="preferences"></a>Preferências](#preferences-policies)
 |Nome da política|Legenda|
@@ -397,6 +398,42 @@ Esta política está disponível apenas em instâncias do Windows que fazem part
 ##### <a name="example-value"></a>Valor de exemplo:
 ```
 83.0.499.12
+```
+[Voltar ao início](#microsoft-edge---update-policies)
+
+### <a name="targetchanneloverride"></a>TargetChannelOverride
+>Microsoft Edge Update 1.3.147.1 e posterior
+
+#### <a name="description"></a>Descrição
+Especifica para qual canal Microsoft Edge deve ser atualizado. 
+
+Se você habilitar essa Microsoft Edge, o Microsoft Edge será atualizado para o Canal de acordo com a forma como você configura as seguintes opções:
+
+  - Estável: Microsoft Edge será atualizado para a versão estável mais recente.
+  - Beta: Microsoft Edge será atualizado para a versão beta mais recente.
+  - Dev: Microsoft Edge será atualizado para a versão mais recente do dev.
+  - Estável estendido: Microsoft Edge será atualizado para a versão estável estendida mais recente, que segue uma cadência de versão mais longa do que estável. Para obter mais informações, visite https://go.microsoft.com/fwlink/?linkid=2163508 .
+
+Se você não configurar essa política, Microsoft Edge será atualizado para a versão mais recente disponível para o Canal Estável.
+
+Essa política está disponível somente no Microsoft Edge Estável.
+
+Esta política está disponível apenas em instâncias do Windows que fazem parte de um domínio Microsoft® Active Directory®.
+#### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+- Nome exclusivo da GP: TargetChannelOverride
+- Nome da GP: Substituição do Canal de Destino
+- Caminho da Política de Grupo: 
+  - Modelos Administrativos/Microsoft Edge Update/Aplicativos/Microsoft Edge
+- Nome do arquivo GP ADMX: msedgeupdate.admx
+##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+- Caminho: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Nome do valor: 
+  - (Estável): TargetChannel{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
+- Tipo do valor: REG_SZ
+##### <a name="example-value"></a>Valor de exemplo:
+```
+extended
 ```
 [Voltar ao início](#microsoft-edge---update-policies)
 
