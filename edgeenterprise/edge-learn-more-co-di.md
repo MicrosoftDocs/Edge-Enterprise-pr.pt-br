@@ -3,23 +3,25 @@ title: ClickOnce e DirectInvoke no Microsoft Edge
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/16/2021
+ms.date: 09/21/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Saiba mais sobre o ClickOnce e o DirectInvoke no Microsoft Edge.
-ms.openlocfilehash: 2da2892a958946ad73d362e6ea929bcfbc2af6a8
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 48702082dc3c352519c8003e226bf99c63765150
+ms.sourcegitcommit: 85818deae134b48d7f2766e53b4400a1b4d4277d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978543"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "12034430"
 ---
 # <a name="understand-the-clickonce-and-directinvoke-features-in-microsoft-edge"></a>Noções básicas sobre os recursos ClickOnce e DirectInvoke no Microsoft Edge
 
 ClickOnce e DirectInvoke são recursos disponíveis no IE e Microsoft Edge que suportam o uso de um manipulador de arquivos para baixar arquivos de um site. Embora eles atendam a diferentes finalidades, os dois recursos permitem que sites especifiquem que um arquivo solicitado para download seja passado para um manipulador de arquivos no dispositivo do usuário. As solicitações do ClickOnce são manipuladas pelo manipulador de arquivos nativo no Windows. As solicitações do DirectInvoke são manipuladas por um manipulador de arquivos registrado pelo site que hospeda o arquivo.
+
+Depois de configurar ClickOnce ou DirectInvoke, os prompts ClickOnce ou DirectInvoke podem ser ignorados configurando políticas corporativas adicionais. Essas políticas podem dar suporte a ignorar os prompts ClickOnce ou DirectInvoke para tipos de arquivo especificados para todos os domínios ou para tipos de arquivo especificados de domínios especificados.
 
 Para obter mais informações sobre esses recursos, consulte:
 
@@ -88,6 +90,10 @@ O segundo pop-up só aparece se:
 ## <a name="clickonce-and-directinvoke-policies"></a>Políticas do ClickOnce e do DirectInvoke
 
 Há duas políticas de grupo que você pode usar para habilitar ou desabilitar o ClickOnce e o DirectInvoke para usuários corporativos. Essas duas políticas são [ClickOnceEnabled](./microsoft-edge-policies.md#clickonceenabled) e [DirectInvokeEnabled](./microsoft-edge-policies.md#directinvokeenabled). Essas duas políticas são rotuladas no Editor de Política de Grupo como "Permitir que os usuários abram arquivos usando o protocolo ClickOnce" e "Permitir que os usuários abram arquivos usando o protocolo DirectInvoke", respectivamente.
+
+Para especificar tipos de arquivo para os quais os prompts ClickOnce ou DirectInvoke devem ser ignorados, use a política rotulada no Editor de Política de Grupo como "Lista de tipos de arquivo que devem ser abertos automaticamente no download". Isso permitirá que os tipos de arquivo especificados sejam abertos automaticamente após o download para todos os domínios.  
+
+Para ignorar os prompts ClickOnce ou DirectInvoke para tipos de arquivo específicos para domínios específicos, configurando duas políticas adicionais rotuladas no Editor de Política de Grupo como "Lista de tipos de arquivo que devem ser abertos automaticamente no download" e "URLs onde AutoOpen-FileTypes pode aplicar". Observe que a política "URLs onde AutoOpen- FileTypes podem ser aplicadas" é uma política de suporte para "Lista de tipos de arquivo que devem ser abertos automaticamente no download" e não faz nada por conta própria.  
 
 ## <a name="clickonce-and-directinvoke-behavior"></a>Comportamento do ClickOnce e do DirectInvoke
 
