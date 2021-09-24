@@ -1,21 +1,21 @@
 ---
 title: Atualizações do Windows para o Microsoft Edge
 ms.author: jtkim
-author: dan-wesley
+author: RyanHechtMSFT
 manager: srugh
-ms.date: 06/28/2021
+ms.date: 09/23/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Atualizações do Windows para o Microsoft Edge
-ms.openlocfilehash: b99d3d7ed048cb829fd2328be9e4e7376334652c
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 0232e269861430df9a152006d2a8476c353eae46
+ms.sourcegitcommit: 8e5294e82cf62abc916cfd24692f55925330d42b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978557"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "12037201"
 ---
 # <a name="windows-updates-to-support-the-next-version-of-microsoft-edge"></a>Atualizações do Windows para oferecer suporte à próxima versão do Microsoft Edge
 
@@ -29,7 +29,7 @@ Este artigo descreve como o Windows será atualizado para oferecer suporte à pr
 
 ## <a name="microsoft-edge-and-the-windows-release-cycle"></a>Microsoft Edge e o ciclo de lançamento do Windows
 
-A próxima versão do Microsoft Edge apresenta recursos de atualização mais frequentes e flexíveis. Como as versões do navegador não são vinculadas às versões principais do Windows, as alterações serão feitas no sistema operacional para garantir que a próxima versão do Microsoft Edge se adapte perfeitamente ao Windows. Como resultado, as atualizações de recursos serão lançadas em um ciclo de 6 semanas (aproximadamente). As atualizações de segurança e compatibilidade serão enviadas conforme necessário.
+A próxima versão do Microsoft Edge apresenta recursos de atualização mais frequentes e flexíveis. Como as versões do navegador não são vinculadas às versões principais do Windows, as alterações serão feitas no sistema operacional para garantir que a próxima versão do Microsoft Edge se adapte perfeitamente ao Windows. Como resultado, as atualizações de recursos serão lançadas em um ciclo de 4 semanas (aproximadamente). As atualizações de segurança e compatibilidade serão enviadas conforme necessário.
 
 ## <a name="updates-and-the-user-experience"></a>Atualizações e a experiência do usuário
 
