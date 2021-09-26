@@ -3,19 +3,19 @@ title: Sistemas operacionais com suporte do Microsoft Edge
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 06/28/2021
+ms.date: 09/23/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Sistemas operacionais com suporte do Microsoft Edge
-ms.openlocfilehash: 3c5af933e6a9e6bf66f0f486f77c8ddd9364a53e
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 7d8381e81fc3b74c1849d02a117943f3cb8bf389
+ms.sourcegitcommit: 0d71862fe4f6550f7910618872a174b95695df4b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978659"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "12044469"
 ---
 # <a name="microsoft-edge-supported-operating-systems"></a>Sistemas operacionais com suporte do Microsoft Edge
 
@@ -28,7 +28,6 @@ Este artigo descreve os sistemas operacionais com suporte que se aplicam ao Micr
 
 > [!NOTE]
 > A funcionalidade do produto e a disponibilidade de recursos pode variar em sistemas operacionais mais antigos. Para garantir que o Microsoft Edge seja instalado corretamente, use a versão mais recente de qualquer sistema operacional especificado abaixo. Essas diretrizes incluem as atualizações cumulativas mais recentes, conforme aplicável.
-
 
 O Microsoft Edge segue a Política de Ciclo de Vida Moderna e é compatível com os seguintes sistemas operacionais.
 
@@ -51,6 +50,7 @@ O Microsoft Edge segue a Política de Ciclo de Vida Moderna e é compatível com
 - Windows Server 2012 R2
 - Windows Server 2016 (LTSC)
 - Windows Server 2019 (LTSC)
+- Windows Server 2022
 - Windows Server (SAC)
 
 > [!IMPORTANT]
@@ -86,8 +86,10 @@ O Microsoft Edge não é compatível com o Chromebooks.
 
 ## <a name="recent-changes"></a>Alterações recentes
 
-- **17/12/2020** - suporte do Microsoft Edge no Windows 7 e no Windows Server 2008 R2 estendido até 15 de janeiro de 2022.
-- **28/01/2021** - suporte do Microsoft Edge para Macs com Apple Silicon.
+- 
+            **17/12/2020** - suporte do Microsoft Edge no Windows 7 e no Windows Server 2008 R2 estendido até 15 de janeiro de 2022.
+- 
+            **28/01/2021** - suporte do Microsoft Edge para Macs com Apple Silicon.
 
 ## <a name="see-also"></a>Veja também
 
