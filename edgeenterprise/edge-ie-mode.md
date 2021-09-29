@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Saiba como o modo Internet Explorer no Microsoft Edge fornece acesso a sites que precisam do Internet Explorer 11 e acesso a sites modernos.
-ms.openlocfilehash: cf2271f8b95c97a63695abf471ae67e693798ff2
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: a426d9bd9d2ac3d81682e9fc2304e9e90d3461f8
+ms.sourcegitcommit: 4442aa94d4ff2fef8dd6f389ec0c6823b150d04f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978597"
+ms.lasthandoff: 09/28/2021
+ms.locfileid: "12053320"
 ---
 # <a name="what-is-internet-explorer-ie-mode"></a>O que é o modo Internet Explorer (IE)?
 
@@ -43,7 +43,7 @@ Somente os sites que você configurou especificamente (via política) usarão o 
   - Internet Explorer, "Usar a lista de sites do IE do modo Empresarial"
   > [!NOTE]
   > Processamos apenas uma lista de sites no modo corporativo. A política de lista de sites do Microsoft Edge tem precedência sobre a política de lista de sites do Internet Explorer.
-- Todos os sites da Intranet quando a diretiva de grupo **Enviar todos os sites da intranet para o Internet Explorer** está ativada (Microsoft Edge 77 ou posterior).
+- Configure a política de grupo **Enviar todos os sites da intranet para o Internet Explorer** e configure-a como **Habilitada** (Microsoft Edge 77 ou posterior.)
 
 ### <a name="ie-mode-supports-the-following-internet-explorer-functionality"></a>O modo IE oferece suporte à seguinte funcionalidade do Internet Explorer
 
