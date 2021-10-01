@@ -3,19 +3,19 @@ title: 'Segurança do gerenciador de senhas do Microsoft Edge '
 ms.author: v-andreabarr
 author: AndreaLBarr
 manager: collw
-ms.date: 06/29/2021
+ms.date: 09/30/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Segurança do gerenciador de senhas do Microsoft Edge
-ms.openlocfilehash: 816bbd2c18fcae0a20a19fb0feab199454aa67b6
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 6f9dadab36c755113ad647e7e78a0bbbb2f8c965
+ms.sourcegitcommit: 2bf511511f131b8497b3e162c44286c217508885
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978778"
+ms.lasthandoff: 10/01/2021
+ms.locfileid: "12057329"
 ---
 # <a name="microsoft-edge-password-manager-security"></a>Segurança do gerenciador de senhas do Microsoft Edge 
 
@@ -141,7 +141,7 @@ Quando as senhas do navegador são criptografadas em disco, a chave de criptogra
 Um recurso de Senha Mestra (que autentica o usuário antes de preencher automaticamente seus dados) fornece uma compensação na conveniência para uma mitigação mais ampla de ameaças. Especificamente, ele ajuda a reduzir a janela de exposição de dados contra malware latente ou invasores fisicamente locais. No entanto, uma Senha Mestra não é uma panacéia, e invesores locais e malwares dedicados têm várias estratégias para contornar a proteção de uma Senha Mestra.
 
 > [!Note]
-> A Microsoft reconhece o valor na autenticação de usuários antes do preenchimento automático e essa funcionalidade será adicionada ao Microsoft Edge em uma versão futura.
+> Microsoft Edge agora oferece a capacidade de habilitar a autenticação antes do recurso de preenchimento automático; isso fornece aos usuários uma camada adicional de privacidade e impede que suas senhas armazenadas são usadas por qualquer pessoa, menos por eles. Para obter mais detalhes, consulte [Privacidade adicional para suas senhas salvas.](https://support.microsoft.com/topic/additional-privacy-for-your-saved-passwords-31dbd670-e314-4901-a546-6f302548502e)  
 
 ## <a name="can-using-a-password-manager-impact-my-privacy"></a>O uso de um gerenciador de senhas pode afetar minha privacidade?
 
