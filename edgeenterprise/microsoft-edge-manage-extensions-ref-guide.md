@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Um guia de referência detalhado para configurar extensões do Microsoft Edge usando a política ExtensionSettings.
-ms.openlocfilehash: 67e3cffaa842f591a3d4c3035104addd19e34fd8
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 3660910a252377efe8dff47dec8f811ecdd2018e
+ms.sourcegitcommit: b67ebf9a68205407f5eaec343cb0722cfdd17396
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978624"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "12061100"
 ---
 # <a name="detailed-guide-to-the-extensionsettings-policy"></a>Guia detalhado para a política ExtensionSettings
 
@@ -52,7 +52,35 @@ Essa política pode controlar configurações como URL de atualização, de onde
 | **runtime_allowed_hosts**| Permite que as extensões interajam com sites especificados, mesmo que também estejam definidas em runtime_blocked_hosts. Você pode especificar até 100 entradas. Entradas extras são descartadas.<br>O formato de padrão de host é semelhante a  [padrões de correspondência](/microsoft-edge/extensions-chromium/enterprise/match-patterns) ,contudo você não pode definir o caminho. Por exemplo:<br>- *://*.example.com<br>- *://exemplo.*— há suporte para curingas eTLD     |
 | **runtime_blocked_hosts**| Impede que as extensões interajam ou modifiquem sites que você especificar. As modificações incluem bloqueio de injeção de JavaScript, acesso a cookie e modificações de solicitação da Web.<br>Você pode especificar até 100 entradas. Entradas extras são descartadas.<br>O formato de padrão do host é semelhante aos padrões de correspondência, contudo você não pode definir o caminho. Por exemplo:<br>- *://*.example.com<br>- *://exemplo.*— há suporte para curingas eTLD   |
 | **override_update_url**| Disponível na Borda 93<br>Se estiver definido como , Edge usará a URL de atualização especificada na política ExtensionSettings ou na política `true` ExtensionInstallForcelist, para atualizações de extensão subsequentes.<br>Se isso não estiver definido ou estiver definido como , Edge usará a URL especificada no manifesto da `false` extensão para atualizações.|
+| **toolbar_state**| Disponível na Borda 94<br>Essa configuração de política permite que você force a exibição de uma extensão instalada na barra de ferramentas. O estado padrão é `default_shown` para todas as extensões. Os estados a seguir são possíveis para essa configuração<br>-`force_shown`: Você pode optar por forçar a exibição de uma extensão instalada na barra de ferramentas. Os usuários não poderão ocultar o ícone de extensão específico da barra de ferramentas.<br>-`default_hidden`: Nesse estado, as extensões ficam ocultas da barra de ferramentas na instalação. Os usuários podem mostrar na barra de ferramentas, se necessário.<br>-`default_shown`: Esta é a configuração de surdez de todas as extensões instaladas no navegador.
 
+Estas são as chaves permitidas no escopo global (*): 
+
+- blocked_permissions
+- installation_mode - somente "bloqueado", "permitido" ou "removido" são os valores válidos neste escopo.
+- runtime_blocked_hosts
+- blocked_install_message
+- allowed_types
+- runtime_allowed_hosts
+- install_sources
+
+Estas são as chaves permitidas em um escopo de extensão individual: 
+
+- blocked_permissions
+- minimum_version_required
+- blocked_install_message
+- toolbar_state (Disponível na Borda 94)
+- installation_mode - `"blocked"` , `"allowed"` , , e são os `"removed"` `"force_installed"` valores `"normal_installed"` possíveis.
+- runtime_allowed_hosts
+- update_url
+- override_update_url
+- runtime_blocked_hosts
+- toolbar_state
+
+Estas são as chaves permitidas em um escopo de URL de atualização: 
+
+- blocked_permissions
+- installation_mode - somente `"blocked"` , ou são os valores `"allowed"` `"removed"` válidos neste escopo.
 
 ## <a name="configure-using-a-json-string-in-windows-group-policy-editor"></a>Configurar usando uma cadeia de caracteres JSON no Editor de Política de Grupo do Windows
 
