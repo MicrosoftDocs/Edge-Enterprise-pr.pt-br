@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Um guia de referência detalhado para configurar extensões do Microsoft Edge usando a política ExtensionSettings.
-ms.openlocfilehash: 3660910a252377efe8dff47dec8f811ecdd2018e
-ms.sourcegitcommit: b67ebf9a68205407f5eaec343cb0722cfdd17396
+ms.openlocfilehash: 7dceff78172626d70863883e0762be2f4cb7e51c
+ms.sourcegitcommit: e825c6a1b0e63004288e13f6bb672743b0ecfafb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "12061100"
+ms.lasthandoff: 10/05/2021
+ms.locfileid: "12069007"
 ---
 # <a name="detailed-guide-to-the-extensionsettings-policy"></a>Guia detalhado para a política ExtensionSettings
 
@@ -57,7 +57,7 @@ Essa política pode controlar configurações como URL de atualização, de onde
 Estas são as chaves permitidas no escopo global (*): 
 
 - blocked_permissions
-- installation_mode - somente "bloqueado", "permitido" ou "removido" são os valores válidos neste escopo.
+- installation_mode - somente `"blocked"` , ou são os valores `"allowed"` `"removed"` válidos neste escopo.
 - runtime_blocked_hosts
 - blocked_install_message
 - allowed_types
@@ -69,7 +69,6 @@ Estas são as chaves permitidas em um escopo de extensão individual:
 - blocked_permissions
 - minimum_version_required
 - blocked_install_message
-- toolbar_state (Disponível na Borda 94)
 - installation_mode - `"blocked"` , `"allowed"` , , e são os `"removed"` `"force_installed"` valores `"normal_installed"` possíveis.
 - runtime_allowed_hosts
 - update_url

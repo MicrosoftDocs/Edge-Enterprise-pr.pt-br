@@ -3,19 +3,19 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/28/2021
+ms.date: 10/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: c62d540b014a47f1240d542c68ee52822719239f
-ms.sourcegitcommit: 4442aa94d4ff2fef8dd6f389ec0c6823b150d04f
+ms.openlocfilehash: a2957d3c52d18fe75cb52719896438e6becf6dbd
+ms.sourcegitcommit: e825c6a1b0e63004288e13f6bb672743b0ecfafb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2021
-ms.locfileid: "12053310"
+ms.lasthandoff: 10/05/2021
+ms.locfileid: "12068997"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão do canal do Microsoft Edge beta
 
@@ -23,6 +23,10 @@ Estas notas de versão fornecem informações sobre os novos recursos e atualiza
 
 > [!NOTE]
 > A Plataforma da Web Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-950102014-october-5"></a>Versão 95.0.1020.14: 5 de outubro
+
+Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-95010209-september-28"></a>Versão 95.0.1020.9: 28 de setembro
 
@@ -38,7 +42,7 @@ Estas notas de versão fornecem informações sobre os novos recursos e atualiza
 
 - **O modo de eficiência estende a duração da bateria quando o laptop entra no modo de economia de bateria.**  O modo de eficiência se tornará ativo quando o laptop entrar no modo de economia de bateria para permitir que o navegador gerencie o uso de recursos para estender a vida útil da bateria do computador. Você terá quatro opções para quando o modo de eficiência se tornar ativo, Unplugged e bateria baixa, Unplugged, Always e Never. Observação: esta é uma Distribuição de Recursos Controlados. Dispositivos com bateria devem ter o recurso ligado.
 
-***Novas Políticas***
+***Novas políticas***
 
 - [BrowserLegacyExtensionPointsBlockingEnabled](/DeployEdge/microsoft-edge-policies#browserlegacyextensionpointsblockingenabled) Habilitar o bloqueio de ponto de extensão herdado do navegador
 - [CrossOriginWebAssemblyModuleSharingEnabled](/DeployEdge/microsoft-edge-policies#crossoriginwebassemblymodulesharingenabled) Especifica se os módulos WebAssembly podem ser enviados de origem cruzada
