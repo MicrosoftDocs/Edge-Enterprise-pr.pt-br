@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Stable Channel
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 10/11/2021
+ms.date: 10/14/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: 7e9e48357eed0664b0f305eadf790689aa4ac93e
-ms.sourcegitcommit: 65720e81583a7e78849593c90100204e3c33066e
+ms.openlocfilehash: 6ed7942320875a57e43bea73c98bac6cafe6146e
+ms.sourcegitcommit: 568c379989a5fbc64ca3d724a0afb69bbc650b41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2021
-ms.locfileid: "12089404"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "12094504"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão do Microsoft Edge Stable Channel
 
@@ -30,6 +30,10 @@ Essas notas de versão fornecem informações dos novos recursos e atualizaçõe
 > Para o Canal Estável, as atualizações serão implantadas progressivamente por um ou mais dias. Para saber mais, consulte [Distribuições progressivas para atualizações do Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 >
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](https://docs.microsoft.com/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-94099250-october-14"></a>Versão 94.0.992.50: 14 de outubro
+
+Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-94099247-october-11"></a>Versão 94.0.992.47:11 de outubro
 
@@ -51,7 +55,7 @@ Vários bugs e problemas de desempenho corrigidos.
 > [!Important]
 > Essa atualização contém uma correção para [o CVE-2021-37973,](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37973) que foi relatada pela equipe Chromium como tendo uma exploração na natureza. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
 
-As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#september-24-2021).
+As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#september-24-2021).
 
 ### <a name="feature-updates"></a>Atualizações de recursos
 
