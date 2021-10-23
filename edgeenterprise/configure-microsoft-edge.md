@@ -3,19 +3,19 @@ title: Configurar o Microsoft Edge para Windows
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 06/28/2021
+ms.date: 10/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Definir configurações de política do Microsoft Edge em dispositivos Windows
-ms.openlocfilehash: a5db4352e723539843a5ad80a7b067e670bced5c
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+description: Saiba como definir as configurações de política do Microsoft Edge em dispositivos Windows
+ms.openlocfilehash: 05e12b157b434fcad53ddd25922dc8f394ad3157
+ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978579"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "12107456"
 ---
 # <a name="configure-microsoft-edge-policy-settings-on-windows"></a>Definir configurações de política do Microsoft Edge no Windows
 
@@ -35,10 +35,10 @@ O Microsoft Edge oferece suporte a políticas _obrigatórias_ e _recomendadas_. 
 >[!TIP]
 > Você pode usar o Microsoft Intune para definir as configurações de política do Microsoft Edge. Para obter mais informações, consulte [Configurar o Microsoft Edge usando o Microsoft Intune](configure-edge-with-intune.md).
 
-Há dois modelos administrativos para o Microsoft Edge, que podem ser aplicados no nível do computador ou do domínio do Active Directory:
+Há dois modelos administrativos para o Microsoft Edge, ambos podem ser aplicados com ferramentas comuns de gerenciamento de política de grupo, como o Editor de Política de Grupo Local para aplicativos em um computador individual ou o Console de Gerenciamento de Política de Grupo para redes de domínio do Microsoft Windows. Esses modelos são:
 
-- *msedge.admx* para [definir as configurações do Microsoft Edge](microsoft-edge-policies.md)
-- *msedgeupdate. admx* para [gerenciar atualizações do Microsoft Edge](microsoft-edge-update-policies.md).
+- *msedge.admx* para [definir as configurações do Microsoft Edge](./microsoft-edge-policies.md)
+- *msedgeupdate.admx* para [gerenciar atualizações do Microsoft Edge](./microsoft-edge-update-policies.md)
 
 Para começar, baixe e instale o modelo administrativo do Microsoft Edge.
 

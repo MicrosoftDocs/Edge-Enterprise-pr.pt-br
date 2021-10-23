@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Usar políticas de grupo para gerenciar extensões do Microsoft Edge na empresa
-ms.openlocfilehash: dad239a448ec1f0ebef60c7072bfaad5c3baed57
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: a244fd0fc3c8743b9f677d2a6fc1fee835aab822
+ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978735"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "12107506"
 ---
 # <a name="use-group-policies-to-manage-microsoft-edge-extensions"></a>Usar políticas de grupo para gerenciar extensões do Microsoft Edge
 
@@ -163,6 +163,7 @@ A extensão será instalada silenciosamente sem a necessidade de interação do 
 
 > [!NOTE]
 > Para extensões hospedadas na Loja Da Web do Chrome, use uma cadeia de caracteres como: `pckdojakecnhhplcgfflhndiffaohfah;https://clients2.google.com/service/update2/crx`.
+> Para extensões auto-hospedadas, use o padrão extension_id;update_url onde update_url aponta para o local do arquivo XML do manifesto de atualização. Por exemplo, `mfjlfjaknfckffgjgmdfeheeealceoak;https://file_location.azurewebsites.net/picture_of_the_day.xml`.
 
 ## <a name="block-extensions-from-a-specific-store-or-update-url"></a>Bloquear extensões de um repositório ou URL de atualização específico
 

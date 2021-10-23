@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Aprenda sobre os recursos do modo de quiosque e como configurar as opções do modo de quiosque do Microsoft Edge.
-ms.openlocfilehash: 3483c402d9cd7e0d4a7542bcda98672523c0dfb6
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 38d9b143a910c1e475e5fc8413ef657de395a659
+ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978740"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "12107556"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Configurar o modo de quiosque do Microsoft Edge
 
@@ -86,6 +86,13 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen
 ```
 msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
 ```
+
+### <a name="kiosk-mode-download-files-on-exit"></a>Modo de quiosque Baixar Arquivos na Saída
+
+Para configurar o Edge para remover arquivos baixados quando uma instância de Quiosque é fechada, as 2 Políticas de Grupo abaixo devem ser configuradas:
+- [Excluir downloads na saída](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) = Habilitado
+- [Definir diretório de download](.//microsoft-edge-policies.md#downloaddirectory) = ${local_app_data}\Microsoft\Edge\KioskDownloads 
+
 
 ### <a name="additional-command-line-options"></a>Opções de linha de comando adicionais
 
