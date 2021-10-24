@@ -1,21 +1,21 @@
 ---
 title: Notas de versão do Microsoft Edge para Stable Channel
-ms.author: aguta
-author: AndreaLBarr
+ms.author: leahtu
+author: dan-wesley
 manager: srugh
-ms.date: 10/14/2021
+ms.date: 10/22/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: 6ed7942320875a57e43bea73c98bac6cafe6146e
-ms.sourcegitcommit: 568c379989a5fbc64ca3d724a0afb69bbc650b41
+ms.openlocfilehash: e416f04adfdd96f7d14cb662ce2a1fd052951d26
+ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "12094504"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "12107446"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão do Microsoft Edge Stable Channel
 
@@ -29,7 +29,51 @@ Essas notas de versão fornecem informações dos novos recursos e atualizaçõe
 > [!NOTE]
 > Para o Canal Estável, as atualizações serão implantadas progressivamente por um ou mais dias. Para saber mais, consulte [Distribuições progressivas para atualizações do Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 >
-> A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](https://docs.microsoft.com/microsoft-edge/web-platform/site-impacting-changes).
+> A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-950102030-october-21"></a>Versão 95.0.1020.30: 21 de outubro
+
+As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#october-21-2021).
+
+### <a name="feature-updates"></a>Atualizações de recursos
+
+- **Veja no Explorador de Arquivos o suporte para bibliotecas do Microsoft Office SharePoint Online no Microsoft Edge.**  Agora você pode habilitar o recurso Exibir no explorador de arquivos nas Bibliotecas de Documentos Modernos do Microsoft Office SharePoint Online. Para que esta experiência seja visível e funcione para seus usuários, você precisa ativar a política do Microsoft Edge [Configurar a funcionalidade Exibir no explorador de arquivos para páginas do SharePoint no Microsoft Edge](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) e atualizar sua configuração de locatário do Microsoft Office SharePoint Online. Saiba mais: [Veja arquivos Microsoft Office SharePoint Online com o Explorador de arquivo no Microsoft Edge](/SharePoint/sharepoint-view-in-edge).
+
+- **Os links de URL do arquivo de zona da intranet serão abertos no Windows Explorador de Arquivos.**  Você pode permitir links de URL de arquivos para arquivos da zona intranet originários de sites HTTPS da zona intranet para abrir o Windows Explorador de Arquivos para esse arquivo ou diretório. Você pode habilitar esta experiência usando a política [IntranetFileLinksEnabled](/deployedge/microsoft-edge-policies#intranetfilelinksenabled).
+
+- **Melhorias na experiência de downloads.** O suporte para o download da experiência do usuário é estendido para aplicativos progressivos de web PWAs e WebView. Também começaremos a suportar o arrastar e soltar para o Explorador de Arquivos e Desktop.
+
+- **Continue de onde parou em documentos PDF.**  Agora você poderá retomar a leitura de onde você fechou seu documento PDF pela última vez.
+
+- **O modo de eficiência estende a vida útil da bateria quando seu laptop entra em modo de economia de bateria.**  O modo de eficiência ficará ativo quando seu laptop entrar no modo de economia de bateria para permitir que o navegador gerencia o uso de recursos para aumentar a vida útil da bateria de sua máquina. Você terá quatro opções quando o modo de eficiência se tornar ativo: Desligado e bateria fraca, Desligado, Sempre, e Nunca. Nota: Esta recurso é uma distribuição de Recurso Controlado. Se você não vê este recurso, verifique em breve enquanto continuamos nossa distribuição.
+
+- **Caixas de texto de formulário livre adicionadas aos documentos PDF.** Agora damos suporte à adição de caixas de texto de formulário livre a documentos PDF. Você pode usar estas caixas para preencher formulários e adicionar notas visíveis.
+
+- **Suporte de citação adicionado às Coleções.**  Melhoramos a experiência das Coleções, especialmente para alunos e pesquisadores. As coleções começarão a apoiar citações e listas de leitura.
+
+- **Atualizar suas senhas mais rapidamente e com menos cliques.** O navegador agora o levará diretamente para a página Alterar Senha de um determinado site. Esta ação economiza tempo e cliques ao remover a necessidade de navegar para a página manualmente. Depois que você estiver nesta página, o navegador também irá preencher automaticamente sua senha existente e sugerirá uma nova senha forte e única.  Nota: Atualmente esta recurso está disponível apenas em um número limitado de sites.
+
+- **Criação automática de conta.** Agora oferecemos suporte adicional nas páginas de Inscrição, permitindo que você crie uma conta online com um clique. Você pode fazer isso selecionando o lista pendente de sugestões ao clicar em qualquer campo do formulário no formulário de Inscrição. Fazendo isso, não só mostrará informações relevantes para o formulário de Inscrição, mas também uma forte sugestão de nova senha. Após a seleção, todas as informações relevantes são preenchidas nos respectivos campos e a senha sugerida será automaticamente armazenada ao ser enviada para o site. Nota: Atualmente esta recurso está disponível apenas em um número limitado de sites.
+
+### <a name="policy-updates"></a>Atualizações de política
+
+#### <a name="new-policies"></a>Novas Políticas
+
+- [BrowserLegacyExtensionPointsBlockingEnabled](/DeployEdge/microsoft-edge-policies#browserlegacyextensionpointsblockingenabled) Habilitar o bloqueio do ponto de extensão do navegador
+- [CrossOriginWebAssemblyModuleSharingEnabled](/DeployEdge/microsoft-edge-policies#crossoriginwebassemblymodulesharingenabled) Especifica se os módulos WebAssembly podem ser enviados entre origens
+- [DisplayCapturePermissionsPolicyEnabled](/DeployEdge/microsoft-edge-policies#displaycapturepermissionspolicyenabled) Especifica se as permissões de captura de exibição política é verificada ou ignorada
+- [InternetExplorerIntegrationWindowOpenHeightAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) Configurar o ajuste de pixels entre as alturas do modo window.open, com origem nas páginas do modo IE vs. páginas do modo Edge
+- [InternetExplorerIntegrationWindowOpenWidthAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenwidthadjustment) Configurar o ajuste de pixels entre as larguras do modo window.open com origem nas páginas do modo IE vs. páginas do modo Edge
+- [IntranetFileLinksEnabled](/DeployEdge/microsoft-edge-policies#intranetfilelinksenabled) Permitir que links de URL de arquivos de zona da intranet da Microsoft Edge sejam abertos no Explorador de Arquivos do Windows
+- [NewSmartScreenLibraryEnabled](/DeployEdge/microsoft-edge-policies#newsmartscreenlibraryenabled) Habilitar a nova biblioteca SmartScreen
+- [ShadowStackCrashRollbackBehavior](/DeployEdge/microsoft-edge-policies#shadowstackcrashrollbackbehavior) Configurar o comportamento do ShadowStack rollback
+- [VisualSearchEnabled](/DeployEdge/microsoft-edge-policies#visualsearchenabled) Pesquisa visual habilitada
+
+#### <a name="obsoleted-policies"></a>Políticas Obsoletas
+
+- [InternetExplorerIntegrationTestingAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) - Permitir teste no modo Internet Explorer.
+- [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) Habilitar configuração padrão de comportamento de cookie SameSite herdado
+
 
 ## <a name="version-94099250-october-14"></a>Versão 94.0.992.50: 14 de outubro
 
@@ -200,7 +244,7 @@ As atualizações de segurança do canal Estável estão listadas [aqui](/deploy
 
 **Os usuários podem acessar facilmente o modo Internet Explorer no Microsoft Edge**. A partir da versão 92 do Microsoft Edge, os usuários podem recarregar um site no modo Internet Explorer no Microsoft Edge em vez de depender do aplicativo autônomo do IE 11 enquanto aguardam a configuração de um site na Lista de Sites do Modo Empresarial. Os usuários serão solicitados a adicionar o site à sua lista de sites locais de forma que a navegação para a mesma página no Microsoft Edge seja renderizada automaticamente no modo IE pelos próximos 30 dias. Você pode usar a política [InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) para configurar essa experiência e permitir o acesso aos pontos de entrada do modo IE, bem como a capacidade de adicionar sites à lista de sites locais. Você pode usar a política [InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays) para ajustar o número de dias para manter os sites na lista de sites locais. Observe que KB5003698 ou posterior é necessário para Windows 10, versão 1909; ou KB5003690 ou posterior é necessário para Windows 10, versão 2004, Windows 10, versão 20H2 ou Windows 10, versão 21H1 para a experiência de ponta a ponta. Para obter mais informações, [consulte Lista de sites local no modo IE](/deployedge/edge-ie-mode-local-site-list).
 
-**Os arquivos MHTML serão abertos por padrão no modo Internet Explorer**. A partir do Microsoft Edge versão 92 Estável, os tipos de arquivo MHTML serão abertos automaticamente no modo Internet Explorer no Microsoft Edge em vez do aplicativo Internet Explorer (IE11). Isso é mais comumente observado ao tentar visualizar emails do Outlook em um navegador. Essa alteração ocorrerá apenas se o IE11 for o manipulador padrão para este tipo de arquivo. Se você preferir alterar isso, você pode fazê-lo antes de instalar a atualização da versão Estável 92 usando [ esta diretrizes](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration).
+**Os arquivos MHTML serão abertos por padrão no modo Internet Explorer**. A partir do Microsoft Edge versão 92 Estável, os tipos de arquivo MHTML serão abertos automaticamente no modo Internet Explorer no Microsoft Edge em vez do aplicativo Internet Explorer (IE11). Isso é mais comumente observado ao tentar visualizar emails do Outlook em um navegador. Essa alteração ocorrerá apenas se o IE11 for o manipulador padrão para este tipo de arquivo. Se você preferir alterar isso, você pode fazê-lo antes de instalar a atualização da versão Estável 92 usando [ esta diretrizes](/docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration).
 
 **O aviso de "Desabilitar extensões do modo desenvolvedor" pode ser ignorado por 2 semanas**. A partir da versão 92 da Microsoft Edge, você pode adiar o aviso "Desabilitar extensões do modo desenvolvedor" por 2 semanas, selecionando a opção na caixa de diálogo de aviso.
 
