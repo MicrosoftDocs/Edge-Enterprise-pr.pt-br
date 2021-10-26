@@ -135,6 +135,8 @@
           href: edge-ie-mode-sitelist.md
         - name: Configurar Políticas do modo Internet Explorer
           href: edge-ie-mode-policies.md
+        - name: Gerenciamento de Lista de Sites na Nuvem para modo Internet Explorer (IE)
+          href: edge-ie-mode-cloud-site-list-mgmt.md
         - name: Lista de sites locais do modo Internet Explorer
           href: edge-ie-mode-local-site-list.md
         - name: Desabilitar o Internet Explorer 11

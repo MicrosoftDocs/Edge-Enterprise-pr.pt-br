@@ -1,25 +1,29 @@
 ---
 title: Notas de versão para atualizações de segurança do Microsoft Edge
-ms.author: aguta
-author: AndreaLBarr
+ms.author: leahtu
+author: dan-wesley
 manager: srugh
-ms.date: 10/08/2021
+ms.date: 10/21/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão para atualizações de segurança do Microsoft Edge
-ms.openlocfilehash: aa43929500041e1b2b7a5b292f8384d372bc429f
-ms.sourcegitcommit: 65720e81583a7e78849593c90100204e3c33066e
+ms.openlocfilehash: 2e49fcae65239c726b9f6452a0f4dfc227ad9394
+ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2021
-ms.locfileid: "12089394"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "12107466"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Notas de versão para atualizações de segurança do Microsoft Edge
 
 Estas notas de versão fornecem informações sobre correções de segurança incluídas nas atualizações para o canal estável do Microsoft Edge.
+
+## <a name="october-21-2021"></a>21 de outubro de 2021
+
+A Microsoft lançou o mais recente  **Canal Estável do Microsoft Edge (Versão 95.0.1020.30)**, que incorpora as Atualizações de Segurança mais recentes do projeto Chromium. Para obter mais informações, consulte o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide)
 
 ## <a name="october-11-2021"></a>11 deoutubro de 2021
 
