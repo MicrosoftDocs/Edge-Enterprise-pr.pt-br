@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 10/20/2021
+ms.date: 10/28/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 934dd2b8430184914ab080f0138a10601caa6a04
-ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
+ms.openlocfilehash: 4c50682333cfb21d9b0026c5ebb11f5169c3aa5c
+ms.sourcegitcommit: 42f01cad0bf15224222b2aeadb48f03d46c35723
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "12107546"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "12154583"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -33,17 +33,9 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 
 As seguintes políticas foram adicionadas a esta atualização da documentação.
 
-|Nome da política|Legenda|
-|-|-|
-[Configurações do TyposquattingChecker](#typosquattingchecker-settings)|Forneça mensagens de aviso para ajudar a proteger seus usuários de possíveis sites de typosquatting.|
-|[ApplicationGuardUploadBlockingEnabled](#applicationguarduploadblockingenabled)|Impede que arquivos sejam carregados enquanto durante o Application Guard|
-|[EfficiencyMode](#efficiencymode)|Configurar quando o modo de eficiência deve ficar ativo|
-|[NewSmartScreenLibraryEnabled](#newsmartscreenlibraryenabled)|Habilitar nova biblioteca SmartScreen|
-|[AutoLaunchProtocolsComponentEnabled](#autolaunchprotocolscomponentenabled)|Componente de Protocolos de Inicialização Automática Habilitado|
-|[ForceSyncTypes](#forcesynctypes)|Configurar a lista de tipos que estão incluídos para sincronização|
-|[InternetExplorerIntegrationComplexNavDataTypes](#internetexplorerintegrationcomplexnavdatatypes)|Configurar se os dados do formulário e cabeçalhos HTTP serão enviados ao entrar ou sair do modo Internet Explorer|
-|[RendererAppContainerEnabled](#rendererappcontainerenabled)|Habilitar o renderizador em contêiner de aplicativo|
-|[SharedLinksEnabled](#sharedlinksenabled)|Mostrar links compartilhados dos aplicativos Microsoft 365 na História|
+| Nome da política | Legenda |
+|--|--|
+|[InternetExplorerModeToolbarButtonEnabled](#internetexplorermodetoolbarbuttonenabled)|Mostrar o botão Recarregar no modo Internet Explorer na barra de ferramentas|
 
 ## <a name="available-policies"></a>Políticas disponíveis
 
@@ -447,12 +439,13 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Permitir Internet Explorer modo de teste (obsoleto)|
 |[InternetExplorerIntegrationWindowOpenHeightAdjustment](#internetexplorerintegrationwindowopenheightadjustment)|Configurar o ajuste de pixel entre as alturas do window.open originadas das páginas do modo IE vs. páginas do modo Edge|
 |[InternetExplorerIntegrationWindowOpenWidthAdjustment](#internetexplorerintegrationwindowopenwidthadjustment)|Configurar o ajuste de pixel entre as larguras do window.open originadas das páginas do modo IE vs. páginas do modo Edge|
+|[InternetExplorerModeToolbarButtonEnabled](#internetexplorermodetoolbarbuttonenabled)|Mostrar o botão Recarregar no modo Internet Explorer na barra de ferramentas|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Comportamento de redirecionamento da intranet|
 |[IsolateOrigins](#isolateorigins)|Habilitar o isolamento de sites para determinadas origens|
 |[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Habilitar o Windows a pesquisar dados locais de navegação do Microsoft Edge|
 |[LocalProvidersEnabled](#localprovidersenabled)|Permitir sugestões de provedores locais|
 |[MAUEnabled](#mauenabled)|Sempre usar o Microsoft AutoUpdate como atualizador para o Microsoft Edge|
-|[MSAWebSiteSSOUsingThisProfileAllowed](#msawebsitessousingthisprofileallowed)|Permitir logon único para sites da Microsoft usando este perfil|
+|[MSAWebSiteSSOUsingThisProfileAllowed](#msawebsitessousingthisprofileallowed)|Permitir logon único para sites pessoais da Microsoft usando este perfil|
 |[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Define valores de configuração gerenciados para websites de origens específicas|
 |[ManagedFavorites](#managedfavorites)|Configurar Favoritos|
 |[ManagedSearchEngines](#managedsearchengines)|Gerenciar mecanismos de pesquisa|
@@ -549,8 +542,8 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restringir a exposição de endereço IP local por WebRTC|
 |[WebRtcRespectOsRoutingTableEnabled](#webrtcrespectosroutingtableenabled)|Habilitar o suporte para regras de tabela de roteamento do sistema operacional Windows ao fazer conexões ponto a ponto via WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restringir o intervalo de portas UDP locais usado por WebRTC|
-|[WebWidgetAllowed](#webwidgetallowed)|Habilitar o widget da web|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Permitir o widget da Web na inicialização do Windows|
+|[WebWidgetAllowed](#webwidgetallowed)|Habilitar a barra do Microsoft Edge|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Permitir a barra do Microsoft Edge na inicialização do Windows|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Usar o solucionador de proxy do Windows (preterida)|
 |[WindowOcclusionEnabled](#windowocclusionenabled)|Habilitar Oclusão de janela|
 
@@ -3392,7 +3385,7 @@ Se você não definir essa política, o valor padrão global será utilizado par
 
   - Nome exclusivo da Política de Grupo: NotificationsBlockedForUrls
   - Nome da Política de Grupo: Bloquear notificações em sites específicos
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Content settings
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/configurações do conteúdo
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -4865,7 +4858,7 @@ Se você habilitar essa configuração, as extensões externas serão bloqueadas
 
 Se você desabilitar essa configuração ou deixá-la sem definição, as extensões externas poderão ser instaladas.
 
-As extensões externas e sua instalação estão documentadas em [Métodos alternativos de distribuição de extensões](/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options).
+As extensões externas e suas instalações são documentadas em https://docs.microsoft.com/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options.
 
 
   #### <a name="supported-features"></a>Recursos compatíveis:
@@ -5149,7 +5142,7 @@ O código-fonte de qualquer extensão pode ser alterado pelos usuários com ferr
 
 Cada item de lista da política é uma cadeia de caracteres que contém uma ID de extensão e, opcionalmente, uma URL de "atualização" separada por um ponto e vírgula (;). A ID da extensão é a cadeia de caracteres de 32 letras encontrada, por exemplo, no edge://extensions quando estiver no modo de desenvolvedor. Se especificado, a URL "atualizar" deve apontar para um documento XML de manifesto de atualização ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ). Por padrão, a URL de atualização do site de complementos do Microsoft Edge é usada. A URL "atualizar" definida nessa política é usada somente para a instalação inicial. Atualizações subsequentes da extensão usam a URL de atualização no manifesto da extensão.
 
-Observação: essa política não se aplica ao modo InPrivate. Leia sobre as extensões de hospedagem em [Publicar e atualizar extensões no site Complementos do Microsoft Edge](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
+Observação: essa política não se aplica ao modo InPrivate. Leia sobre extensões de hospedagem (https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -7936,7 +7929,7 @@ Use as informações anteriores ao configurar essa política.
 
   - Nome exclusivo da Política de Grupo: PrintingBackgroundGraphicsDefault
   - Nome da Política de Grupo: modo de impressão de gráficos em segundo plano padrão
-  - Caminho da Política de Grupo (obrigatório): Modelos administrativos/Microsoft Edge/Impressão
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Printing
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -8339,9 +8332,9 @@ Para origens não cobertas pelos padrões aqui especificados, o valor padrão gl
 
 Observe que essa política só afeta origens inseguras, portanto, as origens seguras, por exemplo https://example.com), incluídas nesta lista serão ignoradas.
 
-Para informações detalhadas sobre padrões de URL válidos, veja [Formato de filtro para políticas baseadas em listas de URL](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Para obter informações detalhadas sobre os padrões de URL válidos, confira https://docs.microsoft.com/en-us/DeployEdge/edge-learnmmore-url-list-filter%20format.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -8992,7 +8985,7 @@ Use as informações anteriores ao configurar essa política.
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Nome do Valor: SleepingTabsTimeout
-  - Tipo de valor: REG_DWORD
+  - Tipo de Valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -9703,7 +9696,7 @@ Se você habilitar essa política, o Microsoft Edge será baixado e mostrará os
 
 Se você desabilitar ou não configurar essa política, o Microsoft Edge não mostrará o logotipo da empresa ou um logotipo da Microsoft na página nova guia.
 
-Para ajuda na determinação do hash SHA-256, veja [Get-FileHash](/powershell/module/microsoft.powershell.utility/get-filehash).
+Para obter ajuda na determinação do hash SHA-256, consulte https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash.
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -16561,7 +16554,7 @@ Observe que, enquanto o exemplo anterior mostra a supressão de avisos de downlo
 
   #### <a name="data-type"></a>Tipo de dados:
 
-  - Dictionary
+  - Lista de cadeias de caracteres
 
   #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
 
@@ -16575,62 +16568,27 @@ Observe que, enquanto o exemplo anterior mostra a supressão de avisos de downlo
 
   ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
 
-  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (Obrigatório): SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - Caminho (recomendado): N/A
-  - Nome exclusivo da Política de Grupo: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
-  - Tipo do Valor: REG_SZ
+  - Nome do valor: 1, 2, 3, ...
+  - Tipo de valor: lista de REG_SZ
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings = [
-  {
-    "domains": [
-      "https://contoso.com",
-      "contoso2.com"
-    ],
-    "file_extension": "jnlp"
-  },
-  {
-    "domains": [
-      "*"
-    ],
-    "file_extension": "swf"
-  }
-]
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"file_extension": "jnlp", "domains": ["https://contoso.com", "contoso2.com"]}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"file_extension": "swf", "domains": ["*"]}
+
 ```
-
-  ##### <a name="compact-example-value"></a>Valor do exemplo de compactação:
-
-  ```
-  SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings = [{"domains": ["https://contoso.com", "contoso2.com"], "file_extension": "jnlp"}, {"domains": ["*"], "file_extension": "swf"}]
-  ```
-  
 
   #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
   
   - Nome da chave de preferência: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - Valor de exemplo:
 ``` xml
-<key>ExemptDomainFileTypePairsFromFileTypeDownloadWarnings</key>
 <array>
-  <dict>
-    <key>domains</key>
-    <array>
-      <string>https://contoso.com</string>
-      <string>contoso2.com</string>
-    </array>
-    <key>file_extension</key>
-    <string>jnlp</string>
-  </dict>
-  <dict>
-    <key>domains</key>
-    <array>
-      <string>*</string>
-    </array>
-    <key>file_extension</key>
-    <string>swf</string>
-  </dict>
+  <string>{'file_extension': 'jnlp', 'domains': ['https://contoso.com', 'contoso2.com']}</string>
+  <string>{'file_extension': 'swf', 'domains': ['*']}</string>
 </array>
 ```
   
@@ -19974,7 +19932,7 @@ Use as informações anteriores ao configurar essa política.
 
   - Nome Exclusivo da Política de Grupo: InternetExplorerIntegrationSiteRedirect
   - Nome da Política de Grupo: Especificar como as navegações "na página" para sites não configurados se comportam quando iniciadas nas páginas do modo Internet Explorer.
-  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -20162,6 +20120,61 @@ Se você desabilitar ou não configurar essa política, o Microsoft Edge tratar�
 
 ```
 0x00000004
+```
+
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="internetexplorermodetoolbarbuttonenabled"></a>InternetExplorerModeToolbarButtonEnabled
+
+  #### <a name="show-the-reload-in-internet-explorer-mode-button-in-the-toolbar"></a>Mostrar o botão Recarregar no modo Internet Explorer na barra de ferramentas
+
+  
+  
+  #### <a name="supported-versions"></a>Versões suportadas:
+
+  - No Windows desde 96 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Definir esta política para mostrar o botão Recarregar no modo Internet Explorer na barra de ferramentas. Os usuários podem ocultar o botão na barra de ferramentas por meio do edge://settings/appearance.  O botão só será mostrado na barra de ferramentas quando a política [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) estiver habilitada ou se o usuário tiver optado por habilitar "Permitir que sites sejam recarregados no modo Internet Explorer".
+
+Se você habilitar essa política, o botão Recarregar no modo Internet será fixado na barra de ferramentas.
+
+Se você desabilitar ou não configurar essa política, o botão Recarregar no modo Internet Explorer não será mostrado na barra de ferramentas por padrão. Os usuários podem alternar o botão Mostrar modo Internet Explorer em edge://settings/appearance.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: Sim
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: InternetExplorerModeToolbarButtonEnabled
+  - Nome da Política de Grupo: mostrar o botão Recarregar no modo Internet Explorer na barra de ferramentas
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): Administrative Templates/Microsoft Edge - Default Settings (usuários podem substituir)/
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Nome do valor: InternetExplorerModeToolbarButtonEnabled
+  - Tipo de Valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
 ```
 
   
@@ -20477,7 +20490,7 @@ Se você desabilitar ou não configurar essa política, o Microsoft Edge será a
 
   ### <a name="msawebsitessousingthisprofileallowed"></a>MSAWebSiteSSOUsingThisProfileAllowed
 
-  #### <a name="allow-single-sign-on-for-microsoft-sites-using-this-profile"></a>Permitir logon único para sites da Microsoft usando este perfil
+  #### <a name="allow-single-sign-on-for-microsoft-personal-sites-using-this-profile"></a>Permitir logon único para sites pessoais da Microsoft usando este perfil
 
   
   
@@ -20487,7 +20500,7 @@ Se você desabilitar ou não configurar essa política, o Microsoft Edge será a
 
   #### <a name="description"></a>Descrição
 
-  A opção “Permitir logon único para sites da Microsoft usando este perfil” permite que perfis não MSA possam usar o logon único para sites da Microsoft usando credenciais MSA presentes no computador. Essa opção aparece para os usuários finais como uma alternância em Configurações -> Perfis -> Preferências de Perfil somente para perfis que não AAD.
+  A opção 'Permitir logon único para sites pessoais da Microsoft usando este perfil' permite que perfis não MSA possam usar o logon único para sites da Microsoft usando credenciais MSA presentes no computador. Essa opção aparece para os usuários finais como uma alternância em Configurações -> Perfis -> Preferências de Perfil somente para perfis que não AAD.
 
 Se você desabilitar essa política, os perfis não MSA não poderão usar o logon único para sites da Microsoft usando credenciais MSA presentes no computador.
 
@@ -20508,8 +20521,8 @@ Se você habilitar essa política ou não a configurar, os usuários poderão us
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
   - Nome exclusivo da Política de Grupo: MSAWebSiteSSOUsingThisProfileAllowed
-  - Nome da Política de Grupo: Permitir logon único para sites da Microsoft usando este perfil
-  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/
+  - Nome da Política de Grupo: permitir logon único para sites pessoais da Microsoft usando este perfil
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): Administrative Templates/Microsoft Edge - Default Settings (usuários podem substituir)/
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -23852,15 +23865,15 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   #### <a name="description"></a>Descrição
 
-  Especifica se o Microsoft Edge deve habilitar o recurso de segurança de Proteção de Pilha imposta por hardware após falha disparada por esse recurso.
+  O Microsoft Edge inclui um recurso de segurança de proteção de pilha imposta por hardware. Este recurso pode resultar em falha inesperada do navegador em casos que não representem uma tentativa de comprometer a segurança do navegador.
 
-Se você não configurar essa política, o Microsoft Edge gerenciará a configuração para distribuir com segurança a Proteção de Pilha imposta por hardware, eventualmente habilitando o recurso para todos os usuários.
+Usando essa política, você pode controlar o comportamento do recurso proteção de pilha imposto por hardware após uma falha disparada por esse recurso ser encontrada.
 
-Defina essa política como 'Desabilitar' para sempre desabilitar a Proteção de Pilha imposta por hardware após uma falha disparada por esse recurso.
+Defina essa política como 'Desabilitar' para desabilitar o recurso.
 
-Defina essa política como 'DisableUntilUpdate' para desabilitar a Proteção de Pilha imposta por hardware após uma falha disparada por esse recurso, mas habilite-a depois que Microsoft Edge tiver resolvido o problema.
+Defina essa política como 'DisableUntilUpdate' para desabilitar o recurso até que o Microsoft Edge seja atualizado da próxima vez.
 
-Defina essa política como 'Habilitar' para sempre habilitar a Proteção de Pilha imposta por hardware após uma falha disparada por esse recurso.
+Defina essa política como 'Habilitar' para manter o recurso habilitado.
 
 Mapeamento das opções de política:
 
@@ -24087,7 +24100,7 @@ Se você não configurar esta política:
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Nome do Valor: ShowMicrosoftRewards
-  - Tipo de valor: REG_DWORD
+  - Tipo de Valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -25180,7 +25193,7 @@ Essa política será obsoleta no Microsoft Edge versão 95.
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): N/A
   - Nome do Valor TargetBlankImpliesNoOpener
-  - Tipo de valor: REG_DWORD
+  - Tipo de Valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -27023,7 +27036,7 @@ Se você não configurar essa política, ou se a definir como uma cadeia de cara
 
   ### <a name="webwidgetallowed"></a>WebWidgetAllowed
 
-  #### <a name="enable-the-web-widget"></a>Habilitar o widget da web
+  #### <a name="enable-the-edge-bar"></a>Habilitar a barra do Microsoft Edge
 
   
   
@@ -27033,20 +27046,20 @@ Se você não configurar essa política, ou se a definir como uma cadeia de cara
 
   #### <a name="description"></a>Descrição
 
-  Habilitar o widget da Web. Quando habilitado, os usuários podem usar o widget para pesquisar na web a partir de um desktop ou de um aplicativo. O widget fornece uma caixa de pesquisa que mostra sugestões da web e abre todas as pesquisas da web no Microsoft Edge. A caixa de pesquisa fornece sugestões de pesquisa (da plataforma do Bing) e URL. O widget também inclui blocos de feed nos quais os usuários podem clicar para conferir mais informações no msn.com em uma nova guia ou janela do navegador Microsoft Edge. Os blocos de alimentação podem incluir anúncios. O widget pode ser iniciado nas configurações do Microsoft Edge ou no menu "Mais ferramentas" no Microsoft Edge.
+  Habilita a barra do Microsoft Edge. Quando habilitado, os usuários podem usar a barra do Microsoft Edge para pesquisar na Web a partir de um desktop ou de um aplicativo. A barra do Microsoft Edge fornece uma caixa de pesquisa que mostra sugestões da Web e abre todas as pesquisas da Web no Microsoft Edge. A caixa de pesquisa fornece sugestões de pesquisa (da plataforma do Bing) e URL. A barra do Microsoft Edge também inclui blocos de feed nos quais os usuários podem clicar para conferir mais informações no msn.com em uma nova guia ou janela do navegador Microsoft Edge. Os blocos de alimentação podem incluir anúncios. A barra do Microsoft Edge pode ser iniciada nas configurações do Microsoft Edge ou no menu "Mais ferramentas" no Microsoft Edge.
 
-Se você habilitar ou não configurar esta política: O widget da Web será habilitado automaticamente para todos os perfis.
-Nas configurações do Microsoft Edge, os usuários verão a opção de iniciar o widget.
-Nas configurações do Microsoft Edge, os usuários verão o item de menu para executar o widget na inicialização do Windows (inicialização automática).
-A opção de habilitar o widget na inicialização será ativada se a política [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) estiver habilitada.
-Se [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) estiver desabilitado ou não configurado, a opção de habilitar o widget na inicialização será desligada.
-Os usuários verão o item de menu para iniciar o widget a partir do menu "Mais ferramentas" do Microsoft Edge. Os usuários podem iniciar o widget em "Mais ferramentas".
-O widget pode ser desativado pela opção "Sair" na bandeja do sistema ou fechando o widget na barra de tarefas. O widget será reiniciado na reinicialização do sistema se a inicialização automática estiver habilitada.
+Se você habilitar ou não configurar esta política: a barra do Microsoft Edge será habilitada automaticamente para todos os perfis.
+Nas configurações do Microsoft Edge, os usuários verão a opção de iniciar a barra do Microsoft Edge.
+Nas configurações do Microsoft Edge, os usuários verão o item de menu para executar a barra do Microsoft Edge na inicialização do Windows (inicialização automática).
+A opção de habilitar a barra do Microsoft Edge na inicialização será ativada se a política [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) estiver habilitada.
+Se [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) estiver desabilitado ou não configurado, a opção de habilitar a barra do Microsoft Edge na inicialização será desligada.
+Os usuários verão o item de menu para iniciar a barra do Microsoft Edge a partir do menu "Mais ferramentas" do Microsoft Edge. Os usuários podem iniciar a barra do Microsoft Edge em "Mais ferramentas".
+A barra do Microsoft Edge pode ser desativada na opção "Sair" na bandeja do sistema ou fechando a barra do Microsoft Edge na barra de tarefas. A barra do Microsoft Edge será reiniciada na reinicialização do sistema se a inicialização automática estiver habilitada.
 
-Se você desabilitar esta política: O widget da Web será desabilitado para todos os perfis.
-A opção de iniciar o widget nas Configurações do Microsoft Edge será desabilitada.
-A opção de iniciar o widget na inicialização do Windows (inicialização automática) será desabilitada.
-A opção de iniciar o widget no menu "Mais ferramentas" do Microsoft Edge será desabilitada.
+Se você desabilitar esta política: a barra do Microsoft Edge será desabilitada para todos os perfis.
+A opção de iniciar a barra do Microsoft Edge nas Configurações do Microsoft Edge será desabilitada.
+A opção de iniciar a barra do Microsoft Edge na inicialização do Windows (inicialização automática) será desabilitada.
+A opção de iniciar a barra do Microsoft Edge no menu "Mais ferramentas" do Microsoft Edge será desabilitada.
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -27063,7 +27076,7 @@ A opção de iniciar o widget no menu "Mais ferramentas" do Microsoft Edge será
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
   - Nome exclusivo do GP: WebWidgetAllowed
-  - Nome do GP: habilitar o widget da Web
+  - Nome da Política de Grupo: habilitar a barra do Microsoft Edge
   - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
@@ -27087,7 +27100,7 @@ A opção de iniciar o widget no menu "Mais ferramentas" do Microsoft Edge será
 
   ### <a name="webwidgetisenabledonstartup"></a>WebWidgetIsEnabledOnStartup
 
-  #### <a name="allow-the-web-widget-at-windows-startup"></a>Permitir o widget da Web na inicialização do Windows
+  #### <a name="allow-the-edge-bar-at-windows-startup"></a>Permitir a barra do Microsoft Edge na inicialização do Windows
 
   
   
@@ -27097,16 +27110,16 @@ A opção de iniciar o widget no menu "Mais ferramentas" do Microsoft Edge será
 
   #### <a name="description"></a>Descrição
 
-  Permite que o widget da Web comece a ser executado na inicialização do Windows.
+  Permite que a barra do Microsoft Edge comece a ser executada na inicialização do Windows.
 
-Se você habilitar: O widget da Web começará a ser executado na inicialização do Windows por padrão.
-Se o widget for desabilitado por meio da política [WebWidgetAllowed](#webwidgetallowed), esta política não iniciará o widget na inicialização do Windows.
+Se você habilitar: a barra do Microsoft Edge começará a ser executada na inicialização do Windows por padrão.
+Se a barra do Microsoft Edge for desabilitada por meio da política [WebWidgetAllowed](#webwidgetallowed), essa política não iniciará a barra do Microsoft Edge na inicialização do Windows.
 
-Se você desabilitar esta política: O widget da Web não será iniciado na inicialização do Windows para todos os perfis.
-A opção de iniciar o widget na inicialização do Windows será desabilitada e desativada nas configurações do Microsoft Edge.
+Se você desabilitar esta política: a barra do Microsoft Edge não será iniciada na inicialização do Windows para todos os perfis.
+A opção de iniciar a barra do Microsoft Edge na inicialização do Windows será desabilitada e desativada nas configurações do Microsoft Edge.
 
-Se você não configurar a política: o widget da Web não iniciará na inicialização do Windows para todos os perfis.
-A opção de iniciar o widget na inicialização do Windows será desativada nas configurações do Microsoft Edge.
+Se você não configurar a política: a barra do Microsoft Edge não iniciará na inicialização do Windows para todos os perfis.
+A opção de iniciar a barra do Microsoft Edge na inicialização do Windows será desativada nas configurações do Microsoft Edge.
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -27123,7 +27136,7 @@ A opção de iniciar o widget na inicialização do Windows será desativada nas
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
   - Nome exclusivo da Política de Grupo: WebWidgetIsEnabledOnStartup
-  - Nome da Política de Grupo: permitir o widget da web na inicialização do Windows
+  - Nome da Política de Grupo: permitir a barra do Microsoft Edge na inicialização do Windows
   - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
