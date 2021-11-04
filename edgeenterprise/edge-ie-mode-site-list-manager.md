@@ -3,35 +3,35 @@ title: 'Gerenciador de Lista de Site Empresarial no Microsoft Edge '
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 11/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: 'Habilitar e usar o Gerenciador de Lista de Site Empresarial no Microsoft Edge no Microsoft Edge '
-ms.openlocfilehash: add635a17d05cb4be94e710fd99ab480b992a579
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+description: Habilitar e usar o Gerenciador de Lista de Site Empresarial no Microsoft Edge no Microsoft Edge
+ms.openlocfilehash: 51377d9818f7cf82653c3582ef78c8245b2c7704
+ms.sourcegitcommit: 4ec03873a85f065d9bfa6203cfe6c3e938f79bc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978614"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "12155048"
 ---
 # <a name="enterprise-site-list-manager-in-microsoft-edge"></a>Gerenciador de Lista de Sites de Empresa no Microsoft Edge
 
 >[!Note]
 > O aplicativo de área de trabalho Internet Explorer 11 será desativado e ficará sem suporte em 15 de junho de 2022 (para obter uma lista do que está no escopo, [consulte as Perguntas frequentes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. [Saiba mais aqui](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
-Este artigo explica como habilitar o acesso e usar o Gerenciador de Lista de Site Empresarial no Microsoft Edge no Microsoft Edge para criar, editar e exportar sua Lista de Sites Corporativos para o modo Internet Explorer.
+Este artigo explica como habilitar o acesso e usar o Gerenciador de Lista de Sites Enterprise no Microsoft Edge para criar, editar e exportar sua lista de sites do modo Enterprise para o modo Internet Explorer (IE).
 
 > [!NOTE]
-> Este artigo se aplica ao Microsoft Edge versão 89 ou posterior. 
+> Este artigo se aplica ao Microsoft Edge versão 89 ou posterior.
 
 ## <a name="overview"></a>Visão geral
 
-O Gerenciador de Lista de Site Empresarial é uma versão no navegador da [ferramenta independente do Gerenciador de Lista de Sites Corporativos](https://www.microsoft.com/download/details.aspx?id=49974) que permite criar, editar e exportar a lista de sites da sua organização.
+O Gerenciador de Lista de Site Empresarial é uma versão no navegador da ferramenta independente do Gerenciador de Lista de Sites Corporativos que permite criar, editar e exportar a lista de sites da sua organização. Você pode acessar o Gerenciador de Lista de Sites no navegador Enterprise site em *edge://compat/SiteListManager*.
 
-Melhorias futuras na ferramenta para o modo Internet Explorer estarão disponíveis por meio do Gerenciador de Lista de Site Empresarial no Microsoft Edge no Microsoft Edge. A ferramenta autônoma continuará disponível no Centro de Download, mas não obterá nenhuma atualização de recursos.
+Melhorias futuras na ferramenta para o modo Internet Explorer estarão disponíveis Enterprise Site List Manager (*edge://compat/SiteListManager*) no Microsoft Edge. A ferramenta autônoma continuará disponível no Centro de Download, mas não obterá nenhuma atualização de recursos.
 
 ## <a name="enabling-access-to-enterprise-site-list-manager"></a>Habilitando o acesso ao Gerenciador de Lista de Site Empresarial no Microsoft Edge
 
@@ -51,7 +51,7 @@ Use as etapas a seguir para adicionar sites individuais à sua lista de sites.
 > Você só pode adicionar URLs específicos, não zonas da Internet ou Intranet.
 
 1. No Gerenciador de Lista de Site Empresarial, clique em  **Adicionar um site**.
-2. Digite o URL do site que deseja adicionar, por exemplo: <domain>.com ou <domain>.com/<path>  na caixa URL.
+2. Digite o URL do site que deseja adicionar, por exemplo: \<domain\>.com ou \<domain\>.com/\<path\>  na caixa URL.
 3. Selecione uma das seguintes opções na lista **Abrir em** :
 
    - **IE11**. Abre o site no aplicativo IE11.
