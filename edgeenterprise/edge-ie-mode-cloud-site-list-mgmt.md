@@ -3,19 +3,19 @@ title: Gerenciamento de Lista de Sites para modo Internet Explorer (IE) (Visuali
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 10/21/2021
+ms.date: 11/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Saiba como configurar e usar o Gerenciamento de Lista de Sites na Nuvem para o modo IE usando o Centro de administração do Microsoft 365.
-ms.openlocfilehash: 765b263df9425af5bdc9b694789a67cea59af779
-ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
+ms.openlocfilehash: 29984aa559c0afda5be0457fcbe618dc264a3e68
+ms.sourcegitcommit: 4ec03873a85f065d9bfa6203cfe6c3e938f79bc5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "12108756"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "12155038"
 ---
 # <a name="cloud-site-list-management-for-ie-mode-public-preview"></a>Gerenciamento de Lista de Sites na Nuvem para o modo IE (Visualização Pública)
 
@@ -25,7 +25,10 @@ Este artigo explica como configurar e usar o Gerenciamento de Lista de Sites na 
 
 À medida que você faz a transição de fluxos de trabalho e aplicativos do IE11 para o modo IE, o **Gerenciamento de Lista de Sites na Nuvem** permite que você gerencie suas listas de sites para o modo IE na nuvem. Você pode trabalhar com listas de sites usando a experiência **Listas de Sites do Microsoft Edge** no **Centro de administração do Microsoft 365**.
 
-**Essa experiência agora está em versão prévia pública.**
+Para saiba mais, assista ao vídeo [Experiência de gerenciamento da lista de sites na nuvem para o modo IE](https://www.youtube.com/watch?v=9-GovDcryXQ).
+
+> [!NOTE]
+> Essa experiência agora está em versão prévia pública.
 
 A experiência de visualização permite armazenar a lista de sites da sua organização em um local de nuvem compatível, em vez de precisar de uma infraestrutura local para hospedar sua lista de sites. Você pode criar, importar, exportar listas de sites e auditar alterações nas entradas da lista de sites por meio do Centro de administração do Microsoft 365. Você pode publicar várias listas de sites na nuvem e usar a política de grupo para atribuir diferentes grupos de dispositivos para usar listas diferentes.
 
@@ -34,9 +37,8 @@ A experiência de visualização permite armazenar a lista de sites da sua organ
 Os pré-requisitos a seguir se aplicam a esta visualização pública.
 
 1. Os clientes devem ter um locatário do Azure Active Directory.
-2. A assinatura do locatário deve incluir os Serviços do Exchange. Para obter mais informações, consulte as [Perguntas frequentes](#faq).
-3. Os administradores devem ter Microsoft Edge versão 93 ou superior instalado e a versão mais recente dos [arquivos de política](https://aka.ms/edgeenterprise).
-4. Os administradores precisam ser um [Administrador do Edge](/azure/active-directory/roles/permissions-reference#edge-administrator) ou um [Administrador Global](/azure/active-directory/roles/permissions-reference#global-administrator) no locatário para acessar a experiência de listas de sites do Microsoft Edge.
+2. Os administradores devem ter Microsoft Edge versão 93 ou superior instalado e a versão mais recente dos [arquivos de política](https://aka.ms/edgeenterprise).
+3. Os administradores precisam ser um [Administrador do Edge](/azure/active-directory/roles/permissions-reference#edge-administrator) ou um [Administrador Global](/azure/active-directory/roles/permissions-reference#global-administrator) no locatário para acessar a experiência de listas de sites do Microsoft Edge.
    - Para optar pela versão prévia pública, um Administrador Global é necessário para optar pelo locatário na versão direcionada. Para obter mais informações, consulte [Aceitar versão prévia pública](#opt-in-to-public-preview).
 
 ## <a name="the-preview-experience"></a>A experiência de visualização
@@ -161,9 +163,9 @@ Há cenários em que você deseja exportar uma lista de sites. Por exemplo, se v
 
 ## <a name="faq"></a>Perguntas frequentes
 
-### <a name="why-is-my-tenant-required-to-have-an-exchange-service-subscription-for-this-feature"></a>Por que meu locatário precisa ter uma assinatura do Serviço Exchange para esse recurso?
+### <a name="when-i-select-microsoft-edge-site-lists-and-try-to-create-a-new-list-i-get-this-error---request-failed-with-status-code-500-why-is-that"></a>Quando seleciono “Listas de sites do Microsoft Edge” e tento criar uma nova lista, recebo esse erro - “Falha na solicitação com o código de status 500”. Por quê?
 
-Essa assinatura garante que a associação de back-end correta ocorra imediatamente com seu locatário, o que ocorre quando você seleciona a listas de sites do Microsoft Edge. Quando os Serviços do Exchange não fizerem parte da sua assinatura, a solicitação de associação do Centro de administração do Microsoft 365 falhará. Um alerta é enviado ao sistema de provisionamento para resolver o problema.  Isso resultará em um atraso de três dias para você usar a experiência.
+As Listas de Sites do Microsoft Edge armazena seus dados e configurações em uma infraestrutura de serviço compartilhada com serviços de nuvem corporativos, tais como Exchange Online, SharePoint Online, Teams e Microsoft Azure AD. Em casos raros, quando as listas de sites do Microsoft Edge são o primeiro recurso a usar essa infraestrutura, o provisionamento pode levar algum tempo. Nesses casos, a solicitação inicial do Centro de Administração do Microsoft 365 falhará. Quando a solicitação falhar, um alerta será enviado ao sistema de provisionamento para resolver o problema. Normalmente, o provisionamento é concluído em três dias. Portanto, se você receber esse erro, tente novamente em alguns dias e crie uma nova lista. Se você ainda não conseguiu criar uma nova lista ou se precisar de assistência urgente, contate o Suporte da Microsoft.
 
 ### <a name="can-users-who-havent-signed-in-to-microsoft-edge-download-the-site-list"></a>Os usuários que ainda não entraram no Microsoft Edge podem baixar a lista de sites?
 
