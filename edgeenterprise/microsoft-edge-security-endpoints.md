@@ -3,19 +3,19 @@ title: Lista de permissões para pontos de extremidade do Microsoft Edge
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 11/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Lista de permissões para pontos de extremidade do Microsoft Edge
-ms.openlocfilehash: 735e18e63095405dad4fdd51d51654956b564ca7
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 9e6a87290f2f73ba11bc98eecd3aa693c35b5ace
+ms.sourcegitcommit: 3e155a4395ae3a2ae478eb4b52c436b1c1f2e5db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978779"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "12155205"
 ---
 # <a name="allow-list-for-microsoft-edge-endpoints"></a>Lista de permissões para pontos de extremidade do Microsoft Edge
 
@@ -91,7 +91,7 @@ Para obter informações sobre a otimização de entrega, consulte [Otimização
 
 Esses pontos de extremidade gerenciam a leitura e a escrita de dados sincronizados, o gerenciamento de direitos para proteger os dados e a notificação do navegador quando novos dados de sincronização estiverem disponíveis.
 
-- Pontos de extremidade do serviço de sincronização do Edge:
+- Pontos de extremidade do serviço de sincronização do Microsoft Edge:
 
   - `https://edge-enterprise.activity.windows.com`
   - `https://edge.activity.windows.com`
@@ -103,6 +103,12 @@ Esses pontos de extremidade gerenciam a leitura e a escrita de dados sincronizad
   - `https://api.aadrm.cn` (para locatários na China)
 
 - [Pontos de extremidade do Serviço de Notificação do Windows](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)
+
+### <a name="cloud-site-list-management"></a>Gerenciamento de lista de sites na nuvem
+
+O serviço que Microsoft Edge usa para baixar a lista de sites hospedado na nuvem para o modo Internet Explorer (IE). Para obter mais informações, consulte [Gerenciamento de Lista de Sites na Nuvem](https://aka.ms/CloudSiteList)
+
+- `https://edge.microsoft.com/`
 
 ## <a name="other-browser-support-services"></a>Outros serviços de suporte do navegador
 

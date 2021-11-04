@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 10/28/2021
+ms.date: 11/04/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 4c50682333cfb21d9b0026c5ebb11f5169c3aa5c
-ms.sourcegitcommit: 42f01cad0bf15224222b2aeadb48f03d46c35723
+ms.openlocfilehash: dfffb6935c8452ff1e9c9d4767d7ccbbd1c63af3
+ms.sourcegitcommit: 3e155a4395ae3a2ae478eb4b52c436b1c1f2e5db
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "12154583"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "12155235"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -35,7 +35,8 @@ As seguintes políticas foram adicionadas a esta atualização da documentação
 
 | Nome da política | Legenda |
 |--|--|
-|[InternetExplorerModeToolbarButtonEnabled](#internetexplorermodetoolbarbuttonenabled)|Mostrar o botão Recarregar no modo Internet Explorer na barra de ferramentas|
+|[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|O recurso "Obter descrições de imagem da Microsoft" foi habilitado|
+|[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Aprimorar imagens habilitado|
 
 ## <a name="available-policies"></a>Políticas disponíveis
 
@@ -297,6 +298,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |Nome da política|Legenda|
 |-|-|
 |[AADWebSiteSSOUsingThisProfileEnabled](#aadwebsitessousingthisprofileenabled)|Login único para sites corporativos ou de estudante usando este perfil habilitado|
+|[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|O recurso "Obter descrições de imagem da Microsoft" foi habilitado|
 |[AddressBarMicrosoftSearchInBingProviderEnabled](#addressbarmicrosoftsearchinbingproviderenabled)|Habilitar a Pesquisa da Microsoft em sugestões do Bing na barra de endereços|
 |[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|Configuração Ads para sites com publicidade invasiva|
 |[AllowDeletingBrowserHistory](#allowdeletingbrowserhistory)|Habilitar a exclusão do navegador e baixar o histórico|
@@ -376,6 +378,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[DownloadDirectory](#downloaddirectory)|Configurar o diretório de download|
 |[DownloadRestrictions](#downloadrestrictions)|Permitir restrições de download|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Habilitar o recurso Coleções|
+|[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Aprimorar imagens habilitado|
 |[EdgeShoppingAssistantEnabled](#edgeshoppingassistantenabled)|Comprar no Microsoft Edge habilitado|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Permite que os usuários editem favoritos|
 |[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time (obsolete)|
@@ -4858,7 +4861,7 @@ Se você habilitar essa configuração, as extensões externas serão bloqueadas
 
 Se você desabilitar essa configuração ou deixá-la sem definição, as extensões externas poderão ser instaladas.
 
-As extensões externas e suas instalações são documentadas em https://docs.microsoft.com/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options.
+As extensões externas e sua instalação estão documentadas em [Métodos alternativos de distribuição de extensões](/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options).
 
 
   #### <a name="supported-features"></a>Recursos compatíveis:
@@ -5142,7 +5145,7 @@ O código-fonte de qualquer extensão pode ser alterado pelos usuários com ferr
 
 Cada item de lista da política é uma cadeia de caracteres que contém uma ID de extensão e, opcionalmente, uma URL de "atualização" separada por um ponto e vírgula (;). A ID da extensão é a cadeia de caracteres de 32 letras encontrada, por exemplo, no edge://extensions quando estiver no modo de desenvolvedor. Se especificado, a URL "atualizar" deve apontar para um documento XML de manifesto de atualização ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ). Por padrão, a URL de atualização do site de complementos do Microsoft Edge é usada. A URL "atualizar" definida nessa política é usada somente para a instalação inicial. Atualizações subsequentes da extensão usam a URL de atualização no manifesto da extensão.
 
-Observação: essa política não se aplica ao modo InPrivate. Leia sobre extensões de hospedagem (https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
+Observação: essa política não se aplica ao modo InPrivate. Leia sobre as extensões de hospedagem em [Publicar e atualizar extensões no site Complementos do Microsoft Edge](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -7929,7 +7932,7 @@ Use as informações anteriores ao configurar essa política.
 
   - Nome exclusivo da Política de Grupo: PrintingBackgroundGraphicsDefault
   - Nome da Política de Grupo: modo de impressão de gráficos em segundo plano padrão
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Printing
+  - Caminho da Política de Grupo (obrigatório): Modelos administrativos/Microsoft Edge/Impressão
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -8332,9 +8335,9 @@ Para origens não cobertas pelos padrões aqui especificados, o valor padrão gl
 
 Observe que essa política só afeta origens inseguras, portanto, as origens seguras, por exemplo https://example.com), incluídas nesta lista serão ignoradas.
 
-Para obter informações detalhadas sobre os padrões de URL válidos, confira https://docs.microsoft.com/en-us/DeployEdge/edge-learnmmore-url-list-filter%20format.
+Para informações detalhadas sobre padrões de URL válidos, veja [Formato de filtro para políticas baseadas em listas de URL](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
-  #### <a name="supported-features"></a>Recursos com suporte:
+  #### <a name="supported-features"></a>Recursos compatíveis:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -8985,7 +8988,7 @@ Use as informações anteriores ao configurar essa política.
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Nome do Valor: SleepingTabsTimeout
-  - Tipo de Valor: REG_DWORD
+  - Tipo de valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -9696,7 +9699,7 @@ Se você habilitar essa política, o Microsoft Edge será baixado e mostrará os
 
 Se você desabilitar ou não configurar essa política, o Microsoft Edge não mostrará o logotipo da empresa ou um logotipo da Microsoft na página nova guia.
 
-Para obter ajuda na determinação do hash SHA-256, consulte https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash.
+Para ajuda na determinação do hash SHA-256, veja [Get-FileHash](/powershell/module/microsoft.powershell.utility/get-filehash).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -10610,6 +10613,72 @@ Se você habilitar essa política ou não configurá-la, os perfis não AAD pode
   #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
   
   - Nome da chave de preferência: AADWebSiteSSOUsingThisProfileEnabled
+  - Valor de exemplo:
+``` xml
+<false/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="accessibilityimagelabelsenabled"></a>AccessibilityImageLabelsEnabled
+
+  #### <a name="get-image-descriptions-from-microsoft-enabled"></a>O recurso "Obter descrições de imagem da Microsoft" foi habilitado
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e macOS desde 97 ou mais recente
+
+  #### <a name="description"></a>Descrição
+
+  Permite que os usuários do leitor de tela obtenham descrições de imagens não rotuladas na Web.
+
+Se você habilitar ou não configurar essa política, os usuários terão a opção de usar um serviço anônimo da Microsoft. Esse serviço fornece descrições automáticas para imagens não rotuladas que os usuários encontram na Web quando estão usando um leitor de tela.
+
+Se você desabilitar essa política, os usuários não poderão habilitar o recurso "Obter descrições de imagem da Microsoft".
+
+Quando esse recurso está habilitado, o conteúdo das imagens que precisam de uma descrição gerada é enviado aos servidores da Microsoft para gerar uma descrição.
+
+Nenhum cookie ou outros dados de usuário são enviados à Microsoft, e a Microsoft não salva nem registra nenhum conteúdo de imagem.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome único da Política de Grupo: AccessibilityImageLabelsEnabled
+  - Nome da Política de Grupo: o recurso "Obter descrições de imagem da Microsoft" foi habilitado
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: AccessibilityImageLabelsEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da Chave de Preferência: AccessibilityImageLabelsEnabled
   - Valor de exemplo:
 ``` xml
 <false/>
@@ -15995,6 +16064,68 @@ Se você desabilitar essa política, os usuários não poderão acessar e usar c
   #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
   
   - Nome da chave de preferência: EdgeCollectionsEnabled
+  - Valor de exemplo:
+``` xml
+<true/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="edgeenhanceimagesenabled"></a>EdgeEnhanceImagesEnabled
+
+  #### <a name="enhance-images-enabled"></a>Aprimorar imagens habilitado
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e macOS desde 97 ou mais recente
+
+  #### <a name="description"></a>Descrição
+
+  Defina se o Microsoft Edge pode aprimorar imagens automaticamente para mostrar imagens mais nítidas com melhor cor, iluminação e contraste.
+
+Se você habilitar essa política ou não configurar a política, o Microsoft Edge aprimorará automaticamente as imagens em aplicativos da Web específicos.
+
+Se essa política estiver desabilitada, o Microsoft Edge não aprimorará as imagens.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome único da Política de Grupo: EdgeEnhanceImagesEnabled
+  - Nome da Política de Grupo: Aprimorar imagens habilitado
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: EdgeEnhanceImagesEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: EdgeEnhanceImagesEnabled
   - Valor de exemplo:
 ``` xml
 <true/>
@@ -24100,7 +24231,7 @@ Se você não configurar esta política:
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Nome do Valor: ShowMicrosoftRewards
-  - Tipo de Valor: REG_DWORD
+  - Tipo de valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -25193,7 +25324,7 @@ Essa política será obsoleta no Microsoft Edge versão 95.
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): N/A
   - Nome do Valor TargetBlankImpliesNoOpener
-  - Tipo de Valor: REG_DWORD
+  - Tipo de valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
