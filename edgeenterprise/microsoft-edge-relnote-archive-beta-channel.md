@@ -3,23 +3,65 @@ title: Notas de versão arquivadas para o Canal Beta do Microsoft Edge
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 11/03/2021
+ms.date: 12/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas de versão arquivadas para o Canal Beta do Microsoft Edge
-ms.openlocfilehash: bb45f1dbcb1afecd40c0b163c1ac35d99af6126d
-ms.sourcegitcommit: 4ec03873a85f065d9bfa6203cfe6c3e938f79bc5
+ms.openlocfilehash: cc4170aadbdb1220598542cca9ad04886ea86547
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "12155107"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12297909"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão arquivadas para o Canal Beta do Microsoft Edge
 
 Estas notas de versão fornecem informações sobre os novos recursos e atualizações não relacionadas à segurança que estão inclusos no canal Beta do Microsoft Edge. Para entender os canais do Microsoft Edge, confira a [Visão geral dos canais do Microsoft Edge](microsoft-edge-channels.md). Todas as atualizações de segurança estão listadas [aqui](microsoft-edge-relnotes-security.md).
+
+## <a name="version-95010209-september-28"></a>Versão 95.0.1020.9: 28 de setembro
+
+### <a name="feature-updates"></a>Atualizações de recursos
+
+- **Veja no Explorador de Arquivos o suporte para bibliotecas do Microsoft Office SharePoint Online no Microsoft Edge.**  Agora você pode habilitar o recurso Exibir no Explorador de Arquivos para SharePoint bibliotecas de documentos modernas online. Para que essa experiência seja visível e funcione para seus usuários, você precisará habilitar Microsoft Edge política "Configurar o recurso Exibir no Explorador de Arquivos para páginas SharePoint [em Microsoft Edge"](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) e atualizar sua configuração de locatário do SharePoint Online. Saiba mais: Exibir SharePoint arquivos com o Explorador de [Arquivos no Microsoft Edge - SharePoint no Microsoft 365 | Microsoft Docs](/SharePoint/sharepoint-view-in-edge).
+
+- **Os links de URL do arquivo de zona da intranet serão abertos no Windows Explorador de Arquivos.**  Você pode permitir links de URL de arquivos para arquivos da zona intranet originários de sites HTTPS da zona intranet para abrir o Windows Explorador de Arquivos para esse arquivo ou diretório. Você pode habilitar esta experiência usando a política [IntranetFileLinksEnabled](/deployedge/microsoft-edge-policies#intranetfilelinksenabled).
+
+- **Melhorias na experiência de downloads.**  O suporte para a experiência do usuário de download está sendo estendido para aplicativos Web progressivos PWAs e WebView. Também começaremos a suportar o arrastar e soltar para o Explorador de Arquivos e Desktop.
+
+- **Continue de onde parou em documentos PDF.**  Você pode retomar a leitura do local onde fechou o documento PDF pela última vez.
+
+- **O modo de eficiência estende a vida útil da bateria quando seu laptop entra em modo de economia de bateria.**  O modo de eficiência ficará ativo quando seu laptop entrar no modo de economia de bateria para permitir que o navegador gerencia o uso de recursos para aumentar a vida útil da bateria de sua máquina. Você terá quatro opções para quando o modo de eficiência se tornar ativo, Unplugged e bateria baixa, Unplugged, Always e Never. Observação: esta é uma rollout de recursos controlados. Dispositivos com bateria devem ter o recurso ligado.
+
+***Novas Políticas***
+
+- [BrowserLegacyExtensionPointsBlockingEnabled](/DeployEdge/microsoft-edge-policies#browserlegacyextensionpointsblockingenabled) - Habilitar o bloqueio do ponto de extensão herdado do navegador.
+- [CrossOriginWebAssemblyModuleSharingEnabled](/DeployEdge/microsoft-edge-policies#crossoriginwebassemblymodulesharingenabled) - Especifica se os módulos WebAssembly podem ser enviados de origem cruzada.
+- [DisplayCapturePermissionsPolicyEnabled](/DeployEdge/microsoft-edge-policies#displaycapturepermissionspolicyenabled) - Especifica se a política de permissões de captura de exibição está marcada ou ignorada.
+- [InternetExplorerIntegrationWindowOpenHeightAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) - Configure the pixel adjustment between window.open heights sourced from IE mode pages vs. Microsoft Edge mode pages.
+- [InternetExplorerIntegrationWindowOpenWidthAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) - Configure the pixel adjustment between window.open widths sourced from IE mode pages vs. Microsoft Edge mode pages.
+- [IntranetFileLinksEnabled](/DeployEdge/microsoft-edge-policies#intranetfilelinksenabled) - Permitir que os links de URL do arquivo de zona da intranet Microsoft Edge abrir no Windows File Explorer.
+- [ShadowStackCrashRollbackBehavior](/DeployEdge/microsoft-edge-policies#shadowstackcrashrollbackbehavior) - Configurar o comportamento de rebaixamento de falha do ShadowStack.
+- [VisualSearchEnabled](/DeployEdge/microsoft-edge-policies#visualsearchenabled) - Habilitar a pesquisa visual.
+
+***Políticas Obsoletas***
+
+- [InternetExplorerIntegrationTestingAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) - Permitir teste no modo Internet Explorer.
+- [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) -habilita a configuração padrão de cookie herdado SameSite padrão.
+
+## <a name="version-94099223-september-17"></a>Versão 94.0.992.23: 17 de setembro
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-94099219-september-13"></a>Versão 94.0.992.19: 13 de setembro
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-94099214-september-7"></a>Versão 94.0.992.14: 7 de setembro
+
+Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-9409929-september-2"></a>Versão 94.0.992.9: 2 de setembro
 

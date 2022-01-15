@@ -3,26 +3,26 @@ title: Compartilhamento de cookies do Microsoft Edge para o Internet Explorer
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 11/04/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: 'Como compartilhar os cookies do Microsoft Edge para o Internet Explorer '
-ms.openlocfilehash: 8f1a38106e49f71aa9d27f32cfecbd0df44eaf9f
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+description: Saiba como compartilhar cookies do Microsoft Edge internet Explorer
+ms.openlocfilehash: ddd8cb519f2cb22cf238f96d144197a623eb18bc
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978638"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12298119"
 ---
 # <a name="cookie-sharing-from-microsoft-edge-to-internet-explorer"></a>Compartilhamento de cookies do Microsoft Edge para o Internet Explorer
 
 >[!Note]
-> O aplicativo de área de trabalho Internet Explorer 11 será desativado e ficará sem suporte em 15 de junho de 2022 (para obter uma lista do que está no escopo, [consulte as Perguntas frequentes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. [Saiba mais aqui](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> O aplicativo de área de trabalho do Internet Explorer (IE) 11 será retirado e ficará sem suporte em 15 de junho de 2022. Para ver o que está no escopo e fora do escopo quando o IE 11 é retirado, consulte Perguntas frequentes sobre a retirada de aplicativos de área de trabalho do [Internet Explorer 11.](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549) Os mesmos aplicativos e sites do IE 11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. Para saber mais, confira [O futuro do Internet Explorer no Windows 10 está Microsoft Edge](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
-Este artigo explica como configurar o compartilhamento de cookie de sessão de um processo do Microsoft Edge para o processo do Internet Explorer, ao usar o modo Internet Explorer.
+Este artigo explica como configurar o compartilhamento de cookies de sessão de um processo Microsoft Edge para um processo do Internet Explorer, enquanto usa o modo Internet Explorer.
 
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 87 ou posterior.
@@ -36,6 +36,12 @@ Este artigo explica como configurar o compartilhamento de cookie de sessão de u
   - Windows 10, versão 1903, Windows Server, versão 1903 – KB4566116 ou superior
   - Windows 10, versão 1809, Windows Server, versão 1809 e Windows Server 2019 - KB4571748 ou superior
   - Windows 10 versão 1803 - KB4577032 ou superior
+  - Windows 10 Enterprise ltsc 2016 e Windows Server 2016 - KB4580346 ou superior
+  - Windows 10 Enterprise 2015 LTSB - KB4580327 ou superior
+  - Windows 8.1 e Windows Server 2012 R2 - KB4586768 ou superior
+  - Windows 10 Enterprise ltsc 2016 e Windows Server 2016 - KB4580346 ou superior
+  - Windows 10 Enterprise 2015 LTSB - KB4580327 ou superior
+  - Windows 8.1 e Windows Server 2012 R2 - KB4586768 ou superior
 
 - Microsoft Edge versão 87 ou posterior
 - [ Modo IE ](./edge-ie-mode.md)   configurado com Lista de Sites do modo Empresarial
@@ -44,16 +50,16 @@ Este artigo explica como configurar o compartilhamento de cookie de sessão de u
 
 Uma configuração comum em grandes organizações é ter um aplicativo que funciona em um link de navegador moderno para outro aplicativo, que pode ser configurado para abrir no modo Internet Explorer com logon Único (SSO) habilitado como parte do fluxo de trabalho.
 
-Por padrão, os processos do Microsoft Edge e do Internet Explorer não compartilham os cookies de sessão e isso pode ser inconveniente em alguns casos. Por exemplo, quando um usuário precisa se reautenticar no modo do Internet Explorer ou ao sair de uma sessão do Microsoft Edge, ele não sai da sessão do modo Internet Explorer. Nesses cenários, você pode configurar os cookies específicos e definidos pelo SSO para serem enviados do Microsoft Edge para o Internet Explorer para que a experiência de autenticação torne-se mais contínua, eliminando a necessidade de reautenticação.
+Por padrão, os Microsoft Edge e os processos do Internet Explorer não compartilham cookies de sessão, e essa falta de compartilhamento pode ser inconveniente em alguns casos. Por exemplo, quando um usuário precisa reauthenticar no modo Internet Explorer ou ao sair de uma sessão Microsoft Edge não sair da sessão de modo Internet Explorer. Nesses cenários, você pode configurar cookies específicos definidos pelo SSO para serem enviados do Microsoft Edge para o Internet Explorer para que a experiência de autenticação se torne mais contínua, eliminando a necessidade de reautenticação.
 
 > [!NOTE]
 > Os cookies de sessão só podem ser compartilhados do Microsoft Edge para o Internet Explorer. Não é possível compartilhar os cookies de sessão ao contrário (do Internet Explorer para o Microsoft Edge).
 
 ## <a name="how-cookie-sharing-works"></a>Como funciona o compartilhamento de cookies
 
-O XML da lista de sites do Modo Empresarial foi estendido para permitir que os elementos adicionais especifiquem os cookies que precisam ser compartilhados de uma sessão do Microsoft Edge com o Internet Explorer.  
+O XML Enterprise lista de sites do modo de Enterprise é estendido para permitir que mais elementos especifiquem cookies que precisam ser compartilhados de uma sessão Microsoft Edge com o Internet Explorer.  
 
-Na primeira vez que uma guia do modo do Internet Explorer é criada em uma sessão do Microsoft Edge, todos os cookies correspondentes são compartilhados com a sessão do Internet Explorer. Subsequentemente, sempre que um cookie que corresponde a uma regra é adicionado, excluído ou modificado, ele é enviado como uma atualização para a sessão do Internet Explorer. O conjunto de cookies compartilhados também é reavaliado quando a lista de sites é atualizada.
+Na primeira vez que uma guia do modo do Internet Explorer é criada em uma sessão do Microsoft Edge, todos os cookies correspondentes são compartilhados com a sessão do Internet Explorer. Depois disso, sempre que um cookie que corresponde a uma regra é adicionado, excluído ou modificado, é enviado como uma atualização para a sessão do Internet Explorer. O conjunto de cookies compartilhados também é reavaliado quando a lista de sites é atualizada.
 
 ### <a name="updated-schema-elements"></a>Elementos do esquema atualizados
 
@@ -61,7 +67,7 @@ A tabela a seguir descreve o elemento \<shared-cookie\> adicionado para oferecer
 
 | Elemento| Descrição |
 |-|-|
-| \<shared-cookie **domain**=".contoso.com" **name**="cookie1"\>\</shared-cookie\><br><br>OU<br><br>\<shared-cookie **host**="subdomain.contoso.com" **name**="cookie2"\>\</shared-cookie\>   |** (Obrigatório) ** Um elemento \<shared-cookie\> requer, no mínimo, um atributo de * domínio * (para os cookies de domínio) ou um * host * (para os cookies somente de host) e um atributo *nome*.<br>Devem corresponder exatamente ao domínio e ao nome do cookie, respectivamente. **Observe** que os subdomínios não correspondem.<br><br>O atributo *domínio* é usado para cookies de domínio (e um ponto inicial é permitido, mas opcional).<br>O atributo * host * é usado para cookies somente de host (e um entrelinhamento é um erro). Especificar que nenhum ou ambos resultará em erro.<br>* Um cookie é um cookie de domínio se um domínio foi especificado na cadeia de caracteres do cookie (via cabeçalho de resposta HTTP Set-Cookie ou document.cookie JS API). Um cookie de domínio se aplica ao domínio especificado e a todos os subdomínios. Se um domínio não foi especificado na cadeia de caracteres do cookie, o cookie é um cookie somente de host e só se aplica ao host específico para o qual ele foi definido. Observe que algumas classes de URLs, como nomes de host de palavra única (por exemplo, http://intranetsite) e endereços IP (por exemplo, http://10.0.0.1) podem definir apenas os cookies de host.    |
+| \<shared-cookie **domain**=".contoso.com" **name**="cookie1"\>\</shared-cookie\><br><br>OU<br><br>\<shared-cookie **host**="subdomain.contoso.com" **name**="cookie2"\>\</shared-cookie\>   |** (Obrigatório) ** Um elemento \<shared-cookie\> requer, no mínimo, um atributo de * domínio * (para os cookies de domínio) ou um * host * (para os cookies somente de host) e um atributo *nome*.<br>Esses atributos devem ser exatos corresponde ao domínio e ao nome do cookie, respectivamente. **Observe** que os subdomínios não correspondem.<br><br>O atributo *domínio* é usado para cookies de domínio (e um ponto inicial é permitido, mas opcional).<br>O atributo * host * é usado para cookies somente de host (e um entrelinhamento é um erro). Especificar que nenhum ou ambos resultará em erro.<br>* Um cookie é um cookie de domínio se um domínio foi especificado na cadeia de caracteres do cookie (via cabeçalho de resposta HTTP Set-Cookie ou document.cookie JS API). Um cookie de domínio se aplica ao domínio especificado e a todos os subdomínios. Se um domínio não foi especificado na cadeia de caracteres de cookie, o cookie é um cookie somente host e só se aplica ao host específico para o que foi definido. Algumas classes de URLs, como nomes de host de palavra única (por exemplo, e endereços http://intranetsite) IP (por exemplo, só podem definir cookies somente de http://10.0.0.1) host.    |
 | \<shared-cookie **host**="subdomain.contoso.com" **name**="cookie2" **path**="/a/b/c"\>\</shared-cookie\>  | ** (Opcional) ** Um atributo * caminho * pode ser especificado. Se nenhum atributo de caminho for especificado (ou se o atributo de caminho estiver vazio), quaisquer cookies que correspondam a domínio/host e nome corresponderão à política, independentemente do caminho (regra de caractere curinga).<br><br>Se um caminho for especificado, ele deve ser uma correspondência exata.<br>Se um cookie corresponder a uma regra com um caminho, isso terá precedência sobre uma regra sem caminho. |
 
 #### <a name="sharing-example"></a>Exemplo de compartilhamento

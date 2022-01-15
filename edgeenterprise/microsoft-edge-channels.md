@@ -3,25 +3,25 @@ title: Visão geral de canal do Microsoft Edge
 ms.author: srugh
 author: RyanHechtMSFT
 manager: seanlynd
-ms.date: 09/23/2021
+ms.date: 12/10/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Visão geral de canal do Microsoft Edge
-ms.openlocfilehash: dd65d932950be90d3d9278fa41ae843335b2074d
-ms.sourcegitcommit: 8e5294e82cf62abc916cfd24692f55925330d42b
+ms.openlocfilehash: d18f7f501497d82d0b370a7ab028329a5fcbd036
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "12037181"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12297619"
 ---
 # <a name="overview-of-the-microsoft-edge-channels"></a>Visão geral dos canais do Microsoft Edge
 
-Um dos benefícios da próxima versão do Microsoft Edge é que a Microsoft pode fornecer novos recursos regularmente. No entanto, como o administrador que implanta Microsoft Edge para os usuários da organização, você pode querer ter mais controle sobre a frequência com que seus usuários obtêm esses novos recursos. A Microsoft oferece quatro opções, chamadas de canais, para controlar a frequência com que o Microsoft Edge é atualizado com os novos recursos. Eis uma visão geral das quatro opções.
+Um dos benefícios da próxima versão do Microsoft Edge é que a Microsoft pode fornecer novos recursos regularmente. No entanto, como o administrador que implanta Microsoft Edge para usuários em sua organização, talvez você queira mais controle sobre a frequência com que seus usuários obterão esses novos recursos. A Microsoft fornece quatro opções, chamadas canais, para controlar a frequência Microsoft Edge é atualizada com novos recursos. Eis uma visão geral das quatro opções.
 
-Para obter mais informações sobre o suporte para cada canal, leia: [Ciclo de vida do Microsoft Edge](/deployedge/microsoft-edge-support-lifecycle)
+Para obter mais informações sobre o suporte para cada canal, leia: Microsoft Edge [Ciclo de Vida](/deployedge/microsoft-edge-support-lifecycle)
   
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
@@ -36,37 +36,37 @@ Para obter mais informações sobre o suporte para cada canal, leia: [Ciclo de v
 |[Dev](#dev-channel)|Planejamento e desenvolvimento|Semanalmente|Não|
 |[Canary](#canary-channel)|Conteúdo do bleeding edge|Diário|Não|
 
-Qual canal de atualização você decide implantar para seus usuários depende de vários fatores, como quantos aplicativos de linha de negócios o usuário aproveita e que você precisa testar sempre que eles têm uma versão atualizada do Microsoft Edge. Para ajudá-lo a tomar essa decisão, examine as seguintes informações sobre os quatro canais de atualização disponíveis para o Microsoft Edge.
+O canal de atualização que você decide implantar depende de vários fatores. Por exemplo, o número de aplicativos de linha de negócios em uso afetará seus requisitos de teste sempre que houver Microsoft Edge atualização. Para ajudá-lo a tomar essa decisão, examine as seguintes informações sobre os quatro canais de atualização disponíveis para o Microsoft Edge.
 
 ### <a name="stable-channel"></a>Canal Estável
 
-O canal Estável destina-se à ampla implantação em sua organização, e é o canal em que a maioria dos usuários deve estar. É o mais estável dos canais e é o resultado da estabilização do conjunto de recursos disponível na versão anterior do Canal Beta. Novos recursos são dados a cada 4 semanas. As atualizações de qualidade e segurança são enviadas conforme o necessário. Um lançamento do Canal Estável é mantido até que o próximo lançamento do canal esteja disponível.
+O Canal Estável destina-se à implantação ampla em sua organização, e é o canal em que a maioria dos usuários deve estar. É o mais estável dos canais e é o resultado da estabilização do conjunto de recursos disponível na versão anterior do Canal Beta. Novos recursos são dados a cada 4 semanas. As atualizações de qualidade e segurança são enviadas conforme o necessário. Um lançamento do Canal Estável é mantido até que o próximo lançamento do canal esteja disponível.
 
 ### <a name="beta-channel"></a>Canal Beta
 
-O Canal Beta destina-se à implantação de produção em sua organização para um conjunto de amostra representativo de usuários. É uma versão suportada, e cada versão do Beta é atendida até que a próxima versão deste canal esteja disponível. Essa é uma ótima oportunidade para validar que as coisas funcionam conforme o esperado no ambiente e, se você encontrar um problema, corrigi-lo antes de o lançamento ser publicado no canal Estável. Novos recursos são dados a cada 4 semanas. As atualizações de qualidade e segurança são enviadas conforme o necessário.
+O Canal Beta destina-se à implantação de produção para um conjunto de exemplos representativos de usuários. É uma versão com suporte, e cada versão de Beta é a ser a ser adida até que a próxima versão seja disponibilizada. Este canal oferece uma ótima oportunidade para validar que as coisas funcionam conforme esperado em seu ambiente. Se você encontrar um problema, ele poderá ser remediado antes que o lançamento seja publicado no Canal Estável. Novos recursos são dados a cada 4 semanas. As atualizações de qualidade e segurança são enviadas conforme o necessário.
 
 ### <a name="dev-channel"></a>Canal Dev
 
-O Canal Dev destina-se a ajudá-lo a planejar e desenvolver com os recursos mais recentes do Microsoft Edge, mas com maior qualidade do que o canal Canary. Essa é a oportunidade de obter uma visão antecipada do que vem a seguir e preparar-se para a próxima versão Beta.
+O Canal Dev destina-se a ajudá-lo a planejar e desenvolver com os recursos mais recentes do Microsoft Edge, mas com maior qualidade do que o canal Canary. Este canal é a oportunidade de ver o que está por vir e preparar-se para a próxima versão Beta.
 
 ### <a name="canary-channel"></a>Canal Canary
 
-O Canal Canary é lançado diariamente e é o bleeding edge de todos os canais. Se você quiser acesso aos investimentos mais novos, eles aparecerão aqui primeiro. Devido à natureza dessa cadência, surgirão problemas nas horas extras, portanto, você pode querer outro canal instalado lado a lado se estiver aproveitando as versões canárias.
+O Canal Canary é lançado diariamente e é o bleeding edge de todos os canais. Se você quiser acesso aos investimentos mais novos, eles aparecerão aqui primeiro. Devido à natureza dessa cadência, surgirão problemas ao longo do tempo. Você pode querer outro canal instalado lado a lado se estiver usando as versões canárias.
 
 ### <a name="extended-stable-channel"></a>Canal Estável Estendido
 
-Diferentemente de nossos canais de visualização (Canary, Dev e Beta), o Canal Estável Estendido não está disponível como um aplicativo de navegador separado; em vez disso, é uma opção de versão corporativa para o aplicativo estável Microsoft Edge que está alinhado a um ciclo de lançamento maior de 8 semanas (em vez do ciclo de lançamento principal de 4 semanas encontrado em Estável). Embora seja recomendável atualizar automaticamente Estável em seu ciclo de lançamento de 4 semanas, o Estável Estendido existe para atender mais efetivamente as organizações que podem exigir uma linha do tempo mais longa para testar e validar novas versões do navegador.
+Ao contrário de nossos canais de visualização (Canary, Dev e Beta), o Canal Estável Estendido não está disponível como um aplicativo de navegador separado. Este canal é uma opção de lançamento empresarial para o Microsoft Edge aplicativo Estável que está alinhado a um ciclo de lançamento maior de 8 semanas. Isso se opõe ao ciclo de lançamento principal de quatro semanas para o canal Estável. Embora seja recomendável atualizar Estável em seu ciclo de 4 semanas de lançamento, o Estável Estendido existe para atender mais efetivamente as organizações que podem exigir uma linha do tempo mais longa para testar e validar novas versões do navegador.
 
-A opção de ciclo de lançamento "Estável Estendido" de 8 semanas para o __ Microsoft Edge Estável fornece atualizações cumulativas de recursos alinhadas com versões com números mesmo começando com o Microsoft Edge 94; todas as atualizações de recursos de versões numeradas ímpares serão empacotadas e entregues como parte da versão subsequente com números even. Por exemplo, se uma organização selecionar o ciclo de lançamento "Estável Estendido" de 8 semanas com o Microsoft Edge 94, eles receberão atualizações de recursos subsequentes com o Microsoft Edge 96, Microsoft Edge 98 e assim por diante. Embora as atualizações de recursos sejam empacotadas e entregues com novas versões com base no ciclo de lançamento selecionado, correções e patches de segurança importantes serão entregues conforme necessário, independentemente da opção de versão selecionada para ajudar a manter a segurança do navegador. Os clientes podem optar pela opção de versão Estável Estendida a qualquer momento e entrarão em vigor com a próxima versão estável estendida.
+A opção de versão "Estável Estendida" de 8 semanas para Microsoft Edge Estável fornece __ atualizações cumulativas de recursos que se alinham com versões com números mesmo começando com Microsoft Edge 94. As atualizações de recursos de versões com números ímpares serão empacotadas e entregues como parte da versão subsequente numerada. Por exemplo, se uma organização selecionar o ciclo de lançamento "Estável Estendido" de 8 semanas com o Microsoft Edge 94, eles receberão atualizações de recursos subsequentes com Microsoft Edge 96, Microsoft Edge 98 e assim por diante. Embora as atualizações de recursos sejam empacotadas e entregues com novas versões com base no ciclo de lançamento selecionado, correções e patches de segurança importantes serão entregues conforme necessário, independentemente da opção de versão selecionada para ajudar a manter a segurança do navegador. Os clientes podem optar pela opção de versão Estável Estendida a qualquer momento e entrarão em vigor com a próxima versão estável estendida.
 
 ![Exemplo de comparação Microsoft Edge opções de ciclo de versão estável e estendida.](./media/microsoft-edge-channels/extended-stable-explainer.png)
 
-#### <a name="opting-in-to-the-extended-stable-release-cadence"></a>Opting-in to the Extended Stable Release Ence
+#### <a name="opting-in-to-the-extended-stable-release-cadence"></a>Opting in to the Extended Stable Release Ence
 
-##### <a name="opting-in-to-extended-stable-on-windows-with-automatic-updates-recommended"></a>Opting-in to Extended Stable on Windows with Automatic Updates (recommended)
+##### <a name="opting-in-to-extended-stable-on-windows-with-automatic-updates-recommended"></a>Opting to Extended Stable on Windows with Automatic Updates (recommended)
 
-Se você atualizar automaticamente Microsoft Edge, poderá usar objetos de política de grupo para entrar na Cadência de Versão Estável Estendida. [Siga este guia](/DeployEdge/configure-microsoft-edge#1-download-and-install-the-microsoft-edge-administrative-template) para obter mais informações sobre como baixar e instalar os modelos administrativos mais recentes Microsoft Edge Política de Grupo.
+Se você atualizar automaticamente Microsoft Edge, poderá usar objetos de política de grupo para optar pela Cadência de Versão Estável Estendida. [Siga este guia](/DeployEdge/configure-microsoft-edge#1-download-and-install-the-microsoft-edge-administrative-template) para obter mais informações sobre como baixar e instalar os modelos administrativos mais recentes Microsoft Edge Política de Grupo.
 
 1. Abra o Editor de política de grupo local e acesse _Configuração do computador>Atualização do Microsoft Edge>Aplicativos>Microsoft Edge>_.
 2. Selecione **Substituir canal de destino** e selecione **Habilitado**.
@@ -81,7 +81,7 @@ Quando a próxima atualização para o canal Estável Estendido for lançada com
 >
 > Se você quiser garantir que todos os seus dispositivos comecem com uma versão específica do Extended Stable, você pode implantar essa versão específica do Edge Stable como um MSI com reversões habilitadas. Por exemplo, se você quiser começar com o Extended Stable 94, mas alguns dispositivos já foram atualizados para o Estável 95, você pode implantar um MSI da Borda 94 com a reação habilitada. Para obter mais informações sobre como implantar MSIs de Borda com a reação habilitada, consulte nosso guia [de rebaixamento.](/DeployEdge/edge-learnmore-rollback)
 
-##### <a name="opting-in-to-extended-stable-on-windows-via-intune"></a>Opting-in to Extended Stable on Windows via Intune
+##### <a name="opting-in-to-extended-stable-on-windows-via-intune"></a>Opting in to Extended Stable on Windows via Intune
 
 Microsoft Edge Modelos Administrativos podem ser gerenciados da mesma forma que os Objetos de Política de Grupo locais do Microsoft Endpoint Manager de administração. Siga nosso [guia sobre como configurar Microsoft Edge com o Intune](/mem/intune/configuration/administrative-templates-configure-edge). 
 
@@ -89,7 +89,7 @@ A**configuração**" Substituição de Canal de Destino " pode ser encontrada na
 
 Quando a próxima atualização para o canal Estável Estendido for lançada com um número de versão maior do que o que seu dispositivo instalou no momento, o Microsoft Edge atualizará automaticamente para o canal Estável Estendido. A cadeia de `edge://settings/help` caracteres de versão em indicará que você está executando um canal diferente.
 
-##### <a name="opting-in-to-extended-stable-on-windows-via-configuration-manager"></a>Opting-in to Extended Stable on Windows via Configuration Manager
+##### <a name="opting-in-to-extended-stable-on-windows-via-configuration-manager"></a>Opting in to Extended Stable on Windows via Configuration Manager
 
 Consulte nosso guia sobre a atualização do Microsoft Edge com o [Configuration Manager](/mem/configmgr/apps/deploy-use/deploy-edge#update-microsoft-edge) para obter mais informações sobre como sincronizar e aprovar Microsoft Edge atualizações no Configuration Manager.
 
@@ -97,7 +97,7 @@ As atualizações estáveis estendidas são distribuídas na biblioteca de softw
 
 ## <a name="flighting-pre-release-channels-in-your-organization"></a>Pré-lançamento de canais de pré-lançamento em sua organização
 
-A política de grupo "Substituição de Canal de Destino" também pode ser usada para liberar perfeitamente os canais de pré-lançamento do Microsoft Edge em sua organização sem que os usuários precisem usar um segundo aplicativo de navegador da Web. Por exemplo, você pode definir a política "Substituição de Canal de Destino" como "Beta" para um conjunto de exemplos representativos de usuários em sua organização. Quando esses usuários abrirem Microsoft Edge, eles estarão executando o lançamento do canal Beta em vez de Estável (provavelmente sem que eles percebam!). Isso pode lhe dar uma visão inicial de como a próxima versão do Microsoft Edge funcionará em sua empresa e ajudará a validar que tudo funciona conforme esperado em seu ambiente. Você obterá sinais antecipados de seus usuários que encontrarem qualquer problema e podem garantir que eles sejam remediados antes da versão ser publicada no Canal Estável. Como parte da solução de problemas de um problema do usuário, a cadeia de caracteres de versão em informará se o canal do usuário é diferente do `edge://settings/help` canal estável padrão.
+A política de grupo "Substituição de Canal de Destino" também pode ser usada para liberar perfeitamente os canais de pré-lançamento do Microsoft Edge em sua organização sem que os usuários precisem usar um segundo aplicativo de navegador da Web. Por exemplo, você pode definir a política "Substituição de Canal de Destino" como "Beta" para um conjunto de exemplos representativos de usuários em sua organização. Quando esses usuários abrirem Microsoft Edge, eles estarão executando o lançamento do canal Beta em vez de Estável (provavelmente sem nem perceber!). Essa configuração de política pode dar uma visão antecipada de como a próxima versão do Microsoft Edge funcionará em sua empresa e ajudar a validar que tudo funciona conforme esperado. Você obterá sinais antecipados de seus usuários que encontrarem qualquer problema e podem garantir que eles sejam remediados antes da versão ser publicada no Canal Estável. Como parte da solução de problemas de um problema do usuário, a cadeia de caracteres de versão em informará se o canal do usuário é diferente do `edge://settings/help` canal estável padrão.
 
 > [!NOTE]
 > Como o build nos canais "Beta" e "Dev" do Microsoft Edge tem números de versão maiores do que o de "Estável", se você receber uma atualização para o canal "Beta" ou "Dev" e desejar reverter para Estável, o recurso de reversão do [Microsoft Edge](/DeployEdge/edge-learnmore-rollback) será necessário. Simplesmente definir "Substituição de Canal de Destino" de volta como Estável significa que você receberá nenhuma atualização até que a versão estável mais recente tenha um número de versão maior do que a versão do Microsoft Edge que você está executando no seu dispositivo.

@@ -1,35 +1,39 @@
 ---
-title: Prevenção contra Perda de Dados no Microsoft Edge
+title: Entenda a prevenção contra perda de dados no Microsoft Edge
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 06/28/2021
+ms.date: 11/22/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: Prevenção contra Perda de Dados (DLP) no Microsoft Edge
-ms.openlocfilehash: acbc9dab14c193f4f7cb06eb61e676083bfdf6ef
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+description: Entenda a prevenção contra perda de dados (DLP) no Microsoft Edge
+ms.openlocfilehash: b20a9eb965256adcebd47a5eb1805fb4f0a5992b
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978724"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12297899"
 ---
-# <a name="data-loss-prevention-dlp-in-microsoft-edge"></a>Prevenção contra Perda de Dados (DLP) no Microsoft Edge
+# <a name="understand-data-loss-prevention-dlp-in-microsoft-edge"></a>Entenda a prevenção contra perda de dados (DLP) no Microsoft Edge
 
-Prevenção contra perda de dados (DLP) é um sistema de tecnologias que identifica e protege dados confidenciais da empresa contra divulgação não autorizada. Para seguir os padrões de negócios e regulamentações do setor, as organizações devem proteger as informações confidenciais e evitar sua divulgação não autorizada. As informações confidenciais incluem dados financeiros ou informações de identificação pessoal (PII), como números de cartão de crédito, números de seguridade social ou registros de saúde, entre muitas outras coisas.
+Este artigo descreve como o Microsoft Edge dá suporte à prevenção contra perda de dados (DLP) com DLP do ponto de extremidade e Windows Proteção de Informações (WIP).
+
+## <a name="dlp-defined"></a>DLP definido
+
+Prevenção contra perda de dados (DLP) é um sistema de tecnologias que identifica e protege dados confidenciais da empresa contra divulgação não autorizada. Para seguir os padrões de negócios e regulamentações do setor, as organizações devem proteger as informações confidenciais e evitar sua divulgação não autorizada. Informações confidenciais incluem dados financeiros ou informações pessoais. Alguns exemplos de informações pessoais incluem números de cartão de crédito, números de previdência social e registros de saúde.
 
 O trabalho remoto aumentou a ênfase no uso de DLP. Com o uso crescente de atividades pessoais e de trabalho em dispositivos, as empresas estão percebendo um risco maior no compartilhamento não autorizado de dados corporativos fora do local de trabalho.
 
-Essa combinação de atividades do usuário também se espalhou para os dispositivos onde os dados são compartilhados entre dispositivos pessoais e corporativos em uma variedade de redes públicas e privadas. O resultado líquido é um aumento considerável no risco de exposição de dados confidenciais.
+Essa mesclagem de atividades do usuário também se estendeu para dispositivos, onde os dados são movidos entre dispositivos pessoais e corporativos em várias redes públicas e privadas. O resultado líquido é um aumento considerável no risco de exposição de dados confidenciais.
 
 O Microsoft Edge oferece suporte nativo a duas soluções de DLP diferentes, Microsoft Endpoint DLP e Proteção de Informações do Windows (WIP).
 
 ## <a name="microsoft-endpoint-data-loss-prevention-endpoint-dlp"></a>A prevenção contra perda de dados do ponto de extremidade da Microsoft (Endpoint DLP)
 
-A prevenção contra perda de dados do ponto de extremidade da Microsoft é a próxima geração de prevenção contra perda de dados usando conceitos modernos, como proteção centrada em dados. Ela é integrada ao Windows 10 e ao Microsoft Edge, portanto, não é necessário agentes adicionais ou plugins no dispositivo.
+A prevenção contra perda de dados do ponto de extremidade da Microsoft é a próxima geração de prevenção contra perda de dados usando conceitos modernos, como proteção centrada em dados. Ele é integrado para Windows 10 e Microsoft Edge para que ele não precise de mais agentes ou plug-ins no dispositivo.
 
 > [!NOTE]
 > Isso se aplica ao Microsoft Edge na versão 85 ou posterior.
@@ -40,7 +44,7 @@ Para saber mais sobre Endpoint DLP, use os seguintes recursos:
 - [Saiba mais sobre a prevenção contra perda de dados do ponto de extremidade do Microsoft 365 ](/microsoft-365/compliance/endpoint-dlp-learn-about?preserve-view=true&view=o365-worldwide)
 - [Introdução à prevenção contra perda de dados do Ponto de extremidade](/microsoft-365/compliance/endpoint-dlp-getting-started?preserve-view=true&view=o365-worldwide)
 
-O Microsoft Edge impõe políticas configuradas pelo administrador para arquivos confidenciais e registros de eventos de auditoria para atividades não compatíveis.
+Microsoft Edge impõe políticas configuradas pelo administrador para arquivos confidenciais e registra eventos de auditoria para atividades não compatíveis.
 
 Algumas das atividades do usuário que você pode auditar e gerenciar em dispositivos que executam o Windows 10 incluem as seguintes atividades:
 

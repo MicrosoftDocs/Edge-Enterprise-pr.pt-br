@@ -3,19 +3,19 @@ title: Planejar sua implantação do Microsoft Edge
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 12/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Planejar sua implantação do Microsoft Edge
-ms.openlocfilehash: be85aa5182bbee51f90fe42e80cdee0b9c793b4e
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 66d0999bcf80aa5bdf7232cedff36a8bbb3ef264
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978566"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12298139"
 ---
 # <a name="plan-your-deployment-of-microsoft-edge"></a>Planejar sua implantação do Microsoft Edge
 
@@ -24,18 +24,30 @@ Este artigo descreve as práticas recomendadas para implantar o Microsoft Edge e
 >[!NOTE]
 >Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
 
+## <a name="article-content"></a>Conteúdo do artigo
+
 As seções a seguir fornecem orientações específicas para o planejamento da implantação do Microsoft Edge.
 
-- [Avalie o ambiente e os requisitos do navegador](#evaluate-your-existing-browser-environment-and-browser-needs)
-- [Certifique-se de que os dispositivos Windows 10 estejam prontos](#make-sure-your-windows-10-devices-are-ready)
-- [Escolha a metodologia de implantação](#determine-your-deployment-methodology)
-- [Fazer descoberta de site](#do-site-discovery)
-- [Escolha a estratégia do canal](#determine-your-channel-strategy)
-- [Identificar e configurar políticas](#define-and-configure-policies)
-- [Teste de compatibilidade do Aplicativo](#do-app-compatibility-testing)
-- [Piloto do Microsoft Edge](#deploy-microsoft-edge-to-a-pilot-group)
-- [Avaliar o piloto](#validate-your-deployment)
-- [Implante o Microsoft Edge em toda a empresa](#broad-deployment-of-microsoft-edge)
+   - [Avaliar seu ambiente do navegador e as necessidades do navegador](#evaluate-your-existing-browser-environment-and-browser-needs)
+  - [Certifique-se de que seus dispositivos Windows 10 estejam prontos](#make-sure-your-windows-10-devices-are-ready)
+  - [Determinar a metodologia de sua implantação](#determine-your-deployment-methodology)
+    - [Implantar para usuários finais por função](#deploy-to-end-users-by-role)
+    - [Implantar para usuários por site](#deploy-to-end-users-by-site)
+  - [Fazer descoberta de site](#do-site-discovery)
+    - [Se você já implantou e configurou a versão herdada do Microsoft Edge](#if-youve-already-deployed-and-configured-the-legacy-version-of-microsoft-edge)
+    - [Se você configurou o Internet Explorer como navegador padrão](#if-youve-configured-internet-explorer-as-your-default-browser)
+    - [Analisar dados da descoberta de site](#analyze-site-discovery-data)
+  - [Determinar sua estratégia de canal](#determine-your-channel-strategy)
+    - [Vários dispositivos e canais](#multiple-devices-and-channels)
+  - [Definir e configurar políticas](#define-and-configure-policies)
+    - [Definir sua estratégia de atualização e políticas](#define-your-update-strategy-and-policies)
+  - [Fazer o teste de compatibilidade do aplicativo](#do-app-compatibility-testing)
+    - [Teste de aplicativo de linha interna de negócios](#internal-line-of-business-app-testing)
+    - [Suporte a aplicativos de terceiros](#third-party-app-support)
+  - [Implantar o Microsoft Edge em um grupo piloto](#deploy-microsoft-edge-to-a-pilot-group)
+  - [Validar a implantação](#validate-your-deployment)
+  - [Implantação ampla do Microsoft Edge](#broad-deployment-of-microsoft-edge)
+  - [Consulte também](#see-also)
 
 ## <a name="evaluate-your-existing-browser-environment-and-browser-needs"></a>Avaliar seu ambiente do navegador e as necessidades do navegador
 
@@ -59,7 +71,7 @@ Depois de entender o estado atual, você poderá determinar as metas desejadas p
 - Quais recursos são cruciais para serem configurados como parte da implantação inicial?
 - Qual é o processo para abordar problemas identificados de compatibilidade ou configuração?
 
-Você também deve entender os **pré-requisitos** para os recursos em que está interessado, como:
+Você também deve entender **os pré-requisitos** dos recursos nos quais você está interessado, como:
 
 - [Windows Defender Application Guard](/windows/security/threat-protection/windows-defender-application-guard/reqs-wd-app-guard)
 - [Modo Internet Explorer](./edge-ie-mode.md)
@@ -141,7 +153,7 @@ Depois de criar sua lista de sites do modo empresarial, recomendamos identificar
 
 Primeiro, considere a experiência de primeira execução que você deseja que os usuários tenham. Se você quiser importar automaticamente as configurações do navegador atual, configure a política para [AutoImportAtFirstRun.](./microsoft-edge-policies.md#autoimportatfirstrun)
 
-Para políticas de segurança, recomendamos começar com a linha de base de segurança do Microsoft Edge. A linha de base de segurança pode ser aplicada usando as [definições recomendadas da linha de base de configuração de segurança](https://techcommunity.microsoft.com/t5/Microsoft-Security-Baselines/Security-baseline-DRAFT-for-Chromium-based-Microsoft-Edge/ba-p/949991) ou usando o [Microsoft Intune](/intune/protect/security-baseline-settings-edge).
+Para políticas de segurança, recomendamos começar com a linha de base de segurança do Microsoft Edge. A Linha de Base de Segurança pode ser aplicada usando o Blog de Linhas de Base de Segurança da [Microsoft](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines) ou usando [Microsoft Intune](/intune/protect/security-baseline-settings-edge).
 
 Para outras políticas, é recomendável analisar as configurações de política para o [Microsoft Edge](./microsoft-edge-policies.md) e as [Atualizações do Microsoft Edge](./microsoft-edge-update-policies.md).
 

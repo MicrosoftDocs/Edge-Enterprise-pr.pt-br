@@ -3,19 +3,19 @@ title: Configurar o modo de quiosque do Microsoft Edge
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 11/30/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Aprenda sobre os recursos do modo de quiosque e como configurar as opções do modo de quiosque do Microsoft Edge.
-ms.openlocfilehash: 38d9b143a910c1e475e5fc8413ef657de395a659
-ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
+ms.openlocfilehash: fa53f52dd9115d85da6fec6a75aefb972c9f6ece
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "12107556"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12298299"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Configurar o modo de quiosque do Microsoft Edge
 
@@ -73,7 +73,7 @@ A tabela a seguir lista os recursos compatíveis com o modo quiosque no Microsof
 
 ## <a name="use-kiosk-mode-features"></a>Usar os recursos do modo de quiosque
 
-Os recursos do modo quiosque do Microsoft Edge podem ser chamados com as seguintes opções de linha de comando do Windows 10 para sinalização digital / interativa e navegação pública.
+Microsoft Edge recursos do modo quiosque podem ser invocados com as seguintes opções Windows 10 linha de comando para sinalização digital/interativa e navegação pública.
 
 ### <a name="kiosk-mode-digitalinteractive-signage"></a>Sinalização digital / interativa em modo quiosque
  
@@ -89,12 +89,12 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
 
 ### <a name="kiosk-mode-download-files-on-exit"></a>Modo de quiosque Baixar Arquivos na Saída
 
-Para configurar o Edge para remover arquivos baixados quando uma instância de Quiosque é fechada, as 2 Políticas de Grupo abaixo devem ser configuradas:
+Para configurar Microsoft Edge remover arquivos baixados quando uma instância de Quiosque é fechada, as duas Políticas de Grupo a seguir devem ser configuradas:
 - [Excluir downloads na saída](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) = Habilitado
-- [Definir diretório de download](.//microsoft-edge-policies.md#downloaddirectory) = ${local_app_data}\Microsoft\Edge\KioskDownloads 
+- [Definir diretório de download](./microsoft-edge-policies.md#downloaddirectory) = ${local_app_data}\Microsoft\Edge\KioskDownloads 
 
 
-### <a name="additional-command-line-options"></a>Opções de linha de comando adicionais
+### <a name="additional-command-line-options"></a>Opções adicionais de linha de comando
 
 - **--no-first-run:** desabilitar a primeira experiência de executar do Microsoft Edge.
 
@@ -106,7 +106,7 @@ Para configurar o Edge para remover arquivos baixados quando uma instância de Q
   msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing --no-first-run
   ```
 
-- **--kiosk-idle-timeout-minutes=**: Altere o tempo (em minutos) da última atividade do usuário antes de Microsoft Edge modo de quiosque redefine a sessão do usuário fechando o navegador. Observação: esse sinalizador não será reiniciado Microsoft Edge depois que ele for fechado. Uma tecnologia separada, como Acesso Atribuído ou Início do Shell, é necessária para reiniciar automaticamente a Borda após o tempo limite ocioso. Substitua "valor" no próximo exemplo pelo número de minutos.
+- **--kiosk-idle-timeout-minutes=**: Altere o tempo (em minutos) da última atividade do usuário antes de Microsoft Edge modo de quiosque redefine a sessão do usuário fechando o navegador. Observação: esse sinalizador não será reiniciado Microsoft Edge depois de fechado. Uma tecnologia separada, como Acesso Atribuído ou Início do Shell, é necessária para reiniciar automaticamente a Borda após o tempo limite ocioso. Substitua "valor" no próximo exemplo pelo número de minutos.
 
    ```
    --kiosk-idle-timeout-minutes=value
@@ -167,9 +167,9 @@ Você pode gerenciar o Microsoft Edge modo de quiosque atribuído ao aplicativo 
 
 ### <a name="multi-app-kiosk"></a>Quiosque de vários aplicativos
 
-O Microsoft Edge pode ser executado com [acesso atribuído a vários aplicativos](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) no Windows 10, que é o equivalente ao tipo de modo de quiosque "Navegação Normal" da Versão Herdada do Microsoft Edge. Para configurar o Microsoft Edge com acesso atribuído a vários aplicativos, siga as instruções sobre como [Configurar um quiosque para vários aplicativos](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps). (O AUMID para o canal estável Microsoft Edge é **Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe! MSEDGE**).
+O Microsoft Edge pode ser executado com [acesso atribuído a vários aplicativos](/windows/configuration/lock-down-windows-10-to-specific-apps) no Windows 10, que é o equivalente ao tipo de modo de quiosque "Navegação Normal" da Versão Herdada do Microsoft Edge. Para configurar o Microsoft Edge com acesso atribuído a vários aplicativos, siga as instruções sobre como [Configurar um quiosque para vários aplicativos](/windows/configuration/lock-down-windows-10-to-specific-apps). (O AUMID para o canal estável Microsoft Edge é **Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe! MSEDGE**).
 
-Ao usar o Microsoft Edge com acesso atribuído a vários aplicativos, você poderá usar as [políticas de navegador do Microsoft Edge](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-policies) para configurar a experiência de navegação para atender aos seus requisitos exclusivos.
+Ao usar Microsoft Edge com acesso atribuído a vários aplicativos, você pode configurar um quiosque Microsoft Edge para usar as políticas de navegador Microsoft Edge para configurar [a](./microsoft-edge-policies.md) experiência de navegação para atender aos seus requisitos exclusivos.
 
 ### <a name="configure-using-windows-settings"></a>Configurar usando as configurações do Windows
 
@@ -188,15 +188,15 @@ As Configurações do Windows é a maneira mais simples de configurar um ou mais
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-1-assigned-access.png" alt-text="Configurar o modo de quiosque com acesso atribuído":::
 
-4. Na página **Configurar um modo de quiosque** , clique em  **Introdução**.
+4. Na página **Configurar um quiosque,**   selecione **Iniciar**.
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="Página modo de quiosque – introdução":::
 
-5. Digite um nome para criar uma nova conta modo de quiosque ou escolha uma conta existente na lista suspensa preenchida e clique em  **Avançar**.
+5. Digite um nome para criar uma nova conta de quiosque ou escolha uma conta existente na lista lista suspenso preenchida e selecione **Next**.
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="Modo de quiosque - criar conta":::
 
-6. Na página **Escolher um aplicativo de modo de quiosque** , selecione **Microsoft Edge** e clique em  **Avançar**.
+6. Na página **Escolher um aplicativo de quiosque,** selecione   **Microsoft Edge**e selecione **Próximo**.
 
    > [!NOTE]
    > Isso se aplica apenas ao Microsoft Edge Dev, Beta e a canais estáveis.
@@ -219,7 +219,7 @@ As Configurações do Windows é a maneira mais simples de configurar um ou mais
 
     :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-7-enter-idle-time.png" alt-text="Modo de quiosque - Inserir tempo ocioso":::
 
-11. Clique **Próximo**.
+11. Selecione **Próximo**.
 12. Feche a janela de  **Configurações**  para salvar e aplicar suas opções.
 
     :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="Modo de quiosque – concluir configuração":::

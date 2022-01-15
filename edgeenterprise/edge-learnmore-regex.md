@@ -1,21 +1,21 @@
 ---
 title: Sintaxe da expressão regular 2
 ms.author: comanea
-author: AndreaLBarr
+author: dan-wesley
 manager: seanlyn
-ms.date: 08/12/2021
+ms.date: 01/11/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Sintaxe da expressão regular 2
-ms.openlocfilehash: 78f21846c142d67470cd421a34baafa9d0021bd0
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: bdb49090a4d9b0611d3485570757fd86946c4ca5
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978655"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12298269"
 ---
 # <a name="regular-expression-2-re2h-syntax"></a>Sintaxe da Expressão Regular 2 (re2.h)
 
@@ -27,13 +27,13 @@ Duas expressões regulares podem ser alteradas ou concatenadas para formar uma n
 
 Os metacaracteres _`\`_, _+_ e _?_ são operadores de repetição: *e<sub>1</sub>* _`\`_ corresponde a uma cadeia de caracteres zero ou mais (possivelmente diferentes), cada uma das quais correspondem a *e<sub>1</sub>*; *e<sub>1</sub>* _+_ corresponde a um ou mais; *e<sub>1</sub>* _?_ iguala zero ou um.
 
-A precedência do operador, da associação mais fraca para a mais forte, é primeiro a alternância, depois a concatenação e, por fim, os operadores de repetição. Os parênteses explícitos podem ser usados para forçar diferentes significados, como nas expressões aritméticas. Alguns exemplos: _ab|cd_ é equivalente _a (ab)|( cd)_ ; _`ab\`_ é equivalente a _`a(b\)`_ .
+A precedência do operador, da associação mais fraca para a mais forte, é primeiro a alternância, depois a concatenação e, por fim, os operadores de repetição. Parênteses explícitos podem ser usados para forçar significados diferentes, como em expressões aritméticas. Alguns exemplos: _ab|cd_ é equivalente _a (ab)|( cd)_ ; _`ab\`_ é equivalente a _`a(b\)`_ .
 
-A sintaxe descrita até o momento é a maior parte da sintaxe de expressão regular _egrep_ do Unix. Esse subconjunto é suficiente para descrever todas as linguagens regulares: uma linguagem regular é um conjunto de cadeias de caracteres que podem ser correspondidos em uma única passagem do texto usando apenas uma quantidade fixa de memória. As facilidades de expressão regular mais recentes (notadamente Perl e aquelas que o copiaram) adicionaram muitos novos operadores e sequências de escape, o que torna as expressões regulares mais concisas e, às vezes, mais irregulares, mas, geralmente, não mais robustas.
+A sintaxe descrita até o momento é a maior parte da sintaxe de expressão regular _egrep_ do Unix. Esse subconjunto basta para descrever todos os idiomas regulares. Um idioma regular é um conjunto de cadeias de caracteres que pode ser corresponder em uma única passagem pelo texto usando apenas uma quantidade fixa de memória. Instalações de expressão regular mais novas (notadamente Perl e os idiomas que a copiaram) adicionaram muitos novos operadores e sequências de escape. Essas alterações torna as expressões regulares mais concisas e, às vezes, mais enigmáticas, mas não mais poderosas.
 
 Esta página lista a sintaxe de expressão regular aceita por RE2.
 
-Ela também lista algumas sintaxes aceitas pela PCRE, PERL e VIM.
+Ele também lista algumas sintaxes aceitas por PCRE, PERL e VIM.
 
 ## <a name="syntax-tables"></a>Tabelas de sintaxe
 

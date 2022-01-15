@@ -3,19 +3,19 @@ title: Formato de filtro para políticas de URL do Microsoft Edge
 ms.author: brianalt
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 12/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Saiba mais sobre o formato de filtro usado para as políticas URLBlocklist e URLAllowlist do Microsoft Edge.
-ms.openlocfilehash: e178dad518ff4bee07bf89d9faca3231ee6cf246
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 777813f600058619c0e6b4dbb093accd5279bf5c
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978544"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12297719"
 ---
 # <a name="filter-format-for-url-list-based-policies"></a>Formato de filtro para políticas baseadas em lista de URL
 
@@ -102,9 +102,9 @@ Qualquer outro **esquema** será tratado como um **esquema** personalizado, mas 
 ## <a name="content-license"></a>Licença de conteúdo
 
 > [!NOTE]
-> Partes desta página são modificações baseadas no trabalho criado e compartilhado pela Chromium.org e usadas de acordo com os termos descritos na [Licença Pública Creative Commons Atribuição 4.0 Internacional](http://creativecommons.org/licenses/by/4.0/). A página original do [Chromium pode ser encontrada aqui](https://www.chromium.org/administrators/url-blacklist-filter-format).
+> Partes desta página são modificações baseadas no trabalho criado e compartilhado pela Chromium.org e usadas de acordo com os termos descritos na [Licença Pública Creative Commons Atribuição 4.0 Internacional](http://creativecommons.org/licenses/by/4.0/). A página original do [Chromium pode ser encontrada aqui](https://www.chromium.org/administrators/url-blocklist-filter-format).
   
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Esse trabalho é licenciado sob uma <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licença Attribution 4.0 International (CC BY 4.0) da Creative Commons</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Esse trabalho é licenciado sob uma <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licença Attribution 4.0 International (CC BY 4.0) da Creative Commons</a>.
 
 ## <a name="see-also"></a>Consulte também
 

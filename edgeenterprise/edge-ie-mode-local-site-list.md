@@ -1,53 +1,57 @@
 ---
-title: Lista de sites locais para modo IE
+title: Lista de sites locais para o modo internet explorer (IE)
 ms.author: shisub
-author: AndreaLBarr
+author: dan-wesley
 manager: srugh
-ms.date: 09/13/2021
+ms.date: 11/15/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Saiba como habilitar listas de sites locais e acesso fácil ao modo IE
-ms.openlocfilehash: 8130a835cd803f5cdeb50f825ccee895f35f62e3
-ms.sourcegitcommit: c3d63d913eb15e7dbeb9f45b5f28fc841b46bce1
+ms.openlocfilehash: 8113b3baa613a0c19c80a738b3bbddfc330ec3ba
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "12016560"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12297949"
 ---
-## <a name="local-site-list-for-ie-mode"></a>Lista de sites locais para modo IE
+# <a name="configure-local-site-list-for-internet-explorer-ie-mode"></a>Configurar a lista de sites locais para o modo Internet Explorer (IE)
 
 >[!Note]
-> O aplicativo de área de trabalho Internet Explorer 11 será desativado e ficará sem suporte em 15 de junho de 2022 (para obter uma lista do que está no escopo, [consulte as Perguntas frequentes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. [Saiba mais aqui](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> O aplicativo de área de trabalho do Internet Explorer 11 será retirado e ficará sem suporte em 15 de junho de 2022 (para ver uma lista do que está no escopo, consulte o Perguntas frequentes sobre a retirada de aplicativos da área de trabalho do [Internet Explorer 11](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. Para saber mais, confira [O futuro do Internet Explorer no Windows 10 está Microsoft Edge](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 Este artigo explica como configurar o acesso fácil ao modo Internet Explorer (modo IE) e permitir o uso de listas de sites locais em sua organização.
 
 > [!NOTE]
 > Este artigo se aplica Microsoft Edge versão 92 ou posterior.
 
-### <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 1. Atualizações do Windows
 
-- Windows 10, versão 1909 - [KB5003698](https://support.microsoft.com/topic/june-15-2021-kb5003698-os-build-18363-1645-preview-1ecf117e-1f89-40f9-a0a5-ed5766737620) ou posterior  
+   - Windows 10, versão 1909 - [KB5003698](https://support.microsoft.com/topic/june-15-2021-kb5003698-os-build-18363-1645-preview-1ecf117e-1f89-40f9-a0a5-ed5766737620) ou posterior  
 
-- Windows 10, versão 2004; Windows 10, versão 20H2 e Windows 10, versão 21H1 – [KB5003690](https://support.microsoft.com/topic/june-21-2021-kb5003690-os-builds-19041-1081-19042-1081-and-19043-1081-preview-11a7581f-2a01-47d5-ba12-431709ee2248) ou posterior
+   - Windows 10, versão 2004; Windows 10, versão 20H2 e Windows 10, versão 21H1 – [KB5003690](https://support.microsoft.com/topic/june-21-2021-kb5003690-os-builds-19041-1081-19042-1081-and-19043-1081-preview-11a7581f-2a01-47d5-ba12-431709ee2248) ou posterior
 
-2. Microsoft Edge versão 92 (92.0.925.0 ou posterior)
+2. Microsoft Edge versão 92 (92.0.902.55 ou posterior)
+
+> [!IMPORTANT]
+> Esse recurso de lista de sites local não tem suporte no Windows Server 2016 no momento.
 
 ## <a name="overview"></a>Visão geral
 
 O modo IE é alimentado pela configuração da lista de sites Enterprise Modo. Enquanto você está identificando e configurando sites na lista de sites para usar o modo IE, os usuários não precisam mais esperar ou voltar para o aplicativo IE11 autônomo.
 
-A partir Microsoft Edge versão 92, o acesso repetido a sites de modo *IE* não configurado é mais fácil. Os usuários podem recarregar sites no modo IE. Eles podem adicionar esses sites à lista de sites locais para renderizar automaticamente no modo IE por um período de 30 dias, enquanto a lista de sites da organização é atualizada. Quando [o IE11 é](/deployedge/edge-ie-disable-ie11) desabilitado em seu ambiente, seus usuários não são mais dependentes somente da lista de sites da organização.
+A partir Microsoft Edge versão 92, o acesso repetido a sites de modo *IE* não configurado é mais fácil. Os usuários podem recarregar sites no modo IE. Eles podem adicionar esses sites à lista de sites locais para renderizar automaticamente no modo IE por 30 dias, enquanto a lista de sites da organização é atualizada. Quando [o IE11 é](/deployedge/edge-ie-disable-ie11) desabilitado em seu ambiente, seus usuários não são mais dependentes somente da lista de sites da organização.
 
 Você pode configurar essa experiência por meio de políticas de grupo para sua organização.
 
-Observação: *um* site não configurado é aquele que requer o modo IE, mas não está configurado para abrir no modo IE na lista de sites do modo Enterprise Modo.
+> [!NOTE]
+> Um site *não configurado* é aquele que requer o modo IE, mas não está configurado para abrir no modo IE na lista de sites do modo Enterprise Modo.
 
-## <a name="local-site-list-experience"></a>Experiência de lista de sites locais
+## <a name="enable-the-local-site-list-experience"></a>Habilitar a experiência de lista de sites local
 
 Para habilitar a experiência de lista de sites locais, os usuários podem ir para a *URL* edge://settings/defaultBrowser e definir Permitir que sites sejam recarregados no modo **Internet Explorer** como **Permitir**.
 
@@ -74,7 +78,7 @@ Quando a opção é selecionada, o site é recarregado no modo IE. O ícone do i
 
 :::image type="content" source="media/Edge-hybrid-IE-mode/site-has-been-reloaded-in-ie-mode-screenshot.png" alt-text="Esta página está aberta no modo Internet Explorer":::
 
-Depois que um site for recarregado no modo IE, as navegaçãos "na página" permanecerão no modo IE (por exemplo, um link, um script ou um formulário na página ou um redirecionamento do lado do servidor de outra navegação "na página").  
+Depois que um site for recarregado no modo IE, a navegação "na página" ficará no modo IE (por exemplo, um link, um script, um formulário na página ou um redirecionamento do lado do servidor de outra navegação "na página").  
 
 Enquanto estiver no modo IE, os usuários verão um banner indicando que estão no modo IE, a opção para Deixar o modo IE e fixar o ícone do modo IE na barra de ferramentas (se ainda não estiver fixado).
 
@@ -90,7 +94,7 @@ As entradas permanecem na lista de sites locais por um período padrão de 30 di
 
 Duas políticas de grupo estão disponíveis para configurar a experiência de lista de sites local Microsoft Edge. Estas políticas são:
 
-### *<a name="policy-internetexplorerintegrationreloadiniemodeallowed"></a>Política: InternetExplorerIntegrationReloadInIEModeAllowed*
+### <a name="policy-internetexplorerintegrationreloadiniemodeallowed"></a>Política: InternetExplorerIntegrationReloadInIEModeAllowed
 
 Essa política corresponde à configuração Microsoft Edge "Permitir que os sites sejam recarregados no modo Internet Explorer". Você pode acessar essa configuração indo para o URL *edge://settings/defaultbrowser*.
 
@@ -103,7 +107,7 @@ Os usuários podem, opcionalmente, Microsoft Edge usar o modo IE para o site no 
 
 Observe que essa política tem precedência sobre como você configurou a [política InternetExplorerIntegrationTestingAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) e essa política será desabilitada.
 
-### *<a name="policy-internetexplorerintegrationlocalsitelistexpirationdays"></a>Política: InternetExplorerIntegrationLocalSiteListExpirationDays*
+### <a name="policy-internetexplorerintegrationlocalsitelistexpirationdays"></a>Política: InternetExplorerIntegrationLocalSiteListExpirationDays
 
 Essa política pode ser usada para ajustar o número de dias em que um site permanece na lista de sites local para usuários.  
 
@@ -113,13 +117,10 @@ Essa política pode ser usada para ajustar o número de dias em que um site perm
 
 Essa política não terá efeito se você desabilitou a *política InternetExplorerIntegrationReloadInIEModeAllowed.*
 
-**Observação:**
+> [!NOTE]
+> A lista de sites local atualmente não sincroniza entre dispositivos. Essa melhoria está atualmente em nosso backlog e atualizaremos esse recurso quando ele estiver disponível.
 
-No momento, a lista de sites locais não é sincronizada entre dispositivos. Essa melhoria está atualmente em nosso backlog e atualizaremos quando isso se tornar disponível.
+## <a name="see-also"></a>Consulte também
 
-## <a name="see-also"></a>Confira também
-
-Desabilitar o Internet Explorer 11 - [Desabilitar o Internet Explorer 11 | Microsoft Docs](/deployedge/edge-ie-disable-ie11)
-
-Configurar políticas de modo IE - Configurar políticas de [modo IE | Microsoft Docs](/deployedge/edge-ie-mode-policies)
-
+- Desabilitar o Internet Explorer 11 - [Desabilitar o Internet Explorer 11](/deployedge/edge-ie-disable-ie11)
+- Configurar políticas de modo IE - [Configurar políticas de modo IE](/deployedge/edge-ie-mode-policies)

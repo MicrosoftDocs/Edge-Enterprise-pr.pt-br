@@ -3,24 +3,24 @@ title: Associar extensões de arquivo com o modo Internet Explorer
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 11/24/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Associar extensões de arquivo com o modo Internet Explorer
-ms.openlocfilehash: 7efa30a6ec3013cf5b1595471f1fb91dca8bdfda
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: c7d72e94079ff35d8ffe49c068585b0c97d208cc
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978637"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12298249"
 ---
-# <a name="associate-file-extensions-with-internet-explorer-mode"></a>Associar extensões de arquivo ao modo Internet Explorer
+# <a name="associate-file-extensions-with-internet-explorer-mode"></a>Associar extensões de arquivo com o modo Internet Explorer
 
 >[!Note]
-> O aplicativo de área de trabalho Internet Explorer 11 será desativado e ficará sem suporte em 15 de junho de 2022 (para obter uma lista do que está no escopo, [consulte as Perguntas frequentes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. [Saiba mais aqui](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> O aplicativo de área de trabalho do Internet Explorer 11 será retirado e ficará sem suporte em 15 de junho de 2022. Para ver uma lista do que está no escopo, [leia esta perguntas frequentes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. [Saiba mais aqui](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 Este artigo explica como associar o Microsoft Edge com o modo do Internet Explorer com extensões de arquivo para aplicativos da área de trabalho.
 
@@ -29,7 +29,7 @@ Este artigo explica como associar o Microsoft Edge com o modo do Internet Explor
 
 ## <a name="guidance-for-file-extension-association-with-internet-explorer-mode"></a>Diretrizes de associação de extensão de arquivo com o modo Internet Explorer
 
-As instruções a seguir mostram uma entrada que associa o Microsoft Edge com o modo IE ao tipo de arquivo. mht. Use as etapas a seguir como um guia para definir uma associação de arquivo.
+As instruções a seguir mostram uma entrada que associa Microsoft Edge ao modo IE com o tipo de arquivo \.mht. Use as etapas a seguir como um guia para definir uma associação de arquivo.
 
 > [!NOTE]
 > Você pode definir extensões de arquivo específicas para abrir no modo Internet Explorer por padrão usando a política para **Definir um arquivo de configuração de associações padrão**. Para obter mais informações, consulte [Política de CSP – ApplicationDefaults](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration).
@@ -56,14 +56,14 @@ As instruções a seguir mostram uma entrada que associa o Microsoft Edge com o 
 @="\"C:\\<edge_installation_dir>\\msedge.exe\" -ie-mode-file-url -- \"%1\""
 ```
 
-3. Por fim, associe a extensão de arquivo .mht a um novo ProgID. Adicione o ProgID como um nome de valor, com o tipo de valor de REG_SZ.
+3. Por fim, associe a extensão de arquivo \.mht a um novo ProgID. Adicione o ProgID como um nome de valor, com o tipo de valor de REG_SZ.
 
 ```markdown
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.mht\OpenWithProgids]
 "MSEdgeIEModeMHT"=hex(0):
 ```
 
-Depois de definir as chaves descritas no exemplo anterior, os usuários verão uma opção adicional no menu **Abrir com** para abrir um arquivo .mht usando o Microsoft Edge \<channel\> com o modo IE.
+Depois de definir as chaves descritas no exemplo anterior, os usuários verão outra opção no menu **Abrir** com para abrir um arquivo \.mht usando Microsoft Edge com o \<channel\> modo IE.
 
 ## <a name="registry-example"></a>Exemplo de registro
 
@@ -97,7 +97,7 @@ Windows Registry Editor Version 5.00
 
 ## <a name="configuring-file-types-to-open-in-internet-explorer-mode"></a>Configurando tipos de arquivo para abrir no modo Internet Explorer
 
-Ao iniciar o Microsoft Edge 88, você pode configurar links de tipos de arquivo específicos para abrir no modo do Internet Explorer usando a política [ Mostrar menu de contexto para abrir links no modo do Internet Explorer](./microsoft-edge-policies.md#internetexplorerintegrationreloadiniemodeallowed).
+A partir Microsoft Edge 88, você pode configurar links de tipo de arquivo específicos para abrir no modo Internet Explorer usando a política Mostrar menu de contexto para abrir links no modo [Internet Explorer](./microsoft-edge-policies.md#internetexplorerintegrationreloadiniemodeallowed).
 
 Você pode definir os tipos de arquivo aos quais essa opção deve ser aplicada, especificando as extensões de arquivo nesta política [Abrir arquivos locais na lista de permissões de extensão de arquivo no modo Internet Explorer](./microsoft-edge-policies.md#internetexplorerintegrationlocalfileextensionallowlist). 
 
