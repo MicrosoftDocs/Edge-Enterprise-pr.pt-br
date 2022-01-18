@@ -1,34 +1,41 @@
 ---
 title: Documentação da política do Microsoft Edge Update
 ms.author: stmoody
-author: RyanHechtMSFT
+author: dan-wesley
 manager: tahills
-ms.date: 09/23/2021
+ms.date: 11/15/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação para todas as políticas compatíveis com o Microsoft Edge Update
-ms.openlocfilehash: b96fc0e44434b5ab36a16b1bc14f0aebe0deacf4
-ms.sourcegitcommit: 8e5294e82cf62abc916cfd24692f55925330d42b
-ms.translationtype: MT
+ms.openlocfilehash: 68b59a66f48633b88063ee33acbc71d819b0cbc7
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "12037211"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12297609"
 ---
 # <a name="microsoft-edge---update-policies"></a>Microsoft Edge - Políticas de atualização
 
 A versão mais recente do Microsoft Edge inclui as seguintes políticas que você pode usar para controlar como e quando o Microsoft Edge é atualizado.
 
-Para obter informações sobre outras políticas disponíveis no Microsoft Edge, confira [Referência de política do navegador Microsoft Edge](microsoft-edge-policies.md)
+Para obter informações sobre outras políticas disponíveis no Microsoft Edge, confira [Referência de política do navegador Microsoft Edge](./microsoft-edge-policies.md)
+
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
-## <a name="available-policies"></a>Políticas disponíveis
-Estas tabelas listam todas as políticas de grupo relacionadas a atualizações disponíveis nesta versão do Microsoft Edge. Use os links na tabela a seguir para obter mais detalhes sobre políticas específicas.
 
-|&nbsp;|&nbsp;| |**-**|-| |**[Aplicativos](#applications)**|[Preferências](#preferences)| |**[Servidor Proxy](#proxy-server)**|[Microsoft Edge WebView](#microsoft-edge-webview)|
+## <a name="available-policies"></a>Políticas disponíveis
+Essas tabelas listam todas as políticas de grupo relacionadas à atualização disponíveis nesta versão do Microsoft Edge. Use os links na tabela a seguir para obter mais detalhes sobre políticas específicas.
+
+|||
+|-|-|
+|[Aplicativos](#applications)|[Preferências](#preferences)|
+|[Servidor proxy](#proxy-server)|[Microsoft Edge Update](#microsoft-edge-update)|
+|[Microsoft Edge WebView](#microsoft-edge-webview)||
+
 ### [<a name="applications"></a>Aplicativos](#applications-policies)
 |Nome da política|Legenda|
 |-|-|
@@ -41,20 +48,25 @@ Estas tabelas listam todas as políticas de grupo relacionadas a atualizações 
 |[CreateDesktopShortcut](#createdesktopshortcut)|Impedir a criação de Atalho da Área de Trabalho com a instalação (por canal)|
 |[RollbackToTargetVersion](#rollbacktotargetversion)|Reverter para a Versão de Destino (por canal)|
 |[TargetVersionPrefix](#targetversionprefix)|Substituir versão de destino (por canal)|
-|[TargetChannelOverride](#targetchanneloverride)|Substituição de canal de destino (somente estável)|
-|[UpdaterExperimentationAndConfigurationServiceControl](#UpdaterExperimentationAndConfigurationServiceControl)| Recuperar configurações e experimentos|
+|[TargetChannel](#targetchannel)|Substituição do Canal de Destino (por canal)|
+
 ### [<a name="preferences"></a>Preferências](#preferences-policies)
 |Nome da política|Legenda|
 |-|-|
-|[AutoUpdateCheckPeriodMinutes](#autoupdatecheckperiodminutes)|Atualizar automaticamente a substituição do período de verificação|
-|[UpdatesSuppressed](#updatessuppressed)|O período em cada dia para suprimir a verificação de atualização automática|
+|[AutoUpdateCheckPeriodMinutes](#autoupdatecheckperiodminutes)|Substituição do período de verificação do Microsoft AutoUpdate|
+|[UpdatesSuppressed](#updatessuppressed)|Período de tempo em cada dia para suprimir a verificação do Microsoft AutoUpdate|
 
 ### [<a name="proxy-server"></a>Servidor proxy](#proxy-server-policies)
 |Nome da política|Legenda|
 |-|-|
-|[ProxyMode](#proxymode)|Escolher como especificar as configurações do servidor proxy|
-|[ProxyPacUrl](#proxypacurl)|A URL para um arquivo .pac de proxy|
-|[ProxyServer](#proxyserver)|Endereço ou URL do servidor proxy|
+|[ProxyMode](#proxymode)|Escolher como especificar as configurações de um servidor proxy|
+|[ProxyPacUrl](#proxypacurl)|URL para o arquivo .pac de proxy|
+|[ProxyServer](#proxyserver)|Endereço ou URL de um servidor proxy|
+
+### [<a name="microsoft-edge-update"></a>Microsoft Edge Update](#microsoft-edge-update-policies)
+|Nome da política|Legenda|
+|-|-|
+|[UpdaterExperimentationAndConfigurationServiceControl](#updaterexperimentationandconfigurationservicecontrol)|Controlar a comunicação do atualizador com o Serviço de Experimentação e Configuração|
 
 ### [<a name="microsoft-edge-webview"></a>Microsoft Edge WebView](#microsoft-edge-webview-policies)
 |Nome da política|Legenda|
@@ -72,9 +84,9 @@ Estas tabelas listam todas as políticas de grupo relacionadas a atualizações 
 #### <a name="description"></a>Descrição
 Você pode especificar o comportamento padrão de todos os canais para permitir ou bloquear o Microsoft Edge em dispositivos associados ao domínio.
 
-Você pode substituir esta política para canais individuais habilitando a política '[Permitir instalação](#install)' para canais específicos.
+Você pode substituir esta política para canais individuais habilitando a política '[Permitir instalação](#install-webview)' para canais específicos.
 
-Se você desabilitar esta política, a instalação do Microsoft Edge será bloqueada. Isso só afeta a instalação do software Microsoft Edge quando a '[Permitir instalação](#install)' está definida como Não configurada.
+Se você desabilitar esta política, a instalação do Microsoft Edge será bloqueada. Isso só afeta a instalação do software Microsoft Edge quando a '[Permitir instalação](#install-webview)' está definida como Não configurada.
 
 Esta política não impede a execução do Microsoft Edge Update, nem impede que os usuários instalem o software do Microsoft Edge por outros métodos.
 
@@ -187,7 +199,7 @@ Se você selecionar atualizações manuais, verifique periodicamente se há atua
 
 Se você não habilitar e configurar essa política, o Microsoft Edge Update tratará as atualizações disponíveis conforme especificado pela política '[Atualizar a substituição de política padrão](#updatedefault)'.
 
-Consulte [https://go.microsoft.com/fwlink/?linkid=2136406](https://go.microsoft.com/fwlink/?linkid=2136406) para mais informações.
+Para obter mais informações, consulte [https://go.microsoft.com/fwlink/?linkid=2136406](https://go.microsoft.com/fwlink/?linkid=2136406).
 
 Esta política está disponível apenas em instâncias do Windows que fazem parte de um domínio Microsoft® Active Directory®.
 #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
@@ -202,7 +214,7 @@ Esta política está disponível apenas em instâncias do Windows que fazem part
 - Nome do arquivo GP ADMX: msedgeupdate.admx
 ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
 - Caminho: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- Nome do valor:
+- Nome do valor: 
   - (Estável): Update{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
   - (Beta): Update{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
   - (Canary): Update{65C35B14-6C1D-4122-AC46-7148CC9D6497}
@@ -210,10 +222,7 @@ Esta política está disponível apenas em instâncias do Windows que fazem part
 - Tipo de valor: REG_DWORD
 ##### <a name="example-value"></a>Valor de exemplo:
 ```
-always allow updates 0x00000001
-Automatic silent updates only 0x00000003
-manual updates only 0x00000002
-updates disabled 0x00000000
+0x00000001
 ```
 [Voltar ao início](#microsoft-edge---update-policies)
 
@@ -222,16 +231,18 @@ updates disabled 0x00000000
 #### <a name="allow-microsoft-edge-side-by-side-browser-experience"></a>Permitir a experiência de navegador Lado a Lado do Microsoft Edge
 >Microsoft Edge Update 1.2.145.5 e posterior
 
-#### <a name="description"></a>Description
-Essa política permite que um usuário execute o Microsoft Edge (Edge HTML) e o Microsoft Edge (baseado no Chromium) lado a lado.
+#### <a name="description"></a>Descrição
+Essa política permite que um usuário execute Microsoft Edge (HTML do Edge) e Microsoft Edge (baseado em Chromium) lado a lado.
 
 Se essa política for definida como "Não configurada", o Microsoft Edge (baseado no Chromium) substituirá o Microsoft Edge (HTML do Edge) depois que o canal Estável do Microsoft Edge (baseado no Chromium) e as atualizações de segurança de novembro de 2019 forem instalados.  Esse comportamento é igual à configuração "Desabilitada".
 
 A configuração "Desabilitada" bloqueia uma experiência lado a lado, e o Microsoft Edge (baseado no Chromium) substituirá o Microsoft Edge (HTML do Edge) depois que o canal Estável do Microsoft Edge (baseado no Chromium) e as atualizações de segurança de novembro de 2019 forem instalados.  Esse comportamento é igual à configuração "Não configurada".
 
-Quando essa política for "Habilitada", o Microsoft Edge (baseado no Chromium) e o Microsoft Edge (Edge HTML) poderão ser executados lado a lado depois que o Microsoft Edge (baseado no Chromium) for instalado.
+Quando essa política é habilitada, Microsoft Edge (baseado em Chromium) e Microsoft Edge (HTML de Borda) podem ser executados lado a lado depois que Microsoft Edge (baseado em Chromium) é instalado.
 
-Para que essa política de grupo entre em vigor, ela deve ser configurada antes da instalação automática do Microsoft Edge (baseado no Chromium) pelo Windows Update. Observação: um usuário pode bloquear a atualização automática do Microsoft Edge (baseado no Chromium) usando o kit de ferramentas do bloqueador do Microsoft Edge (baseado no Chromium).
+Para que essa política de grupo entre em vigor, ela deve ser configurada antes da instalação automática do Microsoft Edge (baseado em Chromium) por Windows Update. Observação: um usuário pode bloquear a atualização automática do Microsoft Edge (baseado no Chromium) usando o kit de ferramentas do bloqueador do Microsoft Edge (baseado no Chromium).
+
+A partir Windows 10 versão 20H2 Versão Prévia do Microsoft Edge e a experiência do navegador lado a lado não têm suporte.
 #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
 ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 - Nome exclusivo da Política de Grupo: Allowsxs
@@ -247,6 +258,7 @@ Para que essa política de grupo entre em vigor, ela deve ser configurada antes 
 0x00000001
 ```
 [Voltar ao início](#microsoft-edge---update-policies)
+
 
 ### <a name="createdesktopshortcutdefault"></a>CreateDesktopShortcutDefault
 #### <a name="prevent-desktop-shortcut-creation-upon-install-default"></a>Impedir a criação de Atalho da Área de Trabalho com a instalação padrão
@@ -368,13 +380,13 @@ Esta política está disponível apenas em instâncias do Windows que fazem part
 #### <a name="description"></a>Descrição
 Quando esta política estiver habilitada e a atualização automática estiver habilitada, o Microsoft Edge será atualizado para a versão especificada por esse valor de política.
 
-O valor da política deve ser uma versão do Microsoft Edge específica, por exemplo, 83.0.499.12.
+O valor da política deve ser uma Microsoft Edge específica, por exemplo, 83.0.499.12.
 
 Se um dispositivo tiver uma versão mais recente do Microsoft Edge do que o valor especificado, a versão mais recente do Microsoft Edge será mantida e ele não será revertido para a versão especificada.
 
 Se a versão especificada não existir ou estiver formatada inadequadamente, o Microsoft Edge permanecerá na versão atual e não será atualizado para versões futuras automaticamente.
 
-Consulte [https://go.microsoft.com/fwlink/?linkid=2136707](https://go.microsoft.com/fwlink/?linkid=2136707) para mais informações.
+Para obter mais informações, consulte [https://go.microsoft.com/fwlink/?linkid=2136707](https://go.microsoft.com/fwlink/?linkid=2136707).
 
 Esta política está disponível apenas em instâncias do Windows que fazem parte de um domínio Microsoft® Active Directory®.
 #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
@@ -401,74 +413,48 @@ Esta política está disponível apenas em instâncias do Windows que fazem part
 ```
 [Voltar ao início](#microsoft-edge---update-policies)
 
-### <a name="targetchanneloverride"></a>TargetChannelOverride
+
+### <a name="targetchannel"></a>TargetChannel
+#### <a name="target-channel-override"></a>Substituição do Canal de Destino
 >Microsoft Edge Update 1.3.147.1 e posterior
 
 #### <a name="description"></a>Descrição
-Especifica para qual canal Microsoft Edge deve ser atualizado. 
+Especifica para qual canal Microsoft Edge deve ser atualizado.
 
-Se você habilitar essa Microsoft Edge, o Microsoft Edge será atualizado para o Canal de acordo com a forma como você configura as seguintes opções:
+Se você habilitar essa política, o Microsoft Edge será atualizado para o Canal de acordo com como você configura as seguintes opções:
 
   - Estável: Microsoft Edge será atualizado para a versão estável mais recente.
   - Beta: Microsoft Edge será atualizado para a versão beta mais recente.
-  - Dev: Microsoft Edge será atualizado para a versão mais recente do dev.
-  - Estável estendido: Microsoft Edge será atualizado para a versão estável estendida mais recente, que segue uma cadência de versão mais longa do que estável. Para obter mais informações, visite https://go.microsoft.com/fwlink/?linkid=2163508 .
+  - Desenvolvimento: Microsoft Edge será atualizado para a versão de desenvolvimento mais recente.
+  - Estável Estendido: Microsoft Edge será atualizado para a versão estável estendida mais recente, que segue uma cadência de versão mais longa do que estável. Para obter mais informações, [visitehttps://go.microsoft.com/fwlink/?linkid=2163508](https://go.microsoft.com/fwlink/?linkid=2163508).
 
-Se você não configurar essa política, Microsoft Edge será atualizado para a versão mais recente disponível para o Canal Estável.
-
-Essa política está disponível somente no Microsoft Edge Estável.
+Se você não configurar essa política, Microsoft Edge será atualizada para a versão mais recente disponível para o Canal padrão.
 
 Esta política está disponível apenas em instâncias do Windows que fazem parte de um domínio Microsoft® Active Directory®.
 #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
 ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
-- Nome exclusivo da GP: TargetChannelOverride
-- Nome da GP: Substituição do Canal de Destino
+- Nome exclusivo da Política de Grupo: TargetChannel
+- Nome da Política de Grupo: Substituição do Canal de Destino
 - Caminho da Política de Grupo: 
   - Modelos Administrativos/Microsoft Edge Update/Aplicativos/Microsoft Edge
+  - Modelos Administrativos/Microsoft Edge Update/Aplicativos/Microsoft Edge Beta
+  - Modelos Administrativos/Microsoft Edge Update/Aplicativos/Microsoft Edge Canary
+  - Modelos Administrativos/Microsoft Edge Update/Aplicativos/Microsoft Edge Dev
 - Nome do arquivo GP ADMX: msedgeupdate.admx
 ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
 - Caminho: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Nome do valor: 
   - (Estável): TargetChannel{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
-- Tipo do valor: REG_SZ
+  - (Beta): TargetChannel{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
+  - (Canário): TargetChannel{65C35B14-6C1D-4122-AC46-7148CC9D6497}
+  - (Desenvolvimento): TargetChannel{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
+- Tipo do Valor: REG_SZ
 ##### <a name="example-value"></a>Valor de exemplo:
 ```
-extended
+dev
 ```
 [Voltar ao início](#microsoft-edge---update-policies)
 
-### <a name="updaterexperimentationandconfigurationservicecontrol"></a>UpdaterExperimentationAndConfigurationServiceControl
-#### <a name="retrieve-configurations-and-experiments"></a>Recuperar configurações e experimentos
->Microsoft Edge Update 1.3.145.1 e posterior
-
-#### <a name="description"></a>Descrição
-No Microsoft Edge Update, o Serviço de Experimentação e Configuração é usado para implantar a carga de experimentação.
-
-A carga de experimentação consiste em uma lista de recursos de desenvolvimento que a Microsoft está habilitando para testar comentários.
-
-Se você habilitar essa política, a carga de experimentação será baixada do Serviço de Experimentação e Configuração.
-
-Se você desabilitar essa política, a comunicação com o Serviço de Experimentação e Configuração será interrompida completamente.
-
-Se você não configurar essa política, em um dispositivo gerenciado, o comportamento será igual ao da política "desabilitada".
-
-Se você não configurar essa política, em um dispositivo não habilitado, o comportamento será igual ao da política "habilitada".
-
-#### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
-##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
-- Nome exclusivo da GP: UpdateExperimentationAndConfigureationServiceControl
-- Nome da Política de Grupo: Comunicação do atualizador de controle com o Serviço de Experimentação e Configuração
-- Caminho da GP: Modelos Administrativos/Microsoftt Edge Update/Microsoft Edge Update
-- Nome do arquivo GP ADMX: msedgeupdate.admx
-##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
-- Caminho: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- Nome do valor: UpdaterExperimentationAndConfigurationServiceControl
-- Tipo de valor: REG_DWORD
-##### <a name="example-value"></a>Valor de exemplo:
-```
-0x00000001
-```
-[Voltar ao início](#microsoft-edge---update-policies)
 
 ## <a name="preferences-policies"></a>Políticas de preferências
 
@@ -478,9 +464,11 @@ Se você não configurar essa política, em um dispositivo não habilitado, o co
 >Microsoft Edge Update 1.2.145.5 e posterior
 
 #### <a name="description"></a>Descrição
-Se habilitada, essa política permite definir um valor para o número mínimo de minutos entre as verificações de atualização automática. Caso contrário, por padrão, a verificação de atualização automática verifica se há as atualizações a cada 10 horas.
+Número mínimo de minutos entre as verificações de atualização automática.
 
-  Se você quiser desabilitar todas as verificações de atualização automática, defina o valor como 0 (não recomendado).
+Defina essa política como o valor 0 para desabilitar todo o tráfego de rede periódico Microsoft Edge Update. Isso não é recomendado, pois impede que Microsoft Edge Update receba atualizações de estabilidade e segurança.
+
+As configurações "Atualizar padrão de substituição de política" e "Atualizar substituição de política" por aplicativo devem ser usadas para gerenciar atualizações de aplicativo em vez dessa configuração.
 #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
 ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 - Nome exclusivo da Política de Grupo: AutoUpdateCheckPeriodMinutes
@@ -503,7 +491,7 @@ Se habilitada, essa política permite definir um valor para o número mínimo de
 >Microsoft Edge Update 1.3.33.5 e posterior
 
 #### <a name="description"></a>Descrição
-Se você habilitar essa política, as verificações de atualização serão suprimidas por dia a partir de Hora:Minuto por um período de duração (em minutos). A duração não é afetada pelo horário de verão. Por exemplo, se o horário de início for 22:00 e a duração for de 480 minutos, as atualizações serão suprimidas por exatamente oito horas, independentemente do horário de verão começar ou terminar durante esse período.
+Se você habilitar essa política, as verificações de atualização serão suprimidas a cada dia, começando em Hora:Minuto para Duração (em minutos). A duração não é afetada pelo horário de verão. Por exemplo, se o horário de início for 22:00 e a duração for de 480 minutos, as atualizações serão suprimidas por exatamente oito horas, independentemente do horário de verão começar ou terminar durante esse período.
 
   Se você desabilitar ou não configurar essa política, as verificações de atualização não serão suprimidas durante nenhum período específico.
 #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
@@ -528,11 +516,12 @@ start min  : 0x00000002
 ```
 [Voltar ao início](#microsoft-edge---update-policies)
 
+
 ## <a name="proxy-server-policies"></a>Políticas do servidor proxy
 
 [Voltar ao início](#microsoft-edge---update-policies)
 ### <a name="proxymode"></a>ProxyMode
-#### <a name="choose-how-to-specify-proxy-server-settings"></a>Escolher como especificar as configurações do servidor proxy
+#### <a name="choose-how-to-specify-a-proxy-server-setting"></a>Escolha como especificar uma configuração de servidor proxy
 >Microsoft Edge Update 1.3.21.81 e posterior
 
 #### <a name="description"></a>Descrição
@@ -540,9 +529,9 @@ Permite especificar as configurações do servidor proxy que serão usadas pelo 
 
   Se você habilitar essa configuração da política, poderá escolher entre as seguintes opções do servidor proxy:
    - Se você optar por nunca usar um servidor proxy e sempre se conectar diretamente, todas as outras opções serão ignoradas.
-   - Se você optar por usar as configurações de proxy do sistema ou detectar automaticamente o servidor proxy, todas as outras opções serão ignoradas.
-   - Se escolher o modo fixo do servidor proxy, você poderá especificar mais opções em '[Endereço ou URL do servidor proxy](#proxyserver)'.
-   - Se você optar por usar um script de proxy .pac, deve especificar a URL do script em '[De URL para um arquivo .pac de proxy](#proxypacurl)'.
+   - Se você optar por usar as configurações de proxy do sistema ou detete automaticamente o servidor proxy, todas as outras opções serão ignoradas.
+   - Se você escolher o modo proxy de servidor fixo, poderá especificar outras opções na política '[Endereço ou URL de um servidor proxy](#proxyserver)'.
+   - Se você optar por usar um script de proxy .pac, deverá especificar a URL do script na política '[URL para o arquivo .pac do proxy](#proxypacurl)'.
 
   Se você habilitar essa política, os usuários de sua organização não poderão alterar as configurações de proxy no Microsoft Edge Update.
 
@@ -550,7 +539,7 @@ Permite especificar as configurações do servidor proxy que serão usadas pelo 
 #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
 ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 - Nome exclusivo da Política de Grupo: ProxyMode
-- Nome da Política de Grupo: Escolher como especificar as configurações do servidor proxy
+- Nome da Política de Grupo: escolha como especificar uma configuração de servidor proxy
 - Caminho da Política de Grupo: Modelos Administrativos/Microsoft Edge Update/Servidor Proxy
 - Nome do arquivo GP ADMX: msedgeupdate.admx
 ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
@@ -565,7 +554,7 @@ fixed_servers
 
 
 ### <a name="proxypacurl"></a>ProxyPacUrl
-#### <a name="url-to-a-proxy-pac-file"></a>A URL para um arquivo .pac de proxy
+#### <a name="url-to-proxy-pac-file"></a>URL para o arquivo .pac de proxy
 >Microsoft Edge Update 1.3.21.81 e posterior
 
 #### <a name="description"></a>Descrição
@@ -573,13 +562,13 @@ Permite especificar uma URL para um arquivo (PAC) de configuração automática 
 
   Se habilitar essa política, você poderá especificar uma URL de um arquivo PAC para automatizar a maneira como o Microsoft Edge Update seleciona para a busca de um site específico.
 
-  Essa política será aplicada somente se você especificou as configurações de proxy manuais na política '[Escolher como especificar configurações do servidor proxy](#proxymode)'.
+  Esta política é aplicada somente se você tiver especificado configurações manuais de proxy na política '[Escolha como especificar as configurações de um servidor proxy](#proxymode)'.
 
-  Não configure essa política se você selecionou uma configuração de proxy que não seja manual na política '[Escolher como especificar as configurações do servidor proxy](#proxymode)'.
+  Não configure esta política se você tiver selecionado uma configuração de proxy diferente de manual na política '[Escolha como especificar as configurações de um servidor proxy](#proxymode)'.
 #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
 ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 - Nome exclusivo da Política de Grupo: ProxyPacUrl
-- Nome da Política de Grupo: A URL para um arquivo .pac de proxy
+- Nome da Política de Grupo: URL para o arquivo .pac do proxy
 - Caminho da Política de Grupo: Modelos Administrativos/Microsoft Edge Update/Servidor Proxy
 - Nome do arquivo GP ADMX: msedgeupdate.admx
 ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
@@ -594,7 +583,7 @@ https://www.microsoft.com
 
 
 ### <a name="proxyserver"></a>ProxyServer
-#### <a name="address-or-url-of-proxy-server"></a>Endereço ou URL do servidor proxy
+#### <a name="address-or-url-of-a-proxy-server"></a>Endereço ou URL de um servidor proxy
 >Microsoft Edge Update 1.3.21.81 e posterior
 
 #### <a name="description"></a>Description
@@ -602,13 +591,13 @@ Permite especificar a URL do servidor proxy para o Microsoft Edge Update usar.
 
   Se você habilitar essa política, poderá configurar a URL do servidor proxy usada pelo Microsoft Edge Update em sua organização.
 
-  Essa política será aplicada somente se você selecionou as configurações de proxy manuais na política '[Escolher como especificar as configurações do servidor proxy](#proxymode)'.
+  Esta política é aplicada somente se você tiver selecionado as configurações de proxy manuais na política '[Escolha como especificar as configurações de um servidor proxy](#proxymode)'.
 
-  Não configure essa política se você selecionou uma configuração de proxy que não seja manual na política '[Escolher como especificar as configurações do servidor proxy](#proxymode)'.
+  Não configure esta política se você tiver selecionado uma configuração de proxy diferente de manual na política '[Escolha como especificar as configurações de um servidor proxy](#proxymode)'.
 #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
 ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 - Nome exclusivo da Política de Grupo: ProxyServer
-- Nome da Política de Grupo: O endereço ou a URL do servidor proxy
+- Nome da Política de Grupo: Endereço ou URL de um servidor proxy
 - Caminho da Política de Grupo: Modelos Administrativos/Microsoft Edge Update/Servidor Proxy
 - Nome do arquivo GP ADMX: msedgeupdate.admx
 ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
@@ -618,6 +607,42 @@ Permite especificar a URL do servidor proxy para o Microsoft Edge Update usar.
 ##### <a name="example-value"></a>Valor de exemplo:
 ```
 https://www.microsoft.com
+```
+[Voltar ao início](#microsoft-edge---update-policies)
+
+
+## <a name="microsoft-edge-update-policies"></a>Microsoft Edge Update políticas
+
+[Voltar ao início](#microsoft-edge---update-policies)
+### <a name="updaterexperimentationandconfigurationservicecontrol"></a>UpdaterExperimentationAndConfigurationServiceControl
+#### <a name="control-updaters-communication-with-the-experimentation-and-configuration-service"></a>Controlar a comunicação do atualizador com o Serviço de Experimentação e Configuração
+>Microsoft Edge Update 1.3.145.1 e posterior
+
+#### <a name="description"></a>Descrição
+No Microsoft Edge Update, o Serviço de Experimentação e Configuração é usado para implantar a carga de experimentação.
+
+O conteúdo de experimentação consiste em uma lista dos recursos em desenvolvimento inicial que a Microsoft está disponibilizando para testes e comentários.
+
+Se você habilitar essa política, a carga de experimentação será baixada do Serviço de Experimentação e Configuração.
+
+Se você desabilitar essa política, a comunicação com o Serviço de Experimentação e Configuração será interrompida completamente.
+
+Se você não configurar essa política, em um dispositivo gerenciado, o comportamento será o mesmo da política 'desabilitada'.
+
+Se você não configurar essa política, em um dispositivo não gerenciado, o comportamento será o mesmo da política 'habilitada'.
+#### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+- Nome exclusivo da Política de Grupo: UpdaterExperimentationAndConfigurationServiceControl
+- Nome da Política de Grupo: Controlar a comunicação do atualizador com o Serviço de Experimentação e Configuração
+- Caminho da Política de Grupo: Modelos Administrativos/Microsoft Edge Update/Microsoft Edge Update
+- Nome do arquivo GP ADMX: msedgeupdate.admx
+##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+- Caminho: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Nome do valor: UpdaterExperimentationAndConfigurationServiceControl
+- Tipo de valor: REG_DWORD
+##### <a name="example-value"></a>Valor de exemplo:
+```
+0x00000001
 ```
 [Voltar ao início](#microsoft-edge---update-policies)
 
@@ -683,7 +708,6 @@ As atualizações automáticas estão habilitadas por padrão. Desabilitar as at
 ```
 [Voltar ao início](#microsoft-edge---update-policies)
 
-
 ## <a name="see-also"></a>Consulte também
-  - [Configurar o Microsoft Edge](configure-microsoft-edge.md)
+  - [Configurar o Microsoft Edge](./configure-microsoft-edge.md)
   - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
