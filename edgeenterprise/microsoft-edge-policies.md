@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/04/2021
+ms.date: 01/12/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: dfffb6935c8452ff1e9c9d4767d7ccbbd1c63af3
-ms.sourcegitcommit: 3e155a4395ae3a2ae478eb4b52c436b1c1f2e5db
+ms.openlocfilehash: b07ee963705e94d0d19b0694ff3452b0489df9e2
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "12155235"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12297689"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -31,18 +31,19 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 
 ## <a name="new-policies"></a>Novas políticas
 
-As seguintes políticas foram adicionadas a esta atualização da documentação.
+As novas políticas a seguir estão nesta atualização de documentação.
 
 | Nome da política | Legenda |
-|--|--|
-|[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|O recurso "Obter descrições de imagem da Microsoft" foi habilitado|
-|[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Aprimorar imagens habilitado|
+|----|----|
+|[AddressBarEditingEnabled](#addressbareditingenabled)|Configurar a edição da barra de endereços|
+|[EnhanceSecurityMode](#enhancesecuritymode)|Aprimorar o estado de segurança no Microsoft Edge|
+|[EnhanceSecurityModeBypassListDomains](#enhancesecuritymodebypasslistdomains)|Configurar a lista de domínios para os quais o modo de segurança aprimorada não será imposto|
+|[EnhanceSecurityModeEnforceListDomains](#enhancesecuritymodeenforcelistdomains)|Configurar a lista de domínios para os quais o modo de segurança aprimorado sempre será imposto|
 
 ## <a name="available-policies"></a>Políticas disponíveis
 
 Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disponíveis nesta versão do Microsoft Edge. Use os links na tabela a seguir para obter mais detalhes sobre políticas específicas.
 
-- [Permitir ou negar captura de tela](#allow-or-deny-screen-capture)
 - [Configurações do Application Guard](#application-guard-settings)
 - [Cast](#cast)
 - [Configurações de conteúdo](#content-settings)
@@ -56,6 +57,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 - [Sistema de mensagens nativo](#native-messaging)
 - [Gerenciador de senhas e proteção](#password-manager-and-protection)
 - [Desempenho](#performance)
+- [Permitir ou negar capturas de tela](#permit-or-deny-screen-capture)
 - [Impressão](#printing)
 - [Configurações de solicitação de rede privada](#private-network-request-settings)
 - [Servidor proxy](#proxy-server)
@@ -66,11 +68,6 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 - [Adicional](#additional)
 
 
-### [*<a name="allow-or-deny-screen-capture"></a>Permitir ou negar captura de tela*](#allow-or-deny-screen-capture-policies)
-
-|Nome da política|Legenda|
-|-|-|
-|[ScreenCaptureAllowed](#screencaptureallowed)|Permitir ou negar captura de tela|
 ### [*<a name="application-guard-settings"></a>Configurações do Application Guard*](#application-guard-settings-policies)
 
 |Nome da política|Legenda|
@@ -129,6 +126,8 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[PopupsAllowedForUrls](#popupsallowedforurls)|Permitir janelas pop-up em sites específicos|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|Bloquear janelas pop-up em sites específicos|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|Registrar manipuladores de protocolo|
+|[SerialAllowAllPortsForUrls](#serialallowallportsforurls)|Conceder permissão aos sites automaticamente para conectar todas as portas seriais|
+|[SerialAllowUsbDevicesForUrls](#serialallowusbdevicesforurls)|Conceder permissão aos sites automaticamente para se conectar a dispositivos seriais USB|
 |[ShowPDFDefaultRecommendationsEnabled](#showpdfdefaultrecommendationsenabled)|Permitir que as notificações definam o Microsoft Edge como leitor de PDF padrão|
 |[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Escolher se os usuários podem receber imagens de plano de fundo, textos, sugestões, notificações e dicas personalizados para serviços Microsoft|
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|Conceder acesso a sites específicos para conectar-se a dispositivos USB específicos|
@@ -220,6 +219,14 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |-|-|
 |[EfficiencyMode](#efficiencymode)|Configurar quando o modo de eficiência deve ficar ativo|
 |[StartupBoostEnabled](#startupboostenabled)|Habilitar início rápido|
+### [*<a name="permit-or-deny-screen-capture"></a>Permitir ou negar capturas de tela*](#permit-or-deny-screen-capture-policies)
+
+|Nome da política|Legenda|
+|-|-|
+|[SameOriginTabCaptureAllowedByOrigins](#sameorigintabcaptureallowedbyorigins)|Permitir a captura de Guia de mesma origem por essas origens|
+|[ScreenCaptureAllowedByOrigins](#screencaptureallowedbyorigins)|Permitir a captura de Área de Trabalho, Janela e Guia por essas origens|
+|[TabCaptureAllowedByOrigins](#tabcaptureallowedbyorigins)|Permitir a captura de Guia por essas origens|
+|[WindowCaptureAllowedByOrigins](#windowcaptureallowedbyorigins)|Permitir a captura de Janela e Guia por essas origens|
 ### [*<a name="printing"></a>Impressão*](#printing-policies)
 
 |Nome da política|Legenda|
@@ -230,6 +237,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Definir a impressora padrão do sistema como impressora padrão|
 |[PrintRasterizationMode](#printrasterizationmode)|Modo de Rasterização de Impressão|
 |[PrintRasterizePdfDpi](#printrasterizepdfdpi)|Imprimir DPI de PDF de Rasterização|
+|[PrintStickySettings](#printstickysettings)|Imprimir configurações autoadesivas de visualização|
 |[PrinterTypeDenyList](#printertypedenylist)|Desabilitar tipos de impressora na lista de negação|
 |[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)|Restringir o modo de impressão de elementos gráficos de plano de fundo|
 |[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)|Modo padrão de impressão de elementos gráficos de plano de fundo|
@@ -267,10 +275,11 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[PreventSmartScreenPromptOverride](#preventsmartscreenpromptoverride)|Evitar ignorar os avisos do Microsoft Defender SmartScreen para sites|
 |[PreventSmartScreenPromptOverrideForFiles](#preventsmartscreenpromptoverrideforfiles)|Impedir que os avisos do Microsoft Defender SmartScreen sobre download sejam ignorados|
 |[SmartScreenAllowListDomains](#smartscreenallowlistdomains)|Configurar a lista de domínios para os quais o Microsoft Defender SmartScreen não desencadeará avisos|
+|[SmartScreenDnsRequestsEnabled](#smartscreendnsrequestsenabled)|Habilitar as solicitações DNS do Microsoft Defender SmartScreen|
 |[SmartScreenEnabled](#smartscreenenabled)|Configurar o Microsoft Defender SmartScreen|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Forçar o Microsoft Defender SmartScreen verifica downloads de fontes confiáveis|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Configura o Microsoft Defender SmartScreen para bloquear aplicativos potencialmente indesejados.|
-### [*<a name="startup-home-page-and-new-tab-page"></a>Página de inicialização&comma; página inicial e nova guia*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Página de inicialização&comma; página inicial e nova guia*](#startup-home-page-and-new-tab-page-policies)
 
 |Nome da política|Legenda|
 |-|-|
@@ -298,7 +307,8 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |Nome da política|Legenda|
 |-|-|
 |[AADWebSiteSSOUsingThisProfileEnabled](#aadwebsitessousingthisprofileenabled)|Login único para sites corporativos ou de estudante usando este perfil habilitado|
-|[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|O recurso "Obter descrições de imagem da Microsoft" foi habilitado|
+|[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|Permitir que você obtenha descrições de imagem da Microsoft|
+|[AddressBarEditingEnabled](#addressbareditingenabled)|Configurar a edição da barra de endereços|
 |[AddressBarMicrosoftSearchInBingProviderEnabled](#addressbarmicrosoftsearchinbingproviderenabled)|Habilitar a Pesquisa da Microsoft em sugestões do Bing na barra de endereços|
 |[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|Configuração Ads para sites com publicidade invasiva|
 |[AllowDeletingBrowserHistory](#allowdeletingbrowserhistory)|Habilitar a exclusão do navegador e baixar o histórico|
@@ -340,6 +350,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[BuiltInDnsClientEnabled](#builtindnsclientenabled)|Usar o cliente DNS interno|
 |[BuiltinCertificateVerifierEnabled](#builtincertificateverifierenabled)|Determina se o verificador interno de certificado será usado para verificar certificados do servidor (preterido)|
 |[CECPQ2Enabled](#cecpq2enabled)|Acordo de chaves pós-quantum CECPQ2 habilitado para TLS|
+|[CORSNonWildcardRequestHeadersSupport](#corsnonwildcardrequestheaderssupport)|Suporte ao cabeçalho de solicitação CORS não curinga habilitado (preterido)|
 |[CertificateTransparencyEnforcementDisabledForCas](#certificatetransparencyenforcementdisabledforcas)|Desabilitar a imposição da transparência do certificado para obter uma lista de hashes subjectPublicKeyInfo|
 |[CertificateTransparencyEnforcementDisabledForLegacyCas](#certificatetransparencyenforcementdisabledforlegacycas)|Desabilitar a imposição da transparência do certificado para uma lista de autoridades de certificação herdadas|
 |[CertificateTransparencyEnforcementDisabledForUrls](#certificatetransparencyenforcementdisabledforurls)|Desabilitar a imposição da transparência do certificado para URLs específicas|
@@ -378,13 +389,18 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[DownloadDirectory](#downloaddirectory)|Configurar o diretório de download|
 |[DownloadRestrictions](#downloadrestrictions)|Permitir restrições de download|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Habilitar o recurso Coleções|
+|[EdgeDiscoverEnabled](#edgediscoverenabled)|Recurso Descobrir no Microsoft Edge|
 |[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Aprimorar imagens habilitado|
+|[EdgeFollowEnabled](#edgefollowenabled)|Ativar o serviço Seguir no Microsoft Edge|
 |[EdgeShoppingAssistantEnabled](#edgeshoppingassistantenabled)|Comprar no Microsoft Edge habilitado|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Permite que os usuários editem favoritos|
 |[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time (obsolete)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Habilitar ações de domínio para download da Microsoft (obsoleta)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Habilitar verificações OCSP/CRL online|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Permitir certificados assinados usando SHA-1 quando emitidos por âncoras de confiança locais (obsoleto)|
+|[EnhanceSecurityMode](#enhancesecuritymode)|Aprimorar o estado de segurança no Microsoft Edge|
+|[EnhanceSecurityModeBypassListDomains](#enhancesecuritymodebypasslistdomains)|Configurar a lista de domínios para os quais o modo de segurança aprimorada não será imposto|
+|[EnhanceSecurityModeEnforceListDomains](#enhancesecuritymodeenforcelistdomains)|Configurar a lista de domínios para os quais o modo de segurança aprimorado sempre será imposto|
 |[EnterpriseHardwarePlatformAPIEnabled](#enterprisehardwareplatformapienabled)|Permitir que as extensões gerenciadas usem a API de plataforma de hardware empresarial|
 |[EnterpriseModeSiteListManagerAllowed](#enterprisemodesitelistmanagerallowed)|Permitir o acesso à ferramenta Enterprise Mode Site List Manager|
 |[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Desabilitar o download de avisos com base na extensão de tipo de arquivo para tipos de arquivo especificados em domínios|
@@ -424,6 +440,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[ImportSearchEngine](#importsearchengine)|Permitir a importação das configurações do mecanismo de pesquisa|
 |[ImportShortcuts](#importshortcuts)|Permitir a importação de atalhos|
 |[ImportStartupPageSettings](#importstartuppagesettings)|Permitir a importação das configurações da página de inicialização|
+|[InAppSupportEnabled](#inappsupportenabled)|Suporte no aplicativo Habilitado|
 |[InPrivateModeAvailability](#inprivatemodeavailability)|Configurar a disponibilidade do modo InPrivate|
 |[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Habilitar avisos para formulários inseguros|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Controlar o recurso IntensiveWakeUpThrottling|
@@ -442,6 +459,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Permitir Internet Explorer modo de teste (obsoleto)|
 |[InternetExplorerIntegrationWindowOpenHeightAdjustment](#internetexplorerintegrationwindowopenheightadjustment)|Configurar o ajuste de pixel entre as alturas do window.open originadas das páginas do modo IE vs. páginas do modo Edge|
 |[InternetExplorerIntegrationWindowOpenWidthAdjustment](#internetexplorerintegrationwindowopenwidthadjustment)|Configurar o ajuste de pixel entre as larguras do window.open originadas das páginas do modo IE vs. páginas do modo Edge|
+|[InternetExplorerModeTabInEdgeModeAllowed](#internetexplorermodetabinedgemodeallowed)|Permitir que sites configurados para o modo Internet Explorer abram no Microsoft Edge|
 |[InternetExplorerModeToolbarButtonEnabled](#internetexplorermodetoolbarbuttonenabled)|Mostrar o botão Recarregar no modo Internet Explorer na barra de ferramentas|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Comportamento de redirecionamento da intranet|
 |[IsolateOrigins](#isolateorigins)|Habilitar o isolamento de sites para determinadas origens|
@@ -456,6 +474,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|Número máximo de conexões simultâneas com o servidor proxy|
 |[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|Permitir que o Google Cast se conecte a dispositivos de conversão em todos os endereços IP|
 |[MetricsReportingEnabled](#metricsreportingenabled)|Ativar relatórios de dados relacionados a falhas e uso (obsoleto)|
+|[MicrosoftEdgeInsiderPromotionEnabled](#microsoftedgeinsiderpromotionenabled)|Promoção do Microsoft Edge Insider Habilitada|
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Habilitar Oclusão de Janela Nativa (preterida)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Definir um tempo limite para o atraso da navegação da guia para a lista de sites do Modo Empresarial|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Habilitar a previsão de rede|
@@ -479,15 +498,17 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[RendererCodeIntegrityEnabled](#renderercodeintegrityenabled)|Habilitar integridade de código de renderizador|
 |[RequireOnlineRevocationChecksForLocalAnchors](#requireonlinerevocationchecksforlocalanchors)|Especificar se serão necessárias verificações OCSP/CRL online para âncoras de confiança locais|
 |[ResolveNavigationErrorsUseWebService](#resolvenavigationerrorsusewebservice)|Habilitar a resolução de erros de navegação usando um serviço Web|
-|[RestrictSigninToPattern](#restrictsignintopattern)|Restringir quais contas podem ser usadas como contas principais do Microsoft Edge|
+|[RestrictSigninToPattern](#restrictsignintopattern)|Restringir quais contas podem ser usadas para entrar no Microsoft Edge|
 |[RoamingProfileLocation](#roamingprofilelocation)|Configurar o diretório de perfil móvel|
 |[RoamingProfileSupportEnabled](#roamingprofilesupportenabled)|Habilitar o uso de cópias de roaming para dados de perfil do Microsoft Edge|
 |[RunAllFlashInAllowMode](#runallflashinallowmode)|Estender a configuração de conteúdo do Adobe Flash para todo o conteúdo (obsoleta)|
 |[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Permitir que os usuários continuem a partir da página de aviso de HTTPS|
 |[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|Permitir que os usuários prossigam na página de aviso HTTPS para origens específicas|
-|[SSLVersionMin](#sslversionmin)|Versão mínima de TLS habilitada (obsoleta)|
+|[SSLVersionMin](#sslversionmin)|Versão mínima do TLS habilitada|
+|[SandboxExternalProtocolBlocked](#sandboxexternalprotocolblocked)|Permitir que o Microsoft Edge bloqueie as navegação para protocolos externos em um iframe em área restrita|
 |[SaveCookiesOnExit](#savecookiesonexit)|Salvar os cookies ao fechar o Microsoft Edge|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|Desabilitar o salvamento do histórico do navegador|
+|[ScreenCaptureAllowed](#screencaptureallowed)|Permitir ou negar captura de tela|
 |[ScrollToTextFragmentEnabled](#scrolltotextfragmentenabled)|Ativar a rolagem para o texto especificado nos fragmentos de URL.|
 |[SearchSuggestEnabled](#searchsuggestenabled)|Permitir sugestões de pesquisa|
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Sites ou domínios que não precisam de permissão para usar o atestado de chave de segurança direta|
@@ -524,6 +545,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[TranslateEnabled](#translateenabled)|Habilitar Tradução|
 |[TravelAssistanceEnabled](#travelassistanceenabled)|Habilitar assistência de viagem|
 |[TripleDESEnabled](#tripledesenabled)|Habilitar pacotes de codificação 3DES no TLS|
+|[U2fSecurityKeyApiEnabled](#u2fsecuritykeyapienabled)|Permitir o uso da API de Chave de Segurança U2F preterida (preterido)|
 |[URLAllowlist](#urlallowlist)|Definir uma lista de URLs permitidas|
 |[URLBlocklist](#urlblocklist)|Bloquear o acesso a uma lista de URLs|
 |[UpdatePolicyOverride](#updatepolicyoverride)|Especifica como o Microsoft Edge Update lida com as atualizações disponíveis do Microsoft Edge|
@@ -545,76 +567,14 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restringir a exposição de endereço IP local por WebRTC|
 |[WebRtcRespectOsRoutingTableEnabled](#webrtcrespectosroutingtableenabled)|Habilitar o suporte para regras de tabela de roteamento do sistema operacional Windows ao fazer conexões ponto a ponto via WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restringir o intervalo de portas UDP locais usado por WebRTC|
+|[WebSQLInThirdPartyContextEnabled](#websqlinthirdpartycontextenabled)|Forçar a reativação do WebSQL em contextos de terceiros (preterido)|
 |[WebWidgetAllowed](#webwidgetallowed)|Habilitar a barra do Microsoft Edge|
 |[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Permitir a barra do Microsoft Edge na inicialização do Windows|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Usar o solucionador de proxy do Windows (preterida)|
-|[WindowOcclusionEnabled](#windowocclusionenabled)|Habilitar Oclusão de janela|
+|[WindowOcclusionEnabled](#windowocclusionenabled)|Habilitar Oclusão de Janela|
 
 
 
-
-  ## <a name="allow-or-deny-screen-capture-policies"></a>Permitir ou negar políticas de captura de tela
-
-  [Voltar ao início](#microsoft-edge---policies)
-
-  ### <a name="screencaptureallowed"></a>ScreenCaptureAllowed
-
-  #### <a name="allow-or-deny-screen-capture"></a>Permitir ou negar captura de tela
-
-  
-  
-  #### <a name="supported-versions"></a>Versões com suporte:
-
-  - No Windows e no macOS desde 83 ou mais recente
-
-  #### <a name="description"></a>Descrição
-
-  Se você habilitar essa política ou não configurar essa política, uma página da Web poderá usar APIs de compartilhamento de tela (por exemplo, getDisplayMedia () ou a API da extensão de captura da área de trabalho) para uma captura de tela.
-Se você desabilitar essa política, as chamadas a APIs de compartilhamento de tela falharão. Por exemplo, se você estiver usando uma reunião online baseada na Web, o vídeo ou o compartilhamento de tela não funcionarão.
-
-  #### <a name="supported-features"></a>Recursos compatíveis:
-
-  - Pode ser obrigatório: Sim
-  - Pode ser recomendável: não
-  - Atualização dinâmica das políticas: Sim
-
-  #### <a name="data-type"></a>Tipo de dados:
-
-  - Booliano
-
-  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
-
-  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
-
-  - Nome Exclusivo da Política de Grupo: ScreenCaptureAllowed
-  - Nome da Política de Grupo: Permitir ou negar captura de tela
-  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/Permitir ou negar captura de tela
-  - Caminho da Política de Grupo (recomendado): N/A
-  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
-
-  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
-
-  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
-  - Caminho (recomendado): N/A
-  - Nome do valor: ScreenCaptureAllowed
-  - Tipo de valor: REG_DWORD
-
-  ##### <a name="example-value"></a>Valor de exemplo:
-
-```
-0x00000000
-```
-
-  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
-  
-  - Nome da chave de preferência: ScreenCaptureAllowed
-  - Valor de exemplo:
-``` xml
-<false/>
-```
-  
-
-  [Voltar ao início](#microsoft-edge---policies)
 
   ## <a name="application-guard-settings-policies"></a>Políticas de configurações do Application Guard
 
@@ -3388,7 +3348,7 @@ Se você não definir essa política, o valor padrão global será utilizado par
 
   - Nome exclusivo da Política de Grupo: NotificationsBlockedForUrls
   - Nome da Política de Grupo: Bloquear notificações em sites específicos
-  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/configurações do conteúdo
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Content settings
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -3770,6 +3730,196 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
     <string>mailto</string>
     <key>url</key>
     <string>https://mail.contoso.com/mail/?extsrc=mailto&url=%s</string>
+  </dict>
+</array>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="serialallowallportsforurls"></a>SerialAllowAllPortsForUrls
+
+  #### <a name="automatically-grant-sites-permission-to-connect-all-serial-ports"></a>Conceder permissão aos sites automaticamente para conectar todas as portas seriais
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e macOS desde 97 ou mais recente
+
+  #### <a name="description"></a>Descrição
+
+  Definir a política permite listar sites que recebem automaticamente permissão para acessar todas as portas seriais disponíveis.
+
+As URLs devem ser válidas ou a política é ignorada. Somente a origem (esquema, host e porta) da URL é considerada.
+
+Essa política substitui [DefaultSerialGuardSetting](#defaultserialguardsetting), [SerialAskForUrls](#serialaskforurls), [SerialBlockedForUrls](#serialblockedforurls) e as preferências do usuário.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Lista de cadeias de caracteres
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: SerialAllowAllPortsForUrls
+  - Nome da Política de Grupo: conceder automaticamente permissão aos sites para conectar todas as portas seriais
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/Configurações de conteúdo
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (Obrigatório): SOFTWARE\Policies\Microsoft\Edge\SerialAllowAllPortsForUrls
+  - Caminho (recomendado): N/A
+  - Nome do valor: 1, 2, 3, ...
+  - Tipo de valor: lista de REG_SZ
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SerialAllowAllPortsForUrls\1 = "https://www.example.com"
+
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: SerialAllowAllPortsForUrls
+  - Valor de exemplo:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+</array>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="serialallowusbdevicesforurls"></a>SerialAllowUsbDevicesForUrls
+
+  #### <a name="automatically-grant-sites-permission-to-connect-to-usb-serial-devices"></a>Conceder permissão aos sites automaticamente para se conectar a dispositivos seriais USB
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e macOS desde 97 ou mais recente
+
+  #### <a name="description"></a>Descrição
+
+  Definir a política permite listar sites que recebem automaticamente permissão para acessar dispositivos seriais USB com IDs de fornecedor e produto que correspondem aos campos vendor_id e product_id dados.
+
+Opcionalmente, você pode omitir o campo product_id. Isso permite o acesso ao site a todos os dispositivos do fornecedor.  Ao fornecer uma ID de produto, você concede ao site acesso a um dispositivo específico do fornecedor, mas não a todos os dispositivos.
+
+As URLs devem ser válidas ou a política é ignorada. Somente a origem (esquema, host e porta) da URL é considerada.
+
+Essa política substitui [DefaultSerialGuardSetting](#defaultserialguardsetting), [SerialAskForUrls](#serialaskforurls), [SerialBlockedForUrls](#serialblockedforurls) e as preferências do usuário.
+
+Essa política afeta apenas o acesso a dispositivos USB por meio da API Serial da Web. Para conceder acesso a dispositivos USB por meio da API WebUSB, consulte a política [WebUsbAllowDevicesForUrls](#webusballowdevicesforurls).
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Dictionary
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: SerialAllowUsbDevicesForUrls
+  - Nome da Política de Grupo: Conceder automaticamente permissão aos sites para se conectar a dispositivos seriais USB
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/Configurações de conteúdo
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: SerialAllowUsbDevicesForUrls
+  - Tipo do valor: REG_SZ
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SerialAllowUsbDevicesForUrls = [
+  {
+    "devices": [
+      {
+        "product_id": 5678,
+        "vendor_id": 1234
+      }
+    ],
+    "urls": [
+      "https://specific-device.example.com"
+    ]
+  },
+  {
+    "devices": [
+      {
+        "vendor_id": 1234
+      }
+    ],
+    "urls": [
+      "https://all-vendor-devices.example.com"
+    ]
+  }
+]
+```
+
+  ##### <a name="compact-example-value"></a>Valor do exemplo de compactação:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\SerialAllowUsbDevicesForUrls = [{"devices": [{"product_id": 5678, "vendor_id": 1234}], "urls": ["https://specific-device.example.com"]}, {"devices": [{"vendor_id": 1234}], "urls": ["https://all-vendor-devices.example.com"]}]
+  ```
+  
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: SerialAllowUsbDevicesForUrls
+  - Valor de exemplo:
+``` xml
+<key>SerialAllowUsbDevicesForUrls</key>
+<array>
+  <dict>
+    <key>devices</key>
+    <array>
+      <dict>
+        <key>product_id</key>
+        <integer>5678</integer>
+        <key>vendor_id</key>
+        <integer>1234</integer>
+      </dict>
+    </array>
+    <key>urls</key>
+    <array>
+      <string>https://specific-device.example.com</string>
+    </array>
+  </dict>
+  <dict>
+    <key>devices</key>
+    <array>
+      <dict>
+        <key>vendor_id</key>
+        <integer>1234</integer>
+      </dict>
+    </array>
+    <key>urls</key>
+    <array>
+      <string>https://all-vendor-devices.example.com</string>
+    </array>
   </dict>
 </array>
 ```
@@ -6721,13 +6871,11 @@ Se você desabilitar essa política, os usuários não verão mais sugestões de
 
   #### <a name="description"></a>Descrição
 
-  Habilitar o Microsoft Edge para salvar senhas do usuário.
+  Habilitar o Microsoft Edge para salvar senhas do usuário. Na próxima vez que um usuário visitar um site com uma senha salva, Microsoft Edge inserirá a senha automaticamente.
 
-Se você habilitar essa política, os usuários poderão salvar suas senhas no Microsoft Edge. Na próxima vez que visitar o site, o Microsoft Edge inserirá a senha automaticamente.
+Se você habilitar ou não configurar essa política, os usuários poderão salvar e adicionar suas senhas Microsoft Edge.
 
-Se você desabilitar essa política, os usuários não poderão salvar novas senhas, mas ainda poderão usar senhas salvas anteriormente.
-
-Se você habilitar ou desabilitar essa política, os usuários não podem alterá-la ou substituí-la no Microsoft Edge. Se você não configurá-lo, os usuários poderão salvar senhas, além de desativar esse recurso.
+Se você desabilitar essa política, os usuários não poderão salvar e adicionar novas senhas, mas ainda poderão usar senhas salvas anteriormente.
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -7348,6 +7496,292 @@ Saiba mais sobre o início rápido: [https://go.microsoft.com/fwlink/?linkid=214
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ## <a name="permit-or-deny-screen-capture-policies"></a>Permitir ou negar políticas de captura de tela
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="sameorigintabcaptureallowedbyorigins"></a>SameOriginTabCaptureAllowedByOrigins
+
+  #### <a name="allow-same-origin-tab-capture-by-these-origins"></a>Permitir a captura de Guia de mesma origem por essas origens
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e macOS desde 97 ou mais recente
+
+  #### <a name="description"></a>Descrição
+
+  Definir a política permite definir uma lista de padrões de URL que podem capturar guias com a mesma Origem.
+
+Deixar a política desmarcada significa que os sites não serão considerados para uma substituição nesse escopo de captura.
+
+Se um site corresponder a um padrão de URL nesta política, as seguintes políticas não serão consideradas: [TabCaptureAllowedByOrigins](#tabcaptureallowedbyorigins),[WindowCaptureAllowedByOrigins](#windowcaptureallowedbyorigins),[ScreenCaptureAllowedByOrigins](#screencaptureallowedbyorigins),[ScreenCaptureAllowed](#screencaptureallowed).
+
+Para obter informações detalhadas sobre os padrões de URL válidos, confira [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).  Essa política só corresponde com base na origem, portanto, qualquer caminho no padrão de URL é ignorado.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Lista de cadeias de caracteres
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: SameOriginTabCaptureAllowedByOrigins
+  - Nome da Política de Grupo: Permitir captura da guia Mesma Origem por essas origens
+  - Caminho da Política de Grupo (Obrigatório): Modelos Administrativos/Microsoft Edge/Permitir ou negar captura de tela
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (Obrigatório): SOFTWARE\Policies\Microsoft\Edge\SameOriginTabCaptureAllowedByOrigins
+  - Caminho (recomendado): N/A
+  - Nome do valor: 1, 2, 3, ...
+  - Tipo de valor: lista de REG_SZ
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SameOriginTabCaptureAllowedByOrigins\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\SameOriginTabCaptureAllowedByOrigins\2 = "[*.]example.edu"
+
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: SameOriginTabCaptureAllowedByOrigins
+  - Valor de exemplo:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="screencaptureallowedbyorigins"></a>ScreenCaptureAllowedByOrigins
+
+  #### <a name="allow-desktop-window-and-tab-capture-by-these-origins"></a>Permitir a captura de Área de Trabalho, Janela e Guia por essas origens
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e macOS desde 97 ou mais recente
+
+  #### <a name="description"></a>Descrição
+
+  Definir a política permite definir uma lista de padrões de URL que podem usar a Área de Trabalho, a Janela e a Captura de Tabulação.
+
+Deixar a política desmarcada significa que os sites não serão considerados para uma substituição neste escopo de Captura.
+
+Essa política não será considerada se um site corresponder a um padrão de URL em qualquer uma das seguintes políticas: [WindowCaptureAllowedByOrigins](#windowcaptureallowedbyorigins), [TabCaptureAllowedByOrigins](#tabcaptureallowedbyorigins), [SameOriginTabCaptureAllowedByOrigins](#sameorigintabcaptureallowedbyorigins).
+
+Se um site corresponder a um padrão de URL nesta política, [ScreenCaptureAllowed](#screencaptureallowed) não será considerado.
+
+Para obter informações detalhadas sobre os padrões de URL válidos, confira [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).  Essa política só corresponde com base na origem, portanto, qualquer caminho no padrão de URL é ignorado.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Lista de cadeias de caracteres
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: ScreenCaptureAllowedByOrigins
+  - Nome da Política de Grupo: Permitir captura de Área de trabalho, Janela e Guia por essas origens
+  - Caminho da Política de Grupo (Obrigatório): Modelos Administrativos/Microsoft Edge/Permitir ou negar captura de tela
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (Obrigatório): SOFTWARE\Policies\Microsoft\Edge\ScreenCaptureAllowedByOrigins
+  - Caminho (recomendado): N/A
+  - Nome do valor: 1, 2, 3, ...
+  - Tipo de valor: lista de REG_SZ
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\ScreenCaptureAllowedByOrigins\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\ScreenCaptureAllowedByOrigins\2 = "[*.]example.edu"
+
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: ScreenCaptureAllowedByOrigins
+  - Valor de exemplo:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="tabcaptureallowedbyorigins"></a>TabCaptureAllowedByOrigins
+
+  #### <a name="allow-tab-capture-by-these-origins"></a>Permitir a captura de Guia por essas origens
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e macOS desde 97 ou mais recente
+
+  #### <a name="description"></a>Descrição
+
+  Definir a política permite definir uma lista de padrões de URL que podem usar a Captura de Tabulação.
+
+Deixar a política desmarcada significa que os sites não serão considerados para uma substituição nesse escopo de captura.
+
+Essa política não será considerada se um site corresponder a um padrão de URL na política [SameOriginTabCaptureAllowedByOrigins](#sameorigintabcaptureallowedbyorigins).
+
+Se um site corresponder a um padrão de URL nesta política, as seguintes políticas não serão consideradas: [WindowCaptureAllowedByOrigins](#windowcaptureallowedbyorigins),[ScreenCaptureAllowedByOrigins](#screencaptureallowedbyorigins),[ScreenCaptureAllowed](#screencaptureallowed).
+
+Para obter informações detalhadas sobre os padrões de URL válidos, confira [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).  Essa política só corresponde com base na origem, portanto, qualquer caminho no padrão de URL é ignorado.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Lista de cadeias de caracteres
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: TabCaptureAllowedByOrigins
+  - Nome da Política de Grupo: Permitir captura de tabulação por essas origens
+  - Caminho da Política de Grupo (Obrigatório): Modelos Administrativos/Microsoft Edge/Permitir ou negar captura de tela
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (Obrigatório): SOFTWARE\Policies\Microsoft\Edge\TabCaptureAllowedByOrigins
+  - Caminho (recomendado): N/A
+  - Nome do valor: 1, 2, 3, ...
+  - Tipo de valor: lista de REG_SZ
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\TabCaptureAllowedByOrigins\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\TabCaptureAllowedByOrigins\2 = "[*.]example.edu"
+
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: TabCaptureAllowedByOrigins
+  - Valor de exemplo:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="windowcaptureallowedbyorigins"></a>WindowCaptureAllowedByOrigins
+
+  #### <a name="allow-window-and-tab-capture-by-these-origins"></a>Permitir a captura de Janela e Guia por essas origens
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e macOS desde 97 ou mais recente
+
+  #### <a name="description"></a>Descrição
+
+  Definir a política permite definir uma lista de padrões de URL que podem usar a Captura de Janela e Tabulação.
+
+Deixar a política desmarcada significa que os sites não serão considerados para uma substituição neste escopo de Captura.
+
+Essa política não será considerada se um site corresponder a um padrão de URL em qualquer uma das seguintes políticas: [TabCaptureAllowedByOrigins](#tabcaptureallowedbyorigins), [SameOriginTabCaptureAllowedByOrigins](#sameorigintabcaptureallowedbyorigins).
+
+Se um site corresponder a um padrão de URL nesta política, as seguintes políticas não serão consideradas: [ScreenCaptureAllowedByOrigins](#screencaptureallowedbyorigins),[ScreenCaptureAllowed](#screencaptureallowed).
+
+Para obter informações detalhadas sobre os padrões de URL válidos, confira [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).  Essa política só corresponde com base na origem, portanto, qualquer caminho no padrão de URL é ignorado.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Lista de cadeias de caracteres
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: WindowCaptureAllowedByOrigins
+  - Nome da Política de Grupo: Permitir captura de janela e tabulação por essas origens
+  - Caminho da Política de Grupo (Obrigatório): Modelos Administrativos/Microsoft Edge/Permitir ou negar captura de tela
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (Obrigatório): SOFTWARE\Policies\Microsoft\Edge\WindowCaptureAllowedByOrigins
+  - Caminho (recomendado): N/A
+  - Nome do valor: 1, 2, 3, ...
+  - Tipo de valor: lista de REG_SZ
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\WindowCaptureAllowedByOrigins\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\WindowCaptureAllowedByOrigins\2 = "[*.]example.edu"
+
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: WindowCaptureAllowedByOrigins
+  - Valor de exemplo:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ## <a name="printing-policies"></a>Políticas de impressão
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -7740,6 +8174,86 @@ Se você definir essa política como zero ou não configurá-la, a resolução p
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### <a name="printstickysettings"></a>PrintStickySettings
+
+  #### <a name="print-preview-sticky-settings"></a>Imprimir configurações autoadesivas de visualização
+
+  
+  
+  #### <a name="supported-versions"></a>Versões suportadas:
+
+  - No Windows e macOS desde 98 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Especifica se a visualização de impressão deve aplicar as últimas configurações usadas Microsoft Edge PDF e páginas da Web.
+
+Se você definir essa política como 'EnableAll' ou não configurá-la, Microsoft Edge aplica as últimas configurações de visualização de impressão usadas para PDF e páginas da Web.
+
+Se você definir essa política como 'DisableAll', Microsoft Edge não aplicará as últimas configurações de visualização de impressão usadas para PDF e páginas da Web.
+
+Se você definir essa política como 'DisablePdf', o Microsoft Edge não aplicará as últimas configurações de visualização de impressão usadas para impressão em PDF e a reterá para páginas da Web.
+
+Se você definir essa política como 'DisableWebpage', o Microsoft Edge não aplicará as últimas configurações de visualização de impressão usadas para impressão de página da Web e a reterá para PDF.
+
+Essa política só estará disponível se você habilitar ou não configurar a política [PrintingEnabled](#printingenabled).
+
+Mapeamento das opções de política:
+
+* EnableAll (0) = Habilitar configurações autoadesivas para PDF e páginas da Web
+
+* DisableAll (1) = Desabilitar configurações autoadesivas para PDF e páginas da Web
+
+* DisablePdf (2) = Desabilitar configurações autoadesivas para PDF
+
+* DisableWebpage (3) = Desabilitar configurações autoadesivas para páginas da Web
+
+Use as informações anteriores ao configurar essa política.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Inteiro
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: PrintStickySettings
+  - Nome da Política de Grupo: Imprimir configurações autoadesivas de visualização
+  - Caminho da Política de Grupo (obrigatório): Modelos administrativos/Microsoft Edge/Impressão
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do Valor: PrintStickySettings
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: PrintStickySettings
+  - Valor de exemplo:
+``` xml
+<integer>1</integer>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### <a name="printertypedenylist"></a>PrinterTypeDenyList
 
   #### <a name="disable-printer-types-on-the-deny-list"></a>Desabilitar tipos de impressoras na lista de negações
@@ -7932,7 +8446,7 @@ Use as informações anteriores ao configurar essa política.
 
   - Nome exclusivo da Política de Grupo: PrintingBackgroundGraphicsDefault
   - Nome da Política de Grupo: modo de impressão de gráficos em segundo plano padrão
-  - Caminho da Política de Grupo (obrigatório): Modelos administrativos/Microsoft Edge/Impressão
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Printing
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -8709,7 +9223,7 @@ Essa política substitui as seguintes políticas individuais:
 A configuração da política [ProxySettings](#proxysettings) aceita os seguintes campos:
   * ProxyMode, que permite especificar o servidor proxy usado pelo Microsoft Edge e evita que os usuários alterem as configurações de proxy
   * ProxyPacUrl: um URL para um arquivo proxy .pac
-  * ProxyPacMandatory, que impede que a pilha de rede volte para conexões diretas com script PAC inválido ou indisponível
+  * ProxyPacMandatory, um sinalizador booliano que impede que a pilha de rede volte para conexões diretas com script PAC inválido ou indisponível
   * ProxyServer: um URL para o servidor proxy
   * ProxyBypassList, uma lista de hosts proxy que o Microsoft Edge ignora
 
@@ -8755,6 +9269,7 @@ Para obter exemplos mais detalhados, acesse [https://go.microsoft.com/fwlink/?li
 SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   "ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/",
   "ProxyMode": "pac_script",
+  "ProxyPacMandatory": false,
   "ProxyPacUrl": "https://internal.site/example.pac",
   "ProxyServer": "123.123.123.123:8080"
 }
@@ -8763,7 +9278,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   ##### <a name="compact-example-value"></a>Valor do exemplo de compactação:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {"ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", "ProxyMode": "pac_script", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
+  SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {"ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", "ProxyMode": "pac_script", "ProxyPacMandatory": false, "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
   ```
   
 
@@ -8778,6 +9293,8 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   <string>https://www.example1.com,https://www.example2.com,https://internalsite/</string>
   <key>ProxyMode</key>
   <string>pac_script</string>
+  <key>ProxyPacMandatory</key>
+  <false/>
   <key>ProxyPacUrl</key>
   <string>https://internal.site/example.pac</string>
   <key>ProxyServer</key>
@@ -9276,6 +9793,70 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### <a name="smartscreendnsrequestsenabled"></a>SmartScreenDnsRequestsEnabled
+
+  #### <a name="enable-microsoft-defender-smartscreen-dns-requests"></a>Habilitar as solicitações DNS do Microsoft Defender SmartScreen
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e macOS desde 97 ou mais recente
+
+  #### <a name="description"></a>Descrição
+
+  Essa política permite que você configure se deseja habilitar solicitações DNS feitas por Microsoft Defender SmartScreen. Observação: Desabilitar solicitações DNS impedirá Microsoft Defender SmartScreen obter endereços IP e potencialmente afetará as proteções baseadas em IP fornecidas.
+
+Se você habilitar ou não definir essa configuração, o Microsoft Defender SmartScreen fará solicitações de DNS.
+
+Se você desabilitar essa configuração, Microsoft Defender SmartScreen não fará nenhuma solicitação DNS.
+
+Essa política está disponível apenas nas instâncias do Windows que fazem parte de um domínio do Microsoft Active Directory, em instâncias do Windows 10 Pro ou Enterprise que estejam inscritas no gerenciamento de dispositivos ou em instâncias do macOS que são gerenciadas por meio do MDM ou passaram a fazer parte de um domínio por meio de MCX.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: Sim
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: SmartScreenDnsRequestsEnabled
+  - Nome da Política de Grupo: Habilitar Microsoft Defender SmartScreen solicitações DNS
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/SmartScreen settings
+  - Caminho da Política de Grupo (recomendado): Administrative Templates/Microsoft Edge - Default Settings (usuários podem substituir)/SmartScreen settings
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Nome do Valor: SmartScreenDnsRequestsEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: SmartScreenDnsRequestsEnabled
+  - Valor de exemplo:
+``` xml
+<true/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### <a name="smartscreenenabled"></a>SmartScreenEnabled
 
   #### <a name="configure-microsoft-defender-smartscreen"></a>Configurar o Microsoft Defender SmartScreen
@@ -9465,7 +10046,7 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 
   [Voltar ao início](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>Página inicial&comma; de inicialização e políticas de nova guia
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>Página inicial&comma; de inicialização e políticas de nova guia
 
   [Voltar ao início](#microsoft-edge---policies)
 
@@ -10573,11 +11154,11 @@ Se você não configurar esta política, o Edge TyposquattingChecker é ativado,
 
   A opção “Permitir logon único para sites de trabalho ou de escolas usando este perfil” permite que perfis não AAD possam usar o logon único para sites corporativos ou de estudante usando as credenciais corporativas ou de estudante presentes no computador. Essa opção aparece para os usuários finais como uma alternância em Configurações -> Perfis -> Preferências de Perfil somente para perfis não AAD.
 
-Se você desabilitar essa política, perfis não AAD não poderão usar SSO usando outras credenciais presentes no computador. Isso também garantirá que a "Habilitação inteligente do SSO (logon único) para todas as contas de Windows Azure Active Directory (Azure AD) para usuários com um único perfil do Microsoft Edge não Azure AD" esteja desativada.
+Se você habilitar ou desabilitar essa política, a 'Habilitação inteligente do SSO (logon único) para todas as contas do Windows Azure Active Directory (Azure AD) para usuários com um único perfil de Microsoft Edge não Azure AD' será desativada.
 
-Se você habilitar essa política ou não configurá-la, os perfis não AAD poderão usar o SSO com outras credenciais presentes no computador e a "Habilitação inteligente do SSO (logon único) para todas as contas do Windows Azure Active Directory (Azure AD) para usuários com um único perfil do Microsoft Edge não Azure AD" continuará funcionando.
+Se você não configurar essa política, os usuários poderão controlar se devem usar o SSO usando outras credenciais presentes no computador em edge://settings/profiles/multiProfileSettings.
 
-  #### <a name="supported-features"></a>Recursos com suporte:
+  #### <a name="supported-features"></a>Recursos compatíveis:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: Sim
@@ -10623,7 +11204,7 @@ Se você habilitar essa política ou não configurá-la, os perfis não AAD pode
 
   ### <a name="accessibilityimagelabelsenabled"></a>AccessibilityImageLabelsEnabled
 
-  #### <a name="get-image-descriptions-from-microsoft-enabled"></a>O recurso "Obter descrições de imagem da Microsoft" foi habilitado
+  #### <a name="let-get-image-descriptions-from-microsoft"></a>Permitir que você obtenha descrições de imagem da Microsoft
 
   
   
@@ -10658,7 +11239,7 @@ Nenhum cookie ou outros dados de usuário são enviados à Microsoft, e a Micros
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
   - Nome único da Política de Grupo: AccessibilityImageLabelsEnabled
-  - Nome da Política de Grupo: o recurso "Obter descrições de imagem da Microsoft" foi habilitado
+  - Nome da Política de Grupo: Permitir obter descrições de imagem da Microsoft
   - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
@@ -10682,6 +11263,77 @@ Nenhum cookie ou outros dados de usuário são enviados à Microsoft, e a Micros
   - Valor de exemplo:
 ``` xml
 <false/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="addressbareditingenabled"></a>AddressBarEditingEnabled
+
+  #### <a name="configure-address-bar-editing"></a>Configurar a edição da barra de endereços
+
+  
+  
+  #### <a name="supported-versions"></a>Versões suportadas:
+
+  - No Windows e macOS desde 98 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Se você habilitar ou não configurar esta política, os usuários poderão alterar o URL na barra de endereço.
+
+Se você desativar esta política, ela impedirá que os usuários alterem o URL na barra de endereço.
+
+Observação: Essa política não impede que o navegador navegue até qualquer URL. Os usuários ainda podem navegar para qualquer URL usando a opção de pesquisa na página nova guia padrão ou usando qualquer link que leve a um mecanismo de pesquisa na Web. Para garantir que os usuários só possam acessar sites esperados, considere configurar as seguintes políticas além dessa política:
+
+- [NewTabPageLocation](#newtabpagelocation)
+
+- [HomepageLocation](#homepagelocation)
+
+- [HomepageIsNewTabPage](#homepageisnewtabpage)
+
+- [URLBlocklist](#urlblocklist) e [URLAllowlist](#urlallowlist) para definir o escopo das páginas para as qual o navegador pode navegar.
+
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: AddressBarEditingEnabled
+  - Nome da Política de Grupo: Configurar edição da barra de endereços
+  - Caminho da GP (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do Valor: AddressBarEditingEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: AddressBarEditingEnabled
+  - Valor de exemplo:
+``` xml
+<true/>
 ```
   
 
@@ -13468,6 +14120,72 @@ Essa política é uma medida temporária e será removida em versões futuras do
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### <a name="corsnonwildcardrequestheaderssupport"></a>CORSNonWildcardRequestHeadersSupport
+
+  #### <a name="cors-non-wildcard-request-header-support-enabled-deprecated"></a>Suporte ao cabeçalho de solicitação CORS não curinga habilitado (preterido)
+
+  >PRETERIDA: Essa política está preterida. Ela tem suporte no momento, mas se tornará obsoleta em uma versão futura.
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e macOS desde 97 ou mais recente
+
+  #### <a name="description"></a>Descrição
+
+  Essa política permite configurar o suporte a cabeçalhos de solicitação CORS não curinga.
+
+Microsoft Edge versão 97 introduz suporte para cabeçalhos de solicitação CORS não curinga. Quando um script faz uma solicitação de rede entre origens por meio de fetch() e XMLHttpRequest com um cabeçalho de Autorização adicionado por script, o cabeçalho deve ser explicitamente permitido pelo cabeçalho Access-Control-Allow-Headers na resposta de simulação CORS. "Explicitamente" aqui significa que o símbolo curinga "*" não abrange o cabeçalho de Autorização. Consulte [https://go.microsoft.com/fwlink/?linkid=2180022](https://go.microsoft.com/fwlink/?linkid=2180022)para obter mais detalhes.
+
+Se você habilitar ou não configurar a política, o Microsoft Edge será compatível com os cabeçalhos de solicitação CORS não curinga e se comportará conforme descrito anteriormente.
+
+Se você desabilitar essa política, Microsoft Edge permitirá o símbolo curinga ("*") no cabeçalho Access-Control-Allow-Headers na resposta de simulação CORS para cobrir o cabeçalho Autorização.
+
+Essa política é uma solução alternativa temporária para o novo recurso de cabeçalho de solicitação CORS não curinga. Ele deve ser removido após a Microsoft Edge versão 103.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: CORSNonWildcardRequestHeadersSupport
+  - Nome da Política de Grupo: Suporte ao cabeçalho de solicitação CORS não curinga habilitado (preterido)
+  - Caminho da GP (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do Valor: CORSNonWildcardRequestHeadersSupport
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: CORSNonWildcardRequestHeadersSupport
+  - Valor de exemplo:
+``` xml
+<true/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### <a name="certificatetransparencyenforcementdisabledforcas"></a>CertificateTransparencyEnforcementDisabledForCas
 
   #### <a name="disable-certificate-transparency-enforcement-for-a-list-of-subjectpublickeyinfo-hashes"></a>Desabilitar a imposição da transparência do certificado para obter uma lista de hashes subjectPublicKeyInfo
@@ -15610,6 +16328,8 @@ Se você definir o valor desta política como 0, o tamanho do cache padrão ser�
 
 Se você não configurar essa política, o tamanho padrão será usado, mas os usuários poderão substituí-los pelo sinalizador  '--disk-cache-size'.
 
+Observação: O valor especificado nesta política é usado como uma dica para vários subsistemas de cache no navegador. Portanto, o uso de disco agregado de todos os caches pode ser maior que (mas dentro da mesma ordem de magnitude que) o valor especificado.
+
   #### <a name="supported-features"></a>Recursos compatíveis:
 
   - Pode ser obrigatório: Sim
@@ -16072,6 +16792,70 @@ Se você desabilitar essa política, os usuários não poderão acessar e usar c
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### <a name="edgediscoverenabled"></a>EdgeDiscoverEnabled
+
+  #### <a name="discover-feature-in-microsoft-edge"></a>Recurso Descobrir no Microsoft Edge
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e macOS desde 97 ou mais recente
+
+  #### <a name="description"></a>Descrição
+
+  Essa política permite configurar o recurso Descobrir no Microsoft Edge.
+
+Trabalhando em segundo plano quando habilitado, esse recurso envia URLs ao Microsoft Bing para pesquisar recomendações relacionadas.
+
+Se você habilitar ou não configurar essa política, poderá usar o botão Descobrir no Microsoft Edge para começar a usar esse recurso.
+
+Se você desabilitar essa política, não poderá usar o recurso Descobrir no Microsoft Edge.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: Sim
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: EdgeDiscoverEnabled
+  - Nome da Política de Grupo: Descobrir recurso no Microsoft Edge
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): Administrative Templates/Microsoft Edge - Default Settings (usuários podem substituir)/
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Nome do Valor: EdgeDiscoverEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: EdgeDiscoverEnabled
+  - Valor de exemplo:
+``` xml
+<true/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### <a name="edgeenhanceimagesenabled"></a>EdgeEnhanceImagesEnabled
 
   #### <a name="enhance-images-enabled"></a>Aprimorar imagens habilitado
@@ -16126,6 +16910,70 @@ Se essa política estiver desabilitada, o Microsoft Edge não aprimorará as ima
   #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
   
   - Nome da chave de preferência: EdgeEnhanceImagesEnabled
+  - Valor de exemplo:
+``` xml
+<true/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="edgefollowenabled"></a>EdgeFollowEnabled
+
+  #### <a name="enable-follow-service-in-microsoft-edge"></a>Ativar o serviço Seguir no Microsoft Edge
+
+  
+  
+  #### <a name="supported-versions"></a>Versões suportadas:
+
+  - No Windows e macOS desde 98 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Permite que o navegador Microsoft Edge para habilitar o serviço Seguir e aplicá-lo aos usuários.
+
+Os usuários podem usar o tópico Seguir um influenciador, site ou Microsoft Edge..
+
+Se você habilitar ou não configurar essa política, siga Microsoft Edge pode ser aplicado.
+
+Se você desabilitar essa política, Microsoft Edge se comunicará com o serviço Seguir para fornecer o recurso a seguir.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: EdgeFollowEnabled
+  - Nome da Política de Grupo: Habilitar o serviço Seguir Microsoft Edge
+  - Caminho da GP (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do Valor: EdgeFollowEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: EdgeFollowEnabled
   - Valor de exemplo:
 ``` xml
 <true/>
@@ -16531,6 +17379,212 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### <a name="enhancesecuritymode"></a>EnhanceSecurityMode
+
+  #### <a name="enhance-the-security-state-in-microsoft-edge"></a>Aprimorar o estado de segurança no Microsoft Edge
+
+  
+  
+  #### <a name="supported-versions"></a>Versões suportadas:
+
+  - No Windows e macOS desde 98 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Essa política permite que você aprimora o estado de segurança Microsoft Edge.
+
+Se você definir essa política como 'StandardMode', o modo aprimorado será desativado e Microsoft Edge retornará ao modo de segurança padrão.
+
+Se você definir essa política como 'BalancedMode', o estado de segurança estará no modo balanceado.
+
+Se você definir essa política como 'StrictMode', o estado de segurança estará no modo estrito.
+
+Para obter mais informações sobre essa política, consulte [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321).
+
+Mapeamento das opções de política:
+
+* StandardMode (0) = Modo Padrão
+
+* BalancedMode (1) = Modo Balanceado
+
+* StrictMode (2) = Modo Estrito
+
+Use as informações anteriores ao configurar essa política.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Inteiro
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: EnhanceSecurityMode
+  - Nome da Política de Grupo: Aprimorar o estado de segurança Microsoft Edge
+  - Caminho da GP (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do Valor: EnhanceSecurityMode
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: EnhanceSecurityMode
+  - Valor de exemplo:
+``` xml
+<integer>0</integer>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="enhancesecuritymodebypasslistdomains"></a>EnhanceSecurityModeBypassListDomains
+
+  #### <a name="configure-the-list-of-domains-for-which-enhance-security-mode-will-not-be-enforced"></a>Configurar a lista de domínios para os quais o modo de segurança aprimorada não será imposto
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e macOS desde 98 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Configurar a lista de domínios confiáveis de segurança avançada. Isso significa que o modo de segurança avançado não será imposto ao carregar os sites em domínios confiáveis.
+
+Para obter mais informações sobre essa política, consulte [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321).
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Lista de cadeias de caracteres
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: EnhanceSecurityModeBypassListDomains
+  - Nome da Política de Grupo: configurar a lista de domínios para os quais o modo de segurança avançada não será imposto
+  - Caminho da GP (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (Obrigatório): SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeBypassListDomains
+  - Caminho (recomendado): N/A
+  - Nome do valor: 1, 2, 3, ...
+  - Tipo de valor: lista de REG_SZ
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeBypassListDomains\1 = "mydomain.com"
+SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeBypassListDomains\2 = "myuniversity.edu"
+
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: EnhanceSecurityModeBypassListDomains
+  - Valor de exemplo:
+``` xml
+<array>
+  <string>mydomain.com</string>
+  <string>myuniversity.edu</string>
+</array>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="enhancesecuritymodeenforcelistdomains"></a>EnhanceSecurityModeEnforceListDomains
+
+  #### <a name="configure-the-list-of-domains-for-which-enhance-security-mode-will-always-be-enforced"></a>Configurar a lista de domínios para os quais o modo de segurança aprimorado sempre será imposto
+
+  
+  
+  #### <a name="supported-versions"></a>Versões suportadas:
+
+  - No Windows e macOS desde 98 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Configurar a lista de domínios não confiáveis de segurança avançada. Isso significa que o modo de segurança avançado sempre será imposto ao carregar os sites em domínios não confiáveis.
+
+Para obter mais informações sobre essa política, consulte [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321).
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Lista de cadeias de caracteres
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: EnhanceSecurityModeEnforceListDomains
+  - Nome da Política de Grupo: configurar a lista de domínios para os quais o modo de segurança avançada sempre será imposto
+  - Caminho da GP (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (Obrigatório): SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeEnforceListDomains
+  - Caminho (recomendado): N/A
+  - Nome do valor: 1, 2, 3, ...
+  - Tipo de valor: lista de REG_SZ
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeEnforceListDomains\1 = "mydomain.com"
+SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeEnforceListDomains\2 = "myuniversity.edu"
+
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: EnhanceSecurityModeEnforceListDomains
+  - Valor de exemplo:
+``` xml
+<array>
+  <string>mydomain.com</string>
+  <string>myuniversity.edu</string>
+</array>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### <a name="enterprisehardwareplatformapienabled"></a>EnterpriseHardwarePlatformAPIEnabled
 
   #### <a name="allow-managed-extensions-to-use-the-enterprise-hardware-platform-api"></a>Permitir que as extensões gerenciadas usem a API de plataforma de hardware empresarial
@@ -16738,23 +17792,23 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   #### <a name="description"></a>Descrição
 
-  No Microsoft Edge, o Serviço Experimentação e Configuração é usado para implantar o conteúdo de experimentação e configuração.
+  O Serviço de Experimentação e Configuração é usado para implantar cargas de Experimentação e Configuração no cliente.
 
 O conteúdo de experimentação consiste em uma lista dos recursos em desenvolvimento inicial que a Microsoft está disponibilizando para testes e comentários.
 
-O conteúdo de configuração consiste em uma lista de configurações que a Microsoft deseja implantar no Microsoft Edge para otimizar a experiência do usuário. Por exemplo, o conteúdo de configuração pode especificar a frequência com que o Microsoft Edge envia solicitações para o serviço de experimentação e configuração para recuperar o conteúdo mais recente.
+A carga de configuração consiste em uma lista de configurações recomendadas que a Microsoft deseja implantar para otimizar a experiência do usuário.
 
-Além disso, o conteúdo de configuração também pode conter uma lista de ações a serem executadas em determinados domínios por motivos de compatibilidade. Por exemplo, o navegador pode substituir a Sequência de agente do usuário em um site se ele estiver quebrado devido à nova Sequência de agente do usuário no Microsoft Edge. Cada uma dessas ações deve ser temporária enquanto a Microsoft tenta resolver o problema com o proprietário do site.
+A carga de configuração também pode conter uma lista de ações a serem executadas em determinados domínios por motivos de compatibilidade. Por exemplo, o navegador pode substituir a cadeia de caracteres do Agente do Usuário em um site se esse site for interrompido. Cada uma dessas ações deve ser temporária enquanto a Microsoft tenta resolver o problema com o proprietário do site.
 
 Se você definir essa política como o modo 'FullMode', o conteúdo total será baixado do Serviço de Experimentação e Configuração. Isso inclui os conteúdos de experimentação e configuração.
 
-Se você definir essa política como 'ConfigurationsOnlyMode', somente o conteúdo de configuração será entregue.
+Se você definir essa política como 'ConfigurationsOnlyMode', somente a carga de configuração será baixada.
 
-Se você definir essa política como 'RestrictedMode', a comunicação com o Serviço de Experimentação e Configuração será interrompida completamente.
+Se você definir essa política como 'RestrictedMode', a comunicação com o Serviço de Experimentação e Configuração será interrompida completamente. A Microsoft não recomenda essa configuração.
 
-Se você não configurar essa política, em um dispositivo gerenciado em canais estáveis e beta, o comportamento será o mesmo do 'ConfigurationsOnlyMode'.
+Se você não configurar essa política em um dispositivo gerenciado, o comportamento nos canais Beta e Estável será o mesmo que o 'ConfigurationsOnlyMode'. Nos canais Canary e Dev, o comportamento é o mesmo que 'FullMode'.
 
-Se você não configurar essa política, em um dispositivo não gerenciado o comportamento será o mesmo que o 'FullMode'.
+Se você não configurar essa política em um dispositivo não gerenciado, o comportamento será o mesmo que o 'FullMode'.
 
 Mapeamento das opções de política:
 
@@ -19132,6 +20186,68 @@ Você pode definir essa política como uma recomendação. Isso significa que o 
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### <a name="inappsupportenabled"></a>InAppSupportEnabled
+
+  #### <a name="in-app-support-enabled"></a>Suporte no aplicativo Habilitado
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e macOS desde 98 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Microsoft Edge usa o recurso de suporte no aplicativo (habilitado por padrão) para permitir que os usuários contatem nossos agentes de suporte diretamente do navegador. Além disso, por padrão, os usuários não podem desabilitar (desativar) o recurso de suporte no aplicativo.
+
+Se você habilitar essa política ou não a configurar, os usuários poderão invocar o suporte no aplicativo.
+
+Se você desabilitar essa política, os usuários não poderão invocar o suporte no aplicativo.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: InAppSupportEnabled
+  - Nome da Política de Grupo: Suporte no aplicativo Habilitado
+  - Caminho da GP (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do Valor: InAppSupportEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: InAppSupportEnabled
+  - Valor de exemplo:
+``` xml
+<true/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### <a name="inprivatemodeavailability"></a>InPrivateModeAvailability
 
   #### <a name="configure-inprivate-mode-availability"></a>Configurar a disponibilidade do modo InPrivate
@@ -19404,11 +20520,11 @@ Para saber mais sobre o modo Internet Explorer, confira [https://go.microsoft.co
 
   #### <a name="description"></a>Descrição
 
-  A partir da versão 96 da Microsoft Edge, as navegações que alternam entre o modo Internet Explorer e Microsoft Edge incluirão dados de formulários e cabeçalhos HTTP adicionais.
+  A partir Microsoft Edge versão 96, as navegação que alternam entre o modo Internet Explorer e o Microsoft Edge incluirão dados de formulário.
 
 Se você habilitar esta política, você pode especificar quais tipos de dados devem ser incluídos na navegação entre o Microsoft Edge e o modo Internet Explorer.
 
-Se você desabilitar ou não configurar esta política, a Microsoft Edge usará o novo comportamento de incluir dados de formulários e cabeçalhos adicionais em navegações que alteram os modos.
+Se você desabilitar ou não configurar essa política, o Microsoft Edge usará o novo comportamento de incluir dados de formulário em navegação que alteram os modos.
 
 Para saber mais, veja [https://go.microsoft.com/fwlink/?linkid=2174004](https://go.microsoft.com/fwlink/?linkid=2174004)
 
@@ -20251,6 +21367,63 @@ Se você desabilitar ou não configurar essa política, o Microsoft Edge tratar�
 
 ```
 0x00000004
+```
+
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="internetexplorermodetabinedgemodeallowed"></a>InternetExplorerModeTabInEdgeModeAllowed
+
+  #### <a name="allow-sites-configured-for-internet-explorer-mode-to-open-in-microsoft-edge"></a>Permitir que sites configurados para o modo Internet Explorer abram no Microsoft Edge
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows desde 97 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Essa política permite que os sites configurados para abrir no modo Internet Explorer sejam abertos pelo Microsoft Edge para teste em um navegador moderno sem removê-los da lista de sites.
+
+Os usuários podem definir essa configuração no menu "Mais ferramentas" selecionando 'Abrir sites no Microsoft Edge'.
+
+Se você habilitar essa política, a opção 'Abrir sites no Microsoft Edge' ficará visível em "Mais ferramentas". Os usuários usam essa opção para testar sites do modo IE em um navegador moderno.
+
+Se você desabilitar ou não configurar essa política, os usuários não poderão ver a opção 'Abrir no Microsoft Edge' no menu "Mais ferramentas". No entanto, os usuários podem acessar essa opção de menu com o sinalizador --ie-mode-test.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: InternetExplorerModeTabInEdgeModeAllowed
+  - Nome da Política de Grupo: Permitir que os sites configurados para Internet Explorer modo de grupo seja aberto no Microsoft Edge
+  - Caminho da GP (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do Valor: InternetExplorerModeTabInEdgeModeAllowed
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000000
 ```
 
   
@@ -21335,6 +22508,68 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### <a name="microsoftedgeinsiderpromotionenabled"></a>MicrosoftEdgeInsiderPromotionEnabled
+
+  #### <a name="microsoft-edge-insider-promotion-enabled"></a>Promoção do Microsoft Edge Insider Habilitada
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e macOS desde 98 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Mostra conteúdo que promove os canais do Microsoft Edge Insider na página de configurações Sobre Microsoft Edge.
+
+Se você habilitar ou não configurar essa política, conteúdo promocional do Microsoft Edge Insider será mostrado na página Sobre Microsoft Edge.
+
+Se você desabilitar essa política, conteúdo promocional do Microsoft Edge Insider não será mostrado na página Sobre Microsoft Edge.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: MicrosoftEdgeInsiderPromotionEnabled
+  - Nome da Política de Grupo: Promoção do Microsoft Edge Insider Habilitada
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do Valor: MicrosoftEdgeInsiderPromotionEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: MicrosoftEdgeInsiderPromotionEnabled
+  - Valor de exemplo:
+``` xml
+<true/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### <a name="nativewindowocclusionenabled"></a>NativeWindowOcclusionEnabled
 
   #### <a name="enable-native-window-occlusion-deprecated"></a>Habilitar Oclusão de Janela Nativa (preterida)
@@ -22227,19 +23462,19 @@ Para obter mais informações sobre essa política, consulte [https://go.microso
 
   Essa configuração permite especificar se o Internet Explorer redirecionará as navegações para sites que exigem um navegador moderno para o Microsoft Edge.
 
-Se você não configurar esta política ou defini-la como "Sitelist", começando no M87, o Internet Explorer redirecionará os sites incompatíveis para o Microsoft Edge.
+Se você não configurar essa política ou defini-la como 'Sitelist' ('Redirecionar sites com base no valor 1 da lista de sites incompatíveis'), a partir de M87, o Internet Explorer redirecionará os sites que exigem um navegador moderno para Microsoft Edge.
 
 Quando um site é redirecionado do Internet Explorer para o Microsoft Edge, a guia do Internet Explorer que começou a carregar o site é fechada se não tiver nenhum conteúdo anterior. Caso contrário, ela será navegada para uma página da ajuda da Microsoft, explicando por que o site foi redirecionado para o Microsoft Edge.
 
 Ao iniciar o Microsoft Edge para carregar um site do IE, uma barra de informações será exibida para o usuário explicando que o site funciona melhor em um navegador moderno.
 
-Se você definir essa política como "Desabilitar", o Internet Explorer não redirecionará todo o tráfego para o Microsoft Edge.
+Se você definir essa política como 'Desabilitar' ('Impedir redirecionamento', valor 0), o Internet Explorer não redirecionará nenhum tráfego para Microsoft Edge.
 
 Para obter mais informações sobre essa política, consulte  [https://go.microsoft.com/fwlink/?linkid=2141715](https://go.microsoft.com/fwlink/?linkid=2141715)
 
 Mapeamento das opções de política:
 
-* Desabilitar (0) = Desabilitar
+* Desabilitar (0) = Impedir redirecionamento
 
 * Sitelist (1) = Redireciona sites baseado na lista de sites incompatíveis
 
@@ -22813,7 +24048,7 @@ Especificamente, há um botão de alternância**Usar um serviço web para ajudar
 
   ### <a name="restrictsignintopattern"></a>RestrictSigninToPattern
 
-  #### <a name="restrict-which-accounts-can-be-used-as-microsoft-edge-primary-accounts"></a>Restringir quais contas podem ser usadas como contas principais do Microsoft Edge
+  #### <a name="restrict-which-accounts-can-be-used-to-sign-in-to-microsoft-edge"></a>Restringir quais contas podem ser usadas para entrar no Microsoft Edge
 
   
   
@@ -22823,11 +24058,13 @@ Especificamente, há um botão de alternância**Usar um serviço web para ajudar
 
   #### <a name="description"></a>Descrição
 
-  Determina quais contas podem ser definidas como contas principais do navegador no Microsoft Edge (a conta escolhida durante o fluxo de aceitação da sincronização).
+  Determina quais contas podem ser usadas para entrar na conta Microsoft Edge que é escolhida durante o fluxo de aceitação da sincronização.
 
-Se um usuário tentar configurar uma conta primária do navegador com um nome de usuário que não corresponda a esse padrão, eles serão bloqueados e verão uma mensagem de erro apropriada. Você pode configurar essa política para corresponder a várias contas usando uma expressão regular no estilo Perl para o padrão. Observe que as correspondências padrão diferenciam maiúsculas de minúsculas. Para obter mais informações sobre as regras de expressão regular usadas, consulte https://go.microsoft.com/fwlink/p/?linkid=2133903.
+Você pode configurar essa política para corresponder a várias contas usando uma expressão regular no estilo Perl para o padrão. Se um usuário tentar entrar no navegador com uma conta cujo nome de usuário não corresponda a esse padrão, ele será bloqueado e receberá a mensagem de erro apropriada. Observe que as correspondências padrão diferenciam maiúsculas de minúsculas. Para obter mais informações sobre as regras de expressão regular usadas, consulte https://go.microsoft.com/fwlink/p/?linkid=2133903.
 
-Se você não configurar essa política ou deixá-la em branco, os usuários poderão definir qualquer conta como uma conta primária do navegador no Microsoft Edge.
+Se você não configurar essa política ou deixá-la em branco, os usuários poderão usar qualquer conta para entrar no Microsoft Edge.
+
+Observe que os perfis conectados com um nome de usuário que não corresponde a esse padrão serão desconectados depois que essa política for habilitada.
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -22844,8 +24081,8 @@ Se você não configurar essa política ou deixá-la em branco, os usuários pod
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
   - Nome Exclusivo da Política de Grupo: RestrictSigninToPattern
-  - Nome da Política de Grupo: Restringir quais contas podem ser usadas como contas principais do Microsoft Edge
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Nome da Política de Grupo: Restringir quais contas podem ser usadas para entrar no Microsoft Edge
+  - Caminho da GP (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -23186,9 +24423,9 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   ### <a name="sslversionmin"></a>SSLVersionMin
 
-  #### <a name="minimum-tls-version-enabled-deprecated"></a>Versão mínima de TLS habilitada (obsoleta)
+  #### <a name="minimum-tls-version-enabled"></a>Versão mínima do TLS habilitada
 
-  >PRETERIDA: essa política está preterida. Ela tem suporte no momento, mas se tornará obsoleta em uma versão futura.
+  
   
   #### <a name="supported-versions"></a>Versões com suporte:
 
@@ -23196,11 +24433,13 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   #### <a name="description"></a>Descrição
 
-  O suporte para suprimir o aviso TLS 1.0/1.1 foi removido do Microsoft Edge a partir da versão 91 e essa política parou de funcionar.
+  Define a versão mínima suportada do TLS.
 
-Define a versão mínima suportada do TLS. Se você não configurar esta política, o Microsoft Edge mostrará um erro para TLS 1.0 e TLS 1.1, mas o usuário poderá contorná-lo.
+Se você definir essa política como 'tls1.2', o Microsoft Edge mostrará um erro para TLS 1.0 e TLS 1.1 e o usuário não poderá ignorar o erro.
 
-Se você habilitar essa política, o Microsoft Edge não usará qualquer versão de SSL/TLS inferior à versão especificada. Todos os valores não reconhecidos são ignorados.
+Se você não configurar essa política, o Microsoft Edge ainda mostrará um erro para TLS 1.0 e TLS 1.1, mas o usuário poderá ignorar.
+
+O suporte para suprimir o aviso TLS 1.0/1.1 foi removido Microsoft Edge a partir da versão 91. Não há mais suporte para os valores 'tls1' e 'tls1.1'.
 
 Mapeamento das opções de política:
 
@@ -23227,7 +24466,7 @@ Use as informações anteriores ao configurar essa política.
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
   - Nome Exclusivo da Política de Grupo: SSLVersionMin
-  - Nome GP: versão mínima de TLS habilitada (obsoleta)
+  - Nome da Política de Grupo: Versão mínima do TLS habilitada
   - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
@@ -23251,6 +24490,71 @@ Use as informações anteriores ao configurar essa política.
   - Valor de exemplo:
 ``` xml
 <string>tls1</string>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="sandboxexternalprotocolblocked"></a>SandboxExternalProtocolBlocked
+
+  #### <a name="allow-microsoft-edge-to-block-navigations-to-external-protocols-in-a-sandboxed-iframe"></a>Permitir que o Microsoft Edge bloqueie as navegação para protocolos externos em um iframe em área restrita
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e macOS desde 99 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Microsoft Edge bloqueará as navegação para protocolos externos dentro de um iframe em área restrita.
+
+Se você habilitar ou não configurar essa política, Microsoft Edge bloqueará essas navegações.
+
+Se você desabilitar essa política, Microsoft Edge bloqueará essas navegações.
+
+Isso pode ser usado por administradores que precisam de mais tempo para atualizar seu site interno afetado por essa nova restrição. Esta política Enterprise é temporária; ela deve ser removida após o Microsoft Edge versão 104.
+
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: SandboxExternalProtocolBlocked
+  - Nome da Política de Grupo: Permitir que Microsoft Edge bloqueie navegações para protocolos externos em um iframe em área restrita
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do Valor: SandboxExternalProtocolBlocked
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: SandboxExternalProtocolBlocked
+  - Valor de exemplo:
+``` xml
+<true/>
 ```
   
 
@@ -23387,6 +24691,65 @@ Se você desabilitar essa política ou não a configurar, o histórico de navega
   - Valor de exemplo:
 ``` xml
 <true/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="screencaptureallowed"></a>ScreenCaptureAllowed
+
+  #### <a name="allow-or-deny-screen-capture"></a>Permitir ou negar captura de tela
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e no macOS desde 83 ou mais recente
+
+  #### <a name="description"></a>Descrição
+
+  Se você habilitar essa política ou não configurar essa política, uma página da Web poderá usar APIs de compartilhamento de tela (por exemplo, getDisplayMedia () ou a API da extensão de captura da área de trabalho) para uma captura de tela.
+Se você desabilitar essa política, as chamadas a APIs de compartilhamento de tela falharão. Por exemplo, se você estiver usando uma reunião online baseada na Web, o vídeo ou o compartilhamento de tela não funcionarão.  No entanto, essa política não será considerada (e um site terá permissão para usar APIs de compartilhamento de tela) se o site corresponder a um padrão de origem em qualquer uma das seguintes políticas: [ScreenCaptureAllowedByOrigins](#screencaptureallowedbyorigins), [WindowCaptureAllowedByOrigins](#windowcaptureallowedbyorigins), [TabCaptureAllowedByOrigins](#tabcaptureallowedbyorigins), [SameOriginTabCaptureAllowedByOrigins](#sameorigintabcaptureallowedbyorigins).
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome Exclusivo da Política de Grupo: ScreenCaptureAllowed
+  - Nome da Política de Grupo: Permitir ou negar captura de tela
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: ScreenCaptureAllowed
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: ScreenCaptureAllowed
+  - Valor de exemplo:
+``` xml
+<false/>
 ```
   
 
@@ -25723,6 +27086,68 @@ Se a política for definida como “true”, os conjuntos de codificação 3DES 
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### <a name="u2fsecuritykeyapienabled"></a>U2fSecurityKeyApiEnabled
+
+  #### <a name="allow-using-the-deprecated-u2f-security-key-api-deprecated"></a>Permitir o uso da API de Chave de Segurança U2F preterida (preterido)
+
+  >PRETERIDA: Essa política está preterida. Ela tem suporte no momento, mas se tornará obsoleta em uma versão futura.
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e macOS desde 98 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Essa política foi preterida porque se destina a ser um mecanismo de curto prazo para dar às empresas mais tempo para atualizar seu conteúdo da Web quando for considerado incompatível com a alteração para remover a API de Chave de Segurança U2F. Ele não funcionará na versão Microsoft Edge 104.
+
+Se você habilitar essa política, a API de Chave de Segurança U2F preterida poderá ser usada e o prompt de lembrete de substituição mostrado para solicitações de API U2F será suprimido.
+
+Se você desabilitar essa política ou não a configurar, a API de Chave de Segurança U2F será desabilitada por padrão e só poderá ser usada por sites que se registrarem e usarem a avaliação de origem U2FSecurityKeyAPI que termina na versão 104 da Microsoft Edge.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: U2fSecurityKeyApiEnabled
+  - Nome da Política de Grupo: Permitir o uso da API de Chave de Segurança U2F preterida (preterido)
+  - Caminho da GP (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do Valor: U2fSecurityKeyApiEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: U2fSecurityKeyApiEnabled
+  - Valor de exemplo:
+``` xml
+<true/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### <a name="urlallowlist"></a>URLAllowlist
 
   #### <a name="define-a-list-of-allowed-urls"></a>Definir uma lista de URLs permitidas
@@ -26525,9 +27950,9 @@ e 5 membros opcionais:
 
 - fallback_app_name (a partir do Microsoft Edge versão 90, permite que você substitua o nome do aplicativo se não for um Progressive Web App (PWA) ou o nome do aplicativo que está temporariamente instalado se for um PWA, mas a autenticação é necessária antes que a instalação possa ser concluída. Se custom_name e fallback_app_name forem fornecidos, o último será ignorado.)
 
-- custom_name (a partir do Microsoft Edge versão 96, permite substituir permanentemente o nome do aplicativo para todos os aplicativos Web e PWAs.)
+- custom_name (Permite substituir permanentemente o nome do aplicativo para todos os aplicativos Web e PWAs. No momento, não há suporte para Microsoft Edge.)
 
-- custom_icon (a partir do Microsoft Edge versão 96, permite substituir o ícone do aplicativo dos aplicativos instalados. Os ícones precisam ser quadrados, no máximo 1 MB de tamanho e em um dos seguintes formatos: jpeg, png, gif, webp, ico. O valor de hash deve ser o hash SHA256 do arquivo de ícone.)
+- custom_icon (Permite que você substitua o ícone de aplicativo dos aplicativos instalados. Os ícones precisam ser quadrados, no máximo 1 MB de tamanho e em um dos seguintes formatos: jpeg, png, gif, webp, ico. O valor de hash deve ser o hash SHA256 do arquivo de ícone. No momento, não há suporte para Microsoft Edge.)
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -27057,7 +28482,7 @@ Use as informações anteriores ao configurar essa política.
 
   #### <a name="description"></a>Descrição
 
-  Controla se o WebRTC respeitará as regras de tabela de roteamento do sistema operacional Windows ao fazer conexões ponto a ponto.
+  Controla se o WebRTC respeitará as regras de tabela de roteamento do sistema operacional Windows ao fazer conexões ponto a ponto, habilitando VPNs de túnel dividido.
 
 Se você desabilitar essa política ou não a configurar, o WebRTC não considerará a tabela de roteamento e poderá fazer conexões ponto a ponto em qualquer rede disponível.
 
@@ -27160,6 +28585,70 @@ Se você não configurar essa política, ou se a definir como uma cadeia de cara
   - Valor de exemplo:
 ``` xml
 <string>10000-11999</string>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="websqlinthirdpartycontextenabled"></a>WebSQLInThirdPartyContextEnabled
+
+  #### <a name="force-websql-in-third-party-contexts-to-be-re-enabled-deprecated"></a>Forçar a reativação do WebSQL em contextos de terceiros (preterido)
+
+  >PRETERIDA: Essa política está preterida. Ela tem suporte no momento, mas se tornará obsoleta em uma versão futura.
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e macOS desde 97 ou mais recente
+
+  #### <a name="description"></a>Descrição
+
+  Essa política foi preterida porque se destina a ser um mecanismo de curto prazo para dar às empresas mais tempo para atualizar seu conteúdo da Web quando for considerado incompatível com a alteração para desabilitar o WebSQL em contextos de terceiros. Ele não funcionará na versão Microsoft Edge 101.
+
+O WebSQL em contextos de terceiros (por exemplo, iframes entre sites) está desativado por padrão a Microsoft Edge versão 97 e será totalmente removido na versão 101.
+
+Se você habilitar essa política, o WebSQL em contextos de terceiros será reabilitado.
+
+Se você desabilitar essa política ou não a configurar, o WebSQL em contextos de terceiros permanecerá desativado.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: WebSQLInThirdPartyContextEnabled
+  - Nome da Política de Grupo: Forçar o WebSQL em contextos de terceiros a ser reabilitado (preterido)
+  - Caminho da GP (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do Valor: WebSQLInThirdPartyContextEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: WebSQLInThirdPartyContextEnabled
+  - Valor de exemplo:
+``` xml
+<true/>
 ```
   
 
