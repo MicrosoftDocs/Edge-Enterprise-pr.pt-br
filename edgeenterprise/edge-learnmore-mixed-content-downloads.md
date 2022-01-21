@@ -1,25 +1,25 @@
 ---
-title: Microsoft Edge e downloads de conteúdo misto
+title: Saiba como Microsoft Edge manipula downloads de conteúdo misto
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 11/24/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Microsoft Edge e downloads de conteúdo misto
-ms.openlocfilehash: 4871b23145d365e814c5cf1cac7699044f3da35e
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
-ms.translationtype: MT
+description: Saiba mais sobre downloads de conteúdo misto e como o Microsoft Edge lida com eles.
+ms.openlocfilehash: c199a8b763e456daac34bd1ba07e64ced50358f5
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978603"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12298279"
 ---
-# <a name="learn-about-microsoft-edge-and-mixed-content-downloads"></a>Saiba mais sobre o Microsoft Edge e downloads de conteúdo misto
+# <a name="learn-how-microsoft-edge-handles-mixed-content-downloads"></a>Saiba como Microsoft Edge manipula downloads de conteúdo misto
 
-Este artigo explica os downloads de conteúdo misto e como o Microsoft Edge lida com eles.
+Este artigo define downloads de conteúdo misto e explica como o Microsoft Edge lida com eles.
 
 >[!NOTE]
 >Este artigo se aplica ao Microsoft Edge versão 85 ou posterior.
@@ -31,7 +31,7 @@ Um download de conteúdo misto ocorre quando você inicia um download de uma pá
 - Um ou mais redirecionamentos do local de download foram carregados em uma conexão HTTP insegura.
 - O local final do download foi carregado em uma conexão HTTP insegura.
 
-Qualquer cenário é um conteúdo misto, porque a solicitação foi feita usando HTTPS seguro e tanto o conteúdo HTTP como o HTTPS estão envolvidos na obtenção do destino final do download. Navegadores modernos exibem avisos sobre esse tipo de conteúdo para indicar ao usuário que esse download pode ser transferido sem segurança, mesmo que a página original acessada seja segura.
+Qualquer um dos cenários anteriores é um download de conteúdo misto porque a solicitação foi feita usando HTTPS seguro e as conexões HTTP e HTTPS são usadas para alcançar o destino final. Os navegadores modernos exibem avisos sobre esse tipo de conteúdo para indicar que esse download pode ser transferido de forma insegura, mesmo que a página original tenha sido acessada com segurança.
 
 ## <a name="download-warnings-and-user-options"></a>Baixar avisos e opções de usuário
 
