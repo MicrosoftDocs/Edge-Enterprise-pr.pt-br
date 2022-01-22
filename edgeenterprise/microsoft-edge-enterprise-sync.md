@@ -3,23 +3,25 @@ title: Configurar a sincronização do Microsoft Edge Enterprise
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 10/26/2021
+ms.date: 11/10/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Opções de administrador e de usuário para configurar o Microsoft Edge para sincronizar os favoritos, senhas e outros dados do navegador.
-ms.openlocfilehash: 2f9ca20bbfeec619f0cc4d2846a527586a49f5ef
-ms.sourcegitcommit: 9c4d3803ee060d83f2081482e7f2cb4ab6b86f7c
+ms.openlocfilehash: b6f7544d78fe82e0e632b04ad8380196725f2bbe
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2021
-ms.locfileid: "12117082"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12298179"
 ---
-# <a name="configure-microsoft-edge-enterprise-sync"></a>Configurar a sincronização de empresa do Microsoft Edge
+# <a name="configure-microsoft-edge-enterprise-sync"></a>Configurar a sincronização do Microsoft Edge Enterprise
 
-Este artigo explica como os administradores podem configurar o Microsoft Edge para sincronizar os favoritos, as senhas e outros dados do navegador do usuário em todos os dispositivos conectados. Se você não for um administrador, visite este artigo para saber como se conectar e sincronizar o Microsoft Edge entre dispositivos. [Entrar para sincronizar Microsoft Edge entre dispositivos](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674).
+Este artigo explica como os administradores podem configurar o Microsoft Edge para sincronizar os favoritos, senhas e outros dados do navegador do usuário em todos os dispositivos conectados.
+
+Se você não for um administrador, use o artigo a seguir como um guia para saber como entrar e sincronizar Microsoft Edge entre dispositivos: Entre para sincronizar Microsoft Edge entre [dispositivos](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674).
 
 > [!NOTE]
 > Aplica-se ao Microsoft Edge versão 77 ou posterior, a menos que indicado de outra forma.
@@ -40,21 +42,24 @@ A sincronização do Microsoft Edge permite que os usuários acessem seus dados 
 A funcionalidade de sincronização é habilitada através do consentimento do usuário, e os usuários podem ativar ou desativar a sincronização de cada um dos tipos de dados listados acima. Se um usuário estiver com problemas de sincronização, talvez seja necessário redefinir a sincronização em **Configurações** > **Perfis** > **Redefinir sincronização**.
 
 > [!NOTE]
-> Outros dados de configuração e conectividade do dispositivo (como nome, marca e modelo do dispositivo) são carregados para dar suporte à funcionalidade de sincronização.
+> Dados adicionais de conectividade e configuração do dispositivo (como nome do dispositivo, fabricante do dispositivo e modelo de dispositivo) são carregados para dar suporte à funcionalidade de sincronização.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 A sincronização do Microsoft Edge das contas do Azure Active Directory (Azure AD) está disponível para qualquer uma das seguintes assinaturas:
 
 - Azure AD Premium (P1 ou P2)
-- M365 Business Premium, Business Standard ou **Business Basic\ ***
+  
+  - Para clientes que têm apenas o Azure AD P1 ou P2, é necessário habilitar o recurso roaming de estado do Azure AD Enterprise para usar Microsoft Edge Enterprise Sync. Para saber mais, confira o artigo [Habilitar Enterprise Roaming de Estado Azure Active Directory](/azure/active-directory/devices/enterprise-state-roaming-enable).
+
+- Microsoft 365 Business Premium, Business Standard ou **Business Basic \***
 
    > [!IMPORTANT]
    > **\**_ Encontramos um problema com o _* Business Basic** para Sincronização e estamos corrigindo isso. Entretanto, isso não está funcionando como pretendido.
 
 - Office 365 E1 e superior
 - Proteção de informações do Azure (AIP) (P1 ou P2)
-- Todas as assinaturas EDU (Aplicativos da Microsoft para Estudantes ou Docentes, Exchange Online para Estudantes ou Docentes, O365 A1 ou superior, M365 A1 ou superior, Proteção de Informações do Azure P1 ou P2 para Estudantes ou Docentes)
+- Todas as assinaturas EDU (Microsoft Apps para Estudantes ou Docentes, Exchange Online para Estudantes ou Docentes, O365 A1 ou superior, Microsoft 365 A1 ou superior, Proteção de Informações do Azure P1 ou P2 para Estudantes ou Docentes)
 
 ## <a name="sync-group-policies"></a>Políticas de grupo de sincronização
 

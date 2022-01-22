@@ -1,25 +1,25 @@
 ---
-title: Atualizações do Windows para o Microsoft Edge
+title: Atualizações do Windows para dar suporte ao Microsoft Edge
 ms.author: jtkim
-author: RyanHechtMSFT
+author: dan-wesley
 manager: srugh
-ms.date: 09/23/2021
+ms.date: 11/17/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Atualizações do Windows para o Microsoft Edge
-ms.openlocfilehash: 0232e269861430df9a152006d2a8476c353eae46
-ms.sourcegitcommit: 8e5294e82cf62abc916cfd24692f55925330d42b
+description: Atualizações do Windows para dar suporte ao Microsoft Edge.
+ms.openlocfilehash: 85f60b3ee09154c702debcfb222567996be9462f
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "12037201"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12298159"
 ---
 # <a name="windows-updates-to-support-the-next-version-of-microsoft-edge"></a>Atualizações do Windows para oferecer suporte à próxima versão do Microsoft Edge
 
-Este artigo descreve como o Windows será atualizado para oferecer suporte à próxima versão do Microsoft Edge.
+Este artigo descreve como o Windows será atualizado para oferecer suporte à próxima versão do Microsoft Edge
 
 > [!IMPORTANT]
 > Consulte a postagem [do blog da equipe de produto do Microsoft Edge](https://aka.ms/EdgeLegacyEOS) sobre o fim de serviço da Versão Prévia do Microsoft Edge.
@@ -46,50 +46,23 @@ Quando todas as atualizações forem aplicadas e o canal estável da próxima ve
 - Todas as tentativas de iniciar a versão atual do Microsoft Edge redirecionam para a próxima versão do Microsoft Edge.
 
   > [!NOTE]
-  > As instalações em nível de usuário não acionam esses comportamentos.
+  > As instalação no nível do usuário não dispararão os comportamentos anteriores.
 
 Juntamente com as alterações anteriores, há alterações que ocorrem independentemente da instalação do canal estável da próxima versão do Microsoft Edge.
 
-- O Microsoft Edge cancela o registro de livros e protocolos XML não compatíveis com a próxima versão do Microsoft Edge. Os usuários que tentarem abrir esses protocolos receberão uma caixa de diálogo solicitando que escolham um aplicativo padrão. Saiba mais sobre as alterações no suporte em [Baixar um aplicativo de ePub para continuar lendo](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Fhelp%2F4517840&data=02%7C01%7Cv-danwes%40microsoft.com%7Cc9f8571b880549c30fcf08d72be5eaf9%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637026138803983526&sdata=qtb3DvVZQ6H%2FFXnBievkl%2B%2BngAQXwl340PcH8kRc3y4%3D&reserved=0).
+- O Microsoft Edge cancela o registro de livros e protocolos XML não compatíveis com a próxima versão do Microsoft Edge. Os usuários que tentarem abrir esses protocolos receberão uma caixa de diálogo solicitando que escolham um aplicativo padrão. Visite o Microsoft Store para ver nossas recomendações para leitores de livros eletrônicos.
+  
+## <a name="older-versions-of-windows"></a>Versões mais antigas do Windows
 
-## <a name="timeline"></a>Linha do Tempo
+Para implantar o Microsoft Edge em um dispositivo que executa uma versão Windows mais antiga do Windows 10 RS4, use o [Configuration Manager](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge?bc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Fbreadcrumb%2Ftoc.json&toc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Ftoc.json), [Microsoft Intune](https://docs.microsoft.com/mem/intune/apps/apps-windows-edge?bc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Fbreadcrumb%2Ftoc.json&toc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Ftoc.json) ou atualize para uma versão suportada do Windows 10. O artigo a seguir lista as versões com suporte do Windows 10 e Windows 11.
 
-As alterações necessárias para oferecer suporte à experiência descrita serão fornecidas com três atualizações para diferentes versões do Windows.
+- [Versões com suporte do cliente Windows](/windows/release-health/supported-versions-windows-client)
 
-### <a name="windows-versions-1903-and-1909"></a>Windows versões 1903 e 1909
+> [!NOTE]
+> Para Windows 10 RS4-20H1, implante um Windows LCU a partir de maio de 2021 ou mais novo para obter o Microsoft Edge. Para obter mais informações, consulte [ o histórico de atualização do Windows 10](https://support.microsoft.com/topic/windows-10-update-history-1b6aac92-bf01-42b5-b158-f80c6d93eb11)
 
-- Primeiro conjunto de mudanças na atualização opcional de julho de 2019, fornecido com a atualização de segurança de agosto de 2019.
-- Segundo conjunto de mudanças na atualização opcional de agosto de 2019, fornecido com a atualização de segurança de setembro de 2019.
-
-  > [!NOTE]
-  > Esta é a atualização em que o Microsoft Edge cancela o registro do protocolo XML.
-
-- Terceiro conjunto de mudanças na atualização opcional de setembro de 2019, fornecido com a atualização de segurança de outubro de 2019.
-
-  > [!NOTE]
-  > Esta é a atualização em que o Microsoft Edge não oferece mais suporte para eBooks.
-
-### <a name="windows-versions-1709-1803-and-1809"></a>Windows versões 1709, 1803 e 1809
-
-- Primeiro conjunto de mudanças na atualização opcional de agosto de 2019, fornecido com a atualização de segurança de setembro de 2019.
-- Segundo conjunto de mudanças na atualização opcional de setembro de 2019, fornecido com a atualização de segurança de outubro de 2019.
-
-  > [!NOTE]
-  > Esta é a atualização em que o Microsoft Edge cancela o registro do protocolo XML.
-
-- Terceiro conjunto de mudanças na atualização opcional de outubro de 2019, fornecido com a atualização de segurança de novembro de 2019.
-
-  > [!NOTE]
-  > Esta é a atualização em que o Microsoft Edge não oferece mais suporte para eBooks.
-
-A tabela a seguir fornece os detalhes de atualizações específicas em cada conjunto de alterações.
-
-| Windows 10 | Mais informações | Download necessário |
-|--|--|--|
-| Versão 1709 | [KB4525241](https://support.microsoft.com/help/4525241/windows-10-update-kb4525241) | [Atualização Cumulativa para Windows 10 Versão 1709](https://www.catalog.update.microsoft.com/Search.aspx?q=4525241) |
-| Versão 1803  | [KB4525237](https://support.microsoft.com/help/4525237/windows-10-update-kb4525237) | [Atualização Cumulativa para Windows 10 Versão 1803](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4525237) |
-| Versão 1809  | [KB4523205](https://support.microsoft.com/help/4523205/windows-10-update-kb4523205) | [Atualização Cumulativa para Windows 10 Versão 1809](https://www.catalog.update.microsoft.com/Search.aspx?q=4523205) |
-| Versão 1903 e 1909 |[KB4517389](https://support.microsoft.com/help/4517389/windows-10-update-kb4517389)  | [Atualização Cumulativa para Windows 10 Versão 1903 e 1909](https://www.catalog.update.microsoft.com/Search.aspx?q=4517389) |
+> [!IMPORTANT]
+> Se você precisar de atualizações não listadas aqui, execute o Windows Update ou entre em contato com o administrador.
 
 ## <a name="see-also"></a>Consulte também
 
