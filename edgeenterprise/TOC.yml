@@ -1,4 +1,4 @@
-# last revised 11/02/2021 
+# last revised 01/11/2022
 - name: Documentação do Microsoft Edge Enterprise
   href: index.yml
 - name: Documentação do Microsoft Edge
@@ -73,7 +73,7 @@
       href: /mem/intune/configuration/administrative-templates-configure-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
     - name: Configurar Microsoft Edge usando as configurações de Preferências Iniciais para a primeira execução
       href: Initial-preferences-support-on-Microsoft-Edge-browser.md
-    - name: Configuração por Site por Política
+    - name: Configuração por site por política
       href: Per-Site-Configuration-by-Policy.md
     - name: Configurar para o Windows com Gerenciamento de Dispositivos Móveis
       href: configure-edge-with-mdm.md
@@ -83,7 +83,7 @@
       href: configure-microsoft-edge-on-mac-jamf.md
 - name: Usar os recursos do Microsoft Edge para empresas
   items:
-    - name: Edge para Virtualização de infraestrutura da área de trabalho
+    - name: Microsoft Edge infraestrutura de área de trabalho virtual
       href: edge-for-virtualized-desktop-infrastructure.md
     - name: Configurações e experimentação
       href: edge-configuration-and-experiments.md
@@ -157,7 +157,7 @@
       href: ms-edge-security-for-business.md
     - name: Proteção desegurança moderna para aplicativos herdados vulneráveis
       href: microsoft-edge-security-iemode-safer-than-ie.md
-    - name: Interrompendo os downloads dos arquivos potencialmente perigosos
+    - name: Identificar e interromper downloads de arquivos potencialmente perigosos
       href: microsoft-edge-security-downloads-interruptions.md
     - name: Lista de permissões para pontos de extremidade do Microsoft Edge
       href: microsoft-edge-security-endpoints.md
@@ -239,5 +239,5 @@
       href: microsoft-edge-video-security-smartscreen.md
     - name: 'Vídeo - Segurança, compatibilidade e capacidade de gerenciamento'
       href: microsoft-edge-video-security-compatibility-manageability.md
-    - name: Perguntas frequentes
-      href: faqs-edge-in-the-enterprise.yml
+    - name: Microsoft Edge perguntas frequentes
+      href: microsoft-edge-frequently-asked-questions.md
