@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Implantar o Microsoft Edge com atualizações do Windows 10
-ms.openlocfilehash: 9102ef37c6a5329a5cba79ed976237d7fd7e2063
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 1f3a99259cb28c46e4f6f30de05fade6ac158336
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978565"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445825"
 ---
 # <a name="deploy-microsoft-edge-with-windows-10-updates"></a>Implantar o Microsoft Edge com atualizações do Windows 10
 
@@ -23,7 +23,14 @@ O artigo fornece informações para usuários que estão implantando o Microsoft
 
 ## <a name="for-windows-10-release-20h2"></a>Para Windows 10 versão 20H2
 
-O Windows 10 versão 20H2 já tem o Microsoft Edge instalado como navegador padrão.
+Windows 10 20H2 e posteriores incluem Microsoft Edge pré-instalado como o navegador padrão. No entanto, a versão 84 do Edge que foi enviada com o Windows 10 20H2 e a versão 92 do Edge que foi enviada com Windows 10 21H2, agora está desatualizada. Embora Microsoft Edge se atualize automaticamente para uma versão mais recente depois que um usuário tiver feito logor, já que o tempo da atualização depende de vários fatores, isso pode ser um pouco imprestável. Para organizações que desejam maior controle e desejam garantir que o Edge (canal estável) seja atualizado para a versão mais recente antes do logon do usuário, o comando a seguir do PowerShell pode ser usado para forçar uma atualização de Borda durante Windows OOBE.
+
+`Start-Process -FilePath "C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe" -argumentlist "/silent /install appguid={56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}&appname=Microsoft%20Edge&needsadmin=True"`
+
+Se você Windows autopilot, é possível envolvê-lo como um arquivo .intunewin usando a ferramenta de preparação de conteúdo [do Microsoft Win32](/mem/intune/apps/apps-win32-prepare). Em seguida, ele pode ser definido como um aplicativo necessário para a Página de Status de Registro (ESP), se desejado.
+
+> [!NOTE]
+> Se você atualmente aproveitar políticas como substituição de [](/deployedge/microsoft-edge-update-policies#target-channel-override) Canal de Destino ou [](/deployedge/microsoft-edge-update-policies#targetversionprefix) Substituição de Versão de Destino para permanecer em uma versão mais antiga do Edge, esteja ciente de que o script acima não levará nenhuma política em consideração e simplesmente atualizará para a versão mais recente. Por padrão, o Edge não se rebaixa, incluindo depois que essas políticas são recebidas posteriormente.
 
 ## <a name="for-windows-10-releases-rs4-through-20h1"></a>Para Windows 10, versões RS4 a 20H1
 

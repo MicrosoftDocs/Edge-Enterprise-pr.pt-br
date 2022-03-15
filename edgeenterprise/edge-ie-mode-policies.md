@@ -3,24 +3,24 @@ title: Configurar políticas do modo IE
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/23/2021
+ms.date: 03/01/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Configurar políticas do modo IE
-ms.openlocfilehash: 7ca8dffb0bc20acf954cf0f272f3894b39355846
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: de1165da7e2f86a8865db396fab6c640b9c96805
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978656"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445624"
 ---
 # <a name="configure-ie-mode-policies"></a>Configurar políticas do modo IE
 
 >[!Note]
-> O aplicativo de área de trabalho Internet Explorer 11 será desativado e ficará sem suporte em 15 de junho de 2022 (para obter uma lista do que está no escopo, [consulte as Perguntas frequentes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. [Saiba mais aqui](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> O aplicativo de área de trabalho do Internet Explorer 11 será retirado e ficará sem suporte em 15 de junho de 2022. Para ver uma lista do que está no escopo, consulte Perguntas frequentes sobre a aposentadoria do aplicativo da área de trabalho do [Internet Explorer 11](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549). Para configurar o Microsoft Edge, consulte o [guia Microsoft Edge de configuração.](https://go.microsoft.com/fwlink/?linkid=2188234) Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. [Saiba mais aqui](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 Este artigo explica como configurar as políticas do modo IE.
 
@@ -52,7 +52,7 @@ Você pode configurar o Internet Explorer para abrir diretamente no Microsoft Ed
 5. Selecione **Habilitado**.
 6. Em **Opções**, defina o valor da lista suspensa como
    -  **Modo Internet Explorer** se você deseja que os sites sejam abertos no modo IE no Microsoft Edge
-   -  **Internet Explorer 11** se você quiser que os sites sejam abertos em uma janela autônoma do Internet Explorer 11 (Essa opção não terá suporte após 15 de junho de 2022, quando o aplicativo de área de trabalho do Internet Explorer 11 será retirado e ficará sem suporte.  Após 15 de junho de 2022, quando o IE11 não estará mais disponível, essa opção se comportará da mesma forma que a opção do modo **Internet Explorer.)**  
+   -  **Internet Explorer 11** se você quiser que os sites sejam abertos em uma janela autônoma do Internet Explorer 11 (Essa opção não terá suporte após 15 de junho de 2022, quando o aplicativo de área de trabalho do Internet Explorer 11 será retirado e ficará sem suporte.  Após 15 de junho de 2022, quando o IE11 não estará mais disponível, essa opção se comportará da mesma forma que a opção do modo **Internet Explorer** .)  
    -  **Nenhum** se você quiser impedir que os usuários configurem o modo Internet Explorer via edge://sinalizadores ou pela linha de comando
 
    > [!NOTE]
@@ -140,7 +140,10 @@ Você pode impedir que os usuários usem o Internet Explorer para sites que não
    - Microsoft Edge Dev versão 77 ou posterior
    - Microsoft Edge Canary versão 77 ou posterior
    - Microsoft Edge versão 45 ou anterior
-9. Clique em **OK** ou **Aplicar** para salvar essas configurações.
+9. Clique em **OK** ou **Aplicar** para salvar essas configurações.  
+
+    > [!TIP]
+    > Para encontrar sites que você precisa adicionar à sua lista de sites do modo [IE, consulte Configure IE mode for Microsoft Edge](https://go.microsoft.com/fwlink/?linkid=2188235) guide. Se você já tiver uma lista de sites, as ferramentas neste guia ajudarão você a aplicá-la aos usuários certos.
 
 ## <a name="see-also"></a>Consulte também
 

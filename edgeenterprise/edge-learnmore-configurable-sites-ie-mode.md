@@ -3,19 +3,19 @@ title: Microsoft Edge e sites configuráveis no modo IE
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 02/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge e sites configuráveis no modo IE
-ms.openlocfilehash: 0248ecd394acee5773751c0685969e3d40940431
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: fac7801d3b1b8dd222cb3cf6f23a11348a19ea55
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978629"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445875"
 ---
 # <a name="learn-about-configurable-sites-in-ie-mode"></a>Saiba mais sobre sites configuráveis no modo IE
 
@@ -25,6 +25,7 @@ Este artigo explica o recurso de sites configuráveis na lista de sites do modo 
 
 - Atualizações do Windows
 
+  - Windows 11
   - Windows 10 versão 1909; Windows Server versão 1909 – KB4550945 ou posterior
   - Windows 10 versão 1903; Windows Server versão 1903 – KB4550945 ou posterior
   - Windows 10 versão 1809; Windows Server versão 1809; e Windows Server 2019 – KB4550969 ou posterior

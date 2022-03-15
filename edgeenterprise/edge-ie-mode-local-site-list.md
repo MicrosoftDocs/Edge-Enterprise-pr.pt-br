@@ -3,19 +3,19 @@ title: Lista de sites locais para o modo internet explorer (IE)
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/15/2021
+ms.date: 03/01/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Saiba como habilitar listas de sites locais e acesso fácil ao modo IE
-ms.openlocfilehash: 8113b3baa613a0c19c80a738b3bbddfc330ec3ba
-ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.openlocfilehash: 831e9f3eac53f53adce37381561c5297e16d5171
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "12297949"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445685"
 ---
 # <a name="configure-local-site-list-for-internet-explorer-ie-mode"></a>Configurar a lista de sites locais para o modo Internet Explorer (IE)
 
@@ -31,6 +31,7 @@ Este artigo explica como configurar o acesso fácil ao modo Internet Explorer (m
 
 1. Atualizações do Windows
 
+   - Windows 11
    - Windows 10, versão 1909 - [KB5003698](https://support.microsoft.com/topic/june-15-2021-kb5003698-os-build-18363-1645-preview-1ecf117e-1f89-40f9-a0a5-ed5766737620) ou posterior  
 
    - Windows 10, versão 2004; Windows 10, versão 20H2 e Windows 10, versão 21H1 – [KB5003690](https://support.microsoft.com/topic/june-21-2021-kb5003690-os-builds-19041-1081-19042-1081-and-19043-1081-preview-11a7581f-2a01-47d5-ba12-431709ee2248) ou posterior
@@ -42,9 +43,9 @@ Este artigo explica como configurar o acesso fácil ao modo Internet Explorer (m
 
 ## <a name="overview"></a>Visão geral
 
-O modo IE é alimentado pela configuração da lista de sites Enterprise Modo. Enquanto você está identificando e configurando sites na lista de sites para usar o modo IE, os usuários não precisam mais esperar ou voltar para o aplicativo IE11 autônomo.
+O modo IE é alimentado pela configuração da Lista de Sites Enterprise Modo. Enquanto você está identificando e configurando sites na lista de sites para usar o modo IE, os usuários não precisam mais esperar ou voltar para o aplicativo IE11 autônomo.
 
-A partir Microsoft Edge versão 92, o acesso repetido a sites de modo *IE* não configurado é mais fácil. Os usuários podem recarregar sites no modo IE. Eles podem adicionar esses sites à lista de sites locais para renderizar automaticamente no modo IE por 30 dias, enquanto a lista de sites da organização é atualizada. Quando [o IE11 é](/deployedge/edge-ie-disable-ie11) desabilitado em seu ambiente, seus usuários não são mais dependentes somente da lista de sites da organização.
+A partir Microsoft Edge versão 92, o acesso repetido a sites de *modo IE* não configurado é mais fácil. Os usuários podem recarregar sites no modo IE. Eles podem adicionar esses sites à lista de sites locais para renderizar automaticamente no modo IE por 30 dias, enquanto a lista de sites da organização é atualizada. Quando [o IE11 é](/deployedge/edge-ie-disable-ie11) desabilitado em seu ambiente, seus usuários não são mais dependentes somente da lista de sites da organização.
 
 Você pode configurar essa experiência por meio de políticas de grupo para sua organização.
 
@@ -53,21 +54,21 @@ Você pode configurar essa experiência por meio de políticas de grupo para sua
 
 ## <a name="enable-the-local-site-list-experience"></a>Habilitar a experiência de lista de sites local
 
-Para habilitar a experiência de lista de sites locais, os usuários podem ir para a *URL* edge://settings/defaultBrowser e definir Permitir que sites sejam recarregados no modo **Internet Explorer** como **Permitir**.
+Para habilitar a experiência de lista de sites locais, os usuários podem ir até *a URL edge://settings/defaultBrowser* e definir Permitir que os sites sejam recarregados no modo **Internet Explorer** como **Permitir**.
 
 :::image type="content" source="media/Edge-hybrid-IE-mode/internet-explorer-compatibilitiy.png" alt-text="Compatibilidade com o Internet Explorer":::
 
 >[!Note]  
 >
->1. Se você habilitar o teste do modo IE por meio da política *InternetExplorerIntegrationTestingAllowed,* você verá essa configuração, mas ela será esnobada, a menos que você habilita explicitamente a política *InternetExplorerIntegrationReloadInIEModeAllowed.*
+>1. Se você habilitar o teste do modo IE por meio da política *InternetExplorerIntegrationTestingAllowed* , você verá essa configuração, mas ela será esnobada, a menos que você habilita explicitamente a política *InternetExplorerIntegrationReloadInIEModeAllowed* .
 >
->2. Se **Permitir que sites** sejam recarregados no modo Internet Explorer esteja definido como **Padrão,** os usuários poderão recarregar sites no modo IE se eles têm uso existente do Internet Explorer 11.  
+>2. Se **Permitir que sites** sejam recarregados no modo Internet Explorer esteja definido como **Padrão**, os usuários poderão recarregar sites no modo IE se eles têm o uso existente do Internet Explorer 11.  
 
-Quando essa configuração estiver habilitada, os usuários poderão recarregar um site no modo IE selecionando Configurações e mais (o ícone de releições **...)**> Recarregar no modo Internet Explorer . Os usuários também podem selecionar a guia Recarregar no modo **Internet Explorer** quando clicam com o botão direito do mouse em uma guia ou escolhem Abrir link na nova guia modo **Internet Explorer** quando clicam com o botão direito do mouse em um link.
+Quando essa configuração estiver habilitada, os usuários poderão recarregar um site no modo IE selecionando Configurações e mais (o ícone de releições **...) > Recarregar no modo Internet Explorer**. Os usuários também podem selecionar a guia Recarregar no modo **Internet Explorer** quando clicam com o botão direito do mouse em uma guia ou escolhem Abrir link na nova guia modo **Internet Explorer** quando clicam com o botão direito do mouse em um link.
 
 :::image type="content" source="media/Edge-hybrid-IE-mode/reload-in-internet-exploror-mode-screenshot.png" alt-text="Recarregar no modo Internet Explorer":::
 
-O **ícone Recarregar no modo Internet Explorer** pode ser fixado na barra de ferramentas. O botão da barra de ferramentas permite que os usuários entrem e saiam facilmente do modo IE e podem ser gerenciados por meio da URL *edge://settings/appearance.*
+O **ícone Recarregar no modo Internet Explorer** pode ser fixado na barra de ferramentas. O botão da barra de ferramentas permite que os usuários insiram e saiam facilmente do modo IE e podem ser gerenciados por meio da URL *edge://settings/appearance* .
 
 :::image type="content" source="media/Edge-hybrid-IE-mode/reload-in-internet-exploror-mode-icon-screenshot.png" alt-text="Recarregar no ícone do modo internet Explorer":::
 
@@ -84,9 +85,9 @@ Enquanto estiver no modo IE, os usuários verão um banner indicando que estão 
 
 :::image type="content" source="media/Edge-hybrid-IE-mode/ie-mode-banner-screenshot.png" alt-text="Faixa de modo IE":::
 
-Os usuários podem optar por sair do modo IE usando o botão Deixar na faixa, o ícone de modo IE fixado ou Configurações e mais (o ícone de releições **...)**> modo Sair do Internet Explorer , caso contrário, o Microsoft Edge sairá automaticamente do modo IE quando ocorrer uma navegação que não seja "na página" (por exemplo, usando a barra de endereços, o botão voltar ou um link favorito).
+Os usuários podem optar por sair do modo IE usando o botão Deixar na faixa, o ícone de modo IE fixado ou Configurações e mais (o ícone **de releições ...)** > modo Sair do Internet Explorer, caso contrário, o Microsoft Edge sairá automaticamente do modo IE quando ocorrer uma navegação que não seja "na página" (por exemplo, usando a barra de endereços, o botão voltar ou um link favorito).
 
-As entradas permanecem na lista de sites locais por um período padrão de 30 dias. Recomendamos que você configure sites herdado para sua organização na lista Enterprise site do modo de usuário. A lista de sites locais garantirá que os usuários possam continuar seu fluxo de trabalho sem serem interrompidos enquanto a lista de sites da organização é atualizada. No dia 31, quando os usuários navegarem até o site, eles verão um banner explicando que o site não será mais carregado no modo IE. Os usuários podem adicioná-lo de volta à lista de sites local, se assim escolherem.
+As entradas permanecem na lista de sites locais por um período padrão de 30 dias. Recomendamos que você configure sites legados para sua organização na lista de sites Enterprise modo de usuário. A lista de sites locais garantirá que os usuários possam continuar seu fluxo de trabalho sem serem interrompidos enquanto a lista de sites da organização é atualizada. No dia 31, quando os usuários navegarem até o site, eles verão um banner explicando que o site não será mais carregado no modo IE. Os usuários podem adicioná-lo de volta à lista de sites local, se assim escolherem.
 
 :::image type="content" source="media/Edge-hybrid-IE-mode/page-will-no-longer-load-in-ie-mode-screenshot.png" alt-text="A página não será mais carregada no modo IE":::
 
@@ -98,7 +99,7 @@ Duas políticas de grupo estão disponíveis para configurar a experiência de l
 
 Essa política corresponde à configuração Microsoft Edge "Permitir que os sites sejam recarregados no modo Internet Explorer". Você pode acessar essa configuração indo para o URL *edge://settings/defaultbrowser*.
 
-- Se você habilitar essa política, os usuários poderão recarregar um site no modo IE selecionando Configurações e muito mais **(o**ícone de releições ... > Recarregar no modo Internet Explorer . Os usuários também podem selecionar a guia Recarregar no modo **Internet Explorer** quando clicam com o botão direito do mouse em uma guia ou escolhem Abrir link na nova guia modo **Internet Explorer** quando clicam com o botão direito do mouse em um link.
+- Se você habilitar essa política, os usuários poderão recarregar um site no modo IE selecionando Configurações e muito mais (o ícone de releições ... > Recarregar no modo **Internet Explorer**. Os usuários também podem selecionar a guia Recarregar no modo **Internet Explorer** quando clicam com o botão direito do mouse em uma guia ou escolhem Abrir link na nova guia modo **Internet Explorer** quando clicam com o botão direito do mouse em um link.
 Os usuários podem, opcionalmente, Microsoft Edge usar o modo IE para o site no futuro. Essa opção será lembrada por um padrão de 30 dias e poderá ser gerenciada usando a política *InternetExplorerIntegrationLocalSiteListExpirationDays*.
 
 - Se você desabilitar essa política, os usuários não terão permissão para recarregar um site não configurado no modo IE.
@@ -115,7 +116,7 @@ Essa política pode ser usada para ajustar o número de dias em que um site perm
 
 - Se você habilitar a política, deverá inserir um valor entre 0 e 90 dias para manter o site na lista de sites local de um usuário.
 
-Essa política não terá efeito se você desabilitou a *política InternetExplorerIntegrationReloadInIEModeAllowed.*
+Essa política não terá efeito se você desabilitou a *política InternetExplorerIntegrationReloadInIEModeAllowed* .
 
 > [!NOTE]
 > A lista de sites local atualmente não sincroniza entre dispositivos. Essa melhoria está atualmente em nosso backlog e atualizaremos esse recurso quando ele estiver disponível.

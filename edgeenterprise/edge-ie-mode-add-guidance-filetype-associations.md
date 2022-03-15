@@ -3,19 +3,19 @@ title: Associar extensões de arquivo com o modo Internet Explorer
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/24/2021
+ms.date: 02/24/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Associar extensões de arquivo com o modo Internet Explorer
-ms.openlocfilehash: c7d72e94079ff35d8ffe49c068585b0c97d208cc
-ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.openlocfilehash: 1d25baa224e4fdcdd76bd599ccedb807c9dd7061
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "12298249"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445746"
 ---
 # <a name="associate-file-extensions-with-internet-explorer-mode"></a>Associar extensões de arquivo com o modo Internet Explorer
 
@@ -40,7 +40,7 @@ As instruções a seguir mostram uma entrada que associa Microsoft Edge ao modo 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeMHT\Application]
 "ApplicationCompany"="Microsoft Corporation"
 "ApplicationName"="Microsoft Edge with IE Mode"
-"ApplicationIcon"="C:\\<edge_installation_dir>\\msedge.exe,4"
+"ApplicationIcon"="C:\\<edge_installation_dir>\\msedge.exe,0"
 "AppUserModelId"=""
 ```
 
@@ -63,7 +63,7 @@ As instruções a seguir mostram uma entrada que associa Microsoft Edge ao modo 
 "MSEdgeIEModeMHT"=hex(0):
 ```
 
-Depois de definir as chaves descritas no exemplo anterior, os usuários verão outra opção no menu **Abrir** com para abrir um arquivo \.mht usando Microsoft Edge com o \<channel\> modo IE.
+Depois de definir as chaves descritas no exemplo anterior, os usuários verão outra opção no menu **Abrir** com para abrir um arquivo \.mht \<channel\> usando Microsoft Edge com o modo IE.
 
 ## <a name="registry-example"></a>Exemplo de registro
 
@@ -80,7 +80,7 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeMHT\Application]
 "ApplicationCompany"="Microsoft Corporation"
 "ApplicationName"="Microsoft Edge with IE Mode"
-"ApplicationIcon"="C:\\<edge_installation_dir>\\msedge.exe,4"
+"ApplicationIcon"="C:\\<edge_installation_dir>\\msedge.exe,0"
 "AppUserModelId"=""
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeMHT\DefaultIcon]

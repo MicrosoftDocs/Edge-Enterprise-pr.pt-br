@@ -3,19 +3,19 @@ title: Desabilitar o Internet Explorer 11
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 07/09/2021
+ms.date: 02/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Aprenda a desabilitar o Internet Explorer 11 e usar o modo Internet Explorer no Microsoft Edge.
-ms.openlocfilehash: b70da0ff7437d1f5e70cec40e31211046a66205a
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: c5452745e362ffc71842c7b5a25b84cea48816d6
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978639"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445805"
 ---
 # <a name="disable-internet-explorer-11"></a>Desabilitar o Internet Explorer 11
 
@@ -30,8 +30,9 @@ As seguintes atualizações do Windows e do software Microsoft Edge são necess�
 
 - Atualizações do Windows
 
+  - Windows 11
   - Windows 10, versão 21H1 ou posterior
-  - Windows 10, versão 2004; Windows Servidor versão 2004; Windows 10, versão 20H2; Windows Versão do servidor 20H2: [KB4598291](https://support.microsoft.com/topic/february-2-2021-kb4598291-os-builds-19041-789-and-19042-789-preview-6a766199-a4f1-616e-1f5c-58bdc3ca5e3b) ou posterior
+  - Windows 10, versão 2004; Windows Server versão 2004; Windows 10, versão 20H2; Windows Server versão 20H2: [KB4598291](https://support.microsoft.com/topic/february-2-2021-kb4598291-os-builds-19041-789-and-19042-789-preview-6a766199-a4f1-616e-1f5c-58bdc3ca5e3b) ou posterior
   - Windows 10 versão 1909: [KB4598298](https://support.microsoft.com/topic/january-21-2021-kb4598298-os-build-18363-1350-preview-02dfd9ba-91a2-1b82-dede-42f288c02511) ou posterior
   - Windows Server 2019; Windows 10 Enterprise LTSC 2019: [KB4598296](https://support.microsoft.com/topic/january-21-2021-kb4598296-os-build-17763-1728-preview-4c0931ff-45b7-ff59-5e00-c03b5afb363d) ou posterior
   - Windows Server 2016; Windows 10 Enterprise 2016 LTSB: [KB4601318](https://support.microsoft.com/topic/february-9-2021-kb4601318-os-build-14393-4225-c5e3de6c-e3e6-ffb5-6197-48b9ce16446e) ou posterior

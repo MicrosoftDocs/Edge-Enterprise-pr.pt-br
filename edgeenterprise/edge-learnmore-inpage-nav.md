@@ -3,19 +3,19 @@ title: Manter a navegação na página no modo do Internet Explorer
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 02/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Manter a navegação na página no modo do Internet Explorer
-ms.openlocfilehash: 20b18d121c3babfaacffd4a08316b25be714d95e
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 2b340f403d66f78372cc4b3a045d0c0ebb6b849b
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978604"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445855"
 ---
 # <a name="keep-in-page-navigation-in-internet-explorer-mode"></a>Manter a navegação na página no modo do Internet Explorer
 
@@ -30,11 +30,11 @@ Uma navegação na página é iniciada a partir de um link, um script ou um form
 
 As seguintes atualizações do Windows são necessárias para esta política:
 
+- Windows 11
 - Windows 10 versão 1909 e 1903, Windows Server versão 1909 e 1903 ([KB4532695](https://support.microsoft.com/help/4532695))
 - Windows 10 versão 1809, Windows Server versão 1809, Windows Server 2019 ([KB4534321](https://support.microsoft.com/help/4534321))
 - Windows 10 versão 1803 ([KB4534308](https://support.microsoft.com/help/4534308))
 - Windows 10 versão 1709 ([KB4534318](https://support.microsoft.com/help/4534318))
-
 
 ## <a name="about-this-policy"></a>Sobre essa política
 
@@ -60,7 +60,7 @@ Para manter as navegações automáticas ou toda a navegação na página no mod
 
    - **Padrão** - Apenas sites configurados para abrir no modo Internet Explorer serão abertos nesse modo. Qualquer site não configurado para abrir no modo Internet Explorer será redirecionado de volta ao Microsoft Edge.
    - **Manter apenas navegações automáticas no modo Internet Explorer** - Use essa opção se desejar a experiência padrão, exceto que todas as navegações automáticas (como redirecionamentos 302) para sites não configurados serão mantidas no modo Internet Explorer.
-   - **Mantenha toda a navegação** na página no modo Internet Explorer **_(Menos Recomendado)_** – Todas as navegação de páginas carregadas no modo IE para sites não configurados são mantidas no modo Internet Explorer.
+   - **Mantenha toda a navegação** na página no modo Internet Explorer (Menos Recomendado **_)_** – Todas as navegação de páginas carregadas no modo IE para sites não configurados são mantidas no modo Internet Explorer.
 
 6. Clique em **OK** ou **Aplicar** para salvar as configurações de política.
 

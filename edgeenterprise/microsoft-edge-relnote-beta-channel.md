@@ -1,21 +1,21 @@
 ---
 title: Notas da versão do Microsoft Edge para canal beta
-ms.author: aguta
+ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 01/07/2022
+ms.date: 03/14/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: ddb745c206dc392dc1dbb46a0522db9648ba624e
-ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.openlocfilehash: 8633a5f15fe737a64a0160de714c1c4e53541482
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "12297709"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445705"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão do canal do Microsoft Edge beta
 
@@ -23,6 +23,111 @@ Estas notas de versão fornecem informações sobre os novos recursos e atualiza
 
 > [!NOTE]
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-990115039-march-10"></a>Versão 99.0.1150.39: 10 de março
+
+### <a name="feature-updates"></a>Atualizações de recursos
+
+- **Melhorias na experiência de Gerenciamento de Lista de Sites na Nuvem para Modo IE.** Identifique lacunas em sua lista de sites corporativos configurando relatórios de comentários de site com as políticas [InternetExplorerIntegrationCloudUserSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudusersitesreporting) e [InternetExplorerIntegrationCloudNeutralSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudneutralsitesreporting) . Você pode exibir URLs de lista de sites locais de usuários e URLs de sites neutros potencialmente configuradas incorretamente na experiência de listas de sites Microsoft Edge no Centro de Administração Microsoft 365. Para saber mais, confira [Exibir comentários do site no Administração Microsoft 365 Center](/deployedge/edge-ie-mode-cloud-site-list-mgmt#view-site-feedback-on-the-microsoft-365-admin-center-1).  **Observação:** Esta é uma adoção de recursos controlados. Se você não vir esse recurso, verifique novamente à medida que continuarmos nossa adoção.
+
+## <a name="version-990115030-march-2"></a>Versão 99.0.1150.30: 2 de março
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-990115025-february-25"></a>Versão 99.0.1150.25: 25 de fevereiro
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-990115021-february-22"></a>Versão 99.0.1150.21: 22 de fevereiro
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-990115016-february-14"></a>Versão 99.0.1150.16: 14 de fevereiro
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-990115011-february-9"></a>Versão 99.0.1150.11: 9 de fevereiro
+
+### <a name="feature-updates"></a>Atualizações de recursos
+
+- **Próximo número de versão de três dígitos na cadeia de caracteres de agente do usuário.** A partir da versão 100, Microsoft Edge enviará um número de versão de três dígitos no User-Agent, por exemplo "Edg/100". A partir do Microsoft Edge 97, os proprietários de sites podem testar essa cadeia de caracteres de agente futura habilitando o sinalizador de experimento **do #force-major-version-to-100** em *edge://flags para* garantir que User-Agent lógica de análise do User-Agent seja robusta e funcione conforme esperado.
+
+- **Personalize experiências de vários perfis com preferências de perfil para sites.** Os usuários podem personalizar sua experiência de vários perfis com a capacidade de criar uma lista personalizada de sites para alternar perfis automáticos em Microsoft Edge.
+
+- **Compartilhamento bidirecional de cookie para modo IE.** Esse recurso expande o recurso de compartilhamento de cookies já disponível e permite que os usuários sincronizem cookies de sessão específicos do modo Internet Explorer/IE para Microsoft Edge. Para obter mais informações, consulte [Compartilhamento de cookies entre o Microsoft Edge e o Internet Explorer](/deployedge/edge-ie-mode-add-guidance-cookieshare).
+
+- **Navegue por documentos PDF usando miniaturas de página.** Agora você poderá navegar pelo documento PDF usando miniaturas que representam as páginas. Essas miniaturas aparecerão no painel no lado esquerdo do leitor de PDF.
+
+- **Configure a lista de domínios para os quais a interface do usuário (interface do usuário) do gerenciador de senhas para Salvar e Preencher será desabilitada.** Use a [política PasswordManagerBlocklist](/deployedge/microsoft-edge-policies#passwordmanagerblocklist) para configurar a lista de domínios (esquemas HTTP/HTTPS e nomes de host) onde Microsoft Edge deve desabilitar o gerenciador de senhas. Isso significa que os fluxos de trabalho Salvar e Preencher serão desabilitados, o que garante que as senhas desses sites não possam ser salvas ou preenchidas automaticamente em formulários da Web.
+
+- **Atualizar extensões para o Microsoft Edge de complementos usando API (em visualização pública).** Você pode integrar essas API diretamente ao pipeline de com build e publicar atualizações de pacote no site Microsoft Edge de complementos. Para saber mais, consulte [Using the Microsoft Edge add-ons API (in private preview)](/microsoft-edge/extensions-chromium/publish/api/using-addons-api)
+
+### <a name="policy-updates"></a>Atualizações de política
+
+#### <a name="new-policies"></a>Novas Políticas
+
+- [AllowGamesMenu](/DeployEdge/microsoft-edge-policies#allowgamesmenu) - Permitir que os usuários acessem o menu de jogos
+- [DoNotSilentlyBlockProtocolsFromOrigins](/DeployEdge/microsoft-edge-policies#donotsilentlyblockprotocolsfromorigins) - Definir uma lista de protocolos que não podem ser bloqueados silenciosamente pela proteção anti-inundação
+- [HubsSidebarEnabled](/DeployEdge/microsoft-edge-policies#hubssidebarenabled) - Barra lateral Mostrar Hubs
+- [InternetExplorerIntegrationCloudNeutralSitesReporting](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudneutralsitesreporting) - Configure reporting of potentially misconfigured neutral site URLs to the M365 Admin Center Site Lists app
+- [InternetExplorerIntegrationCloudUserSitesReporting](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudusersitesreporting) - Configurar relatórios de entradas de lista de usuários do modo IE para o aplicativo Listas de Sites do Centro de Administração do M365
+- [PasswordManagerBlocklist](/DeployEdge/microsoft-edge-policies#passwordmanagerblocklist) - Configurar a lista de domínios para os quais a interface do usuário do gerenciador de senhas (Salvar e Preencher) será desabilitada
+- [RelatedMatchesCloudServiceEnabled](/DeployEdge/microsoft-edge-policies#relatedmatchescloudserviceenabled) - Configure Related Matches in Find on Page
+- [SignInCtaOnNtpEnabled](/DeployEdge/microsoft-edge-policies#signinctaonntpenabled) - Habilitar a caixa de diálogo Habilitar entrar clique em ação
+- [UserAgentReduction](/DeployEdge/microsoft-edge-policies#useragentreduction) - Habilitar ou desabilitar a User-Agent Redução
+
+## <a name="version-980110848-february-8"></a>Versão 98.0.1108.48: 8 de fevereiro
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-980110843-february-3"></a>Versão 98.0.1108.43: 3 de fevereiro
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-980110842-february-2"></a>Versão 98.0.1108.42: 2 de fevereiro
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-980110839-january-31"></a>Versão 98.0.1108.39: 31 de janeiro
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-980110833-january-24"></a>Versão 98.0.1108.33: 24 de janeiro
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-980110827-january-19"></a>Versão 98.0.1108.27: 19 de janeiro
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-980110823-january-14"></a>Versão 98.0.1108.23: 14 de janeiro
+
+### <a name="feature-updates"></a>Atualizações de recursos
+
+- **Aprimora sua segurança na Web.** Um modo de navegação no Microsoft Edge em que a segurança do navegador tem prioridade, dando a você uma camada extra de proteção ao navegar na Web. Os administradores podem aplicar as seguintes Políticas de Grupo às áreas de trabalho do usuário final (Windows, macOS e Linux) para ajudar a proteger contra zero dias. Essas políticas também fazem com que sites importantes e aplicativos de linha de negócios continuem a funcionar conforme o esperado. Esse recurso é um grande passo à frente porque permite reduzir os dias ativos imprevistos (com base nas tendências históricas). Quando ligado, esse recurso traz a Proteção de Pilha imposta por hardware, o AcG (Proteção de Código Arbitrário) e o CfG (Content Flow Guard) como suporte a mitigações de segurança para aumentar a segurança dos usuários na Web.
+Políticas de grupo:
+  - [EnhanceSecurityMode](/DeployEdge/microsoft-edge-policies#enhancesecuritymode)
+  - [EnhanceSecurityModeBypassListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodebypasslistdomains)
+  - [EnhanceSecurityModeEnforceListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodeenforcelistdomains)
+
+- **Senha primária personalizada.** O navegador já tem a funcionalidade em que os usuários podem adicionar uma etapa de autenticação antes que as senhas salvas sejam preenchidas automaticamente em formulários da Web. Isso adiciona outra camada de privacidade e ajuda a impedir que usuários não autorizados usem senhas salvas para fazer logon em sites. A senha primária personalizada é uma evolução desse mesmo recurso, onde os usuários agora poderão usar uma cadeia de caracteres personalizada de sua escolha como senha principal. Depois de habilitado, os usuários inserirão essa senha para autenticar a si mesmos e terão suas senhas salvas preenchidas automaticamente em formulários da Web.
+
+- **Barras de rolagem de sobreposição adicionadas Microsoft Edge.** Atualizamos nossas barras de rolagem com um design baseado em sobreposição. Os usuários podem ativar esse recurso *em edge://flags*.
+
+### <a name="policy-updates"></a>Atualizações de política
+
+#### <a name="new-policies"></a>Novas Políticas
+
+- [AddressBarEditingEnabled](/DeployEdge/microsoft-edge-policies#addressbareditingenabled) - Configurar a edição da barra de endereços.
+- [EdgeFollowEnabled](/DeployEdge/microsoft-edge-policies#edgefollowenabled) - Habilitar o serviço Follow Microsoft Edge.
+- [EnhanceSecurityMode](/DeployEdge/microsoft-edge-policies#enhancesecuritymode) - aprimora o estado de segurança Microsoft Edge.
+- [EnhanceSecurityModeBypassListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodebypasslistdomains) - Configure the list of domains for which enhance security mode will not be enforced.
+- [EnhanceSecurityModeEnforceListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodeenforcelistdomains) - Configure the list of domains for which enhance security mode will always be enforced.
+- [InAppSupportEnabled](/DeployEdge/microsoft-edge-policies#inappsupportenabled) - Suporte no aplicativo Habilitado.
+- [MicrosoftEdgeInsiderPromotionEnabled](/DeployEdge/microsoft-edge-policies#microsoftedgeinsiderpromotionenabled) - Microsoft Edge Promoção do Insider Habilitada.
+- [PrintStickySettings](/DeployEdge/microsoft-edge-policies#printstickysettings) - Configurações pegativas de visualização de impressão.
+- [SandboxExternalProtocolBlocked](/DeployEdge/microsoft-edge-policies#sandboxexternalprotocolblocked) - Permitir Microsoft Edge bloquear as navegação para protocolos externos em um iframe em áreas de segurança.
+- [U2fSecurityKeyApiEnabled](/DeployEdge/microsoft-edge-policies#u2fsecuritykeyapienabled) - Permitir o uso da API de chave de segurança U2F preterida.
 
 ## <a name="version-970107254-january-5"></a>Versão 97.0.1072.54: 5 de janeiro
 
@@ -42,107 +147,10 @@ Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-970107228-december-8"></a>Versão 97.0.1072.28: 8 de dezembro
 
-Vários bugs e problemas de desempenho corrigidos.
-
-## <a name="version-970107221-december-1"></a>Versão 97.0.1072.21: 1 de dezembro
-
-### <a name="feature-updates"></a>Atualizações de recursos
-
-- **Use o perfil atual para entrar em sites quando várias contas de trabalho ou de estudante estão conectados em um dispositivo.** Quando várias contas de trabalho ou de estudante são assinadas em um dispositivo, os usuários serão solicitados a escolher uma conta no selador de conta para continuar suas visitas aos sites. Nesta versão, os usuários serão solicitados a permitir Microsoft Edge entrar nos sites automaticamente com a conta de trabalho e de estudante que está assinada no perfil atual. Os usuários podem ativar e desativar esse recurso **em preferências Configurações/Perfil.**
-
-- **Adicione suporte para a Prevenção contra Perda de Dados do Microsoft Endpoint (DLP) no macOS.** A aplicação da política de DLP do Ponto de Extremidade da Microsoft está disponível de forma nativa no macOS.
-
-- **Abra arquivos PDF assinados digitalmente.**  Assinaturas digitais são usadas extensivamente para validar a autenticidade de e alterações em um documento. Os usuários podem validar as assinaturas para arquivos PDF diretamente do navegador, sem a necessidade de nenhum complemento.
-
-- **Citações em Microsoft Edge.** As fontes de referência para pesquisa são um requisito comum para os alunos. Eles precisam gerenciar muitas referências e fontes de pesquisa, que não são tarefas fáceis. Eles também precisam traduzir essas citações para formatos de citação apropriados, como APA, MLA e Chicago. Esse novo recurso "Citações" no Microsoft Edge (agora em Visualização) oferece aos alunos uma melhor maneira de gerenciar e gerar citações à medida que pesquisam online. Com citações ativas em Coleções ou Configurações e mais **(Alt-F),** o Microsoft Edge gera automaticamente citações que os alunos podem usar posteriormente para que possam se concentrar em suas pesquisas. Quando terminarem, eles podem compilar facilmente essas citações em um produto final. Para obter mais informações, consulte [Previewing Citations in Microsoft Edge](https://blogs.windows.com/msedgedev/2021/11/04/preview-citations-feature-edge/).
-
-### <a name="policy-updates"></a>Atualizações de política
-
-#### <a name="new-policies"></a>Novas Políticas
-
-- [AccessibilityImageLabelsEnabled](/DeployEdge/microsoft-edge-policies#accessibilityimagelabelsenabled) - Obter Descrições de Imagem da Microsoft Habilitada
-- [CORSNonWildcardRequestHeadersSupport](/DeployEdge/microsoft-edge-policies#corsnonwildcardrequestheaderssupport) - Suporte ao header de solicitação não curinga do CORS habilitado
-- [EdgeDiscoverEnabled](/DeployEdge/microsoft-edge-policies#edgediscoverenabled) - Recurso Descobrir no Microsoft Edge
-- [EdgeEnhanceImagesEnabled](/DeployEdge/microsoft-edge-policies#edgeenhanceimagesenabled) - Aprimorar imagens habilitadas
-- [InternetExplorerModeTabInEdgeModeAllowed](/DeployEdge/microsoft-edge-policies#internetexplorermodetabinedgemodeallowed) - Permitir que os sites configurados para o modo Internet Explorer abram no Microsoft Edge
-- [SameOriginTabCaptureAllowedByOrigins](/DeployEdge/microsoft-edge-policies#sameorigintabcaptureallowedbyorigins) - Permitir a captura da guia Mesma Origem por essas origens
-- [ScreenCaptureAllowedByOrigins](/DeployEdge/microsoft-edge-policies#screencaptureallowedbyorigins) - Permitir captura de desktop, janela e tabulação por essas origens
-- [SerialAllowAllPortsForUrls](/DeployEdge/microsoft-edge-policies#serialallowallportsforurls) - Conceder automaticamente permissão aos sites para conectar todas as portas seriais
-- [SerialAllowUsbDevicesForUrls](/DeployEdge/microsoft-edge-policies#serialallowusbdevicesforurls) - Conceder automaticamente permissão aos sites para se conectar a dispositivos seriais USB
-- [SmartScreenDnsRequestsEnabled](/DeployEdge/microsoft-edge-policies#smartscreendnsrequestsenabled) - Habilitar Microsoft Defender SmartScreen de DNS
-- [TabCaptureAllowedByOrigins](/DeployEdge/microsoft-edge-policies#tabcaptureallowedbyorigins) - Permitir captura de tabulação por essas origens
-- [WebSQLInThirdPartyContextEnabled](/DeployEdge/microsoft-edge-policies#websqlinthirdpartycontextenabled) - Force WebSQL em contextos de terceiros a serem reabilitar
-- [WindowCaptureAllowedByOrigins](/DeployEdge/microsoft-edge-policies#windowcaptureallowedbyorigins) - Permitir captura de janela e tabulação por essas origens
-
-## <a name="version-960105434-november-23"></a>Versão 96.0.1054.34: 23 de novembro
-
-Vários bugs e problemas de desempenho corrigidos.
-
-## <a name="version-960105426-november-17"></a>Versão 96.0.1054.26: 17 de novembro
-
-Vários bugs e problemas de desempenho corrigidos.
-
-## <a name="version-960105424-november-16"></a>Versão 96.0.1054.24: 16 de novembro
-
-Vários bugs e problemas de desempenho corrigidos.
-
-## <a name="version-960105413-november-5"></a>Versão 96.0.1054.13: 5 de novembro
-
-Vários bugs e problemas de desempenho corrigidos.
-
-## <a name="version-96010548-november-1"></a>Versão 96.0.1054.8: 1 de novembro
-
-### <a name="feature-updates"></a>Atualizações de recursos
-
-- **Iniciar o Progressive Web App (PWA) diretamente por meio de links de protocolo.** Permitir que os PWAs instalados manipularem links que usam um protocolo específico para uma experiência mais integrada.
-
-- **Saiba como resolver problemas de matemática com o Solver de Matemática.** Estamos animados em anunciar que você pode usar o Resolvedor de Matemática Microsoft Edge obter ajuda com uma ampla variedade de conceitos matemáticos. Esses conceitos variam de equações aritméticas e quadráticas primárias a trigonometria e cálculo. O Solver de Matemática permite que você tire uma foto de um problema de matemática manuscrita ou impressa e, em seguida, fornece uma solução instantânea com instruções passo a passo para ajudá-lo a aprender a alcançar a solução sem ajuda. O Math Solver também vem com um teclado matemático que você pode usar para digitar facilmente problemas matemáticos. Esse teclado elimina a necessidade de pesquisar em torno de um teclado tradicional para encontrar os caracteres matemáticos necessários. Depois de resolver seu problema, o Math Solver fornece opções para continuar a aprender com quizzes, planilhas e tutoriais de vídeo.
-
-- **Realçamento de forma livre em PDFs.** A experiência de exibição e marcação em PDF é aprimorada com a adição de realçadores de forma livre. Você pode realçar seções em PDFs que não têm acesso e documentos verificados.
-
-- **Proteção de Pilha imposta por hardware.**  Microsoft Edge começar a oferecer suporte a um modo de navegação ainda mais seguro que usa o fluxo de controle dependente de hardware para processos do navegador em hardware suportado (Intel 11th Gen. ou AMD Zen 3). Observação: como se trata de uma Rollout de Recursos Controlados, talvez você não perceba que esse recurso está habilitado em todos os dispositivos. Você pode habilitar ou desabilitar a Proteção de Pilha imposta por hardware manipulando o IFEO (Image File Execution Options) usando a política de grupo.
-
-- **Nova caixa de diálogo de aviso para sites typosquatting.** O navegador agora mostrará um aviso em alguns sites com URLs semelhantes a outros sites. Essa interface do usuário usa heurísticas do lado do cliente para avisar os usuários sobre sites que podem estar spoofando sites populares. Para obter mais informações, consulte [O que é typosquatting?](https://support.microsoft.com/topic/what-is-typosquatting-54a18872-8459-4d47-b3e3-d84d9a362eb0).
-
-- **Handoff aprimorado entre o modo IE e o navegador moderno.**  A partir dessa versão do Microsoft Edge, as navegação entre o Microsoft Edge e o modo Internet Explorer incluirão dados de formulário e cabeçalhos HTTP adicionais. Os headers de referência, os dados postados, os dados de formulários e os métodos de solicitação serão encaminhados corretamente entre as duas experiências. Você pode especificar quais tipos de dados devem ser incluídos usando a [política InternetExplorerIntegrationComplexNavDataTypes.](/deployedge/microsoft-edge-policies#internetexplorerintegrationcomplexnavdatatypes) Para obter mais informações, consulte esta perguntas frequentes: Meu aplicativo requer a transferência de dados POST entre o [modo IE e Microsoft Edge](./edge-ie-mode-faq.md#my-application-requires-transferring-post-data-between-ie-mode-and-microsoft-edge-is-this-supported).
-
-- **Gerenciamento de Lista de Sites na Nuvem para modo IE na Visualização Pública.**  O Gerenciamento de Lista de Sites na Nuvem permite que você gerencie suas listas de sites para o modo IE na nuvem sem precisar de uma infraestrutura local para hospedar a lista de sites da sua organização. Você pode acessar o recurso Gerenciamento de Lista de Sites na Nuvem usando Microsoft Edge experiência de Listas de Sites no Administração Microsoft 365 Center. Para saber mais, consulte o artigo Gerenciamento de Lista de Sites na Nuvem [para modo IE (Visualização Pública).](./edge-ie-mode-cloud-site-list-mgmt.md)
-
-- **Atualize Microsoft Edge WebWiew2 usando o WSUS.** Os administradores de IT que usam o WSUS para atualizar Microsoft Edge também poderão atualizar Microsoft Edge WebView2 usando o WSUS. Esse recurso oferece aos administradores um processo de manutenção mais fácil para dispositivos offline.
-
-- **Atualizações do WSUS para Server.** As atualizações do WSUS e do Catálogo para canais Microsoft Edge (Estável, Beta, Dev) agora serão aplicadas Windows SKUs do servidor que tenham Microsoft Edge instalados, incluindo o Windows Server 2022. Para obter mais informações sobre como configurar as atualizações do WSUS para Microsoft Edge, consulte [Update Microsoft Edge](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge?bc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Fbreadcrumb%2Ftoc.json&toc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Ftoc.json#update-microsoft-edge).
-
-### <a name="policy-updates"></a>Atualizações de política
-
-#### <a name="new-policies"></a>Novas Políticas
-
-- [ApplicationGuardUploadBlockingEnabled](/DeployEdge/microsoft-edge-policies#applicationguarduploadblockingenabled) - Impede que os arquivos são carregados enquanto estão no Application Guard.
-- [AudioProcessHighPriorityEnabled](/DeployEdge/microsoft-edge-policies#audioprocesshighpriorityenabled) - Permitir que o processo de áudio seja executado com prioridade acima do normal em Windows.
-- [AutoLaunchProtocolsComponentEnabled](/DeployEdge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) - Componente autoLaunch Protocols Enabled.
-- [EfficiencyMode](/DeployEdge/microsoft-edge-policies#efficiencymode) - Configure quando o modo de eficiência deve ficar ativo.
-- [ForceSyncTypes](/DeployEdge/microsoft-edge-policies#forcesynctypes) - Configure a lista de tipos incluídos para sincronização.
-- [InternetExplorerIntegrationComplexNavDataTypes](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcomplexnavdatatypes) - Configure whether form data and HTTP headers will be sent when entering or exiting Internet Explorer mode.
-- [InternetExplorerModeToolbarButtonEnabled](/DeployEdge/microsoft-edge-policies#internetexplorermodetoolbarbuttonenabled) - Mostrar o botão Recarregar no modo Internet Explorer na barra de ferramentas.
-- [PrintPostScriptMode](/DeployEdge/microsoft-edge-policies#printpostscriptmode) - Imprimir no PostScript Modo.
-- [PrintRasterizePdfDpi](/DeployEdge/microsoft-edge-policies#printrasterizepdfdpi) - Imprimir em Rasterize PDF DPI.
-- [RendererAppContainerEnabled](/DeployEdge/microsoft-edge-policies#rendererappcontainerenabled) - Habilitar renderador no contêiner de aplicativos.
-- [SharedLinksEnabled](/DeployEdge/microsoft-edge-policies#sharedlinksenabled) - Mostrar links compartilhados de Microsoft 365 aplicativos no Histórico.
-- [TyposquattingCheckerEnabled](/DeployEdge/microsoft-edge-policies#typosquattingcheckerenabled) - Configure Edge TyposquattingChecker.
-
-<!-- end major 96 --->
-
-## <a name="version-950102038-october-28"></a>Versão 95.0.1020.38: 28 de outubro
-
-Vários bugs e problemas de desempenho corrigidos.
-
-## <a name="version-950102020-october-11"></a>Versão 95.0.1020.20: 11 de outubro
-
-Vários bugs e problemas de desempenho corrigidos.
-
-## <a name="version-950102014-october-5"></a>Versão 95.0.1020.14: 5 de outubro
-
 Correção de vários bugs e problemas de desempenho.
 
+<!--- Version 97.0.1072.21: December 1 to Version 96.0.1054.13: November 5  --->
+<!--- archive from Version 96.0.1054.8: November 1 to Version 95.0.1020.14: October 5  --->
 <!-- archive from version 95.0.1020.9: September 28 to version 94.0.992.14: September 7 ---->
 <!-- archive from Version 94.0.992.9: September 2 to Version 92.0.902.40: July 6 -->
 <!--Archive on Oct 27 From Version 92.0.902.22: June 21 to Version 89.0.774.23: February 8  -->
@@ -154,3 +162,4 @@ Correção de vários bugs e problemas de desempenho.
 ## <a name="see-also"></a>Ver também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
+

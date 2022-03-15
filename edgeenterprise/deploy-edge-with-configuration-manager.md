@@ -3,19 +3,19 @@ title: Implantar o Microsoft Edge usando o System Center Configuration Manager
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 06/29/2021
+ms.date: 02/24/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Saiba como implantar Microsoft Edge com o SCCM (System Center Configuration Manager).
-ms.openlocfilehash: b0efa986c7f230f455d052f8e003616e081e324a
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: aa5272ebbd05a48a5418404ab8827d0b3795b2c9
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978564"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445715"
 ---
 # <a name="deploy-microsoft-edge-using-system-center-configuration-manager"></a>Implantar o Microsoft Edge usando o System Center Configuration Manager
 
@@ -31,6 +31,9 @@ Revise as informações em [Introdução ao gerenciamento de aplicativos no Conf
 Baixe os arquivos de instalação do Microsoft Edge (**MicrosoftEdgeDevEnterpriseX64.msi** e/ou **MicrosoftEdgeDevEnterpriseX86.msi**) da [página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise).
 
 Armazene os arquivos de instalação do Microsoft Edge em um local de rede acessível.
+
+> [!TIP]
+> Use o [guia Microsoft Edge de configuração](https://assistants.microsoft.com/microsoftedgesetupguide) para automatizar as etapas do Configuration Manager.
 
 ## <a name="create-the-application"></a>Criar o aplicativo
 

@@ -3,19 +3,19 @@ title: Guia Passo a Passo do Enterprise Site Discovery
 ms.author: collw
 author: appcompatguy
 manager: saudm
-ms.date: 06/29/2021
+ms.date: 01/19/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Usar o Enterprise Site Discovery para se Preparar para o Modo IE
-ms.openlocfilehash: bbcf829e8c2504286ea68df673dabd9b296887c9
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: a93569f455e5671a2d4adf8f5f70238d3f23143d
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978615"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445595"
 ---
 # <a name="enterprise-site-discovery-step-by-step-guide"></a>Guia Passo a Passo do Enterprise Site Discovery
 
@@ -119,7 +119,7 @@ Agora que seus dispositivos estão gerando dados, é hora de coletar esses dados
 7. Na caixa de diálogo **Conectar-se à Instrumentação de Gerenciamento do Windows (WMI)**, digite o nome de um computador onde o Enterprise Site Discovery está configurado. Se você estiver se conectando a outro computador, precisará de credenciais com permissão para acessar o WMI.
 8. Na caixa de texto **Namespace WMI**, digite **root\cimv2\IETelemetry**
 9. Escolha **Conectar**
-10. Na caixa de diálogo **Adicionar Classe de Inventário de Hardware**, na lista **Classes de inventário**, selecione as classes WMI **IESystemINfo**, **IEUrlInfo** e **IECountInfo*.
+10. Na caixa **de diálogo Adicionar** Classe de Inventário de Hardware, **** na lista De classes inventário, selecione as classes WMI **IESystemINfo**, **IEUrlInfo** e **IECountInfo**.
 11. Clique em **OK** para fechar a caixa de diálogo **Classificadores de classe** e as outras caixas de diálogo abertas.
 
 Depois que o cliente atualizar as configurações do ponto de gerenciamento, os dados serão relatados quando o próximo inventário de hardware for executado (por padrão a cada sete dias).
