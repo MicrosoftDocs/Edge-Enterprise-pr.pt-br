@@ -3,23 +3,23 @@ title: Configurar o Microsoft Edge para Windows
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 10/19/2021
+ms.date: 03/01/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Saiba como definir as configurações de política do Microsoft Edge em dispositivos Windows
-ms.openlocfilehash: 05e12b157b434fcad53ddd25922dc8f394ad3157
-ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
+ms.openlocfilehash: ed89a1d356fcfa7b6bf3681a7d75848ed2c94f31
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "12107456"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445325"
 ---
 # <a name="configure-microsoft-edge-policy-settings-on-windows"></a>Definir configurações de política do Microsoft Edge no Windows
 
-Use as informações a seguir para definir as configurações de política do Microsoft Edge em seus dispositivos Windows.
+Use as informações a seguir para definir as configurações de política do Microsoft Edge em seus dispositivos Windows. Se você ainda não configurou o Microsoft Edge, consulte o [guia de configuração do Microsoft Edge](https://go.microsoft.com/fwlink/?linkid=2187484).
 
 > [!NOTE]
 > Este artigo aplica-se ao Microsoft Edge versão 77 ou posterior.
@@ -48,7 +48,7 @@ Se você quiser definir as configurações de política do Microsoft Edge no Act
 
 Quando você adiciona os arquivos de modelo administrativo ao local adequado, as configurações de política do Microsoft Edge ficam imediatamente disponíveis no Editor de Política de Grupo.
 
-Acesse a [página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise) para baixar o arquivo de modelos de política do Microsoft Edge(*MicrosoftEdgePolicyTemplates.cab*) e extrair o conteúdo.
+Acesse a [página inicial do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise) para baixar o arquivo de modelos de política do Microsoft Edge e extrair o conteúdo.
 
 #### <a name="add-the-administrative-template-to-active-directory"></a>Adicionar o modelo administrativo ao Active Directory
 
