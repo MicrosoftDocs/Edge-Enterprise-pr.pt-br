@@ -3,19 +3,19 @@ title: Configurar a sincronização do Microsoft Edge Enterprise
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 11/10/2021
+ms.date: 02/16/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Opções de administrador e de usuário para configurar o Microsoft Edge para sincronizar os favoritos, senhas e outros dados do navegador.
-ms.openlocfilehash: b6f7544d78fe82e0e632b04ad8380196725f2bbe
-ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.openlocfilehash: abb81c28c0e4e45423dd7285e929ac82a9773657
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "12298179"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445615"
 ---
 # <a name="configure-microsoft-edge-enterprise-sync"></a>Configurar a sincronização do Microsoft Edge Enterprise
 
@@ -52,11 +52,7 @@ A sincronização do Microsoft Edge das contas do Azure Active Directory (Azure 
   
   - Para clientes que têm apenas o Azure AD P1 ou P2, é necessário habilitar o recurso roaming de estado do Azure AD Enterprise para usar Microsoft Edge Enterprise Sync. Para saber mais, confira o artigo [Habilitar Enterprise Roaming de Estado Azure Active Directory](/azure/active-directory/devices/enterprise-state-roaming-enable).
 
-- Microsoft 365 Business Premium, Business Standard ou **Business Basic \***
-
-   > [!IMPORTANT]
-   > **\**_ Encontramos um problema com o _* Business Basic** para Sincronização e estamos corrigindo isso. Entretanto, isso não está funcionando como pretendido.
-
+- Microsoft 365 Business Premium, Business Standard ou Business Basic
 - Office 365 E1 e superior
 - Proteção de informações do Azure (AIP) (P1 ou P2)
 - Todas as assinaturas EDU (Microsoft Apps para Estudantes ou Docentes, Exchange Online para Estudantes ou Docentes, O365 A1 ou superior, Microsoft 365 A1 ou superior, Proteção de Informações do Azure P1 ou P2 para Estudantes ou Docentes)

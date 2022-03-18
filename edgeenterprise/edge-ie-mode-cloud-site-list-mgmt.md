@@ -3,19 +3,19 @@ title: Gerenciamento de Lista de Sites na Nuvem para modo Internet Explorer (IE)
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 12/15/2021
+ms.date: 03/08/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Saiba como configurar e usar o Gerenciamento de Lista de Sites na Nuvem para o modo IE usando o Centro de administração do Microsoft 365.
-ms.openlocfilehash: 4c37c2b3ec98252f430bf635456c6849def0a0e3
-ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.openlocfilehash: dd8e083b3b7919a56c013ffd0c389dcd8d94a745
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "12298099"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445735"
 ---
 # <a name="cloud-site-list-management-for-internet-explorer-ie-mode"></a>Gerenciamento de Lista de Sites na Nuvem para modo Internet Explorer (IE)
 
@@ -32,9 +32,6 @@ Para saber mais, assista ao próximo vídeo.
 
 [![Novo Gerenciamento de Lista de Sites na Nuvem para o modo IE](media/edge-ie-mode-cloud-site-list-mgmt/0.png)](https://www.youtube.com/watch?v=p3FyGvsNKC8 "|::ref1::|").
 
-> [!NOTE]
-> No momento, essa experiência está sendo implantada para todos os usuários e deve ser concluída em meados de dezembro.
-
 Essa experiência permite armazenar a lista de sites da sua organização em um local de nuvem compatível, em vez de precisar de uma infraestrutura local para hospedar sua ’ lista de sites. Você pode criar, importar, exportar listas de sites e auditar alterações nas entradas da lista de sites por meio do Centro de administração do Microsoft 365. Você pode publicar várias listas de sites na nuvem e usar a política de grupo para atribuir diferentes grupos de dispositivos para usar listas diferentes.
 
 ## <a name="prerequisites"></a>Pré-requisitos
@@ -43,11 +40,16 @@ Os pré-requisitos a seguir se aplicam a esse recurso.
 
 1. Os clientes devem ter um locatário do Azure Active Directory.
 2. Os administradores devem ter Microsoft Edge versão 93 ou superior instalado e a versão mais recente dos [arquivos de política](https://aka.ms/edgeenterprise).
-3. Os administradores precisam ser um [Administrador do Edge](/azure/active-directory/roles/permissions-reference#edge-administrator) ou um [Administrador Global](/azure/active-directory/roles/permissions-reference#global-administrator) no locatário para acessar a experiência de listas de sites do Microsoft Edge.
+3. Os administradores precisam ser um [Administrador do Microsoft Edge](/azure/active-directory/roles/permissions-reference#edge-administrator) ou um [Administrador Global](/azure/active-directory/roles/permissions-reference#global-administrator) no locatário para acessar a experiência de listas de sites do Microsoft Edge.
 
 ## <a name="cloud-site-list-management-experience"></a>Experiência de Gerenciamento de Lista de Sites na Nuvem
 
-Há três aspectos da experiência.
+Há quatro aspectos da experiência de Gerenciamento de Lista de Sites na Nuvem:
+
+- Publicar a lista de sites corporativos na nuvem.
+- Associar a lista de sites na nuvem ao Microsoft Edge.
+- Gerenciando o conteúdo da lista de sites no Centro de administração do Microsoft 365.
+- Exibindo os comentários do site no Centro de administração do Microsoft 365.
 
 ### <a name="publish-enterprise-site-list-to-the-cloud"></a>Publicar a lista de sites corporativos na nuvem
 
@@ -64,6 +66,10 @@ Com Microsoft Edge versão 93, os administradores podem usar a configuração [I
 
 Os administradores podem criar uma nova lista ou importar uma lista de sites existente para a Microsoft Edge de listas de sites. Eles podem adicionar, editar, excluir o conteúdo da lista de sites e exibir o histórico de comentários para controlar alterações em entradas individuais. A próxima seção explica como optar pela visualização pública e acessar Microsoft Edge experiência de listas de sites no Centro de administração do Microsoft 365.
 
+### <a name="view-site-feedback-on-the-microsoft-365-admin-center"></a>Exibir comentários do site no Centro de administração do Microsoft 365
+
+Com a versão 99 do Microsoft Edge, os administradores podem usar as políticas [InternetExplorerIntegrationCloudUserSitesReporting](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudusersitesreporting) e [InternetExplorerIntegrationCloudNeutralSitesReporting](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudneutralsitesreporting) para identificar lacunas em sua lista de sites com comentários do site. Eles podem exibir sites que os usuários adicionaram às [listas de sites locais](/deployedge/edge-ie-mode-local-site-list) e sites neutros potencialmente configurados incorretamente.
+
 ## <a name="publish-enterprise-site-list-to-the-cloud"></a>Publicar a lista de sites corporativos na nuvem
 
 Use as etapas a seguir como um guia para criar uma lista de sites, importar uma lista de sites e publicar uma lista de sites. Antes de concluir essas etapas, entre no Centro de administração do Microsoft 365.
@@ -73,7 +79,7 @@ Use as etapas a seguir como um guia para criar uma lista de sites, importar uma 
 3. Você verá a opção de **listas de sites do Microsoft Edge**.
 
    > [!NOTE]
-   > Se você não vir essa opção na página De configurações da Organização enquanto estamos implantando em todas as instâncias de produção, você precisará optar pela **Versão direcionada**. Se você não vir Microsoft Edge opção de **listas de sites do Microsoft Edge**, confira as perguntas frequentes: [não vejo a opção "listas de sites do Microsoft Edge" na página "Configurações da organização" no Centro de Administração Microsoft 365. Por que isso?](#i-do-not-see-the-microsoft-edge-site-lists-option-in-the-org-settings-page-on-microsoft-365-admin-center-why-is-that).
+   > Se você não vir essa opção na página De configurações da Organização enquanto estamos implantando em todas as instâncias de produção, você precisará optar pela **Versão direcionada**. Se você não vir a opção **listas de sites do Microsoft Edge**, confira as perguntas frequentes: [não vejo a opção "listas de sites do Microsoft Edge" na página "Configurações da organização" no Centro de administração do Microsoft 365. Por que isso?](#i-dont-see-the-microsoft-edge-site-lists-option-in-the-org-settings-page-on-microsoft-365-admin-center-why-is-that).
 
 ### <a name="steps-to-create-a-site-list"></a>Etapas para criar uma lista de sites
 
@@ -89,7 +95,7 @@ Use as etapas a seguir como um guia para criar uma lista de sites, importar uma 
 3. No painel direito, selecione **Procurar**.
 4. Selecione o arquivo que você deseja importar e selecione **Carregar** na parte inferior do painel.
 5. Você pode navegar pelas URLs no arquivo carregado. Se você quiser escolher um arquivo diferente, poderá selecionar **Carregar um arquivo diferente** na parte superior do painel. Se tudo estiver correto, selecione **Adicionar** na parte inferior do painel.
-6. Depois que a lista for importada, selecione **Fechar painel**. 
+6. Depois que a lista for importada, selecione **Fechar painel**.
 
 ### <a name="steps-to-publish-a-site-list"></a>Etapas para publicar uma lista de sites
 
@@ -114,6 +120,7 @@ Use as etapas a seguir para associar a lista de sites hospedados na nuvem ao Mic
 ## <a name="manage-site-list-contents-on-the-microsoft-365-admin-center"></a>Gerenciar o conteúdo da lista de sites no Centro de administração do Microsoft 365
 
 Você pode adicionar entradas de site individuais, excluir entradas do site e exibir o histórico de alterações para comentários.
+
 Se você tiver cenários híbridos que exigem que sua lista de sites seja hospedada localmente, poderá exportar sua lista de sites do Centro de administração do Microsoft 365. Use as etapas a seguir como um guia para gerenciar o conteúdo da lista de sites.
 
 ### <a name="add-individual-sites-to-the-site-list"></a>Adicionar sites individuais à lista de sites
@@ -164,9 +171,54 @@ Há cenários em que você deseja exportar uma lista de sites. Por exemplo, se v
 2. Na página resultante, você verá as entradas da lista de sites e a opção **Exportar lista**.
 3. Selecione **Exportar lista** para baixar o arquivo XML da lista de sites.
 
+## <a name="view-site-feedback-on-the-microsoft-365-admin-center"></a>Exibir comentários do site no Centro de administração do Microsoft 365
+
+A guia Comentários do site mostra os sites que os usuários estão adicionando à lista de sites do modo IE local, bem como sites neutros potencialmente configurados incorretamente relatados pelo Microsoft Edge. Você verá o endereço do site, o número de usuários que estão adicionando esse site e de qual lista de sites publicada e hospedada na nuvem os comentários vieram. Você pode agir em uma entrada individual adicionando-a a uma lista de sites existente, pausando ou excluindo os comentários. Você também pode exibir o histórico de alterações e os comentários.
+
+> [!NOTE]
+> Esse recurso está sendo implantado para todos os usuários e deve terminar de ser implantado até meados de março.
+
+### <a name="add-a-site-to-site-lists"></a>Adicionar um site a listas de sites
+
+Use as etapas a seguir para adicionar um site a uma ou mais listas de sites de comentários do site.
+
+1. Escolha a entrada que você deseja adicionar. Selecione **Adicionar a listas de sites**.  
+2. Selecione uma ou mais listas de sites a serem adicionadas na lista suspensa. Escolha o mecanismo que deve ser usado para abrir o site e adicionar comentários conforme necessário.
+3. Selecione **Adicionar site** na parte inferior do painel.
+
+   > [!NOTE]
+   > O status dessa entrada será atualizado para **Resolvido** porque foi **Adicionado**. Este site agora aparecerá nas listas de sites selecionadas.
+
+### <a name="pause-incoming-feedback-on-a-site"></a>Pausar comentários de entrada em um site
+
+Você pode adiar a ação em uma entrada pendente pausando comentários. Você pode pausar comentários por 30 dias ou indefinidamente. Use as etapas a seguir para pausar os comentários de entrada.  
+
+1. Escolha uma entrada em que você deseja pausar comentários. Selecione **Pausar Comentários**.  
+2. Adicione comentários conforme necessário e selecione por quanto tempo você gostaria de pausar comentários.  
+3. Selecione **Pausar** na parte inferior do painel.
+
+    > [!NOTE]
+    > O status dessa entrada será atualizado para **Resolvido** porque foi **Pausado**. Se você pausar por 30 dias, depois de 30 dias, se houver algum comentário de entrada, o status da entrada será atualizado novamente para **Pendente** para que você aja.
+
+### <a name="delete-feedback-on-a-site"></a>Excluir comentários em um site
+
+Use as etapas a seguir para excluir uma entrada de comentários.
+
+1. Escolha a entrada que você deseja excluir. Selecione **Excluir comentários**.
+2. Selecione **Excluir** na caixa de diálogo pop-up.
+
+    > [!NOTE]
+    > Se você excluir uma entrada, ela poderá reaparecer no futuro como comentários de entrada se os usuários continuarem a adicionar o site às listas de sites locais ou se o Microsoft Edge detectá-lo como um site neutro potencialmente configurado incorretamente.
+
+### <a name="view-the-change-history-for-site-feedback-entries"></a>Exibir o histórico de alterações para entradas do site
+
+Para exibir o histórico de alterações:
+
+- Selecione a entrada do site para a qual você deseja ver o histórico de alterações e selecione **Histórico de comentários** no painel lateral.
+
 ## <a name="faq"></a>Perguntas frequentes
 
-### <a name="i-do-not-see-the-microsoft-edge-site-lists-option-in-the-org-settings-page-on-microsoft-365-admin-center-why-is-that"></a>Não vejo a opção "listas Microsoft Edge site" na página "Configurações da organização" no Centro de Administração Microsoft 365. Por quê?
+### <a name="i-dont-see-the-microsoft-edge-site-lists-option-in-the-org-settings-page-on-microsoft-365-admin-center-why-is-that"></a>Não vejo a opção "listas de sites do Microsoft Edge" na página "Configurações da organização" no Centro de administração do Microsoft 365. Por quê?
 
 A experiência estará disponível quando a distribuição for concluída em meados de dezembro. Enquanto a experiência está sendo distribuída, você precisará optar por exibir essa experiência no Centro de Administração Microsoft 365. Você deve ser um administrador global no Microsoft 365 para aceitar.
 
@@ -197,8 +249,8 @@ A lista de sites é atualizada no Microsoft Edge a cada duas horas. Você pode a
 
 O acesso à lista de sites requer entrada explícita no navegador para o primeiro download. Em um cenário em que o usuário faz logoff depois de fazer logon, a lista de sites é armazenada em cache no Microsoft Edge. A lista permanecerá armazenada em cache mesmo se o usuário fizer logoff do Microsoft Edge de sua conta do Azure Active Directory (Azure AD). Microsoft Edge não tentará fazer fallback para o local de download não na nuvem enquanto a política de lista de sites de nuvem estiver configurada. Microsoft Edge tenta atualizar a lista de sites armazenados em cache nos seguintes horários (observe que todas as tentativas falharão se o usuário não estiver conectado ao Microsoft Edge):
 
-- 60 segundos depois de reiniciar o navegador. Se o atraso de inicialização de 60 segundos precisar ser menor, você poderá usar a política [InternetExplorerIntegrationSiteListRefreshInterval](/deployedge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval) para alterar a quantidade de atraso.
-- A cada duas horas quando o Microsoft Edge está em execução.
+- 60 segundos depois de reiniciar o navegador.
+- A cada duas horas quando o Microsoft Edge está em execução. O intervalo de atualização de 120 minutos pode ser alterado usando a política [InternetExplorerIntegrationSiteListRefreshInterval](/deployedge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval). O intervalo mínimo de atualização é de 30 minutos.
 
 ## <a name="support-and-feedback"></a>Suporte e Comentários
 
@@ -208,4 +260,3 @@ O suporte para a experiência de Gerenciamento de Lista de Sites na Nuvem é cob
 
 - [Sobre o modo IE](./edge-ie-mode.md)
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-  
