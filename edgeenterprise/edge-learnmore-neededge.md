@@ -12,7 +12,7 @@ ms.collection: M365-modern-desktop
 description: Redirecionamento do Internet Explorer para o Microsoft Edge para compatibilidade com os sites modernos
 ms.openlocfilehash: ec59380b82dc975ba3075d6e008bc0da05136f72
 ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/12/2021
 ms.locfileid: "11978600"
