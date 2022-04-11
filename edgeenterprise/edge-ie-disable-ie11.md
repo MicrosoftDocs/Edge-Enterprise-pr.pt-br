@@ -3,19 +3,19 @@ title: Desabilitar o Internet Explorer 11
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 02/15/2022
+ms.date: 04/08/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Aprenda a desabilitar o Internet Explorer 11 e usar o modo Internet Explorer no Microsoft Edge.
-ms.openlocfilehash: c5452745e362ffc71842c7b5a25b84cea48816d6
-ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
+ms.openlocfilehash: 3ddb012b48b0b9d8448cdee910ed28db85a0e044
+ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "12445805"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "12473616"
 ---
 # <a name="disable-internet-explorer-11"></a>Desabilitar o Internet Explorer 11
 
@@ -30,7 +30,6 @@ As seguintes atualizações do Windows e do software Microsoft Edge são necess�
 
 - Atualizações do Windows
 
-  - Windows 11
   - Windows 10, versão 21H1 ou posterior
   - Windows 10, versão 2004; Windows Server versão 2004; Windows 10, versão 20H2; Windows Server versão 20H2: [KB4598291](https://support.microsoft.com/topic/february-2-2021-kb4598291-os-builds-19041-789-and-19042-789-preview-6a766199-a4f1-616e-1f5c-58bdc3ca5e3b) ou posterior
   - Windows 10 versão 1909: [KB4598298](https://support.microsoft.com/topic/january-21-2021-kb4598298-os-build-18363-1350-preview-02dfd9ba-91a2-1b82-dede-42f288c02511) ou posterior
@@ -41,7 +40,6 @@ As seguintes atualizações do Windows e do software Microsoft Edge são necess�
   - Windows Server 2012: [KB4601348](https://support.microsoft.com/topic/february-9-2021-kb4601348-monthly-rollup-2c338c0c-73d6-fb80-cc91-f1a86e80db0c) ou mais tarde
   
 - Canal Estável do Microsoft Edge
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -56,15 +54,16 @@ Depois de configurar o modo IE, você pode desativar o IE11 como um navegador au
 
 Quando você ativa o **Desabilitar o Internet Explorer 11 como um navegador autônomo** política, todas as atividades do IE11 são redirecionadas para o Microsoft Edge e os usuários têm a seguinte experiência:
 
-- O ícone do IE11 no menu Iniciar será removido, mas o da barra de tarefas permanecerá.
+- Os ícones do IE11 no Menu Iniciar e na barra de tarefas serão removidos.
 - Quando os usuários tentam iniciar atalhos ou associações de arquivos que usam o IE11, eles são redirecionados para abrir o mesmo arquivo/URL no Microsoft Edge.
 - Quando os usuários tentam iniciar o IE11 invocando diretamente o binário iexplore.exe, o Microsoft Edge é iniciado.
 
 Como parte da configuração da política para esta experiência, você pode opcionalmente mostrar uma mensagem de redirecionamento para cada usuário que tentar iniciar o IE11. Esta mensagem pode ser definida para exibir "Sempre" ou "Uma vez por usuário". Por padrão, a mensagem de redirecionamento mostrada na próxima captura de tela nunca é mostrada.
 
-:::image type="content" source="media/edge-ie-disable-ie11/disable-ie-redirect-msg.png" alt-text="Alerta ao tentar abrir o IE após um redirecionamento para o Microsoft Edge estar ativo.":::
+:::image type="content" source="media/edge-ie-disable-ie11/disable-ie-redirect-msg2.png" alt-text="Alerta ao tentar abrir o IE após um redirecionamento para o Microsoft Edge estar ativo.":::
 
 Se a sua Lista de Sites do Modo Enterprise contém aplicativos configurados para abrir no aplicativo IE11 e você desabilitar o IE11 com esta política, eles serão abertos no modo IE no Microsoft Edge.
+
 > [!NOTE]
 > Houve um problema conhecido com o fluxo de usuários quando um site está configurado para abrir no aplicativo IE11 e a política de desabilitação do IE11 está definida. O problema foi corrigido nas versões 91.0.840.0 ou posterior do Microsoft Edge.
 
@@ -72,9 +71,9 @@ Se a sua Lista de Sites do Modo Enterprise contém aplicativos configurados para
 
 Para desabilitar o Internet Explorer 11 usando a política de grupo, siga estas etapas:
 
-1. Verifique se você tem as atualizações de pré-requisito do sistema operacional. Essa etapa atualizará diretamente os arquivos ADMX no computador (especificamente, inetres.adml e inetres.admx). Observe que, se você quiser atualizar seu Repositório Central, será necessário copiar sobre os arquivos .adml e .admx de um computador que tenha as atualizações de pré-requisito. Para obter mais informações, confira [Criar e gerenciar o Repositório Central](/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
+1. Verifique se você tem as atualizações de pré-requisito do sistema operacional. Essa etapa atualizará diretamente os arquivos ADMX no computador (especificamente, inetres.adml e inetres.admx). Observe que, se você quiser atualizar o Repositório Central, precisará copiar os arquivos .adml e .admx de um computador que tenha as atualizações de pré-requisitos ou baixar os modelos mais recentes do Windows 10 Admin [daqui.](https://www.microsoft.com/download/details.aspx?id=103124&msclkid=eae4a72fb1fb11ecb97ca3096b36cc06) Para obter mais informações, confira [Criar e gerenciar o Repositório Central](/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
 2. Abra o Editor de Política de Grupo.
-3. Vá para ***Configuração do computador/Modelos administrativos/Componentes do Windows/Internet Explorer***. 
+3. Vá para ***Configuração do computador/Modelos administrativos/Componentes do Windows/Internet Explorer***.
 4. Duplo click **Desabilitar o Internet Explorer 11 como um navegador independente**.
 5. Selecionar **Habilitar**.
 6. Sob **Opções**, escolha um dos seguintes valores:
@@ -83,9 +82,9 @@ Para desabilitar o Internet Explorer 11 usando a política de grupo, siga estas 
    - **Sempre** se você deseja notificar os usuários sempre que eles forem redirecionados do IE11.
    - **Uma vez por usuário** se desejar notificar os usuários apenas na primeira vez que forem redirecionados.
 
-7. Clicar **OK** ou **Aplicar** para salvar esta configuração de política.
+7.  **SelectOKorApplyto**  ****  salvar essa configuração de política.
 
-## <a name="see-also"></a>Ver também
+## <a name="see-also"></a>Consulte também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Sobre o modo IE](./edge-ie-mode.md)
