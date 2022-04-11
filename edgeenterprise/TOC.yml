@@ -1,4 +1,4 @@
-# last revised 03/08/2022
+# last revised 03/16/2022
 - name: Documentação do Microsoft Edge Enterprise
   href: index.yml
 - name: Documentação do Microsoft Edge
@@ -203,6 +203,8 @@
           href: edge-learn-more-co-di.md
         - name: Opções de linha de comando para definir as configurações de proxy
           href: edge-learnmore-cmdline-options-proxy-settings.md
+        - name: Comandos de Microsoft Edge configuráveis
+          href: edge-learnmore-configurable-edge-commands.md
         - name: Formato de filtro para políticas baseadas em lista de URL
           href: edge-learnmmore-url-list-filter format.md
         - name: Downloads de conteúdo misto?

@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Stable Channel
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 03/10/2022
+ms.date: 04/07/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: a7e11586c77b600253f25c2819a26e72e18f4b28
-ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
+ms.openlocfilehash: 0cf9c2d0ac7a60c03ad6c80d4186629d296a73c6
+ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "12445635"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "12473662"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão do Microsoft Edge Stable Channel
 
@@ -30,6 +30,69 @@ Essas notas de versão fornecem informações dos novos recursos e atualizaçõe
 > Para o Canal Estável, as atualizações serão implantadas progressivamente por um ou mais dias. Para saber mais, consulte [Distribuições progressivas para atualizações do Microsoft Edge](./microsoft-edge-update-progressive-rollout.md).
 >
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-1000118536-april-7"></a>Versão 100.0.1185.36: 7 de abril
+
+As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#april-7-2022).
+
+## <a name="version-1000118529-april-1"></a>Versão 100.0.1185.29: 1º de abril
+
+As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#april-1-2022).
+
+### <a name="feature-updates"></a>Atualizações de recursos
+
+- **Número de versão de três dígitos da cadeia de caracteres de agente de usuário.** O Microsoft Edge agora enviará um número de versão de três dígitos, como Edg/100 no cabeçalho do agente de usuário. Isso pode confundir scripts ou análises do lado do servidor que usam um analisador com erros para determinar o número de versão da cadeia de caracteres de agente de usuário. Você pode usar a política [ForceMajorVersionToMinorPositionInUserAgent](/deployedge/microsoft-edge-policies#forcemajorversiontominorpositioninuseragent) para controlar se a versão principal da cadeia de caracteres de agente de usuário deve ser congelada em 99. Além disso, o sinalizador **#force-major-version-to-minor** está disponível no *edge://flags* para congelar a versão principal da cadeia de caracteres de agente de usuário para 99.
+
+- **Simplificando as Ativações do protocolo de aplicativo do Microsoft 365.** As Ativações do protocolo de aplicativo do Microsoft 365 nos serviços confiáveis de armazenamento em nuvem da Microsoft agora iniciarão determinados aplicativos diretamente do Microsoft 365, incluindo subdomínios do SharePoint e URLs do Microsoft OneDrive. Você pode usar as políticas [AutoLaunchProtocolsComponentEnabled](/deployedge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) e [AutoLaunchProtocolsFromOrigins](/deployedge/microsoft-edge-policies#autolaunchprotocolsfromorigins) para habilitar os prompts de ativação do protocolo de aplicativo, se desejado, e para definir outros aplicativos e serviços em que os avisos são habilitados ou desabilitados.
+
+- **Proteção de pilha imposta por hardware.** O Microsoft Edge continuará dando suporte a uma proteção mais refinada, combatendo vulnerabilidades de corrupção de memória e protegendo chamadas indiretas. A proteção de pilha imposta por hardware é compatível apenas pelo Windows 8 e posterior. Para obter mais informações, confira [Proteção de pilha imposta por hardware](https://techcommunity.microsoft.com/t5/windows-kernel-internals-blog/developer-guidance-for-hardware-enforced-stack-protection/ba-p/2163340). Esse comportamento de recurso pode ser controlado usando a política [ShadowStackCrashRollbackBehavior](/deployedge/microsoft-edge-policies#shadowstackcrashrollbackbehavior).
+
+- **Visualize arquivos PDF no Microsoft Outlook e no Explorador de Arquivos.** Os usuários podem visualizar um arquivo PDF em uma visualização somente leitura leve e avançada. Esse recurso está disponível para anexos em PDF da área de trabalho do Outlook ou para arquivos PDF locais usando o Explorador de Arquivos.
+
+- **Abra arquivos PDF assinados digitalmente.** As assinaturas digitais são usadas extensivamente para validar a autenticidade de um documento e as alterações feitas em um documento. Você pode usar a política [PDFSecureMode](/deployedge/microsoft-edge-policies#pdfsecuremode) para habilitar a validação de assinatura digital de arquivos PDF, diretamente do navegador, sem a necessidade de suplementos.
+
+### <a name="policy-updates"></a>Atualizações de política
+
+#### <a name="new-policies"></a>Novas políticas
+
+- [AdsTransparencyEnabled](/DeployEdge/microsoft-edge-policies#adstransparencyenabled) - Configurar se o recurso de transparência de anúncios estiver habilitado
+- [DefaultWebHidGuardSetting](/DeployEdge/microsoft-edge-policies#defaultwebhidguardsetting) - Controlar uso da API WebHID
+- [HideRestoreDialogEnabled](/DeployEdge/microsoft-edge-policies#hiderestoredialogenabled) - Ocultar a caixa de diálogo das páginas de restauração após a falha do navegador
+- [PDFSecureMode](/DeployEdge/microsoft-edge-policies#pdfsecuremode) - Modo de segurança e validação de assinatura digital baseada em certificado no leitor de PDF nativo
+- [PromptOnMultipleMatchingCertificates](/DeployEdge/microsoft-edge-policies#promptonmultiplematchingcertificates) - Solicitar que o usuário selecione um certificado quando vários certificados corresponderem
+- [WebHidAskForUrls](/DeployEdge/microsoft-edge-policies#webhidaskforurls) - Permitir a API WebHID nesses sites
+- [WebHidBlockedForUrls](/DeployEdge/microsoft-edge-policies#webhidblockedforurls) - Bloquear a API WebHID nesses sites
+
+#### <a name="deprecated-policy"></a>Política preterida
+
+- [BackgroundTemplateListUpdatesEnabled](/DeployEdge/microsoft-edge-policies#backgroundtemplatelistupdatesenabled) - Habilitar atualizações em segundo plano para a lista de modelos disponíveis para coleções e outros recursos que usam modelos
+
+#### <a name="obsoleted-policy"></a>Política obsoleta
+
+- [AllowSyncXHRInPageDismissal](/DeployEdge/microsoft-edge-policies#allowsyncxhrinpagedismissal) - Permitir que as páginas enviem solicitações XHR síncronas durante o encerramento da página
+
+## <a name="version-980110892-march-26"></a>Versão 98.0.1108.92: 26 de março
+
+Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
+
+## <a name="version-990115055-march-26"></a>Versão 99.0.1150.55: 26 de março
+
+> [!Important]
+> Esta atualização contém uma correção para [CVE-2022-1096](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-1096), que foi relatada pela equipe do Chromium como tendo uma exploração em estado selvagem. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
+
+As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#march-26-2022).
+
+## <a name="version-990115052-march-24"></a>Versão 99.0.1150.52: 24 de março
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-980110884-march-17"></a>Versão 98.0.1108.84: 17 de março
+
+Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
+
+## <a name="version-990115046-march-17"></a>Versão 99.0.1150.46: 17 de março
+
+As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#march-17-2022).
 
 ## <a name="version-990115039-march-10"></a>Versão 99.0.1150.39: 10 de março
 
@@ -72,7 +135,6 @@ As atualizações de segurança do canal Estável estão listadas [aqui](/deploy
 - [RelatedMatchesCloudServiceEnabled](/DeployEdge/microsoft-edge-policies#relatedmatchescloudserviceenabled) - Configurar correspondências relacionadas em Localizar na página
 - [SignInCtaOnNtpEnabled](/DeployEdge/microsoft-edge-policies#signinctaonntpenabled) - Habilitar caixa de diálogo de clique para ação de entrada
 - [UserAgentReduction](/DeployEdge/microsoft-edge-policies#useragentreduction) - Habilitar ou desabilitar a Redução do agente de usuário
-
 
 ## <a name="version-980110862-february-24"></a>Versão 98.0.1108.62: 24 de fevereiro
 
@@ -151,72 +213,7 @@ Vários bugs e problemas de desempenho corrigidos.
 
 Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
 
-## <a name="version-970107255-january-6"></a>Versão 97.0.1072.55: 6 de janeiro
-
-As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#january-6-2022).
-
-### <a name="feature-updates"></a>Atualizações de recursos
-
-- **Use o perfil atual para entrar em sites quando várias contas corporativas ou de estudante estiverem conectadas em um dispositivo.** Quando várias contas corporativas ou de estudante estiverem conectadas em um dispositivo, os usuários deverão escolher uma conta no seletor de contas para continuar suas visitas a sites. Nesta versão, os usuários serão solicitados a permitir que o Microsoft Edge entre nos sites automaticamente com a conta corporativa ou de estudante conectada ao perfil atual. Os usuários podem ativar e desativar esse recurso em **Configurações** > **Preferências de perfil**.
-
-- **Adicione suporte para a Prevenção contra Perda de Dados de Ponto de Extremidade (DLP) da Microsoft no macOS.** A aplicação da política do Microsoft Endpoint DLP estará disponível nativamente no macOS.
-
-- **HTTPS automático.** Os usuários podem atualizar as navegações de HTTP para HTTPS em domínios que provavelmente suportam esse protocolo mais seguro. Esse suporte também pode ser configurado para tentar entrega HTTPS para todos os domínios. Nota: Esta recurso é uma distribuição de Recurso Controlado. Se não encontrar esse recurso, verifique novamente enquanto continuamos nossa distribuição.
-
-- **Bloqueie o WebSQL em contextos de terceiros.** O uso do recurso WebSQL herdado será bloqueado em quadros de terceiros. A política [WebSQLInThirdPartyContextEnabled](/deployedge/microsoft-edge-policies#websqlinthirdpartycontextenabled) está disponível como uma opção de recusa até a versão 101 do Microsoft Edge. Essa alteração está acontecendo no projeto do Chromium no qual o Microsoft Edge se baseia. Para obter mais informações, confira a entrada [Status da plataforma Chrome](https://chromestatus.com/feature/5684870116278272).
-
-- **Citações no Microsoft Edge.** Citar fontes para pesquisa é um requisito comum para estudantes. Eles têm que gerenciar muitas referências e fontes de pesquisa, o que não é uma tarefa fácil. Eles também precisam traduzir essas citações para formatos de citação adequados, como APA, MLA e Chicago. Esse novo recurso "Citações", agora em Versão prévia no Microsoft Edge, oferece aos alunos uma maneira melhor de gerenciar e gerar citações conforme eles pesquisam online. Com as citações ativadas em Coleções ou em **Configurações e muito mais (Alt-F)**, o Microsoft Edge gera automaticamente citações que os alunos podem usar mais tarde para que possam se concentrar em suas pesquisas. Quando terminarem, eles podem facilmente compilar essas citações em uma entrega final. Para obter mais informações, confira [Visualizando Citações no Microsoft Edge](https://blogs.windows.com/msedgedev/2021/11/04/preview-citations-feature-edge/).
-
-- **Proteção de Fluxo de Controle (CFG).** O Microsoft Edge começará a suportar uma proteção mais refinada, combatendo vulnerabilidades de corrupção de memória e protegendo chamadas indiretas. O CFG só é compatível com Windows 8 e posteriores. Para obter mais informações, confira [Proteção de Fluxo de Controle](/windows/win32/secbp/control-flow-guard).
-  
-  > [!NOTE]
-  > Esta é uma tecnologia em evolução, compartilhe seus comentários para nos ajudar a fortalecer seu suporte.
-
-### <a name="policy-updates"></a>Atualizações de política
-
-#### <a name="new-policies"></a>Novas Políticas
-
-- [AccessibilityImageLabelsEnabled](/DeployEdge/microsoft-edge-policies#accessibilityimagelabelsenabled) - Obter descrições de imagens do Microsoft habilitado
-- [CORSNonWildcardRequestHeadersSupport](/DeployEdge/microsoft-edge-policies#corsnonwildcardrequestheaderssupport) - Suporte de cabeçalho de solicitação CORS não curinga habilitado
-- [EdgeDiscoverEnabled](/DeployEdge/microsoft-edge-policies#edgediscoverenabled) - Recurso de descoberta no Microsoft Edge
-- [EdgeEnhanceImagesEnabled](/DeployEdge/microsoft-edge-policies#edgeenhanceimagesenabled) - Aprimorar imagens habilitadas
-- [InternetExplorerModeTabInEdgeModeAllowed](/DeployEdge/microsoft-edge-policies#internetexplorermodetabinedgemodeallowed) - Permitir que sites configurados para o modo Internet Explorer sejam abertos no Microsoft Edge
-- [SameOriginTabCaptureAllowedByOrigins](/DeployEdge/microsoft-edge-policies#sameorigintabcaptureallowedbyorigins) - Permitir captura da mesma Guia de origem por essas origens
-- [ScreenCaptureAllowedByOrigins](/DeployEdge/microsoft-edge-policies#screencaptureallowedbyorigins) - Permitir captura de área de trabalho, janela e guia por essas origens
-- [SerialAllowAllPortsForUrls](/DeployEdge/microsoft-edge-policies#serialallowallportsforurls) - Conceder automaticamente permissão aos sites para conectar todas as portas seriais
-- [SerialAllowUsbDevicesForUrls](/DeployEdge/microsoft-edge-policies#serialallowusbdevicesforurls) - Conceder automaticamente permissão aos sites para se conectar a dispositivos seriais USB
-- [SmartScreenDnsRequestsEnabled](/DeployEdge/microsoft-edge-policies#smartscreendnsrequestsenabled) - Habilitar solicitações de DNS do Microsoft Defender SmartScreen
-- [TabCaptureAllowedByOrigins](/DeployEdge/microsoft-edge-policies#tabcaptureallowedbyorigins) - Permitir captura de guias por essas origens
-- [WebSQLInThirdPartyContextEnabled](/DeployEdge/microsoft-edge-policies#websqlinthirdpartycontextenabled) - Forçar o WebSQL em contextos de terceiros para ser habilitado novamente
-- [WindowCaptureAllowedByOrigins](/DeployEdge/microsoft-edge-policies#windowcaptureallowedbyorigins) - Permitir captura de janela e guia por essas origens
-
-## <a name="version-960105462-december-17"></a>Versão 96.0.1054.62: 17 de dezembro
-
-Vários bugs e problemas de desempenho corrigidos.
-
-## <a name="version-960105457-december-14"></a>Versão 96.0.1054.57: 14 de dezembro
-
-> [!Important]
-> Esta atualização contém uma correção para [CVE-2021-4102](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-4102), que foi relatada pela equipe do Chromium como tendo uma exploração em execução. Para obter mais informações, consulte o [Guia de atualização de segurança](https://msrc.microsoft.com/update-guide).
-
-As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#december-14-2021).
-
-## <a name="version-960105453-december-10"></a>Versão 96.0.1054.53: 10 de dezembro
-
-As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#december-10-2021).
-
-## <a name="version-960105443-december-2"></a>Versão 96.0.1054.43: 2 de dezembro
-
-Vários bugs e problemas de desempenho corrigidos.
-
-## <a name="version-960105441-november-30"></a>Versão 96.0.1054.41: 30 de novembro
-
-Vários bugs e problemas de desempenho corrigidos.
-
-## <a name="version-960105434-november-23"></a>Versão 96.0.1054.34: 23 de novembro
-
-Correção de vários bugs e problemas de desempenho.
-
+<!---- From Version 97.0.1072.55: January 6 to Version 96.0.1054.34: November 23 ---->
 <!---archive from Version 96.0.1054.29: November 19 to Version 94.0.992.57: October 27 --->
 <!-- archive from Version 95.0.1020.30: October 21 to Version 94.0.992.37: September 30 -->
 <!-- archive from Version 94.0.992.31: September 24 to Version 93.0.961.44: September 9  -->
@@ -227,6 +224,6 @@ Correção de vários bugs e problemas de desempenho.
 <!-- Archive from 86.0.622.38-october-9 to beta 86.0.62.215-september-14  ->
 <!-- Archived to version 84.0.522.40: July 16 -->
 
-## <a name="see-also"></a>Ver também
+## <a name="see-also"></a>Consulte também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
