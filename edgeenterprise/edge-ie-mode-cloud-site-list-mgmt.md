@@ -3,19 +3,19 @@ title: Gerenciamento de Lista de Sites na Nuvem para modo Internet Explorer (IE)
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 03/08/2022
+ms.date: 03/17/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Saiba como configurar e usar o Gerenciamento de Lista de Sites na Nuvem para o modo IE usando o Centro de administração do Microsoft 365.
-ms.openlocfilehash: dd8e083b3b7919a56c013ffd0c389dcd8d94a745
-ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
+ms.openlocfilehash: 4098c0ef769fa2bf8ec60d6697a17e225ea76bc1
+ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "12445735"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "12473514"
 ---
 # <a name="cloud-site-list-management-for-internet-explorer-ie-mode"></a>Gerenciamento de Lista de Sites na Nuvem para modo Internet Explorer (IE)
 
@@ -115,41 +115,41 @@ Use as etapas a seguir para associar a lista de sites hospedados na nuvem ao Mic
 4. Você pode executar **gpupdate/force** no Prompt de Comando para atualizar o dispositivo com a política ou aguardar até que a política de grupo entre em vigor. Depois que a política for atualizada, você poderá verificar se o Microsoft Edge está lendo a lista de sites na nuvem acessando [edge://compat/enterprise](edge://compat/enterprise). Você precisa estar conectado ao Microsoft Edge.
 
 > [!NOTE]
-> Depois de publicar uma lista de sites pela primeira vez e atualizar a política de grupo, você precisa reiniciar o Microsoft Edge. Aguarde 60 segundos ou selecione o botão Forçar Atualização em [edge://compat/enterprise](edge://compat/enterprise). Ao publicar atualizações em uma lista de sites já associada, pode haver uma versão mais antiga da lista de sites no cache. Essa entrada será atualizada após 60 segundos. Para obter mais informações, consulte [O que acontece se usuários saírem do Microsoft Edge?](#what-happens-if-users-log-out-of-microsoft-edge).
+> Depois de publicar uma lista de sites pela primeira vez e atualizar a política de grupo, você precisa reiniciar o Microsoft Edge. Aguarde 60 segundos ou selecione a opção **Forçar Atualização** em [edge://compat/enterprise](edge://compat/enterprise). Ao publicar atualizações em uma lista de sites já associada, pode haver uma versão mais antiga da lista de sites no cache. Essa entrada será atualizada após 60 segundos. Para obter mais informações, consulte [O que acontece se usuários saírem do Microsoft Edge?](#what-happens-if-users-log-out-of-microsoft-edge).
 
 ## <a name="manage-site-list-contents-on-the-microsoft-365-admin-center"></a>Gerenciar o conteúdo da lista de sites no Centro de administração do Microsoft 365
 
-Você pode adicionar entradas de site individuais, excluir entradas do site e exibir o histórico de alterações para comentários.
+Você pode adicionar, editar, excluir o conteúdo da lista de sites e exibir o histórico de comentários para acompanhar as alterações em entradas individuais para sites e cookies compartilhados.
 
 Se você tiver cenários híbridos que exigem que sua lista de sites seja hospedada localmente, poderá exportar sua lista de sites do Centro de administração do Microsoft 365. Use as etapas a seguir como um guia para gerenciar o conteúdo da lista de sites.
 
-### <a name="add-individual-sites-to-the-site-list"></a>Adicionar sites individuais à lista de sites
+### <a name="add-a-site-to-the-site-list"></a>Adicionar um site à lista de sites
 
-Você pode adicionar sites individuais a qualquer lista de sites. Depois de adicionar sites à lista, você pode usar os filtros predefinidos usando o botão **Filtrar** (ao lado da área de entrada pesquisar) para exibir as atualizações da lista.
+Você pode adicionar sites individuais a qualquer lista de sites. Depois de adicionar sites à lista, você pode usar os filtros predefinidos usando o botão **Filtrar** (ao lado da caixa Pesquisar) para exibir as atualizações da lista.
 
 1. Vá para a lista de sites em que você deseja adicionar um site.
 2. Selecione **Adicionar um site**.
 3. Insira o endereço do site e escolha o mecanismo que deve ser usado para abrir o site. Adicione comentários conforme necessário e selecione **Salvar**.
 
    > [!NOTE]
-   > A coluna **Status** para quaisquer entradas adicionadas a uma lista de sites publicados mostrará **Adição pendente**. Se você navegar até a lista de listas de sites selecionando **listas de sites do Microsoft Edge** na parte superior da tela, verá que a coluna **Status de publicação** mostra **Alterações de publicação pendentes** para indicar que as atualizações mais recentes da lista de sites precisam ser publicadas para que os usuários as recebam. Você pode usar o botão **Filtrar** (ao lado da caixa De pesquisa) para selecionar **Adição pendente** para ver todas as entradas adicionadas que estão pendentes na publicação.
-
-### <a name="view-the-change-history-for-site-entries"></a>Exibir o histórico de alterações para entradas do site
-
-Para exibir o histórico de alterações das entradas do site:
-
-- Selecione a entrada do site para a qual você deseja ver o histórico de alterações e selecione **Exibir comentários**.
+   > A coluna **Status** para quaisquer entradas adicionadas a uma lista de sites publicados mostrará **Adição pendente**. Se você navegar até a lista de listas de sites selecionando **listas de sites do Microsoft Edge** na parte superior da tela, verá que a coluna **Status de publicação** mostra **Alterações de publicação pendentes** para indicar que as atualizações mais recentes da lista de sites precisam ser publicadas para que os usuários as recebam. Você pode usar o botão **Filtrar** (ao lado da caixa Pesquisar) para selecionar **Adição pendente** para ver todas as entradas adicionadas que estão pendentes de publicação.
 
 ### <a name="delete-a-site-from-the-site-list"></a>Excluir um site da lista de sites
 
 Use as etapas a seguir para excluir uma entrada de site.
 
-1. Escolha a entrada da lista de sites da qual você deseja excluir um site. Selecione **Excluir site**.
-2. Selecione **Excluir** na parte inferior do painel.
-3. Depois de ver a confirmação de que uma entrada de site foi excluída, ela permanecerá na lista até que a lista de sites seja publicada no local da nuvem. Você pode exibir a lista de sites excluídos antes de publicar selecionando o botão Filtrar e filtrando sites no estado **Exclusão pendente**.
+1. Escolha a entrada do site que você gostaria de excluir da lista de sites. Selecione **Excluir site**.
+2. Selecione **Excluir** no pop-up da caixa de diálogo.
+3. Depois de ver a confirmação de que uma entrada de site foi excluída, ela permanecerá na lista até que a lista de sites seja publicada no local da nuvem. Você pode exibir a lista de sites excluídos antes de publicar selecionando o botão **Filtrar** e filtrando os sites no estado **Exclusão pendente**.
 
    > [!NOTE]
-   > A coluna **Status** para todas as entradas excluídas de uma lista de sites publicados mostrará **Exclusão pendente**. Se você navegar para a lista de listas de sites selecionando as **listas de sites do Microsoft Edge** na parte superior da tela, verá que a coluna **Status publicado** mostra **Alterações com publicação pendente ** para indicar que as atualizações mais recentes da lista de sites precisam ser publicadas para que os usuários as recebam. Você pode usar o botão **Filtro** (ao lado da caixa Pesquisar) para selecionar **Excluir pendentes ** para ver todas as entradas excluídas com publicação pendente.
+   > A coluna **Status** para quaisquer entradas excluídas de uma lista de sites publicados mostrará **Exclusão pendente**. Se você navegar até a lista de listas de sites selecionando **listas de sites do Microsoft Edge** na parte superior da tela, verá que a coluna **Status de publicação** mostra **Alterações de publicação pendentes** para indicar que as atualizações mais recentes da lista de sites precisam ser publicadas para que os usuários as recebam. Você pode usar o botão **Filtrar** (ao lado da caixa Pesquisar) para selecionar **Exclusão pendente** para ver todas as entradas excluídas que estão pendentes de publicação.
+
+### <a name="view-the-change-history-for-site-entries"></a>Exibir o histórico de alterações para entradas do site
+
+Para exibir o histórico de alterações das entradas do site:
+
+- Selecione a entrada do site para a qual você deseja ver o histórico de alterações, e depois selecione **Exibir histórico**.
 
 ### <a name="copy-a-site-to-other-site-lists"></a>Copiar um site para outras listas de sites
 
@@ -161,15 +161,56 @@ Use as etapas a seguir para copiar uma entrada de site de uma lista de sites par
 4. Depois de ver a confirmação de que uma entrada de site foi copiada, ela permanecerá na lista de sites da qual você a copiou. Ele também aparecerá nas listas de sites para os quais você copiou.
 
    > [!NOTE]
-   > A coluna **Status** de todas as entradas copiadas para uma lista de sites publicados mostrará a **Adição pendente.** Se você navegar para a lista de listas de sites selecionando **listas de sites do Microsoft Edge** na parte superior da tela, você verá que a coluna Status publicado mostra **Alterações pendentes** publicar para indicar que as atualizações mais recentes da lista de sites precisam ser publicadas para que os usuários as recebam. Você pode usar o botão **Filtrar** (ao lado da caixa De pesquisa) para selecionar **Adição pendente** para ver todas as entradas adicionadas que estão pendentes na publicação.
+   > A coluna **Status** para quaisquer entradas copiadas para uma lista de sites publicados mostrará **Adição pendente**. Se você navegar até a lista de listas de sites selecionando **listas de sites do Microsoft Edge** na parte superior da tela, verá que a coluna **Status de publicação** mostra **Alterações de publicação pendentes** para indicar que as atualizações mais recentes da lista de sites precisam ser publicadas para que os usuários as recebam. Você pode usar o botão **Filtrar** (ao lado da caixa Pesquisar) para selecionar **Adição pendente** para ver todas as entradas adicionadas que estão pendentes de publicação.
+
+### <a name="add-a-shared-cookie-to-the-site-list"></a>Adicionar um cookie compartilhado à lista sites
+
+Você pode adicionar cookies compartilhados individuais a qualquer lista de sites. Depois de adicionar cookies compartilhados à lista, você pode usar os filtros predefinidos usando o botão **Filtrar** (ao lado da caixa Pesquisar) para visualizar as atualizações da lista.
+
+1. Vá para a lista de sites onde deseja adicionar um cookie compartilhado.
+2. Selecione **Adicionar um cookie compartilhado**.
+3. Insira o domínio e o nome do cookie. Adicione comentários conforme necessário e selecione **Salvar**.
+
+> [!NOTE]
+> A coluna **Status** para quaisquer entradas adicionadas a uma lista de sites publicados mostrará **Adição pendente**. Se você navegar até a lista de listas de sites selecionando **Listas de sites do Microsoft Edge** na parte superior da tela, verá que a coluna **Status da publicação** mostra as **Alterações pendentes de publicação** para indicar que as atualizações mais recentes da lista de sites precisam ser publicadas para que os usuários as recebam. Você pode usar o botão **Filtrar** (ao lado da caixa Pesquisar) para selecionar **Adição pendente** para ver todas as entradas adicionadas que estão pendentes de publicação.
+
+### <a name="delete-a-shared-cookie-from-the-site-list"></a>Excluir um cookie compartilhado da lista sites
+
+Use as etapas a seguir para excluir uma entrada de cookie compartilhada.
+
+1. Escolha a entrada que você deseja excluir da lista de sites. Selecione **Excluir cookie compartilhado**.
+2. Selecione **Excluir** no pop-up da caixa de diálogo.
+3. Depois de ver a confirmação de que uma entrada foi excluída, ela permanecerá na lista até que a lista de sites seja publicada no local da nuvem. Você pode exibir a lista de cookies compartilhados excluídos antes de publicar selecionando o botão **Filtrar** e filtrando por cookies no estado **Exclusão pendente**.
+
+> [!NOTE]
+> A coluna **Status** para quaisquer entradas excluídas de uma lista de sites publicados mostrará **Exclusão pendente**. Se você navegar até a lista de listas de sites selecionando **Listas de sites do Microsoft Edge** na parte superior da tela, verá que a coluna **Status da publicação** mostra as **Alterações pendentes de publicação** para indicar que as atualizações mais recentes da lista de sites precisam ser publicadas para que os usuários as recebam. Você pode usar o botão **Filtrar** (ao lado da caixa Pesquisar) para selecionar **Exclusão pendente** para ver todas as entradas excluídas que estão pendentes de publicação.
+
+### <a name="view-the-change-history-for-shared-cookies"></a>Visualizar o histórico de alterações dos cookies compartilhados
+
+Para exibir o histórico de alterações dos cookies compartilhados:
+
+- Selecione a entrada para a qual você deseja ver o histórico de alterações, e depois selecione **Exibir histórico**.
+
+### <a name="copy-a-shared-cookie-to-other-site-lists"></a>Copiar um cookie compartilhado para outras listas de sites
+
+Siga as etapas a seguir para copiar uma entrada de cookie compartilhada de uma lista de sites para uma ou mais listas de sites.
+
+1. Escolha uma entrada que você gostaria de copiar para outra lista. Selecione **Copiar para mais listas**.
+2. Selecione uma ou mais listas de sites para as quais você deseja copiar na lista suspensa.
+3. Selecione **Copiar cookie** na parte inferior do painel.
+4. Depois de ver a confirmação de que uma entrada de site foi copiada, ela permanecerá na lista de sites da qual você a copiou. Ele também aparecerá nas listas de sites para os quais você copiou.
+
+> [!NOTE]
+> A coluna **Status** para quaisquer entradas copiadas para uma lista de sites publicados mostrará **Adição pendente**. Se você navegar até a lista de listas de sites selecionando **listas de sites do Microsoft Edge** na parte superior da tela, verá que a coluna **Status de publicação** mostra **Alterações de publicação pendentes** para indicar que as atualizações mais recentes da lista de sites precisam ser publicadas para que os usuários as recebam. Você pode usar o botão **Filtrar** (ao lado da caixa Pesquisar) para selecionar **Adição pendente** para ver todas as entradas adicionadas que estão pendentes de publicação.
 
 ### <a name="export-a-site-list"></a>Exportar uma lista de sites
 
 Há cenários em que você deseja exportar uma lista de sites. Por exemplo, se você não conseguir mover sua lista de sites para a nuvem imediatamente ou se precisar manter um ambiente híbrido com listas de sites na nuvem e no local. Você pode usar a experiência de Gerenciamento de Lista de Sites na Nuvem para gerenciar atualizações para uma lista de sites em um local central e exportar a lista de sites para o host local.
 
+Para exportar uma lista de sites:
+
 1. Na página listas de sites do Microsoft Edge, selecione a lista de sites que você deseja exportar.
-2. Na página resultante, você verá as entradas da lista de sites e a opção **Exportar lista**.
-3. Selecione **Exportar lista** para baixar o arquivo XML da lista de sites.
+2. Selecione **Exportar lista** para baixar o arquivo XML da lista de sites
 
 ## <a name="view-site-feedback-on-the-microsoft-365-admin-center"></a>Exibir comentários do site no Centro de administração do Microsoft 365
 
