@@ -3,19 +3,19 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 04/08/2022
+ms.date: 04/27/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: 8c2fcd1a45d6d6417e10609dec3cf1c669576c92
-ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
+ms.openlocfilehash: 41f9efd48fa9afef215c2fd8e6499b2840ec256c
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "12473571"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505364"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão do canal do Microsoft Edge beta
 
@@ -23,6 +23,26 @@ Estas notas de versão fornecem informações sobre os novos recursos e atualiza
 
 > [!NOTE]
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-1010121031-april-27"></a>Versão 101.0.1210.31: 27 de abril
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-1010121026-april-22"></a>Versão 101.0.1210.26: 22 de abril
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-1010121019-april-18"></a>Versão 101.0.1210.19: 18 de abril
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-1010121014-april-12"></a>Versão 101.0.1210.14: 12 de abril
+
+Vários bugs e problemas de desempenho corrigidos.
+
+### <a name="feature-updates"></a>Atualizações de recursos
+
+- **Melhorias no Enterprise Site List Manager.** Agora você pode configurar cookies compartilhados entre o Microsoft Edge e o Internet Explorer em sua lista de sites corporativos. Você pode acessar o [Enterprise Site List Manager](/deployedge/edge-ie-mode-site-list-manager) em *edge://compat/SiteListManager*.
 
 ## <a name="version-1010121010-april-8"></a>Versão 101.0.1210.10: 8 de abril
 
@@ -76,7 +96,7 @@ Vários bugs e problemas de desempenho corrigidos.
 
 ### <a name="feature-updates"></a>Atualizações de recursos
 
-- **Simplificando as ativações Microsoft 365 protocolo de aplicativo.** Microsoft 365 ativações de protocolo de aplicativo em serviços confiáveis de armazenamento em nuvem da Microsoft agora iniciarão determinados aplicativos Microsoft 365 diretamente, incluindo subdomínios SharePoint urLs Microsoft OneDrive. Você pode usar as políticas [AutoLaunchProtocolsComponentEnabled](/deployedge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) e [AutoLaunchProtocolsFromOrigins](/deployedge/microsoft-edge-policies#autolaunchprotocolsfromorigins) para habilitar os prompts de ativação do protocolo de aplicativo, se desejado, e definir outros aplicativos e serviços em que os avisos estão habilitados ou desabilitados.
+- **Simplificando as Ativações do protocolo de aplicativo do Microsoft 365.** As Ativações do protocolo de aplicativo do Microsoft 365 nos serviços confiáveis de armazenamento em nuvem da Microsoft agora iniciarão determinados aplicativos diretamente do Microsoft 365, incluindo subdomínios do SharePoint e URLs do Microsoft OneDrive. Você pode usar as políticas [AutoLaunchProtocolsComponentEnabled](/deployedge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) e [AutoLaunchProtocolsFromOrigins](/deployedge/microsoft-edge-policies#autolaunchprotocolsfromorigins) para habilitar os prompts de ativação do protocolo de aplicativo, se desejado, e para definir outros aplicativos e serviços em que os avisos são habilitados ou desabilitados.
 
 ## <a name="version-1000118510-march-17"></a>Versão 100.0.1185.10: 17 de março
 
@@ -84,7 +104,7 @@ Vários bugs e problemas de desempenho corrigidos.
 
 - **Melhorias na experiência de Gerenciamento de Lista de Sites na Nuvem para o Modo IE.** Você pode configurar o compartilhamento de cookie de sessão entre Microsoft Edge Internet Explorer para Modo IE em sua lista de sites na Administração Microsoft 365 Central. **Nota:** Essa é uma distribuição de recursos controlada. Se você não vir esse recurso, verifique novamente à medida que continuarmos nossa distribuição
 
-- **Visualize arquivos PDF no Microsoft Outlook e Explorador de Arquivos.** Os usuários podem exibir um arquivo PDF em uma visualização leve e avançada somente leitura.  Disponível para Outlook pdf da área de trabalho ou para arquivos PDF locais usando Explorador de Arquivos.  
+- **Visualize arquivos PDF no Microsoft Outlook e no Explorador de Arquivos.** Os usuários podem visualizar um arquivo PDF em uma visualização somente leitura leve e avançada.  Disponível para Outlook pdf da área de trabalho ou para arquivos PDF locais usando Explorador de Arquivos.  
 
 - **Sincronização de aplicativo Web instalada em todos os dispositivos da área de trabalho.** Sites ou PWAs (Aplicativos Web progressivos) que foram instalados como aplicativos serão sincronizados em todos os dispositivos da área de trabalho em que você entrou e habilitou a sincronização. Eles serão mostrados como "Aplicativos disponíveis" para você instalar. Um aplicativo removido de um dispositivo sincronizará a remoção em todos os dispositivos.
 
@@ -92,21 +112,21 @@ Vários bugs e problemas de desempenho corrigidos.
 
 #### <a name="new-policies"></a>Novas políticas
 
-- [AdsTransparencyEnabled](/DeployEdge/microsoft-edge-policies#adstransparencyenabled) – Configurar se o recurso de transparência de anúncios estiver habilitado
-- [DefaultWebHidGuardSetting](/DeployEdge/microsoft-edge-policies#defaultwebhidguardsetting) – Controlar o uso da API WebHID
-- [HideRestoreDialogEnabled](/DeployEdge/microsoft-edge-policies#hiderestoredialogenabled) – ocultar a caixa de diálogo restaurar páginas após a falha do navegador
-- [PDFSecureMode](/DeployEdge/microsoft-edge-policies#pdfsecuremode) – Modo seguro e validação de Assinatura Digital baseada em certificado no leitor de PDF nativo
+- [AdsTransparencyEnabled](/DeployEdge/microsoft-edge-policies#adstransparencyenabled) - Configurar se o recurso de transparência de anúncios estiver habilitado
+- [DefaultWebHidGuardSetting](/DeployEdge/microsoft-edge-policies#defaultwebhidguardsetting) - Controlar uso da API WebHID
+- [HideRestoreDialogEnabled](/DeployEdge/microsoft-edge-policies#hiderestoredialogenabled) - Ocultar a caixa de diálogo das páginas de restauração após a falha do navegador
+- [PDFSecureMode](/DeployEdge/microsoft-edge-policies#pdfsecuremode) - Modo de segurança e validação de assinatura digital baseada em certificado no leitor de PDF nativo
 - [PromptOnMultipleMatchingCertificates](/DeployEdge/microsoft-edge-policies#promptonmultiplematchingcertificates) - Solicitar que o usuário selecione um certificado quando vários certificados corresponderem
-- [WebHidAskForUrls](/DeployEdge/microsoft-edge-policies#webhidaskforurls) – Permitir a API WebHID nesses sites
-- [WebHidBlockedForUrls](/DeployEdge/microsoft-edge-policies#webhidblockedforurls) – Bloquear a API WebHID nesses sites
+- [WebHidAskForUrls](/DeployEdge/microsoft-edge-policies#webhidaskforurls) - Permitir a API WebHID nesses sites
+- [WebHidBlockedForUrls](/DeployEdge/microsoft-edge-policies#webhidblockedforurls) - Bloquear a API WebHID nesses sites
 
 #### <a name="deprecated-policy"></a>Política preterida
 
-- [BackgroundTemplateListUpdatesEnabled](/DeployEdge/microsoft-edge-policies#backgroundtemplatelistupdatesenabled) – habilita atualizações em segundo plano para a lista de modelos disponíveis para Coleções e outros recursos que usam modelos
+- [BackgroundTemplateListUpdatesEnabled](/DeployEdge/microsoft-edge-policies#backgroundtemplatelistupdatesenabled) - Habilitar atualizações em segundo plano para a lista de modelos disponíveis para coleções e outros recursos que usam modelos
 
 #### <a name="obsoleted-policy"></a>Política obsoleta
 
-- [AllowSyncXHRInPageDismissal](/DeployEdge/microsoft-edge-policies#allowsyncxhrinpagedismissal) – Permitir que páginas enviem solicitações XHR síncronas durante a descartagem da página
+- [AllowSyncXHRInPageDismissal](/DeployEdge/microsoft-edge-policies#allowsyncxhrinpagedismissal) - Permitir que as páginas enviem solicitações XHR síncronas durante o encerramento da página
 
 ## <a name="version-990115039-march-10"></a>Versão 99.0.1150.39: 10 de março
 

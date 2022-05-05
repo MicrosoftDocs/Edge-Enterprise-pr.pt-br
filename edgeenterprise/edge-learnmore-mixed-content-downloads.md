@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Saiba mais sobre downloads de conteúdo misto e como o Microsoft Edge lida com eles.
-ms.openlocfilehash: c199a8b763e456daac34bd1ba07e64ced50358f5
-ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.openlocfilehash: 2bee6416f6c4573ed3273264a771bf704bc2ed09
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "12298279"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505384"
 ---
 # <a name="learn-how-microsoft-edge-handles-mixed-content-downloads"></a>Saiba como Microsoft Edge manipula downloads de conteúdo misto
 
@@ -65,7 +65,7 @@ As empresas que desejem excluir o bloqueio de conteúdo misto de sites específi
 > [!NOTE]
 > Partes desta página são modificações baseadas no trabalho criado e compartilhado pela Chromium.org e usadas de acordo com os termos descritos na [Licença Pública Creative Commons Atribuição 4.0 Internacional](http://creativecommons.org/licenses/by/4.0/). A página original pode ser encontrada [aqui](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content).
   
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Esse trabalho é licenciado sob uma <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licença Attribution 4.0 International (CC BY 4.0) da Creative Commons</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Esse trabalho é licenciado sob uma <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licença Attribution 4.0 International (CC BY 4.0) da Creative Commons</a>.
 
 ## <a name="see-also"></a>Consulte também
 

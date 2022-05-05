@@ -1,25 +1,83 @@
 ---
 title: Notas de versão arquivadas para o Canal Estável do Microsoft Edge
 ms.author: leahtu
-author: dan-wesley
+author: leahmsft
 manager: srugh
-ms.date: 03/31/2022
+ms.date: 04/28/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas de versão arquivadas para o Canal Estável do Microsoft Edge
-ms.openlocfilehash: d2c1d9de5d68b008190bbdcc24aee83c352978aa
-ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
+ms.openlocfilehash: 9d4efe64eec64e94f5b67c2f4daa317c4752919c
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "12473592"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505434"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão arquivadas para o Canal Estável do Microsoft Edge
 
 Essas notas de versão fornecem informações dos novos recursos e atualizações não relacionados à segurança que estão inclusos Microsoft Edge Stable Channel. Todas as atualizações de segurança estão listadas [aqui](microsoft-edge-relnotes-security.md).
+
+## <a name="version-980110843-february-3"></a>Versão 98.0.1108.43: 3 de fevereiro
+
+As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#february-3-2022).
+
+### <a name="feature-updates"></a>Atualizações de recursos
+
+- **Melhore sua segurança na Web.** Este é um modo de navegação no Microsoft Edge em que a segurança do navegador tem prioridade, oferecendo aos usuários uma camada extra de proteção ao navegar na Web. Os administradores podem aplicar políticas de grupo a áreas de trabalho de usuários finais (Windows, macOS e Linux) para ajudar a proteger contra explorações em execução (também conhecidas como 0-days). As seguintes políticas de grupo suportam este modo de navegação:
+
+  - [EnhanceSecurityMode](/deployedge/microsoft-edge-policies#enhancesecuritymode)
+  - [EnhanceSecurityModeBypassListDomains](/deployedge/microsoft-edge-policies#enhancesecuritymodebypasslistdomains)
+  - [EnhanceSecurityModeEnforceListDomains](/deployedge/microsoft-edge-policies#enhancesecuritymodeenforcelistdomains)
+
+- **Em breve, número de versão de três dígitos na cadeia de caracteres de agente do usuário.** A partir da versão 100, o Microsoft Edge enviará um número de versão de três dígitos no cabeçalho do agente de usuário, por exemplo "Edg/**100**". A partir do Microsoft Edge 97, os proprietários de sites podem testar essa próxima cadeia de caracteres de agente de usuário habilitando o sinalizador de experimento **#force-major-version-to-100** no *edge://flags* para garantir que sua lógica de análise do agente de usuário seja robusta e funcione conforme o esperado.
+
+- **Substituir a semântica SDP do Plano B do WebRTC.** Essa alteração substitui um dialeto herdado do Protocolo de Descrição de Sessão (SDP) chamado Plano B. Esse formato SDP está sendo substituído pelo Plano Unificado, que é um formato SDP compatível com especificações e entre navegadores. Para obter mais informações, confira a entrada Status da plataforma Chrome [PSA: o Plano B deve incluir o M96 Beta e Estável](https://chromestatus.com/feature/5823036655665152), e [PSA: o Plano B incluindo a data de término da avaliação de depreciação estável e estendida](https://groups.google.com/g/discuss-webrtc/c/gEHrZyYKsfU). Solicitar uma [Avaliação da semântica de SDP do Plano B do RTCPeerConnection](https://developer.chrome.com/origintrials/#/view_trial/3892235977954951169) permite que os sites continuem a usar a API preterida até a versão 101.
+
+- **Barras de rolagem de sobreposição adicionadas ao Microsoft Edge.** Atualizamos nossas barras de rolagem com um design baseado em sobreposição. Os usuários podem ativar esse recurso em *edge://flags*.
+
+### <a name="policy-updates"></a>Atualizações de política
+
+#### <a name="new-policies"></a>Novas Políticas
+
+- [AddressBarEditingEnabled](/DeployEdge/microsoft-edge-policies#addressbareditingenabled) - Configurar a edição da barra de endereços
+- [AllowGamesMenu](/DeployEdge/microsoft-edge-policies#allowgamesmenu) - Permitir que os usuários acessem o menu de jogos
+- [EdgeFollowEnabled](/DeployEdge/microsoft-edge-policies#edgefollowenabled) - Habilitar o serviço Seguir no Microsoft Edge
+- [EnhanceSecurityMode](/DeployEdge/microsoft-edge-policies#enhancesecuritymode) - Aprimorar o estado de segurança no Microsoft Edge
+- [EnhanceSecurityModeBypassListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodebypasslistdomains) - Configurar a lista de domínios nos quais o modo de segurança aprimorado não será imposto
+- [EnhanceSecurityModeEnforceListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodeenforcelistdomains) - Configurar a lista de domínios nos quais o modo de segurança aprimorado sempre será imposto
+- [InAppSupportEnabled](/DeployEdge/microsoft-edge-policies#inappsupportenabled) - Suporte no aplicativo habilitado
+- [MicrosoftEdgeInsiderPromotionEnabled](/DeployEdge/microsoft-edge-policies#microsoftedgeinsiderpromotionenabled) - Promoção do Microsoft Edge Insider habilitada
+- [PrintStickySettings](/DeployEdge/microsoft-edge-policies#printstickysettings) - Configurações fixas da visualização de impressão
+- [SandboxExternalProtocolBlocked](/DeployEdge/microsoft-edge-policies#sandboxexternalprotocolblocked) - Permitir que o Microsoft Edge bloqueie navegações para protocolos externos em um iframe na área restrita
+- [U2fSecurityKeyApiEnabled](/DeployEdge/microsoft-edge-policies#u2fsecuritykeyapienabled) - Permitir o uso da API de chave de segurança U2F preterida
+
+## <a name="version-970107276-january-27"></a>Versão 97.0.1072.76: 27 de janeiro
+
+Vários bugs e problemas de desempenho corrigidos.
+
+### <a name="feature-updates"></a>Atualizações de recursos
+
+- **Em breve, número de versão de três dígitos na cadeia de caracteres de agente do usuário.** A partir da versão 100, o Microsoft Edge enviará um número de versão de três dígitos no cabeçalho do agente de usuário, por exemplo "Edg/**100**". A partir do Microsoft Edge 97, os proprietários de sites podem testar essa próxima cadeia de caracteres de agente de usuário habilitando o sinalizador de experimento **#force-major-version-to-100** no *edge://flags* para garantir que sua lógica de análise do agente de usuário seja robusta e funcione conforme o esperado.
+
+## <a name="version-960105475-january-21"></a>Versão 96.0.1054.75: 21 de janeiro
+
+Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
+
+## <a name="version-970107269-january-20"></a>Versão 97.0.1072.69: 20 de janeiro
+
+As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#january-20-2022).
+
+## <a name="version-970107262-january-13"></a>Versão 97.0.1072.62: 13 de janeiro
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-960105472-january-6"></a>Versão 96.0.1054.72: 6 de janeiro
+
+Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
 
 ## <a name="version-970107255-january-6"></a>Versão 97.0.1072.55: 6 de janeiro
 
@@ -99,7 +157,7 @@ As atualizações de segurança do canal Estável estão listadas [aqui](/deploy
 
 - **Atualize Microsoft Edge WebWiew2 usando o WSUS.** Os administradores de TI que Windows Server Update Services (WSUS) para atualizar Microsoft Edge também poderão atualizar Microsoft Edge WebView2 usando o WSUS. Essa funcionalidade oferece aos administradores um processo de manutenção mais fácil para dispositivos offline.
 
-- **Atualizações do WSUS para o Servidor.** As atualizações do WSUS e do Catálogo para canais do Microsoft Edge (Estável, Beta e Desenvolvimento) agora serão aplicadas a SKUs do Windows Server que têm Microsoft Edge instalados, incluindo o Windows Server 2022. Para obter mais informações sobre como configurar as atualizações do WSUS para Microsoft Edge, consulte [Atualização Microsoft Edge](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge?bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json&toc=https://docs.microsoft.com/DeployEdge/toc.json#update-microsoft-edge).
+- **Atualizações do WSUS para o Servidor.** As atualizações do WSUS e do Catálogo para canais do Microsoft Edge (Estável, Beta e Desenvolvimento) agora serão aplicadas a SKUs do Windows Server que têm Microsoft Edge instalados, incluindo o Windows Server 2022. Para obter mais informações sobre como configurar as atualizações do WSUS para Microsoft Edge, consulte [Atualização Microsoft Edge](/mem/configmgr/apps/deploy-use/deploy-edge).
 
 - **Microsoft Edge Componente de Protocolos de Inicialização Automática.** Microsoft Edge 96 apresenta o componente AutoLaunch [Protocols que](https://textslashplain.com/2019/07/16/updating-browsers-quickly-flags-respins-and-components/) contém listas de dicionários de origem de esquema para permitir ou bloquear automaticamente. Isso protege os clientes contra esquemas perigosos (por exemplo, um manipulador de protocolo com um dia) ao mesmo tempo que elimina prompts de emparelhamentos seguros conhecidos (por exemplo, o site do Teams pode abrir o aplicativo cliente Teams). Se, por algum motivo, você não quiser Microsoft Edge bloquear manipuladores de protocolo vulneráveis e permitir emparelhamentos seguros conhecidos, use a alternância no edge://settings/content/applicationLinks ou defina *a* política [AutoLaunchProtocolsComponentEnabled](/deployedge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) como False.
 
@@ -138,11 +196,11 @@ As atualizações de segurança do canal Estável estão listadas [aqui](/deploy
 
 ## <a name="version-950102053-november-12"></a>Versão 95.0.1020.53: 12 de novembro
 
-Correção de vários bugs e problemas de desempenho.
+Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-950102044-november-4"></a>Versão 95.0.1020.44: 4 de novembro
 
-Correção de vários bugs e problemas de desempenho.
+Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-94099258-october-30"></a>Versão 94.0.992.58: 30 de outubro
 
@@ -627,7 +685,7 @@ Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-89077448-march-8"></a>Versão 89.0.774.48: 8 de março
 
-Correção de vários bugs e problemas de desempenho.
+Vários bugs e problemas de desempenho corrigidos.
 
 <!-- begin major 89 -->
 
@@ -1262,7 +1320,7 @@ Um usuário digita incorretamente "powerbi como" powerbbi". com. O link Doctor v
 
 - Várias atualizações do DevTools, incluindo o suporte à depuração remota, aperfeiçoamentos na IU e muito mais. Para obter mais detalhes, consulte [Novidades no DevTools (Microsoft Edge 83)](/microsoft-edge/devtools-guide-chromium/whats-new/2020/03/devtools).
 
-- Microsoft Defender for Cloud Apps cenário de aviso agora está disponível. Isso permite que os administradores configurem o aviso, uma nova categoria de blocos Defender para Nuvem Aplicativos, em que o usuário pode substituir uma página de blocos Defender para Nuvem Aplicativos. Os bloqueios do MDATP E5 são nativamente integrados aos bloqueios SmartScreen no Microsoft Edge para obter uma experiência perfeita. Essa experiência permite um bloco vermelho de página inteira com a mensagem "este site é bloqueado pela sua organização", em vez de apenas uma notificação do sistema.
+- Microsoft Defender para Nuvem cenário de aviso de aplicativos agora está disponível. Isso permite que os administradores configurem o aviso, uma nova categoria de blocos Defender para Nuvem Aplicativos, em que o usuário pode substituir uma página de blocos Defender para Nuvem Aplicativos. Os bloqueios do MDATP E5 são nativamente integrados aos bloqueios SmartScreen no Microsoft Edge para obter uma experiência perfeita. Essa experiência permite um bloco vermelho de página inteira com a mensagem "este site é bloqueado pela sua organização", em vez de apenas uma notificação do sistema.
 
 - Não permitir um XMLHttpRequest síncrono no descarte de página. O envio de XMLHttpRequests síncronos durante o carregamento de uma página da Web será removido. Essa alteração melhorará o desempenho e a confiabilidade do navegador, mas poderá afetar os aplicativos da Web que ainda não foram atualizados para usar APIs da Web mais modernas, incluindo sendBeacon e FETCH. A Política de Grupo para desabilitar essa alteração e permitir XHR síncronos durante a transmissão de página estará disponível até o Microsoft Edge 88. Para saber mais, confira [Compatibilidade de sites - alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 

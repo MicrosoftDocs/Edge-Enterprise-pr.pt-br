@@ -3,23 +3,40 @@ title: Notas de versão para atualizações de segurança do Microsoft Edge
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 04/07/2022
+ms.date: 05/02/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão para atualizações de segurança do Microsoft Edge
-ms.openlocfilehash: 0ab346a202bb8bf42239430000ebc0692d8f7992
-ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
+ms.openlocfilehash: b2da8c92f938da53fb63273e2b43c6b503bd2c19
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "12473582"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505344"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Notas de versão para atualizações de segurança do Microsoft Edge
 
 Estas notas de versão fornecem informações sobre correções de segurança incluídas nas atualizações para o canal estável do Microsoft Edge.
+
+## <a name="april-28-2022"></a>28 de abril de 2022
+
+A Microsoft lançou o mais recente **Canal Estável do Microsoft Edge (Versão 101.0.1210.32)**, que incorpora as atualizações de segurança mais recentes do projeto Chromium. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
+
+Esta instalação também contém a seguinte atualização específica do Microsoft Edge:
+
+- [CVE-2022-29146](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-29146)
+- [CVE-2022-29147](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-29147)
+
+## <a name="april-15-2022"></a>15 de abril de 2022
+
+A Microsoft lançou o mais recente **Canal Estável do Microsoft Edge (Versão 100.0.1185.44)**, que incorpora as Atualizações de Segurança mais recentes do projeto Chromium. Esta atualização contém uma correção para [CVE-2022-1364](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-1364), que foi relatada pela equipe do Chromium como tendo uma exploração em estado selvagem. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
+
+Esta instalação também contém a seguinte atualização específica do Microsoft Edge:
+
+- [CVE-2022-29144](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-29144)
 
 ## <a name="april-7-2022"></a>7 de abril de 2022
 

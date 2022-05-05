@@ -1,6 +1,6 @@
 ---
 title: Configuração e suporte à identidade do Microsoft Edge
-ms.author: avvaid
+ms.author: v-danwesley
 author: dan-wesley
 manager: srugh
 ms.date: 06/29/2021
@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Configuração e suporte à identidade do Microsoft Edge
-ms.openlocfilehash: 18b82c3f0c4af0e383dd50266c3d9184c76b23af
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 5b7078540ae254014e566f923e9387a125f0424f
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978558"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505614"
 ---
 # <a name="microsoft-edge-identity-support-and-configuration"></a>Configuração e suporte à identidade do Microsoft Edge
 
@@ -33,7 +33,7 @@ Com o Microsoft Edge é possível entrar em um perfil de navegador com uma conta
 | Sincronização | Sim | Não | Não | Sim |
 | SSO com Token de atualização principal | Sim | Sim | Não | Sim |
 | SSO de conexão remota | Sim | Sim | Sim | N/D |
-| Autenticação Integrada do Windows | Sim | Sim | Sim | N/A |
+| Autenticação Integrada do Windows | Sim | Sim | Sim | N/D |
 | Página Nova guia Corporativa | Requer O365 |   Requer O365 | Não | N/A |
 | Pesquisa da Microsoft | Requer O365 | Requer O365 | Não | N/D |
 

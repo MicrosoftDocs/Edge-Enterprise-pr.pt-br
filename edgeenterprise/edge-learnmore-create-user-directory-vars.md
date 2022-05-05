@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Saiba como criar variáveis de diretório de dados do usuário do Microsoft Edge
-ms.openlocfilehash: 2e85e8eebac4a636d90fd0b5da7520c9a86a2de0
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 3ad794875ee1ec962a05eecee81f0468e6bc8847
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978606"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505624"
 ---
 # <a name="create-microsoft-edge-user-data-directory-variables"></a>Criar variáveis de diretório de dados do usuário do Microsoft Edge
 
@@ -77,7 +77,7 @@ O Microsoft Edge dá suporte às variáveis de caminho a seguir.
 >[!NOTE]
 >Partes dessa página são modificações baseadas no trabalho criado e compartilhado por Chromium.org e usadas de acordo com os termos descritos na [Licença Attribution 4.0 International (CC BY 4.0) da Creative Commons](http://creativecommons.org/licenses/by/4.0/). A página original pode ser encontrada [aqui](https://www.chromium.org/administrators/policy-list-3/user-data-directory-variables).
   
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br/>Esse trabalho é licenciado sob uma <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licença Attribution 4.0 International (CC BY 4.0) da Creative Commons</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br/>Esse trabalho é licenciado sob uma <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licença Attribution 4.0 International (CC BY 4.0) da Creative Commons</a>.
 ## <a name="see-also"></a>Consulte também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

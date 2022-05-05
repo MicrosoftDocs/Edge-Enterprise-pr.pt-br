@@ -1,7 +1,7 @@
 ---
 title: 'Segurança do gerenciador de senhas do Microsoft Edge '
-ms.author: v-andreabarr
-author: AndreaLBarr
+ms.author: v-danwesley
+author: dan-wesley
 manager: collw
 ms.date: 09/30/2021
 audience: ITPro
@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Segurança do gerenciador de senhas do Microsoft Edge
-ms.openlocfilehash: 6f9dadab36c755113ad647e7e78a0bbbb2f8c965
-ms.sourcegitcommit: 2bf511511f131b8497b3e162c44286c217508885
+ms.openlocfilehash: 09b92656e47e2305285fd4f2e19a6bcc025122dd
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2021
-ms.locfileid: "12057329"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505334"
 ---
 # <a name="microsoft-edge-password-manager-security"></a>Segurança do gerenciador de senhas do Microsoft Edge 
 
@@ -141,7 +141,7 @@ Quando as senhas do navegador são criptografadas em disco, a chave de criptogra
 Um recurso de Senha Mestra (que autentica o usuário antes de preencher automaticamente seus dados) fornece uma compensação na conveniência para uma mitigação mais ampla de ameaças. Especificamente, ele ajuda a reduzir a janela de exposição de dados contra malware latente ou invasores fisicamente locais. No entanto, uma Senha Mestra não é uma panacéia, e invesores locais e malwares dedicados têm várias estratégias para contornar a proteção de uma Senha Mestra.
 
 > [!Note]
-> Microsoft Edge agora oferece a capacidade de habilitar a autenticação antes do recurso de preenchimento automático; isso fornece aos usuários uma camada adicional de privacidade e impede que suas senhas armazenadas são usadas por qualquer pessoa, menos por eles. Para obter mais detalhes, consulte [Privacidade adicional para suas senhas salvas.](https://support.microsoft.com/topic/additional-privacy-for-your-saved-passwords-31dbd670-e314-4901-a546-6f302548502e)  
+> Microsoft Edge agora oferece a capacidade de habilitar a autenticação antes da funcionalidade de preenchimento automático; isso fornece aos usuários uma camada adicional de privacidade e impede que suas senhas armazenadas sejam usadas por qualquer pessoa, menos eles. Para obter mais detalhes, consulte [Privacidade adicional para suas senhas salvas](https://support.microsoft.com/topic/additional-privacy-for-your-saved-passwords-31dbd670-e314-4901-a546-6f302548502e).  
 
 ## <a name="can-using-a-password-manager-impact-my-privacy"></a>O uso de um gerenciador de senhas pode afetar minha privacidade?
 

@@ -3,19 +3,19 @@ title: Guia Passo a Passo do Enterprise Site Discovery
 ms.author: collw
 author: appcompatguy
 manager: saudm
-ms.date: 01/19/2022
+ms.date: 04/29/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: Usar o Enterprise Site Discovery para se Preparar para o Modo IE
-ms.openlocfilehash: a93569f455e5671a2d4adf8f5f70238d3f23143d
-ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
+description: Guia para usar o Enterprise Site Discovery para se preparar para o modo IE.
+ms.openlocfilehash: e2199637d7f52236bd98a2692ac3d008d2e2837c
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "12445595"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505654"
 ---
 # <a name="enterprise-site-discovery-step-by-step-guide"></a>Guia Passo a Passo do Enterprise Site Discovery
 
@@ -23,6 +23,9 @@ ms.locfileid: "12445595"
 > O aplicativo de área de trabalho Internet Explorer 11 será desativado e ficará sem suporte em 15 de junho de 2022 (para obter uma lista do que está no escopo, [consulte as Perguntas frequentes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. [Saiba mais aqui](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 Este artigo fornece um guia passo a passo para usar o Enterprise Site Discovery com o Microsoft Endpoint Configuration Manager.
+
+> [!TIP]
+> A menos que seu ambiente exija o uso das etapas neste guia, recomendamos que você use o assistente de implantação do [Microsoft Edge](https://aka.ms/edgeadvisor) e o script que ele gera para configurar Enterprise Descoberta de Sites.
 
 O Enterprise Site Discovery pode ajudá-lo a configurar sua Lista de Sites do Modo Empresarial. O Enterprise Site Discovery ajudará você a:
 
@@ -36,9 +39,9 @@ O Enterprise Site Discovery pode ajudá-lo a configurar sua Lista de Sites do Mo
 
 Este guia pressupõe que você tenha experiência com o Gerenciador de Configurações do Microsoft Endpoint e tenha os seguintes serviços e funções instalados:
 
-1. Microsoft Endpoint Configuration Manager
-2. Microsoft SQL Server Reporting Services
-3. (Opcional) Função de Ponto do Reporting Services do Gerenciador de Configurações configurada
+- Microsoft Endpoint Configuration Manager
+- Microsoft SQL Server Reporting Services
+- (Opcional) Configuration Manager Reporting Services função de ponto está configurada
 
 ## <a name="download-enterprise-site-discovery-tools"></a>Baixar Ferramentas do Enterprise Site Discovery
 
@@ -49,123 +52,145 @@ Baixe as seguintes ferramentas:
 
 ## <a name="enable-enterprise-site-discovery"></a>Habilitar o Enterprise Site Discovery
 
-Para que você possa se conectar à Instrumentação de Gerenciamento do Windows (WMI) para recuperar dados de descoberta do site, primeiro implante o provedor de classe WMI no dispositivo.
+Antes de se conectar ao WMI (instrumentação de gerenciamento) do Windows para recuperar dados de descoberta de site, você precisa implantar o provedor de classe WMI no dispositivo que está coletando esses dados.
 
 Em **Pacote de Instalação e Configuração do Enterprise Site Discovery**, extraia o conteúdo para uma pasta em seu compartilhamento de arquivo definitivo da biblioteca de software. Exemplo: **\\\\DSL\\EnterpriseSiteDiscovery**.
 
-Em seguida, crie um pacote no Gerenciador de Configurações do Microsoft Endpoint, conforme descrito na [documentação](/configmgr/apps/deploy-use/packages-and-programs), selecionando as seguintes opções:
+Em seguida, crie um pacote Microsoft Endpoint Configuration Manager, conforme descrito em [Pacotes e programas Configuration Manager](/configmgr/apps/deploy-use/packages-and-programs).
 
-- Na página **Pacote**, selecione **Nome** e especifique o nome **Habilitar Descoberta do Site**
-- Na página **Pacote**, selecione **Este pacote contém arquivos de origem**
-- Na página **Pacote**, especifique a pasta de origem para a qual você extraiu os arquivos (por exemplo, **\\\\DSL\\EnterpriseSiteDiscovery**)
+Defina o novo pacote com as seguintes configurações:
+
+- Na página **Pacote** :
+  - selecione **Nome e** especifique o nome **Habilitar Descoberta de Site**
+  - select **Este pacote contém arquivos de origem**
+  - especifique a pasta de origem para a qual você extraiu os arquivos (por exemplo, **\\\\DSL\\EnterpriseSiteDiscovery**)
 - Na página **Tipo de programa**, escolha **Programa Padrão**
-- Na página **Programa Padrão**, digite a linha de comando para configurar o Descoberta do Site no dispositivo da seguinte maneira:
-  ```dos
-  powershell.exe -ExecutionPolicy Bypass .\IETelemetrySetUp-Win8.ps1
-  ```
-  > [!NOTE]
-  > O script suporta o uso de opções de linha de comando para `-ZoneAllowList` e `-SiteAllowList`. Para este passo a passo, configuraremos essas opções por meio da política de grupo (abaixo).
-- Na página **Programa Padrão**, selecione a opção para executar **Oculto**.
-- Na página **Programa Padrão**, em **Programa pode executar**, selecione a opção **Se um usuário está ou não conectado**.
+- Na página **Programa Padrão** , insira o seguinte comando para configurar a Descoberta de Site no dispositivo:
 
-Após criar o pacote, clique duas vezes no nome do pacote **Ativar Descoberta do Site** para visualizar suas propriedades. Na propriedade **Após a execução**, selecione **Gerenciador de configuração reinicia o computador**. A coleta de dados WMI começará após a reinicialização dos dispositivos.
+  ```dos
+  
+    powershell.exe -ExecutionPolicy Bypass .\IETelemetrySetUp-Win8.ps1
+
+  ```
+
+  > [!NOTE]
+  > O script suporta o uso de opções de linha de comando para `-ZoneAllowList` e `-SiteAllowList`. Para este passo a passo, configuraremos essas opções por meio da política [de grupo](#configure-enterprise-site-discovery-via-group-policy).
+
+- Na página **Programa** Padrão:
+  - selecione a opção para executar **Oculto**
+  - em **Programa pode ser executado**, selecione a **opção Se um usuário está conectado ou não**
+
+Após criar o pacote, clique duas vezes no nome do pacote **Ativar Descoberta do Site** para visualizar suas propriedades. Para a **propriedade Após a execução** , selecione **Configuration Manager reinicia o computador**. A coleta de dados WMI será iniciada após a reinicialização dos dispositivos.
 
 > [!NOTE]
 > Você pode configurar o tempo que um usuário precisa para reiniciar o dispositivo, conforme descrito na [documentação de configurações do cliente](/configmgr/core/clients/deploy/about-client-settings#computer-restart).
 
+Para confirmar que a coleta de dados está funcionando, visite alguns sites e execute o comando do PowerShell a seguir para verificar se os dados estão sendo preenchidos no namespace do WMI.
+
+```powershell
+
+Get-WmiObject -Namespace “root/cimv2/IETelemetry” -Class IEURLInfo | Select-Object URL, NumberOfVisits, CrashCount, DocMode | Sort-Object
+
+```
+
 ## <a name="configure-enterprise-site-discovery-via-group-policy"></a>Configurar o Enterprise Site Discovery por meio da Política de Grupo
 
-Com o Enterprise Site Discovery habilitado, você pode configurar quais dados coletará. Considere as leis locais e os requisitos regulatórios, conforme descrito [aqui](/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery#what-data-is-collected).
+Com o Enterprise Site Discovery habilitado, você pode configurar quais dados coletará. Considere as leis locais e os requisitos regulatórios, conforme descrito [em Quais dados são coletados?](/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery#what-data-is-collected).
 
-1. Abrir o Editor de Política de Grupo
-2. Clique em **Configuração do Computador** > **Modelos Administrativos** > **Componentes do Windows** > **Internet Explorer** 
-3. Clique duas vezes em **Ativar saída WMI da Descoberta do Site**
-4. Selecione **Habilitado**
-5. Clique em **OK** ou em **Aplicar** para salvar essa configuração de política
+1. Abra o Editor de Política de Grupo.
+2. Selecione **Modelos de** **ConfigurationAdministrativo** >  do Computador  > **Windows** **ComponentsInternet** >  Explorer.
+3. Clique duas vezes **em Ativar saída WMI de Descoberta de Site**.
+4. Selecione **Habilitado**.
+5. Selecione **OK** ou **Aplicar** para salvar esta configuração de política.
 
-Você pode limitar as zonas nas quais você coleta dados do site:
+Você pode escolher as zonas em que deseja coletar dados do site:
 
-1. Clique duas vezes em **Limitar saída da Descoberta do Site por Zona**
-2. Selecione **Habilitado**
-3. Insira uma bitmask indicando em quais zonas habilitar a descoberta do site:
-    1. Zona de Sites Restritos
-    2. Zona da Internet
-    3. Zona de Sites Confiáveis
-    4. Zona da Intranet Local
-    5. Zona do Computador Local
-    
-    Exemplo 1: **00010** coletará dados apenas para a zona da Intranet Local
+1. Clique duas vezes em **Limitar a saída da Descoberta de Site por Zona**.
+2. Selecione **Habilitado**.
+3. Defina **a Máscara de**  Zona para indicar para quais das zonas a seguir habilitar a descoberta de site.
 
-    Exemplo 2: **10111** coletará dados para todas as zonas, exceto a zona da Internet
-4. Clique em **OK** ou em **Aplicar** para salvar essa configuração de política
+    - Zona de Sites Restritos
+    - Zona da Internet
+    - Zona de Sites Confiáveis
+    - Zona da Intranet Local
+    - Zona do Computador Local
+   > [!NOTE]
+   > Para configurar zonas incluídas na descoberta de site, um número binário é formado com base nas zonas selecionadas. A representação decimal desse número é usada para representar esse número na política.
 
-Você pode limitar os domínios para os quais você coleta dados do site:
+    Exemplos: a Máscara de Zona 2: **00010** coletará dados para a zona da Intranet Local somente a Máscara de Zona 6: **00110** coletará dados somente para zonas de site confiáveis e intranet
 
-1. Clique duas vezes em **Limitar saída da Descoberta do Site por domínio**
-2. Selecione **Habilitado**
-3. Digite os domínios para os quais você deseja coletar dados, um domínio por linha
-4. Clique em **OK** ou em **Aplicar** para salvar essa configuração de política
+4. Selecione **OK** ou **Aplicar** para salvar esta configuração de política.
+
+Você também pode limitar os domínios para os quais coletar dados do site:
+
+1. Clique duas vezes em **Limitar saída da Descoberta de Site por domínio**.
+2. Selecione **Habilitado**.
+3. Insira os domínios para os quais você deseja coletar dados, um domínio por linha.
+4. Selecione **OK** ou **Aplicar** para salvar esta configuração de política.
 
 ## <a name="collect-site-discovery-data-using-configuration-manager"></a>Colete dados da Descoberta do Site usando o Gerenciador de Configurações
 
 Agora que seus dispositivos estão gerando dados, é hora de coletar esses dados no Gerenciador de Configurações.
 
-1. No console do Gerenciador de Configurações, escolha **Administração** > **Configurações do Cliente** > **Configurações Padrão do Cliente**
-2. Na guia **Página Inicial**, no grupo **Propriedades**, escolher **Propriedades**
-3. Na caixa de diálogo **Configurações Padrão do Cliente**, escolha **Inventário de Hardware**
-4. Na lista **Configurações do Dispositivo**, escolha **Definir Slasses**
-5. Na caixa de diálogo **Classes de Inventário de Hardware**, escolha **Adicionar**
-6. Na caixa de diálogo **Adicionar Classe de Inventário de Hardware**, clique em **Conectar**
+1. No console Configuration Manager, escolha **AdministrationClient****** >  Configurações  > **Default Client Configurações**.
+2. No grupo **Propriedades** da guia **Página Inicial,** escolha **Propriedades**.
+3. Na caixa **de diálogo Configurações** Cliente Padrão, escolha **Inventário de Hardware**.
+4. Na lista **de Configurações** dispositivo, escolha **Definir Classes**.
+5. Na caixa **de diálogo Classes de Inventário de Hardware** , escolha **Adicionar**.
+6. Na caixa **de diálogo Adicionar Classe de Inventário de** Hardware, **selecione Conexão**.
 7. Na caixa de diálogo **Conectar-se à Instrumentação de Gerenciamento do Windows (WMI)**, digite o nome de um computador onde o Enterprise Site Discovery está configurado. Se você estiver se conectando a outro computador, precisará de credenciais com permissão para acessar o WMI.
-8. Na caixa de texto **Namespace WMI**, digite **root\cimv2\IETelemetry**
-9. Escolha **Conectar**
-10. Na caixa **de diálogo Adicionar** Classe de Inventário de Hardware, **** na lista De classes inventário, selecione as classes WMI **IESystemINfo**, **IEUrlInfo** e **IECountInfo**.
-11. Clique em **OK** para fechar a caixa de diálogo **Classificadores de classe** e as outras caixas de diálogo abertas.
+8. Na caixa **de texto namespace WMI** , insira **root\cimv2\IETelemetry**.
+9. Escolha **Conexão**.
+10. Na caixa **de diálogo** Adicionar Classe de Inventário de Hardware, **** na lista classes Inventory, selecione as classes WMI **IESystemINfo**, **IEUrlInfo** e **IECountInfo**.
+11. Selecione **OK** para fechar a **caixa de diálogo Qualificadores de** classe e os outros diálogos abertos.
 
 Depois que o cliente atualizar as configurações do ponto de gerenciamento, os dados serão relatados quando o próximo inventário de hardware for executado (por padrão a cada sete dias).
 
 ## <a name="import-site-discovery-reports"></a>Importar relatórios de Descoberta do Site
 
-O pacote Enterprise Site Discovery inclui dois exemplos de relatórios. Um relatório mostra sites usando controles ActiveX e outro mostra sites usando modos de documento herdados.
+O pacote Enterprise Site Discovery inclui dois exemplos de relatórios. Um relatório mostra sites usando ActiveX e o relatório mostra sites usando modos de documento herdados.
 
 ### <a name="configure-the-site-discovery-sample-report"></a>Configure o relatório de exemplo de Descoberta do Site
 
-Use o procedimento a seguir para criar um relatório de exemplo que use três fontes de dados: os sites que um usuário visita, informações sobre o sistema e os modos de documento usados ​​pelos sites. Este relatório ajuda a identificar sites que podem depender dos modos de documentos herdados.
+Use as etapas como um guia para criar um relatório de exemplo que usa três fontes de dados. Essas fontes de dados são: os sites que um usuário visita, informações sobre seu sistema e os modos de documento usados pelos sites. Este relatório ajuda a identificar sites que podem depender dos modos de documentos herdados.
 
 1. Copie o relatório **SCCM_Report-Site_Discovery.rdl** no servidor do Gerenciador de Configurações.
-2. Instale o [Construtor de Relatórios da Microsoft](/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver15).
+2. Instale o [Construtor de Relatórios da Microsoft](/sql/reporting-services/install-windows/install-report-builder).
 3. Clique duas vezes em **SCCM_Report-Site_Discovery.rdl** para abrir o relatório no Construtor de Relatórios.
-4. Na primeira vez que você tentar abrir o relatório, ele tentará entrar em contato com o servidor onde ele foi criado. Quando solicitado a **Conectar-se ao Servidor de Relatório**, clique em **Não**.
+4. Na primeira vez que você tentar abrir o relatório, ele tentará entrar em contato com o servidor onde ele foi criado. Quando for solicitado a Conexão **para o Servidor de Relatório**, selecione **Não**.
 5. Depois que o relatório for aberto, expanda **Fontes de Dados** e clique duas vezes em **DataSource1**.
-6. Na janela **Propriedades da Fonte de Dados**, selecione **Usar uma conexão incorporada no meu relatório** e clique no botão **Build...**.
+6. Na janela **Propriedades da Fonte de** Dados, **selecione Usar uma conexão inserida no meu relatório** e, em seguida, **selecione Compilar...**.
+
+> [!NOTE]
+> Certifique-se de selecionar Microsoft SQL Server como a Fonte de Dados. Report Builder padrão é Microsoft SQL Server Analysis Services como a fonte de dados.
+
 7. Na janela **Propriedades da Conexão**, selecione **Nome do Servidor** e digite o nome do servidor do Gerenciador de Configurações. Em seguida, em **Selecionar ou inserir um nome de banco de dados**, selecione o nome do banco de dados do Gerenciador de Configurações na lista suspensa.
-8. Clique em **OK** para fechar a janela **Propriedades da Conexão**.
-9. Clique em **Testar Conexão** para testar a conexão. Se a conexão for bem-sucedida, clique em **OK** para fechar a janela **Propriedades da Fonte de Dados**.
+8. Selecione **OK** para fechar a **janela Propriedades da** Conexão.
+9. Selecione **Testar Conexão** para testar a conexão. Se a conexão for bem-sucedida, selecione **OK** para fechar a janela **Propriedades da Fonte de** Dados.
 10. Repita as etapas 5 a 9 para a **Fonte de Dados 2**.
 11. Expanda **Conjuntos de Dados** e clique duas vezes em **DataSet1**.
-12. Na janela **Propriedades do Conjunto de Dados**, clique na caixa de texto **Consulta:** e substitua **USE CM_A1B** pelo nome do banco de dados selecionado na Etapa 7.
+12. Na janela **Propriedades do Conjunto de** Dados, clique na **caixa de texto Consulta:** Copie a consulta para Bloco de notas e, em seguida, localize e substitua **** CM_A1B pelo nome do banco de dados selecionado na Etapa 7. Cole a consulta atualizada na **caixa de texto Consulta:**
 13. Repita as etapas 11 a 12 para **DataSet2**, **DataSet3** e **DataSet4**.
-14. Na guia **Página Inicial** da faixa de opções, clique no botão **Executar** para testar o relatório.
-15. Salve o relatório.
-16. Feche o Construtor de Relatórios da Microsoft.
-17. Renomeie o arquivo para **Descoberta do Site.rdl**
+14. Na guia **Página Inicial** da faixa de opções, selecione o **botão** Executar para testar o relatório.
+15. Salve o relatório e feche o Microsoft Report Builder.
+17. Renomear o arquivo de relatório para **Site Discovery.rdl**
 
 ### <a name="configure-the-activex-sample-report"></a>Configure o relatório de exemplo ActiveX
 
-Use o procedimento a seguir para criar um relatório de exemplo que usa uma fonte de dados: os sites que estão usando controles ActiveX. Como o Internet Explorer é o único navegador que suporta controles ActiveX, esses sites podem exigir o modo IE.
+Use o procedimento a seguir para criar um relatório de exemplo que usa uma fonte de dados: os sites que estão usando controles ActiveX. Como o Internet Explorer é o único navegador que dá suporte ActiveX controles, esses sites podem exigir o modo IE no Microsoft Edge.
 
 1. Copie o relatório **Exemplo de relatório SCCM - ActiveX.rdl** para o servidor do Gerenciador de Configurações.
-2. Instale o [Construtor de Relatórios da Microsoft](/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver15).
+2. Instale o [Construtor de Relatórios da Microsoft](/sql/reporting-services/install-windows/install-report-builder).
 3. Clique duas vezes em **Exemplo de relatório SCCM - ActiveX.rdl** para abrir o relatório no Construtor de Relatórios.
-4. Na primeira vez que você tentar abrir o relatório, ele tentará entrar em contato com o servidor onde ele foi criado. Quando solicitado a **Conectar-se ao Servidor de Relatório**, clique em **Não**.
+4. Na primeira vez que você tentar abrir o relatório, ele tentará entrar em contato com o servidor onde ele foi criado. Quando for solicitado a Conexão **para o Servidor de Relatório**, selecione **Não**.
 5. Depois de abrir o relatório, expanda **Fontes de Dados** e clique duas vezes em **AutoGen__5C6358F2_4BB6_4a1b_A16E_8D96795D8602_**.
-6. Na janela **Propriedades da Fonte de Dados**, selecione **Usar uma conexão incorporada no meu relatório** e clique no botão **Build...**.
+6. Na janela **Propriedades da Fonte de** Dados, **selecione Usar uma conexão inserida no meu relatório** e, em seguida, **selecione Compilar...**.
 7. Na janela **Propriedades da Conexão**, selecione **Nome do Servidor** e digite o nome do servidor do Gerenciador de Configurações. Em seguida, em **Selecionar ou inserir um nome de banco de dados**, selecione o nome do banco de dados do Gerenciador de Configurações na lista suspensa.
-8. Clique em **OK** para fechar a janela **Propriedades da Conexão**.
-9. Clique em **Testar Conexão** para testar a conexão. Se a conexão for bem-sucedida, clique em **OK** para fechar a janela **Propriedades da Fonte de Dados**.
+8. Selecione **OK** para fechar a **janela Propriedades da** Conexão.
+9. Selecione **Testar Conexão** para testar a conexão. Se a conexão for bem-sucedida, selecione **OK** para fechar a janela **Propriedades da Fonte de** Dados.
 10. Expanda **Conjuntos de Dados** e clique duas vezes em **DataSet1**.
-11. Na janela **Propriedades do Conjunto de Dados**, clique na caixa de texto **Consulta:** e substitua **USE CM_A1B** pelo nome do banco de dados selecionado na Etapa 7.
-12. Na guia **Página Inicial** da faixa de opções, clique no botão **Executar** para testar o relatório.
+11. Na janela **Propriedades do Conjunto de** Dados, clique na **caixa de texto Consulta:** Copie a consulta para Bloco de notas e, em seguida, localize e substitua **** CM_A1B pelo nome do banco de dados selecionado na Etapa 7. Cole a consulta atualizada na **caixa de texto Consulta:**
+12. Na guia **Página Inicial** da faixa de opções, selecione o **botão** Executar para testar o relatório.
 13. Salve o relatório.
 14. Feche o Construtor de Relatórios da Microsoft.
 15. Renomeie o arquivo para **ActiveX**
@@ -175,13 +200,13 @@ Use o procedimento a seguir para criar um relatório de exemplo que usa uma font
 Depois de configurar os relatórios para o seu ambiente, carregue-os no servidor de relatórios.
 
 1. Inicie o aplicativo **Gerenciador de Configurações do Reporting Services**.
-2. Na janela **Conexão do Servidor de Relatório**, clique em **Conectar** e, em seguida, clique no URL listado em **Identificação de Site do Portal da Web**
-3. Na janela do navegador que é aberta, você deve estar na **Página SQL Server Reporting Services** - clique na pasta **ConfigMgr_SCCMSiteCode** para o seu Código de Site do SCCM.
-4. Na faixa de opções, passe o mouse sobre **+Novo** e clique no item de menu **Pasta**.
-5. Digite um nome da pasta, como **Enterprise Site Discovery**, e clique no botão **Criar**.
-6. Clique na pasta **Enterprise Site Discovery**.
-7. Na faixa de opções, clique no botão **Carregar**.
-8. Selecione o relatório de **Descoberta do Site** e clique em **OK**.
+2. Na janela **Conexão do Servidor de** Relatório, **selecione Conexão** e, em seguida, selecione a URL listada em **Identificação do Site do Portal da Web**
+3. Na janela do navegador que é aberta, você deve estar na página **SQL Server Reporting Services** - selecione a pasta ConfigMgr_SCCMSiteCode para **** o Código do Site do SCCM.
+4. Na faixa de opções, passe o mouse **sobre +Novo** e selecione o item **de** menu Pasta.
+5. Insira um nome de pasta, como **Enterprise Descoberta de Site**, e selecione o **botão** Criar.
+6. Selecione a pasta **Enterprise Descoberta de Site**.
+7. Na faixa de opções, selecione o **Upload** botão.
+8. Selecione o **relatório descoberta de** site e selecione **OK**.
 9. Repita as etapas 7 e 8 para o relatório **ActiveX**.
 
 ### <a name="view-reports-in-configuration-manager"></a>Visualize os relatórios no Gerenciador de Configurações
@@ -193,18 +218,23 @@ Agora que você personalizou e enviou os relatórios, é possível visualizá-lo
 
 ## <a name="disable-enterprise-site-discovery"></a>Desabilitar o Enterprise Site Discovery
 
-Quando terminar de coletar dados, você deve desabilitar o Enterprise Site Discovery. Crie um segundo pacote para desabilitar o Enterprise Site Discovery no Gerenciador de Configurações do Microsoft Endpoint, conforme descrito na [documentação](/configmgr/apps/deploy-use/packages-and-programs), selecionando as seguintes opções:
+Quando terminar de coletar dados, desabilite a Enterprise Site Discovery. Crie um segundo pacote para desabilitar Enterprise Descoberta de Sites no Microsoft Endpoint Configuration Manager, conforme descrito nos pacotes e programas [no Configuration Manager](/configmgr/apps/deploy-use/packages-and-programs). Configure as seguintes opções:
 
-- Na página **Pacote**, selecione **Nome** e especifique o nome **Desabilitar Descoberta do Site**
-- Na página **Pacote**, selecione **Este pacote contém arquivos de origem**
-- Na página **Pacote**, especifique a pasta de origem para a qual você extraiu os arquivos (por exemplo, **\\\\DSL\\EnterpriseSiteDiscovery**)
-- Na página **Tipo de programa**, escolha **Programa Padrão**
-- Na página **Programa Padrão**, digite a linha de comando que desabilitará a Descoberta do Site no dispositivo da seguinte maneira:
+- Na página **Pacote** :
+  - selecione **Nome e** especifique o nome **Desabilitar Descoberta de Site**.
+  - select **Este pacote contém arquivos de origem**.
+  - especifique a pasta de origem para a qual você extraiu os arquivos (por exemplo, **\\\\DSL\\EnterpriseSiteDiscovery**).
+- Na página **Tipo de** Programa, escolha **Programa Padrão**.
+- Na página **Programa Padrão** , insira a seguinte linha de comando para desabilitar a Descoberta de Site no dispositivo:
+
   ```dos
   powershell.exe -ExecutionPolicy Bypass .\IETelemetrySetUp-Win8.ps1 -IEFeatureOff
+
   ```
-- Na página **Programa Padrão**, selecione a opção para executar **Oculto**
-- Na página **Programa Padrão**, em **Programa pode executar**, selecione a opção **Se um usuário está ou não conectado**.
+
+- Na página **Programa** Padrão:
+  - selecione a opção **Executar** Oculto.
+  - em **Programa pode ser executado**, selecione a **opção Se um usuário está conectado ou não**.
 
 ## <a name="see-also"></a>Consulte também
 

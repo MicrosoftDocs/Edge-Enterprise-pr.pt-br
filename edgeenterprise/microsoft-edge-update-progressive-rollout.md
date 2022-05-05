@@ -1,6 +1,6 @@
 ---
 title: Distribuições progressivas para atualizações do canal estável do Microsoft Edge
-ms.author: aguta
+ms.author: v-danwesley
 author: dan-wesley
 manager: srugh
 ms.date: 06/29/2021
@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Distribuições progressivas para atualizações do canal estável do Microsoft Edge
-ms.openlocfilehash: bdcefdc118125d67057fa77513bd732cff6882e3
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: cc55be1cf61827c45aeb2c676b5b8c1a62a1a71e
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978737"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505632"
 ---
 # <a name="progressive-rollouts-for-microsoft-edge-stable-channel-updates"></a>Distribuições progressivas para atualizações do canal estável do Microsoft Edge
 

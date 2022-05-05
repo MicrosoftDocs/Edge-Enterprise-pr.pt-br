@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação para todas as políticas compatíveis com o Microsoft Edge Update
-ms.openlocfilehash: 68b59a66f48633b88063ee33acbc71d819b0cbc7
-ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.openlocfilehash: 4698a4eaa0b51a9429f0c1c45da596d625a3791c
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "12297609"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505374"
 ---
 # <a name="microsoft-edge---update-policies"></a>Microsoft Edge - Políticas de atualização
 
@@ -30,11 +30,11 @@ Para obter informações sobre outras políticas disponíveis no Microsoft Edge,
 ## <a name="available-policies"></a>Políticas disponíveis
 Essas tabelas listam todas as políticas de grupo relacionadas à atualização disponíveis nesta versão do Microsoft Edge. Use os links na tabela a seguir para obter mais detalhes sobre políticas específicas.
 
-|||
-|-|-|
-|[Aplicativos](#applications)|[Preferências](#preferences)|
-|[Servidor proxy](#proxy-server)|[Microsoft Edge Update](#microsoft-edge-update)|
-|[Microsoft Edge WebView](#microsoft-edge-webview)||
+- [Aplicativos](#applications)
+- [Preferências](#preferences)
+- [Servidor proxy](#proxy-server)
+- [Microsoft Edge Update](#microsoft-edge-update)
+- [Microsoft Edge WebView](#microsoft-edge-webview)
 
 ### [<a name="applications"></a>Aplicativos](#applications-policies)
 |Nome da política|Legenda|

@@ -10,18 +10,18 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Sintaxe da expressão regular 2
-ms.openlocfilehash: bdb49090a4d9b0611d3485570757fd86946c4ca5
-ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.openlocfilehash: b74a3cbedb12992d4a6a2e92cd7885d8d41dd86a
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "12298269"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505794"
 ---
 # <a name="regular-expression-2-re2h-syntax"></a>Sintaxe da Expressão Regular 2 (re2.h)
 
 As expressões regulares são uma notação para descrever os conjuntos de cadeias de caracteres. Quando uma cadeia de caracteres está no conjunto descrito por uma expressão regular, costumamos dizer que a expressão regular corresponde à cadeia.
 
-A expressão regular mais simples é um único caractere literal. Exceto pelos metacaracteres, como `\*+?()|`, os caracteres correspondem a si próprios. Para corresponder a um metacharacter, escape-o com uma reação invertida: `\+` corresponde a um caractere literal a mais.
+A expressão regular mais simples é um único caractere literal. Exceto pelos metacaracteres, como `\*+?()|`, os caracteres correspondem a si próprios. Para corresponder a um metacharacter, escape-o com uma barra invertida: `\+` corresponde a um caractere de mais literal.
 
 Duas expressões regulares podem ser alteradas ou concatenadas para formar uma nova expressão regular se: *e<sub>1</sub>* corresponde a _s_ e *e<sub>2</sub>* corresponde a _t_, nesse caso, *e<sub>1</sub>* | *e<sub>2</sub>* correspondem a _s_ ou _t_, e *e<sub>1</sub>* *e<sub>2</sub>*  correspondem a _st_.
 
@@ -29,7 +29,7 @@ Os metacaracteres _`\`_, _+_ e _?_ são operadores de repetição: *e<sub>1</sub
 
 A precedência do operador, da associação mais fraca para a mais forte, é primeiro a alternância, depois a concatenação e, por fim, os operadores de repetição. Parênteses explícitos podem ser usados para forçar significados diferentes, como em expressões aritméticas. Alguns exemplos: _ab|cd_ é equivalente _a (ab)|( cd)_ ; _`ab\`_ é equivalente a _`a(b\)`_ .
 
-A sintaxe descrita até o momento é a maior parte da sintaxe de expressão regular _egrep_ do Unix. Esse subconjunto basta para descrever todos os idiomas regulares. Um idioma regular é um conjunto de cadeias de caracteres que pode ser corresponder em uma única passagem pelo texto usando apenas uma quantidade fixa de memória. Instalações de expressão regular mais novas (notadamente Perl e os idiomas que a copiaram) adicionaram muitos novos operadores e sequências de escape. Essas alterações torna as expressões regulares mais concisas e, às vezes, mais enigmáticas, mas não mais poderosas.
+A sintaxe descrita até o momento é a maior parte da sintaxe de expressão regular _egrep_ do Unix. Esse subconjunto é suficiente para descrever todas as linguagens regulares. Um idioma regular é um conjunto de cadeias de caracteres que pode ser correspondido em uma única passagem pelo texto usando apenas uma quantidade fixa de memória. Recursos de expressão regular mais recentes (notavelmente Perl e as linguagens que a copiaram) adicionaram muitos operadores novos e sequências de escape. Essas alterações tornam as expressões regulares mais concisas e, às vezes, mais criptografada, mas não mais poderosas.
 
 Esta página lista a sintaxe de expressão regular aceita por RE2.
 
@@ -482,7 +482,7 @@ A sintaxe do sinalizador é xyz (definir) or -xyz (desmarcar) or xy-z (definir x
 | (?&amp;name) | chamada recursiva para o grupo nomeado (SEM SUPORTE) |
 | (?P=name) | referência nomeada (SEM SUPORTE) |
 | (?P&gt;name) | chamada recursiva para o grupo nomeado (SEM SUPORTE) |
-| (?(cond)true|false) | ramificação condicional (SEM SUPORTE) |
+| (? (cond)true\|false) | ramificação condicional (SEM SUPORTE) |
 | (?(cond)true) | ramificação condicional (SEM SUPORTE) |
 | (\*ACCEPT) | tornar regexps mais semelhantes ao prólogo (SEM SUPORTE) |
 | (\*COMMIT) | (SEM SUPORTE) |
@@ -505,7 +505,7 @@ A sintaxe do sinalizador é xyz (definir) or -xyz (desmarcar) or xy-z (definir x
 > [!NOTE]
 > Partes desta página são modificações baseadas no trabalho criado e compartilhado pela Chromium.org e usadas de acordo com os termos descritos na [Licença Pública Creative Commons Atribuição 4.0 Internacional](http://creativecommons.org/licenses/by/4.0/). A página original pode ser encontrada [aqui](https://github.com/google/re2/wiki/Syntax).
   
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Esse trabalho é licenciado sob uma <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licença Attribution 4.0 International (CC BY 4.0) da Creative Commons</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Esse trabalho é licenciado sob uma <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licença Attribution 4.0 International (CC BY 4.0) da Creative Commons</a>.
 
 ## <a name="see-also"></a>Consulte também
 
