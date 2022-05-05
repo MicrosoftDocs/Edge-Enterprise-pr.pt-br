@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 04/08/2022
+ms.date: 04/27/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 8007ccf6be3169e91d9f2db8832733ef6de9b49e
-ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
+ms.openlocfilehash: f5766b5ab1d8bf6f39c6a75296c1eeb5c721ae37
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "12473570"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505804"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -31,11 +31,11 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 
 ## <a name="new-policies"></a>Novas políticas
 
-A tabela a seguir lista as novas políticas que estão nesta atualização de artigo.
+A tabela a seguir lista as políticas novas e preteridas que estão nesta atualização de artigo.
 
 | Nome da política | Legenda |
-|:----|:----|
-|[AllHttpAuthSchemesAllowedForOrigins](#allhttpauthschemesallowedfororigins)|Lista de origens que permitem toda a autenticação HTTP|
+|:-----|:-----|
+|[SetTimeoutWithout1MsClampEnabled](#settimeoutwithout1msclampenabled)|Controle o tempo limite mínimo da função setTimeout() do JavaScript (preterido)|
 
 ## <a name="available-policies"></a>Políticas disponíveis
 
@@ -496,7 +496,9 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Habilitar Oclusão de Janela Nativa (preterida)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Definir um tempo limite para o atraso da navegação da guia para a lista de sites do Modo Empresarial|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Habilitar a previsão de rede|
+|[NetworkServiceSandboxEnabled](#networkservicesandboxenabled)|Habilitar a área restrita do serviço de rede|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configurar se um usuário sempre tem um perfil padrão conectado automaticamente à sua conta corporativa ou de estudante|
+|[OutlookHubMenuEnabled](#outlookhubmenuenabled)|Permitir que os usuários acessem o menu do Outlook|
 |[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|Controle onde as restrições de segurança em origens inseguras se aplicam|
 |[PDFSecureMode](#pdfsecuremode)|Modo seguro e validação de Assinatura Digital baseada em certificado no leitor de PDF nativo|
 |[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|Permitir que os sites pesquisem os métodos de pagamento disponíveis|
@@ -538,7 +540,8 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[SensorsAllowedForUrls](#sensorsallowedforurls)|Permitir o acesso a sensores em sites específicos|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Bloquear o acesso a sensores em sites específicos|
 |[SerialAskForUrls](#serialaskforurls)|Permitir a API serial em sites específicos|
-|[SerialBlockedForUrls](#serialblockedforurls)|Bloquear a API Serial em sites específicos|
+|[SerialBlockedForUrls](#serialblockedforurls)|Bloquear a API serial em sites específicos|
+|[SetTimeoutWithout1MsClampEnabled](#settimeoutwithout1msclampenabled)|Controle o tempo limite mínimo da função setTimeout() do JavaScript (preterido)|
 |[ShadowStackCrashRollbackBehavior](#shadowstackcrashrollbackbehavior)|Configurar o comportamento de reversão de falha doShadowStack|
 |[SharedArrayBufferUnrestrictedAccessAllowed](#sharedarraybufferunrestrictedaccessallowed)|Especifica se SharedArrayBuffers pode ser usado em um contexto não isolado de origem cruzada|
 |[SharedLinksEnabled](#sharedlinksenabled)|Mostrar links compartilhados dos aplicativos Microsoft 365 na História|
@@ -3293,6 +3296,8 @@ Se você não definir essa política, o valor padrão global será utilizado. O 
 
 O valor padrão global pode ser configurado usando a política [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled). Se [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) não estiver definido, o valor padrão global retorna a outras fontes de configuração.
 
+Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+
 Observe que os padrões listados nesta política são tratados como domínios, não URLs, para que você não possa especificar um esquema ou uma porta.
 
   #### <a name="supported-features"></a>Recursos compatíveis:
@@ -3441,7 +3446,7 @@ Se você não definir essa política, o valor padrão global será utilizado par
 
   - Nome exclusivo da Política de Grupo: NotificationsBlockedForUrls
   - Nome da Política de Grupo: Bloquear notificações em sites específicos
-  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/configurações do conteúdo
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Content settings
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -9087,7 +9092,7 @@ Use as informações anteriores ao configurar essa política.
 
   - Nome exclusivo da Política de Grupo: PrintingBackgroundGraphicsDefault
   - Nome da Política de Grupo: modo de impressão de gráficos em segundo plano padrão
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Printing
+  - Caminho da Política de Grupo (obrigatório): Modelos administrativos/Microsoft Edge/Impressão
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -10146,7 +10151,7 @@ Use as informações anteriores ao configurar essa política.
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Nome do Valor: SleepingTabsTimeout
-  - Tipo de Valor: REG_DWORD
+  - Tipo de valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -16639,11 +16644,13 @@ Para obter informações detalhadas sobre variantes de idioma válidas, confira[
 
   Permite que você especifique se o Microsoft Edge vai aguardar até que o navegador baixe a lista de sites inicial no Modo Empresarial. Essa configuração destina-se ao cenário em que a home page do navegador deve ser carregada no modo do Internet Explorer e é importante fazer isso no navegador pela primeira vez, após o modo do IE estar habilitado. Se esse cenário não existir, recomendamos não habilitar essa configuração porque isso pode afetar negativamente o desempenho do carregamento da home page. A configuração se aplica somente quando o Microsoft Edge não tiver uma lista de sites do Modo Empresarial em cache, como no primeiro navegador executado após o modo IE estar habilitado.
 
-Essa configuração funciona em conjunto com a: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) está definida como "IEMode" e a política [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) onde a lista tem pelo menos uma entrada.
+Essa configuração funciona em conjunto com: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) está definida como "IEMode" e uma das políticas [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) ou [InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist) onde a lista tem pelo menos uma entrada.
 
 O comportamento de tempo limite dessa política pode ser configurado com a política de [NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout).
 
 Se você definir essa política como 'All', quando o Microsoft Edge não tiver uma versão em cache do Enterprise Mode Site List, as tabulações adiarão a navegação até que o navegador baixe a lista de sites. Os sites configurados para abrir no modo Internet Explorer pela lista de sites serão carregados no modo Internet Explorer, mesmo durante a navegação inicial do navegador. Os sites que provavelmente não conseguem ser configurados para abrir no Internet Explorer, como em qualquer site com um esquema diferente de http:, https:, arquivo: ou FTP: não atrasam a navegação e a carregam imediatamente no modo Edge.
+
+Quando usado em conjunto com a política [InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist), durante o primeiro lançamento do Microsoft Edge, há um atraso porque a entrada implícita precisa ser concluída antes que o Microsoft Edge tente baixar a lista de sites da nuvem da Microsoft, pois isso requer autenticação para o serviço de nuvem.
 
 Se você definir essa política como "Nenhum" ou não a configurar, quando o Microsoft Edge não tiver uma versão em cache do Enterprise Mode Site List, as guias navegarão imediatamente e não aguardarão o navegador baixar o Enterprise Mode Site List. Os sites configurados para abrir no modo Internet Explorer pela lista de sites serão abertos no modo Microsoft Edge até que o navegador termine de baixar a lista de sites do Modo Empresarial.
 
@@ -18436,13 +18443,15 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 
   #### <a name="description"></a>Descrição
 
-  Essa política permite que você aprimora o estado de segurança Microsoft Edge.
+  Essa política permite que você aprimora o estado de segurança Microsoft Edge. 
 
 Se você definir essa política como 'StandardMode', o modo aprimorado será desativado e Microsoft Edge retornará ao modo de segurança padrão.
 
 Se você definir essa política como 'BalancedMode', o estado de segurança estará no modo balanceado.
 
 Se você definir essa política como 'StrictMode', o estado de segurança estará no modo estrito.
+
+Observação: atualmente, não há suporte para sites que usam o WASM (WebAssembly) quando EnhanceSecurityMode está habilitado. Se você precisar de acesso a um site que precisa de WASM, considere adicioná-lo à sua lista de exceções, conforme descrito em [Navegar com segurança com o Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
 
 Mapeamento das opções de política:
 
@@ -22960,7 +22969,7 @@ Use as informações anteriores ao configurar essa política.
 
   - Nome exclusivo da política de grupo: IntranetRedirectBehavior
   - Nome da política de grupo: comportamento de redirecionamento da intranet
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -24250,6 +24259,61 @@ Use as informações anteriores ao configurar essa política.
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### <a name="networkservicesandboxenabled"></a>NetworkServiceSandboxEnabled
+
+  #### <a name="enable-the-network-service-sandbox"></a>Habilitar a área restrita do serviço de rede
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows desde 102 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Essa política controla se o processo de serviço de rede é executado em área restrita ou não.
+Se essa política estiver habilitada, o processo de serviço de rede será executado em área restrita.
+Se essa política estiver desabilitada, o processo de serviço de rede será executado fora da área restrita. Isso deixa os usuários sujeitos a riscos de segurança adicionais relacionados à execução do serviço de rede fora da área restrita.
+Se essa política não for definida, a configuração padrão da área restrita de rede será usada. Isso pode variar dependendo da versão do Microsoft Edge, das avaliações de campo em execução no momento e da plataforma.
+Essa política destina-se a proporcionar às empresas flexibilidade para desabilitar a área restrita de rede se elas usarem software de terceiros que interfere na área restrita do serviço de rede.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da política de grupo: NetworkServiceSandboxEnabled
+  - Nome da política de grupo: Habilitar a área restrita do serviço de rede
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: NetworkServiceSandboxEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### <a name="nonremovableprofileenabled"></a>NonRemovableProfileEnabled
 
   #### <a name="configure-whether-a-user-always-has-a-default-profile-automatically-signed-in-with-their-work-or-school-account"></a>Configurar se um usuário sempre tem um perfil padrão conectado automaticamente à sua conta corporativa ou de estudante
@@ -24309,6 +24373,67 @@ Do Microsoft Edge 93 em diante, se a política [ImplicitSignInEnabled](#implicit
 0x00000001
 ```
 
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="outlookhubmenuenabled"></a>OutlookHubMenuEnabled
+
+  #### <a name="allow-users-to-access-the-outlook-menu"></a>Permitir que os usuários acessem o menu do Outlook
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e macOS desde 102 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Essa política é usada para gerenciar o acesso ao menu do Outlook a partir do Microsoft Edge.
+
+Se você habilitar ou não configurar essa política, os usuários poderão acessar o menu do Outlook.
+Se você desabilitar essa política, os usuários não poderão acessar o menu do Outlook.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: Sim
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da política de grupo: OutlookHubMenuEnabled
+  - Nome da política de grupo: Permitir que os usuários acessem o menu do Outlook
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): Administrative Templates/Microsoft Edge - Default Settings (usuários podem substituir)/
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Nome do valor: OutlookHubMenuEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: OutlookHubMenuEnabled
+  - Valor de exemplo:
+``` xml
+<false/>
+```
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -27026,6 +27151,75 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### <a name="settimeoutwithout1msclampenabled"></a>SetTimeoutWithout1MsClampEnabled
+
+  #### <a name="control-javascript-settimeout-function-minimum-timeout-deprecated"></a>Controle o tempo limite mínimo da função setTimeout() do JavaScript (preterido)
+
+  >PRETERIDA: Essa política está preterida. Ela tem suporte no momento, mas se tornará obsoleta em uma versão futura.
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e macOS desde 101 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Quando a política for definida como Habilitada, o setTimeout() do Javascript com um tempo limite de 0ms não será mais fixo em 1 ms para agendar retornos de chamada baseados em temporizador.
+Quando a política for definida como Desabilitada, o setTimeout() do JavaScript com um tempo limite de 0 ms será corrigido para 1 ms para agendar retornos de chamada baseados em temporizador.
+Quando a política não for definida, use o comportamento padrão do navegador para a função setTimeout().
+
+Esse é um recurso de conformidade de padrões da Web, mas pode alterar a ordenação de tarefas em uma página da Web, levando a um comportamento inesperado em sites que dependem de uma determinada ordenação.
+Isso também pode afetar sites com muitos setTimeout()s com um tempo limite de uso de 0 ms. Por exemplo, aumentar a carga da CPU.
+
+Para usuários em que essa política não for definida, o Microsoft Edge Estável distribuirá a alteração gradualmente no canal estável.
+
+Essa é uma política temporária que está planejada para ser removida no Microsoft Edge Estável 105.
+Esse prazo poderá ser estendido se houver necessidade para empresas.
+
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da política de grupo: SetTimeoutWithout1MsClampEnabled
+  - Nome da política de grupo: Controlar o tempo limite mínimo da função setTimeout() do Javascript (preterido)
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: SetTimeoutWithout1MsClampEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: SetTimeoutWithout1MsClampEnabled
+  - Valor de exemplo:
+``` xml
+<true/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### <a name="shadowstackcrashrollbackbehavior"></a>ShadowStackCrashRollbackBehavior
 
   #### <a name="configure-shadowstack-crash-rollback-behavior"></a>Configurar o comportamento de reversão de falha doShadowStack
@@ -27237,15 +27431,15 @@ Esta política só se aplica aos perfis de usuários locais da Microsoft Edge e 
 
   Mostre a experiência e as notificações do Microsoft Rewards.
 Se você habilitar essa política:
-   - Os usuários da conta Microsoft (exclui contas do Azure AD) em busca e conquista de mercados verão a experiência do Microsoft Rewards em seu perfil de usuário do Microsoft Edge.
+   - Os usuários da conta Microsoft (exclui contas do Azure AD) em busca, na página de nova guia, e conquista de mercados verão a experiência do Microsoft Rewards experiência em seu perfil de usuário do Microsoft Edge.
    - A configuração para habilitar o Microsoft Rewards nas configurações do Microsoft Edge será habilitada e alternada.
 
 Se você desabilitar esta política:
-   - Os usuários da conta Microsoft (exclui contas do Azure AD) em busca e conquista de mercados não verão a experiência do Microsoft Rewards em seu perfil de usuário do Microsoft Edge.
+   - Os usuários da conta Microsoft (exclui contas do Azure AD) em busca, na página de nova guia, e conquista de mercados não verão a experiência do Microsoft Rewards em seu perfil de usuário do Microsoft Edge.
    - A configuração para habilitar o Microsoft Rewards nas configurações do Microsoft Edge será desabilitada e alternada.
 
 Se você não configurar esta política:
-   - Os usuários da conta Microsoft (exclui contas do Azure AD) em busca e conquista de mercados verão a experiência do Microsoft Rewards em seu perfil de usuário do Microsoft Edge.
+   - Os usuários da conta Microsoft (exclui contas do Azure AD) em busca, na página de nova guia, e conquista de mercados verão a experiência do Microsoft Rewards experiência em seu perfil de usuário do Microsoft Edge.
    - A configuração para habilitar o Microsoft Rewards nas configurações do Microsoft Edge será habilitada e alternada.
 
   #### <a name="supported-features"></a>Recursos compatíveis:
@@ -27273,7 +27467,7 @@ Se você não configurar esta política:
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Nome do Valor: ShowMicrosoftRewards
-  - Tipo de Valor: REG_DWORD
+  - Tipo de valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -28428,7 +28622,7 @@ Essa política será obsoleta no Microsoft Edge versão 95.
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): N/A
   - Nome do Valor TargetBlankImpliesNoOpener
-  - Tipo de Valor: REG_DWORD
+  - Tipo de valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
