@@ -3,19 +3,19 @@ title: Navegar com segurança com o Microsoft Edge
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
-ms.date: 02/17/2022
+ms.date: 04/27/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Saiba como a segurança aprimorada oferece suporte à navegação mais segura com o Microsoft Edge.
-ms.openlocfilehash: 43c48cb6210ce194a16759c5adb05a6f67b05249
-ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
+ms.openlocfilehash: 48a40a40a1741da1cc89a180535f4bb568060ba8
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "12445889"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505404"
 ---
 # <a name="browse-more-safely-with-microsoft-edge"></a>Navegar com segurança com o Microsoft Edge
 
@@ -37,7 +37,7 @@ Quando combinadas, essas alterações ajudam a fornecer "defesa detalhada" porqu
 Você também pode estar interessado em saber mais sobre as [proteções de segurança de primeira linha no Microsoft Edge](/deployedge/ms-edge-security-for-business). Notavelmente, talvez você queira saber mais sobre como o [SmartScreen do Microsoft Edge](/deployedge/microsoft-edge-security-smartscreen) protege os usuários contra tentativas de phishing e downloads de malware.
 
 > [!NOTE]
-> Atualmente, não há suporte para os sites que usam WebAssembly (WASM) neste modo. Se você precisar de acesso a um site que precisa de WASM, considere adicioná-lo à sua lista de exceções, conforme descrito abaixo.
+> Atualmente, não há suporte para os sites que usam WebAssembly (WASM) neste modo. Se você precisar de acesso a um site que precisa de WASM, considere adicioná-lo à sua lista de sites de exceção, conforme descrito em [Lista de sites de exceção](#exception-site-list).
 
 ## <a name="whats-new-in-microsoft-edge-security-settings"></a>Novidades nas configurações de segurança do Microsoft Edge
 

@@ -1,4 +1,4 @@
-# last revised 03/16/2022
+# last revised 04/26/2022
 - name: Documentação do Microsoft Edge Enterprise
   href: index.yml
 - name: Documentação do Microsoft Edge
@@ -31,6 +31,8 @@
       href: microsoft-edge-browser-usage-report.md
     - name: Pronto para o Microsoft Edge
       href: deploy-edge-ready-for-edge.md
+    - name: Notas de Versão do Canal Estável Móvel
+      href: microsoft-edge-relnote-mobile-stable-channel.md
     - name: Notas de Versão de Canal Estável
       href: microsoft-edge-relnote-stable-channel.md
     - name: Notas de versão arquivadas de Canal Estável
@@ -207,6 +209,8 @@
           href: edge-learnmore-configurable-edge-commands.md
         - name: Formato de filtro para políticas baseadas em lista de URL
           href: edge-learnmmore-url-list-filter format.md
+        - name: O Microsoft Edge desabilitará a modificação de document.domain
+          href: edge-learnmore-origin-keyed-agent-cluster.md
         - name: Downloads de conteúdo misto?
           href: edge-learnmore-mixed-content-downloads.md
         - name: Distribuições progressivas para atualizações de canal Estável

@@ -3,19 +3,19 @@ title: Agenda de lançamento do Microsoft Edge
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 04/08/2022
+ms.date: 04/28/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Agenda de lançamento do Microsoft Edge
-ms.openlocfilehash: a987a95f709fb01ee82645aa31a541cfb56306e6
-ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
+ms.openlocfilehash: e317bfecb81dfd13be0d86015024651ae472303b
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "12473652"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505604"
 ---
 # <a name="microsoft-edge-release-schedule"></a>Agenda de lançamento do Microsoft Edge
 
@@ -48,13 +48,17 @@ A tabela a seguir lista as datas de lançamento planejadas e reais para versões
 | 95 | Liberado<br>Versão | 28 de setembro de 2021<br>[95.0.1020.9](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-95010209-September-28) | 21 de outubro de 2021<br>[95.0.1020.30](/deployedge/microsoft-edge-relnote-archive-stable-channel#version-950102030-october-21) | Não aplicável |
 | 96 | Lançado<br>Versão  | 01-Nov-2021<br>[96.0.1054.8](/DeployEdge/microsoft-edge-relnote-archive-beta-channel?branch=pr-en-us-1163#version-96010548-november-1) | 19-Nov-2021<br>[96.0.1054.29](/deployedge/microsoft-edge-relnote-archive-stable-channel#version-960105429-november-19) | 19-Nov-2021<br>[96.0.1054.29](/deployedge/microsoft-edge-relnote-archive-stable-channel#version-960105429-november-19) |
 | 97 | Liberado<br>Versão | 01-Dez-2021<br>[97.0.1072.21](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-970107221-december-1) | 06-Jan-2022<br>[97.0.1072.55](/deployedge/microsoft-edge-relnote-archive-stable-channel#version-970107255-january-6)| Não aplicável  |
-| 98 | Liberado<br>Versão | 14-jan-2022<br>[98.0.1108.23](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-980110823-january-14) | 03-fev-2022<br>[98.0.1108.43](/deployedge/microsoft-edge-relnote-stable-channel?branch=pr-en-us-1449#version-980110843-february-3) | 03-fev-2022<br>[98.0.1108.43](/deployedge/microsoft-edge-relnote-stable-channel?branch=pr-en-us-1449#version-980110843-february-3) |
+| 98 | Liberado<br>Versão | 14-jan-2022<br>[98.0.1108.23](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-980110823-january-14) | 03-fev-2022<br>[98.0.1108.43](/deployedge/microsoft-edge-relnote-archive-stable-channel?branch=pr-en-us-1449#version-980110843-february-3) | 03-fev-2022<br>[98.0.1108.43](/deployedge/microsoft-edge-relnote-archive-stable-channel?branch=pr-en-us-1449#version-980110843-february-3) |
 | 99 | Liberado<br>Versão | 09-fev-2022<br>[99.0.1150.11](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-990115011-february-9) | 03-Mar-2022<br>[99.0.1150.30](/deployedge/microsoft-edge-relnote-stable-channel#version-990115030-march-3) | Não aplicável  |
 | 100 | Lançada<br>Versão | 17 de março de 2022<br>[100.0.1185.10](/deployedge/microsoft-edge-relnote-beta-channel#version-1000118510-march-17) | 1 de abril de 2022<br>[100.0.1185.29](/deployedge/microsoft-edge-relnote-stable-channel#version-1000118529-april-1) | 1 de abril de 2022<br>[100.0.1185.29](/deployedge/microsoft-edge-relnote-stable-channel#version-1000118529-april-1) |
-| 101 | Liberado<br>Versão | 08 de abril de 2022<br>[101.0.1210.10](/deployedge/microsoft-edge-relnote-beta-channel#version-1010121010-april-8) | Semana de 28 de abril de 2022 | Não aplicável |
+| 101 | Liberado<br>Versão | 08 de abril de 2022<br>[101.0.1210.10](/deployedge/microsoft-edge-relnote-beta-channel#version-1010121010-april-8) | 28 de abril de 2022<br>[101.0.1210.32](/deployedge/microsoft-edge-relnote-stable-channel#version-1010121032-april-28) | Não aplicável |
 | 102 | Lançamento previsto | Semana de 03 de maio de 2022 | Semana de 26 de maio de 2022 | Semana de 26 de maio de 2022 |
 | 103 | Lançamento previsto | Semana do 01 de junho de 2022 | Semana do 23 de junho de 2022 | Não aplicável |
 | 104 | Lançamento previsto | Semana do 28 de junho de 2022 | Semana de 04 de agosto de 2022 | Semana de 04 de agosto de 2022 |
+| 105 | Lançamento previsto | Semana de 09 de agosto de 2022 | Semana de 01 de setembro de 2022 | Não aplicável |
+| 106 | Lançamento previsto | Semana de 06 de setembro de 2022 | Semana de 29 de setembro de 2022 | Semana de 29 de setembro de 2022 |
+| 107 | Lançamento previsto | Semana de 04 de outubro de 2022 | Semana de 27 de outubro de 2022 | Não aplicável |
+| 108 | Lançamento previsto | Semana de 01 de novembro de 2022 | Semana de 01 de dezembro de 2022 | Semana de 01 de dezembro de 2022 |
 
 ## <a name="release-process"></a>Processo de Lançamento
 
