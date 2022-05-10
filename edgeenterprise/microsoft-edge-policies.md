@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 04/27/2022
+ms.date: 05/09/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: f5766b5ab1d8bf6f39c6a75296c1eeb5c721ae37
-ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
+ms.openlocfilehash: 55e41e5cd6703db24206ed7f6658ce2c752be843
+ms.sourcegitcommit: 303788d3d5aa516f6f9b5ecbde5ceb1418e3590d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "12505804"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "12508382"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -28,14 +28,6 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
-
-## <a name="new-policies"></a>Novas políticas
-
-A tabela a seguir lista as políticas novas e preteridas que estão nesta atualização de artigo.
-
-| Nome da política | Legenda |
-|:-----|:-----|
-|[SetTimeoutWithout1MsClampEnabled](#settimeoutwithout1msclampenabled)|Controle o tempo limite mínimo da função setTimeout() do JavaScript (preterido)|
 
 ## <a name="available-policies"></a>Políticas disponíveis
 
@@ -547,7 +539,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[SharedLinksEnabled](#sharedlinksenabled)|Mostrar links compartilhados dos aplicativos Microsoft 365 na História|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Mostrar experiências do Microsoft Rewards|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Exibir o atalho do Microsoft Office na barra de favoritos (obsoleto)|
-|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Permitir recomendações e notificações promocionais do Microsoft Edge|
+|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Permitir recomendações de recursos e notificações de assistência de navegação do Microsoft Edge|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Habilitar o suporte para o Exchange HTTP (SXG) assinado|
 |[SitePerProcess](#siteperprocess)|Habilitar o isolamento de sites para todos os sites|
 |[SiteSafetyServicesEnabled](#sitesafetyservicesenabled)|Permitir que os usuários configurem os serviços de segurança do site|
@@ -575,6 +567,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[URLBlocklist](#urlblocklist)|Bloquear o acesso a uma lista de URLs|
 |[UpdatePolicyOverride](#updatepolicyoverride)|Especifica como o Microsoft Edge Update lida com as atualizações disponíveis do Microsoft Edge|
 |[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|Habilitar o recurso Dicas do cliente usuário-agente (obsoleto)|
+|[AtualizaçãoGREASEdeDicasDoClienteDoAgenteDoUsuárioHabilitada](#useragentclienthintsgreaseupdateenabled)|Controlar o recurso de atualização GREASE de Dicas do Cliente do Agente do Usuário|
 |[UserAgentReduction](#useragentreduction)|Habilitar ou desabilitar a Redução do Agente do Usuário|
 |[UserDataDir](#userdatadir)|Definir o diretório de dados de usuário|
 |[UserDataSnapshotRetentionLimit](#userdatasnapshotretentionlimit)|Limita o número de instantâneos de dados do usuário mantidos para uso no caso de uma reversão de emergência|
@@ -18443,7 +18436,7 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
 
   #### <a name="description"></a>Descrição
 
-  Essa política permite que você aprimora o estado de segurança Microsoft Edge. 
+  Essa política permite que você aprimora o estado de segurança Microsoft Edge.
 
 Se você definir essa política como 'StandardMode', o modo aprimorado será desativado e Microsoft Edge retornará ao modo de segurança padrão.
 
@@ -22969,7 +22962,7 @@ Use as informações anteriores ao configurar essa política.
 
   - Nome exclusivo da política de grupo: IntranetRedirectBehavior
   - Nome da política de grupo: comportamento de redirecionamento da intranet
-  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -27549,7 +27542,7 @@ Se você desativar esta política, o atalho não será mostrado.
 
   ### <a name="showrecommendationsenabled"></a>ShowRecommendationsEnabled
 
-  #### <a name="allow-recommendations-and-promotional-notifications-from-microsoft-edge"></a>Permitir recomendações e notificações promocionais do Microsoft Edge
+  #### <a name="allow-feature-recommendations-and-browser-assistance-notifications-from-microsoft-edge"></a>Permitir recomendações de recursos e notificações de assistência de navegação do Microsoft Edge
 
   
   
@@ -27559,11 +27552,13 @@ Se você desativar esta política, o atalho não será mostrado.
 
   #### <a name="description"></a>Descrição
 
-  Esta configuração de política permite que você decida se os funcionários devem receber recomendações e notificações de assistência no produto do Microsoft Edge.
+  Essa configuração controla as notificações de assistência no navegador destinadas a ajudar os usuários a aproveitar ao máximo o Microsoft Edge. Isso é feito recomendando recursos e ajudando-os a utilizar os recursos do navegador. Essas notificações assumem a forma de caixas de diálogo, submenus, referências e faixas no navegador.  Um exemplo de uma notificação de assistência seria quando um usuário tem muitas guias abertas no navegador.  Neste caso, a Microsoft Edge pode solicitar ao usuário que experimente o recurso de guias verticais, projetado para fornecer um melhor gerenciamento das guias do navegador.
 
-Se você habilitar ou não definir essa configuração, os funcionários receberão recomendações/notificações do Microsoft Edge.
+Desabilitar esta política impedirá que esta mensagem apareça novamente, mesmo que o usuário tenha muitas guias abertas.
+Os recursos que foram desabilitados por uma política de gerenciamento não serão sugeridos aos usuários.
+Se você habilitar ou não definir essa configuração, os usuários receberão recomendações ou notificações do Microsoft Edge.
+Se você desabilitar essa configuração, os usuários não receberão nenhuma recomendação ou notificação do Microsoft Edge
 
-Se você desabilitar essa configuração, os funcionários não receberão recomendações/notificações do Microsoft Edge.
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -27580,8 +27575,8 @@ Se você desabilitar essa configuração, os funcionários não receberão recom
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
   - Nome Exclusivo da Política de Grupo: ShowRecommendationsEnabled
-  - Nome da Política de Grupo: Permitir recomendações e notificações promocionais do Microsoft Edge
-  - Caminho da Política de Grupo (Obrigatório): Administrative Templates/Microsoft Edge/
+  - Nome da PG: Permitir recomendações de recursos e notificações de assistência do navegador Microsoft Edge
+  - Caminho da GP (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -29361,6 +29356,70 @@ Se você habilitar ou não configurar essa política, o recurso Dicas de Cliente
   #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
   
   - Nome da Chave de Preferência: UserAgentClientHintsEnabled
+  - Valor de exemplo:
+``` xml
+<true/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="useragentclienthintsgreaseupdateenabled"></a>AtualizaçãoGREASEdeDicasDoClienteDoAgenteDoUsuárioHabilitada
+
+  #### <a name="control-the-user-agent-client-hints-grease-update-feature"></a>Controlar o recurso de atualização GREASE de Dicas do Cliente do Agente do Usuário
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e macOS desde 102 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  A especificação GREASE do Agente do Usuário recomenda a inclusão de caracteres GREASE adicionais além do ponto e vírgula e do espaço atuais e recomenda que o número da versão arbitrária seja variado ao longo do tempo.
+
+Quando habilitado, o recurso Atualização GREASE de Dicas do Cliente do Agente do Usuário alinha o algoritmo GREASE do Agente do Usuário com a versão mais recente da especificação.  A especificação atualizada pode quebrar alguns sites que restringem os caracteres que as solicitações podem conter. Para saber mais, veja a seguinte especificação: https://wicg.github.io/ua-client-hints/#grease
+
+Se esta política estiver habilitada ou não configurada, o algoritmo GREASE do Agente do Usuário da especificação será usado. Se a política estiver desabilitada, o algoritmo GREASE do Agente do Usuário anterior será usado.
+
+Essa política é uma medida temporária e será removida em uma versão futura.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da PG: AtualizaçãoGREASEdeDicasDoClienteDoAgenteDoUsuarioHabilitada
+  - Nome da PG: Controlar o recurso Atualização GREASE de Dicas do Cliente do Agente do Usuário
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do Valor: AtualizaçãoGREASEdeDicasDoClienteDoAgenteDoUsuarioHabilitada
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da Chave Preferencial: AtualizaçãoGREASEdeDicasDoClienteDoAgenteDoUsuarioHabilitada
   - Valor de exemplo:
 ``` xml
 <true/>

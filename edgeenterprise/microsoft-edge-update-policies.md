@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação para todas as políticas compatíveis com o Microsoft Edge Update
-ms.openlocfilehash: 4698a4eaa0b51a9429f0c1c45da596d625a3791c
-ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
+ms.openlocfilehash: 524e1598c611c80d1be1ad3871e16c20dd928a72
+ms.sourcegitcommit: 303788d3d5aa516f6f9b5ecbde5ceb1418e3590d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "12505374"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "12508331"
 ---
 # <a name="microsoft-edge---update-policies"></a>Microsoft Edge - Políticas de atualização
 
@@ -42,7 +42,7 @@ Essas tabelas listam todas as políticas de grupo relacionadas à atualização 
 |[InstallDefault](#installdefault)|Permitir a instalação padrão|
 |[UpdateDefault](#updatedefault)|Atualizar o padrão de substituição de política|
 |[Install](#install)|Permitir a instalação (por canal)|
-|[Update](#update)|Atualizar a substituição de política (por canal)|
+|[Atualização](#update)|Atualizar a substituição de política (por canal)|
 |[Allowsxs](#allowsxs)|Permitir a experiência de navegador Lado a Lado do Microsoft Edge|
 |[CreateDesktopShortcutDefault](#createdesktopshortcutdefault)|Impedir a criação de Atalho da Área de Trabalho com a instalação padrão|
 |[CreateDesktopShortcut](#createdesktopshortcut)|Impedir a criação de Atalho da Área de Trabalho com a instalação (por canal)|
@@ -341,11 +341,11 @@ Recomendamos que os usuários instalem a versão mais recente do navegador Micro
 
 Antes de reverter temporariamente a versão do seu navegador, recomendamos que você ative a Sincronização ([https://go.microsoft.com/fwlink/?linkid=2133032](https://go.microsoft.com/fwlink/?linkid=2133032)) para todos os usuários em sua organização. Se você não ativar a Sincronização, existe o risco de perda permanente de dados de navegação. Use esta política por sua conta e risco.
 
-Nota: Todas as versões disponíveis para reversão podem ser vistas aqui [https://aka.ms/EdgeEnterprise](https://aka.ms/EdgeEnterprise).
+Observação: Todas as versões disponíveis para reversão podem ser exibidas aqui [EdgeEnterprise](https://aka.ms/EdgeEnterprise).
 
 Esta política se aplica ao Microsoft Edge versão 86 ou posterior.
 
-Consulte [https://go.microsoft.com/fwlink/?linkid=2133918](https://go.microsoft.com/fwlink/?linkid=2133918) para mais informações.
+Consulte [Suporte de borda para WIP](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection) para obter mais informações.
 
 Esta política está disponível apenas em instâncias do Windows que fazem parte de um domínio Microsoft® Active Directory®.
 #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
