@@ -3,19 +3,19 @@ title: Guia detalhado para a política ExtensionSettings
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 01/12/2022
+ms.date: 05/09/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Um guia de referência detalhado para configurar extensões do Microsoft Edge usando a política ExtensionSettings.
-ms.openlocfilehash: e020e6b082021b3c876992a59a3b3436a24789c0
-ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
+ms.openlocfilehash: 5da599bab80bf2209aed9c8f31adf4e1301482af
+ms.sourcegitcommit: 303788d3d5aa516f6f9b5ecbde5ceb1418e3590d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "12505464"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "12508381"
 ---
 # <a name="a-detailed-guide-to-configuring-extensions-using-the-extensionsettings-policy"></a>Um guia detalhado para configurar extensões usando a política ExtensionSettings
 
@@ -140,8 +140,14 @@ O próximo exemplo de JSON impede que qualquer extensão seja executada em `.exa
 
 Ao usar installation_mode como "force_installed", a extensão é instalada automaticamente sem interação do usuário. Um usuário não pode desabilitar ou remover a extensão. Se uma extensão for instalada "normal" ou "force", o campo **update_url** também deverá ser definido. Esse campo aponta para o local do qual a extensão pode ser instalada. Use os seguintes locais para o campo **update_url**:
 
-- Se a extensão que você está baixando estiver hospedada no repositório de complementos do Microsoft Edge, use [https://edge.microsoft.com/extensionwebstorebase/v1/crx](https://edge.microsoft.com/extensionwebstorebase/v1/crx).
-- Se a extensão que você está baixando estiver hospedada no Chrome Web Store, use [https://clients2.google.com/service/update2/crx](https://clients2.google.com/service/update2/crx).
+- Se a extensão que você está baixando estiver hospedada no repositório de complementos Microsoft Edge, use o local no seguinte exemplo de JSON:
+
+   `{"nckgahadaanghapdoaajjgafhacjaoii": {"installation_mode": "force_installed","update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx"}}`
+
+- Se a extensão que você está baixando estiver hospedada no Chrome Web Store, use o local no seguinte exemplo de JSON:
+
+   `{"nckgiihapdoaajjgafhacjgahadaanao": {"installation_mode": "force_installed","update_url": "https://clients2.google.com/service/update2/crx"}}`
+
 - Se você estiver hospedando a extensão em seu próprio servidor, use a URL na qual Microsoft Edge pode baixar a extensão compactada (arquivo .crx). Exemplo de JSON:
 
    `{"nckgahadagoaajjgafhacjanaoiihapd": {"installation_mode": "force_installed","update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx"}}`

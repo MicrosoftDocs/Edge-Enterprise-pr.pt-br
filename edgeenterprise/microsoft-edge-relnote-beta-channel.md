@@ -3,19 +3,19 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 04/27/2022
+ms.date: 05/05/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: 41f9efd48fa9afef215c2fd8e6499b2840ec256c
-ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
+ms.openlocfilehash: ad834db28ce7cda0a03068cda6618ef21a1a1747
+ms.sourcegitcommit: 303788d3d5aa516f6f9b5ecbde5ceb1418e3590d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "12505364"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "12508351"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão do canal do Microsoft Edge beta
 
@@ -23,6 +23,10 @@ Estas notas de versão fornecem informações sobre os novos recursos e atualiza
 
 > [!NOTE]
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-1010121039-may-5"></a>Versão 101.0.1210.39: 5 de maio
+
+Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-1010121031-april-27"></a>Versão 101.0.1210.31: 27 de abril
 
@@ -42,7 +46,7 @@ Vários bugs e problemas de desempenho corrigidos.
 
 ### <a name="feature-updates"></a>Atualizações de recursos
 
-- **Melhorias no Enterprise Site List Manager.** Agora você pode configurar cookies compartilhados entre o Microsoft Edge e o Internet Explorer em sua lista de sites corporativos. Você pode acessar o [Enterprise Site List Manager](/deployedge/edge-ie-mode-site-list-manager) em *edge://compat/SiteListManager*.
+- **Melhorias no Gerenciador de Lista de Sites Corporativos.** Agora você pode configurar cookies compartilhados entre o Microsoft Edge e o Internet Explorer em sua lista de sites corporativos. Você pode acessar o [Gerenciador de Lista de Sites Corporativos](/deployedge/edge-ie-mode-site-list-manager) em *edge://compat/SiteListManager*.
 
 ## <a name="version-1010121010-april-8"></a>Versão 101.0.1210.10: 8 de abril
 
@@ -54,24 +58,24 @@ Vários bugs e problemas de desempenho corrigidos.
 
 - **Inicie o Aplicativos Web Progressivo (PWAs) na Barra de Favoritos.** Melhorias na PWA de inicialização começarão a aparecer começando com um ícone de Aplicativos que pode ser adicionado à barra de ferramentas.
 
-- **Gerencie a configuração "Permitir extensões de outros repositórios".** Use a [política ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled](/DeployEdge/microsoft-edge-policies#controldefaultstateofallowextensionfromotherstoressettingenabled) para controlar o estado padrão da configuração "Permitir extensões de outros repositórios".
+- **Gerencie a configuração "Permitir extensões de outras lojas".** Use a [política ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled](/DeployEdge/microsoft-edge-policies#controldefaultstateofallowextensionfromotherstoressettingenabled) para controlar o estado padrão da configuração "Permitir extensões de outros repositórios".
 
 ### <a name="policy-updates"></a>Atualizações de política
 
 #### <a name="new-policies"></a>Novas políticas
 
-- [ConfigureKeyboardShortcuts](/DeployEdge/microsoft-edge-policies#configurekeyboardshortcuts) – Configurar a lista de comandos para os quais desabilitar atalhos de teclado
-- [ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled](/DeployEdge/microsoft-edge-policies#controldefaultstateofallowextensionfromotherstoressettingenabled) – Configurar o estado padrão de Permitir extensões de outras configurações de repositórios
-- [EdgeAssetDeliveryServiceEnabled](/DeployEdge/microsoft-edge-policies#edgeassetdeliveryserviceenabled) – Permitir que os recursos baixem ativos do Serviço de Entrega de Ativos
-- [EdgeDefaultProfileEnabled](/DeployEdge/microsoft-edge-policies#edgedefaultprofileenabled) – Configuração de Perfil Padrão Habilitada
-- [InternetExplorerModeEnableSavePageAs](/DeployEdge/microsoft-edge-policies#internetexplorermodeenablesavepageas) – Permitir página Salvar como no modo Internet Explorer
-- [KioskSwipeGesturesEnabled](/DeployEdge/microsoft-edge-policies#kioskswipegesturesenabled) – gestos de passar o dedo Microsoft Edge modo de quiosque habilitado
-- [MicrosoftOfficeMenuEnabled](/DeployEdge/microsoft-edge-policies#microsoftofficemenuenabled) – Permitir que os usuários acessem o Microsoft Office menu
-- [SiteSafetyServicesEnabled](/DeployEdge/microsoft-edge-policies#sitesafetyservicesenabled) – Permitir que os usuários configurem os serviços de segurança do site
+- [ConfigureKeyboardShortcuts](/DeployEdge/microsoft-edge-policies#configurekeyboardshortcuts) - Configure a lista de comandos para os quais desabilitar atalhos de teclado
+- [ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled](/DeployEdge/microsoft-edge-policies#controldefaultstateofallowextensionfromotherstoressettingenabled) - Configurar o estado padrão da configuração Permitir extensões de outras lojas
+- [EdgeAssetDeliveryServiceEnabled](/DeployEdge/microsoft-edge-policies#edgeassetdeliveryserviceenabled) - Permitir que recursos baixem ativos do Serviço de Entrega de Ativos
+- [EdgeDefaultProfileEnabled](/DeployEdge/microsoft-edge-policies#edgedefaultprofileenabled) - Configuração de perfil padrão habilitada
+- [InternetExplorerModeEnableSavePageAs](/DeployEdge/microsoft-edge-policies#internetexplorermodeenablesavepageas) - Permitir Salvar página como no modo Internet Explorer
+- [KioskSwipeGesturesEnabled](/DeployEdge/microsoft-edge-policies#kioskswipegesturesenabled) - Deslizar gestos no modo de quiosque do Microsoft Edge habilitado
+- [MicrosoftOfficeMenuEnabled](/DeployEdge/microsoft-edge-policies#microsoftofficemenuenabled) - Permitir que os usuários acessem o menu do Microsoft Office
+- [SiteSafetyServicesEnabled](/DeployEdge/microsoft-edge-policies#sitesafetyservicesenabled) - Permitir que os usuários configurem os serviços de segurança do site
 
 #### <a name="deprecated-policy"></a>Política preterida
 
-- [ForceCertificatePromptsOnMultipleMatches](/DeployEdge/microsoft-edge-policies#forcecertificatepromptsonmultiplematches) – configure se o Microsoft Edge deve selecionar automaticamente um certificado quando houver várias correspondências de certificado para um site configurado com "AutoSelectCertificateForUrls"
+- [ForceCertificatePromptsOnMultipleMatches](/DeployEdge/microsoft-edge-policies#forcecertificatepromptsonmultiplematches) - Configure se o Microsoft Edge deve selecionar automaticamente um certificado quando houver várias correspondências de certificado para um site configurado com "AutoSelectCertificateForUrls"
 
 #### <a name="obsoleted-policy"></a>Política obsoleta
 
