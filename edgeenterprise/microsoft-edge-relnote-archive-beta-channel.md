@@ -3,23 +3,75 @@ title: Notas de versão arquivadas para o Canal Beta do Microsoft Edge
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 04/08/2022
+ms.date: 05/10/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas de versão arquivadas para o Canal Beta do Microsoft Edge
-ms.openlocfilehash: 71db889e373c09832ead59547b08b0a285ed0b78
-ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
+ms.openlocfilehash: e93ab3e766faf6817d29d151ade9cb02853a55f3
+ms.sourcegitcommit: 1f5a9d2f5d562565fa177676a37c63b3db4c5316
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "12473644"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "12508901"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão arquivadas para o Canal Beta do Microsoft Edge
 
 Estas notas de versão fornecem informações sobre os novos recursos e atualizações não relacionadas à segurança que estão inclusos no canal Beta do Microsoft Edge. Para entender os canais do Microsoft Edge, confira a [Visão geral dos canais do Microsoft Edge](microsoft-edge-channels.md). Todas as atualizações de segurança estão listadas [aqui](microsoft-edge-relnotes-security.md).
+
+## <a name="version-1000118510-march-17"></a>Versão 100.0.1185.10: 17 de março
+
+### <a name="feature-updates"></a>Atualizações de recursos
+
+- **Melhorias na experiência de Gerenciamento de Lista de Sites na Nuvem para o Modo IE.** Você pode configurar o compartilhamento de cookie de sessão entre Microsoft Edge Internet Explorer para Modo IE em sua lista de sites na Administração Microsoft 365 Central. **Nota:** Essa é uma distribuição de recursos controlada. Se você não vir esse recurso, verifique novamente à medida que continuarmos nossa distribuição
+
+- **Visualize arquivos PDF no Microsoft Outlook e no Explorador de Arquivos.** Os usuários podem visualizar um arquivo PDF em uma visualização somente leitura leve e avançada.  Disponível para Outlook pdf da área de trabalho ou para arquivos PDF locais usando Explorador de Arquivos.  
+
+- **Sincronização de aplicativo Web instalada em todos os dispositivos da área de trabalho.** Sites ou PWAs (Aplicativos Web progressivos) que foram instalados como aplicativos serão sincronizados em todos os dispositivos da área de trabalho em que você entrou e habilitou a sincronização. Eles serão mostrados como "Aplicativos disponíveis" para você instalar. Um aplicativo removido de um dispositivo sincronizará a remoção em todos os dispositivos.
+
+### <a name="policy-updates"></a>Atualizações de política
+
+#### <a name="new-policies"></a>Novas políticas
+
+- [AdsTransparencyEnabled](/DeployEdge/microsoft-edge-policies#adstransparencyenabled) - Configurar se o recurso de transparência de anúncios estiver habilitado
+- [DefaultWebHidGuardSetting](/DeployEdge/microsoft-edge-policies#defaultwebhidguardsetting) - Controlar uso da API WebHID
+- [HideRestoreDialogEnabled](/DeployEdge/microsoft-edge-policies#hiderestoredialogenabled) - Ocultar a caixa de diálogo das páginas de restauração após a falha do navegador
+- [PDFSecureMode](/DeployEdge/microsoft-edge-policies#pdfsecuremode) - Modo de segurança e validação de assinatura digital baseada em certificado no leitor de PDF nativo
+- [PromptOnMultipleMatchingCertificates](/DeployEdge/microsoft-edge-policies#promptonmultiplematchingcertificates) - Solicitar que o usuário selecione um certificado quando vários certificados corresponderem
+- [WebHidAskForUrls](/DeployEdge/microsoft-edge-policies#webhidaskforurls) - Permitir a API WebHID nesses sites
+- [WebHidBlockedForUrls](/DeployEdge/microsoft-edge-policies#webhidblockedforurls) - Bloquear a API WebHID nesses sites
+
+#### <a name="deprecated-policy"></a>Política preterida
+
+- [BackgroundTemplateListUpdatesEnabled](/DeployEdge/microsoft-edge-policies#backgroundtemplatelistupdatesenabled) - Habilitar atualizações em segundo plano para a lista de modelos disponíveis para coleções e outros recursos que usam modelos
+
+#### <a name="obsoleted-policy"></a>Política obsoleta
+
+- [AllowSyncXHRInPageDismissal](/DeployEdge/microsoft-edge-policies#allowsyncxhrinpagedismissal) - Permitir que as páginas enviem solicitações XHR síncronas durante o encerramento da página
+
+## <a name="version-990115039-march-10"></a>Versão 99.0.1150.39: 10 de março
+
+### <a name="feature-updates"></a>Atualizações de recursos
+
+- **Melhorias na experiência de Gerenciamento de Lista de Sites na Nuvem para o Modo IE.** Identifique lacunas em sua lista de sites corporativos configurando relatórios de comentários do site com as políticas [InternetExplorerIntegrationCloudUserSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudusersitesreporting) e [InternetExplorerIntegrationCloudNeutralSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudneutralsitesreporting) . Você pode exibir URLs de lista de sites locais de usuários e URLs de site neutro potencialmente configuradas incorretamente na experiência de listas de sites do Microsoft Edge no Administração Microsoft 365 Center. Para saber mais, confira [Exibir comentários do site no Administração Microsoft 365 Center](/deployedge/edge-ie-mode-cloud-site-list-mgmt#view-site-feedback-on-the-microsoft-365-admin-center-1).  **Nota:** Essa é uma distribuição de recursos controlada. Se você não vir esse recurso, verifique novamente à medida que continuarmos nossa distribuição.
+
+## <a name="version-990115030-march-2"></a>Versão 99.0.1150.30: 2 de março
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-990115025-february-25"></a>Versão 99.0.1150.25: 25 de fevereiro
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-990115021-february-22"></a>Versão 99.0.1150.21: 22 de fevereiro
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-990115016-february-14"></a>Versão 99.0.1150.16: 14 de fevereiro
+
+Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-990115011-february-9"></a>Versão 99.0.1150.11: 9 de fevereiro
 
@@ -259,7 +311,7 @@ Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-94099223-september-17"></a>Versão 94.0.992.23: 17 de setembro
 
-Correção de vários bugs e problemas de desempenho.
+Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-94099219-september-13"></a>Versão 94.0.992.19: 13 de setembro
 
@@ -267,7 +319,7 @@ Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-94099214-september-7"></a>Versão 94.0.992.14: 7 de setembro
 
-Correção de vários bugs e problemas de desempenho.
+Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-9409929-september-2"></a>Versão 94.0.992.9: 2 de setembro
 
@@ -376,11 +428,11 @@ Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-93096118-august-10"></a>Versão 93.0.961.18: 10 de agosto
 
-Correção de vários bugs e problemas de desempenho.
+Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-92090262-july-29"></a>Versão 92.0.902.62: 29 de julho
 
-Correção de vários bugs e problemas de desempenho.
+Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-92090255-july-21"></a>Versão 92.0.902.55: 21 de julho
 
@@ -388,11 +440,11 @@ Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-92090245-july-12"></a>Versão 92.0.902.45: 12 de julho
 
-Correção de vários bugs e problemas de desempenho.
+Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-92090240-july-6"></a>Versão 92.0.902.40: 6 de julho
 
-Correção de vários bugs e problemas de desempenho.
+Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-92090222-june-21"></a>Versão 92.0.902.22: 21 de junho
 

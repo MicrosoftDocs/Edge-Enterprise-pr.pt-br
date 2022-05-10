@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Stable Channel
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 05/09/2022
+ms.date: 05/10/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: 24ff532c8632b680c0e19ff1232c38feadc5c215
-ms.sourcegitcommit: 303788d3d5aa516f6f9b5ecbde5ceb1418e3590d
+ms.openlocfilehash: 2582843dda5511f6e1067e70ef8ca0d3a470f82a
+ms.sourcegitcommit: 1f5a9d2f5d562565fa177676a37c63b3db4c5316
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2022
-ms.locfileid: "12508321"
+ms.locfileid: "12508881"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão do Microsoft Edge Stable Channel
 
@@ -30,10 +30,6 @@ Essas notas de versão fornecem informações dos novos recursos e atualizaçõe
 > Para o Canal Estável, as atualizações serão implantadas progressivamente por um ou mais dias. Para saber mais, consulte [Distribuições progressivas para atualizações do Microsoft Edge](./microsoft-edge-update-progressive-rollout.md).
 >
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
-
-## <a name="version-1010121043-may-9"></a>Versão 101.0.1210.43: 9 de maio
-
-Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-1010121039-may-5"></a>Versão 101.0.1210.39: 5 de maio
 
