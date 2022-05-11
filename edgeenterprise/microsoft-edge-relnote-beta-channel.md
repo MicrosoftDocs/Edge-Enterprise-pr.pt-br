@@ -3,19 +3,19 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 05/10/2022
+ms.date: 05/11/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: 82d36c049a5d466da1d4ca88db0dd9a6facda057
-ms.sourcegitcommit: 1f5a9d2f5d562565fa177676a37c63b3db4c5316
+ms.openlocfilehash: 6f8a3016708f2889a791864a0867ba351395590b
+ms.sourcegitcommit: cb476e310864ecfefd6ff481754b5a271d9a4404
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "12508891"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "12510619"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão do canal do Microsoft Edge beta
 
@@ -25,12 +25,6 @@ Estas notas de versão fornecem informações sobre os novos recursos e atualiza
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
 ## <a name="version-102012457-may-10"></a>Versão 102.0.1245.7: 10 de maio
-
-### <a name="feature-updates"></a>Atualizações de recursos
-
-- **Outlook para Microsoft Edge Sidebar.** Essa barra lateral permite que os usuários acessem com rapidez e facilidade Outlook Email e Calendário. Os administradores podem controlar Outlook barra lateral usando a [política OutlookHubMenuEnable](/deployedge/microsoft-edge-policies#outlookhubmenuenabled).
-
-- **Microsoft Office para Microsoft Edge Sidebar.** Essa barra lateral permite que os usuários acessem rapidamente e facilmente Microsoft Office documentos e aplicativos. Os administradores podem controlar Microsoft Office barra lateral usando a [política MicrosoftOfficeMenuEnabled](/deployedge/microsoft-edge-policies#microsoftofficemenuenabled).
 
 ### <a name="policy-updates"></a>Atualizações de política
 
