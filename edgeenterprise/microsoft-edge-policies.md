@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 05/09/2022
+ms.date: 05/11/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 55e41e5cd6703db24206ed7f6658ce2c752be843
-ms.sourcegitcommit: 303788d3d5aa516f6f9b5ecbde5ceb1418e3590d
+ms.openlocfilehash: 8b06d44cba27bb2c9f1d2999dce92460f2dce0d3
+ms.sourcegitcommit: 45bb8f63053399a9e619b9ba7ad07793bb0a558e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "12508382"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "12511588"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -28,6 +28,15 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
+
+## <a name="new-policies"></a>Novas políticas
+
+A tabela a seguir lista as novas políticas que estão nesta atualização de artigo.
+
+| Nome da política | Legenda |
+|:-----|:-----|
+|[ComutadorGuiadoHabilitado](#guidedswitchenabled)|Comutador Guiado Habilitado|
+|[ExibiçãoDeZoomDoInternetExplorer](#internetexplorerzoomdisplay)|Exibir zoom nas guias do modo IE com escala de DPI incluída como no Internet Explorer|
 
 ## <a name="available-policies"></a>Políticas disponíveis
 
@@ -174,6 +183,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |Nome da política|Legenda|
 |-|-|
 |[EdgeDefaultProfileEnabled](#edgedefaultprofileenabled)|Configuração de Perfil Padrão Habilitada|
+|[ComutadorGuiadoHabilitado](#guidedswitchenabled)|Comutador Guiado Habilitado|
 |[ImplicitSignInEnabled](#implicitsigninenabled)|Habilitar entrada implícita|
 |[OneAuthAuthenticationEnforced](#oneauthauthenticationenforced)|Fluxo de Autenticação OneAuth Imposto para entrada|
 |[OnlyOnPremisesImplicitSigninEnabled](#onlyonpremisesimplicitsigninenabled)|Somente conta local habilitada para entrada implícita|
@@ -470,6 +480,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[InternetExplorerModeEnableSavePageAs](#internetexplorermodeenablesavepageas)|Permitir Salvar página como no modo Internet Explorer|
 |[InternetExplorerModeTabInEdgeModeAllowed](#internetexplorermodetabinedgemodeallowed)|Permitir que sites configurados para o modo Internet Explorer abram no Microsoft Edge|
 |[InternetExplorerModeToolbarButtonEnabled](#internetexplorermodetoolbarbuttonenabled)|Mostrar o botão Recarregar no modo Internet Explorer na barra de ferramentas|
+|[ExibiçãoDeZoomDoInternetExplorer](#internetexplorerzoomdisplay)|Exibir zoom nas guias do modo IE com escala de DPI incluída como no Internet Explorer|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Comportamento de redirecionamento da intranet|
 |[IsolateOrigins](#isolateorigins)|Habilitar o isolamento de sites para determinadas origens|
 |[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Habilitar o Windows a pesquisar dados locais de navegação do Microsoft Edge|
@@ -6636,6 +6647,71 @@ Se você habilitar essa política, mas não configurá-la ou desabilitá-la, a p
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### <a name="guidedswitchenabled"></a>ComutadorGuiadoHabilitado
+
+  #### <a name="guided-switch-enabled"></a>Comutador Guiado Habilitado
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e no macOS desde 103 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Permite que o Microsoft Edge solicite que o usuário alterne para o perfil apropriado quando o Microsoft Edge detectar que um link é um link pessoal ou de trabalho.
+
+Se você habilitar essa política, será solicitado que você alterne para outra conta se o perfil atual não funcionar para o link solicitante.
+
+Se você desabilitar essa política, você não será solicitado a alternar para outra conta quando houver uma incompatibilidade de perfil e link.
+
+Se esta política não for configurada, o interruptor guiado será ativado por padrão. Um usuário pode substituir esse valor nas configurações do navegador.
+
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da PG: GuidedSwitchEnabled
+  - Nome da PG: Comutador Guiado Habilitado
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/Identidade e entrada
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do Valor: GuidedSwitchEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da Chave de Preferência: GuidedSwitchEnabled
+  - Valor de exemplo:
+``` xml
+<false/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### <a name="implicitsigninenabled"></a>ImplicitSignInEnabled
 
   #### <a name="enable-implicit-sign-in"></a>Habilitar entrada implícita
@@ -7125,7 +7201,7 @@ Se você habilitar essa política ou não a configurar, as Políticas de Gerenci
 
 Se você desabilitar essa política, o Microsoft Edge não se comunicará com o Intune para solicitar políticas de MAM.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -11994,7 +12070,7 @@ Observação: Essa política não impede que o navegador navegue até qualquer U
 Se você desabilitar essa política, os usuários não poderão ver os resultados internos na lista de sugestões da barra de endereço do Microsoft Edge.
 A partir da versão 89 do Microsoft Edge, as sugestões da Pesquisa da Microsoft no Bing estarão disponíveis mesmo se o Bing não for o provedor de pesquisa padrão do usuário.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -22914,6 +22990,63 @@ Se você desabilitar ou não configurar essa política, o botão Recarregar no m
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### <a name="internetexplorerzoomdisplay"></a>ExibiçãoDeZoomDoInternetExplorer
+
+  #### <a name="display-zoom-in-ie-mode-tabs-with-dpi-scale-included-like-it-is-in-internet-explorer"></a>Exibir zoom nas guias do modo IE com escala de DPI incluída como no Internet Explorer
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows desde 103 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Permite exibir o zoom nas guias do Modo IE de forma semelhante a como ele foi exibido no Internet Explorer, onde a escala de DPI da exibição é levada em consideração.
+
+Por exemplo, se você tiver uma página ampliada para 200% em uma exibição com escala de 100 DPI e alterar a exibição para 150 DPI, o Microsoft Edge ainda exibiria o zoom como 200%. No entanto, o Internet Explorer leva em consideração a escala de DPI e exibe 300%.
+
+Se você habilitar essa política, os valores do zoom serão exibidos com a escala de DPI incluída nas guias do Modo IE.
+
+Se você desabilitar ou não configurar essa política, os valores de zoom serão exibidos sem a escala de DPI incluída nas guias do Modo IE
+
+  #### <a name="supported-features"></a>Recursos com suporte:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da PG: InternetExplorerZoomDisplay
+  - Nome da PG: Exibir zoom nas guias do Modo IE com a Escala de DPI incluída como se estivesse no Internet Explorer
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do Valor: InternetExplorerZoomDisplay
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000000
+```
+
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### <a name="intranetredirectbehavior"></a>IntranetRedirectBehavior
 
   #### <a name="intranet-redirection-behavior"></a>Comportamento de redirecionamento da intranet
@@ -22962,7 +23095,7 @@ Use as informações anteriores ao configurar essa política.
 
   - Nome exclusivo da política de grupo: IntranetRedirectBehavior
   - Nome da política de grupo: comportamento de redirecionamento da intranet
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -27024,7 +27157,7 @@ Os padrões de URL definidos nessa política não podem entrar em conflito com a
 
 Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -27435,7 +27568,7 @@ Se você não configurar esta política:
    - Os usuários da conta Microsoft (exclui contas do Azure AD) em busca, na página de nova guia, e conquista de mercados verão a experiência do Microsoft Rewards experiência em seu perfil de usuário do Microsoft Edge.
    - A configuração para habilitar o Microsoft Rewards nas configurações do Microsoft Edge será habilitada e alternada.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: Sim
@@ -28592,7 +28725,7 @@ Se você desabilitar esta política, os pop-ups que direcionam _blank têm permi
 
 Essa política será obsoleta no Microsoft Edge versão 95.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
