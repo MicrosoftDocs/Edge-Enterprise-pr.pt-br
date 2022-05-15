@@ -3,27 +3,27 @@ title: Notas de versão para atualizações de segurança do Microsoft Edge
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 05/10/2022
+ms.date: 05/13/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão para atualizações de segurança do Microsoft Edge
-ms.openlocfilehash: 461a7caadc14043efe0425776d71ac9a868f89f3
-ms.sourcegitcommit: b0820e2c914ab4020cd6ddceb7c8cde93ea6099d
+ms.openlocfilehash: d48dd9ddf443ffcdc7ef299b970f9c756b288834
+ms.sourcegitcommit: faf629ac0acec4081c77c6fee32526edfa08e677
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "12510570"
+ms.lasthandoff: 05/14/2022
+ms.locfileid: "12513519"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Notas de versão para atualizações de segurança do Microsoft Edge
 
 Estas notas de versão fornecem informações sobre correções de segurança incluídas nas atualizações para o canal estável do Microsoft Edge.
 
-## <a name="may-10-2022"></a>10 de maio de 2022
+## <a name="may-13-2022"></a>13 de maio de 2022
 
-A Microsoft está ciente das recentes correções de segurança do Chromium. Estamos trabalhando ativamente para lançar uma correção de segurança.
+A Microsoft lançou o  **Canal Estável do Microsoft Edge (Versão 101.0.1210.47)** mais recente, que incorpora as atualizações de segurança mais recentes do projeto Chromium. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
 
 ## <a name="april-28-2022"></a>28 de abril de 2022
 
