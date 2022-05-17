@@ -3,19 +3,19 @@ title: Sincronização local para usuários do Active Directory (AD)
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 06/29/2021
+ms.date: 05/17/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Sincronização local para usuários do Active Directory (AD)
-ms.openlocfilehash: f595c863193f2b3d383a6215ab7817a53bbf5ca6
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: d829829d62073e357cec1c340ff9c1e99b0fb88f
+ms.sourcegitcommit: d384115fb2197261ee8fa3b0bdbcb7455527616f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978618"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "12517546"
 ---
 # <a name="on-premises-sync-for-active-directory-ad-users"></a>Sincronização local para usuários do Active Directory (AD)
 
@@ -30,7 +30,7 @@ Sincronizar os dados do usuário no Microsoft Edge normalmente requer uma conta 
 
 ## <a name="how-it-works"></a>Como funciona
 
-O Microsoft Edge permite que perfis sejam associados a contas do Active Directory (AD), que não podem ser usados com sincronização em nuvem. Quando a sincronização local está habilitada, os dados do perfil AD são salvos em um arquivo chamado profile.pb. Por padrão, esse arquivo está armazenado em *%APP_DATA%/Microsoft/Edge*. Após a gravação desse arquivo, ele poderá ser movido entre computadores diferentes, e os dados do usuário serão lidos e escritos em cada computador. O Microsoft Edge apenas lê e grava a partir deste arquivo; é responsabilidade do administrador garantir que o arquivo seja movido conforme necessário.
+O Microsoft Edge permite que perfis sejam associados a contas do Active Directory (AD), que não podem ser usados com sincronização em nuvem. Quando a sincronização local está habilitada, os dados do perfil AD são salvos em um arquivo chamado profile.pb. Por padrão, esse arquivo está armazenado em *%APP_DATA%/Microsoft/Edge*. Após a gravação desse arquivo, ele poderá ser movido entre computadores diferentes, e os dados do usuário serão lidos e escritos em cada computador. Microsoft Edge somente leituras e gravações desse arquivo; é responsabilidade do administrador garantir que o arquivo seja movido conforme necessário.
 
 ## <a name="use-on-premises-sync"></a>Usar sincronização local
 
@@ -63,7 +63,7 @@ A sincronização local não afeta a sincronização na nuvem. Se o Microsoft Ed
 Como a sincronização local funciona movendo um arquivo de dados do usuário entre computadores, a sincronização local não sincroniza as alterações entre as sessões simultâneas. Por esse motivo, a sincronização local funciona melhor quando usada em um computador por vez. Se houver sessões locais simultâneas em execução, os dados em qualquer um dos computadores poderão ser substituídos inesperadamente por dados de outro computador na próxima vez que você iniciar uma sessão do navegador.
 
 > [!NOTE]
-> O Microsoft Edge bloqueia o arquivo **perfil.pb** quando a sincronização local está habilitada. Se o redirecionamento de pastas for usado para compartilhar um arquivo **perfil.pb** único entre computadores diferentes, só será possível iniciar uma instância do Microsoft Edge usando esse arquivo.
+> O Microsoft Edge bloqueia o arquivo **perfil.pb** quando a sincronização local está habilitada. Se o redirecionamento de pasta for usado para compartilhar um único arquivo **profile.pb** entre computadores diferentes, somente uma instância do Microsoft Edge que usa o arquivo compartilhado poderá ser iniciada.
 
 ### <a name="using-other-sync-policies-with-on-premises-sync"></a>Usando outras políticas de sincronização com a sincronização local
 

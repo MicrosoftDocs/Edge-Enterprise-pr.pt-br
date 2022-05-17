@@ -3,33 +3,33 @@ title: Perguntas frequentes sobre a sincronização empresarial do Microsoft Edg
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 06/29/2021
+ms.date: 05/16/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: Perguntas frequentes sobre a sincronização empresarial do Microsoft Edge.
-ms.openlocfilehash: a13e1f02f6e871004d45f81159d5cf0a3397b6ad
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+description: Perguntas frequentes sobre a Microsoft Edge enterprise.
+ms.openlocfilehash: ac32e0c375651aac9c8ed3ae8d1de9e7b675df95
+ms.sourcegitcommit: d384115fb2197261ee8fa3b0bdbcb7455527616f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978745"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "12517566"
 ---
 # <a name="microsoft-edge-enterprise-sync-faq"></a>Perguntas frequentes sobre a sincronização empresarial do Microsoft Edge
 
 Este artigo responde a perguntas frequentes sobre a sincronização empresarial do Microsoft Edge versão 77 ou posterior.
 
-## <a name="security-and-serverdata-compliance"></a>Segurança e Conformidade com o Servidor/Dados
+## <a name="security-and-serverdata-compliance"></a>Segurança e conformidade de servidor/dados
 
 ### <a name="is-the-synced-data-encrypted"></a>Os dados sincronizados estão criptografados?
 
-Os dados são criptografados no transporte usando TLS 1.2 ou posterior. Todos os tipos de dados também são criptografados como descansar no serviço da Microsoft usando o AES128. Todos os tipos de dados, exceto os usados na guia aberta e na sincronização do histórico, são adicionalmente criptografados antes de deixar o dispositivo do usuário com chaves gerenciadas através da política da [Proteção de Informações do Microsoft Azure](./microsoft-edge-policies.md#restrictsignintopattern).
+Sim, os dados são criptografados em transporte usando o TLS 1.2 ou superior. Todos os tipos de dados também são criptografados como descansar no serviço da Microsoft usando o AES128. Todos os tipos de dados, exceto os dados usados para sincronização de histórico e guia aberta, são criptografados antes de deixar o dispositivo do usuário com chaves gerenciadas por meio da política de Proteção de Informações do [Azure](./microsoft-edge-policies.md#restrictsignintopattern).
 
-### <a name="why-dont-open-tab-and-history-data-have-more-client-side-encryption"></a>Por que a guia aberta e os dados do histórico não têm mais criptografia do lado do cliente?
+### <a name="why-isnt-there-more-client-side-encryption-on-open-tab-and-history-data"></a>Por que não há mais criptografia do lado do cliente nos dados da guia aberta e do histórico?
 
-Para reduzir o uso de recursos nos dispositivos do usuário final, os dados do histórico são gerados no lado do servidor com base nos dados de roaming da guia aberta. Este processo não seria possível com a criptografia ao lado do cliente desses dados. Para desabilitar a guia aberta e a sincronização do histórico, aplique as políticas [SavingBrowserHistoryDisabled](./microsoft-edge-policies.md#savingbrowserhistorydisabled) ou [SyncTypesListDisabled](./microsoft-edge-policies.md#synctypeslistdisabled) .
+Para reduzir o uso de recursos nos dispositivos do usuário final, os dados do histórico são gerados no lado do servidor com base nos dados de roaming da guia aberta. Esse processo não seria possível com a criptografia do lado do cliente desses dados. Para desabilitar a guia aberta e a sincronização do histórico, aplique as políticas [SavingBrowserHistoryDisabled](./microsoft-edge-policies.md#savingbrowserhistorydisabled) ou [SyncTypesListDisabled](./microsoft-edge-policies.md#synctypeslistdisabled) .
 
 ### <a name="can-tenant-admins-bring-their-own-key"></a>Os administradores de locatários podem ter suas próprias chaves?
 
@@ -37,7 +37,7 @@ Sim, pela [Proteção de informações do Azure](https://azure.microsoft.com/s
 
 ### <a name="where-is-microsoft-edge-sync-data-stored"></a>Onde os dados sincronizados são armazenados no Microsoft Edge?
 
-Os dados sincronizados para contas do Azure AD são armazenados em servidores seguros de acordo com a ID do locatário. Por exemplo, os dados de um locatário registrado nos Estados Unidos são armazenados em servidores localizados geograficamente nessa região e aproveitam a mesma solução de armazenamento usada pelos aplicativos do Office.
+Os dados sincronizados para Azure AD contas são armazenados em servidores seguros de acordo com a ID do locatário. Por exemplo, os dados de um locatário registrado nos Estados Unidos são armazenados em servidores localizados geograficamente nessa região e aproveitam a mesma solução de armazenamento usada pelos aplicativos do Office.
 
 ### <a name="does-the-data-ever-leave-microsofts-cloud-aside-from-syncing-to-microsoft-edge"></a>Os dados deixam a nuvem da Microsoft, além de sincronizar com o Microsoft Edge?
 
@@ -45,7 +45,7 @@ Não.
 
 ### <a name="what-terms-of-service-does-enterprise-sync-fall-under"></a>Em que termos de serviço a sincronização empresarial se encaixa?
 
-Os termos de serviço da sincronização do Microsoft Edge se enquadram na licença de software da Microsoft exibida no Microsoft Edge em *Edge://terms*. A sua assinatura e os termos de serviço do Azure AD estão, em última análise, em [Termos de serviço on-line](https://www.microsoft.com/licensing/product-licensing/products)da Microsoft.
+Os termos de serviço para Microsoft Edge sincronização se enquadram na licença de software da Microsoft que pode ser Microsoft Edge em  *edge://terms*. A sua assinatura e os termos de serviço do Azure AD estão, em última análise, em [Termos de serviço on-line](https://www.microsoft.com/licensing/product-licensing/products)da Microsoft.
 
 ### <a name="does-microsoft-edge-support-government-community-cloud-gcc-high-compliance"></a>O Microsoft Edge dá suporte á conformidade do Government Community Cloud (GCC) High?
 
@@ -53,13 +53,13 @@ Não atualmente. A sincronização do Microsoft Edge está desabilitada para os 
 
 ## <a name="applying-sync"></a>Aplicar Sincronização
 
-### <a name="why-isnt-microsoft-edge-sync-supported-in-all-m365-subscriptions"></a>Por que a sincronização do Microsoft Edge não é compatível com todas as assinaturas do M365?
+### <a name="why-isnt-microsoft-edge-sync-supported-in-all-microsoft-365-subscriptions"></a>Por que não há suporte Microsoft Edge sincronização em todas as Microsoft 365 assinaturas?
 
-A sincronização empresarial depende da [Proteção de Informações do Azure,](https://azure.microsoft.com/services/information-protection/)que não está disponível em todas as assinaturas do M365.
+Enterprise sincronização depende da Proteção de Informações do [Azure](https://azure.microsoft.com/services/information-protection/), que não está disponível para todas as Microsoft 365 assinaturas.
 
 ### <a name="is-microsoft-edge-sync-based-on-enterprise-state-roaming"></a>A sincronização do Microsoft Edge é baseada no Enterprise State Roaming?
 
-Não. O ESR pode ser usado para habilitar a sincronização, mas a sincronização do Microsoft Edge não faz parte do ESR. Para obter mais informações, consulte [Sincronização do Microsoft Edge](/DeployEdge/microsoft-edge-enterprise-sync) e [Microsoft Edge e Enterprise State Roaming](/DeployEdge/microsoft-edge-enterprise-state-roaming).
+Não. O ESR pode ser usado para habilitar a sincronização, mas Microsoft Edge sincronização não faz parte do ESR. Para obter mais informações, consulte [Sincronização do Microsoft Edge](/DeployEdge/microsoft-edge-enterprise-sync) e [Microsoft Edge e Enterprise State Roaming](/DeployEdge/microsoft-edge-enterprise-state-roaming).
 
 ### <a name="will-microsoft-edge-ever-support-syncing-between-microsoft-edge-and-ie"></a>O Microsoft Edge oferecerá suporte para sincronização entre o Microsoft Edge e o IE?
 
@@ -67,7 +67,7 @@ Não há planos para dar suporte a essa sincronização. Se você ainda precisar
 
 ### <a name="will-microsoft-edge-sync-with-microsoft-edge-legacy"></a>O Microsoft Edge será sincronizado com o Microsoft Edge herdado?
 
-Não. Acreditamos que a conexão destes dois ecossistemas comprometerá a confiabilidade da sincronia no Microsoft Edge. Garantiremos que os dados existentes serão migrados para o Microsoft Edge. Os usuários também poderão importar dados do navegador de sua escolha, o que também significa que o Microsoft Edge não terá uma maneira de sincronizar com o IE.
+Não. Acreditamos que a conexão destes dois ecossistemas comprometerá a confiabilidade da sincronia no Microsoft Edge. Garantiremos que os dados existentes são migrados para o Microsoft Edge. Os usuários também poderão importar dados do navegador de sua escolha, o que também significa que o Microsoft Edge não terá uma maneira de sincronizar com o IE.
 
 ## <a name="managing-sync"></a>Gerenciar Sincronização
 
