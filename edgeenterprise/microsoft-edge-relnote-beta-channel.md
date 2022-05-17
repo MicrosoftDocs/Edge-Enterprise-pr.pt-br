@@ -3,19 +3,19 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 05/13/2022
+ms.date: 05/16/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: 1bc567a58bf055c1b76543b4d86a1e8f6de9343d
-ms.sourcegitcommit: faf629ac0acec4081c77c6fee32526edfa08e677
+ms.openlocfilehash: 736690a06193379d0cadfa2666256314cda44711
+ms.sourcegitcommit: d7cf23828a93963087917e5e977a1b1a99a7f920
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "12513530"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "12516739"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão do canal do Microsoft Edge beta
 
@@ -23,6 +23,10 @@ Estas notas de versão fornecem informações sobre os novos recursos e atualiza
 
 > [!NOTE]
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-1020124514-may-16"></a>Versão 102.0.1245.14: 16 de maio
+
+Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-1020124512-may-13"></a>Versão 102.0.1245.12: 13 de maio
 
