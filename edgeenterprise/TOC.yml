@@ -1,4 +1,4 @@
-# last revised 04/26/2022
+# last revised 05/17/2022
 - name: Documentação do Microsoft Edge Enterprise
   href: index.yml
 - name: Documentação do Microsoft Edge
@@ -221,7 +221,7 @@
           href: edge-learnmore-neededge.md
         - name: Sintaxe da Expressão Regular 2 (re2.h)
           href: edge-learnmore-regex.md
-        - name: Redefinir os dados do Microsoft Edge
+        - name: Redefinir dados do Microsoft Edge na nuvem
           href: edge-learnmore-reset-data-in-cloud.md
         - name: Variáveis de diretório de dados do usuário
           href: edge-learnmore-create-user-directory-vars.md
