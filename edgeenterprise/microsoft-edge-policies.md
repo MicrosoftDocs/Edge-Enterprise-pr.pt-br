@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 05/11/2022
+ms.date: 05/17/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,17 +11,16 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 8b06d44cba27bb2c9f1d2999dce92460f2dce0d3
-ms.sourcegitcommit: 45bb8f63053399a9e619b9ba7ad07793bb0a558e
+ms.openlocfilehash: 5c8a31b1c356abf73b5a2ad093b396af663ee727
+ms.sourcegitcommit: b79a1185e65af9ce509fbfded8f621cb9b2e976d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "12511588"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "12519964"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
 A versão mais recente do Microsoft Edge inclui as políticas a seguir. Você pode usar essas políticas para configurar como o Microsoft Edge será executado em sua organização.
-
 Para saber mais sobre o conjunto de políticas, usado para controlar como e quando o Microsoft Edge é atualizado, confira [Referência de política de atualização do Microsoft Edge](microsoft-edge-update-policies.md).
 
 Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microsoft](https://www.microsoft.com/download/details.aspx?id=55319) para obter as configurações de linha de base de configuração de segurança do Microsoft Edge. Para saber mais, confira o blog [Linhas de base de segurança da Microsoft,](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).
@@ -35,8 +34,8 @@ A tabela a seguir lista as novas políticas que estão nesta atualização de ar
 
 | Nome da política | Legenda |
 |:-----|:-----|
-|[ComutadorGuiadoHabilitado](#guidedswitchenabled)|Comutador Guiado Habilitado|
-|[ExibiçãoDeZoomDoInternetExplorer](#internetexplorerzoomdisplay)|Exibir zoom nas guias do modo IE com escala de DPI incluída como no Internet Explorer|
+|[LiveCaptionsAllowed](#livecaptionsallowed)|Legendas ao vivo permitidas|
+|[OriginAgentClusterDefaultEnabled](#originagentclusterdefaultenabled)|Agrupamento de agentes com chave de origem habilitada por padrão|
 
 ## <a name="available-policies"></a>Políticas disponíveis
 
@@ -483,6 +482,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[ExibiçãoDeZoomDoInternetExplorer](#internetexplorerzoomdisplay)|Exibir zoom nas guias do modo IE com escala de DPI incluída como no Internet Explorer|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Comportamento de redirecionamento da intranet|
 |[IsolateOrigins](#isolateorigins)|Habilitar o isolamento de sites para determinadas origens|
+|[LiveCaptionsAllowed](#livecaptionsallowed)|Legendas ao vivo permitidas|
 |[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Habilitar o Windows a pesquisar dados locais de navegação do Microsoft Edge|
 |[LocalProvidersEnabled](#localprovidersenabled)|Permitir sugestões de provedores locais|
 |[MAUEnabled](#mauenabled)|Sempre usar o Microsoft AutoUpdate como atualizador para o Microsoft Edge|
@@ -501,6 +501,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[NetworkPredictionOptions](#networkpredictionoptions)|Habilitar a previsão de rede|
 |[NetworkServiceSandboxEnabled](#networkservicesandboxenabled)|Habilitar a área restrita do serviço de rede|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configurar se um usuário sempre tem um perfil padrão conectado automaticamente à sua conta corporativa ou de estudante|
+|[OriginAgentClusterDefaultEnabled](#originagentclusterdefaultenabled)|Agrupamento de agentes com chave de origem habilitada por padrão|
 |[OutlookHubMenuEnabled](#outlookhubmenuenabled)|Permitir que os usuários acessem o menu do Outlook|
 |[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|Controle onde as restrições de segurança em origens inseguras se aplicam|
 |[PDFSecureMode](#pdfsecuremode)|Modo seguro e validação de Assinatura Digital baseada em certificado no leitor de PDF nativo|
@@ -3450,7 +3451,7 @@ Se você não definir essa política, o valor padrão global será utilizado par
 
   - Nome exclusivo da Política de Grupo: NotificationsBlockedForUrls
   - Nome da Política de Grupo: Bloquear notificações em sites específicos
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Content settings
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/configurações do conteúdo
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -7201,7 +7202,7 @@ Se você habilitar essa política ou não a configurar, as Políticas de Gerenci
 
 Se você desabilitar essa política, o Microsoft Edge não se comunicará com o Intune para solicitar políticas de MAM.
 
-  #### <a name="supported-features"></a>Recursos com suporte:
+  #### <a name="supported-features"></a>Recursos compatíveis:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -8081,6 +8082,8 @@ Use as informações anteriores ao configurar essa política.
   #### <a name="description"></a>Descrição
 
   Esta configuração de política permite que você configure quando o modo de eficiência se tornará ativo. Por padrão, o modo de eficiência estará ativo quando o dispositivo estiver desligado da tomada e a bateria estiver fraca. Em dispositivos sem bateria, o padrão é que o modo de eficiência nunca se torne ativo.
+
+Sites individuais podem ser impedidos de participar do modo de eficiência configurando a política [SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls).
 
 Definir esta política para 'AlwaysActive' e o modo de eficiência estará sempre ativo.
 
@@ -10036,7 +10039,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
   #### <a name="description"></a>Descrição
 
-  Defina uma lista de sites, com base em padrões de URL, que não podem ser colocado em modo de suspensão pelas guias em suspensão.
+  Defina uma lista de sites, com base em padrões de URL, que não podem ser colocado em modo de suspensão pelas guias em suspensão. Os sites nesta lista também são excluídos de outras otimizações de desempenho, como o modo de eficiência e o descarte de guias.
 
 Se a política [SleepingTabsEnabled](#sleepingtabsenabled) estiver desabilitada, essa lista não será usada e nenhum site será colocado em suspensão automaticamente.
 
@@ -10177,6 +10180,8 @@ Se você não configurar essa política, os usuários poderão escolher o valor 
 
 Mapeamento das opções de política:
 
+* 30 Segundos (30) = 30 segundos de inatividade
+
 * 5 Minutos (300) = 5 minutos de inatividade
 
 * 15 Minutos (900) = 15 minutos de inatividade
@@ -10220,7 +10225,7 @@ Use as informações anteriores ao configurar essa política.
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Nome do Valor: SleepingTabsTimeout
-  - Tipo de valor: REG_DWORD
+  - Tipo de Valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -12070,7 +12075,7 @@ Observação: Essa política não impede que o navegador navegue até qualquer U
 Se você desabilitar essa política, os usuários não poderão ver os resultados internos na lista de sugestões da barra de endereço do Microsoft Edge.
 A partir da versão 89 do Microsoft Edge, as sugestões da Pesquisa da Microsoft no Bing estarão disponíveis mesmo se o Bing não for o provedor de pesquisa padrão do usuário.
 
-  #### <a name="supported-features"></a>Recursos com suporte:
+  #### <a name="supported-features"></a>Recursos compatíveis:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -18532,6 +18537,8 @@ Mapeamento das opções de política:
 
 Use as informações anteriores ao configurar essa política.
 
+
+
   #### <a name="supported-features"></a>Recursos compatíveis:
 
   - Pode ser obrigatório: Sim
@@ -23187,6 +23194,65 @@ Se você desabilitar ou não configurar essa política, as páginas serão isola
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### <a name="livecaptionsallowed"></a>LiveCaptionsAllowed
+
+  #### <a name="live-captions-allowed"></a>Legendas ao vivo permitidas
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows desde 103 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Permitir que os usuários ativem ou desativem o recurso legendas ao vivo.
+
+As legendas ao vivo são um recurso de acessibilidade que converte a fala do áudio que é reproduzido no Microsoft Edge em texto e mostra esse texto em uma janela separada. Todo o processo ocorre no dispositivo e nenhum texto de áudio ou legenda sai do dispositivo.
+
+Se você habilitar ou não configurar essa política, os usuários poderão ativar ou desativar esse recurso em edge://settings/accessibility.
+
+Se você desabilitar essa política, os usuários não poderão ativar esse recurso de acessibilidade. Se os arquivos de reconhecimento de fala tiverem sido baixados anteriormente, eles serão excluídos do dispositivo em 30 dias. É recomendável evitar essa opção, a menos que ela seja necessária em seu ambiente.
+
+Se os usuários optarem por ativar legendas ao vivo, os arquivos de reconhecimento de fala (aproximadamente 100 megabytes) serão baixados para o dispositivo na primeira execução e, em seguida, periodicamente para melhorar o desempenho e a precisão. Esses arquivos serão excluídos após 30 dias.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: LiveCaptionsAllowed
+  - Nome da Política de Grupo: Legendas dinâmicas permitidas
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: LiveCaptionsAllowed
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### <a name="localbrowserdatashareenabled"></a>LocalBrowserDataShareEnabled
 
   #### <a name="enable-windows-to-search-local-microsoft-edge-browsing-data"></a>Habilitar o Windows a pesquisar dados locais de navegação do Microsoft Edge
@@ -24499,6 +24565,70 @@ Do Microsoft Edge 93 em diante, se a política [ImplicitSignInEnabled](#implicit
 0x00000001
 ```
 
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="originagentclusterdefaultenabled"></a>OriginAgentClusterDefaultEnabled
+
+  #### <a name="origin-keyed-agent-clustering-enabled-by-default"></a>Agrupamento de agentes com chave de origem habilitada por padrão
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e no macOS desde 103 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  O cabeçalho Origin-Agent-Cluster: HTTP controla se um documento é isolado em um cluster de agente com chave de origem ou em um cluster de agente com chave de site. Isso tem implicações de segurança porque um cluster de agente com chave de origem permite isolar documentos por origem. A consequência disso para os desenvolvedores é que o acessador document.domain não pode mais ser definido quando o clustering de agente com chave de origem está habilitado.
+
+Se você habilitar ou não configurar essa política, os documentos sem o cabeçalho Origin-Agent-Cluster: serão atribuídos ao clustering de agente com chave de origem por padrão. Nesses documentos, o acessador document.domain não será configurável.
+
+Se você desabilitar essa política, os documentos sem o cabeçalho Origin-Agent-Cluster: serão atribuídos a clusters de agentes com chave de site por padrão. Nesses documentos, o acessador document.domain será configurável.
+
+Consulte [https://go.microsoft.com/fwlink/?linkid=2191896](https://go.microsoft.com/fwlink/?linkid=2191896) para obter detalhes adicionais.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: OriginAgentClusterDefaultEnabled
+  - Nome da Política de Grupo: Agrupamento de agentes com chave de origem habilitada por padrão
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: OriginAgentClusterDefaultEnabled
+  - Tipo de Valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: OriginAgentClusterDefaultEnabled
+  - Valor de exemplo:
+``` xml
+<false/>
+```
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -27157,7 +27287,7 @@ Os padrões de URL definidos nessa política não podem entrar em conflito com a
 
 Para obter informações detalhadas sobre os padrões de URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
-  #### <a name="supported-features"></a>Recursos com suporte:
+  #### <a name="supported-features"></a>Recursos compatíveis:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -27568,7 +27698,7 @@ Se você não configurar esta política:
    - Os usuários da conta Microsoft (exclui contas do Azure AD) em busca, na página de nova guia, e conquista de mercados verão a experiência do Microsoft Rewards experiência em seu perfil de usuário do Microsoft Edge.
    - A configuração para habilitar o Microsoft Rewards nas configurações do Microsoft Edge será habilitada e alternada.
 
-  #### <a name="supported-features"></a>Recursos com suporte:
+  #### <a name="supported-features"></a>Recursos compatíveis:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: Sim
@@ -28725,7 +28855,7 @@ Se você desabilitar esta política, os pop-ups que direcionam _blank têm permi
 
 Essa política será obsoleta no Microsoft Edge versão 95.
 
-  #### <a name="supported-features"></a>Recursos com suporte:
+  #### <a name="supported-features"></a>Recursos compatíveis:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -28750,7 +28880,7 @@ Essa política será obsoleta no Microsoft Edge versão 95.
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): N/A
   - Nome do Valor TargetBlankImpliesNoOpener
-  - Tipo de valor: REG_DWORD
+  - Tipo de Valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -30371,11 +30501,11 @@ Se você definir essa política como falsa ou não definir essa política, os re
 
   #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
 
-  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Informações da política de grupo (ADMX)
 
   - Nome Exclusivo da Política de Grupo: WebComponentsV0Enabled
   - Nome da Política de Grupo: Reabilitar a API de componentes Web V0 até M84 (obsoleta)
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
