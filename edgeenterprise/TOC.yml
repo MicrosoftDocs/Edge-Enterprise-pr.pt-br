@@ -1,4 +1,4 @@
-# last revised 05/17/2022
+# last revised 05/19/2022
 - name: Documentação do Microsoft Edge Enterprise
   href: index.yml
 - name: Documentação do Microsoft Edge
@@ -69,7 +69,7 @@
       href: /intune/apps/apps-edge-macos/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
 - name: Configurar o Microsoft Edge
   items:
-    - name: Configurar para o Windows
+    - name: Configurar para Windows com políticas de grupo
       href: configure-microsoft-edge.md
     - name: Configurar para o Windows com o Intune
       href: /mem/intune/configuration/administrative-templates-configure-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json

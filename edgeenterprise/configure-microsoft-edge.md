@@ -1,36 +1,41 @@
 ---
-title: Configurar o Microsoft Edge para Windows
-ms.author: brianalt
-author: kelleyvice-msft
-manager: laurawi
-ms.date: 03/01/2022
+title: Configurar o Microsoft Edge para Windows com configurações de política
+ms.author: v-danwesley
+author: dan-wesley
+manager: collw
+ms.date: 05/19/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Saiba como definir as configurações de política do Microsoft Edge em dispositivos Windows
-ms.openlocfilehash: ed89a1d356fcfa7b6bf3681a7d75848ed2c94f31
-ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
+ms.openlocfilehash: e50a1020972b76c5c10d1da9e02c0d50e0cb990f
+ms.sourcegitcommit: b96e309e575b4bcb0d179645ed37dea544bfaeda
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "12445325"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "12520467"
 ---
-# <a name="configure-microsoft-edge-policy-settings-on-windows"></a>Definir configurações de política do Microsoft Edge no Windows
+# <a name="configure-microsoft-edge-policy-settings-on-windows-devices"></a>Definir configurações de política do Microsoft Edge em dispositivos Windows
 
-Use as informações a seguir para definir as configurações de política do Microsoft Edge em seus dispositivos Windows. Se você ainda não configurou o Microsoft Edge, consulte o [guia de configuração do Microsoft Edge](https://go.microsoft.com/fwlink/?linkid=2187484).
+Use este artigo como guia para definir as configurações de política do Microsoft Edge em dispositivos Windows. Se você ainda não configurou o Microsoft Edge, consulte o [guia de configuração do Microsoft Edge](https://go.microsoft.com/fwlink/?linkid=2187484).
 
 > [!NOTE]
 > Este artigo aplica-se ao Microsoft Edge versão 77 ou posterior.
 
-## <a name="configure-policy-settings-on-windows"></a>Definir configurações de política no Windows
+## <a name="introduction-to-policy-settings-on-windows"></a>Introdução às configurações de políticas no Windows
 
-Você pode usar _objetos de política de grupo ( GPO)_ para definir as configurações de política para o Microsoft Edge e atualizações gerenciadas do Microsoft Edge em todas as versões do Windows. Você também pode provisionar a política por meio do Registro para dispositivos Windows que fazem parte de um domínio do Microsoft Active Directory ou instâncias do Windows 10 Pro ou do Enterprise inscritas no gerenciamento de dispositivos no Microsoft Intune. Para configurar o Microsoft Edge com objetos de política de grupo, você instala os _modelos administrativos_ que adicionam regras e configurações para o Microsoft Edge ao Repositório Central de políticas de grupo no domínio do Active Directory ou à pasta do modelo Definição de Política em computadores individuais e, em seguida, configura as políticas específicas que deseja definir.
+Você pode usar *objetos de política de grupo ( GPO)* para definir as configurações de política para o Microsoft Edge e atualizações gerenciadas do Microsoft Edge em todas as versões do Windows. Você também pode configurar políticas por meio do registro para:
 
-Você pode usar a política de grupo do Active Directory para definir as configurações de política do Microsoft Edge se preferir gerenciar a política no nível do domínio. Isso permite que você gerencie as configurações de política globalmente, definindo configurações de política diferentes para UOs específicas ou usando filtros WMI para aplicar configurações somente a usuários ou computadores retornados por uma consulta específica. Para configurar a política em computadores individuais, você poderá aplicar configurações de política que afetam somente o dispositivo local usando o Editor de Política de Grupo Local no computador de destino.
+- Dispositivos Windows que ingressaram em um domínio do Microsoft Active Directory (AD)
+- Instâncias do Windows 10 Pro ou Enterprise registradas para o gerenciamento de dispositivos no Microsoft Intune
 
-O Microsoft Edge oferece suporte a políticas _obrigatórias_ e _recomendadas_. As políticas obrigatórias substituem as preferências do usuário e impedem que o usuário as alterem, enquanto a política recomendada fornece uma configuração padrão que pode ser substituída pelo usuário. A maioria das políticas só é obrigatória; um subconjunto é obrigatório e recomendado. Se ambas as versões de uma política forem definidas, a configuração obrigatória terá precedência. Uma política recomendada só entra em vigor quando o usuário não modifica a configuração.
+Para configurar o Microsoft Edge com objetos de política de grupo, instale *modelos administrativos* que adicionam regras e configurações para o Microsoft Edge para a política de grupo do Repositório Central no seu domínio do Active Directory.  Alternativamente, adicione estas regras e configurações à pasta modelo de Definição de Políticas em computadores individuais e depois configure as políticas específicas que você deseja definir.
+
+Você pode usar a política de grupo do Active Directory para definir as configurações de política do Microsoft Edge se preferir gerenciar a política no nível do domínio. Esta abordagem permite que você gerencie as configurações de políticas globalmente. Você pode direcionar configurações de políticas diferentes para UOs específicas ou usar filtros WMI para aplicar configurações apenas a usuários ou computadores retornados por uma consulta específica. Para configurar políticas em computadores individuais, você pode utilizar o Editor de Política de Grupo Local no computador de destino. Essa abordagem permite que você aplique configurações de política que afetam somente o dispositivo local.
+
+O Microsoft Edge dá suporte a políticas *obrigatórias* e *recomendadas*. As políticas obrigatórias substituem as preferências do usuário e impedem que ele use a política. As políticas recomendadas fornecem uma configuração padrão que o usuário pode substituir. A maioria das políticas é obrigatória, mas existe um subconjunto que é obrigatório e recomendado. Se ambas as versões de uma política forem definidas, a configuração obrigatória terá precedência. Uma política recomendada só tem efeito quando o usuário não modificou a configuração.
 
 >[!TIP]
 > Você pode usar o Microsoft Intune para definir as configurações de política do Microsoft Edge. Para obter mais informações, consulte [Configurar o Microsoft Edge usando o Microsoft Intune](configure-edge-with-intune.md).
@@ -40,37 +45,37 @@ Há dois modelos administrativos para o Microsoft Edge, ambos podem ser aplicado
 - *msedge.admx* para [definir as configurações do Microsoft Edge](./microsoft-edge-policies.md)
 - *msedgeupdate.admx* para [gerenciar atualizações do Microsoft Edge](./microsoft-edge-update-policies.md)
 
-Para começar, baixe e instale o modelo administrativo do Microsoft Edge.
+As etapas a seguir descrevem como instalar, configurar e testar os modelos do Microsoft Edge.
 
-### <a name="1-download-and-install-the-microsoft-edge-administrative-template"></a>1. Baixar e instalar o modelo administrativo do Microsoft Edge
+## <a name="1-download-and-install-the-microsoft-edge-administrative-template"></a>1. Baixar e instalar o modelo administrativo do Microsoft Edge
 
-Se você quiser definir as configurações de política do Microsoft Edge no Active Directory, baixe os arquivos em um local de rede que você possa acessar de um controlador de domínio ou de uma estação de trabalho com o RSAT (Ferramentas de Administração de Servidor Remoto) instalado. Para configurar em um computador individual, bastará baixar os arquivos para esse computador.
+Se você quiser definir as configurações de política do Microsoft Edge no Active Directory, baixe os arquivos em um local de rede que você possa acessar de um controlador de domínio ou de uma estação de trabalho com o RSAT (Ferramentas de Administração de Servidor Remoto) instalado. Para configurar em um computador individual, baixe os arquivos para esse computador.
 
 Quando você adiciona os arquivos de modelo administrativo ao local adequado, as configurações de política do Microsoft Edge ficam imediatamente disponíveis no Editor de Política de Grupo.
 
 Acesse a [página inicial do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise) para baixar o arquivo de modelos de política do Microsoft Edge e extrair o conteúdo.
 
-#### <a name="add-the-administrative-template-to-active-directory"></a>Adicionar o modelo administrativo ao Active Directory
+### <a name="add-the-administrative-template-to-active-directory"></a>Adicionar o modelo administrativo ao Active Directory
 
-1. Em um controlador de domínio ou uma estação de trabalho com o RSAT, navegue até a pasta **PolicyDefinition** (também conhecida como o _Repositório Central_) em qualquer controlador de domínio para seu domínio. Para versões mais antigas do Windows Server, talvez seja necessário criar a pasta PolicyDefinition. Para obter mais informações, consulte [Como criar e gerenciar o Repositório Central para Modelos Administrativos de Política de Grupo no Windows](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra).
+1. Em um controlador de domínio ou estação de trabalho com RSAT, vá para a pasta **PolicyDefinition** (também conhecida como *Repositório Central*) em qualquer controlador de domínio do seu domínio. Para versões mais antigas do Windows Server, talvez seja necessário criar a pasta **PolicyDefinition**. Para obter mais informações, consulte [Como criar e gerenciar o Repositório Central para Modelos Administrativos de Política de Grupo no Windows](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra).
 2. Abra *MicrosoftEdgePolicyTemplates* e acesse **windows** > **admx**.
 3. Copie o arquivo *msedge.admx* para a pasta PolicyDefinition. (Exemplo: %systemroot%\sysvol\domain\policies\PolicyDefinitions)
 4. Na pasta *admx*, abra a pasta do idioma apropriado. Por exemplo, se você estiver nos EUA, abra a pasta **en-US**.
-5. Copie o arquivo *msedge.adml* para a pasta do idioma correspondente na pasta PolicyDefinition. Crie a pasta se ela ainda não existir. (Exemplo: %systemroot%\sysvol\domain\policies\PolicyDefinitions\EN-US)
+5. Copie o arquivo *msedge.adml* para a pasta do idioma correspondente na pasta PolicyDefinition. Crie a pasta caso ela ainda não exista. (Exemplo: %systemroot%\sysvol\domain\policies\PolicyDefinitions\EN-US)
 6. Se o domínio tiver mais de um controlador de domínio, os novos arquivos ADMX serão replicados para eles no próximo intervalo de replicação de domínio.
 7. Para confirmar se os arquivos foram carregados corretamente, abra o **Editor de Gerenciamento de Política de Grupo** nas Ferramentas Administrativas do Windows e expanda **Configuração do Computador** > **Políticas** > **Modelos Administrativos** > **Microsoft Edge**. Você deve ver um ou mais nós do Microsoft Edge, como mostrado abaixo.
 
     ![Políticas do Microsoft Edge](./media/configure-microsoft-edge/edge-gpo-policies.png)
 
-#### <a name="add-the-administrative-template-to-an-individual-computer"></a>Adicionar o modelo administrativo a um computador individual
+### <a name="add-the-administrative-template-to-an-individual-computer"></a>Adicionar o modelo administrativo a um computador individual
 
 1. No computador de destino, abra *MicrosoftEdgePolicyTemplates* e vá para **windows** > **admx**.
 2. Copie o arquivo *msedge.admx* para sua pasta do modelo Definição de Política. (Exemplo: C:\Windows\PolicyDefinitions)
 3. Na pasta *admx*, abra a pasta do idioma apropriado. Por exemplo, se você estiver nos EUA, abra a pasta **en-US**.
 4. Copie o arquivo *msedge.adml* para a pasta do idioma correspondente na sua pasta Definição de Política. (Exemplo: C:\Windows\PolicyDefinitions\en-US)
-5. Para confirmar se os arquivos foram carregados corretamente, abra o Editor de Política de Grupo Local diretamente (tecla Windows + R e digite gpedit.msc) ou abra o MMC e carregue o snap-in Editor de Política de Grupo Local. Se ocorrer um erro, isso geralmente significa que os arquivos estão em um local incorreto.
+5. Para confirmar se os arquivos foram carregados corretamente, abra o Editor de Políticas do Grupo Local diretamente (tecla Windows + R e digite gpedit.msc) ou abra o MMC e carregue o snap-in do Editor de Políticas do Grupo Local. Se ocorrer um erro, isso geralmente significa que os arquivos estão em um local incorreto.
 
-### <a name="2-set-mandatory-or-recommended-policies"></a>2. Definir políticas obrigatórias ou recomendadas
+## <a name="2-set-mandatory-or-recommended-policies"></a>2. Definir políticas obrigatórias ou recomendadas
 
 Você pode definir políticas obrigatórias ou recomendadas para configurar o Microsoft Edge com o Editor de Política de Grupo para o Active Directory e computadores individuais. Você pode criar um escopo para as configurações de política para **Configuração do Computador** ou **Configuração do Usuário** selecionando o nó apropriado conforme descrito a seguir.
 
@@ -79,13 +84,13 @@ Você pode definir políticas obrigatórias ou recomendadas para configurar o Mi
 
   ![Abrir o Editor de Política de Grupo](./media/configure-microsoft-edge/edge-ad-policy.png)
 
-### <a name="3-test-your-policies"></a>3. Testar as políticas
+## <a name="3-test-your-policies"></a>3. Testar as políticas
 
-Em um dispositivo cliente de destino, abra o Microsoft Edge e navegue até **edge://policy** para ver todas as políticas aplicadas. Se você tiver aplicado configurações de política no computador local, as políticas deverão aparecer imediatamente. Talvez seja necessário fechar e reabrir o Microsoft Edge se ele estava aberto enquanto você estava definindo as configurações de política.
+Em um dispositivo cliente de destino, abra o Microsoft Edge e acesse **edge://policy** para ver todas as políticas aplicadas. Se você tiver aplicado configurações de política no computador local, as políticas deverão aparecer imediatamente. Talvez seja necessário fechar e reabrir o Microsoft Edge se ele estiver aberto enquanto você estiver configurando as configurações da política.
 
 ![Exibir políticas configuradas no navegador](./media/configure-microsoft-edge/edge-gpEdit.png)
 
-Para as configurações de política de grupo do Active Directory, as configurações de política são propagadas para os computadores do domínio a um intervalo regular definido pelo administrador do domínio, e talvez os computadores de destino não recebam as atualizações de política imediatamente. Para atualizar manualmente as configurações de política de grupo do Active Directory em um computador de destino, execute o seguinte comando em um prompt de comando ou em uma sessão do PowerShell no computador de destino:
+Para configurações de políticas de grupo do Active Directory, as configurações de políticas são enviadas para computadores de domínio em um intervalo regular definido pelo administrador do domínio. Os computadores de destino podem não receber atualizações de política imediatamente. Se desejar atualizar manualmente as configurações da política de grupo do Active Directory Domain Services em um computador de destino, execute o seguinte comando por meio de um prompt de comando ou de uma sessão do PowerShell no computador de destino:
 
 ``` powershell
 gpupdate /force
@@ -93,9 +98,9 @@ gpupdate /force
 
 Talvez seja necessário fechar e reabrir o Microsoft Edge antes que as novas políticas apareçam.
 
-Você também pode usar REGEDIT.exe em um computador de destino para exibir as configurações do Registro que armazenam as configurações da política de grupo. Essas configurações estão localizadas no caminho do Registro **HKLM\SOFTWARE\Policies\Microsoft\Edge**.
+Você também pode usar REGEDIT.exe em um computador de destino para exibir as configurações do Registro que armazenam as configurações da política de grupo. Estas configurações de política estão localizadas neste caminho do Registro: **HKLM\SOFTWARE\Policies\Microsoft\Edge**.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Configurar para o Windows com o Intune](configure-edge-with-intune.md)
