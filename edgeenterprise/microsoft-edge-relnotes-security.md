@@ -3,23 +3,27 @@ title: Notas de versão para atualizações de segurança do Microsoft Edge
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 05/13/2022
+ms.date: 05/24/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão para atualizações de segurança do Microsoft Edge
-ms.openlocfilehash: d48dd9ddf443ffcdc7ef299b970f9c756b288834
-ms.sourcegitcommit: faf629ac0acec4081c77c6fee32526edfa08e677
+ms.openlocfilehash: 00675789351a7a3746f10efb9c85aa06490515e4
+ms.sourcegitcommit: 60bb42a11cd847eaa637b18be5a0f2c140f138a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "12513519"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "12548736"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Notas de versão para atualizações de segurança do Microsoft Edge
 
 Estas notas de versão fornecem informações sobre correções de segurança incluídas nas atualizações para o canal estável do Microsoft Edge.
+
+## <a name="may-24-2022"></a>24 de maio de 2022
+
+A Microsoft está ciente das recentes correções de segurança do Chromium. Estamos trabalhando ativamente para lançar uma correção de segurança.
 
 ## <a name="may-13-2022"></a>13 de maio de 2022
 
