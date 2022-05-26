@@ -3,25 +3,25 @@ title: ClickOnce e DirectInvoke no Microsoft Edge
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/21/2021
+ms.date: 05/25/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: Saiba mais sobre o ClickOnce e o DirectInvoke no Microsoft Edge.
-ms.openlocfilehash: 48702082dc3c352519c8003e226bf99c63765150
-ms.sourcegitcommit: 85818deae134b48d7f2766e53b4400a1b4d4277d
+description: Saiba mais sobre os recursos ClickOnce e DirectInvoke no Microsoft Edge.
+ms.openlocfilehash: e8edb1cdef2c6aa83ba127558cc63cacfe40a331
+ms.sourcegitcommit: ad1cb6d9ff6c44b692403730c85ac671415aec86
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "12034430"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "12550996"
 ---
 # <a name="understand-the-clickonce-and-directinvoke-features-in-microsoft-edge"></a>Noções básicas sobre os recursos ClickOnce e DirectInvoke no Microsoft Edge
 
-ClickOnce e DirectInvoke são recursos disponíveis no IE e Microsoft Edge que suportam o uso de um manipulador de arquivos para baixar arquivos de um site. Embora eles atendam a diferentes finalidades, os dois recursos permitem que sites especifiquem que um arquivo solicitado para download seja passado para um manipulador de arquivos no dispositivo do usuário. As solicitações do ClickOnce são manipuladas pelo manipulador de arquivos nativo no Windows. As solicitações do DirectInvoke são manipuladas por um manipulador de arquivos registrado pelo site que hospeda o arquivo.
+ClickOnce e o DirectInvoke são recursos disponíveis no IE e no Microsoft Edge que dão suporte ao uso de um manipulador de arquivos para baixar arquivos de um site. Embora eles atendam a diferentes finalidades, os dois recursos permitem que sites especifiquem que um arquivo solicitado para download seja passado para um manipulador de arquivos no dispositivo do usuário. As solicitações do ClickOnce são manipuladas pelo manipulador de arquivos nativo no Windows. As solicitações do DirectInvoke são manipuladas por um manipulador de arquivos registrado pelo site que hospeda o arquivo.
 
-Depois de configurar ClickOnce ou DirectInvoke, os prompts ClickOnce ou DirectInvoke podem ser ignorados configurando políticas corporativas adicionais. Essas políticas podem dar suporte a ignorar os prompts ClickOnce ou DirectInvoke para tipos de arquivo especificados para todos os domínios ou para tipos de arquivo especificados de domínios especificados.
+Depois de configurar o ClickOnce ou o DirectInvoke, os prompts ClickOnce ou DirectInvoke podem ser ignorados configurando outras políticas corporativas. Essas políticas podem dar suporte a ignorar os prompts ClickOnce ou DirectInvoke para tipos de arquivo especificados para todos os domínios ou para tipos de arquivo especificados de domínios especificados.
 
 Para obter mais informações sobre esses recursos, consulte:
 
@@ -66,11 +66,11 @@ Suporte ao ClickOnce e ao DirectInvoke:
 
 ## <a name="clickonce-and-directinvoke-file-handling-security"></a>Segurança de manipulação de arquivos do ClickOnce e do DirectInvoke
 
-O ClickOnce e o DirectInvoke são protegidos pelo serviço de verificação de reputação de URL do Microsoft Defender SmartScreen.
+ClickOnce e o DirectInvoke são protegidos pelo Microsoft 365 Defender de verificação de reputação de URL do SmartScreen.
 
-Se uma solicitação do ClickOnce ou do DirectInvoke for sinalizada pelo serviço de reputação de URL do Microsoft Defender SmartScreen como não seguro, os usuários com o ClickOnce ou o DirectInvoke habilitado verão dois pop-ups.
+Se uma ClickOnce ou uma solicitação do DirectInvoke for sinalizada pelo serviço de reputação de URL do Microsoft 365 Defender SmartScreen como não segura, os usuários com o ClickOnce ou DirectInvoke habilitado verão dois pop-ups.
 
-O primeiro pop-up pergunta ao usuário se ele quer abrir o arquivo. Esse pop-up é exibido independentemente de o arquivo ter sido sinalizado como seguro ou não seguro. O usuário pode **Relatar o arquivo como não seguro**, **Cancelar** a solicitação ou clicar em **Abrir** para continuar.
+O primeiro pop-up pergunta ao usuário se ele quer abrir o arquivo. Esse pop-up é exibido independentemente de o arquivo ter sido sinalizado como seguro ou não seguro. O usuário pode **relatar o arquivo como não seguro****, cancelar** a solicitação ou selecionar **Abrir** para continuar.
 
    ![Aviso para abrir um arquivo](./media/edge-learn-more-co-di/edge-clickonce-modal-1.png)
 
@@ -91,9 +91,12 @@ O segundo pop-up só aparece se:
 
 Há duas políticas de grupo que você pode usar para habilitar ou desabilitar o ClickOnce e o DirectInvoke para usuários corporativos. Essas duas políticas são [ClickOnceEnabled](./microsoft-edge-policies.md#clickonceenabled) e [DirectInvokeEnabled](./microsoft-edge-policies.md#directinvokeenabled). Essas duas políticas são rotuladas no Editor de Política de Grupo como "Permitir que os usuários abram arquivos usando o protocolo ClickOnce" e "Permitir que os usuários abram arquivos usando o protocolo DirectInvoke", respectivamente.
 
-Para especificar tipos de arquivo para os quais os prompts ClickOnce ou DirectInvoke devem ser ignorados, use a política rotulada no Editor de Política de Grupo como "Lista de tipos de arquivo que devem ser abertos automaticamente no download". Isso permitirá que os tipos de arquivo especificados sejam abertos automaticamente após o download para todos os domínios.  
+Para especificar tipos de arquivo para os quais os prompts ClickOnce ou DirectInvoke devem ser ignorados, use a política rotulada no Editor do Política de Grupo como "Lista de tipos de arquivo que devem ser abertos automaticamente no download". Essa configuração de política permitirá que os tipos de arquivo especificados sejam abertos automaticamente após o download para todos os domínios.  
 
-Para ignorar os prompts ClickOnce ou DirectInvoke para tipos de arquivo específicos para domínios específicos, configurando duas políticas adicionais rotuladas no Editor de Política de Grupo como "Lista de tipos de arquivo que devem ser abertos automaticamente no download" e "URLs onde AutoOpen-FileTypes pode aplicar". Observe que a política "URLs onde AutoOpen- FileTypes podem ser aplicadas" é uma política de suporte para "Lista de tipos de arquivo que devem ser abertos automaticamente no download" e não faz nada por conta própria.  
+Você pode ignorar os prompts ClickOnce ou DirectInvoke para tipos de arquivo específicos para domínios específicos configurando mais duas políticas. Essas políticas são rotuladas no Editor do Política de Grupo como "Lista de tipos de arquivo que devem ser abertos automaticamente no download" e "URLs em que AutoOpen-FileTypes pode aplicar".
+
+> [!NOTE]
+> A política "URLs em que AutoOpen- FileTypes pode se aplicar" é uma política de suporte para "Lista de tipos de arquivo que devem ser abertos automaticamente no download" e não faz nada por conta própria.  
 
 ## <a name="clickonce-and-directinvoke-behavior"></a>Comportamento do ClickOnce e do DirectInvoke
 
@@ -103,13 +106,13 @@ Os exemplos a seguir mostram a manipulação de arquivos quando o ClickOnce e o 
 
 1. Um usuário abre um link para uma página que solicita suporte ao ClickOnce e recebe o aviso exibido na próxima captura de tela.
 
-   ![Aviso para abrir um arquivo não seguro](./media/edge-learn-more-co-di/edge-clickonce-enabled-1.png)
+   ![Solicitar a abertura de um arquivo não seguro ClickOnce habilitado](./media/edge-learn-more-co-di/edge-clickonce-enabled-1.png)
 
-2. Depois que o usuário clica em **Abrir**, o ClickOnce tenta iniciar o aplicativo.
+2. Depois que o usuário seleciona **Abrir**, ClickOnce tenta iniciar o aplicativo.
 
    ![O ClickOnce tenta iniciar o aplicativo](./media/edge-learn-more-co-di/edge-clickonce-enabled-launch-app.png)
 
-3. Depois que o usuário clica em **Abrir**, o navegador mostra um pop-up que pergunta se o usuário tem certeza de que quer instalar o aplicativo.
+3. Depois que o usuário seleciona **Abrir**, o navegador mostra um pop-up que pergunta ao usuário se ele tem certeza de que deseja instalar o aplicativo.
 
    ![Aviso para abrir o arquivo](./media/edge-learn-more-co-di/edge-clickonce-enabled-2.png)
 
@@ -118,7 +121,7 @@ Os exemplos a seguir mostram a manipulação de arquivos quando o ClickOnce e o 
 
 ### <a name="clickonce-disabled"></a>ClickOnce desabilitado
 
-1. Quando um usuário abre um link para uma página que solicita suporte ao ClickOnce, ele verá uma mensagem na bandeja de download semelhante à da próxima captura de tela.
+1. Quando um usuário abre um link para uma página que solicita ClickOnce suporte, ele verá uma mensagem na bandeja de download semelhante à da próxima captura de tela.
 
    ![Aviso de download de arquivo](./media/edge-learn-more-co-di/edge-clickonce-disabled-1.png)
 
@@ -126,18 +129,18 @@ Os exemplos a seguir mostram a manipulação de arquivos quando o ClickOnce e o 
 
 1. Um usuário abre um link para uma página que solicita suporte ao DirectInvoke e recebe o aviso exibido na próxima captura de tela.
 
-   ![Aviso para abrir um arquivo](./media/edge-learn-more-co-di/edge-directinvoke-open-link-1.png)
+   ![Solicitar a abertura do arquivo da página solicitando suporte](./media/edge-learn-more-co-di/edge-directinvoke-open-link-1.png)
 
-2. Quando o usuário clica em **Abrir**, o manipulador de arquivos solicitado é aberto. Neste exemplo, o Microsoft Word é usado para abrir o documento exibido na captura de tela anterior.
+2. Quando o usuário **seleciona Abrir,** o manipulador de arquivos solicitado é aberto. Neste exemplo, o Microsoft Word é usado para abrir o documento exibido na captura de tela anterior.
 
    > [!NOTE]
    > A interface, as mensagens e as opções mostradas pelo manipulador de arquivos do DirectInvoke variam de acordo com o tipo e a configuração do arquivo acessado.
 
 ### <a name="directinvoke-disabled"></a>DirectInvoke desabilitado
 
-1. Quando um usuário abre um link para uma página que solicita suporte ao DirectInvoke, o DirectInvoke se comporta igual quando o ClickOnce está desabilitado. Ele verá uma mensagem na bandeja de download semelhante à da próxima captura de tela.
+1. Quando um usuário abre um link para uma página que solicita suporte ao DirectInvoke, o DirectInvoke se comporta igual quando o ClickOnce está desabilitado. Eles verão uma mensagem na bandeja de download semelhante à da próxima captura de tela.
 
-   ![Aviso para abrir um arquivo](./media/edge-learn-more-co-di/edge-directinvoke-open-link-2.png)
+   ![Solicitar a abertura do arquivo quando o DirectInvoke estiver desabilitado](./media/edge-learn-more-co-di/edge-directinvoke-open-link-2.png)
 
 ## <a name="see-also"></a>Ver também
 

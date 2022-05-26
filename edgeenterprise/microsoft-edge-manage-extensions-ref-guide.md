@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Um guia de referência detalhado para configurar extensões do Microsoft Edge usando a política ExtensionSettings.
-ms.openlocfilehash: 5da599bab80bf2209aed9c8f31adf4e1301482af
-ms.sourcegitcommit: 303788d3d5aa516f6f9b5ecbde5ceb1418e3590d
+ms.openlocfilehash: a105054c22c595e3eb1745c91ec45d749d7343be
+ms.sourcegitcommit: ad1cb6d9ff6c44b692403730c85ac671415aec86
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "12508381"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "12550970"
 ---
 # <a name="a-detailed-guide-to-configuring-extensions-using-the-extensionsettings-policy"></a>Um guia detalhado para configurar extensões usando a política ExtensionSettings
 
@@ -97,8 +97,8 @@ O escopo padrão é identificado pelo asterisco (*). O exemplo a seguir define u
 
 ```json
 { 
-   “*”: {}, 
-   “nckgahadagoaajjgafhacjanaoiihapd”: {} 
+   "*": {}, 
+   "nckgahadagoaajjgafhacjanaoiihapd": {} 
 } 
 ```
 

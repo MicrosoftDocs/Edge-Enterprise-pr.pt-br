@@ -3,19 +3,19 @@ title: Microsoft Edge e acesso condicional
 ms.author: srugh
 author: srugh
 manager: seanlyn
-ms.date: 06/29/2021
+ms.date: 05/25/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: Microsoft Edge e acesso condicional
-ms.openlocfilehash: 56d593809d9c14a6ecfe58ef67745de78eeba452
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+description: Microsoft Edge suporte para acesso condicional
+ms.openlocfilehash: cb21bb2b8ccf3abd5a27c325f233e95182f78bf3
+ms.sourcegitcommit: ad1cb6d9ff6c44b692403730c85ac671415aec86
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978776"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "12551050"
 ---
 # <a name="microsoft-edge-and-conditional-access"></a>Microsoft Edge e acesso condicional
   
@@ -24,7 +24,7 @@ Esse artigo descreve como o Microsoft Edge é compatível com o acesso condicion
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
 
-Um aspecto fundamental da segurança na nuvem é a identidade e o acesso ao gerenciamento de seus recursos na nuvem. Em um mundo que prioriza a mobilidade e a nuvem, os usuários podem acessar os recursos da sua organização usando vários dispositivos e aplicativos em qualquer lugar. Como resultado, o foco apenas em quem pode acessar um recurso não é suficiente. Também é necessário considerar como um recurso é acessado. O acesso condicional do Azure Active Directory (Azure AD) ajuda você a dominar o equilíbrio entre segurança e produtividade.
+Um aspecto fundamental da segurança na nuvem é a identidade e o acesso ao gerenciamento de seus recursos na nuvem. Em um mundo móvel e de primeira nuvem, os usuários podem acessar os recursos da sua organização usando vários dispositivos e aplicativos de qualquer lugar. Como resultado disso, apenas se concentrar em quem pode acessar um recurso não é suficiente. Também é necessário considerar como um recurso é acessado. O acesso condicional do Azure Active Directory (Azure AD) ajuda você a dominar o equilíbrio entre segurança e produtividade.
 
 ## <a name="accessing-conditional-access-protected-resources-in-microsoft-edge"></a>Acesso a recursos protegidos com acesso condicional no Microsoft Edge
 
@@ -36,17 +36,17 @@ Em um dispositivo compatível, a identidade que acessa o recurso deve correspond
 
 Para continuar, você precisa alternar para o perfil necessário (se tiver um) ou criar um perfil com a identidade correspondente.
 
-Para entrar e trabalhar com seu perfil, clique na imagem da conta no canto superior direito do navegador. É possível usar o menu suspendo para:
+Para entrar e trabalhar com seu perfil, selecione a imagem da conta no canto superior direito do navegador. É possível usar o menu suspendo para:
 
-- Selecionar outro perfil. Clicar no nome do perfil.
-- Criar um perfil. Clique em **Adicionar um recurso**.
-- Gerenciar seus perfis. Clique em **Gerenciar configurações de perfil**.
+- Escolha outro perfil. Selecione o nome do perfil.
+- Criar um perfil. Selecione **Adicionar um perfil**.
+- Gerenciar seus perfis. Selecione **Gerenciar configurações de perfil**.
 
 Esse suporte está disponível em todas as plataformas, incluindo todas as versões compatíveis do Windows e do macOS.
 
 ### <a name="how-to-deploy-conditional-access-in-azure-active-directory"></a>Como implantar o Acesso condicional no Azure Active Directory
 
-[Implantar Acesso condicional](/azure/active-directory/conditional-access/plan-conditional-access) fornece um guia detalhado para ajudar a implantar o Acesso condicional no Azure Active Directory.
+[Implantar o Acesso Condicional](/azure/active-directory/conditional-access/plan-conditional-access) fornece um guia detalhado para ajudar a planejar e implantar o Acesso Condicional Azure Active Directory.
 
 ## <a name="see-also"></a>Consulte também
 

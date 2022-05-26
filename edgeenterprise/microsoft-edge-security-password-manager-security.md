@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Segurança do gerenciador de senhas do Microsoft Edge
-ms.openlocfilehash: 09b92656e47e2305285fd4f2e19a6bcc025122dd
-ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
+ms.openlocfilehash: 80cb7b895159284e207d69d73732bea18cd21037
+ms.sourcegitcommit: ad1cb6d9ff6c44b692403730c85ac671415aec86
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "12505334"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "12551041"
 ---
 # <a name="microsoft-edge-password-manager-security"></a>Segurança do gerenciador de senhas do Microsoft Edge 
 
@@ -96,7 +96,7 @@ Sincronização de dados e Microsoft Edge:
 
 - A sincronização de dados pode ser habilitada ou desabilitada conforme desejado em toda a organização.
 
-- Segurança de dados em trânsito e em repouso na nuvem: todos os dados sincronizados são criptografados em trânsito por HTTPS quando transferidos entre o navegador e os servidores da Microsoft. Os dados sincronizados também são armazenados em um estado criptografado nos servidores da Microsoft. Os tipos de dados confidenciais, como endereços e senhas, são criptografados no dispositivo antes de serem sincronizados. Se você estiver usando uma conta corporativa ou de estudante, todos os tipos de dados serão criptografados antes mesmo de serem sincronizados usando a Proteção de Informações da Microsoft.
+- Segurança de dados em trânsito e em repouso na nuvem: todos os dados sincronizados são criptografados em trânsito por HTTPS quando transferidos entre o navegador e os servidores da Microsoft. Os dados sincronizados também são armazenados em um estado criptografado nos servidores da Microsoft. Os tipos de dados confidenciais, como endereços e senhas, são criptografados no dispositivo antes de serem sincronizados. Se você estiver usando uma conta corporativa ou de estudante, todos os tipos de dados serão criptografados antes de serem sincronizados usando Proteção de Informações do Microsoft Purview.
 
 ## <a name="why-do-microsoft-security-baselines-recommend-disabling-the-password-manager"></a>Por que as linhas de base de segurança da Microsoft recomendam desabilitar o gerenciador de senhas?
 

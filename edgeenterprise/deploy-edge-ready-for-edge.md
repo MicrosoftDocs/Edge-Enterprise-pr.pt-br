@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Pronto para o Microsoft Edge
-ms.openlocfilehash: e38da707be04a7eafbefcc90cff0e272e0f76ac0
-ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
+ms.openlocfilehash: f4e6bc0779938af627a8c24726982dfe1c1715fe
+ms.sourcegitcommit: ad1cb6d9ff6c44b692403730c85ac671415aec86
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "12445695"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "12550957"
 ---
 # <a name="ready-for-microsoft-edge"></a>Pronto para o Microsoft Edge
 
@@ -44,12 +44,12 @@ A tabela a seguir lista as declarações de suporte do provedor para Microsoft E
 
 | Provedor |  Produto | Declaração de suporte |
 |-|-|-|
-| Accruent  | TMS 5.23  | https://www.accruent.com/resources/blog-posts/accruent-enhances-tms-microsoft-edge-compatibility-new-automations?utm_source=linkedin&utm_medium=organic-social&utm_campaign=healthcare-general  |
+| Acumulação  | TMS 5.23  | https://www.accruent.com/resources/blog-posts/accruent-enhances-tms-microsoft-edge-compatibility-new-automations?utm_source=linkedin&utm_medium=organic-social&utm_campaign=healthcare-general  |
 | Acumática  | Acumatica ERP  | https://help-2020r1.acumatica.com/Wiki/(W(1))/ShowWiki.aspx?pageid=a8d5d39d-513a-4f93-b484-a95eb33103a1  |
 | Adaptativo (Dia de trabalho)    | Planejamento Adaptativo do dia de trabalho   | https://www.adaptiveplanning.com/uk/products/adaptive-technology-foundation  |
 | Adobe  | Produtos Creative Cloud (Acrobat, Photoshop, Illustrator)  | https://helpx.adobe.com/creative-cloud/system-requirements.html?promoid=P79NQR4R&mv=other  |
 | Airtable   | Airtable   | https://support.airtable.com/hc/en-us/articles/217990018-What-are-the-technical-requirements-for-using-Airtable- |
-| Alfresco Software     | Alfresco Content Services  | https://docs.alfresco.com/5.2/concepts/supported-platforms-ACS.html  |
+| Alfresco Software     | Alfresco Content Services  | https://docs.alfresco.com/content-services/5.2/support/  |
 | Alteryx  | Plataforma Alteryx Analytics  | https://help.alteryx.com/current/product-activation-and-licensing/version-support-policy  |
 | Aprimo  | Aprimo Cloud Marketing Studio | https://help.aprimo.com/Content/Marketing_Operations_Help/aprimo_basics/browsers_configuring_concept.html |
 | Asana  | Asana | https://asana.com/guide/help/faq/connectivity#gl-browsers |
@@ -59,7 +59,7 @@ A tabela a seguir lista as declarações de suporte do provedor para Microsoft E
 | Atlassian  | Jira   | https://confluence.atlassian.com/adminjiraserver/supported-platforms-938846830.html  |
 | Atlassian  | Todos os outros produtos em nuvem  | https://confluence.atlassian.com/cloud/supported-browsers-744721663.html  |
 | Atlassian   | Trello   | https://help.trello.com/article/735-what-browsers-and-mobile-platforms-does-trello-support  |
-| Autodesk   | AutoCAD Web  | https://knowledge.autodesk.com/support/autocad-web-app/learn-explore/caas/CloudHelp/cloudhelp/ENU/AutoCAD-Web-Help/files/AutoCAD-Web-Help-browsers-html-html.html |
+| Autodesk   | AutoCAD Web  | https://knowledge.autodesk.com/support/autocad-web-app/learn-explore/caas/CloudHelp/cloudhelp/ENU/AutoCAD-Web-Help/files/Settings-and-Preferences/AutoCAD-Web-Help-browsers-html-html.html |
 | Sistemas Bentley  | serviços iTwin - Validação de Design   | https://communities.bentley.com/products/digital-twin-cloud-services/itwin-services/w/design-validation-wiki/43947/technical-requirements   |
 | Caixa  | Caixa  | https://support.box.com/hc/en-us/articles/360052807333-Box-officially-supports-the-new-Microsoft-Edge-Browser              |
 | Cisco  | WebRTC  | https://www.cisco.com/c/dam/en/us/td/docs/conferencing/ciscoMeetingApps/WebRTC_important_info/Release_Notes_CMA_webRTC_latest.pdf  |
@@ -79,7 +79,7 @@ A tabela a seguir lista as declarações de suporte do provedor para Microsoft E
 | FreshBooks | FreshBooks  | https://support.freshbooks.com/hc/en-us/articles/360003047891-Which-web-browsers-can-I-use-with-FreshBooks-                     |
 | Freshworks  | Freshdeck   | https://support.freshdesk.com/support/solutions/articles/227719-system-and-browser-requirements-for-freshdesk |
 | Gainsight  | Gainsight  | https://support.gainsight.com/PX/Install_PX/Browser_Compatibility_%2F%2F_Supported_Browser_List   |
-| GE | Predix Design System  | https://www.ge.com/digital/documentation/predix-services/c_supported_browsers_for._web_applications.html  |
+| GE | Predix Design System  | https://www.ge.com/digital/documentation/predix-essentials/latest/supported-software-devices.html  |
 | Genesys   | eServices, Administrator Extension, Pulse  | https://docs.genesys.com/Documentation/System/Current/SOE/Welcome#t-1  |
 | GitLab  | GitLab  | https://docs.gitlab.com/ee/install/requirements.html |
 | GoToMeeting (LogMeIn) | GoToMeeting (LogMeIn)  | https://support.goto.com/meeting/help/system-requirements-for-organizers-g2m010024 |
@@ -99,7 +99,7 @@ A tabela a seguir lista as declarações de suporte do provedor para Microsoft E
 | Jaggaer  | Jaggaer One | https://library.jaggaer.com/wp-content/uploads/Supported-Browsers-Devices.pdf |
 | Laserfiche  | Laserfiche  | https://support.laserfiche.com/kb/1014127/laserfiche-compatibility-information-for-microsoft-edge-based-on-chromium  |
 | LexisNexis  | LexisNexis  | https://www.lexisnexis.com/en-us/gateway.page   |
-| Magneto Commerce  | Magneto  | https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements_browsers.html |
+| Magneto Commerce  | Magneto  | https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html |
 | Marketo | Envolva-se | https://docs.marketo.com/display/public/DOCS/Supported+Browsers  |
 | MathWorks | MATLAB Online, Grader, Drive,  ThingSpeak  | https://www.mathworks.com/support/requirements/browser-requirements.html  |
 | Mavenlink| Mavenlink | https://mavenlink.zendesk.com/hc/en-us/articles/202489914-Mavenlink-Requirements |
@@ -127,7 +127,7 @@ A tabela a seguir lista as declarações de suporte do provedor para Microsoft E
 | SurveyMonkey  | SurveyMonkey | https://help.surveymonkey.com/articles/en_US/kb/What-browser-versions-do-you-support   |
 | Tableau  | Tableau Server  | https://www.tableau.com/products/techspecs#server |
 | Tableau  | Tableau Online  | https://www.tableau.com/products/techspecs#online  |
-| Teleopti  | Teleopti WFM Cloud  | https://www.teleopti.com/company/legal/                          service-specification   |
+| Teleopti  | Teleopti WFM Cloud  | https://www.teleopti.com/archive/files/66907/service-specification_nov_21_2019-pdf.aspx                          service-specification   |
 | TIBCO | Tibco Cloud Spotfire  | https://docs.tibco.com/pub/spotfire/general/sr/GUID-12C6E934-C84C-499B-9DAC-DD510854E4E1.html |
 | Verint | Verint Community   | https://community.telligent.com/community/11/w/user-documentation/63073/what-are-the-system-requirements   |
 | Visma  | Visma UX, Nordic Cool 4    | https://ux.visma.com/weblibrary/latest/  |
