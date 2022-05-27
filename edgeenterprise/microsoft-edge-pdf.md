@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Saiba mais sobre o leitor de PDF no Microsoft Edge.
-ms.openlocfilehash: e8cf690f818e0fa103aa4f17154d9f95431287b5
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 4447a49eee9e4097c06259edca4e4343983e2fac
+ms.sourcegitcommit: ad1cb6d9ff6c44b692403730c85ac671415aec86
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978546"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "12551068"
 ---
 # <a name="pdf-reader-in-microsoft-edge"></a>Leitor de PDF no Microsoft Edge
 
@@ -42,8 +42,8 @@ A tabela a seguir mostra quais canais e versões do Microsoft Edge oferecem supo
 | Highlight  | 81.0.416.53         |
 | Notas de texto | 88.0.705.50 |
 | Ler em voz alta | 84.0.522.63  |
-| Exibir os arquivos protegidos da Proteção de Informações da Microsoft (MIP) no mesmo locatário comercial | Suporte ao Windows na versão 80.0.361.48<br>Suporte ao Mac na versão 81.0.416.53 |
-| Exibir a Proteção de Informações da Microsoft (MIP) protegidos em locatários comerciais | 91.0.864.37  |
+| Exibir os arquivos protegidos da Proteção de Informações do Microsoft Purview no mesmo locatário comercial | Suporte ao Windows na versão 80.0.361.48<br>Suporte ao Mac na versão 81.0.416.53 |
+| Exibir os arquivos protegidos da Proteção de Informações do Microsoft Purview em locatários comerciais | 91.0.864.37  |
 |  Visualizar arquivos protegidos pelo Gerenciamento de Direitos de Informação (IRM)  | 83.0.478.37            |
 
 
@@ -110,7 +110,7 @@ Ler em voz alta para PDF aumenta a conveniência de ouvir o conteúdo pdf enquan
 
 ### <a name="protected-pdfs"></a>PDFs protegidos
 
-A [Proteção de informações da Microsoft (MIP)](/microsoft-365/compliance/protect-information?preserve-view=true&view=o365-worldwide) permite que os usuários colaborem com outras pessoas de maneira segura enquanto aderem às políticas de conformidade da sua organização. Depois que um arquivo é protegido, as ações que os usuários podem realizar são determinadas pelas permissões que lhes são atribuídas.
+A [Proteção de Informações do Microsoft Purview](/microsoft-365/compliance/protect-information?preserve-view=true&view=o365-worldwide) permite que os usuários colaborem com outras pessoas de maneira segura enquanto aderem às políticas de conformidade da sua organização. Depois que um arquivo é protegido, as ações que os usuários podem realizar são determinadas pelas permissões que lhes são atribuídas.
 
 > [!IMPORTANT]
 > Uma licença é necessária para o MIP. Para saber mais, confira este [Guia de licenciamento do Microsoft 365.](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)

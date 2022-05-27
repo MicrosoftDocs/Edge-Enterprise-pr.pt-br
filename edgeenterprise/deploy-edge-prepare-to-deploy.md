@@ -1,21 +1,21 @@
 ---
 title: Microsoft Edge em seu ambiente
-ms.author: ryhecht
-author: RyanHechtMSFT
+ms.author: v-danwesley
+author: dan-wesley
 manager: tinad
-ms.date: 06/29/2021
+ms.date: 05/26/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge em seu ambiente
-ms.openlocfilehash: 2381380cb399f6a1fbb5efa9378ffeba20fa774f
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 4c0622276a4ba93691a79d21779196c9603f2ff6
+ms.sourcegitcommit: 3771634abdfd7d376778ad6ae10a385d5658b7d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978563"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "12551788"
 ---
 # <a name="microsoft-edge-in-your-environment"></a>Microsoft Edge em seu ambiente
 

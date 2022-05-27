@@ -3,19 +3,19 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 05/24/2022
+ms.date: 05/26/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: 90c65e39aba1eab5dcd1dd55fa1c7769cee87e63
-ms.sourcegitcommit: 60bb42a11cd847eaa637b18be5a0f2c140f138a4
+ms.openlocfilehash: 49de35c0750526149cff44766446d36b1b97cf60
+ms.sourcegitcommit: 7d4cb248c7c501850c5fd180bfe3322c3a7890f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "12548746"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "12551431"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão do canal do Microsoft Edge beta
 
@@ -23,6 +23,10 @@ Estas notas de versão fornecem informações sobre os novos recursos e atualiza
 
 > [!NOTE]
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-1020124525-may-26"></a>Versão 102.0.1245.25: 26 de maio
+
+Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-1020124522-may-24"></a>Versão 102.0.1245.22: 24 de maio
 
@@ -143,7 +147,7 @@ Vários bugs e problemas de desempenho corrigidos.
 <!--- Archived to version 86.0.622.11: September 9 ---->
 <!--- Archived to version 85.0.564.18: July 28 ---->
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Ver também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 

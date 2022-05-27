@@ -1,21 +1,21 @@
 ---
 title: Planejar a transição do modo de quiosque
-ms.author: aguta
-author: aguta
+ms.author: v-danwesley
+author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 05/26/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Planejar a transição do modo de quiosque
-ms.openlocfilehash: 95c50b39eb6e844ae4309b260087931232276d45
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: c8f2605ef15d8fec8fac32cb94099b4b394e81aa
+ms.sourcegitcommit: 3771634abdfd7d376778ad6ae10a385d5658b7d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978758"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "12551796"
 ---
 # <a name="plan-your-kiosk-mode-transition"></a>Planejar a transição do modo de quiosque
 
