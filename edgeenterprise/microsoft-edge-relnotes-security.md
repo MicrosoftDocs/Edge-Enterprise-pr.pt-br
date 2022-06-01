@@ -3,27 +3,33 @@ title: Notas de versão para atualizações de segurança do Microsoft Edge
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 05/24/2022
+ms.date: 05/31/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão para atualizações de segurança do Microsoft Edge
-ms.openlocfilehash: 00675789351a7a3746f10efb9c85aa06490515e4
-ms.sourcegitcommit: 60bb42a11cd847eaa637b18be5a0f2c140f138a4
+ms.openlocfilehash: b206fad0b80fc4a2668994c07f6d40edeabf9813
+ms.sourcegitcommit: b8ce42bb539f74a93f1e66497e3b6f6f076e0c2a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "12548736"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "12555364"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Notas de versão para atualizações de segurança do Microsoft Edge
 
 Estas notas de versão fornecem informações sobre correções de segurança incluídas nas atualizações para o canal estável do Microsoft Edge.
 
-## <a name="may-24-2022"></a>24 de maio de 2022
+## <a name="may-31-2022"></a>31 de maio de 2022
 
-A Microsoft está ciente das recentes correções de segurança do Chromium. Estamos trabalhando ativamente para lançar uma correção de segurança.
+A Microsoft lançou o mais recente **Canal Estável do Microsoft Edge (Versão 102.0.1245.30)**, que incorpora as Atualizações de Segurança mais recentes do projeto Chromium. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
+
+Esta atualização contém as seguintes Microsoft Edge específicas do sistema:
+
+- [CVE-2022-30128](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-30128)
+- [CVE-2022-30127](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-30127)
+- [CVE-2022-26905](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26905)
 
 ## <a name="may-13-2022"></a>13 de maio de 2022
 

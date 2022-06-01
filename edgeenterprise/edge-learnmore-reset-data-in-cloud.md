@@ -3,19 +3,19 @@ title: Redefinir dados do Microsoft Edge na nuvem
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 05/17/2022
+ms.date: 05/31/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Saiba como redefinir dados do Microsoft Edge na nuvem
-ms.openlocfilehash: 737c8967342464ba0cbffc0e0b1723a9b22d46be
-ms.sourcegitcommit: b79a1185e65af9ce509fbfded8f621cb9b2e976d
+ms.openlocfilehash: 65de08cfbe3638978521740b215f4945618cef05
+ms.sourcegitcommit: b8ce42bb539f74a93f1e66497e3b6f6f076e0c2a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "12519935"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "12555354"
 ---
 # <a name="reset-microsoft-edge-data-in-the-cloud"></a>Redefinir dados do Microsoft Edge na nuvem
 
@@ -23,9 +23,6 @@ Este artigo descreve as etapas para redefinir os dados do Microsoft Edge na nuve
 
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 88 ou posterior, a menos que indicado de outra forma.
-
-> [!NOTE]
-> Se o seu locatário estiver em um ambiente moderado do Government Community Cloud (GCC), o administrador do locatário precisará registrar uma solicitação de suporte com a Microsoft para redefinir seus dados.
 
 ## <a name="overview"></a>Visão geral
 
