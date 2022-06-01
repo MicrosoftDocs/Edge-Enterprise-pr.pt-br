@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: a684dab627fecde93bf83f41cbad137cd04eeed6
-ms.sourcegitcommit: b8ce42bb539f74a93f1e66497e3b6f6f076e0c2a
+ms.openlocfilehash: 4203538f81031a87313631c46c4df816399edaed
+ms.sourcegitcommit: edb5c86593b127dbdb77831e76a2bb90e5537027
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/01/2022
-ms.locfileid: "12555374"
+ms.locfileid: "12567032"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão do Microsoft Edge Stable Channel
 
@@ -189,56 +189,7 @@ Correção de vários bugs e problemas de desempenho para a versão Estável Est
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-990115030-march-3"></a>Versão 99.0.1150.30: 3 de março
-
-As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#march-3-2022).
-
-### <a name="feature-updates"></a>Atualizações de recursos
-
-- **Em breve, número de versão de três dígitos na cadeia de caracteres de agente do usuário.** A partir da versão 100, o Microsoft Edge enviará um número de versão de três dígitos no cabeçalho do agente de usuário, por exemplo, "Edg/100". A partir do Microsoft Edge 97, os proprietários de sites podem testar essa próxima cadeia de caracteres de agente habilitando o sinalizador de experimento **#force-major-version-to-100** em *edge://flags* para garantir que sua lógica de análise do agente de usuário seja robusta e funcione conforme o esperado.
-
-- **Personalize experiências de vários perfis com preferências de perfil de sites.** Os usuários podem personalizar sua experiência de vários perfis com a capacidade de criar uma lista personalizada de sites de alternância automática de perfis no Microsoft Edge.
-
-- **Navegue por documentos PDF usando miniaturas da página.** Agora você poderá navegar pelo documento PDF usando miniaturas que representam as páginas. Essas miniaturas aparecerão no painel no lado esquerdo do leitor de PDF.
-
-- **Configure a lista de domínios nos quais a Interface de usuário (UI) do gerenciador de senhas de Salvar e Preencher será desabilitada.** Use a política [PasswordManagerBlocklist](/deployedge/microsoft-edge-policies#passwordmanagerblocklist) para configurar a lista de domínios (somente esquemas e nomes do host HTTP/HTTPS) onde o Microsoft Edge deve desabilitar o gerenciador de senhas. Isso significa que os fluxos de trabalho Salvar e Preencher serão desabilitados, o que garante que as senhas desses sites não possam ser salvas ou preenchidas automaticamente em formulários da Web.
-
-- **Senha primária personalizada.** O navegador já tem a funcionalidade em que os usuários podem adicionar uma etapa de autenticação antes que as senhas salvas sejam preenchidas automaticamente em formulários da Web. Isso adiciona outra camada de privacidade e ajuda a impedir que usuários não autorizados usem senhas salvas para fazer logon em sites. A senha primária personalizada é uma evolução desse mesmo recurso, onde os usuários agora poderão usar uma cadeia de caracteres personalizada de sua escolha como senha principal. Depois de habilitado, os usuários inserirão essa senha para autenticar a si mesmos e terão suas senhas salvas preenchidas automaticamente em formulários da Web.
-
-### <a name="policy-updates"></a>Atualizações de política
-
-#### <a name="new-policies"></a>Novas Políticas
-
-- [DoNotSilentlyBlockProtocolsFromOrigins](/DeployEdge/microsoft-edge-policies#donotsilentlyblockprotocolsfromorigins) - Definir uma lista de protocolos que não podem ser bloqueados silenciosamente pela proteção anti-inundação
-- [ForceMajorVersionToMinorPositionInUserAgent](/DeployEdge/microsoft-edge-policies#forcemajorversiontominorpositioninuseragent) - Habilitar ou desabilitar o congelamento da cadeia de caracteres de agente de usuário na versão principal 99
-- [HubsSidebarEnabled](/DeployEdge/microsoft-edge-policies#hubssidebarenabled) – Mostrar barra lateral dos hubs
-- [InternetExplorerIntegrationCloudNeutralSitesReporting](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudneutralsitesreporting) - Configurar relatórios de URLs de sites neutros potencialmente mal configurados para o aplicativo Listas de sites do Centro de administração do M365
-- [InternetExplorerIntegrationCloudUserSitesReporting](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudusersitesreporting) - Configurar o relatório de entradas da lista de usuários do modo IE para o aplicativo Listas de sites do Centro de administração do M365
-- [PasswordManagerBlocklist](/DeployEdge/microsoft-edge-policies#passwordmanagerblocklist) - Configurar a lista de domínios dos quais a interface do usuário do gerenciador de senhas (Salvar e Preencher) será desabilitada
-- [RelatedMatchesCloudServiceEnabled](/DeployEdge/microsoft-edge-policies#relatedmatchescloudserviceenabled) - Configurar correspondências relacionadas em Localizar na página
-- [SignInCtaOnNtpEnabled](/DeployEdge/microsoft-edge-policies#signinctaonntpenabled) - Habilitar caixa de diálogo de clique para ação de entrada
-- [UserAgentReduction](/DeployEdge/microsoft-edge-policies#useragentreduction) - Habilitar ou desabilitar a Redução do agente de usuário
-
-## <a name="version-980110862-february-24"></a>Versão 98.0.1108.62: 24 de fevereiro
-
-Corrigidos vários bugs e problemas de desempenho para a versão Estável e Estável Estendida.
-
-## <a name="version-980110856-february-17"></a>Versão 98.0.1108.56: 17 de fevereiro
-
-Corrigidos vários bugs e problemas de desempenho para a versão Estável e Estável Estendida.
-
-## <a name="version-980110855-february-16"></a>Versão 98.0.1108.55: 16 de fevereiro
-
-> [!Important]
-> Essa atualização contém uma correção para [CVE-2022-0609](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-0609) que foi relatada pela equipe do Chromium como tendo uma exploração em execução. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
-
-As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#february-16-2022).
-
-## <a name="version-980110850-february-10"></a>Versão 98.0.1108.50: 10 de fevereiro
-
-As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#february-10-2022).
-
-
+<!--- from Version 99.0.1150.30: March 3 to Version 98.0.1108.50: February 10 --->
 <!--- from Version 98.0.1108.43: February 3 to Version 96.0.1054.72: January 6  -->
 <!---- From Version 97.0.1072.55: January 6 to Version 96.0.1054.34: November 23 ---->
 <!---archive from Version 96.0.1054.29: November 19 to Version 94.0.992.57: October 27 --->
@@ -251,6 +202,6 @@ As atualizações de segurança do canal Estável estão listadas [aqui](/deploy
 <!-- Archive from 86.0.622.38-october-9 to beta 86.0.62.215-september-14  ->
 <!-- Archived to version 84.0.522.40: July 16 -->
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Ver também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
