@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Canal Estável Móvel
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 05/11/2022
+ms.date: 06/01/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Canal Estável Móvel
-ms.openlocfilehash: 4ad0429b9f9cdfa5239917d0886f7ae620fef216
-ms.sourcegitcommit: cb476e310864ecfefd6ff481754b5a271d9a4404
+ms.openlocfilehash: 6edf78dbf69f6e8e42c9fd6532dcfe4c363b355a
+ms.sourcegitcommit: ab4c501ed9c2e446b0d9d938a560558696596b2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "12510609"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "12568602"
 ---
 # <a name="release-notes-for-microsoft-edge-mobile-stable-channel"></a>Notas de versão para o Canal Estável Móvel do Microsoft Edge
 
@@ -27,6 +27,20 @@ Todas as atualizações de segurança do Canal Estável estão listadas em [Nota
 
 > [!NOTE]
 > Para o Canal Estável, as atualizações são implantadas progressivamente por um ou mais dias. Para saber mais, consulte [Distribuições progressivas para atualizações do Microsoft Edge](./microsoft-edge-update-progressive-rollout.md). Pode haver um atraso antes que a nova versão seja preenchida para o App Store (iOS) e o Google Play (Android).
+
+## <a name="version-1020124530-may-31"></a>Versão 102.0.1245.30: 31 de maio
+
+Correção de vários bugs.
+
+### <a name="feature-updates"></a>Atualizações de recursos
+
+- **Suporte para alternar a pilha de rede entre o Chromium e o iOS (somente iOS).** A política [NetworkStackPref](/mem/intune/apps/manage-microsoft-edge#switch-network-stack-between-chromium-and-ios) permite que você escolha a preferência de rede para o Microsoft Edge para iOS.
+
+### <a name="policy-updates"></a>Atualizações de política
+
+#### <a name="new-policies"></a>Novas políticas
+
+- [NetworkStackPref](/mem/intune/apps/manage-microsoft-edge#switch-network-stack-between-chromium-and-ios) - Escolha a preferência de rede para o Microsoft Edge para iOS
 
 ## <a name="version-1010121043-may-9"></a>Versão 101.0.1210.43: 9 de maio
 
