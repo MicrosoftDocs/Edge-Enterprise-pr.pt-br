@@ -1,4 +1,4 @@
-# last revised 05/19/2022
+# last revised 06/03/2022
 - name: Documentação do Microsoft Edge Enterprise
   href: index.yml
 - name: Documentação do Microsoft Edge
@@ -17,6 +17,8 @@
       href: deploy-edge-hands-on-lab.md
     - name: Blogs do Windows - Desenvolvedor do Microsoft Edge
       href: 'https://blogs.windows.com/msedgedev/'
+    - name: Microsoft Edge perguntas frequentes
+      href: microsoft-edge-frequently-asked-questions.md
 - name: Planeje-se para o Microsoft Edge
   items:
     - name: Roteiro do Microsoft Edge Enterprise
@@ -249,5 +251,3 @@
       href: microsoft-edge-video-security-smartscreen.md
     - name: 'Vídeo - Segurança, compatibilidade e capacidade de gerenciamento'
       href: microsoft-edge-video-security-compatibility-manageability.md
-    - name: Microsoft Edge perguntas frequentes
-      href: microsoft-edge-frequently-asked-questions.md

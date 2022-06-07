@@ -3,32 +3,38 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 06/02/2022
+ms.date: 06/06/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: 3addf86c2b78e200f560c27916c89cbc0684e721
-ms.sourcegitcommit: f5477a1b8cec65cef901916ee7f8a51883e3eac5
+ms.openlocfilehash: 601edcda764e8d14e8d9c2cf973e4ee3fdb20354
+ms.sourcegitcommit: ba3b92abf91d52388ba6c2a4feebc4464c7c286e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "12570147"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "12577371"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão do canal do Microsoft Edge beta
 
-Estas notas de versão fornecem informações sobre os novos recursos e atualizações não relacionadas à segurança que estão inclusos no canal Beta do Microsoft Edge. As versões arquivadas dessas notas de versão estão disponíveis nas notas [de versão arquivadas para Microsoft Edge Beta Channel](./microsoft-edge-relnote-archive-beta-channel.md).
+Estas notas de versão fornecem informações sobre os novos recursos e atualizações não relacionadas à segurança que estão inclusos no canal Beta do Microsoft Edge. As versões arquivadas dessas notas de versão estão disponíveis nas notas [de versão arquivadas do Canal Beta do Microsoft Edge](./microsoft-edge-relnote-archive-beta-channel.md).
 
 > [!NOTE]
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-1030126417-june-6"></a>Versão 103.0.1264.17: 6 de junho
+
+Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-1030126413-june-2"></a>Versão 103.0.1264.13: 2 de junho
 
 ## <a name="feature-updates"></a>Atualizações de recursos
 
-- **Capacidade de controlar a alternância automática de perfil.** A [política GuidedSwitchEnabled](/DeployEdge/microsoft-edge-policies#guidedswitchenabled) permite Microsoft Edge solicitar que o usuário alterne para o perfil apropriado quando o Microsoft Edge detecta que um link é um link pessoal ou de trabalho.
+- **Capacidade de controlar a alternância automática de perfil.** A [política GuidedSwitchEnabled](/DeployEdge/microsoft-edge-policies#guidedswitchenabled) permite que o Microsoft Edge solicite que o usuário alterne para o perfil apropriado quando o Microsoft Edge detectar que um link é um link pessoal ou de trabalho.
+
+- **Alternador de Certificado do Cliente.** Esse recurso oferecerá uma maneira para os usuários limparem o certificado lembrado e ressurgir o seletor de certificado ao visitar um site que exige autenticação de certificado http. A alternância pode ser feita sem sair manualmente do Microsoft Edge.
 
 - **Segurança aprimorada para navegação na Web.** Os usuários podem navegar na Web com segurança com confiabilidade e estabilidade aprimoradas graças ao cliente de defesa da Web reescrito (anteriormente conhecido como Microsoft Defender SmartScreen) no Microsoft Edge para Windows.
 
@@ -110,7 +116,7 @@ Vários bugs e problemas de desempenho corrigidos.
 <!--- Archived to version 86.0.622.11: September 9 ---->
 <!--- Archived to version 85.0.564.18: July 28 ---->
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Ver também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 
