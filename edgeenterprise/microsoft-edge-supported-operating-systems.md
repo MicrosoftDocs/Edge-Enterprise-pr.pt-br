@@ -3,19 +3,19 @@ title: Sistemas operacionais com suporte do Microsoft Edge
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 11/08/2021
+ms.date: 06/06/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Sistemas operacionais com suporte do Microsoft Edge
-ms.openlocfilehash: 2cc3f4151a025e01c5af16b11f079aa7431e33c1
-ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.openlocfilehash: 80531c3c68b2fcde2f90086c3475c4aa2221f51e
+ms.sourcegitcommit: 49ebc7292d0ad6958c521f3759e7e8a1c236eb84
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "12297889"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "12577796"
 ---
 # <a name="microsoft-edge-supported-operating-systems"></a>Sistemas operacionais com suporte do Microsoft Edge
 
@@ -39,6 +39,7 @@ O Microsoft Edge segue a Política de Ciclo de Vida Moderna e é compatível com
 - Windows 10 Enterprise 2015 LTSC
 - Windows 10 Enterprise 2016 LTSC
 - Windows 10 Enterprise 2019 LTSC
+- Windows 10 Enterprise 2021 LTSC 
 - Windows 10 Enterprise com várias sessões
 - Windows 10 IoT Enterprise SAC ****
 - Windows 10 IoT Enterprise 2019 LTSC * * * *
