@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 05/17/2022
+ms.date: 06/07/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,16 +11,17 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 5c8a31b1c356abf73b5a2ad093b396af663ee727
-ms.sourcegitcommit: b79a1185e65af9ce509fbfded8f621cb9b2e976d
+ms.openlocfilehash: 97ce3c77a763bc4f974ac19d9795cbb905765957
+ms.sourcegitcommit: 4133b81fde3ee1a63a2e8d342d4138c5bba427df
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "12519964"
+ms.lasthandoff: 06/09/2022
+ms.locfileid: "12581392"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
 A versão mais recente do Microsoft Edge inclui as políticas a seguir. Você pode usar essas políticas para configurar como o Microsoft Edge será executado em sua organização.
+
 Para saber mais sobre o conjunto de políticas, usado para controlar como e quando o Microsoft Edge é atualizado, confira [Referência de política de atualização do Microsoft Edge](microsoft-edge-update-policies.md).
 
 Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microsoft](https://www.microsoft.com/download/details.aspx?id=55319) para obter as configurações de linha de base de configuração de segurança do Microsoft Edge. Para saber mais, confira o blog [Linhas de base de segurança da Microsoft,](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).
@@ -34,8 +35,9 @@ A tabela a seguir lista as novas políticas que estão nesta atualização de ar
 
 | Nome da política | Legenda |
 |:-----|:-----|
-|[LiveCaptionsAllowed](#livecaptionsallowed)|Legendas ao vivo permitidas|
-|[OriginAgentClusterDefaultEnabled](#originagentclusterdefaultenabled)|Agrupamento de agentes com chave de origem habilitada por padrão|
+|[BrowserCodeIntegritySetting](#browsercodeintegritysetting)|Definir a configuração de proteção de integridade de código do processo do navegador|
+|[ImportOnEachLaunch](#importoneachlaunch)|Permitir a importação de dados de outros navegadores em cada inicialização do Microsoft Edge|
+|[PasswordManagerRestrictLengthEnabled](#passwordmanagerrestrictlengthenabled)|Restringir o comprimento das senhas que podem ser salvas no Gerenciador de Senhas|
 
 ## <a name="available-policies"></a>Políticas disponíveis
 
@@ -214,6 +216,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[PasswordGeneratorEnabled](#passwordgeneratorenabled)|Permitir que os usuários obtenham uma sugestão de senha forte sempre que estiverem criando uma conta online|
 |[PasswordManagerBlocklist](#passwordmanagerblocklist)|Configurar a lista de domínios para os quais a interface do usuário do gerenciador de senhas (Salvar e Preencher) será desabilitada|
 |[PasswordManagerEnabled](#passwordmanagerenabled)|Habilitar o salvamento de senhas no gerenciador de senhas|
+|[PasswordManagerRestrictLengthEnabled](#passwordmanagerrestrictlengthenabled)|Restringir o comprimento das senhas que podem ser salvas no Gerenciador de Senhas|
 |[PasswordMonitorAllowed](#passwordmonitorallowed)|Permitir que os usuários sejam alertados caso suas senhas não sejam seguras|
 |[PasswordProtectionChangePasswordURL](#passwordprotectionchangepasswordurl)|Configurar a URL de alteração de senha|
 |[PasswordProtectionLoginURLs](#passwordprotectionloginurls)|Configurar a lista de URLs de logon corporativos onde o serviço de proteção por senha deve capturar os hashes com sal de uma senha|
@@ -351,6 +354,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[BingAdsSuppression](#bingadssuppression)|Bloquear todos os anúncios nos resultados de pesquisa do Bing|
 |[BlockThirdPartyCookies](#blockthirdpartycookies)|Bloquear cookies de terceiros|
 |[BrowserAddProfileEnabled](#browseraddprofileenabled)|Habilitar a criação de perfil no menu de atalho de identidade ou na página de configurações|
+|[BrowserCodeIntegritySetting](#browsercodeintegritysetting)|Definir a configuração de proteção de integridade de código do processo do navegador|
 |[BrowserGuestModeEnabled](#browserguestmodeenabled)|Habilitar o modo convidado|
 |[BrowserLegacyExtensionPointsBlockingEnabled](#browserlegacyextensionpointsblockingenabled)|Ativar bloqueio de ponto de extensão herdado do navegador|
 |[BrowserNetworkTimeQueriesEnabled](#browsernetworktimequeriesenabled)|Permitir consultas a um serviço de Hoário da Rede do Navegador|
@@ -449,6 +453,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[ImportFavorites](#importfavorites)|Permitir a importação de favoritos|
 |[ImportHistory](#importhistory)|Permitir a importação do histórico de navegação|
 |[ImportHomepage](#importhomepage)|Permitir a importação de configurações da página inicial|
+|[ImportOnEachLaunch](#importoneachlaunch)|Permitir a importação de dados de outros navegadores em cada inicialização do Microsoft Edge|
 |[ImportOpenTabs](#importopentabs)|Permitir a importação de guias abertas|
 |[ImportPaymentInfo](#importpaymentinfo)|Permitir a importação de informações de pagamento|
 |[ImportSavedPasswords](#importsavedpasswords)|Permitir a importação de senhas salvas|
@@ -7637,6 +7642,68 @@ Se você desabilitar essa política, os usuários não poderão salvar e adicion
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### <a name="passwordmanagerrestrictlengthenabled"></a>PasswordManagerRestrictLengthEnabled
+
+  #### <a name="restrict-the-length-of-passwords-that-can-be-saved-in-the-password-manager"></a>Restringir o comprimento das senhas que podem ser salvas no Gerenciador de Senhas
+
+  
+  
+  #### <a name="supported-versions"></a>Versões suportadas:
+
+  - No Windows e macOS desde 104 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Faz com que o Microsoft Edge restrinja o comprimento dos nomes de usuário e/ou senhas que podem ser salvos no Gerenciador de Senhas.
+
+Se você habilitar essa política, o Microsoft Edge permitirá que o usuário salve credenciais com nomes de usuário e/ou senhas com mais de 256 caracteres.
+
+Se você desabilitar ou não configurar essa política, o Microsoft Edge permitirá que o usuário salve credenciais com nomes de usuário e/ou senhas arbitrariamente longos.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: PasswordManagerRestrictLengthEnabled
+  - Nome da Política de Grupo: Restringir o comprimento das senhas que podem ser salvas no Gerenciador de Senhas
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Password manager and protection
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: PasswordManagerRestrictLengthEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: PasswordManagerRestrictLengthEnabled
+  - Valor de exemplo:
+``` xml
+<true/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### <a name="passwordmonitorallowed"></a>PasswordMonitorAllowed
 
   #### <a name="allow-users-to-be-alerted-if-their-passwords-are-found-to-be-unsafe"></a>Permitir que os usuários sejam alertados caso suas senhas não sejam seguras
@@ -9164,7 +9231,7 @@ Use as informações anteriores ao configurar essa política.
 
   - Nome exclusivo da Política de Grupo: PrintingBackgroundGraphicsDefault
   - Nome da Política de Grupo: modo de impressão de gráficos em segundo plano padrão
-  - Caminho da Política de Grupo (obrigatório): Modelos administrativos/Microsoft Edge/Impressão
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Printing
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -14443,6 +14510,75 @@ Se você desabilitar essa política, os usuários não poderão adicionar novos 
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### <a name="browsercodeintegritysetting"></a>BrowserCodeIntegritySetting
+
+  #### <a name="configure-browser-process-code-integrity-guard-setting"></a>Definir a configuração de proteção de integridade de código do processo do navegador
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows desde 104 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Essa política controla o uso da proteção de integridade de código no processo do navegador, que só permite que binários assinados pela Microsoft carreguem.
+
+Definir essa política como Habilitado habilitará a proteção de integridade de código no processo do navegador.
+
+Definir essa política como Auditar ou deixar a política desmarcada habilitará o modo de auditoria para proteção de integridade de código no processo do navegador. O modo de auditoria emitirá logs para o visualizador de eventos nos provedores Security-Mitigations e CodeIntegrity quando um binário for carregado após a habilitação do CIG que não é assinado pela Microsoft.
+
+Definir essa política como Desabilitada impedirá que o navegador habilita a proteção de integridade de código no processo do navegador.
+
+Essa política está disponível apenas em instâncias do Windows que ingressaram em um domínio do Microsoft Active Directory ou em instâncias Windows 10 Pro ou Enterprise registradas para gerenciamento de dispositivos.
+
+Mapeamento das opções de política:
+
+* Desabilitado (0) = Não habilitar a proteção de integridade de código no processo do navegador.
+
+* Auditoria (1) = Habilitar o modo de auditoria do Code Integrity Guard no processo do navegador.
+
+* Habilitado (2) = Habilitar a imposição da proteção de integridade de código no processo do navegador.
+
+Use as informações anteriores ao configurar essa política.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Inteiro
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: BrowserCodeIntegritySetting
+  - Nome da Política de Grupo: Definir a configuração de proteção de integridade de código do processo do navegador
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: BrowserCodeIntegritySetting
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### <a name="browserguestmodeenabled"></a>BrowserGuestModeEnabled
 
   #### <a name="enable-guest-mode"></a>Habilitar o modo convidado
@@ -18525,8 +18661,6 @@ Se você definir essa política como 'BalancedMode', o estado de segurança esta
 
 Se você definir essa política como 'StrictMode', o estado de segurança estará no modo estrito.
 
-Observação: atualmente, não há suporte para sites que usam o WASM (WebAssembly) quando EnhanceSecurityMode está habilitado. Se você precisar de acesso a um site que precisa de WASM, considere adicioná-lo à sua lista de exceções, conforme descrito em [Navegar com segurança com o Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
-
 Mapeamento das opções de política:
 
 * StandardMode (0) = Modo Padrão
@@ -18537,7 +18671,7 @@ Mapeamento das opções de política:
 
 Use as informações anteriores ao configurar essa política.
 
-
+Observação: atualmente, não há suporte para sites que usam o WASM (WebAssembly) quando EnhanceSecurityMode está habilitado. Se você precisar de acesso a um site que precisa de WASM, considere adicioná-lo à sua lista de exceções, conforme descrito em [Navegar com segurança com o Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -21117,6 +21251,63 @@ Você pode definir essa política como uma recomendação. Isso significa que o 
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### <a name="importoneachlaunch"></a>ImportOnEachLaunch
+
+  #### <a name="allow-import-of-data-from-other-browsers-on-each-microsoft-edge-launch"></a>Permitir a importação de dados de outros navegadores em cada inicialização do Microsoft Edge
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows desde 104 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Se você habilitar essa política, os usuários verão um prompt para importar seus dados de navegação de outros navegadores em cada inicialização do Microsoft Edge.
+
+Se você desabilitar essa política, os usuários nunca verão um prompt para importar seus dados de navegação de outros navegadores em cada inicialização do Microsoft Edge.
+
+Se a política for deixada desconfigurada, os usuários poderão ativar esse recurso em um prompt do Microsoft Edge ou na página Configurações.
+
+Observação: Existe uma política semelhante chamada [AutoImportAtFirstRun](#autoimportatfirstrun). Essa política deve ser usada se você quiser importar dados com suporte de outros navegadores apenas uma vez durante a configuração do dispositivo.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: ImportOnEachLaunch
+  - Nome da Política de Grupo: Permitir a importação de dados de outros navegadores em cada inicialização do Microsoft Edge
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: ImportOnEachLaunch
+  - Tipo de Valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### <a name="importopentabs"></a>ImportOpenTabs
 
   #### <a name="allow-importing-of-open-tabs"></a>Permitir a importação de guias abertas
@@ -22631,7 +22822,7 @@ Use as informações anteriores ao configurar essa política.
 
   - Nome Exclusivo da Política de Grupo: InternetExplorerIntegrationSiteRedirect
   - Nome da Política de Grupo: Especificar como as navegações "na página" para sites não configurados se comportam quando iniciadas nas páginas do modo Internet Explorer.
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -23102,7 +23293,7 @@ Use as informações anteriores ao configurar essa política.
 
   - Nome exclusivo da política de grupo: IntranetRedirectBehavior
   - Nome da política de grupo: comportamento de redirecionamento da intranet
-  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -27723,7 +27914,7 @@ Se você não configurar esta política:
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Nome do Valor: ShowMicrosoftRewards
-  - Tipo de valor: REG_DWORD
+  - Tipo de Valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -30501,11 +30692,11 @@ Se você definir essa política como falsa ou não definir essa política, os re
 
   #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
 
-  ##### <a name="group-policy-admx-info"></a>Informações da política de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
   - Nome Exclusivo da Política de Grupo: WebComponentsV0Enabled
   - Nome da Política de Grupo: Reabilitar a API de componentes Web V0 até M84 (obsoleta)
-  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
