@@ -3,26 +3,26 @@ title: Gerenciamento de Lista de Sites na Nuvem para modo Internet Explorer (IE)
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 04/21/2022
+ms.date: 06/08/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Saiba como configurar e usar o Gerenciamento de Lista de Sites na Nuvem para o modo IE usando o Centro de administração do Microsoft 365.
-ms.openlocfilehash: f26f891886ec43356e932ea06a647b1f86f66f5c
-ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
+ms.openlocfilehash: e3e1368fd09ba7fa548c223b95d05c52ebf8c324
+ms.sourcegitcommit: 4133b81fde3ee1a63a2e8d342d4138c5bba427df
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "12505814"
+ms.lasthandoff: 06/09/2022
+ms.locfileid: "12581372"
 ---
 # <a name="cloud-site-list-management-for-internet-explorer-ie-mode"></a>Gerenciamento de Lista de Sites na Nuvem para modo Internet Explorer (IE)
 
 Este artigo explica como configurar e usar o Gerenciamento de Lista de Sites na Nuvem para Internet Explorer (IE) por meio do Centro de administração do Microsoft 365.
 
 > [!NOTE]
-> No momento, essa experiência só está disponível para instâncias de nuvem em todo o mundo.
+> No momento, essa experiência do usuário está disponível apenas para instâncias de nuvem GCC e em todo o mundo.
 
 ## <a name="overview"></a>Visão Geral
 
