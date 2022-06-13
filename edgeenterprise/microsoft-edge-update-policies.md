@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação para todas as políticas compatíveis com o Microsoft Edge Update
-ms.openlocfilehash: 524e1598c611c80d1be1ad3871e16c20dd928a72
-ms.sourcegitcommit: 303788d3d5aa516f6f9b5ecbde5ceb1418e3590d
+ms.openlocfilehash: 962d684141f229b230bfed2bc5e34a038a034c30
+ms.sourcegitcommit: 2d3e2a7180e2df82b6345865c201ad64731cbda7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "12508331"
+ms.lasthandoff: 06/12/2022
+ms.locfileid: "12582126"
 ---
 # <a name="microsoft-edge---update-policies"></a>Microsoft Edge - Políticas de atualização
 
@@ -42,7 +42,7 @@ Essas tabelas listam todas as políticas de grupo relacionadas à atualização 
 |[InstallDefault](#installdefault)|Permitir a instalação padrão|
 |[UpdateDefault](#updatedefault)|Atualizar o padrão de substituição de política|
 |[Install](#install)|Permitir a instalação (por canal)|
-|[Atualização](#update)|Atualizar a substituição de política (por canal)|
+|[Update](#update)|Atualizar a substituição de política (por canal)|
 |[Allowsxs](#allowsxs)|Permitir a experiência de navegador Lado a Lado do Microsoft Edge|
 |[CreateDesktopShortcutDefault](#createdesktopshortcutdefault)|Impedir a criação de Atalho da Área de Trabalho com a instalação padrão|
 |[CreateDesktopShortcut](#createdesktopshortcut)|Impedir a criação de Atalho da Área de Trabalho com a instalação (por canal)|
@@ -345,7 +345,7 @@ Observação: Todas as versões disponíveis para reversão podem ser exibidas a
 
 Esta política se aplica ao Microsoft Edge versão 86 ou posterior.
 
-Consulte [Suporte de borda para WIP](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection) para obter mais informações.
+Consulte [Suporte de borda para WIP](./microsoft-edge-security-windows-information-protection.md) para obter mais informações.
 
 Esta política está disponível apenas em instâncias do Windows que fazem parte de um domínio Microsoft® Active Directory®.
 #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows

@@ -62,19 +62,19 @@
     - name: Implantar o Microsoft Edge com atualizações do Windows 10
       href: deploy-edge-with-windows-10-updates.md
     - name: Implantar no Windows com o Gerenciador de Configurações
-      href: /configmgr/apps/deploy-use/deploy-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
+      href: /configmgr/apps/deploy-use/deploy-edge?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json
     - name: Implantar no Windows com o Intune
-      href: /intune/apps/apps-windows-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
+      href: /intune/apps/apps-windows-edge/?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json
     - name: Implantar no macOS com o Jamf
       href: deploy-edge-mac-jamf.md
     - name: Implantar no macOS com o Intune
-      href: /intune/apps/apps-edge-macos/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
+      href: /intune/apps/apps-edge-macos/?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json
 - name: Configurar o Microsoft Edge
   items:
     - name: Configurar para Windows com políticas de grupo
       href: configure-microsoft-edge.md
     - name: Configurar para o Windows com o Intune
-      href: /mem/intune/configuration/administrative-templates-configure-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
+      href: /mem/intune/configuration/administrative-templates-configure-edge/?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json
     - name: Configurar Microsoft Edge usando as configurações de Preferências Iniciais para a primeira execução
       href: Initial-preferences-support-on-Microsoft-Edge-browser.md
     - name: Configuração por site por política

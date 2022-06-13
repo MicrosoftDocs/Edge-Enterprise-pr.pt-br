@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Guia de solução de problemas e perguntas frequentes Microsoft Edge modo Internet Explorer
-ms.openlocfilehash: 076ce09e3ec1c0e392b1bf1f311bbc17a2f62093
-ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
+ms.openlocfilehash: 44b51664592c1b8bdadc78f5d6521b9d53d5b342
+ms.sourcegitcommit: 2d3e2a7180e2df82b6345865c201ad64731cbda7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "12505354"
+ms.lasthandoff: 06/12/2022
+ms.locfileid: "12582116"
 ---
 # <a name="internet-explorer-ie-mode-troubleshooting-and-faq"></a>Solução de problemas e perguntas frequentes do modo internet explorer (IE)
 
@@ -249,7 +249,7 @@ A capacidade de salvar links como páginas da Web requer as seguintes atualizaç
 
 ### <a name="can-i-test-a-site-in-microsoft-edge-while-it-is-configured-to-open-ie-mode-in-the-enterprise-mode-site-list"></a>Posso testar um site no Microsoft Edge enquanto ele está configurado para abrir o modo IE na Lista de Sites Enterprise Modo de Exibição?
 
-Sim, enquanto estiver modernizando seus sites herdados, você pode testar aplicativos configurados no modo IE Microsoft Edge. Para testar esses aplicativos, você pode configurar a [política InternetExplorerModeTabInEdgeModeAllowed](/deployedge/microsoft-edge-policies#internetexplorermodetabinedgemodeallowed) . Se você habilitar essa política, os usuários poderão abrir sites do modo IE no Microsoft Edge selecionando **Configurações** e muito mais (o ícone de reticências...) > mais **sites ToolsOpen****** >  no modo de Borda.
+Sim, enquanto estiver modernizando seus sites herdados, você pode testar aplicativos configurados no modo IE Microsoft Edge. Para testar esses aplicativos, você pode configurar a [política InternetExplorerModeTabInEdgeModeAllowed](/deployedge/microsoft-edge-policies#internetexplorermodetabinedgemodeallowed) . Se você habilitar essa política, os usuários poderão abrir sites do modo IE no Microsoft Edge selecionando **Configurações** e muito mais (o ícone de reticências...) **** >  > mais**ferramentas abrir sites** no modo de borda.
 
 ### <a name="how-can-i-debug-my-legacy-application-while-using-ie-mode-on-microsoft-edge"></a>Como posso depurar meu aplicativo herdado ao usar o modo IE no Microsoft Edge?
 
@@ -262,7 +262,7 @@ Você pode usar o IEChooser para iniciar o Internet Explorer DevTools para depur
 
 ### <a name="my-application-requires-transferring-post-data-between-ie-mode-and-microsoft-edge-is-this-supported"></a>Meu aplicativo requer a transferência de dados POST entre o modo IE e Microsoft Edge. Há suporte para isso?
 
-A partir canal Microsoft Edge Beta versão 96, as navegação que alternam entre o modo Internet Explorer e o Microsoft Edge incluirão dados de formulário e cabeçalhos HTTP extras. No entanto, se os dados de formulário incluirem anexos de arquivo, eles não serão transferidos entre mecanismos. Você pode escolher quais tipos de dados devem ser incluídos em tais navegaçãos usando a política de grupo [InternetExplorerIntegrationComplexNavDataTypes](/deployedge/microsoft-edge-policies#internetexplorerintegrationcomplexnavdatatypes) .
+A partir canal Microsoft Edge Beta versão 96, as navegação que alternam entre o modo Internet Explorer e Microsoft Edge incluirão dados de formulário por padrão. No entanto, se os dados de formulário incluirem anexos de arquivo, eles não serão transferidos entre mecanismos. Você pode escolher quais tipos de dados devem ser incluídos em tais navegaçãos usando a política de grupo [InternetExplorerIntegrationComplexNavDataTypes](/deployedge/microsoft-edge-policies#internetexplorerintegrationcomplexnavdatatypes) .
 
 Além da Microsoft Edge versão 96, você precisa ter as seguintes atualizações Windows instaladas para essa experiência:
 

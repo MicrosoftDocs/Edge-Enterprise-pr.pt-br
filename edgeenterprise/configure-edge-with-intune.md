@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Definir as configurações de política do Microsoft Edge para Windows usando o Microsoft Intune.
-ms.openlocfilehash: 63eb29018bf4ec9c5a32d11b215f422e150383c9
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 45133dd916fbd6f01fdc39b1b20f9aff8d6fed34
+ms.sourcegitcommit: 2d3e2a7180e2df82b6345865c201ad64731cbda7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978598"
+ms.lasthandoff: 06/12/2022
+ms.locfileid: "12582026"
 ---
 # <a name="configure-microsoft-edge-policy-settings-with-microsoft-intune"></a>Definir as configurações de política do Microsoft Edge com o Microsoft Intune
 
@@ -53,8 +53,8 @@ Esse procedimento alavanca os Modelos Administrativos (que você pode estar fami
 3. Em **Dispositivos** | **Visão geral**, selecione **Perfis de configuração** (em Título da política).
 4. Na barra de comandos superior, selecione **Criar perfil**.
 5. Na lista suspensa abaixo **Plataforma**, selecione **Windows 10 e versão posterior**.
-6. Na lista lista lista abaixo Tipo de **Perfil,** selecione **Modelos**.
-7. Em Em **Nome do Modelo,** selecione **Modelos Administrativos** e clique no **botão Criar.** A próxima captura de tela mostra as listas suspensas para selecionar a plataforma e o tipo de perfil.
+6. Na lista suspensa abaixo tipo **de perfil,** selecione **Modelos**.
+7. Em Nome **do Modelo**, selecione **Modelos Administrativos** e clique no **botão** Criar. A próxima captura de tela mostra as listas suspensas para selecionar a plataforma e o tipo de perfil.
 
     ![Selecionar a plataforma e o tipo de perfil](./media/configure-edge-with-intune/create-profile-platform.png)
 
@@ -113,4 +113,4 @@ Para obter mais informações sobre perfis do Windows 10, consulte [Usar modelos
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Gerenciar o acesso via Web usando o Microsoft Edge com o Microsoft Intune](/intune/manage-microsoft-edge)
 - [Usar os modelos di Windows 10 para definir as configurações de política de grupo no Microsoft Intune](/intune/administrative-templates-windows)
-- [Implantar o Microsoft Edge usando o Microsoft Intune](/intune/apps/apps-windows-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json)
+- [Implantar o Microsoft Edge usando o Microsoft Intune](/intune/apps/apps-windows-edge/?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json)

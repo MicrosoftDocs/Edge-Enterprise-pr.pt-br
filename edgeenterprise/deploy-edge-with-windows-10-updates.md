@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Implantar o Microsoft Edge com atualizações do Windows 10
-ms.openlocfilehash: 537aa1fa5c350f5980437aea6024e7c6663044db
-ms.sourcegitcommit: 3771634abdfd7d376778ad6ae10a385d5658b7d3
+ms.openlocfilehash: 8041d791e771be92f888de5c239ac78e2e13269b
+ms.sourcegitcommit: 2d3e2a7180e2df82b6345865c201ad64731cbda7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "12551783"
+ms.lasthandoff: 06/12/2022
+ms.locfileid: "12582006"
 ---
 # <a name="deploy-microsoft-edge-with-windows-10-updates"></a>Implantar o Microsoft Edge com atualizações do Windows 10
 
@@ -38,7 +38,7 @@ O Windows Server Update Services (WSUS) tem atualizações para cada versão do 
 
 ## <a name="for-windows-10-releases-prior-to-rs4-and-windows-7-81-and-earlier"></a>Para versões do Windows 10 anteriores ao RS4 (e Windows 7, 8.1 e anteriores)
 
-As atualizações do Windows para instalar o Microsoft Edge não estão disponíveis para essas versões. Considere outras opções para implantar o Microsoft Edge nesses dispositivos, como [Configuration Manager](/configmgr/apps/deploy-use/deploy-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json) ou [Intune ](/intune/apps/apps-windows-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json).
+As atualizações do Windows para instalar o Microsoft Edge não estão disponíveis para essas versões. Considere outras opções para implantar o Microsoft Edge nesses dispositivos, como [Configuration Manager](/configmgr/apps/deploy-use/deploy-edge?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json) ou [Intune ](/intune/apps/apps-windows-edge/?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json).
 
 ## <a name="see-also"></a>Veja também
 

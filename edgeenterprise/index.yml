@@ -12,12 +12,12 @@ metadata:
   author: dan-wesley
   ms.author: kvice
   ms.date: 05/04/2022
-  ms.openlocfilehash: 0f23894fabb906c76acda41263e3a83f2de6c6d4
-  ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
+  ms.openlocfilehash: 5f739225153536ef3358ea44b4686e77d439d783
+  ms.sourcegitcommit: 2d3e2a7180e2df82b6345865c201ad64731cbda7
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/05/2022
-  ms.locfileid: "12505664"
+  ms.lasthandoff: 06/12/2022
+  ms.locfileid: "12581996"
 landingContent:
 - title: Saiba mais sobre o Microsoft Edge na empresa
   linkLists:
@@ -44,9 +44,9 @@ landingContent:
     - text: Vídeo - Implantar o Microsoft Edge
       url: microsoft-edge-video-deploy.md
     - text: Implantar no Windows
-      url: /configmgr/apps/deploy-use/deploy-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
+      url: /configmgr/apps/deploy-use/deploy-edge?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json
     - text: Implantar no macOS
-      url: /intune/apps/apps-edge-macos/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
+      url: /intune/apps/apps-edge-macos/?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json
 - title: Configurar o Microsoft Edge
   linkLists:
   - linkListType: how-to-guide

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Atualizações do Windows para dar suporte ao Microsoft Edge.
-ms.openlocfilehash: 85f60b3ee09154c702debcfb222567996be9462f
-ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.openlocfilehash: 52687fccfa8a0f98b742ce72b262682fdafb6d52
+ms.sourcegitcommit: 2d3e2a7180e2df82b6345865c201ad64731cbda7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "12298159"
+ms.lasthandoff: 06/12/2022
+ms.locfileid: "12582046"
 ---
 # <a name="windows-updates-to-support-the-next-version-of-microsoft-edge"></a>Atualizações do Windows para oferecer suporte à próxima versão do Microsoft Edge
 
@@ -54,7 +54,7 @@ Juntamente com as alterações anteriores, há alterações que ocorrem independ
   
 ## <a name="older-versions-of-windows"></a>Versões mais antigas do Windows
 
-Para implantar o Microsoft Edge em um dispositivo que executa uma versão Windows mais antiga do Windows 10 RS4, use o [Configuration Manager](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge?bc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Fbreadcrumb%2Ftoc.json&toc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Ftoc.json), [Microsoft Intune](https://docs.microsoft.com/mem/intune/apps/apps-windows-edge?bc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Fbreadcrumb%2Ftoc.json&toc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Ftoc.json) ou atualize para uma versão suportada do Windows 10. O artigo a seguir lista as versões com suporte do Windows 10 e Windows 11.
+Para implantar o Microsoft Edge em um dispositivo que executa uma versão Windows mais antiga do Windows 10 RS4, use o [Configuration Manager](/mem/configmgr/apps/deploy-use/deploy-edge?bc=%2FDeployEdge%2Fbreadcrumb%2Ftoc.json&toc=%2FDeployEdge%2Ftoc.json), [Microsoft Intune](/mem/intune/apps/apps-windows-edge?bc=%2FDeployEdge%2Fbreadcrumb%2Ftoc.json&toc=%2FDeployEdge%2Ftoc.json) ou atualize para uma versão suportada do Windows 10. O artigo a seguir lista as versões com suporte do Windows 10 e Windows 11.
 
 - [Versões com suporte do cliente Windows](/windows/release-health/supported-versions-windows-client)
 

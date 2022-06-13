@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Gerenciar extensões do Microsoft Edge na empresa
-ms.openlocfilehash: 26134a8c352354c0c447518120f3d79332100c80
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: b983d8d3b5eadecc754c8b687390381e20db7668
+ms.sourcegitcommit: 2d3e2a7180e2df82b6345865c201ad64731cbda7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978619"
+ms.lasthandoff: 06/12/2022
+ms.locfileid: "12582036"
 ---
 # <a name="manage-microsoft-edge-extensions-in-the-enterprise"></a>Gerenciar extensões do Microsoft Edge na empresa
 
@@ -71,7 +71,7 @@ Alguns exemplos dessas permissões são: acesso a uma porta USB, armazenamento o
 As opções de extensão pressupõem que você já tem o Microsoft Edge gerenciado para os usuários. Para obter mais informações sobre como configurar modelos administrativos para as políticas do Microsoft Edge, confira:
 
 -   [Definir configurações de política do Microsoft Edge no Windows](/DeployEdge/configure-microsoft-edge)
--   [Configurar para o Windows com o Intune](/mem/intune/configuration/administrative-templates-configure-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json)
+-   [Configurar para o Windows com o Intune](/mem/intune/configuration/administrative-templates-configure-edge?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json)
 -   [Configurar para o Windows com Gerenciamento de Dispositivos Móveis](/deployedge/configure-edge-with-mdm)
 -   [Configurar para macOS usando um. plist](/deployedge/configure-microsoft-edge-on-mac)
 -   [Configurar para macOS com Jamf](/deployedge/configure-microsoft-edge-on-mac-jamf)

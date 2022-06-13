@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Planejar sua implantação do Microsoft Edge
-ms.openlocfilehash: 66d0999bcf80aa5bdf7232cedff36a8bbb3ef264
-ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.openlocfilehash: e49008b9d7ce7af1d44581397c82fc5fb3e248f1
+ms.sourcegitcommit: 2d3e2a7180e2df82b6345865c201ad64731cbda7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "12298139"
+ms.lasthandoff: 06/12/2022
+ms.locfileid: "12582016"
 ---
 # <a name="plan-your-deployment-of-microsoft-edge"></a>Planejar sua implantação do Microsoft Edge
 
@@ -71,7 +71,7 @@ Depois de entender o estado atual, você poderá determinar as metas desejadas p
 - Quais recursos são cruciais para serem configurados como parte da implantação inicial?
 - Qual é o processo para abordar problemas identificados de compatibilidade ou configuração?
 
-Você também deve entender **os pré-requisitos** dos recursos nos quais você está interessado, como:
+Você também deve entender os **pré-requisitos** para recursos nos quais está interessado, como:
 
 - [Windows Defender Application Guard](/windows/security/threat-protection/windows-defender-application-guard/reqs-wd-app-guard)
 - [Modo Internet Explorer](./edge-ie-mode.md)
@@ -164,7 +164,7 @@ Também convém determinar como deseja fazer atualizações depois de implantar 
 - **Permitir que o Microsoft Edge se atualize** (padrão). Se você optar por permitir atualizações automáticas do Microsoft Edge, o Microsoft Edge se atualizará automaticamente atualizado no ritmo determinado pelos canais implantados.
 - **Atualizar o Microsoft Edge em seu próprio ritmo**. Se você preferir ter um controle explícito sobre quando as atualizações são implantadas, poderá desabilitar as atualizações automáticas e implantá-las você mesmo, (consulte a [Referência da política de atualização](./microsoft-edge-update-policies.md). Depois de desabilitar as atualizações automáticas, você pode implantar atualizações para cada canal usando uma das seguintes ferramentas:
 
-- [Intune](/intune/apps/apps-windows-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json)
+- [Intune](/intune/apps/apps-windows-edge?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json)
 - [Gerenciador de Configurações](./deploy-edge-with-configuration-manager.md)
 - a ferramenta de implantação de sua escolha.
 
@@ -202,7 +202,7 @@ Além de seus próprios aplicativos de linha de negócios, muitas organizações
 
 Depois de definir as políticas e concluir o teste de compatibilidade inicial do aplicativo, você estará pronto para implantá-lo no grupo piloto. Implante no grupo piloto usando uma das seguintes ferramentas:
 
-- [Microsoft Intune para Windows](/intune/apps/apps-windows-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json) ou [Microsoft Intune para macOS](/intune/apps/apps-edge-macos?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json)
+- [Microsoft Intune para Windows](/intune/apps/apps-windows-edge?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json) ou [Microsoft Intune para macOS](/intune/apps/apps-edge-macos?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json)
 - [Gerenciador de Configurações](./deploy-edge-with-configuration-manager.md).
 - Outra ferramenta de gerenciamento, baixe e implante o [Arquivo MSI para o Microsoft Edge](https://www.microsoftedgeinsider.com/enterprise).
 
