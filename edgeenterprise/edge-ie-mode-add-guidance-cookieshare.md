@@ -3,24 +3,28 @@ title: Compartilhamento de cookies entre Microsoft Edge e Internet Explorer
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 03/08/2022
+ms.date: 06/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Saiba como compartilhar cookies entre o Microsoft Edge Internet Explorer
-ms.openlocfilehash: 403404c96b91cde62e714324864b87ff2e57f8db
-ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
+ms.openlocfilehash: 2d63374fb1b421d4a46fb702220b4387ff3c349e
+ms.sourcegitcommit: 01011d970e85683f74f889651f5f402da642f34a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "12473412"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "12595269"
 ---
 # <a name="cookie-sharing-between-microsoft-edge-and-internet-explorer"></a>Compartilhamento de cookies entre Microsoft Edge e Internet Explorer
 
 >[!Note]
-> O aplicativo da área de trabalho do Internet Explorer (IE) 11 será desativado e ficará sem suporte em 15 de junho de 2022. Para ver o que está no escopo e fora do escopo quando o IE 11 é desativado, confira as perguntas frequentes sobre desativação de aplicativos da área de trabalho do [Internet Explorer 11](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549). Os mesmos aplicativos e sites do IE 11 que você usa hoje podem ser abertos Microsoft Edge com o modo Internet Explorer. Para saber mais, confira [O futuro do Internet Explorer no Windows 10 está em Microsoft Edge](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> O aplicativo da área de trabalho do Internet Explorer 11 foi desativado e está sem suporte a partir de 15 de junho de [2022](https://aka.ms/IEJune15Blog) para determinadas versões do Windows 10.  
+>
+> - Você ainda pode acessar sites antigos e herdados que exigem o Internet Explorer com o modo Internet Explorer Microsoft Edge. [Saiba como >](https://aka.ms/IEmodewebsite)
+> - O aplicativo da área de trabalho do Internet Explorer 11 será redirecionado progressivamente para o navegador mais rápido e seguro Microsoft Edge e, por fim, será desabilitado por meio Windows Update. [Desabilitar o IE hoje>](/deployedge/edge-ie-disable-ie11)  
+
 
 Este artigo explica como configurar o compartilhamento de cookie de sessão entre um processo Microsoft Edge e um processo do Internet Explorer, ao usar o modo Internet Explorer.
 

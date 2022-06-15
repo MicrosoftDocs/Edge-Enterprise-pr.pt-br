@@ -3,24 +3,28 @@ title: Associar extensões de arquivo com o modo Internet Explorer
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 02/24/2022
+ms.date: 06/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Associar extensões de arquivo com o modo Internet Explorer
-ms.openlocfilehash: 1d25baa224e4fdcdd76bd599ccedb807c9dd7061
-ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
+ms.openlocfilehash: f150d3f3c5ff235f7cb6475909bfc6284ba954de
+ms.sourcegitcommit: 01011d970e85683f74f889651f5f402da642f34a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "12445746"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "12595279"
 ---
 # <a name="associate-file-extensions-with-internet-explorer-mode"></a>Associar extensões de arquivo com o modo Internet Explorer
 
 >[!Note]
-> O aplicativo de área de trabalho do Internet Explorer 11 será retirado e ficará sem suporte em 15 de junho de 2022. Para ver uma lista do que está no escopo, [leia esta perguntas frequentes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. [Saiba mais aqui](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> O aplicativo da área de trabalho do Internet Explorer 11 foi desativado e está sem suporte a partir de 15 de junho de [2022](https://aka.ms/IEJune15Blog) para determinadas versões do Windows 10.  
+>
+> - Você ainda pode acessar sites antigos e herdados que exigem o Internet Explorer com o modo Internet Explorer Microsoft Edge. [Saiba como >](https://aka.ms/IEmodewebsite)
+> - O aplicativo da área de trabalho do Internet Explorer 11 será redirecionado progressivamente para o navegador mais rápido e seguro Microsoft Edge e, por fim, será desabilitado por meio Windows Update. [Desabilitar o IE hoje>](/deployedge/edge-ie-disable-ie11)  
+
 
 Este artigo explica como associar o Microsoft Edge com o modo do Internet Explorer com extensões de arquivo para aplicativos da área de trabalho.
 
@@ -63,7 +67,7 @@ As instruções a seguir mostram uma entrada que associa Microsoft Edge ao modo 
 "MSEdgeIEModeMHT"=hex(0):
 ```
 
-Depois de definir as chaves descritas no exemplo anterior, os usuários verão outra opção no menu **Abrir** com para abrir um arquivo \.mht \<channel\> usando Microsoft Edge com o modo IE.
+Depois de definir as chaves descritas no \<channel\> exemplo anterior, os usuários verão outra opção **no menu Abrir** com para abrir um arquivo \.mht usando Microsoft Edge modo IE.
 
 ## <a name="registry-example"></a>Exemplo de registro
 
@@ -97,7 +101,7 @@ Windows Registry Editor Version 5.00
 
 ## <a name="configuring-file-types-to-open-in-internet-explorer-mode"></a>Configurando tipos de arquivo para abrir no modo Internet Explorer
 
-A partir Microsoft Edge 88, você pode configurar links de tipo de arquivo específicos para abrir no modo Internet Explorer usando a política Mostrar menu de contexto para abrir links no modo [Internet Explorer](./microsoft-edge-policies.md#internetexplorerintegrationreloadiniemodeallowed).
+A partir do Microsoft Edge 88, você pode configurar links de tipo de arquivo específicos para abrir no modo Internet Explorer usando o menu de contexto Mostrar política para abrir links no modo [Internet Explorer](./microsoft-edge-policies.md#internetexplorerintegrationreloadiniemodeallowed).
 
 Você pode definir os tipos de arquivo aos quais essa opção deve ser aplicada, especificando as extensões de arquivo nesta política [Abrir arquivos locais na lista de permissões de extensão de arquivo no modo Internet Explorer](./microsoft-edge-policies.md#internetexplorerintegrationlocalfileextensionallowlist). 
 

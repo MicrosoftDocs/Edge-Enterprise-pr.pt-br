@@ -3,19 +3,19 @@ title: Perguntas frequentes sobre Microsoft Edge na empresa
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 01/11/2022
+ms.date: 06/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Perguntas frequentes sobre Microsoft Edge na empresa
-ms.openlocfilehash: 001834fd2612e292f5789d8720a366d945848dc7
-ms.sourcegitcommit: 2d3e2a7180e2df82b6345865c201ad64731cbda7
+ms.openlocfilehash: 66f6778b3b16f7581c3d846efc3c69e6c7ce18bb
+ms.sourcegitcommit: 01011d970e85683f74f889651f5f402da642f34a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2022
-ms.locfileid: "12581876"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "12595319"
 ---
 # <a name="microsoft-edge-frequently-asked-questions"></a>Microsoft Edge perguntas frequentes
 
@@ -30,7 +30,11 @@ Selecione o ícone de reticências (**...**) no canto superior direito do Micros
 
 ## <a name="what-about-internet-explorer-11"></a>E o Internet Explorer 11?
 
-O aplicativo da área de trabalho do Internet Explorer 11 será desativado e ficará sem suporte em 15 de junho de 2022. Para ver o que está no escopo, consulte [O futuro do Internet Explorer no Windows 10 está em Microsoft Edge](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/). Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. Para obter mais informações, consulte perguntas [frequentes sobre desativação de](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549) aplicativos da área de trabalho do Internet Explorer 11.
+>[!Note]
+> O aplicativo da área de trabalho do Internet Explorer 11 foi desativado e está sem suporte a partir de 15 de junho de [2022](https://aka.ms/IEJune15Blog) para determinadas versões do Windows 10.  
+>
+> - Você ainda pode acessar sites antigos e herdados que exigem o Internet Explorer com o modo Internet Explorer Microsoft Edge. [Saiba como >](https://aka.ms/IEmodewebsite)
+> - O aplicativo da área de trabalho do Internet Explorer 11 será redirecionado progressivamente para o navegador mais rápido e seguro Microsoft Edge e, por fim, será desabilitado por meio Windows Update. [Desabilitar o IE hoje>](/deployedge/edge-ie-disable-ie11)  
 
 ## <a name="does-microsoft-edge-support-activex-controls-or-browser-helper-objects-like-silverlight-or-java"></a>O Microsoft Edge dá suporte ActiveX ou objetos auxiliares do navegador, como Silverlight ou Java?
 

@@ -3,24 +3,27 @@ title: Configurar políticas do modo IE
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
-ms.date: 03/01/2022
+ms.date: 06/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Configurar políticas do modo IE
-ms.openlocfilehash: 7f446d9ffb5a9103f23a1679250d6b57297247d6
-ms.sourcegitcommit: 2d3e2a7180e2df82b6345865c201ad64731cbda7
+ms.openlocfilehash: 6e0d3501d9510c8e8530908bdbef6f3162b1806a
+ms.sourcegitcommit: 01011d970e85683f74f889651f5f402da642f34a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2022
-ms.locfileid: "12581986"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "12595229"
 ---
 # <a name="configure-ie-mode-policies"></a>Configurar políticas do modo IE
 
 >[!Note]
-> O aplicativo da área de trabalho do Internet Explorer 11 será desativado e ficará sem suporte em 15 de junho de 2022. Para obter uma lista do que está no escopo, confira as perguntas frequentes sobre desativação de aplicativos da área de trabalho do [Internet Explorer 11](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549). Para configurar o Microsoft Edge, consulte o [guia Microsoft Edge configuração.](https://go.microsoft.com/fwlink/?linkid=2188234) Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. [Saiba mais aqui](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> O aplicativo da área de trabalho do Internet Explorer 11 foi desativado e está sem suporte a partir de 15 de junho de [2022](https://aka.ms/IEJune15Blog) para determinadas versões do Windows 10.  
+>
+> - Você ainda pode acessar sites antigos e herdados que exigem o Internet Explorer com o modo Internet Explorer Microsoft Edge. [Saiba como >](https://aka.ms/IEmodewebsite)
+> - O aplicativo da área de trabalho do Internet Explorer 11 será redirecionado progressivamente para o navegador mais rápido e seguro Microsoft Edge e, por fim, será desabilitado por meio Windows Update. [Desabilitar o IE hoje>](/deployedge/edge-ie-disable-ie11)  
 
 Este artigo explica como configurar as políticas do modo IE.
 

@@ -3,24 +3,28 @@ title: Desabilitar o Internet Explorer 11
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 04/08/2022
+ms.date: 06/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Aprenda a desabilitar o Internet Explorer 11 e usar o modo Internet Explorer no Microsoft Edge.
-ms.openlocfilehash: 3ddb012b48b0b9d8448cdee910ed28db85a0e044
-ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
+ms.openlocfilehash: 5a9934b8493e5ab273307a364dd70252caec2aff
+ms.sourcegitcommit: 01011d970e85683f74f889651f5f402da642f34a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "12473616"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "12595329"
 ---
 # <a name="disable-internet-explorer-11"></a>Desabilitar o Internet Explorer 11
 
 >[!Note]
-> O aplicativo de área de trabalho Internet Explorer 11 será desativado e ficará sem suporte em 15 de junho de 2022 (para obter uma lista do que está no escopo, [consulte as Perguntas frequentes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. [Saiba mais aqui](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> O aplicativo da área de trabalho do Internet Explorer 11 foi desativado e está sem suporte a partir de 15 de junho de [2022](https://aka.ms/IEJune15Blog) para determinadas versões do Windows 10.  
+>
+> - Você ainda pode acessar sites antigos e herdados que exigem o Internet Explorer com o modo Internet Explorer Microsoft Edge. [Saiba como >](https://aka.ms/IEmodewebsite)
+> - O aplicativo da área de trabalho do Internet Explorer 11 será redirecionado progressivamente para o navegador mais rápido e seguro Microsoft Edge e, por fim, será desabilitado por meio Windows Update. [Desabilitar o IE hoje>](/deployedge/edge-ie-disable-ie11)  
+
 
 Este artigo descreve como desabilitar o Internet Explorer 11 como um navegador autônomo em seu ambiente.
 
@@ -71,7 +75,7 @@ Se a sua Lista de Sites do Modo Enterprise contém aplicativos configurados para
 
 Para desabilitar o Internet Explorer 11 usando a política de grupo, siga estas etapas:
 
-1. Verifique se você tem as atualizações de pré-requisito do sistema operacional. Essa etapa atualizará diretamente os arquivos ADMX no computador (especificamente, inetres.adml e inetres.admx). Observe que, se você quiser atualizar o Repositório Central, precisará copiar os arquivos .adml e .admx de um computador que tenha as atualizações de pré-requisitos ou baixar os modelos mais recentes do Windows 10 Admin [daqui.](https://www.microsoft.com/download/details.aspx?id=103124&msclkid=eae4a72fb1fb11ecb97ca3096b36cc06) Para obter mais informações, confira [Criar e gerenciar o Repositório Central](/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
+1. Verifique se você tem as atualizações de pré-requisito do sistema operacional. Essa etapa atualizará diretamente os arquivos ADMX no computador (especificamente, inetres.adml e inetres.admx). Observe que, se você quiser atualizar o Repositório Central, precisará copiar os arquivos .adml e .admx de um computador que tenha as atualizações de pré-requisitos ou baixar os modelos de Windows 10 Administração mais recentes [daqui.](https://www.microsoft.com/download/details.aspx?id=103124&msclkid=eae4a72fb1fb11ecb97ca3096b36cc06) Para obter mais informações, confira [Criar e gerenciar o Repositório Central](/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
 2. Abra o Editor de Política de Grupo.
 3. Vá para ***Configuração do computador/Modelos administrativos/Componentes do Windows/Internet Explorer***.
 4. Duplo click **Desabilitar o Internet Explorer 11 como um navegador independente**.
@@ -82,7 +86,7 @@ Para desabilitar o Internet Explorer 11 usando a política de grupo, siga estas 
    - **Sempre** se você deseja notificar os usuários sempre que eles forem redirecionados do IE11.
    - **Uma vez por usuário** se desejar notificar os usuários apenas na primeira vez que forem redirecionados.
 
-7.  **SelectOKorApplyto**  ****  salvar essa configuração de política.
+7. Selecione **OK** ou **Aplicar** para salvar esta configuração de política.
 
 ## <a name="see-also"></a>Consulte também
 

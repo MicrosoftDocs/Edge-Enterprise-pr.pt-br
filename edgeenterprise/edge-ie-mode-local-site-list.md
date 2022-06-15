@@ -3,24 +3,27 @@ title: Lista de sites locais para o modo Internet Explorer (IE)
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 03/24/2022
+ms.date: 06/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: Saiba como habilitar listas de sites locais e acesso fácil ao modo IE
-ms.openlocfilehash: 85aa6baa1abaa1a59f4e9cf9f2414f54ccf70cbb
-ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
+description: Saiba como habilitar listas de sites locais e configurar o acesso fácil ao modo IE
+ms.openlocfilehash: 164630ec427c74a6497afae8bdfe10a81608a6e4
+ms.sourcegitcommit: 01011d970e85683f74f889651f5f402da642f34a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "12473635"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "12595259"
 ---
 # <a name="configure-local-site-list-for-internet-explorer-ie-mode"></a>Configurar a lista de sites locais para o modo Internet Explorer (IE)
 
 >[!Note]
-> O aplicativo da área de trabalho do Internet Explorer 11 será desativado e ficará sem suporte em 15 de junho de 2022 (para obter uma lista do que está no escopo, consulte as Perguntas frequentes sobre desativação do aplicativo da área de trabalho do [Internet Explorer 11](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. Para saber mais, confira [O futuro do Internet Explorer no Windows 10 está em Microsoft Edge](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> O aplicativo da área de trabalho do Internet Explorer 11 foi desativado e está sem suporte a partir de 15 de junho de [2022](https://aka.ms/IEJune15Blog) para determinadas versões do Windows 10.  
+>
+> - Você ainda pode acessar sites antigos e herdados que exigem o Internet Explorer com o modo Internet Explorer Microsoft Edge. [Saiba como >](https://aka.ms/IEmodewebsite)
+> - O aplicativo da área de trabalho do Internet Explorer 11 será redirecionado progressivamente para o navegador mais rápido e seguro Microsoft Edge e, por fim, será desabilitado por meio Windows Update. [Desabilitar o IE hoje>](/deployedge/edge-ie-disable-ie11)  
 
 Este artigo explica como configurar o acesso fácil ao modo Internet Explorer (modo IE) e permitir o uso de listas de sites locais em sua organização.
 

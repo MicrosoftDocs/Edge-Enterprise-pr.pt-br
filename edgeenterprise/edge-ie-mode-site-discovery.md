@@ -1,26 +1,29 @@
 ---
 title: Guia Passo a Passo do Enterprise Site Discovery
 ms.author: collw
-author: appcompatguy
-manager: saudm
-ms.date: 04/29/2022
+author: dan-wesley
+manager: collw
+ms.date: 06/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Guia para usar o Enterprise Site Discovery para se preparar para o modo IE.
-ms.openlocfilehash: e2199637d7f52236bd98a2692ac3d008d2e2837c
-ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
+ms.openlocfilehash: e7db4ddeb3bbaaafdac53814249088e2736d9e7d
+ms.sourcegitcommit: 01011d970e85683f74f889651f5f402da642f34a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "12505654"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "12595219"
 ---
-# <a name="enterprise-site-discovery-step-by-step-guide"></a>Guia Passo a Passo do Enterprise Site Discovery
+# <a name="enterprise-site-discovery-step-by-step-guide"></a>Guia passo a passo da Descoberta de Sites de Empresas
 
 >[!Note]
-> O aplicativo de área de trabalho Internet Explorer 11 será desativado e ficará sem suporte em 15 de junho de 2022 (para obter uma lista do que está no escopo, [consulte as Perguntas frequentes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. [Saiba mais aqui](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> O aplicativo da área de trabalho do Internet Explorer 11 foi desativado e está sem suporte a partir de 15 de junho de [2022](https://aka.ms/IEJune15Blog) para determinadas versões do Windows 10.  
+>
+> - Você ainda pode acessar sites antigos e herdados que exigem o Internet Explorer com o modo Internet Explorer Microsoft Edge. [Saiba como >](https://aka.ms/IEmodewebsite)
+> - O aplicativo da área de trabalho do Internet Explorer 11 será redirecionado progressivamente para o navegador mais rápido e seguro Microsoft Edge e, por fim, será desabilitado por meio Windows Update. [Desabilitar o IE hoje>](/deployedge/edge-ie-disable-ie11)  
 
 Este artigo fornece um guia passo a passo para usar o Enterprise Site Discovery com o Microsoft Endpoint Configuration Manager.
 
@@ -98,7 +101,7 @@ Get-WmiObject -Namespace “root/cimv2/IETelemetry” -Class IEURLInfo | Select-
 Com o Enterprise Site Discovery habilitado, você pode configurar quais dados coletará. Considere as leis locais e os requisitos regulatórios, conforme descrito [em Quais dados são coletados?](/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery#what-data-is-collected).
 
 1. Abra o Editor de Política de Grupo.
-2. Selecione **Modelos de** **ConfigurationAdministrativo** >  do Computador  > **Windows** **ComponentsInternet** >  Explorer.
+2. Selecione **Modelos Administrativos** >  de  > **Configuração do** **Computador Windows Componentes do** > **Internet Explorer**.
 3. Clique duas vezes **em Ativar saída WMI de Descoberta de Site**.
 4. Selecione **Habilitado**.
 5. Selecione **OK** ou **Aplicar** para salvar esta configuração de política.
@@ -132,7 +135,7 @@ Você também pode limitar os domínios para os quais coletar dados do site:
 
 Agora que seus dispositivos estão gerando dados, é hora de coletar esses dados no Gerenciador de Configurações.
 
-1. No console Configuration Manager, escolha **AdministrationClient****** >  Configurações  > **Default Client Configurações**.
+1. No console Configuration Manager, escolha **Cliente** >  de**Administração Configurações** >  **Cliente Padrão Configurações**.
 2. No grupo **Propriedades** da guia **Página Inicial,** escolha **Propriedades**.
 3. Na caixa **de diálogo Configurações** Cliente Padrão, escolha **Inventário de Hardware**.
 4. Na lista **de Configurações** dispositivo, escolha **Definir Classes**.

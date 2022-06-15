@@ -3,24 +3,28 @@ title: 'Gerenciador de Lista de Site Empresarial no Microsoft Edge '
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 04/20/2022
+ms.date: 06/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Saiba como habilitar e usar Enterprise Site List Manager no Microsoft Edge
-ms.openlocfilehash: a17225f3243e57e8f45b04991b858c592f9f75d6
-ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
+ms.openlocfilehash: 260d310d2303c49ffcf5ae02115a8ecce4dc9286
+ms.sourcegitcommit: 01011d970e85683f74f889651f5f402da642f34a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "12505642"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "12595199"
 ---
 # <a name="enterprise-site-list-manager-in-microsoft-edge"></a>Gerenciador de Lista de Sites de Empresa no Microsoft Edge
 
 >[!Note]
-> O aplicativo da área de trabalho do Internet Explorer 11 será desativado e ficará sem suporte em 15 de junho de 2022 (para obter uma lista do que está no escopo, consulte as Perguntas frequentes sobre desativação do aplicativo da área de trabalho do [Internet Explorer 11](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. [Saiba mais aqui](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> O aplicativo da área de trabalho do Internet Explorer 11 foi desativado e está sem suporte a partir de 15 de junho de [2022](https://aka.ms/IEJune15Blog) para determinadas versões do Windows 10.  
+>
+> - Você ainda pode acessar sites antigos e herdados que exigem o Internet Explorer com o modo Internet Explorer Microsoft Edge. [Saiba como >](https://aka.ms/IEmodewebsite)
+> - O aplicativo da área de trabalho do Internet Explorer 11 será redirecionado progressivamente para o navegador mais rápido e seguro Microsoft Edge e, por fim, será desabilitado por meio Windows Update. [Desabilitar o IE hoje>](/deployedge/edge-ie-disable-ie11)  
+
 
 Este artigo explica como habilitar o acesso e usar o Gerenciador de Lista de Sites do Enterprise no Microsoft Edge para criar, editar e exportar sua Lista de Sites do Modo Enterprise para o modo Internet Explorer (IE).
 
@@ -50,7 +54,7 @@ Use as etapas a seguir para adicionar sites individuais à sua lista de sites.
 > [!NOTE]
 > Você só pode adicionar URLs específicos, não zonas da Internet ou Intranet.
 
-1. No gerenciador Enterprise lista de sites,  **selecioneAdicionar um site**.
+1. No gerenciador Enterprise lista de sites, selecione **Adicionar um site**.
 2. Insira a URL do site que você deseja adicionar, por exemplo: \<domain\>.com ou.com \<domain\>/\<path\> na caixa url.
 3. Selecione uma das seguintes opções na lista **Abrir em** :
 
@@ -73,7 +77,7 @@ Use as etapas a seguir para adicionar sites individuais à sua lista de sites.
 
 5. A caixa de seleção**Permitir redirecionamento** se aplica ao tratamento de redirecionamentos do lado do servidor. Se você marcar esta caixa, os redirecionamentos do lado do servidor serão abertos no navegador especificado pela tag de abertura. Para obter mais informações, consulte `allow-redirect` os [atributos de esquema atualizados](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance#updated-schema-attributes).
 6. Digite qualquer comentário sobre o site na caixa **Comentário**. Os administradores só podem ver os comentários enquanto estão nesta ferramenta e esses comentários são retidos no xml da lista de sites.
-7.  **SelectAdd** para adicionar o site à sua lista de sites.
+7. Selecione **Adicionar** para adicionar o site à sua lista de sites.
 
 ### <a name="add-shared-cookies-to-your-site-list"></a>Adicionar cookies compartilhados à sua lista de sites
 
@@ -118,7 +122,7 @@ Se você quiser substituir todo o conteúdo no editor, selecione as reticências
 
    Os formatos com suporte para Importação são .xml, .emie ou .txt que contêm o esquema v.2 para Enterprise Lista de Sites do Modo de Exibição. Confira a [orientação do esquema v.2 do modo Empresarial](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
 
-3.  **SelectLoadto**  adicionar os sites ou cookies compartilhados do arquivo ao editor.
+3. Selecione **Carregar** para adicionar os sites ou cookies compartilhados do arquivo ao editor.
 
 Você pode salvar o arquivo localmente ou em um compartilhamento de rede. No entanto, você deve certificar-se de implantá-lo no local especificado em sua chave de registro. Para obter mais informações, confira  [Ativar o modo Internet Explorer e usar uma lista de sites](./edge-ie-mode-policies.md).
 
