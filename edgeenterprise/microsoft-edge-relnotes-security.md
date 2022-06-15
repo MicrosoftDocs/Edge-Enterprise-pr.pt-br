@@ -3,23 +3,27 @@ title: Notas de versão para atualizações de segurança do Microsoft Edge
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 05/31/2022
+ms.date: 06/13/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão para atualizações de segurança do Microsoft Edge
-ms.openlocfilehash: 08f6003b533839c09edef9102181b2aaa1d766a6
-ms.sourcegitcommit: 2d3e2a7180e2df82b6345865c201ad64731cbda7
+ms.openlocfilehash: eef69e2f2710c38f54133c160b39e35033f7163d
+ms.sourcegitcommit: 18f4787a0016070a9e9292f50da63f58f44e7d80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2022
-ms.locfileid: "12581826"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "12593680"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Notas de versão para atualizações de segurança do Microsoft Edge
 
 Estas notas de versão fornecem informações sobre correções de segurança incluídas nas atualizações para o canal estável do Microsoft Edge.
+
+## <a name="june-13-2022"></a>13 de junho de 2022
+
+A Microsoft lançou o mais recente canal estável do **Microsoft Edge (versão 102.0.1245.41)**, que incorpora as atualizações de segurança mais recentes do projeto Chromium. Para obter mais informações, consulte o [Guia de atualização de segurança](https://msrc.microsoft.com/update-guide).
 
 ## <a name="june-9-2022"></a>9 de junho de 2022
 
