@@ -3,19 +3,19 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 06/10/2022
+ms.date: 06/14/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: 7f3c19f3fc96c371f87e5c9dc0009da52fcf663c
-ms.sourcegitcommit: 2d3e2a7180e2df82b6345865c201ad64731cbda7
+ms.openlocfilehash: 1a503031e17b787de897fac3d7e464ff0a5fa7d0
+ms.sourcegitcommit: cc1b68fb497806025831de8c6345e148dc35e902
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2022
-ms.locfileid: "12581866"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "12594986"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão do canal do Microsoft Edge beta
 
@@ -40,7 +40,7 @@ Vários bugs e problemas de desempenho corrigidos.
 
 - **Alternador de Certificado do Cliente.** Esse recurso oferecerá uma maneira para os usuários limparem o certificado lembrado e ressurgir o seletor de certificado ao visitar um site que exige autenticação de certificado http. A alternância pode ser feita sem sair manualmente Microsoft Edge.
 
-- **Segurança aprimorada para navegação na Web.** Os usuários podem navegar na Web com segurança com confiabilidade e estabilidade aprimoradas graças ao cliente de defesa da Web reescrito (anteriormente conhecido como Microsoft Defender SmartScreen) no Microsoft Edge para Windows.
+- **Defesa da Web mais confiável.** Navegue pela Web com proteção mais confiável graças à biblioteca [Microsoft Defender SmartScreen reescrita](/deployedge/microsoft-edge-security-smartscreen) para Microsoft Edge no Windows. A [política NewSmartScreenLibraryEnabled](microsoft-edge-policies.md#newsmartscreenlibraryenabled) permitirá que os clientes empresariais continuem usando a versão herdada da biblioteca até que ela seja preterida Microsoft Edge versão 105.
 
 ### <a name="policy-updates"></a>Atualizações de política
 
