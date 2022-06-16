@@ -3,19 +3,19 @@ title: Gerenciamento de Lista de Sites na Nuvem para modo Internet Explorer (IE)
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 06/08/2022
+ms.date: 06/13/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Saiba como configurar e usar o Gerenciamento de Lista de Sites na Nuvem para o modo IE usando o Centro de administração do Microsoft 365.
-ms.openlocfilehash: e3e1368fd09ba7fa548c223b95d05c52ebf8c324
-ms.sourcegitcommit: 4133b81fde3ee1a63a2e8d342d4138c5bba427df
+ms.openlocfilehash: 5932d24d39de4dee80a8fe1181d449f571c0bf69
+ms.sourcegitcommit: 01011d970e85683f74f889651f5f402da642f34a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2022
-ms.locfileid: "12581372"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "12595249"
 ---
 # <a name="cloud-site-list-management-for-internet-explorer-ie-mode"></a>Gerenciamento de Lista de Sites na Nuvem para modo Internet Explorer (IE)
 
@@ -119,7 +119,10 @@ Use as etapas a seguir para associar a lista de sites hospedados na nuvem ao Mic
 
 ## <a name="manage-site-list-contents-on-the-microsoft-365-admin-center"></a>Gerenciar o conteúdo da lista de sites no Centro de administração do Microsoft 365
 
-Você pode adicionar, editar, excluir o conteúdo da lista de sites e exibir o histórico de comentários para acompanhar as alterações em entradas individuais para sites e cookies compartilhados.
+Você pode adicionar, editar, excluir o conteúdo da lista de sites e exibir o histórico de comentários para acompanhar as alterações nas entradas individuais dos sites e cookies de sessão compartilhados.
+
+> [!NOTE]
+> Cookies persistentes que foram criados com um `Expires-attribute`, não podem ser compartilhados entre o Microsoft Edge e o Internet Explorer.
 
 Se você tiver cenários híbridos que exigem que sua lista de sites seja hospedada localmente, poderá exportar sua lista de sites do Centro de administração do Microsoft 365. Use as etapas a seguir como um guia para gerenciar o conteúdo da lista de sites.
 
@@ -163,9 +166,9 @@ Use as etapas a seguir para copiar uma entrada de site de uma lista de sites par
    > [!NOTE]
    > A coluna **Status** para quaisquer entradas copiadas para uma lista de sites publicados mostrará **Adição pendente**. Se você navegar até a lista de listas de sites selecionando **listas de sites do Microsoft Edge** na parte superior da tela, verá que a coluna **Status de publicação** mostra **Alterações de publicação pendentes** para indicar que as atualizações mais recentes da lista de sites precisam ser publicadas para que os usuários as recebam. Você pode usar o botão **Filtrar** (ao lado da caixa Pesquisar) para selecionar **Adição pendente** para ver todas as entradas adicionadas que estão pendentes de publicação.
 
-### <a name="add-a-shared-cookie-to-the-site-list"></a>Adicionar um cookie compartilhado à lista sites
+### <a name="add-a-shared-session-cookie-to-the-site-list"></a>Adicionar um cookie compartilhado à lista de sites
 
-Você pode adicionar cookies compartilhados individuais a qualquer lista de sites. Depois de adicionar cookies compartilhados à lista, você pode usar os filtros predefinidos usando o botão **Filtrar** (ao lado da caixa Pesquisar) para visualizar as atualizações da lista.
+Você pode adicionar cookies de sessão compartilhados individuais a qualquer lista de sites. Depois de adicionar cookies compartilhados à lista, você pode usar os filtros predefinidos usando o botão **Filtrar** (ao lado da caixa Pesquisar) para visualizar as atualizações da lista.
 
 1. Vá para a lista de sites onde deseja adicionar um cookie compartilhado.
 2. Selecione **Adicionar um cookie compartilhado**.
@@ -174,9 +177,9 @@ Você pode adicionar cookies compartilhados individuais a qualquer lista de site
 > [!NOTE]
 > A coluna **Status** para quaisquer entradas adicionadas a uma lista de sites publicados mostrará **Adição pendente**. Se você navegar até a lista de listas de sites selecionando **Listas de sites do Microsoft Edge** na parte superior da tela, verá que a coluna **Status da publicação** mostra as **Alterações pendentes de publicação** para indicar que as atualizações mais recentes da lista de sites precisam ser publicadas para que os usuários as recebam. Você pode usar o botão **Filtrar** (ao lado da caixa Pesquisar) para selecionar **Adição pendente** para ver todas as entradas adicionadas que estão pendentes de publicação.
 
-### <a name="delete-a-shared-cookie-from-the-site-list"></a>Excluir um cookie compartilhado da lista sites
+### <a name="delete-a-shared-session-cookie-from-the-site-list"></a>Excluir um cookie compartilhado da lista de sites
 
-Use as etapas a seguir para excluir uma entrada de cookie compartilhada.
+Use as etapas a seguir para excluir uma entrada do cookie de sessão compartilhado.
 
 1. Escolha a entrada que você deseja excluir da lista de sites. Selecione **Excluir cookie compartilhado**.
 2. Selecione **Excluir** no pop-up da caixa de diálogo.
@@ -185,15 +188,15 @@ Use as etapas a seguir para excluir uma entrada de cookie compartilhada.
 > [!NOTE]
 > A coluna **Status** para quaisquer entradas excluídas de uma lista de sites publicados mostrará **Exclusão pendente**. Se você navegar até a lista de listas de sites selecionando **Listas de sites do Microsoft Edge** na parte superior da tela, verá que a coluna **Status da publicação** mostra as **Alterações pendentes de publicação** para indicar que as atualizações mais recentes da lista de sites precisam ser publicadas para que os usuários as recebam. Você pode usar o botão **Filtrar** (ao lado da caixa Pesquisar) para selecionar **Exclusão pendente** para ver todas as entradas excluídas que estão pendentes de publicação.
 
-### <a name="view-the-change-history-for-shared-cookies"></a>Visualizar o histórico de alterações dos cookies compartilhados
+### <a name="view-the-change-history-for-shared-session-cookies"></a>Visualizar o histórico de alterações dos cookies de sessão compartilhados
 
-Para exibir o histórico de alterações dos cookies compartilhados:
+Para exibir o histórico de alterações dos cookies de sessão compartilhados:
 
 - Selecione a entrada para a qual você deseja ver o histórico de alterações, e depois selecione **Exibir histórico**.
 
-### <a name="copy-a-shared-cookie-to-other-site-lists"></a>Copiar um cookie compartilhado para outras listas de sites
+### <a name="copy-a-shared-session-cookie-to-other-site-lists"></a>Copiar um cookie de sessão compartilhado para outras listas de sites
 
-Siga as etapas a seguir para copiar uma entrada de cookie compartilhada de uma lista de sites para uma ou mais listas de sites.
+Siga as etapas a seguir para copiar uma entrada do cookie de sessão compartilhado de uma lista de sites para uma ou mais listas de sites.
 
 1. Escolha uma entrada que você gostaria de copiar para outra lista. Selecione **Copiar para mais listas**.
 2. Selecione uma ou mais listas de sites para as quais você deseja copiar na lista suspensa.
