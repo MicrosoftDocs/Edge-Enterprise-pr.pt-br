@@ -3,24 +3,28 @@ title: O que é o modo Internet Explorer?
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 03/01/2022
+ms.date: 06/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Saiba como o modo Internet Explorer no Microsoft Edge fornece acesso a sites que precisam do Internet Explorer 11 e acesso a sites modernos.
-ms.openlocfilehash: e106e40e4dc47a23fe3979e560a1bb8abdc6598c
-ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
+ms.openlocfilehash: c501ae566115a084f3c6df8e1676d6762468e034
+ms.sourcegitcommit: 01011d970e85683f74f889651f5f402da642f34a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "12445465"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "12595189"
 ---
 # <a name="what-is-internet-explorer-ie-mode"></a>O que é o modo Internet Explorer (IE)?
 
 >[!Note]
-> O aplicativo de área de trabalho Internet Explorer 11 será desativado e ficará sem suporte em 15 de junho de 2022 (para obter uma lista do que está no escopo, [consulte as Perguntas frequentes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. [Saiba mais aqui](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> O aplicativo da área de trabalho do Internet Explorer 11 foi [desativado e está sem suporte a partir de 15 de junho de 2022](https://aka.ms/IEJune15Blog) para determinadas versões do Windows 10.  
+>
+> - Você ainda pode acessar sites antigos e herdados que exigem o Internet Explorer com o modo Internet Explorer no Microsoft Edge. [Saiba como >](https://aka.ms/IEmodewebsite)
+> - O aplicativo da área de trabalho do Internet Explorer 11 será redirecionado progressivamente para o navegador mais rápido e seguro Microsoft Edge e, por fim, será desabilitado por meio do Windows Update. [Desabilitar o IE hoje>](/deployedge/edge-ie-disable-ie11)  
+
 
 Criamos o modo Internet Explorer (IE) no Microsoft Edge para organizações que ainda precisam do Internet Explorer 11 para compatibilidade com sites existentes, mas também precisam de um navegador moderno. Esse recurso torna mais fácil para as organizações usarem um navegador, para web/aplicativos legados ou para web/app moderno. Este artigo fornece uma introdução ao uso do Microsoft Edge com o modo IE.
 

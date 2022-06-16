@@ -10,20 +10,20 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Guia de solução de problemas e perguntas frequentes Microsoft Edge modo Internet Explorer
-ms.openlocfilehash: 3d39521381937bd7b445bceebf773d3ad883a2b6
-ms.sourcegitcommit: 01011d970e85683f74f889651f5f402da642f34a
+ms.openlocfilehash: 7b4e9f6af894111a47429bc321d785341c748170
+ms.sourcegitcommit: 645b392c4c124da136114066a3987ed752753974
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/15/2022
-ms.locfileid: "12595239"
+ms.locfileid: "12595396"
 ---
 # <a name="internet-explorer-ie-mode-troubleshooting-and-faq"></a>Solução de problemas e perguntas frequentes do modo internet explorer (IE)
 
 >[!Note]
-> O aplicativo da área de trabalho do Internet Explorer 11 foi desativado e está sem suporte a partir de 15 de junho de [2022](https://aka.ms/IEJune15Blog) para determinadas versões do Windows 10.  
+> O aplicativo da área de trabalho do Internet Explorer 11 foi [desativado e está sem suporte a partir de 15 de junho de 2022](https://aka.ms/IEJune15Blog) para determinadas versões do Windows 10.  
 >
-> - Você ainda pode acessar sites antigos e herdados que exigem o Internet Explorer com o modo Internet Explorer Microsoft Edge. [Saiba como >](https://aka.ms/IEmodewebsite)
-> - O aplicativo da área de trabalho do Internet Explorer 11 será redirecionado progressivamente para o navegador mais rápido e seguro Microsoft Edge e, por fim, será desabilitado por meio Windows Update. [Desabilitar o IE hoje>](/deployedge/edge-ie-disable-ie11)  
+> - Você ainda pode acessar sites antigos e herdados que exigem o Internet Explorer com o modo Internet Explorer no Microsoft Edge. [Saiba como >](https://aka.ms/IEmodewebsite)
+> - O aplicativo da área de trabalho do Internet Explorer 11 será redirecionado progressivamente para o navegador mais rápido e seguro Microsoft Edge e, por fim, será desabilitado por meio do Windows Update. [Desabilitar o IE hoje>](/deployedge/edge-ie-disable-ie11)  
 
 Este artigo fornece dicas de solução de problemas e perguntas frequentes Microsoft Edge versão 77 ou posterior.
 
@@ -39,6 +39,10 @@ Também recomendamos nosso guia Microsoft Edge + modo Internet Explorer [Introdu
 ## <a name="are-there-any-tools-that-i-can-use-to-guide-me-through-ie-mode-troubleshooting"></a>Há alguma ferramenta que eu possa usar para me orientar na solução de problemas do modo IE?
 
 Sim, o [Microsoft Virtual Agent fornece](https://go.microsoft.com/fwlink/?linkid=2194137) um passo a passo guiado baseado em cenário para solucionar problemas do modo IE.
+
+Também há o próximo vídeo, que fornece dicas e truques de solução de problemas do modo IE.
+
+[![Dicas e truques de solução de problemas do modo IE](media/edge-ie-mode-faq/0.png)](https://www.youtube.com/watch?v=nf8K96KWhjM "|::ref1::|").
 
 ## <a name="common-ie-mode-issues"></a>Problemas comuns do modo IE
 
@@ -204,7 +208,7 @@ Sim, o aplicativo da área de trabalho do Internet Explorer 11 será desativado 
 
 ### <a name="can-i-use-view-in-file-explorer-in-sharepoint-online-on-microsoft-edge"></a>Posso usar "Exibir no Explorador de Arquivos" no SharePoint Online no Microsoft Edge?
 
-A partir Microsoft Edge versão 95, você pode habilitar a exibição **** Explorador de Arquivos funcionalidade para bibliotecas de documentos modernas do SharePoint Online. Para que essa experiência fique visível e funcione para seus usuários, você precisará habilitar o recurso Microsoft Edge "Configurar a exibição no recurso Explorador de Arquivos para páginas do [SharePoint no Microsoft Edge"](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) e atualizar sua configuração de locatário do SharePoint Online. Saiba mais: [Exibir SharePoint arquivos com Explorador de Arquivos no Microsoft Edge – SharePoint no Microsoft 365 | Microsoft Docs](/SharePoint/sharepoint-view-in-edge).
+A partir Microsoft Edge versão 95, você pode habilitar a exibição **** Explorador de Arquivos funcionalidade para bibliotecas de documentos modernas do SharePoint Online. Para que essa experiência fique visível e funcione para seus usuários, você precisará habilitar a política Microsoft Edge "Configurar o recurso De exibição no Explorador de Arquivos para páginas do [SharePoint no Microsoft Edge"](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) e atualizar sua configuração de locatário do SharePoint Online. Saiba mais: [Exibir SharePoint arquivos com Explorador de Arquivos no Microsoft Edge – SharePoint no Microsoft 365 | Microsoft Docs](/SharePoint/sharepoint-view-in-edge).
 
 No entanto, em vez de usar a opção Exibir no Explorador de Arquivos, a abordagem recomendada para gerenciar arquivos e pastas fora do SharePoint é sincronizar arquivos SharePoint e [Teams](https://support.microsoft.com/office/sync-sharepoint-and-teams-files-with-your-computer-6de9ede8-5b6e-4503-80b2-6190f3354a88?ui=en-us&rs=en-us&ad=us) com seu computador ou mover ou copiar arquivos no [SharePoint](https://support.microsoft.com/office/move-or-copy-files-in-sharepoint-00e2f483-4df3-46be-a861-1f5f0c1a87bc?ui=en-us&rs=en-us&ad=us).
 
@@ -314,7 +318,12 @@ Microsoft Edge precisa baixar a lista de sites do modo IE antes de aplicar as co
 
 ### <a name="why-cant-i-open-files-or-pages-that-are-found-by-using-file-urls-in-microsoft-edge"></a>Por que não consigo abrir arquivos ou páginas que são encontrados usando file:// URLs no Microsoft Edge?
 
-Devido a uma restrição Chromium segurança, o modo IE precisa ser usado. Você pode usar Microsoft Edge do modo IE para carregar páginas da Web hospedadas no protocolo **file://** dentro de uma zona da intranet. Você pode usar a política de [grupo IntranetFileLinksEnabled](/deployedge/microsoft-edge-policies#intranetfilelinksenabled) para habilitar essa funcionalidade.
+Por motivos de segurança, Microsoft Edge permite o acesso file:// URLs de páginas atendidas por HTTP ou HTTPS.
+
+Se você quiser essa funcionalidade, as duas soluções alternativas a seguir estarão disponíveis:
+
+- Você pode usar a política de grupo [IntranetFileLinksEnabled](microsoft-edge-policies.md#intranetfilelinksenabled) para permitir links de páginas HTTPS para abrir compartilhamentos de arquivos de Zona da Intranet no Windows Explorer.
+- As páginas carregadas da Zona da Intranet Microsoft Edge o recurso de modo IE do Microsoft Edge têm permissão para navegar diretamente para URLs usando o **file:// protocolo.**
 
 ## <a name="see-also"></a>Consulte também
   
