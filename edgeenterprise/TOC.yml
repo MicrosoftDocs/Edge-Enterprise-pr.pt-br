@@ -1,4 +1,4 @@
-# last revised 06/03/2022
+# last revised 06/15/2022
 - name: Documentação do Microsoft Edge Enterprise
   href: index.yml
 - name: Documentação do Microsoft Edge
@@ -203,6 +203,8 @@
       items:
         - name: Compatibilidade com versões anteriores para a página da Nova guia de Empresa
           href: edge-learnmore-ntp-backward-compatibility.md
+        - name: Bloquear o acesso a contas de consumidor
+          href: edge-learnmore-block-access-consumer-accounts.md
         - name: ClickOnce e DirectInvoke
           href: edge-learn-more-co-di.md
         - name: Opções de linha de comando para definir as configurações de proxy
