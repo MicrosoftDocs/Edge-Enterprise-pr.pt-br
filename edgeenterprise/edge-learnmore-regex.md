@@ -3,31 +3,37 @@ title: Sintaxe da expressão regular 2
 ms.author: comanea
 author: dan-wesley
 manager: seanlyn
-ms.date: 01/11/2022
+ms.date: 06/14/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Sintaxe da expressão regular 2
-ms.openlocfilehash: b74a3cbedb12992d4a6a2e92cd7885d8d41dd86a
-ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
+ms.openlocfilehash: 3a7202c9eb06316c988bd8e6e7a62adf69ff53b2
+ms.sourcegitcommit: efa3b88bcc90da596c79e57074cf5e15968814ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "12505794"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "12598002"
 ---
 # <a name="regular-expression-2-re2h-syntax"></a>Sintaxe da Expressão Regular 2 (re2.h)
 
-As expressões regulares são uma notação para descrever os conjuntos de cadeias de caracteres. Quando uma cadeia de caracteres está no conjunto descrito por uma expressão regular, costumamos dizer que a expressão regular corresponde à cadeia.
+As expressões regulares são uma notação para descrever os conjuntos de cadeias de caracteres. Quando uma cadeia de caracteres está no conjunto descrito por uma expressão regular, dizemos que a expressão regular *corresponde à* cadeia de caracteres.
 
-A expressão regular mais simples é um único caractere literal. Exceto pelos metacaracteres, como `\*+?()|`, os caracteres correspondem a si próprios. Para corresponder a um metacharacter, escape-o com uma barra invertida: `\+` corresponde a um caractere de mais literal.
+A expressão regular mais simples é um único caractere literal. Exceto pelos metacaracteres, como `*+?()|`, os caracteres correspondem a si próprios. Para corresponder a um metacharacter, escape-o com uma barra invertida. Por exemplo, corresponde `\+` ao caractere de adição literal.
 
 Duas expressões regulares podem ser alteradas ou concatenadas para formar uma nova expressão regular se: *e<sub>1</sub>* corresponde a _s_ e *e<sub>2</sub>* corresponde a _t_, nesse caso, *e<sub>1</sub>* | *e<sub>2</sub>* correspondem a _s_ ou _t_, e *e<sub>1</sub>* *e<sub>2</sub>*  correspondem a _st_.
 
-Os metacaracteres _`\`_, _+_ e _?_ são operadores de repetição: *e<sub>1</sub>* _`\`_ corresponde a uma cadeia de caracteres zero ou mais (possivelmente diferentes), cada uma das quais correspondem a *e<sub>1</sub>*; *e<sub>1</sub>* _+_ corresponde a um ou mais; *e<sub>1</sub>* _?_ iguala zero ou um.
+Os metacharacters `*`, `+``?` e são operadores de repetição: *e<sub>1</sub>* `*` corresponde a uma sequência de zero ou mais cadeias de caracteres (possivelmente diferentes), cada uma das quais corresponde *a e<sub>1</sub>*; *e<sub>1</sub>* `+` corresponde a um ou mais; *e<sub>1</sub>* `?` corresponde a zero ou um.
 
-A precedência do operador, da associação mais fraca para a mais forte, é primeiro a alternância, depois a concatenação e, por fim, os operadores de repetição. Parênteses explícitos podem ser usados para forçar significados diferentes, como em expressões aritméticas. Alguns exemplos: _ab|cd_ é equivalente _a (ab)|( cd)_ ; _`ab\`_ é equivalente a _`a(b\)`_ .
+A precedência do operador, da associação mais fraca à mais forte, é a seguinte:
+
+- Alternância
+- Concatenação
+- operadores de repetição
+
+Parênteses explícitos podem ser usados para forçar significados diferentes, como em expressões aritméticas. Alguns exemplos: `ab|cd` é equivalente a `(ab)|(cd)` ; `ab\` é equivalente a `a(b\)`.
 
 A sintaxe descrita até o momento é a maior parte da sintaxe de expressão regular _egrep_ do Unix. Esse subconjunto é suficiente para descrever todas as linguagens regulares. Um idioma regular é um conjunto de cadeias de caracteres que pode ser correspondido em uma única passagem pelo texto usando apenas uma quantidade fixa de memória. Recursos de expressão regular mais recentes (notavelmente Perl e as linguagens que a copiaram) adicionaram muitos operadores novos e sequências de escape. Essas alterações tornam as expressões regulares mais concisas e, às vezes, mais criptografada, mas não mais poderosas.
 
@@ -75,7 +81,7 @@ Ele também lista algumas sintaxes aceitas por PCRE, PERL e VIM.
 | x{-n} | (≡ x{n}?) (SEM SUPORTE) VIM |
 | x= | (≡ x?) (SEM SUPORTE) VIM |
 
-Restrições de implementação: os formulários de contagem x{n, m}, x{n,} e x{n} rejeitam formulários que criam uma contagem mínima ou máxima de repetição acima de 1000. As repetições ilimitadas não estão sujeitas a essa restrição.
+Restrição de implementação: os formulários de `x{n,m}`contagem e `x{n}` `x{n,}`rejeitam formulários que criam uma contagem de repetição mínima ou máxima acima de 1000. As repetições ilimitadas não estão sujeitas a essa restrição.
 
 |&nbsp;| Repetições possessivas |
 | --- | --- |
@@ -108,7 +114,7 @@ Restrições de implementação: os formulários de contagem x{n, m}, x{n,} e x{
 | s | let . Corresponde a \n (padrão falso) |
 | U | ungreedy: mude o significado de x\* e x\*?, x+ e x+?, etc (falso padrão) |
 
-A sintaxe do sinalizador é xyz (definir) or -xyz (desmarcar) or xy-z (definir xy, desmarcar z)
+A sintaxe do sinalizador `xyz` é (set) ou `-xyz` (clear) ou `xy-z` (set `xy`, clear `z`).
 
 |&nbsp;| Cadeias de caracteres vazia |
 | --- | --- |
@@ -132,14 +138,14 @@ A sintaxe do sinalizador é xyz (definir) or -xyz (desmarcar) or xy-z (definir x
 | re@&lt;! | depois do texto não correspondente à re (SEM SUPORTE) VIM |
 | \zs | define o início da correspondência (= \K) (SEM SUPORTE) VIM |
 | \ze | define o final da correspondência (SEM SUPORTE) VIM |
-| \%^ | início do arquivo (SEM SUPORTE) VIM |
-| \%$ | final do arquivo (SEM SUPORTE) VIM |
-| \%V | na tela (SEM SUPORTE) VIM |
-| \%# | posição do cursor (SEM SUPORTE) VIM |
-| \%&#39;m | marcar posição do m (SEM SUPORTE) VIM |
-| \%23l | na linha 23 (SEM SUPORTE) VIM |
-| \%23c | na coluna 23 (SEM SUPORTE) VIM |
-| \%23v | na coluna virtual 23 (SEM SUPORTE) VIM |
+| \\%^ | início do arquivo (SEM SUPORTE) VIM |
+| \\%$ | final do arquivo (SEM SUPORTE) VIM |
+| \\%V | na tela (SEM SUPORTE) VIM |
+| \\%# | posição do cursor (SEM SUPORTE) VIM |
+| \\%&#39;m | marcar posição do m (SEM SUPORTE) VIM |
+| \\%23l | na linha 23 (SEM SUPORTE) VIM |
+| \\%23c | na coluna 23 (SEM SUPORTE) VIM |
+| \\%23v | na coluna virtual 23 (SEM SUPORTE) VIM |
 
 |&nbsp;| Sequencias de escape |
 | --- | --- |
