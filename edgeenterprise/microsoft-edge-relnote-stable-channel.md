@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Stable Channel
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 06/14/2022
+ms.date: 06/16/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: 74aa070da5751afe48ff206ca57698e55f6dcc88
-ms.sourcegitcommit: 18f4787a0016070a9e9292f50da63f58f44e7d80
+ms.openlocfilehash: 985b02b0ca3eb66311d646afda1fa535c7263966
+ms.sourcegitcommit: efa3b88bcc90da596c79e57074cf5e15968814ce
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "12593690"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "12597992"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão do Microsoft Edge Stable Channel
 
@@ -30,6 +30,10 @@ Essas notas de versão fornecem informações dos novos recursos e atualizaçõe
 > Para o Canal Estável, as atualizações serão implantadas progressivamente por um ou mais dias. Para saber mais, consulte [Distribuições progressivas para atualizações do Microsoft Edge](./microsoft-edge-update-progressive-rollout.md).
 >
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-1020124544-june-16"></a>Versão 102.0.1245.44: 16 de junho
+
+Corrigidos vários bugs e problemas de desempenho para a versão Estável e Estável Estendida.
 
 ## <a name="version-1020124541-june-13"></a>Versão 102.0.1245.41: 13 de junho
 
