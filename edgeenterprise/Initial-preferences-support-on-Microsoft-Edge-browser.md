@@ -3,19 +3,19 @@ title: Saiba como configurar as preferências iniciais no Microsoft Edge.
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 03/23/2022
+ms.date: 06/21/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Saiba como configurar as preferências iniciais no Microsoft Edge.
-ms.openlocfilehash: 751097853e02589fe1b900f6af0d290feb5fbe67
-ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
+ms.openlocfilehash: 5a087cdccd4019209d2b4644ff87de3d701cf865
+ms.sourcegitcommit: 94873e1b3f34918712c021fd47f44d4424223650
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "12473401"
+ms.lasthandoff: 06/22/2022
+ms.locfileid: "12609530"
 ---
 # <a name="configure-microsoft-edge-using-initial-preferences-settings-for-the-first-run"></a>Configurar Microsoft Edge usando as configurações de Preferências Iniciais para a primeira execução
 
@@ -71,7 +71,7 @@ Implante o *initial_preferences* nos dispositivos dos usuários ao mesmo tempo e
 
 ### <a name="windows-amd64-and-arm64"></a>Windows (AMD64 e ARM64)
 
-| Canal | Location |
+| Canal | Localização |
 | - | - |
 | Estável | `"C:\Program Files (x86)\Microsoft\Edge\Application"` |
 | Beta | `"C:\Program Files (x86)\Microsoft\Edge Beta\Application"` |
@@ -83,7 +83,7 @@ Implante o *initial_preferences* nos dispositivos dos usuários ao mesmo tempo e
 
 ### <a name="macos"></a>macOS
 
-| Canal | Location |
+| Canal | Localização |
 | - | - |
 | Estável | `"~/Library/Application Support/Microsoft Edge/Microsoft Edge Initial Preferences"` |
 | Beta | `“~/Library/Application Support/Microsoft Edge Beta/Microsoft Edge Initial Preferences"` |
@@ -94,6 +94,6 @@ Implante o *initial_preferences* nos dispositivos dos usuários ao mesmo tempo e
 
 As preferências iniciais só entrarão em vigor depois que *o arquivo initial_preferences* for implantado antes da primeira execução do navegador pelos usuários finais.  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Ver também
 
-- [O *arquivo initial_prefrences* modelo de exemplo](/edge/business/download)
+- [Local de download da política](https://www.microsoft.com/edge/business/download)
