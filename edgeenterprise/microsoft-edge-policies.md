@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 06/15/2022
+ms.date: 06/21/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: fcfe7ca019444bcfe843d2774eb307bc8c5e22ee
-ms.sourcegitcommit: 645b392c4c124da136114066a3987ed752753974
+ms.openlocfilehash: 7d5ec93cae9ebc2b78089e21bf99e9964ddcd3ef
+ms.sourcegitcommit: 94873e1b3f34918712c021fd47f44d4424223650
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "12595447"
+ms.lasthandoff: 06/22/2022
+ms.locfileid: "12609580"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -31,18 +31,12 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 
 ## <a name="new-policies"></a>Novas políticas
 
-A tabela a seguir lista as políticas novas e obsoletas que estão nesta atualização de artigo.
+A tabela a seguir lista as novas políticas que estão nesta atualização de artigo.
 
 | Nome da política | Legenda |
 |:-----|:-----|
-|[AllowedDomainsForApps](#alloweddomainsforapps)|Definir domínios com permissão para acessar o Google Workspace|
-|[AskBeforeCloseEnabled](#askbeforecloseenabled)|Obter confirmação do usuário antes de fechar uma janela do navegador com várias guias|
-|[EdgeEDropEnabled](#edgeedropenabled)|Habilitar o recurso Soltar no Microsoft Edge|
-|[PDFXFAEnabled](#pdfxfaenabled)|Suporte XFA no leitor de PDF nativo habilitado|
-|[QuickSearchShowMiniMenu](#quicksearchshowminimenu)|Habilitar o mini menu do Microsoft Edge|
-|[TextPredictionEnabled](#textpredictionenabled)|Previsão de texto habilitada por padrão|
-|[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Não definir window.opener para links com direcionamento _blank (obsoleto)|
-|[U2fSecurityKeyApiEnabled](#u2fsecuritykeyapienabled)|Permitir o uso da API de Chave de Segurança U2F preterida (obsoleto)|
+|[DoubleClickCloseTabEnabled](#doubleclickclosetabenabled)|Recurso de Clique duplo no Microsoft Edge habilitado (disponível somente na China)|
+
 
 ## <a name="available-policies"></a>Políticas disponíveis
 
@@ -408,6 +402,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[DnsOverHttpsMode](#dnsoverhttpsmode)|Controlar o modo de DNS em HTTPS|
 |[DnsOverHttpsTemplates](#dnsoverhttpstemplates)|Especificar o modelo de URI do resolvedor de DNS sobre HTTPS desejado.|
 |[DoNotSilentlyBlockProtocolsFromOrigins](#donotsilentlyblockprotocolsfromorigins)|Definir uma lista de protocolos que não podem ser impedidos silenciosamente pela proteção anti-inundação|
+|[DoubleClickCloseTabEnabled](#doubleclickclosetabenabled)|Recurso de Clique duplo no Microsoft Edge habilitado (disponível somente na China)|
 |[DownloadDirectory](#downloaddirectory)|Configurar o diretório de download|
 |[DownloadRestrictions](#downloadrestrictions)|Permitir restrições de download|
 |[EdgeAssetDeliveryServiceEnabled](#edgeassetdeliveryserviceenabled)|Permitir que os recursos baixem ativos do Serviço de Entrega de Ativos|
@@ -9242,7 +9237,7 @@ Use as informações anteriores ao configurar essa política.
 
   - Nome exclusivo da Política de Grupo: PrintingBackgroundGraphicsDefault
   - Nome da Política de Grupo: modo de impressão de gráficos em segundo plano padrão
-  - Caminho da Política de Grupo (obrigatório): Modelos administrativos/Microsoft Edge/Impressão
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Printing
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -10303,7 +10298,7 @@ Use as informações anteriores ao configurar essa política.
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Nome do Valor: SleepingTabsTimeout
-  - Tipo de valor: REG_DWORD
+  - Tipo de Valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -10340,9 +10335,11 @@ Use as informações anteriores ao configurar essa política.
 
   Permitir que o navegador Microsoft Edge carregue a nova biblioteca SmartScreen (libSmartScreenN) para qualquer verificação SmartScreen em URLs de sites ou downloads de aplicativos.
 
-Se você habilitar esta política, a Microsoft Edge usará a implementação SmartScreen da nova biblioteca (libSmartScreenN).
+Se você habilitar ou não configurar essa política, o Microsoft Edge usará a nova biblioteca SmartScreen (libSmartScreenN).
 
-Se você desabilitar ou não configurar esta política, a Microsoft Edge continuará usando a implementação SmartScreen da antiga biblioteca (libSmartScreen).
+Se você desabilitar essa política, o Microsoft Edge usará a antiga biblioteca SmartScreen (libSmartScreen).
+
+Antes da versão 103 do Microsoft Edge, se você não configurar essa política, o Microsoft Edge usará a antiga biblioteca SmartScreen (libSmartScreen).
 
 Essa política está disponível apenas nas instâncias do Windows que fazem parte de um domínio do Microsoft Active Directory, em instâncias do Windows 10 Pro ou Enterprise que estejam inscritas no gerenciamento de dispositivos ou em instâncias do macOS que são gerenciadas por meio do MDM ou passaram a fazer parte de um domínio por meio de MCX.
 
@@ -17907,6 +17904,70 @@ SOFTWARE\Policies\Microsoft\Edge\DoNotSilentlyBlockProtocolsFromOrigins = [
     <string>msoutlook</string>
   </dict>
 </array>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="doubleclickclosetabenabled"></a>DoubleClickCloseTabEnabled
+
+  #### <a name="double-click-feature-in-microsoft-edge-enabled-only-available-in-china"></a>Recurso de Clique duplo no Microsoft Edge habilitado (disponível somente na China)
+
+  
+  
+  #### <a name="supported-versions"></a>Versões suportadas:
+
+  - No Windows e macOS desde 104 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Esta política permite que você configure o recurso Clique Duplo no Microsoft Edge.
+
+O Clique Duplo permite que os usuários fechem uma guia clicando duas vezes no botão esquerdo do mouse.
+
+Se você habilitar ou não configurar essa política, poderá utilizar o recurso de clique duplo para fechar uma guia no Microsoft Edge para começar a usar esse recurso.
+
+Se você desabilitar essa política, não poderá utilizar o recurso de clique duplo no Microsoft Edge.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da PG: DoubleClickCloseTabEnabled
+  - Nome da PG: Recurso de Clique Duplo no Microsoft Edge habilitado (disponível somente na China)
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do Valor: DoubleClickCloseTabEnabled
+  - Tipo de Valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da Chave de Preferência: DoubleClickCloseTabEnabled
+  - Valor de exemplo:
+``` xml
+<true/>
 ```
   
 
@@ -28245,7 +28306,7 @@ Se você não configurar esta política:
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Nome do Valor: ShowMicrosoftRewards
-  - Tipo de valor: REG_DWORD
+  - Tipo de Valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -29400,7 +29461,7 @@ Se você desabilitar esta política, os pop-ups que direcionam _blank têm permi
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): N/A
   - Nome do Valor TargetBlankImpliesNoOpener
-  - Tipo de valor: REG_DWORD
+  - Tipo de Valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -31813,7 +31874,7 @@ Se essa política não estiver definida, a detecção de ocultação da janela s
   [Voltar ao início](#microsoft-edge---policies)
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Ver também
 
 - [Configurar o Microsoft Edge](configure-microsoft-edge.md)
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
