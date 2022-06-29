@@ -3,23 +3,94 @@ title: Notas de versão arquivadas para o Canal Estável do Microsoft Edge
 ms.author: leahtu
 author: leahmsft
 manager: srugh
-ms.date: 05/31/2022
+ms.date: 06/23/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas de versão arquivadas para o Canal Estável do Microsoft Edge
-ms.openlocfilehash: 7b4aaad280b40f69f423c4031a6f9526dbdf81b7
-ms.sourcegitcommit: edb5c86593b127dbdb77831e76a2bb90e5537027
+ms.openlocfilehash: aedc7208943e86507a6c22d51c143bcd0cba328e
+ms.sourcegitcommit: ec29195d797cf00c28aef6a80008a62e7fc01be4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "12567052"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "12629563"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão arquivadas para o Canal Estável do Microsoft Edge
 
 Essas notas de versão fornecem informações dos novos recursos e atualizações não relacionados à segurança que estão inclusos Microsoft Edge Stable Channel. Todas as atualizações de segurança estão listadas [aqui](microsoft-edge-relnotes-security.md).
+
+## <a name="version-1000118529-april-1"></a>Versão 100.0.1185.29: 1º de abril
+
+As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#april-1-2022).
+
+### <a name="feature-updates"></a>Atualizações de recursos
+
+- **Número de versão de três dígitos da cadeia de caracteres de agente de usuário.** O Microsoft Edge agora enviará um número de versão de três dígitos, como Edg/100 no cabeçalho do agente de usuário. Isso pode confundir scripts ou análises do lado do servidor que usam um analisador com erros para determinar o número de versão da cadeia de caracteres de agente de usuário. Você pode usar a política [ForceMajorVersionToMinorPositionInUserAgent](/deployedge/microsoft-edge-policies#forcemajorversiontominorpositioninuseragent) para controlar se a versão principal da cadeia de caracteres de agente de usuário deve ser congelada em 99. Além disso, o sinalizador **#force-major-version-to-minor** está disponível no *edge://flags* para congelar a versão principal da cadeia de caracteres de agente de usuário para 99.
+
+- **Simplificando as Ativações do protocolo de aplicativo do Microsoft 365.** As Ativações do protocolo de aplicativo do Microsoft 365 nos serviços confiáveis de armazenamento em nuvem da Microsoft agora iniciarão determinados aplicativos diretamente do Microsoft 365, incluindo subdomínios do SharePoint e URLs do Microsoft OneDrive. Você pode usar as políticas [AutoLaunchProtocolsComponentEnabled](/deployedge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) e [AutoLaunchProtocolsFromOrigins](/deployedge/microsoft-edge-policies#autolaunchprotocolsfromorigins) para habilitar os prompts de ativação do protocolo de aplicativo, se desejado, e para definir outros aplicativos e serviços em que os avisos são habilitados ou desabilitados.
+
+- **Proteção de pilha imposta por hardware.** O Microsoft Edge continuará dando suporte a uma proteção mais refinada, combatendo vulnerabilidades de corrupção de memória e protegendo chamadas indiretas. A proteção de pilha imposta por hardware é compatível apenas pelo Windows 8 e posterior. Para obter mais informações, confira [Proteção de pilha imposta por hardware](https://techcommunity.microsoft.com/t5/windows-kernel-internals-blog/developer-guidance-for-hardware-enforced-stack-protection/ba-p/2163340). Esse comportamento de recurso pode ser controlado usando a política [ShadowStackCrashRollbackBehavior](/deployedge/microsoft-edge-policies#shadowstackcrashrollbackbehavior).
+
+- **Visualize arquivos PDF no Microsoft Outlook e no Explorador de Arquivos.** Os usuários podem visualizar um arquivo PDF em uma visualização somente leitura leve e avançada. Esse recurso está disponível para anexos em PDF da área de trabalho do Outlook ou para arquivos PDF locais usando o Explorador de Arquivos.
+
+- **Abra arquivos PDF assinados digitalmente.** As assinaturas digitais são usadas extensivamente para validar a autenticidade de um documento e as alterações feitas em um documento. Você pode usar a política [PDFSecureMode](/deployedge/microsoft-edge-policies#pdfsecuremode) para habilitar a validação de assinatura digital de arquivos PDF, diretamente do navegador, sem a necessidade de suplementos.
+
+### <a name="policy-updates"></a>Atualizações de política
+
+#### <a name="new-policies"></a>Novas políticas
+
+- [AdsTransparencyEnabled](/DeployEdge/microsoft-edge-policies#adstransparencyenabled) - Configurar se o recurso de transparência de anúncios estiver habilitado
+- [DefaultWebHidGuardSetting](/DeployEdge/microsoft-edge-policies#defaultwebhidguardsetting) - Controlar uso da API WebHID
+- [HideRestoreDialogEnabled](/DeployEdge/microsoft-edge-policies#hiderestoredialogenabled) - Ocultar a caixa de diálogo das páginas de restauração após a falha do navegador
+- [PDFSecureMode](/DeployEdge/microsoft-edge-policies#pdfsecuremode) - Modo de segurança e validação de assinatura digital baseada em certificado no leitor de PDF nativo
+- [PromptOnMultipleMatchingCertificates](/DeployEdge/microsoft-edge-policies#promptonmultiplematchingcertificates) - Solicitar que o usuário selecione um certificado quando vários certificados corresponderem
+- [WebHidAskForUrls](/DeployEdge/microsoft-edge-policies#webhidaskforurls) - Permitir a API WebHID nesses sites
+- [WebHidBlockedForUrls](/DeployEdge/microsoft-edge-policies#webhidblockedforurls) - Bloquear a API WebHID nesses sites
+
+#### <a name="deprecated-policy"></a>Política preterida
+
+- [BackgroundTemplateListUpdatesEnabled](/DeployEdge/microsoft-edge-policies#backgroundtemplatelistupdatesenabled) - Habilitar atualizações em segundo plano para a lista de modelos disponíveis para coleções e outros recursos que usam modelos
+
+#### <a name="obsoleted-policy"></a>Política obsoleta
+
+- [AllowSyncXHRInPageDismissal](/DeployEdge/microsoft-edge-policies#allowsyncxhrinpagedismissal) - Permitir que as páginas enviem solicitações XHR síncronas durante o encerramento da página
+
+## <a name="version-980110892-march-26"></a>Versão 98.0.1108.92: 26 de março
+
+Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
+
+## <a name="version-990115055-march-26"></a>Versão 99.0.1150.55: 26 de março
+
+> [!Important]
+> Esta atualização contém uma correção para [CVE-2022-1096](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-1096), que foi relatada pela equipe do Chromium como tendo uma exploração em estado selvagem. Para obter mais informações, consulte o [Guia de atualização de segurança](https://msrc.microsoft.com/update-guide).
+
+As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#march-26-2022).
+
+## <a name="version-990115052-march-24"></a>Versão 99.0.1150.52: 24 de março
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-980110884-march-17"></a>Versão 98.0.1108.84: 17 de março
+
+Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
+
+## <a name="version-990115046-march-17"></a>Versão 99.0.1150.46: 17 de março
+
+As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#march-17-2022).
+
+## <a name="version-990115039-march-10"></a>Versão 99.0.1150.39: 10 de março
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-980110876-march-9"></a>Versão 98.0.1108.76: 9 de março
+
+Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
+
+## <a name="version-990115036-march-7"></a>Versão 99.0.1150.36: 7 de março
+
+Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-990115030-march-3"></a>Versão 99.0.1150.30: 3 de março
 
@@ -200,23 +271,23 @@ As atualizações de segurança do canal Estável estão listadas [aqui](/deploy
 
 ### <a name="feature-updates"></a>Atualizações de recursos
 
-- **Gerenciamento de Lista de Sites na Nuvem para o modo IE na Visualização Pública.** O Gerenciamento de Lista de Sites na Nuvem permite que você gerencie suas listas de sites para o modo IE na nuvem sem precisar de uma infraestrutura local para hospedar a lista de sites da sua organização. Você pode acessar o recurso Gerenciamento de Lista de Sites na Nuvem usando a experiência Microsoft Edge listas de sites no centro Administração Microsoft 365 nuvem. Para saber mais, confira o artigo [Gerenciamento de Lista de Sites na Nuvem para modo IE (Versão Prévia](./edge-ie-mode-cloud-site-list-mgmt.md) Pública).
+- **Gerenciamento de Lista de Sites na Nuvem para o modo IE na Visualização Pública.** O Gerenciamento de Lista de Sites na Nuvem permite que você gerencie suas listas de sites para o modo IE na nuvem sem precisar de uma infraestrutura local para hospedar a lista de sites da sua organização. Você pode acessar o recurso Gerenciamento de Lista de Sites na Nuvem usando a experiência de Listas de Sites do Microsoft Edge no Administração Microsoft 365 Center. Para saber mais, confira o artigo [Gerenciamento de Lista de Sites na Nuvem para modo IE (Versão Prévia](./edge-ie-mode-cloud-site-list-mgmt.md) Pública).
   
-- **Entrega aprimorada entre o modo IE e o navegador moderno.** A partir desta versão do Microsoft Edge, as navegação entre o Microsoft Edge e o modo Internet Explorer incluirão dados de formulário e cabeçalhos HTTP adicionais. Os cabeçalhos de referenciador, os dados de postagem, os dados de formulários e os métodos de solicitação serão encaminhados corretamente entre as duas experiências. Você pode especificar quais tipos de dados devem ser incluídos usando a política InternetExplorerIntegrationComplexNavDataTypes. Para obter mais informações, consulte as perguntas frequentes: Meu [aplicativo requer a transferência de dados POST entre o modo IE e Microsoft Edge. Há suporte para isso?](./edge-ie-mode-faq.md#my-application-requires-transferring-post-data-between-ie-mode-and-microsoft-edge-is-this-supported)
+- **Entrega aprimorada entre o modo IE e o navegador moderno.** A partir desta versão do Microsoft Edge, as navegação entre o Microsoft Edge e o modo Internet Explorer incluirão dados de formulário e cabeçalhos HTTP adicionais. Os cabeçalhos de referenciador, os dados de postagem, os dados de formulários e os métodos de solicitação serão encaminhados corretamente entre as duas experiências. Você pode especificar quais tipos de dados devem ser incluídos usando a política InternetExplorerIntegrationComplexNavDataTypes. Para obter mais informações, consulte as perguntas frequentes: [Meu aplicativo requer a transferência de dados POST entre o modo IE e o Microsoft Edge. Há suporte para isso?](./edge-ie-mode-faq.md#my-application-requires-transferring-post-data-between-ie-mode-and-microsoft-edge-is-this-supported)
 
-- **Atualize Microsoft Edge WebWiew2 usando o WSUS.** Os administradores de TI que Windows Server Update Services (WSUS) para atualizar Microsoft Edge também poderão atualizar Microsoft Edge WebView2 usando o WSUS. Essa funcionalidade oferece aos administradores um processo de manutenção mais fácil para dispositivos offline.
+- **Atualize o Microsoft Edge WebWiew2 usando o WSUS.** Os administradores de TI que Windows Server Update Services (WSUS) para atualizar o Microsoft Edge também poderão atualizar o Microsoft Edge WebView2 usando o WSUS. Essa funcionalidade oferece aos administradores um processo de manutenção mais fácil para dispositivos offline.
 
-- **Atualizações do WSUS para o Servidor.** As atualizações do WSUS e do Catálogo para canais do Microsoft Edge (Estável, Beta e Desenvolvimento) agora serão aplicadas a SKUs do Windows Server que têm Microsoft Edge instalados, incluindo o Windows Server 2022. Para obter mais informações sobre como configurar as atualizações do WSUS para Microsoft Edge, consulte [Atualização Microsoft Edge](/mem/configmgr/apps/deploy-use/deploy-edge).
+- **Atualizações do WSUS para o Servidor.** As atualizações do WSUS e do Catálogo para canais do Microsoft Edge (Estável, Beta e Desenvolvimento) agora serão aplicadas a SKUs do Windows Server que têm o Microsoft Edge instalado, incluindo o Windows Server 2022. Para obter mais informações sobre como configurar atualizações do WSUS para o Microsoft Edge, consulte [Atualizar o Microsoft Edge](/mem/configmgr/apps/deploy-use/deploy-edge).
 
-- **Microsoft Edge Componente de Protocolos de Inicialização Automática.** Microsoft Edge 96 apresenta o componente AutoLaunch [Protocols que](https://textslashplain.com/2019/07/16/updating-browsers-quickly-flags-respins-and-components/) contém listas de dicionários de origem de esquema para permitir ou bloquear automaticamente. Isso protege os clientes contra esquemas perigosos (por exemplo, um manipulador de protocolo com um dia) ao mesmo tempo que elimina prompts de emparelhamentos seguros conhecidos (por exemplo, o site do Teams pode abrir o aplicativo cliente Teams). Se, por algum motivo, você não quiser Microsoft Edge bloquear manipuladores de protocolo vulneráveis e permitir emparelhamentos seguros conhecidos, use a alternância no edge://settings/content/applicationLinks ou defina *a* política [AutoLaunchProtocolsComponentEnabled](/deployedge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) como False.
+- **Componente de Protocolos de Inicialização Automática do Microsoft Edge.** O Microsoft Edge 96 apresenta o componente AutoLaunch [Protocols que](https://textslashplain.com/2019/07/16/updating-browsers-quickly-flags-respins-and-components/) contém listas de dicionários de origem de esquema para permitir ou bloquear automaticamente. Isso protege os clientes contra esquemas perigosos (por exemplo, um manipulador de protocolo com um dia) ao eliminar prompts de emparelhamentos seguros conhecidos (por exemplo, o site do Teams pode abrir o aplicativo cliente do Teams). Se, por algum motivo, você não quiser que o Microsoft Edge bloqueie manipuladores de protocolo vulneráveis e permita emparelhamentos seguros conhecidos, use a alternância no edge://settings/content/applicationLinks ou defina *a* política [AutoLaunchProtocolsComponentEnabled](/deployedge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) como False.
 
-- **Inicie o Aplicativo Web Progressivo (PWA) diretamente por meio de links de protocolo.** Permita que os PWAs instalados manipulem links que usam um protocolo específico para uma experiência mais integrada.
+- **Inicie o PWA (Aplicativo Web Progressivo) diretamente por meio de links de protocolo.** Permita que os PWAs instalados manipulem links que usam um protocolo específico para uma experiência mais integrada.
 
-- **Exiba rapidamente Office arquivos no navegador.** Os usuários agora podem exibir arquivos Office, incluindo documentos, planilhas e apresentações que eles podem encontrar enquanto navegam no Microsoft Edge bem no navegador, sem a necessidade de baixar o arquivo e abri-lo em um aplicativo diferente. Não haverá nenhuma alteração na experiência de abertura de arquivo Office arquivos hospedados no OneDrive ou SharePoint.
+- **Exiba rapidamente os arquivos do Office no navegador.** Os usuários agora podem exibir arquivos do Office, incluindo documentos, planilhas e apresentações que eles podem encontrar ao navegar no Microsoft Edge no navegador, sem precisar baixar o arquivo e abri-lo em um aplicativo diferente. Não haverá alterações na experiência de abertura de arquivo para arquivos do Office hospedados no OneDrive ou no SharePoint.
   
 - **Realce de forma livre em PDFs.** A experiência de exibição e marcação em PDF é aprimorada com a adição de marcadores de forma livre. Você pode realçar seções em PDFs às qual não tem acesso e documentos digitalizados.
 
-- **Proteção de pilha imposta por hardware.** Microsoft Edge iniciará o suporte a um modo de navegação ainda mais seguro que usa o fluxo de controle dependente de hardware para processos de navegador em hardware com suporte (Intel 11ª Geração. ou AMD Zen 3). Observação: como esta é uma Distribuição de Recursos Controlada, talvez você não observe esse recurso habilitado em todos os dispositivos. Você pode habilitar ou desabilitar a Proteção contra Pilha imposta por hardware manipulando IFEO (Opções de Execução de Arquivo de Imagem) usando a política de grupo.
+- **Proteção de pilha imposta por hardware.** O Microsoft Edge começará a dar suporte a um modo de navegação ainda mais seguro que usa o fluxo de controle dependente de hardware para processos de navegador em hardware com suporte (Intel 11ª Geração. ou AMD Zen 3). Observação: como esta é uma Distribuição de Recursos Controlada, talvez você não observe esse recurso habilitado em todos os dispositivos. Você pode habilitar ou desabilitar a Proteção contra Pilha imposta por hardware manipulando IFEO (Opções de Execução de Arquivo de Imagem) usando a política de grupo.
 
 - **Nova caixa de diálogo de aviso para sites de typosquatting.** O navegador mostrará um aviso em alguns sites com URLs muito semelhantes a outros sites. Essa interface do usuário usa heurística do lado do cliente para avisar os usuários sobre sites que podem estar falsificando sites populares. Para obter mais informações, consulte [O que é typosquatting?](https://support.microsoft.com/topic/what-is-typosquatting-54a18872-8459-4d47-b3e3-d84d9a362eb0).
   
@@ -224,23 +295,23 @@ As atualizações de segurança do canal Estável estão listadas [aqui](/deploy
   
 - **Saiba como resolver problemas matemáticos com o Math Solver.** Estamos felizes em anunciar que você pode usar o Math Solver no Microsoft Edge para obter ajuda com uma ampla variedade de conceitos matemáticos. Esses conceitos variam de equações aritméticas e quadráticas elementares a trigonometria e cálculo. O Math Solver permite que você tire uma foto de um problema de matemática manuscrito ou impresso e, em seguida, fornece uma solução instantânea com instruções passo a passo para ajudá-lo a aprender a alcançar a solução sem ajuda. O Math Solver também vem com um teclado matemático que você pode usar para digitar facilmente problemas matemáticos. Esse teclado elimina a necessidade de pesquisar em torno de um teclado tradicional para encontrar os caracteres matemáticos necessários. Depois de resolver o problema, o Math Solver fornece opções para continuar aprendendo com testes, planilhas e tutoriais em vídeo.
 
-- **Suporte à VPN de túnel dividido para WebRTC.** Permite que os clientes corporativos obtenham o benefício do túnel dividido de VPN para tráfego ponto a ponto em Microsoft Edge. Você pode habilitar esse recurso usando a [política WebRtcRespectOsRoutingTableEnabled](/deployedge/microsoft-edge-policies#webrtcrespectosroutingtableenabled) .
+- **Suporte à VPN de túnel dividido para WebRTC.** Permite que os clientes corporativos obtenham o benefício do túnel dividido de VPN para tráfego ponto a ponto no Microsoft Edge. Você pode habilitar esse recurso usando a [política WebRtcRespectOsRoutingTableEnabled](/deployedge/microsoft-edge-policies#webrtcrespectosroutingtableenabled) .
 
 ### <a name="policy-updates"></a>Atualizações de política
 
 #### <a name="new-policies"></a>Novas Políticas
 
 - [ApplicationGuardUploadBlockingEnabled](/DeployEdge/microsoft-edge-policies#applicationguarduploadblockingenabled) – impede que os arquivos sejam carregados no Application Guard
-- [AudioProcessHighPriorityEnabled](/DeployEdge/microsoft-edge-policies#audioprocesshighpriorityenabled) - Permitir que o processo de áudio seja executado com prioridade acima do normal Windows
+- [AudioProcessHighPriorityEnabled](/DeployEdge/microsoft-edge-policies#audioprocesshighpriorityenabled) – Permitir que o processo de áudio seja executado com prioridade acima do normal no Windows
 - [AutoLaunchProtocolsComponentEnabled](/DeployEdge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) – Componente de protocolos autoLaunch habilitado
 - [EfficiencyMode](/DeployEdge/microsoft-edge-policies#efficiencymode) – Configurar quando o modo de eficiência deve ficar ativo
 - [ForceSyncTypes](/DeployEdge/microsoft-edge-policies#forcesynctypes) – Configurar a lista de tipos incluídos para sincronização
 - [InternetExplorerIntegrationComplexNavDataTypes](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcomplexnavdatatypes) – Configure se os dados de formulário e os cabeçalhos HTTP serão enviados ao entrar ou sair do modo Internet Explorer
 - [InternetExplorerModeToolbarButtonEnabled](/DeployEdge/microsoft-edge-policies#internetexplorermodetoolbarbuttonenabled) – mostrar o botão Recarregar no modo Internet Explorer na barra de ferramentas
-- [PrintPostScriptMode](/DeployEdge/microsoft-edge-policies#printpostscriptmode) – Modo PostScript impressão
+- [PrintPostScriptMode](/DeployEdge/microsoft-edge-policies#printpostscriptmode) – Modo PostScript de Impressão
 - [PrintRasterizePdfDpi](/DeployEdge/microsoft-edge-policies#printrasterizepdfdpi) – Imprimir Rasterizar PDF DPI
 - [RendererAppContainerEnabled](/DeployEdge/microsoft-edge-policies#rendererappcontainerenabled) – Habilitar o renderizador no contêiner do aplicativo
-- [SharedLinksEnabled](/DeployEdge/microsoft-edge-policies#sharedlinksenabled) – Mostrar links compartilhados de Microsoft 365 aplicativos no Histórico
+- [SharedLinksEnabled](/DeployEdge/microsoft-edge-policies#sharedlinksenabled) – Mostrar links compartilhados de aplicativos do Microsoft 365 no Histórico
 - [TyposquattingCheckerEnabled](/DeployEdge/microsoft-edge-policies#typosquattingcheckerenabled) – Configurar TyposquattingChecker de Borda
 
 ## <a name="version-950102053-november-12"></a>Versão 95.0.1020.53: 12 de novembro
@@ -337,7 +408,7 @@ Vários bugs e problemas de desempenho corrigidos.
 > [!Important]
 > Essa atualização contém uma correção para [o CVE-2021-37973,](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37973) que foi relatada pela equipe Chromium como tendo uma exploração na natureza. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
 
-As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#september-24-2021).
+As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#september-24-2021).
 
 ### <a name="feature-updates"></a>Atualizações de recursos
 
@@ -1369,7 +1440,7 @@ Um usuário digita incorretamente "powerbi como" powerbbi". com. O link Doctor v
 
 - Várias atualizações do DevTools, incluindo o suporte à depuração remota, aperfeiçoamentos na IU e muito mais. Para obter mais detalhes, consulte [Novidades no DevTools (Microsoft Edge 83)](/microsoft-edge/devtools-guide-chromium/whats-new/2020/03/devtools).
 
-- Microsoft Defender para Aplicativos de Nuvem cenário de aviso agora está disponível. Isso permite que os administradores configurem o aviso, uma nova categoria de blocos Defender para Nuvem Aplicativos, em que o usuário pode substituir uma página de blocos Defender para Nuvem Aplicativos. Os bloqueios do MDATP E5 são nativamente integrados aos bloqueios SmartScreen no Microsoft Edge para obter uma experiência perfeita. Essa experiência permite um bloco vermelho de página inteira com a mensagem "este site é bloqueado pela sua organização", em vez de apenas uma notificação do sistema.
+- Microsoft Defender para Aplicativos de Nuvem cenário de aviso agora está disponível. Isso permite que os administradores configurem o aviso, uma nova categoria de blocos do Defender para Aplicativos na Nuvem, em que o usuário pode substituir uma página de bloco do Defender para Aplicativos na Nuvem. Os bloqueios do MDATP E5 são nativamente integrados aos bloqueios SmartScreen no Microsoft Edge para obter uma experiência perfeita. Essa experiência permite um bloco vermelho de página inteira com a mensagem "este site é bloqueado pela sua organização", em vez de apenas uma notificação do sistema.
 
 - Não permitir um XMLHttpRequest síncrono no descarte de página. O envio de XMLHttpRequests síncronos durante o carregamento de uma página da Web será removido. Essa alteração melhorará o desempenho e a confiabilidade do navegador, mas poderá afetar os aplicativos da Web que ainda não foram atualizados para usar APIs da Web mais modernas, incluindo sendBeacon e FETCH. A Política de Grupo para desabilitar essa alteração e permitir XHR síncronos durante a transmissão de página estará disponível até o Microsoft Edge 88. Para saber mais, confira [Compatibilidade de sites - alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
