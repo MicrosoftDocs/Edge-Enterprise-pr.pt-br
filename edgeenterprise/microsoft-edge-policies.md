@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 06/21/2022
+ms.date: 06/27/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 7d5ec93cae9ebc2b78089e21bf99e9964ddcd3ef
-ms.sourcegitcommit: 94873e1b3f34918712c021fd47f44d4424223650
+ms.openlocfilehash: 4c386ed1141a85083983a73e2050cbf819808b59
+ms.sourcegitcommit: ec29195d797cf00c28aef6a80008a62e7fc01be4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2022
-ms.locfileid: "12609580"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "12629564"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -28,15 +28,6 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
-
-## <a name="new-policies"></a>Novas políticas
-
-A tabela a seguir lista as novas políticas que estão nesta atualização de artigo.
-
-| Nome da política | Legenda |
-|:-----|:-----|
-|[DoubleClickCloseTabEnabled](#doubleclickclosetabenabled)|Recurso de Clique duplo no Microsoft Edge habilitado (disponível somente na China)|
-
 
 ## <a name="available-policies"></a>Políticas disponíveis
 
@@ -7213,7 +7204,7 @@ Se você habilitar essa política ou não a configurar, as Políticas de Gerenci
 
 Se você desabilitar essa política, o Microsoft Edge não se comunicará com o Intune para solicitar políticas de MAM.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -9237,7 +9228,7 @@ Use as informações anteriores ao configurar essa política.
 
   - Nome exclusivo da Política de Grupo: PrintingBackgroundGraphicsDefault
   - Nome da Política de Grupo: modo de impressão de gráficos em segundo plano padrão
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Printing
+  - Caminho da Política de Grupo (obrigatório): Modelos administrativos/Microsoft Edge/Impressão
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -10298,7 +10289,7 @@ Use as informações anteriores ao configurar essa política.
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Nome do Valor: SleepingTabsTimeout
-  - Tipo de Valor: REG_DWORD
+  - Tipo de valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -28281,7 +28272,7 @@ Se você não configurar esta política:
    - Os usuários da conta Microsoft (exclui contas do Azure AD) em busca, na página de nova guia, e conquista de mercados verão a experiência do Microsoft Rewards experiência em seu perfil de usuário do Microsoft Edge.
    - A configuração para habilitar o Microsoft Rewards nas configurações do Microsoft Edge será habilitada e alternada.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: Sim
@@ -31148,7 +31139,7 @@ Se você definir essa política como falsa ou não definir essa política, os re
 
   - Nome Exclusivo da Política de Grupo: WebComponentsV0Enabled
   - Nome da Política de Grupo: Reabilitar a API de componentes Web V0 até M84 (obsoleta)
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -31874,7 +31865,7 @@ Se essa política não estiver definida, a detecção de ocultação da janela s
   [Voltar ao início](#microsoft-edge---policies)
 
 
-## <a name="see-also"></a>Ver também
+## <a name="see-also"></a>Consulte também
 
 - [Configurar o Microsoft Edge](configure-microsoft-edge.md)
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

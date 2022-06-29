@@ -3,19 +3,19 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 06/20/2022
+ms.date: 06/22/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: aa3ed6d3d5e250c019331ed385a2e8cd3a13a7ce
-ms.sourcegitcommit: 94873e1b3f34918712c021fd47f44d4424223650
+ms.openlocfilehash: 7a6ffe03e637fceb0e9ff79ecec62f5d6a386fd6
+ms.sourcegitcommit: ec29195d797cf00c28aef6a80008a62e7fc01be4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2022
-ms.locfileid: "12609560"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "12629565"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão do canal do Microsoft Edge beta
 
@@ -23,6 +23,10 @@ Estas notas de versão fornecem informações sobre os novos recursos e atualiza
 
 > [!NOTE]
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-1030126437-june-22"></a>Versão 103.0.1264.37: 22 de junho
+
+Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-1030126432-june-20"></a>Versão 103.0.1264.32: 20 de junho
 
@@ -40,11 +44,11 @@ Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="feature-updates"></a>Atualizações de recursos
 
-- **Capacidade de controlar a alternância automática de perfil.** A [política GuidedSwitchEnabled](/DeployEdge/microsoft-edge-policies#guidedswitchenabled) permite Microsoft Edge solicitar que o usuário alterne para o perfil apropriado quando o Microsoft Edge detecta que um link é um link pessoal ou de trabalho.
+- **Capacidade de controlar a alternância automática de perfil.** A [política GuidedSwitchEnabled](/DeployEdge/microsoft-edge-policies#guidedswitchenabled) permite que o Microsoft Edge solicite que o usuário alterne para o perfil apropriado quando o Microsoft Edge detectar que um link é um link pessoal ou de trabalho.
 
-- **Alternador de Certificado do Cliente.** Esse recurso oferecerá uma maneira para os usuários limparem o certificado lembrado e ressurgir o seletor de certificado ao visitar um site que exige autenticação de certificado http. A alternância pode ser feita sem sair manualmente Microsoft Edge.
+- **Alternador de Certificado do Cliente.** Esse recurso oferecerá uma maneira para os usuários limparem o certificado lembrado e ressurgir o seletor de certificado ao visitar um site que exige autenticação de certificado http. A alternância pode ser feita sem sair manualmente do Microsoft Edge.
 
-- **Defesa da Web mais confiável.** Navegue pela Web com proteção mais confiável graças à biblioteca [Microsoft Defender SmartScreen reescrita](/deployedge/microsoft-edge-security-smartscreen) para Microsoft Edge no Windows. A [política NewSmartScreenLibraryEnabled](microsoft-edge-policies.md#newsmartscreenlibraryenabled) permitirá que os clientes empresariais continuem usando a versão herdada da biblioteca até que ela seja preterida Microsoft Edge versão 105.
+- **Defesa da Web mais confiável.** Navegue pela Web com proteção mais confiável graças à biblioteca [reescrito do Microsoft Defender SmartScreen](/deployedge/microsoft-edge-security-smartscreen) para Microsoft Edge no Windows. A [política NewSmartScreenLibraryEnabled](microsoft-edge-policies.md#newsmartscreenlibraryenabled) permitirá que os clientes empresariais continuem usando a versão herdada da biblioteca até que ela seja preterida no Microsoft Edge versão 105.
 
 ### <a name="policy-updates"></a>Atualizações de política
 
@@ -124,7 +128,7 @@ Vários bugs e problemas de desempenho corrigidos.
 <!--- Archived to version 86.0.622.11: September 9 ---->
 <!--- Archived to version 85.0.564.18: July 28 ---->
 
-## <a name="see-also"></a>Ver também
+## <a name="see-also"></a>Consulte também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 
