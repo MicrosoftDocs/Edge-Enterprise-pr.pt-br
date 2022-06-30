@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 06/27/2022
+ms.date: 06/29/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 4c386ed1141a85083983a73e2050cbf819808b59
-ms.sourcegitcommit: ec29195d797cf00c28aef6a80008a62e7fc01be4
+ms.openlocfilehash: d3254794a4f5658a6a454bc90732e49bd46d0555
+ms.sourcegitcommit: 40acd8ce9c793b944198d73a62f9ae85d229f7f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/29/2022
-ms.locfileid: "12629564"
+ms.locfileid: "12631822"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -28,6 +28,16 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
+
+## <a name="new-policies"></a>Novas políticas
+
+A tabela a seguir lista as políticas novas e preteridas que estão nesta atualização de artigo.
+
+| Nome da política | Legenda |
+|:-----|:-----|
+|[AvisosDeDownloadDoTipoDeArquivoIsento](#exemptfiletypedownloadwarnings)|Desabilitar o download de avisos com base na extensão de tipo de arquivo para tipos de arquivo especificados em domínios|
+|[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Desabilitar o download de avisos baseados em extensão de tipo de arquivo para tipos de arquivo especificados em domínios (obsoletos)|
+|[AIntegraçãoComOInternetExplorerSempreAguardaODescarregamento](#internetexplorerintegrationalwayswaitforunload)|Aguarde que as guias do modo Internet Explorer sejam completamente descarregadas antes de encerrar a sessão do navegador|
 
 ## <a name="available-policies"></a>Políticas disponíveis
 
@@ -413,7 +423,8 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[EnhanceSecurityModeEnforceListDomains](#enhancesecuritymodeenforcelistdomains)|Configurar a lista de domínios para os quais o modo de segurança aprimorado sempre será imposto|
 |[EnterpriseHardwarePlatformAPIEnabled](#enterprisehardwareplatformapienabled)|Permitir que as extensões gerenciadas usem a API de plataforma de hardware empresarial|
 |[EnterpriseModeSiteListManagerAllowed](#enterprisemodesitelistmanagerallowed)|Permitir o acesso à ferramenta Enterprise Mode Site List Manager|
-|[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Desabilitar o download de avisos com base na extensão de tipo de arquivo para tipos de arquivo especificados em domínios|
+|[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Desabilitar o download de avisos baseados em extensão de tipo de arquivo para tipos de arquivo especificados em domínios (obsoletos)|
+|[AvisosDeDownloadDoTipoDeArquivoIsento](#exemptfiletypedownloadwarnings)|Desabilitar o download de avisos com base na extensão de tipo de arquivo para tipos de arquivo especificados em domínios|
 |[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Controlar a comunicação com o serviço de experimentação e configuração|
 |[ExplicitlyAllowedNetworkPorts](#explicitlyallowednetworkports)|Portas de rede explicitamente permitidas|
 |[ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox)|Mostrar a caixa de seleção "sempre aberta" no diálogo de protocolo externo|
@@ -458,6 +469,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[InPrivateModeAvailability](#inprivatemodeavailability)|Configurar a disponibilidade do modo InPrivate|
 |[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Habilitar avisos para formulários inseguros|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Controlar o recurso IntensiveWakeUpThrottling|
+|[AIntegraçãoComOInternetExplorerSempreAguardaODescarregamento](#internetexplorerintegrationalwayswaitforunload)|Aguarde que as guias do modo Internet Explorer sejam completamente descarregadas antes de encerrar a sessão do navegador|
 |[InternetExplorerIntegrationCloudNeutralSitesReporting](#internetexplorerintegrationcloudneutralsitesreporting)|Configurar relatórios de URLs de site neutro potencialmente configuradas incorretamente para o aplicativo Listas de Sites do Centro de Administração do M365|
 |[InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist)|Configurar a lista de sites de nuvem do Modo empresarial|
 |[InternetExplorerIntegrationCloudUserSitesReporting](#internetexplorerintegrationcloudusersitesreporting)|Configurar o relatório de entradas da lista de usuários do Modo IE para o aplicativo Listas de Sites do Centro de Administração do M365|
@@ -9059,6 +9071,8 @@ As impressoras locais também são conhecidas como destinos de impressão nativo
 
 Na versão 93 ou posterior da Microsoft, se você definir essa política como “salvar como pdf”, ela também desabilitará a opção “salvar como pdf” no menu de contexto do clique com o botão direito do mouse.
 
+Na versão 103 ou posterior da Microsoft, se você definir esta política como 'onedrive', ela também desabilitará a opção 'salvar como PDF (OneDrive)' na visualização da impressão.
+
 Mapeamento das opções de política:
 
 * privet (privet) = destinos de protocolo baseados em zeroconf (mDNS + DNS-SD)
@@ -9068,6 +9082,8 @@ Mapeamento das opções de política:
 * pdf (pdf) = o destino “Salvar como PDF”. (93 ou posterior, também desabilita no menu de contexto)
 
 * local (local) = Destinos da impressora local
+
+* onedrive (onedrive) = Salvar como destinos de impressora PDF (OneDrive). (103 ou posterior)
 
 Use as informações anteriores ao configurar essa política.
 
@@ -10289,7 +10305,7 @@ Use as informações anteriores ao configurar essa política.
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Nome do Valor: SleepingTabsTimeout
-  - Tipo de valor: REG_DWORD
+  - Tipo de Valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -12399,7 +12415,7 @@ Se você habilitar ou não configurar essa política, os usuários poderão abri
 
 Se você desabilitar essa política, sempre que o usuário executar uma ação que acione uma caixa de diálogo de seleção de arquivo (como importar favoritos, carregar arquivos ou salvar links), uma mensagem será exibida, e o usuário deverá clicar em Cancelar na caixa de diálogo de seleção de arquivo.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -12838,9 +12854,9 @@ Se você não fornecer um nome de domínio ou deixar essa política desmarcada, 
 
 Os usuários não podem alterar ou substituir essa configuração.
 
-Observação: Essa política faz com que o cabeçalho X-GoogApps-Allowed-Domains seja acrescentado a todas as solicitações HTTP e HTTPS para todos os domínios do google.com, conforme descrito em https://support.google.com/a/answer/1668854.
+Observação: essa política faz com que o cabeçalho X-GoogApps-Allowed-Domains seja anexado a todas as solicitações HTTP e HTTPS para todos os domínios google.com, conforme descrito em [https://go.microsoft.com/fwlink/?linkid=2197973](https://go.microsoft.com/fwlink/?linkid=2197973).
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -19219,9 +19235,9 @@ Se você desabilitar ou não configurar essa política, os usuários não verão
 
   ### <a name="exemptdomainfiletypepairsfromfiletypedownloadwarnings"></a>ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
 
-  #### <a name="disable-download-file-type-extension-based-warnings-for-specified-file-types-on-domains"></a>Desabilitar o download de avisos com base na extensão de tipo de arquivo para tipos de arquivo especificados em domínios
+  #### <a name="disable-download-file-type-extension-based-warnings-for-specified-file-types-on-domains-deprecated"></a>Desabilitar o download de avisos baseados em extensão de tipo de arquivo para tipos de arquivo especificados em domínios (obsoletos)
 
-  
+  >SUBSTITUÍDO: Essa política está preterida. Ela tem suporte no momento, mas se tornará obsoleta em uma versão futura.
   
   #### <a name="supported-versions"></a>Versões com suporte:
 
@@ -19229,7 +19245,9 @@ Se você desabilitar ou não configurar essa política, os usuários não verão
 
   #### <a name="description"></a>Descrição
 
-  Você pode habilitar essa política para criar um dicionário de extensões de tipo de arquivo com uma lista de domínios correspondente que será isenta de avisos de download baseados na extensão de tipo de arquivo. Isso permite aos administradores corporativos bloquear os avisos de download baseados na extensão do tipo de arquivo de arquivos associados à um domínio listado. Por exemplo, se a extensão "jnlp" estiver associada a "website1.com", os usuários não verão um aviso ao baixar arquivos "jnlp" do "website1.com", mas verão um aviso de download durante o download dos arquivos "jnlp" de "website2.com".
+  Essa política está sendo preterida em favor de [AvisosDeDownloadDoTipoDeArquivoIsento](#exemptfiletypedownloadwarnings) devido a uma incompatibilidade de tipo que causou erros no Mac. Essa política ficará obsoleta após a versão 108. Se você definir ambas as políticas, os valores dessas políticas serão substituídos se forem definidos de forma diferente em [AvisosDeDownloadDoTipoDeArquivoIsento](#exemptfiletypedownloadwarnings).
+
+Você pode habilitar essa política para criar um dicionário de extensões de tipo de arquivo com uma lista de domínios correspondente que será isenta de avisos de download baseados na extensão de tipo de arquivo. Isso permite aos administradores corporativos bloquear os avisos de download baseados na extensão do tipo de arquivo de arquivos associados à um domínio listado. Por exemplo, se a extensão "jnlp" estiver associada a "website1.com", os usuários não verão um aviso ao baixar arquivos "jnlp" do "website1.com", mas verão um aviso de download durante o download dos arquivos "jnlp" de "website2.com".
 
 Os arquivos com extensões de tipo de arquivo especificadas para domínios identificados por essa política ainda estarão sujeitos aos avisos de segurança com base na extensão de tipo não-arquivo, como avisos de download de conteúdo misto e avisos do Microsoft Defender SmartScreen.
 
@@ -19263,7 +19281,7 @@ Observe que, enquanto o exemplo anterior mostra a supressão de avisos de downlo
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
   - Nome exclusivo da Política de Grupo: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
-  - Nome da Política de Grupo: Desabilitar o download de avisos com base na extensão do tipo de arquivo para tipos de arquivo especificados em domínios
+  - Nome da PG: desabilitar o download de avisos baseados em extensão de tipo de arquivo para tipos de arquivo especificados em domínios (preterido)
   - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
@@ -19291,6 +19309,121 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 <array>
   <string>{'file_extension': 'jnlp', 'domains': ['https://contoso.com', 'contoso2.com']}</string>
   <string>{'file_extension': 'swf', 'domains': ['*']}</string>
+</array>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="exemptfiletypedownloadwarnings"></a>AvisosDeDownloadDoTipoDeArquivoIsento
+
+  #### <a name="disable-download-file-type-extension-based-warnings-for-specified-file-types-on-domains"></a>Desabilitar o download de avisos com base na extensão de tipo de arquivo para tipos de arquivo especificados em domínios
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e no macOS desde a 105 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Você pode habilitar essa política para criar um dicionário de extensões de tipo de arquivo com uma lista de domínios correspondente que será isenta de avisos de download baseados na extensão de tipo de arquivo. Isso permite aos administradores corporativos bloquear os avisos de download baseados na extensão do tipo de arquivo de arquivos associados à um domínio listado. Por exemplo, se a extensão "jnlp" estiver associada a "website1.com", os usuários não verão um aviso ao baixar arquivos "jnlp" do "website1.com", mas verão um aviso de download durante o download dos arquivos "jnlp" de "website2.com".
+
+Os arquivos com extensões de tipo de arquivo especificadas para domínios identificados por essa política ainda estarão sujeitos aos avisos de segurança com base na extensão de tipo não-arquivo, como avisos de download de conteúdo misto e avisos do Microsoft Defender SmartScreen.
+
+Se você desabilitar essa política ou não a configurar, os tipos de arquivo que acionam os avisos de download baseados na extensão mostrarão avisos para o usuário.
+
+Se você habilitar essa política:
+
+* O padrão de URL deve ser formatado de acordo com [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+* A extensão do tipo de arquivo inserida deve estar em ASCII de letras minúsculas. O separador à esquerda não deve ser incluído ao listar o tipo de extensão do arquivo, então liste "txt", em vez de ".txt".
+
+Exemplo:
+
+O valor do exemplo a seguir impediria os avisos de download baseados na extensão do tipo de arquivo em extensões SWF, exe e jnlp para domínios *.contoso.com. Ele mostrará ao usuário um aviso de download baseado na extensão de tipo de arquivo em qualquer outro domínio para arquivos exe e jnlp, mas não para arquivos SWF.
+
+[ { "file_extension": "jnlp", "domains": ["contoso.com"] }, { "file_extension": "exe", "domains": ["contoso.com"] }, { "file_extension": "swf", "domains": ["*"] } ]
+
+Observe que, enquanto o exemplo anterior mostra a supressão de avisos de download com base na extensão do tipo de arquivo para todos os domínios, não é recomendável aplicar a supressão de tais avisos para todos os domínios para qualquer extensão perigosa do tipo de arquivo devido a problemas de segurança. Ele é mostrado no exemplo apenas para demonstrar a capacidade de fazê-lo.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Dictionary
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da PG: AvisosDeDownloadDoTipoDeArquivoIsento
+  - Nome da Política de Grupo: Desabilitar o download de avisos com base na extensão do tipo de arquivo para tipos de arquivo especificados em domínios
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do Valor: AvisosDeDownloadDoTipoDeArquivoIsento
+  - Tipo do valor: REG_SZ
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\ExemptFileTypeDownloadWarnings = [
+  {
+    "domains": [
+      "https://contoso.com",
+      "contoso2.com"
+    ],
+    "file_extension": "jnlp"
+  },
+  {
+    "domains": [
+      "*"
+    ],
+    "file_extension": "swf"
+  }
+]
+```
+
+  ##### <a name="compact-example-value"></a>Valor do exemplo de compactação:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\ExemptFileTypeDownloadWarnings = [{"domains": ["https://contoso.com", "contoso2.com"], "file_extension": "jnlp"}, {"domains": ["*"], "file_extension": "swf"}]
+  ```
+  
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da Chave de Preferência: AvisosDeDownloadDoTipoDeArquivoIsento
+  - Valor de exemplo:
+``` xml
+<key>ExemptFileTypeDownloadWarnings</key>
+<array>
+  <dict>
+    <key>domains</key>
+    <array>
+      <string>https://contoso.com</string>
+      <string>contoso2.com</string>
+    </array>
+    <key>file_extension</key>
+    <string>jnlp</string>
+  </dict>
+  <dict>
+    <key>domains</key>
+    <array>
+      <string>*</string>
+    </array>
+    <key>file_extension</key>
+    <string>swf</string>
+  </dict>
 </array>
 ```
   
@@ -22225,6 +22358,63 @@ Observe que a política é aplicada por processo de processamento, com o valor m
 ``` xml
 <true/>
 ```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="internetexplorerintegrationalwayswaitforunload"></a>AIntegraçãoComOInternetExplorerSempreAguardaODescarregamento
+
+  #### <a name="wait-for-internet-explorer-mode-tabs-to-completely-unload-before-ending-the-browser-session"></a>Aguarde que as guias do modo Internet Explorer sejam completamente descarregadas antes de encerrar a sessão do navegador
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows desde a 105 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Essa política faz com que o Microsoft Edge continue em execução até que todas as guias do Internet Explorer tenham sido completamente descarregadas. Isso permite que plugins do Internet Explorer como controles ActiveX executem trabalhos críticos adicionais mesmo depois que o navegador for fechado. No entanto, isso pode causar problemas de estabilidade e desempenho e os processos do Microsoft Edge podem permanecer ativos em segundo plano sem janelas visíveis se a página ou o plugin impedir o descarregamento do Internet Explorer. Essa política só deve ser usada se sua organização depender de um plugin que exija esse comportamento.
+
+Se você habilitar essa política, o Microsoft Edge sempre aguardará que as guias do modo Internet Explorer sejam totalmente descarregadas antes de encerrar a sessão do navegador.
+
+Se você desabilitar ou não configurar essa política, o Microsoft Edge nem sempre aguardará que as guias do modo Internet Explorer sejam totalmente descarregadas antes de encerrar a sessão do navegador.
+
+Para saber mais sobre o modo Internet Explorer, confira [https://go.microsoft.com/fwlink/?linkid=2174004](https://go.microsoft.com/fwlink/?linkid=2174004)
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da PG: AIntegraçãoComOInternetExplorerSempreAguardaODescarregamento
+  - Nome da PG: aguarde que as guias do modo Internet Explorer sejam completamente descarregadas antes de encerrar a sessão do navegador
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do Valor: AIntegraçãoComOInternetExplorerSempreAguardaODescarregamento
+  - Tipo de Valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
   
 
   [Voltar ao início](#microsoft-edge---policies)
@@ -25291,9 +25481,9 @@ Se você desabilitar ou não configurar essa política, a capacidade de exibir e
 
 Se você habilitar essa política, o suporte a XFA no leitor de PDF nativo será habilitado.
 
-Se você desabilitar essa política, Microsoft Edge não habilitará o suporte a XFA no leitor de PDF nativo.
+Se você desabilitar ou não configurar essa política, o Microsoft Edge não habilitará o suporte a XFA no leitor de PDF nativo.
 
-  #### <a name="supported-features"></a>Recursos compatíveis:
+  #### <a name="supported-features"></a>Recursos com suporte:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
