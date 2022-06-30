@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Canal Estável Móvel
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 06/01/2022
+ms.date: 06/27/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Canal Estável Móvel
-ms.openlocfilehash: 6edf78dbf69f6e8e42c9fd6532dcfe4c363b355a
-ms.sourcegitcommit: ab4c501ed9c2e446b0d9d938a560558696596b2d
+ms.openlocfilehash: 0d5907f23b6ea7f4013c9a58fe657db6f8eff876
+ms.sourcegitcommit: 40acd8ce9c793b944198d73a62f9ae85d229f7f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "12568602"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "12631780"
 ---
 # <a name="release-notes-for-microsoft-edge-mobile-stable-channel"></a>Notas de versão para o Canal Estável Móvel do Microsoft Edge
 
