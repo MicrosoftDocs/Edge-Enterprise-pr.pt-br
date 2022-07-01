@@ -3,23 +3,31 @@ title: Notas de versão para atualizações de segurança do Microsoft Edge
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2022
+ms.date: 06/30/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão para atualizações de segurança do Microsoft Edge
-ms.openlocfilehash: f487c01a3be52b4e09e8ab331092a815f17859b9
-ms.sourcegitcommit: f5f292c7655d783c6b01ee5f659e6608166dd327
+ms.openlocfilehash: e5ea3f5b1189d11fa798f449d002d8bce4f5abba
+ms.sourcegitcommit: 66799d5321f22f7f5e37735efc18f52975ed2c32
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "12632381"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "12632806"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Notas de versão para atualizações de segurança do Microsoft Edge
 
 Estas notas de versão fornecem informações sobre correções de segurança incluídas nas atualizações para o canal estável do Microsoft Edge.
+
+## <a name="june-30-2022"></a>30 de junho de 2022
+
+A Microsoft lançou o último **Canal Estável do Microsoft Edge (Versão 103.0.1264.44)**.  Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
+
+Esta instalação contém a seguinte atualização específica do Microsoft Edge:
+
+- [CVE-2022-33680](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-33680)
 
 ## <a name="june-23-2022"></a>23 de junho de 2022
 
