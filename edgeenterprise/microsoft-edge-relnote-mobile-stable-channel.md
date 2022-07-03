@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Canal Estável Móvel
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 06/27/2022
+ms.date: 07/01/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Canal Estável Móvel
-ms.openlocfilehash: 0d5907f23b6ea7f4013c9a58fe657db6f8eff876
-ms.sourcegitcommit: 40acd8ce9c793b944198d73a62f9ae85d229f7f8
+ms.openlocfilehash: 5fa1ab5e6ed71c682a98d312284f5b9652099934
+ms.sourcegitcommit: f14c8fb032ea6938216729a236f170188a3b82b2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "12631780"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "12633607"
 ---
 # <a name="release-notes-for-microsoft-edge-mobile-stable-channel"></a>Notas de versão para o Canal Estável Móvel do Microsoft Edge
 
@@ -27,6 +27,10 @@ Todas as atualizações de segurança do Canal Estável estão listadas em [Nota
 
 > [!NOTE]
 > Para o Canal Estável, as atualizações são implantadas progressivamente por um ou mais dias. Para saber mais, consulte [Distribuições progressivas para atualizações do Microsoft Edge](./microsoft-edge-update-progressive-rollout.md). Pode haver um atraso antes que a nova versão seja preenchida para o App Store (iOS) e o Google Play (Android).
+
+## <a name="version-1030126438-june-30"></a>Versão 103.0.1264.38: 30 de junho
+
+Correção de vários bugs.
 
 ## <a name="version-1020124530-may-31"></a>Versão 102.0.1245.30: 31 de maio
 
