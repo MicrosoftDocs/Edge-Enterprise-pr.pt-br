@@ -3,19 +3,19 @@ title: Redirecionamento do Internet Explorer para o Microsoft Edge para compatib
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 06/15/2022
+ms.date: 07/05/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Redirecionamento do Internet Explorer para o Microsoft Edge para compatibilidade com os sites modernos
-ms.openlocfilehash: 203a6af001fe5f9806bf30b84e5d1cd1c001c2d9
-ms.sourcegitcommit: 01011d970e85683f74f889651f5f402da642f34a
+ms.openlocfilehash: 7c17f00b569ae6d2bcb8459b57949bbe9c6c8a99
+ms.sourcegitcommit: 8cdf142bed93c67bd52b4f48cea4dde41da6c421
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "12595339"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "12635220"
 ---
 # <a name="redirection-from-internet-explorer-to-microsoft-edge-for-compatibility-with-modern-web-sites"></a>Redirecionamento do Internet Explorer para o Microsoft Edge para compatibilidade com os sites modernos
 
@@ -25,10 +25,10 @@ ms.locfileid: "12595339"
 ## <a name="overview"></a>Visão geral
 
 >[!Note]
-> O aplicativo da área de trabalho do Internet Explorer 11 foi desativado e está sem suporte a partir de 15 de junho de [2022](https://aka.ms/IEJune15Blog) para determinadas versões do Windows 10.  
+> O aplicativo da área de trabalho do Internet Explorer 11 foi [desativado e está sem suporte a partir de 15 de junho de 2022](https://aka.ms/IEJune15Blog) para determinadas versões do Windows 10.  
 >
-> - Você ainda pode acessar sites antigos e herdados que exigem o Internet Explorer com o modo Internet Explorer Microsoft Edge. [Saiba como >](https://aka.ms/IEmodewebsite)
-> - O aplicativo da área de trabalho do Internet Explorer 11 será redirecionado progressivamente para o navegador mais rápido e seguro Microsoft Edge e, por fim, será desabilitado por meio Windows Update. [Desabilitar o IE hoje>](/deployedge/edge-ie-disable-ie11)  
+> - Você ainda pode acessar sites antigos e herdados que exigem o Internet Explorer com o modo Internet Explorer no Microsoft Edge. [Saiba como >](https://aka.ms/IEmodewebsite)
+> - O aplicativo da área de trabalho do Internet Explorer 11 será redirecionado progressivamente para o navegador mais rápido e seguro Microsoft Edge e, por fim, será desabilitado por meio do Windows Update. [Desabilitar o IE hoje>](/deployedge/edge-ie-disable-ie11)  
 
 Muitos sites modernos têm designs incompatíveis com o Internet Explorer. Sempre que um usuário do Internet Explorer visita um site público incompatível, ele recebe uma mensagem informando que o site não é compatível com seu navegador e que precisa mudar manualmente para um navegador diferente.
 
@@ -45,8 +45,6 @@ Quando o usuário visita um site incompatível com o Internet Explorer, ele ser�
     - Windows 10 versão 1709 ou posterior
     - Windows 8.1
     - Windows 7
-
-
 
 ## <a name="redirection-experience"></a>Experiência de redirecionamento
 
@@ -66,7 +64,7 @@ O banner de incompatibilidade do site:
 - oferece para definir o Microsoft Edge como navegador padrão
 - dá ao usuário a opção de explorar o Microsoft Edge
 
-Quando um site é redirecionado do Internet Explorer para o Microsoft Edge, a guia do Internet Explorer que começou a carregar o site é fechada se não tiver nenhum conteúdo anterior. Caso contrário, a visualização da guia ativa vai para uma  página de  [suporte](https://support.microsoft.com/office/the-website-you-were-trying-to-reach-doesn-t-work-with-internet-explorer-8f5fc675-cd47-414c-9535-12821ddfc554?ui=en-US&rs=en-US&ad=US) da Microsoft que explica por que o site foi redirecionado para o Microsoft Edge.
+Quando um site é redirecionado do Internet Explorer para o Microsoft Edge, a guia Internet Explorer que começou a carregar o site é navegada para uma página de suporte [da Microsoft](https://support.microsoft.com/office/the-website-you-were-trying-to-reach-doesn-t-work-with-internet-explorer-8f5fc675-cd47-414c-9535-12821ddfc554?ui=en-US&rs=en-US&ad=US) que explica por que o site foi redirecionado para o Microsoft Edge.
 
 > [!NOTE]
 > Após o redirecionamento, os usuários podem voltar a usar o Internet Explorer para sites que não estão na lista de incompatibilidades do Internet Explorer.  
