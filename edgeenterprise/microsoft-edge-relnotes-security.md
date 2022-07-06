@@ -3,23 +3,27 @@ title: Notas de versão para atualizações de segurança do Microsoft Edge
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 06/30/2022
+ms.date: 07/05/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão para atualizações de segurança do Microsoft Edge
-ms.openlocfilehash: e5ea3f5b1189d11fa798f449d002d8bce4f5abba
-ms.sourcegitcommit: 66799d5321f22f7f5e37735efc18f52975ed2c32
+ms.openlocfilehash: cb458ce26670c6896556a25e935430fcd134f035
+ms.sourcegitcommit: 628f01e30c266955b30dc20ea86f0f4e9e3c47d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "12632806"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "12635177"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Notas de versão para atualizações de segurança do Microsoft Edge
 
 Estas notas de versão fornecem informações sobre correções de segurança incluídas nas atualizações para o canal estável do Microsoft Edge.
+
+## <a name="july-5-2022"></a>5 de julho de 2022
+
+A Microsoft está ciente das recentes explorações existentes na natureza. Estamos trabalhando ativamente para lançar uma correção de segurança.
 
 ## <a name="june-30-2022"></a>30 de junho de 2022
 
