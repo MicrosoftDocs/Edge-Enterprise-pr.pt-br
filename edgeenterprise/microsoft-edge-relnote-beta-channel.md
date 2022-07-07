@@ -3,19 +3,19 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 07/01/2022
+ms.date: 07/07/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: 0b379fb73e07d660d25082bc6d2a4e9023d94af5
-ms.sourcegitcommit: f14c8fb032ea6938216729a236f170188a3b82b2
+ms.openlocfilehash: 582cd46dcfbd730b3325456b2448bd84eb9ba584
+ms.sourcegitcommit: 42a3ee7e4b91efb49ee99b3c4cbb1be185347b1b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "12633617"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "12635796"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão do canal do Microsoft Edge beta
 
@@ -23,6 +23,26 @@ Estas notas de versão fornecem informações sobre os novos recursos e atualiza
 
 > [!NOTE]
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-1040129314-july-7"></a>Versão 104.0.1293.14: 7 de julho
+
+### <a name="policy-updates"></a>Atualizações de política
+
+#### <a name="new-policies"></a>Novas políticas
+
+- [AllowedDomainsForApps](/DeployEdge/microsoft-edge-policies#alloweddomainsforapps) – Definir domínios permitidos para acessar o Espaço de Trabalho do Google
+- [AskBeforeCloseEnabled](/DeployEdge/microsoft-edge-policies#askbeforecloseenabled) – Obter confirmação do usuário antes de fechar uma janela do navegador com várias guias
+- [BrowserCodeIntegritySetting](/DeployEdge/microsoft-edge-policies#browsercodeintegritysetting) – Definir a configuração de proteção de integridade do código do processo do navegador
+- [DoubleClickCloseTabEnabled](/DeployEdge/microsoft-edge-policies#doubleclickclosetabenabled) – recurso de clique duplo no Microsoft Edge habilitado (disponível somente na China)
+- [ImportOnEachLaunch](/DeployEdge/microsoft-edge-policies#importoneachlaunch) – Permitir a importação de dados de outros navegadores em cada inicialização do Microsoft Edge
+- [QuickSearchShowMiniMenu](/DeployEdge/microsoft-edge-policies#quicksearchshowminimenu) – habilita o mini menu do Microsoft Edge
+- [PasswordManagerRestrictLengthEnabled](/DeployEdge/microsoft-edge-policies#passwordmanagerrestrictlengthenabled) - Restringir o comprimento das senhas que podem ser salvas no Gerenciador de Senhas
+- [PDFXFAEnabled](/DeployEdge/microsoft-edge-policies#pdfxfaenabled) – Suporte a XFA no leitor de PDF nativo habilitado
+- [TextPredictionEnabled](/DeployEdge/microsoft-edge-policies#textpredictionenabled) – Previsão de texto habilitada por padrão
+
+#### <a name="obsoleted-policy"></a>Política obsoleta
+
+- [U2fSecurityKeyApiEnabled](/DeployEdge/microsoft-edge-policies#u2fsecuritykeyapienabled) - Permitir o uso da API de chave de segurança U2F preterida
 
 ## <a name="version-1030126445-july-1"></a>Versão 103.0.1264.45: 1º de julho
 
@@ -46,7 +66,7 @@ Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-1030126413-june-2"></a>Versão 103.0.1264.13: 2 de junho
 
-## <a name="feature-updates"></a>Atualizações de recursos
+### <a name="feature-updates"></a>Atualizações de recursos
 
 - **Capacidade de controlar a alternância automática de perfil.** A política [GuidedSwitchEnabled](/DeployEdge/microsoft-edge-policies#guidedswitchenabled) permite que a Microsoft Edge solicite ao usuário que mude para o perfil apropriado quando o Microsoft Edge detectar que um link é um link pessoal ou de trabalho.
 
@@ -83,41 +103,7 @@ Vários bugs e problemas de desempenho corrigidos.
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-102012457-may-10"></a>Versão 102.0.1245.7: 10 de maio
-
-### <a name="policy-updates"></a>Atualizações de política
-
-#### <a name="new-policies"></a>Novas políticas
-
-- [AllHttpAuthSchemesAllowedForOrigins](/DeployEdge/microsoft-edge-policies#allhttpauthschemesallowedfororigins): lista de origens que permitem toda a autenticação HTTP
-- [OutlookHubMenuEnabled](/DeployEdge/microsoft-edge-policies#outlookhubmenuenabled): permite que os usuários acessem o menu do Outlook
-- [NetworkServiceSandboxEnabled](/DeployEdge/microsoft-edge-policies#networkservicesandboxenabled): habilitar a área restrita do serviço de rede
-- [UserAgentClientHintsGREASEUpdateEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsgreaseupdateenabled): controla o recurso Atualização GREASE das Dicas do Cliente do Agente do Usuário
-
-## <a name="version-1010121039-may-5"></a>Versão 101.0.1210.39: 5 de maio
-
-Vários bugs e problemas de desempenho corrigidos.
-
-## <a name="version-1010121031-april-27"></a>Versão 101.0.1210.31: 27 de abril
-
-Vários bugs e problemas de desempenho corrigidos.
-
-## <a name="version-1010121026-april-22"></a>Versão 101.0.1210.26: 22 de abril
-
-Vários bugs e problemas de desempenho corrigidos.
-
-## <a name="version-1010121019-april-18"></a>Versão 101.0.1210.19: 18 de abril
-
-Vários bugs e problemas de desempenho corrigidos.
-
-## <a name="version-1010121014-april-12"></a>Versão 101.0.1210.14: 12 de abril
-
-Vários bugs e problemas de desempenho corrigidos.
-
-### <a name="feature-updates"></a>Atualizações de recursos
-
-- **Melhorias no Gerenciador de Lista de Sites Corporativos.** Agora você pode configurar cookies compartilhados entre o Microsoft Edge e o Internet Explorer em sua lista de sites corporativos. Você pode acessar o [Gerenciador de Lista de Sites Corporativos](/deployedge/edge-ie-mode-site-list-manager) em *edge://compat/SiteListManager*.
-
+<!--- from Version 102.0.1245.7: May 10 to Version 101.0.1210.14: April 12 ---->
 <!--- from Version 101.0.1210.10: April 8 to Version 100.0.1185.12: March 18 --->
 <!--- from Version 100.0.1185.10: March 17 to Version 99.0.1150.16: February 14 --->
 <!--- From Version 99.0.1150.11: February 9 to Version 98.0.1108.27: January 19 --->
@@ -132,7 +118,7 @@ Vários bugs e problemas de desempenho corrigidos.
 <!--- Archived to version 86.0.622.11: September 9 ---->
 <!--- Archived to version 85.0.564.18: July 28 ---->
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Ver também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 

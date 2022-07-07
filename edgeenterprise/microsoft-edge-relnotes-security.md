@@ -3,27 +3,27 @@ title: Notas de versão para atualizações de segurança do Microsoft Edge
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 07/05/2022
+ms.date: 07/06/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão para atualizações de segurança do Microsoft Edge
-ms.openlocfilehash: cb458ce26670c6896556a25e935430fcd134f035
-ms.sourcegitcommit: 628f01e30c266955b30dc20ea86f0f4e9e3c47d9
+ms.openlocfilehash: b87a3d3ea675b0702eac1148e0162aa735681ec1
+ms.sourcegitcommit: 2465bada4ab3063adc6f94ebb1895949a5b6219e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/06/2022
-ms.locfileid: "12635177"
+ms.locfileid: "12635633"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Notas de versão para atualizações de segurança do Microsoft Edge
 
 Estas notas de versão fornecem informações sobre correções de segurança incluídas nas atualizações para o canal estável do Microsoft Edge.
 
-## <a name="july-5-2022"></a>5 de julho de 2022
+## <a name="july-6-2022"></a>6 de julho de 2022
 
-A Microsoft está ciente das recentes explorações existentes na natureza. Estamos trabalhando ativamente para lançar uma correção de segurança.
+A Microsoft lançou o mais recente canal estável do **Microsoft Edge (versão 103.0.1264.49)**, que incorpora as atualizações de Segurança Mais recentes do projeto Chromium. Esta atualização contém uma correção para [CVE-2022-2294](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-2294), que foi relatada pela equipe do Chromium como tendo uma exploração em estado selvagem. Para obter mais informações, consulte o [Guia de atualização de segurança](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
 
 ## <a name="june-30-2022"></a>30 de junho de 2022
 

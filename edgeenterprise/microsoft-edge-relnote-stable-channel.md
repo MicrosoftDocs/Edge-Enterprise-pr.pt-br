@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: 74ea2e0ca6de4e1b5e8438526a0852b79fb82c23
-ms.sourcegitcommit: 2465bada4ab3063adc6f94ebb1895949a5b6219e
+ms.openlocfilehash: b17c25f89c71eba1bdd69d959556dcb34775823c
+ms.sourcegitcommit: 42a3ee7e4b91efb49ee99b3c4cbb1be185347b1b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "12635643"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "12635816"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão do Microsoft Edge Stable Channel
 
@@ -31,7 +31,7 @@ Essas notas de versão fornecem informações dos novos recursos e atualizaçõe
 >
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## <a name="version-1030126448-july-6"></a>Versão 103.0.1264.48: 6 de julho
+## <a name="version-1030126449-july-6"></a>Versão 103.0.1264.49: 6 de julho
 
 > [!Important]
 > Esta atualização contém uma correção para [CVE-2022-2294](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-2294), que foi relatada pela equipe do Chromium como tendo um exploit em execução. Para obter mais informações, consulte o [Guia de atualização de segurança](https://msrc.microsoft.com/update-guide).
