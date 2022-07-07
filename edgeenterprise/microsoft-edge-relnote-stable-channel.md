@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Stable Channel
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 06/30/2022
+ms.date: 07/06/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: 4215509afdad2926ade823e9ff6b4069132374d9
-ms.sourcegitcommit: 66799d5321f22f7f5e37735efc18f52975ed2c32
+ms.openlocfilehash: 74ea2e0ca6de4e1b5e8438526a0852b79fb82c23
+ms.sourcegitcommit: 2465bada4ab3063adc6f94ebb1895949a5b6219e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "12632796"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "12635643"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão do Microsoft Edge Stable Channel
 
@@ -30,6 +30,17 @@ Essas notas de versão fornecem informações dos novos recursos e atualizaçõe
 > Para o Canal Estável, as atualizações serão implantadas progressivamente por um ou mais dias. Para saber mais, consulte [Distribuições progressivas para atualizações do Microsoft Edge](./microsoft-edge-update-progressive-rollout.md).
 >
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-1030126448-july-6"></a>Versão 103.0.1264.48: 6 de julho
+
+> [!Important]
+> Esta atualização contém uma correção para [CVE-2022-2294](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-2294), que foi relatada pela equipe do Chromium como tendo um exploit em execução. Para obter mais informações, consulte o [Guia de atualização de segurança](https://msrc.microsoft.com/update-guide).
+
+As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#july-6-2022).
+
+## <a name="version-1020124556-july-6"></a>Versão 102.0.1245.56: 6 de julho
+
+Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
 
 ## <a name="version-1030126444-june-30"></a>Versão 103.0.1264.44: 30 de junho
 
