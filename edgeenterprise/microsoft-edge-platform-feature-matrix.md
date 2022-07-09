@@ -3,19 +3,19 @@ title: Suporte de plataforma para recursos do Microsoft Edge
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 07/08/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Resumo do suporte de plataforma para recursos do Microsoft Edge
-ms.openlocfilehash: a8d8efc6ec1108f23cb8bf2c0961c62a87628832
-ms.sourcegitcommit: 2465bada4ab3063adc6f94ebb1895949a5b6219e
+ms.openlocfilehash: 9168a731714751380d70cce374ba3abbb885b91a
+ms.sourcegitcommit: 53aac64c7d4c4db34d8ad023033f398ffa476522
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "12635653"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "12636715"
 ---
 # <a name="platform-support-for-microsoft-edge-features"></a>Suporte de plataforma para recursos do Microsoft Edge
 
@@ -33,7 +33,7 @@ As tabelas a seguir resumem o suporte a recursos para as plataformas Windows e m
 
 | Recursos de segurança |Win 10|Win 8.1|Win 7|macOS|Linux|URL|
 |-------------------|------|-------|-----|-----|-----|---|
-|Acesso Condicional do Azure Active Directory (Azure AD)|Sim|Sim|Sim|Sim|Não|[Acesso Condicional do Microsoft Azure Active Directory](/deployedge/ms-edge-security-conditional-access#accessing-conditional-access-protected-resources-in-microsoft-edge)|
+|Acesso Condicional do Azure Active Directory (Azure AD)|Sim|Sim|Sim|Sim|Sim|[Acesso Condicional do Microsoft Azure Active Directory](/deployedge/ms-edge-security-conditional-access#accessing-conditional-access-protected-resources-in-microsoft-edge)|
 |Microsoft Defender Application Guard|Sim (1890+)|Não|Não|Não|Não|[Microsoft Defender Application Guard](/deployedge/microsoft-edge-security-windows-defender-application-guard) |
 |Microsoft Defender SmartScreen|Sim|Sim|Sim|Sim|Sim|[Microsoft Defender SmartScreen](/deployedge/microsoft-edge-security-smartscreen) |
 |Microsoft Ponto de extremidade da DLP|Sim|Não|Não|Não|Não|[Microsoft Ponto de extremidade da DLP](/deployedge/microsoft-edge-security-dlp#microsoft-endpoint-data-loss-prevention-endpoint-dlp)|
@@ -43,7 +43,7 @@ As tabelas a seguir resumem o suporte a recursos para as plataformas Windows e m
 
 |Recursos de identidade| Win 10 | Win 8.1 | Win 7 | macOS | Linux | URL |
 |-----------------|--------|---------|-------|-------|-------|-----|
-|Login Automático (híbrido / AAD-J)|Sim|Sim|Sim|Não|Não|[híbrido/AAD-J](/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
+|Login Automático (híbrido / AAD-J)|Sim|Sim|Sim|Não|Sim|[híbrido/AAD-J](/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
 |Login Automático (ingressou no domínio)|Sim|Sim|Sim|Não|Não|[domínio ingressou](/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
 |Login Automático (A conta padrão do sistema operacional é MSA)|Sim (1709+)|Não|Não|Não|Não|[MSA](/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
 |Navegador para Logon Único na Web (SSO)|Sim|Sim|Sim|Sim|Sim|[SSO de Navegador da Web](https://www.microsoft.com/microsoft-365/roadmap?featureid=66332)|
@@ -52,7 +52,7 @@ As tabelas a seguir resumem o suporte a recursos para as plataformas Windows e m
 |Sincronização local para Active Directory (AD)|Sim|Sim|Sim|Não|Não|[Sincronização local para usuários do Active Directory (AD)](/deployedge/microsoft-edge-on-premises-sync) |
 |SSO de conexão remota|Sim (1709+)|Sim|Sim|Sim|Sim|[SSO de conexão remota](/deployedge/microsoft-edge-security-identity#seamless-sso)|
 |SSO com Token de atualização principal (PRT)|Sim (1709+)|Sim|Sim|Não|Não|[SSO com PRT](/deployedge/microsoft-edge-security-identity#sso-with-primary-refresh-token-prt)|
-|Autenticação Integrada do Windows (WIA)|Sim|Sim|Sim|Sim * (Política Obrigatória)|Sim|[WIA](/deployedge/microsoft-edge-security-identity#windows-integrated-authentication-wia)|
+|Autenticação Integrada do Windows (WIA)|Sim|Sim|Sim|Sim * (Política Obrigatória)|Não|[WIA](/deployedge/microsoft-edge-security-identity#windows-integrated-authentication-wia)|
 
 |Recursos adicionais|Win 10|Win 8.1|Win 7|macOS|Linux|URL|
 |-------------------|------|-------|-----|-----|-----|---|
