@@ -3,19 +3,19 @@ title: Guia detalhado para a política ExtensionSettings
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 05/09/2022
+ms.date: 07/11/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Um guia de referência detalhado para configurar extensões do Microsoft Edge usando a política ExtensionSettings.
-ms.openlocfilehash: a105054c22c595e3eb1745c91ec45d749d7343be
-ms.sourcegitcommit: ad1cb6d9ff6c44b692403730c85ac671415aec86
+ms.openlocfilehash: ec7e3213c6dfbd5893b2f4274f68c07b89e1a8ab
+ms.sourcegitcommit: a567f1e7ef61a1282c309beb96620d840825805e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "12550970"
+ms.lasthandoff: 07/11/2022
+ms.locfileid: "12640281"
 ---
 # <a name="a-detailed-guide-to-configuring-extensions-using-the-extensionsettings-policy"></a>Um guia detalhado para configurar extensões usando a política ExtensionSettings
 
@@ -41,18 +41,18 @@ A política ExtensionSettings pode substituir outras políticas que você defini
 Essa política pode controlar configurações como URL de atualização, de onde a extensão será baixada para instalação inicial e permissões bloqueadas. Você também pode usar essa política para identificar quais permissões não podem ser executadas. Os campos de política disponíveis são descritos na tabela a seguir.
 
 | Campo de política | Descrição |
-|--|--|
-| **allowed_types** | Só pode ser usado para configurar a configuração padrão, *. Especifica quais tipos de usuários de aplicativo ou extensão têm permissão para instalar no Microsoft Edge. O valor é uma lista de cadeias de caracteres, cada uma delas deve ser uma das seguintes: "extension", "theme", "user_script" e "hosted_app".   |
-| **blocked_install_message**| Se você impedir que os usuários instalem determinadas extensões, poderá especificar uma mensagem personalizada a ser exibida no navegador se os usuários tentarem instalá-las.<br>Acrescente texto à mensagem de erro genérica que é exibida no site de complementos do Microsoft Edge. Por exemplo, você pode dizer aos usuários como entrar em contato com o departamento de TI ou por que uma extensão específica não está disponível. A mensagem pode ter até 1.000 caracteres.   |
-|**blocked_permissions**  | Impede que os usuários instalem e executem extensões que solicitam determinadas permissões de API que sua organização não permite. Por exemplo, você pode bloquear extensões que acessam cookies. Se uma extensão exigir uma permissão que você bloqueou, o usuário não poderá instalá-la. Se os usuários instalaram a extensão anteriormente, ela não será mais carregada. Se uma extensão contiver uma permissão bloqueada como um requisito opcional, ela será instalada como de costume. Em seguida, enquanto a extensão está em execução, as permissões bloqueadas são recusadas automaticamente.<br>Para obter uma lista de permissões disponíveis, consulte [declarar permissões](/microsoft-edge/extensions-chromium/enterprise/declare-permissions).   |
-| **installation_mode**| Controla se e como as extensões especificadas são adicionadas ao Microsoft Edge. Você pode definir o modo de instalação para uma das seguintes opções:<br>- permitido: Usuários podem instalar a extensão. Se nenhum modo de instalação for definido, essa configuração será o padrão.<br>- bloqueado: Usuários não podem instalar a extensão.<br>- force_installed: Instala automaticamente a extensão sem interação do usuário. Usuários não podem removê-la. Você também precisa definir o local de download da extensão usando update_url. **Observação**: Você não pode usar essa configuração com * porque o Microsoft Edge não saberá qual extensão instalar automaticamente.<br>- normal_installed: Instala automaticamente a extensão sem interação do usuário. Usuários podem desabilitá-la. Você também precisa definir o local de download da extensão usando update_url. **Observação**: Você não pode usar essa configuração com * porque o Microsoft Edge não saberá qual extensão instalar automaticamente.<br>- removido: Usuários não podem instalar a extensão. Se os usuários instalaram a extensão anteriormente, o Microsoft Edge a remove. |
+|:----|:----|
+| **allowed_types** | Só pode ser usado para configurar a configuração padrão, *. Especifica quais tipos de usuários de aplicativo ou extensão têm permissão para instalar no Microsoft Edge. O valor é uma lista de cadeias de caracteres, cada uma das quais deve ser um dos seguintes tipos: "extension", "theme", "user_script" e "hosted_app".   |
+| **blocked_install_message**| Se você impedir que os usuários instalem determinadas extensões, poderá especificar uma mensagem personalizada a ser exibida no navegador se os usuários tentarem instalá-las.<br>Acrescente texto à mensagem de erro genérica que é exibida no site de complementos do Microsoft Edge. Por exemplo, você pode dizer aos usuários como entrar em contato com o departamento de TI ou por que uma extensão específica não está disponível. A mensagem pode ter até 1.000 caracteres.  |
+|**blocked_permissions**  | Impede que os usuários instalem e executem extensões que solicitam determinadas permissões de API que sua organização não permite. Por exemplo, você pode bloquear extensões que acessam cookies. Se uma extensão exigir uma permissão que você bloqueou, os usuários não poderão instalá-la. Se os usuários instalaram a extensão anteriormente, ela não será mais carregada. Se uma extensão contiver uma permissão bloqueada como um requisito opcional, ela será instalada como de costume. Em seguida, enquanto a extensão está em execução, as permissões bloqueadas são recusadas automaticamente.<br>Para obter uma lista de permissões disponíveis, consulte [declarar permissões](/microsoft-edge/extensions-chromium/enterprise/declare-permissions).   |
+| **installation_mode**| Controla se e como as extensões especificadas são adicionadas ao Microsoft Edge. Você pode definir o modo de instalação para uma das seguintes opções:<br>- `allowed`: os usuários podem instalar a extensão. Se nenhum modo de instalação for definido, essa configuração será o padrão.<br>- `blocked`: os usuários não podem instalar a extensão.<br>- `force_installed`: instale automaticamente a extensão sem interação do usuário. Usuários não podem removê-la. Você também precisa definir o local de download da extensão usando "update_url". **Observação**: Você não pode usar essa configuração com * porque o Microsoft Edge não saberá qual extensão instalar automaticamente.<br>- `normal_installed`: instale automaticamente a extensão sem interação do usuário. Usuários podem desabilitá-la. Você também precisa definir o local de download da extensão usando "update_url". **Observação**: Você não pode usar essa configuração com * porque o Microsoft Edge não saberá qual extensão instalar automaticamente.<br>- `removed`: os usuários não podem instalar a extensão. Se os usuários instalaram a extensão anteriormente, o Microsoft Edge a remove. |
 | **install_sources** | Pode ser usado somente para configurar a configuração padrão, *. Especifica quais URLs têm permissão para instalar extensões. O local do arquivo *.crx e a página em que o download é iniciado (o referenciador) devem ser permitidos por esses padrões. Para obter exemplos de padrão de URL, consulte [padrões de correspondência](/microsoft-edge/extensions-chromium/enterprise/match-patterns).  |
 | **minimum_version_required** |Microsoft Edge desabilita extensões, incluindo extensões instaladas à força, com uma versão anterior à versão mínima especificada.<br>O formato da cadeia de caracteres de versão é o mesmo usado no manifesto da extensão.     |
-| **update_url** | Aplica-se somente a force_installed e normal_installed. Especifica de onde Microsoft Edge deve baixar uma extensão. Se a extensão estiver hospedada no site de Complementos do Microsoft Edge, use este local: `https://edge.microsoft.com/extensionwebstorebase/v1/crx`.<br>Microsoft Edge usa a URL que você especifica para a instalação inicial da extensão. Para atualizações de extensão subsequentes, o Microsoft Edge usa a URL no manifesto da extensão.   |
+| **update_url** | Aplica-se somente a `force_installed` e `normal_installed`. Especifica de onde Microsoft Edge deve baixar uma extensão. Se a extensão estiver hospedada no site de Complementos do Microsoft Edge, use este local: `https://edge.microsoft.com/extensionwebstorebase/v1/crx`.<br>Microsoft Edge usa a URL que você especifica para a instalação inicial da extensão. Para atualizações de extensão subsequentes, o Microsoft Edge usa a URL no manifesto da extensão.   |
 | **runtime_allowed_hosts**| Permite que as extensões interajam com sites especificados, mesmo que também estejam definidas em runtime_blocked_hosts. Você pode especificar até 100 entradas. Entradas extras são descartadas.<br>O formato de padrão de host é semelhante a  [padrões de correspondência](/microsoft-edge/extensions-chromium/enterprise/match-patterns) ,contudo você não pode definir o caminho. Por exemplo:<br>- *://*.example.com<br>- *://exemplo.*— há suporte para curingas eTLD     |
-| **runtime_blocked_hosts**| Impede que as extensões interajam ou modifiquem sites que você especificar. As modificações incluem bloqueio de injeção de JavaScript, acesso a cookie e modificações de solicitação da Web.<br>Você pode especificar até 100 entradas. Entradas extras são descartadas.<br>O formato de padrão do host é semelhante aos padrões de correspondência, contudo você não pode definir o caminho. Por exemplo:<br>- *://*.example.com<br>- *://exemplo.*— há suporte para curingas eTLD   |
-| **override_update_url**| Disponível no Microsoft Edge 93<br>Se esse campo `true`for definido como , Microsoft Edge usará a URL de atualização especificada na política ExtensionSettings ou na política ExtensionInstallForcelist, para atualizações de extensão subsequentes.<br>Se esse campo não estiver definido ou `false`definido como, Microsoft Edge usará a URL especificada no manifesto da extensão para atualizações.|
-| **toolbar_state**| Disponível na Microsoft Edge 94<br>Essa configuração de política permite forçar a exibição de uma extensão instalada na barra de ferramentas. O estado padrão é para `default_shown` todas as extensões. Os estados a seguir são possíveis para essa configuração<br>-`force_shown`: você pode optar por forçar a exibição de uma extensão instalada na barra de ferramentas. Os usuários não poderão ocultar o ícone de extensão especificado da barra de ferramentas.<br>-`default_hidden`: nesse estado, as extensões são ocultadas da barra de ferramentas na instalação. Os usuários podem exibi-los na barra de ferramentas, se necessário.<br>-`default_shown`: essa é a configuração padrão de todas as extensões instaladas no navegador. |
+| **runtime_blocked_hosts**| Impede que as extensões interajam ou modifiquem sites que você especificar. As modificações incluem bloqueio de injeção de JavaScript, acesso a cookie e modificações de solicitação da Web.<br>Você pode especificar até 100 entradas. Entradas extras são descartadas.<br>O formato do padrão de host é semelhante aos padrões de correspondência, por exemplo, você não pode definir o caminho. Por exemplo:<br>- *://*.example.com<br>- *://exemplo.*— há suporte para curingas eTLD   |
+| **override_update_url**| Disponível no Microsoft Edge 93<br>Se esse campo `true`for definido como, o Microsoft Edge usará a URL de atualização especificada na política ExtensionSettings ou na política ExtensionInstallForcelist para atualizações de extensão subsequentes.<br>Se esse campo não estiver definido ou `false`definido como, o Microsoft Edge usará a URL especificada no manifesto da extensão para atualizações.|
+| **toolbar_state**| Disponível no Microsoft Edge 103<br>Essa configuração de política permite forçar a exibição de uma extensão instalada na barra de ferramentas. O estado padrão é para `default_hidden` todas as extensões. Os seguintes valores são possíveis para essa configuração:<br>-`force_shown`: você pode optar por forçar a exibição de uma extensão instalada na barra de ferramentas. Os usuários não poderão ocultar o ícone de extensão especificado da barra de ferramentas.<br>-`default_hidden`: essa é a configuração padrão para todas as extensões instaladas no navegador.<br>-`default_shown`: nesse estado, as extensões são mostradas na barra de ferramentas na instalação. Os usuários podem ocultá-los da barra de ferramentas, se necessário. |
 
 As seguintes chaves são permitidas no escopo global (*):
 
@@ -85,7 +85,7 @@ As seguintes chaves são permitidas em um escopo de URL de atualização:
 
 As etapas para usar a política de configurações de extensão usando GPO pressupõem que você já importou o ADM/ADMX para Políticas do Microsoft Edge.
 
-1. Abra o editor de política de grupo e vá **para Microsoft Edge > Extensões > definir a política de configuração de gerenciamento de extensão**.
+1. Abra o editor de política de grupo e vá **para o Microsoft Edge > Extensões > configurar a política de configuração de gerenciamento de extensão**.
 2. Habilite a política e insira seus dados compactos de JSON (JavaScript Object Notation) na caixa de texto como uma única linha sem quebras de linha.
 3. Para validar a política e compactá-la em uma única linha, use uma ferramenta de compactação JSON.
 
@@ -140,11 +140,11 @@ O próximo exemplo de JSON impede que qualquer extensão seja executada em `.exa
 
 Ao usar installation_mode como "force_installed", a extensão é instalada automaticamente sem interação do usuário. Um usuário não pode desabilitar ou remover a extensão. Se uma extensão for instalada "normal" ou "force", o campo **update_url** também deverá ser definido. Esse campo aponta para o local do qual a extensão pode ser instalada. Use os seguintes locais para o campo **update_url**:
 
-- Se a extensão que você está baixando estiver hospedada no repositório de complementos Microsoft Edge, use o local no seguinte exemplo de JSON:
+- Se a extensão que você está baixando estiver hospedada no repositório de Complementos do Microsoft Edge, use o local no seguinte exemplo de JSON:
 
    `{"nckgahadaanghapdoaajjgafhacjaoii": {"installation_mode": "force_installed","update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx"}}`
 
-- Se a extensão que você está baixando estiver hospedada no Chrome Web Store, use o local no seguinte exemplo de JSON:
+- Se a extensão que você está baixando estiver hospedada na Chrome Web Store, use o local no seguinte exemplo de JSON:
 
    `{"nckgiihapdoaajjgafhacjgahadaanao": {"installation_mode": "force_installed","update_url": "https://clients2.google.com/service/update2/crx"}}`
 
@@ -170,7 +170,7 @@ Para o Microsoft Edge, todas as configurações serão iniciadas sob esta chave:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\`
 
-A próxima chave que você criará é a ID de Extensão para escopo individual ou um asterisco (*) para o Escopo Padrão. Por exemplo, você usaria o seguinte local no Registro para configurações que se aplicam ao Google Hangouts:
+A próxima chave que você criará é a ID da Extensão para escopo individual ou um asterisco (*) para o Escopo Padrão. Por exemplo, você usaria o seguinte local no Registro para configurações que se aplicam ao Google Hangouts:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings\nckgahadagoaajjgafhacjanaoiihapd`
 
@@ -188,7 +188,6 @@ Configurações diferentes exigirão formatos diferentes, dependendo se são uma
 - runtime_blocked_hosts = Matriz de cadeias de caracteres
 - runtime_allowed_hosts = Matriz de cadeias de caracteres
 - blocked_install_message = Cadeia de caracteres
-
 
 ## <a name="see-also"></a>Veja também
 
