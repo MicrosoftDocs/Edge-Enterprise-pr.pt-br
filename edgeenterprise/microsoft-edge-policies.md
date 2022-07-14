@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 06/29/2022
+ms.date: 07/13/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: d3254794a4f5658a6a454bc90732e49bd46d0555
-ms.sourcegitcommit: 40acd8ce9c793b944198d73a62f9ae85d229f7f8
+ms.openlocfilehash: 020def66fce277e8dd32ec65c67d5c773f9b5e3e
+ms.sourcegitcommit: 4df246b4b7fe42788bf1754031821c8acf305869
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "12631822"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "12650701"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -7216,7 +7216,7 @@ Se você habilitar essa política ou não a configurar, as Políticas de Gerenci
 
 Se você desabilitar essa política, o Microsoft Edge não se comunicará com o Intune para solicitar políticas de MAM.
 
-  #### <a name="supported-features"></a>Recursos com suporte:
+  #### <a name="supported-features"></a>Recursos compatíveis:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -10305,7 +10305,7 @@ Use as informações anteriores ao configurar essa política.
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Nome do Valor: SleepingTabsTimeout
-  - Tipo de Valor: REG_DWORD
+  - Tipo de valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -12415,7 +12415,7 @@ Se você habilitar ou não configurar essa política, os usuários poderão abri
 
 Se você desabilitar essa política, sempre que o usuário executar uma ação que acione uma caixa de diálogo de seleção de arquivo (como importar favoritos, carregar arquivos ou salvar links), uma mensagem será exibida, e o usuário deverá clicar em Cancelar na caixa de diálogo de seleção de arquivo.
 
-  #### <a name="supported-features"></a>Recursos com suporte:
+  #### <a name="supported-features"></a>Recursos compatíveis:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: não
@@ -18944,7 +18944,7 @@ Mapeamento das opções de política:
 
 * StrictMode (2) = Modo Estrito
 
-* BasicMode (2) = Modo Básico
+* BasicMode (3) = Modo básico
 
 Use as informações anteriores ao configurar essa política.
 
@@ -23271,7 +23271,7 @@ Use as informações anteriores ao configurar essa política.
 
   - Nome Exclusivo da Política de Grupo: InternetExplorerIntegrationSiteRedirect
   - Nome da Política de Grupo: Especificar como as navegações "na página" para sites não configurados se comportam quando iniciadas nas páginas do modo Internet Explorer.
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -23742,7 +23742,7 @@ Use as informações anteriores ao configurar essa política.
 
   - Nome exclusivo da política de grupo: IntranetRedirectBehavior
   - Nome da política de grupo: comportamento de redirecionamento da intranet
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -28462,7 +28462,7 @@ Se você não configurar esta política:
    - Os usuários da conta Microsoft (exclui contas do Azure AD) em busca, na página de nova guia, e conquista de mercados verão a experiência do Microsoft Rewards experiência em seu perfil de usuário do Microsoft Edge.
    - A configuração para habilitar o Microsoft Rewards nas configurações do Microsoft Edge será habilitada e alternada.
 
-  #### <a name="supported-features"></a>Recursos com suporte:
+  #### <a name="supported-features"></a>Recursos compatíveis:
 
   - Pode ser obrigatório: Sim
   - Pode ser recomendável: Sim
@@ -31329,7 +31329,7 @@ Se você definir essa política como falsa ou não definir essa política, os re
 
   - Nome Exclusivo da Política de Grupo: WebComponentsV0Enabled
   - Nome da Política de Grupo: Reabilitar a API de componentes Web V0 até M84 (obsoleta)
-  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
