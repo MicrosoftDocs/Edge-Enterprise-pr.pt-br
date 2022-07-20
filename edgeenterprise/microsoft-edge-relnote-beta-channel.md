@@ -3,19 +3,19 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 07/18/2022
+ms.date: 07/19/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: 3fabb5dee08889ddc3ea765f9ea6bca61396c555
-ms.sourcegitcommit: 9f432d40c52b14107f48f9776b7fabbace487dff
+ms.openlocfilehash: 6af22d91a9445d28b7526bbc4fcdc53eca152acd
+ms.sourcegitcommit: 2a3ad2cee75308ff3cc9dda83311ca376a4fe9e1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "12669225"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "12674203"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão do canal do Microsoft Edge beta
 
@@ -27,6 +27,10 @@ Estas notas de versão fornecem informações sobre os novos recursos e atualiza
 ## <a name="version-1040129325-july-18"></a>Versão 104.0.1293.25: 18 de julho
 
 Vários bugs e problemas de desempenho corrigidos.
+
+### <a name="feature-updates"></a>Atualizações de recursos
+
+- **Importe dados do Chrome sem o Chrome durante a Experiência de Primeira Execução.** Esse recurso permite que um usuário traga seus dados do Chrome fazendo logon em sua conta do Google durante a Experiência de Primeira Execução do Microsoft Edge. Esse recurso pode ser desativado desabilitando a Experiência de Primeira Execução com a política [HideFirstRunExperience](/deployedge/microsoft-edge-policies#hidefirstrunexperience) ou definindo [AutoImportAtFirstRun](/deployedge/microsoft-edge-policies#autoimportatfirstrun) como 'DisabledAutoImport'.
 
 ## <a name="version-1040129321-july-14"></a>Versão 104.0.1293.21: 14 de julho
 
