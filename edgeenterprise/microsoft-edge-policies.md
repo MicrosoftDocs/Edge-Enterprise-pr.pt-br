@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 07/13/2022
+ms.date: 07/19/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 020def66fce277e8dd32ec65c67d5c773f9b5e3e
-ms.sourcegitcommit: 4df246b4b7fe42788bf1754031821c8acf305869
+ms.openlocfilehash: 525c6b75ea0817a68c360845a02fac78e4db66c8
+ms.sourcegitcommit: 2a3ad2cee75308ff3cc9dda83311ca376a4fe9e1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2022
-ms.locfileid: "12650701"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "12674204"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -28,16 +28,6 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
-
-## <a name="new-policies"></a>Novas políticas
-
-A tabela a seguir lista as políticas novas e preteridas que estão nesta atualização de artigo.
-
-| Nome da política | Legenda |
-|:-----|:-----|
-|[AvisosDeDownloadDoTipoDeArquivoIsento](#exemptfiletypedownloadwarnings)|Desabilitar o download de avisos com base na extensão de tipo de arquivo para tipos de arquivo especificados em domínios|
-|[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Desabilitar o download de avisos baseados em extensão de tipo de arquivo para tipos de arquivo especificados em domínios (obsoletos)|
-|[AIntegraçãoComOInternetExplorerSempreAguardaODescarregamento](#internetexplorerintegrationalwayswaitforunload)|Aguarde que as guias do modo Internet Explorer sejam completamente descarregadas antes de encerrar a sessão do navegador|
 
 ## <a name="available-policies"></a>Políticas disponíveis
 
@@ -16037,7 +16027,9 @@ Se configurada, essa política fará uma escolha em nome do usuário. As opçõe
 
 * 4 = (Não utilizado no momento)
 
-Os formatos mais ricos podem não ter suporte em alguns destinos e/ou websites. Assim, se essa política for para ser configurada, a opção URL simples é recomendável.
+Os formatos mais ricos podem não ter suporte em alguns destinos e/ou websites. Nesses cenários, a opção de URL simples é recomendada ao configurar essa política.
+
+A política recomendada está disponível no Microsoft Edge 105 ou posterior.
 
 Mapeamento das opções de política:
 
@@ -16052,7 +16044,7 @@ Use as informações anteriores ao configurar essa política.
   #### <a name="supported-features"></a>Recursos compatíveis:
 
   - Pode ser obrigatório: Sim
-  - Pode ser recomendável: não
+  - Pode ser recomendável: Sim
   - Atualização dinâmica das políticas: Sim
 
   #### <a name="data-type"></a>Tipo de dados:
@@ -16066,13 +16058,13 @@ Use as informações anteriores ao configurar essa política.
   - Nome exclusivo da GP: ConfigureFriendlyURLFormat
   - Nome da Política de Grupo: Configure o formato de colagem padrão das URLs copiadas do Microsoft Edge e determine se outros formatos estarão disponíveis para os usuários.
   - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
-  - Caminho da Política de Grupo (recomendado): N/A
+  - Caminho da Política de Grupo (recomendado): Administrative Templates/Microsoft Edge - Default Settings (usuários podem substituir)/
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
 
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
-  - Caminho (recomendado): N/A
+  - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Nome do valor: ConfigureFriendlyURLFormat
   - Tipo de valor: REG_DWORD
 
@@ -23271,7 +23263,7 @@ Use as informações anteriores ao configurar essa política.
 
   - Nome Exclusivo da Política de Grupo: InternetExplorerIntegrationSiteRedirect
   - Nome da Política de Grupo: Especificar como as navegações "na página" para sites não configurados se comportam quando iniciadas nas páginas do modo Internet Explorer.
-  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -31573,6 +31565,8 @@ Se você definir essa política como "AllowAllInterfaces" ou "AllowPublicAndPriv
 Se você definir essa política como "AllowPublicInterfaceOnly" ou "DisableNonProxiedUdp", o WebRTC não vai expor o endereço IP local.
 
 Se você não definir essa política, ou se a desabilitada, WebRTC exporá o endereço IP local.
+
+Observação: essa política não fornece uma opção para excluir domínios específicos.
 
 Mapeamento das opções de política:
 
