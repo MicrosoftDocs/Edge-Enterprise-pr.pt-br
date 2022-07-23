@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Stable Channel
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 07/14/2022
+ms.date: 07/22/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: c80fc96e2e781d84cfd055af3f12f024d8068616
-ms.sourcegitcommit: c48187228ead35516e15e68a8c68e3e6b4e3d1cc
+ms.openlocfilehash: 02b26275dfdc558f4fdc7c8e2a50ffaa712b0a49
+ms.sourcegitcommit: 27f3a1f2f49177bc1140dc332ec8c15f74a6d856
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2022
-ms.locfileid: "12668943"
+ms.lasthandoff: 07/23/2022
+ms.locfileid: "12675880"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão do Microsoft Edge Stable Channel
 
@@ -31,6 +31,17 @@ Essas notas de versão fornecem informações dos novos recursos e atualizaçõe
 >
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## <a name="version-1030126471-july-22"></a>Versão 103.0.1264.71: 22 de julho
+
+As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#july-22-2022).
+
+## <a name="version-1030126462-july-14"></a>Versão 103.0.1264.62: 14 de julho
+
+Vários bugs e problemas de desempenho corrigidos. Recomendamos que os usuários instalem essa atualização para resolver o problema a seguir.
+
+### <a name="known-issue"></a>Problema conhecido
+
+Microsoft Edge no Windows 10 versão 1809 de 32 bits (x86) pode ter problemas de inicialização com as próximas Atualizações do Windows que não são de segurança de julho (KB5015880 - 17763.3224). Isso foi corrigido com a versão mais recente do canal estável do Microsoft Edge, versão 103.0.1264.62. Os usuários corporativos que encontram esse problema na versão 102 do canal Estável Estendido Microsoft Edge precisam desabilitar a política [NewSmartScreenLibraryEnabled](/deployedge/microsoft-edge-policies#newsmartscreenlibraryenabled).
 
 ## <a name="version-1030126449-july-6"></a>Versão 103.0.1264.49: 6 de julho
 
