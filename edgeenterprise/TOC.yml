@@ -1,4 +1,4 @@
-# last revised 06/15/2022
+# last revised 07/27/2022
 - name: Documentação do Microsoft Edge Enterprise
   href: index.yml
 - name: Documentação do Microsoft Edge
@@ -91,6 +91,8 @@
       href: edge-for-virtualized-desktop-infrastructure.md
     - name: Configurações e experimentação
       href: edge-configuration-and-experiments.md
+    - name: Página de nova guia corporativa
+      href: microsoft-edge-enterprise-ntp.md
     - name: Suporte e configuração de identidade
       href: microsoft-edge-security-identity.md
     - name: Microsoft Edge e Enterprise State Roaming
