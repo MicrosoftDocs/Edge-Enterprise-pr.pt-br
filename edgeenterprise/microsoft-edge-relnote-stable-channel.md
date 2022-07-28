@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Stable Channel
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 07/22/2022
+ms.date: 07/27/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: 02b26275dfdc558f4fdc7c8e2a50ffaa712b0a49
-ms.sourcegitcommit: 27f3a1f2f49177bc1140dc332ec8c15f74a6d856
+ms.openlocfilehash: 7cb5b8eeff41c87c671d162a2ed05de566ebd72f
+ms.sourcegitcommit: 6559a5eb700296990b095a0a9d3eab2878050c92
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2022
-ms.locfileid: "12675880"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "12685251"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão do Microsoft Edge Stable Channel
 
@@ -30,6 +30,10 @@ Essas notas de versão fornecem informações dos novos recursos e atualizaçõe
 > Para o Canal Estável, as atualizações serão implantadas progressivamente por um ou mais dias. Para saber mais, consulte [Distribuições progressivas para atualizações do Microsoft Edge](./microsoft-edge-update-progressive-rollout.md).
 >
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-1020124562-july-27"></a>Versão 102.0.1245.62: 27 de julho
+
+Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
 
 ## <a name="version-1030126471-july-22"></a>Versão 103.0.1264.71: 22 de julho
 
@@ -235,7 +239,7 @@ Correção de vários bugs e problemas de desempenho para a versão Estável Est
 ## <a name="version-990115055-march-26"></a>Versão 99.0.1150.55: 26 de março
 
 > [!Important]
-> Esta atualização contém uma correção para [CVE-2022-1096](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-1096), que foi relatada pela equipe do Chromium como tendo uma exploração em estado selvagem. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
+> Esta atualização contém uma correção para [CVE-2022-1096](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-1096), que foi relatada pela equipe do Chromium como tendo uma exploração em estado selvagem. Para obter mais informações, consulte o [Guia de atualização de segurança](https://msrc.microsoft.com/update-guide).
 
 As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#march-26-2022).
 
