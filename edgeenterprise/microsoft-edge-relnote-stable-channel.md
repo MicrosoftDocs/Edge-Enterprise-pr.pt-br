@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Stable Channel
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 07/27/2022
+ms.date: 07/28/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: 7cb5b8eeff41c87c671d162a2ed05de566ebd72f
-ms.sourcegitcommit: 6559a5eb700296990b095a0a9d3eab2878050c92
+ms.openlocfilehash: 6e77e3160ecf5ab1c0d7faafcabcce40a64608cc
+ms.sourcegitcommit: c7470aff3e66ea1bbfce5b858cfe9f4479bb089c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "12685251"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "12685410"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão do Microsoft Edge Stable Channel
 
@@ -30,6 +30,10 @@ Essas notas de versão fornecem informações dos novos recursos e atualizaçõe
 > Para o Canal Estável, as atualizações serão implantadas progressivamente por um ou mais dias. Para saber mais, consulte [Distribuições progressivas para atualizações do Microsoft Edge](./microsoft-edge-update-progressive-rollout.md).
 >
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-1030126477-july-28"></a>Versão 103.0.1264.77: 28 de julho
+
+Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-1020124562-july-27"></a>Versão 102.0.1245.62: 27 de julho
 
