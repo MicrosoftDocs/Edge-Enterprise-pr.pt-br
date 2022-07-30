@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 07/19/2022
+ms.date: 07/28/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 525c6b75ea0817a68c360845a02fac78e4db66c8
-ms.sourcegitcommit: 2a3ad2cee75308ff3cc9dda83311ca376a4fe9e1
+ms.openlocfilehash: 2e96ee9d65a6e1e162ca9eef46f0e82ea1bc9dac
+ms.sourcegitcommit: c7470aff3e66ea1bbfce5b858cfe9f4479bb089c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "12674204"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "12685440"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -28,6 +28,14 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
+
+## <a name="new-policies"></a>Novas políticas
+
+A tabela a seguir lista as novas políticas que estão nesta atualização de artigo.
+
+| Nome da política | Legenda |
+|:-----|:-----|
+|[MicrosoftEditorProofingEnabled](#microsofteditorproofingenabled)|Verificação ortográfica fornecida pelo Microsoft Editor|
 
 ## <a name="available-policies"></a>Políticas disponíveis
 
@@ -496,6 +504,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|Permitir que o Google Cast se conecte a dispositivos de conversão em todos os endereços IP|
 |[MetricsReportingEnabled](#metricsreportingenabled)|Ativar relatórios de dados relacionados a falhas e uso (obsoleto)|
 |[MicrosoftEdgeInsiderPromotionEnabled](#microsoftedgeinsiderpromotionenabled)|Promoção do Microsoft Edge Insider Habilitada|
+|[MicrosoftEditorProofingEnabled](#microsofteditorproofingenabled)|Verificação ortográfica fornecida pelo Microsoft Editor|
 |[MicrosoftOfficeMenuEnabled](#microsoftofficemenuenabled)|Permitir que os usuários acessem o menu do Microsoft Office|
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Habilitar Oclusão de Janela Nativa (preterida)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Definir um tempo limite para o atraso da navegação da guia para a lista de sites do Modo Empresarial|
@@ -8075,15 +8084,23 @@ Essa política só afeta o botão revelar senha do navegador, mas não afeta os 
 
 Essa política de grupo configura o seletor de botão de opção que habilita esse recurso para os usuários. Ele também tem um controle de frequência em que os usuários podem especificar com que frequência eles gostaria de receber uma solicitação de autenticação.
 
-Se você definir essa política como “Automaticamente, desabilitar essa política ou não configurar essa política, o preenchimento automático não terá nenhum fluxo de autenticação”.
+Se você definir esta política como 'Automaticamente', desabilitar esta política ou não configurar esta política, o preenchimento automático não terá nenhum fluxo de autenticação.
 
-Se você definir essa política como “Com senha do dispositivo”, os usuários precisarão inserir a senha do dispositivo (ou o modo preferencial de autenticação em Windows Hello se estiver no Windows - PIN, reconhecimento facial ou impressão digital e opções equivalentes no mac) para provar sua identidade e, somente então, a senha será preenchida automaticamente. Além disso, a frequência do aviso de autenticação seria definida como “Sempre” por padrão. No entanto, os usuários podem alterá-la para a outra opção, que é “Uma vez a cada sessão de navegação”.
+Se você definir esta política como 'WithDevicePassword', os usuários terão que digitar a senha do dispositivo (ou modo de autenticação preferido no Windows) para provar sua identidade antes que a senha seja preenchida automaticamente. Os modos de autenticação incluem Windows Hello, PIN, reconhecimento facial ou impressão digital. A frequência do prompt de autenticação será definida como 'Sempre' por padrão. No entanto, os usuários podem alterá-lo para a outra opção, que é 'Uma vez a cada sessão de navegação'.
+
+Se você definir essa política como 'WithCustomPrimaryPassword', os usuários serão solicitados a criar sua senha personalizada e, em seguida, serem redirecionados para Configurações. Depois que a senha personalizada for definida, os usuários poderão se autenticar usando a senha personalizada e suas senhas serão preenchidas automaticamente após a autenticação bem-sucedida. A frequência do prompt de autenticação será definida como 'Sempre' por padrão. No entanto, os usuários podem alterá-lo para a outra opção, que é 'Uma vez a cada sessão de navegação'.
+
+Se você definir esta política como 'AutofillOff', as senhas salvas não serão mais sugeridas para preenchimento automático.
 
 Mapeamento das opções de política:
 
 * Automaticamente (0) = Automaticamente
 
 * WithDevicePassword (1) = Com senha do dispositivo
+
+* WithCustomPrimaryPassword (2) = Com senha primária personalizada
+
+* AutofillOff (3) = Autopreenchimento desativado
 
 Use as informações anteriores ao configurar essa política.
 
@@ -9234,7 +9251,7 @@ Use as informações anteriores ao configurar essa política.
 
   - Nome exclusivo da Política de Grupo: PrintingBackgroundGraphicsDefault
   - Nome da Política de Grupo: modo de impressão de gráficos em segundo plano padrão
-  - Caminho da Política de Grupo (obrigatório): Modelos administrativos/Microsoft Edge/Impressão
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Printing
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -23734,7 +23751,7 @@ Use as informações anteriores ao configurar essa política.
 
   - Nome exclusivo da política de grupo: IntranetRedirectBehavior
   - Nome da política de grupo: comportamento de redirecionamento da intranet
-  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -24826,6 +24843,71 @@ Se você desabilitar essa política, conteúdo promocional do Microsoft Edge Ins
   - Valor de exemplo:
 ``` xml
 <true/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="microsofteditorproofingenabled"></a>MicrosoftEditorProofingEnabled
+
+  #### <a name="spell-checking-provided-by-microsoft-editor"></a>Verificação ortográfica fornecida pelo Microsoft Editor
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e no macOS desde a 105 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  O serviço Microsoft Editor fornece verificação ortográfica e gramatical aprimorada para campos de texto editáveis em páginas da Web.
+
+Se você habilitar ou não configurar essa política, a verificação ortográfica do Microsoft Editor poderá ser usada para campos de texto qualificados.
+
+Se você desabilitar esta política, a verificação ortográfica só poderá ser fornecida por mecanismos locais que usam a plataforma ou os serviços Hunspell. Os resultados desses mecanismos podem ser menos informativos do que os resultados que o Microsoft Editor pode fornecer.
+
+Se a política [SpellcheckEnabled](#spellcheckenabled) estiver definida como desabilitada ou o usuário desabilitar a verificação ortográfica na página de configurações, essa política não terá efeito.
+
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo do GP: MicrosoftEditorProofingEnabled
+  - Nome do GP: verificação ortográfica fornecida pelo Microsoft Editor
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: MicrosoftEditorProofingEnabled
+  - Tipo de Valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da Chave de Preferência: MicrosoftEditorProofingEnabled
+  - Valor de exemplo:
+``` xml
+<false/>
 ```
   
 
@@ -32049,7 +32131,7 @@ Se essa política não estiver definida, a detecção de ocultação da janela s
   [Voltar ao início](#microsoft-edge---policies)
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Ver também
 
 - [Configurar o Microsoft Edge](configure-microsoft-edge.md)
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
