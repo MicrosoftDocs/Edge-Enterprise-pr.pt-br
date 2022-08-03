@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 07/28/2022
+ms.date: 08/02/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 2e96ee9d65a6e1e162ca9eef46f0e82ea1bc9dac
-ms.sourcegitcommit: c7470aff3e66ea1bbfce5b858cfe9f4479bb089c
+ms.openlocfilehash: 37ca303689114aaf3e31fc53b9ba2a11ab3bb028
+ms.sourcegitcommit: b7e46b77136f98d3cfad0f509124f5f2de12ca7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "12685440"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "12687093"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -31,11 +31,12 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 
 ## <a name="new-policies"></a>Novas políticas
 
-A tabela a seguir lista as novas políticas que estão nesta atualização de artigo.
+A tabela a seguir lista as políticas novas e preteridas que estão nesta atualização de artigo.
 
 | Nome da política | Legenda |
 |:-----|:-----|
-|[MicrosoftEditorProofingEnabled](#microsofteditorproofingenabled)|Verificação ortográfica fornecida pelo Microsoft Editor|
+|[MicrosoftEditorSynonymsEnabled](#microsofteditorsynonymsenabled)|Sinônimos são fornecidos ao usar o verificador ortográfico do Microsoft Editor|
+|[UnthrottledNestedTimeoutEnabled](#unthrottlednestedtimeoutenabled)|O setTimeout do JavaScript não será fixado até que um limite de aninhamento mais alto seja definido (preterido)|
 
 ## <a name="available-policies"></a>Políticas disponíveis
 
@@ -505,6 +506,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[MetricsReportingEnabled](#metricsreportingenabled)|Ativar relatórios de dados relacionados a falhas e uso (obsoleto)|
 |[MicrosoftEdgeInsiderPromotionEnabled](#microsoftedgeinsiderpromotionenabled)|Promoção do Microsoft Edge Insider Habilitada|
 |[MicrosoftEditorProofingEnabled](#microsofteditorproofingenabled)|Verificação ortográfica fornecida pelo Microsoft Editor|
+|[MicrosoftEditorSynonymsEnabled](#microsofteditorsynonymsenabled)|Sinônimos são fornecidos ao usar o verificador ortográfico do Microsoft Editor|
 |[MicrosoftOfficeMenuEnabled](#microsoftofficemenuenabled)|Permitir que os usuários acessem o menu do Microsoft Office|
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Habilitar Oclusão de Janela Nativa (preterida)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Definir um tempo limite para o atraso da navegação da guia para a lista de sites do Modo Empresarial|
@@ -590,6 +592,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[U2fSecurityKeyApiEnabled](#u2fsecuritykeyapienabled)|Permitir o uso da API de Chave de Segurança U2F preterida (obsoleto)|
 |[URLAllowlist](#urlallowlist)|Definir uma lista de URLs permitidas|
 |[URLBlocklist](#urlblocklist)|Bloquear o acesso a uma lista de URLs|
+|[UnthrottledNestedTimeoutEnabled](#unthrottlednestedtimeoutenabled)|O setTimeout do JavaScript não será fixado até que um limite de aninhamento mais alto seja definido (preterido)|
 |[UpdatePolicyOverride](#updatepolicyoverride)|Especifica como o Microsoft Edge Update lida com as atualizações disponíveis do Microsoft Edge|
 |[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|Habilitar o recurso Dicas do cliente usuário-agente (obsoleto)|
 |[AtualizaçãoGREASEdeDicasDoClienteDoAgenteDoUsuárioHabilitada](#useragentclienthintsgreaseupdateenabled)|Controlar o recurso de atualização GREASE de Dicas do Cliente do Agente do Usuário|
@@ -9251,7 +9254,7 @@ Use as informações anteriores ao configurar essa política.
 
   - Nome exclusivo da Política de Grupo: PrintingBackgroundGraphicsDefault
   - Nome da Política de Grupo: modo de impressão de gráficos em segundo plano padrão
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Printing
+  - Caminho da Política de Grupo (obrigatório): Modelos administrativos/Microsoft Edge/Impressão
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -14680,6 +14683,8 @@ Definir essa política como Desabilitada impedirá que o navegador habilita a pr
 
 Essa política está disponível apenas em instâncias do Windows que ingressaram em um domínio do Microsoft Active Directory ou em instâncias Windows 10 Pro ou Enterprise registradas para gerenciamento de dispositivos.
 
+Essa política só terá efeito sobre Windows 10 RS2 e superior.
+
 Mapeamento das opções de política:
 
 * Desabilitado (0) = Não habilitar a proteção de integridade de código no processo do navegador.
@@ -15793,13 +15798,11 @@ Use as informações anteriores ao configurar essa política.
   ##### <a name="example-value"></a>Valor de exemplo:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pinterest_suggestions"
-SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "collections_share"
-SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\3 = "local_pdf"
-SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\4 = "send_word"
-SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\5 = "send_excel"
-SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\6 = "send_onenote"
-SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\7 = "send_pinterest"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "collections_share"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "local_pdf"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\3 = "send_word"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\4 = "send_excel"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\5 = "send_onenote"
 
 ```
 
@@ -15809,13 +15812,11 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\7 = "sen
   - Valor de exemplo:
 ``` xml
 <array>
-  <string>pinterest_suggestions</string>
   <string>collections_share</string>
   <string>local_pdf</string>
   <string>send_word</string>
   <string>send_excel</string>
   <string>send_onenote</string>
-  <string>send_pinterest</string>
 </array>
 ```
   
@@ -24913,6 +24914,71 @@ Se a política [SpellcheckEnabled](#spellcheckenabled) estiver definida como des
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### <a name="microsofteditorsynonymsenabled"></a>MicrosoftEditorSynonymsEnabled
+
+  #### <a name="synonyms-are-provided-when-using-microsoft-editor-spell-checker"></a>Sinônimos são fornecidos ao usar o verificador ortográfico do Microsoft Editor
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e no macOS desde a 105 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  O serviço Microsoft Editor fornece verificação ortográfica e gramatical aprimorada para campos de texto editáveis em páginas da Web e sinônimos podem ser sugeridos como um recurso integrado.
+
+Se você habilitar essa política, o verificador ortográfico do Microsoft Editor fornecerá sinônimos para sugestões de palavras incorretas.
+
+Se você desabilitar ou não configurar essa política, o verificador ortográfico do Microsoft Editor não fornecerá sinônimos para sugestões de palavras incorretas.
+
+Se a política [SpellcheckEnabled](#spellcheckenabled) ou a política [MicrosoftEditorProofingEnabled](#microsofteditorproofingenabled) estiver definida como desabilitada ou o usuário desabilitar a verificação ortográfica ou optar por não usar o verificador ortográfico do Microsoft Editor na página de configurações, essa política não terá efeito.
+
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: MicrosoftEditorSynonymsEnabled
+  - Nome da Política de Grupo: Sinônimos são fornecidos ao usar o verificador ortográfico do Microsoft Editor
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: MicrosoftEditorSynonymsEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: MicrosoftEditorSynonymsEnabled
+  - Valor de exemplo:
+``` xml
+<false/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### <a name="microsoftofficemenuenabled"></a>MicrosoftOfficeMenuEnabled
 
   #### <a name="allow-users-to-access-the-microsoft-office-menu"></a>Permitir que os usuários acessem o menu do Microsoft Office
@@ -25355,11 +25421,13 @@ Consulte [https://go.microsoft.com/fwlink/?linkid=2191896](https://go.microsoft.
   
   #### <a name="supported-versions"></a>Versões com suporte:
 
-  - No Windows e macOS desde 102 ou posterior
+  - No Windows e no macOS desde 102 até 105
 
   #### <a name="description"></a>Descrição
 
-  Essa política é usada para gerenciar o acesso ao menu do Outlook a partir do Microsoft Edge.
+  Essa política não funciona porque o menu do Outlook agora está contido na Barra Lateral do Edge e pode ser gerenciado usando a política [HubsSidebarEnabled](#hubssidebarenabled).
+
+Essa política é usada para gerenciar o acesso ao menu do Outlook a partir do Microsoft Edge.
 
 Se você habilitar ou não configurar essa política, os usuários poderão acessar o menu do Outlook.
 Se você desabilitar essa política, os usuários não poderão acessar o menu do Outlook.
@@ -28561,7 +28629,7 @@ Se você não configurar esta política:
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Nome do Valor: ShowMicrosoftRewards
-  - Tipo de Valor: REG_DWORD
+  - Tipo de valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -29716,7 +29784,7 @@ Se você desabilitar esta política, os pop-ups que direcionam _blank têm permi
   - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
   - Caminho (recomendado): N/A
   - Nome do Valor TargetBlankImpliesNoOpener
-  - Tipo de Valor: REG_DWORD
+  - Tipo de valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de exemplo:
 
@@ -30402,6 +30470,69 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\7 = "*"
   <string>custom_scheme:*</string>
   <string>*</string>
 </array>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="unthrottlednestedtimeoutenabled"></a>UnthrottledNestedTimeoutEnabled
+
+  #### <a name="javascript-settimeout-will-not-be-clamped-until-a-higher-nesting-threshold-is-set-deprecated"></a>O setTimeout do JavaScript não será fixado até que um limite de aninhamento mais alto seja definido (preterido)
+
+  >PRETERIDA: Essa política está preterida. Ela tem suporte no momento, mas se tornará obsoleta em uma versão futura.
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e no macOS desde a 105 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Essa política foi preterida porque é uma política temporária para conformidade com os padrões da Web. Ele não funcionará no Microsoft Edge a partir da versão 107.
+Se você habilitar essa política, o setTimeout e setInterval do JavaScript, com um intervalo menor que 4 ms, não serão fixados. Isso melhora o desempenho no curto prazo, mas os sites que estão usando a API ainda terão seus usos de setTimeout fixados.
+Se você desabilitar ou não configurar a política, setTimeout e setInterval do JavaScript, com um intervalo menor que 4 ms, serão fixados.
+
+Esse é um recurso de conformidade de padrões da Web que pode alterar a ordenação de tarefas em uma página da Web, levando a um comportamento inesperado em sites que dependem de uma determinada ordenação.
+Ele também pode afetar sites com muito uso de um tempo limite de 0 ms para setTimeout. Por exemplo, aumentar a carga da CPU.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: UnthrottledNestedTimeoutEnabled
+  - Nome da Política de Grupo: O setTimeout do JavaScript não será fixado até que um limite de aninhamento mais alto seja definido
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: UnthrottledNestedTimeoutEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: UnthrottledNestedTimeoutEnabled
+  - Valor de exemplo:
+``` xml
+<true/>
 ```
   
 
