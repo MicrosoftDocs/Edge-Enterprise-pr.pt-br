@@ -3,23 +3,77 @@ title: Notas de versão arquivadas para o Canal Estável do Microsoft Edge
 ms.author: leahtu
 author: leahmsft
 manager: srugh
-ms.date: 06/23/2022
+ms.date: 08/05/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas de versão arquivadas para o Canal Estável do Microsoft Edge
-ms.openlocfilehash: aedc7208943e86507a6c22d51c143bcd0cba328e
-ms.sourcegitcommit: ec29195d797cf00c28aef6a80008a62e7fc01be4
+ms.openlocfilehash: 367f38890d6f7c75212facfbab953e98b4e5f1a4
+ms.sourcegitcommit: c4b3a38fdb78cf663f82d35148716d88f3e7551d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "12629563"
+ms.lasthandoff: 08/06/2022
+ms.locfileid: "12691868"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão arquivadas para o Canal Estável do Microsoft Edge
 
 Essas notas de versão fornecem informações dos novos recursos e atualizações não relacionados à segurança que estão inclusos Microsoft Edge Stable Channel. Todas as atualizações de segurança estão listadas [aqui](microsoft-edge-relnotes-security.md).
+
+## <a name="version-1010121032-april-28"></a>Versão 101.0.1210.32: 28 de abril
+
+As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#april-28-2022).
+
+### <a name="feature-updates"></a>Atualizações de recursos
+
+- **Capacidade de definir o perfil padrão.** A política [EdgeDefaultProfileEnabled](/DeployEdge/microsoft-edge-policies#edgedefaultprofileenabled) permitirá que você defina um perfil padrão para usar ao abrir o navegador em vez do último perfil usado. Essa política não será aplicável se o parâmetro `--profile-directory` tiver sido especificado.
+
+- **Inicie os PWAs (Aplicativos Web Progressivos) na barra de favoritos.** As melhorias na experiência de inicialização do PWA começarão a aparecer com um ícone de Aplicativos que pode ser adicionado à barra de ferramentas.
+
+- **Gerencie a configuração "Permitir extensões de outras lojas".** Agora você pode usar a política [ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled](/DeployEdge/microsoft-edge-policies#controldefaultstateofallowextensionfromotherstoressettingenabled) para definir o estado padrão da configuração "Permitir extensões de outras lojas".
+
+- **Melhorias no Gerenciador de Lista de Sites Corporativos.** Agora você pode configurar cookies compartilhados entre o Microsoft Edge e o Internet Explorer em sua lista de sites corporativos. Você pode acessar o [Gerenciador de Lista de Sites Corporativos](/deployedge/edge-ie-mode-site-list-manager) em *edge://compat/SiteListManager*.
+
+### <a name="policy-updates"></a>Atualizações de política
+
+#### <a name="new-policies"></a>Novas políticas
+
+- [ConfigureKeyboardShortcuts](/DeployEdge/microsoft-edge-policies#configurekeyboardshortcuts) - Configure a lista de comandos para os quais desabilitar atalhos de teclado
+- [ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled](/DeployEdge/microsoft-edge-policies#controldefaultstateofallowextensionfromotherstoressettingenabled) - Configurar o estado padrão da configuração Permitir extensões de outras lojas
+- [EdgeAssetDeliveryServiceEnabled](/DeployEdge/microsoft-edge-policies#edgeassetdeliveryserviceenabled) - Permitir que recursos baixem ativos do Serviço de Entrega de Ativos
+- [EdgeDefaultProfileEnabled](/DeployEdge/microsoft-edge-policies#edgedefaultprofileenabled) - Configuração de perfil padrão habilitada
+- [InternetExplorerModeEnableSavePageAs](/DeployEdge/microsoft-edge-policies#internetexplorermodeenablesavepageas) - Permitir Salvar página como no modo Internet Explorer
+- [KioskSwipeGesturesEnabled](/DeployEdge/microsoft-edge-policies#kioskswipegesturesenabled) - Deslizar gestos no modo de quiosque do Microsoft Edge habilitado
+- [MicrosoftOfficeMenuEnabled](/DeployEdge/microsoft-edge-policies#microsoftofficemenuenabled) - Permitir que os usuários acessem o menu do Microsoft Office
+- [SiteSafetyServicesEnabled](/DeployEdge/microsoft-edge-policies#sitesafetyservicesenabled) - Permitir que os usuários configurem os serviços de segurança do site
+
+#### <a name="deprecated-policies"></a>Políticas preteridas
+
+- [ForceCertificatePromptsOnMultipleMatches](/DeployEdge/microsoft-edge-policies#forcecertificatepromptsonmultiplematches) - Configure se o Microsoft Edge deve selecionar automaticamente um certificado quando houver várias correspondências de certificado para um site configurado com "AutoSelectCertificateForUrls"
+
+#### <a name="obsoleted-policies"></a>Políticas obsoletas
+
+- [WebSQLInThirdPartyContextEnabled](/DeployEdge/microsoft-edge-policies#websqlinthirdpartycontextenabled) - Forçar o WebSQL em contextos de terceiros para ser habilitado novamente
+
+## <a name="version-1000118550-april-21"></a>Versão 100.0.1185.50: 21 de abril
+
+Corrigidos vários bugs e problemas de desempenho para a versão Estável e Estável Estendida.
+
+## <a name="version-1000118544-april-15"></a>Versão 100.0.1185.44: 15 de abril
+
+> [!Important]
+> Esta atualização contém uma correção para [CVE-2022-1364](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-1364), que foi relatada pela equipe do Chromium como tendo uma exploração em estado selvagem. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
+
+As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#april-15-2022).
+
+## <a name="version-1000118539-april-11"></a>Versão 100.0.1185.39: 11 de abril
+
+Corrigidos vários bugs e problemas de desempenho para a versão Estável e Estável Estendida.
+
+## <a name="version-1000118536-april-7"></a>Versão 100.0.1185.36: 7 de abril
+
+As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#april-7-2022).
 
 ## <a name="version-1000118529-april-1"></a>Versão 100.0.1185.29: 1º de abril
 
@@ -133,7 +187,7 @@ Corrigidos vários bugs e problemas de desempenho para a versão Estável e Est�
 ## <a name="version-980110855-february-16"></a>Versão 98.0.1108.55: 16 de fevereiro
 
 > [!Important]
-> Essa atualização contém uma correção para [CVE-2022-0609](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-0609) que foi relatada pela equipe do Chromium como tendo uma exploração em execução. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
+> Essa atualização contém uma correção para [CVE-2022-0609](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-0609) que foi relatada pela equipe do Chromium como tendo uma exploração em execução. Para obter mais informações, consulte o [Guia de atualização de segurança](https://msrc.microsoft.com/update-guide).
 
 As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#february-16-2022).
 
@@ -267,7 +321,7 @@ Correção de vários bugs e problemas de desempenho.
 
 ## <a name="version-960105429-november-19"></a>Versão 96.0.1054.29: 19 de novembro
 
-As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#november-19-2021).
+As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#november-19-2021).
 
 ### <a name="feature-updates"></a>Atualizações de recursos
 
@@ -408,7 +462,7 @@ Vários bugs e problemas de desempenho corrigidos.
 > [!Important]
 > Essa atualização contém uma correção para [o CVE-2021-37973,](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37973) que foi relatada pela equipe Chromium como tendo uma exploração na natureza. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
 
-As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#september-24-2021).
+As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#september-24-2021).
 
 ### <a name="feature-updates"></a>Atualizações de recursos
 
@@ -768,7 +822,7 @@ Oito novas políticas foram adicionadas. Baixe os Modelos Administrativos atuali
 ## <a name="version-89077477-april-14"></a>Versão 89.0.774.77: 14 de abril
 
 > [!Important]
->Essa atualização contém uma correção para [CVE-2021-21206](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21206) e [CVE-2021-21220](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21220) que foi relatada pela equipe do Chromium como tendo uma exploração em execução.  Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
+>Essa atualização contém uma correção para [CVE-2021-21206](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21206) e [CVE-2021-21220](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21220) que foi relatada pela equipe do Chromium como tendo uma exploração em execução.  Para obter mais informações, consulte o [Guia de atualização de segurança](https://msrc.microsoft.com/update-guide).
 
 As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#april-14-2021).
 

@@ -3,19 +3,19 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 08/01/2022
+ms.date: 08/04/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: 36dd794f0959d13f5c4299cd473174673f21b2d8
-ms.sourcegitcommit: e8d65150d57e3b0464138ed74c6312fffaf01e39
+ms.openlocfilehash: 80c2115fa1317e8f0d55fb6ac702325c9d61df8d
+ms.sourcegitcommit: c4b3a38fdb78cf663f82d35148716d88f3e7551d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "12686436"
+ms.lasthandoff: 08/06/2022
+ms.locfileid: "12691859"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão do canal do Microsoft Edge beta
 
@@ -23,6 +23,14 @@ Estas notas de versão fornecem informações sobre os novos recursos e atualiza
 
 > [!NOTE]
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-1040129344-august-3"></a>Versão 104.0.1293.44: 3 de agosto
+
+Vários bugs e problemas de desempenho corrigidos.
+
+### <a name="feature-updates"></a>Atualizações de recursos
+
+- **Aprimora sua segurança na Web**. Melhorias **para aprimorar a segurança na Web** *edge://settings/privacy* agora incluem **Básico** como a nova opção padrão.  Com essa opção, o Microsoft Edge aplicará proteção de segurança adicional aos sites menos visitados. Isso preserva a experiência do usuário para os sites mais populares na Web. Para obter mais informações, [consulte Procurar com mais segurança com o Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
 
 ## <a name="version-1040129341-august-1"></a>Versão 104.0.1293.41: 1º de agosto
 
