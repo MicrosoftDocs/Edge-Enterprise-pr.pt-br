@@ -3,23 +3,23 @@ title: Configuração e suporte à identidade do Microsoft Edge
 ms.author: v-danwesley
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 08/10/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Configuração e suporte à identidade do Microsoft Edge
-ms.openlocfilehash: 5b7078540ae254014e566f923e9387a125f0424f
-ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
+ms.openlocfilehash: ad20c918628b9e4fbbaf60b43b7684c817c30ef3
+ms.sourcegitcommit: 5b67ecd86af26228d37dfb38d9ad63bae7b2b6f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "12505614"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "12699556"
 ---
 # <a name="microsoft-edge-identity-support-and-configuration"></a>Configuração e suporte à identidade do Microsoft Edge
 
-Este artigo descreve como o Microsoft Edge usa a identidade para dar suporte a recursos como sincronização e logon único (SSO). O Microsoft Edge oferece suporte para entrada usando: Serviços de Domínio Active Directory (AD DS), Azure Active Directory (Azure AD) e contas da Microsoft (MSA). No momento o Microsoft Edge suporta apenas contas do Azure Active Directory (Azure AD) pertencentes à nuvem global ou à nuvem soberana do GCC. Estamos trabalhando para adicionar outras nuvens soberanas.
+Este artigo descreve como o Microsoft Edge usa a identidade para dar suporte a recursos como sincronização e logon único (SSO). O Microsoft Edge oferece suporte para entrada usando: Serviços de Domínio Active Directory (AD DS), Azure Active Directory (Azure AD) e contas da Microsoft (MSA). No momento o Microsoft Edge suporta apenas contas do Azure Active Directory (Azure AD) pertencentes à nuvem global ou à nuvem soberana do GCC. Estamos trabalhando para adicionar suporte para outras nuvens soberanas.
 
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
@@ -67,21 +67,21 @@ Em algumas plataformas, você pode configurar o Microsoft Edge para entrar autom
 
 ### <a name="sso-with-primary-refresh-token-prt"></a>SSO com Token de atualização principal (PRT)
 
-O Microsoft Edge tem suporte nativo para SSO baseado em PRT e você não precisa de uma extensão. No Windows 10 RS3 e superior, se um usuário estiver conectado ao perfil do navegador, ele receberá o SSO com o mecanismo de PRT em sites que oferecem suporte para SSO baseado em PRT.
+O Microsoft Edge tem suporte nativo para SSO baseado em PRT e você não precisa de uma extensão. No Windows 10 RS3 e superior, se um usuário estiver conectado ao perfil do navegador, ele obterá o SSO com o mecanismo prt para sites que dão suporte ao SSO baseado em PRT.
 
 Um Token de Atualização Principal (PRT) é uma chave do Azure AD usada para autenticação em dispositivos Windows 10, iOS e Android. Ele permite logon único (SSO) entre os aplicativos usados nesses dispositivos. Para obter mais informações, consulte [O que é um primário Token de atualização?](/azure/active-directory/devices/concept-primary-refresh-token).
 
 ### <a name="seamless-sso"></a>SSO de conexão remota
 
-Assim como o SSO de PRT, o Microsoft Edge tem suporte nativo ao SSO Contínuo sem precisar de uma extensão. No Windows 10 RS3 e superior, se um usuário estiver conectado ao perfil do navegador, ele receberá o SSO com o mecanismo de PRT em sites que oferecem suporte para SSO baseado em PRT.
+Assim como o SSO de PRT, o Microsoft Edge tem suporte nativo ao SSO Contínuo sem precisar de uma extensão. No Windows 10 RS3 e superior, se um usuário estiver conectado ao perfil do navegador, ele obterá o SSO com o mecanismo prt para sites que dão suporte ao SSO baseado em PRT.
 
 O Logon Único Contínuo conecta os usuários automaticamente quando eles estão em dispositivos corporativos conectados a uma rede corporativa. Quando habilitados, os usuários não precisam digitar suas senhas para entrar no Azure AD. Normalmente, eles nem precisam digitar seus nomes de usuário. Para obter mais informações, consulte [Logon Único Contínuo do Azure Active Directory](/azure/active-directory/hybrid/how-to-connect-sso).
 
 ### <a name="windows-integrated-authentication-wia"></a>Autenticação Integrada do Windows (WIA)
 
-O Microsoft Edge também oferece suporte à autenticação integrada do Windows para solicitações de autenticação na rede interna de uma organização para qualquer aplicativo que use um navegador para sua autenticação. Isso tem suporte em todas as versões do Windows 10 e Windows de nível inferior. Por padrão, o Microsoft Edge usa a zona da intranet como uma lista de permissões para o WIA. Como alternativa, você pode personalizar a lista de servidores habilitados para autenticação integrada usando a política [AuthServerAllowlist](./microsoft-edge-policies.md#authserverallowlist). No macOS, esta política é necessária para ativar a Autenticação integrada.
+O Microsoft Edge também oferece suporte à autenticação integrada do Windows para solicitações de autenticação na rede interna de uma organização para qualquer aplicativo que use um navegador para sua autenticação. Isso tem suporte em todas as versões do Windows 10 e Windows de nível inferior. Por padrão, o Microsoft Edge usa a zona da intranet como uma lista de permitidos para WIA. Como alternativa, você pode personalizar a lista de servidores habilitados para autenticação integrada usando a política [AuthServerAllowlist](./microsoft-edge-policies.md#authserverallowlist). No macOS, esta política é necessária para ativar a Autenticação integrada.
 
-Para oferecer suporte ao SSO baseado em WIA no Microsoft Edge (versão 77 e posterior), você também pode ter que fazer algumas configurações do lado do servidor. Você provavelmente precisará configurar a propriedade dos Serviços de Federação do Active Directory (AD FS) **WiaSupportedUserAgents** para adicionar suporte à nova cadeia de caracteres do agente do usuário do Microsoft Edge. Para obter instruções sobre como fazer isso, confira as configurações [Exibir WIASupportedUserAgent](/windows-server/identity/ad-fs/operations/configure-ad-fs-browser-wia#view-wiasupporteduseragent-settings) e [Alterar WIASupportedUserAgent](/windows-server/identity/ad-fs/operations/configure-ad-fs-browser-wia#change-wiasupporteduseragent-settings). Um exemplo da cadeia de caracteres do agente de usuário do Microsoft Edge no Windows 10 é mostrado abaixo e você pode aprender mais sobre a [cadeia de caracteres do agente de usuário do Microsoft Edge aqui](/microsoft-edge/web-platform/user-agent-string). 
+Para oferecer suporte ao SSO baseado em WIA no Microsoft Edge (versão 77 e posterior), você também pode ter que fazer algumas configurações do lado do servidor. Você provavelmente precisará configurar a propriedade **wiaSupportedUserAgents** do Serviços de Federação do Active Directory (AD FS) (AD FS) para adicionar suporte à nova cadeia de caracteres do agente de usuário do Microsoft Edge. Para obter instruções sobre como fazer isso, confira as configurações [Exibir WIASupportedUserAgent](/windows-server/identity/ad-fs/operations/configure-ad-fs-browser-wia#view-wiasupporteduseragent-settings) e [Alterar WIASupportedUserAgent](/windows-server/identity/ad-fs/operations/configure-ad-fs-browser-wia#change-wiasupporteduseragent-settings). Um exemplo da cadeia de caracteres do agente de usuário do Microsoft Edge no Windows 10 é mostrado abaixo e você pode aprender mais sobre a [cadeia de caracteres do agente de usuário do Microsoft Edge aqui](/microsoft-edge/web-platform/user-agent-string). 
 
 O seguinte exemplo de uma cadeia de caracteres de agente do usuário é para a compilação mais recente do Canal de desenvolvimento no momento em que este artigo foi publicado:<br> `"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3951.0 Safari/537.36 Edg/80.0.334.2"`
 
@@ -91,7 +91,10 @@ Para serviços que exigem a delegação de credenciais Negotiate, o Microsoft Ed
 
 ### <a name="proactive-authentication"></a>Autenticação Proativa
 
-A autenticação proativa é uma otimização do navegador para o SSO do site que a frontal carrega a autenticação para determinados sites de terceiros. Isso melhora o desempenho da barra de endereço se o usuário estiver usando o Bing como mecanismo de pesquisa. Isso fornece aos usuários resultados de pesquisa personalizados e do Microsoft Search for Business (MSB). Também habilita permitir a autenticação de serviços importantes, como a Página Nova Guia do Office. Você pode controlá-lo usando a política [ProactiveAuthEnabled]( /deployedge/microsoft-edge-policies#proactiveauthenabled).
+A autenticação proativa é uma otimização do navegador para o SSO do site que a frontal carrega a autenticação para determinados sites de terceiros. Isso melhora o desempenho da barra de endereço se o usuário estiver usando o Bing como mecanismo de pesquisa. Isso fornece aos usuários resultados de pesquisa personalizados e do Microsoft Search for Business (MSB). Também habilita permitir a autenticação de serviços importantes, como a Página Nova Guia do Office.
+
+> [!NOTE]
+> Se você quiser configurar a entrada do navegador após a versão 90, use a [política BrowserSignin](/deployedge/microsoft-edge-policies#browsersignin) . Para o Microsoft Edge versão 90 ou inferior, você pode controlar esse serviço usando a [política ProactiveAuthEnabled](/deployedge/microsoft-edge-policies#proactiveauthenabled) .
 
 ### <a name="windows-hello-credui-for-ntlm-authentication"></a>Windows Hello CredUI para autenticação NTLM
 
