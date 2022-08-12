@@ -3,19 +3,19 @@ title: Gerenciamento de Lista de Sites na Nuvem para modo Internet Explorer (IE)
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 06/13/2022
+ms.date: 08/10/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Saiba como configurar e usar o Gerenciamento de Lista de Sites na Nuvem para o modo IE usando o Centro de administração do Microsoft 365.
-ms.openlocfilehash: 5932d24d39de4dee80a8fe1181d449f571c0bf69
-ms.sourcegitcommit: 01011d970e85683f74f889651f5f402da642f34a
+ms.openlocfilehash: 4f1a633471500eea2fa2152659ab613fa0babe49
+ms.sourcegitcommit: 033c14980f4e7111abd6b3918e9c92e483078efa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "12595249"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "12699535"
 ---
 # <a name="cloud-site-list-management-for-internet-explorer-ie-mode"></a>Gerenciamento de Lista de Sites na Nuvem para modo Internet Explorer (IE)
 
@@ -215,12 +215,27 @@ Para exportar uma lista de sites:
 1. Na página listas de sites do Microsoft Edge, selecione a lista de sites que você deseja exportar.
 2. Selecione **Exportar lista** para baixar o arquivo XML da lista de sites
 
-## <a name="view-site-feedback-on-the-microsoft-365-admin-center"></a>Exibir comentários do site no Centro de administração do Microsoft 365
+### <a name="restore-a-previous-version-of-a-site-list"></a>Restaurar uma versão anterior de uma lista de sites
 
-A guia Comentários do site mostra os sites que os usuários estão adicionando à lista de sites do modo IE local, bem como sites neutros potencialmente configurados incorretamente relatados pelo Microsoft Edge. Você verá o endereço do site, o número de usuários que estão adicionando esse site e de qual lista de sites publicada e hospedada na nuvem os comentários vieram. Você pode agir em uma entrada individual adicionando-a a uma lista de sites existente, pausando ou excluindo os comentários. Você também pode exibir o histórico de alterações e os comentários.
+Use as etapas a seguir como um painel para restaurar a versão anterior de uma lista de sites.
 
 > [!NOTE]
-> No momento, esse recurso está disponível apenas para instâncias de nuvem em todo o mundo.
+> Somente as três últimas versões publicadas de uma lista de sites são salvas. Quando você publicar mais de 3 versões, a versão salva com o número de versão mais baixo será excluída permanentemente e você não poderá mais restaurar essa versão. Se você quiser manter uma cópia de uma lista de sites, exporte-a antes de publicar uma nova versão.
+
+1. Na página de listas de sites do Microsoft Edge, selecione a lista que você deseja restaurar para uma versão anterior.
+2. Selecione uma versão anterior na lista suspensa **Versão**.
+3. Você pode exibir o conteúdo de uma versão anterior da lista de sites. Você também pode exportá-la se quiser salvar uma cópia selecionando **Exportar** na barra de mensagens.
+4. Depois de escolher a versão que você deseja restaurar, selecione **Restaurar** na barra de mensagens.
+5. Se você tiver alterações não publicadas na versão atual da lista de sites, poderá escolher incluí-las marcando a caixa de seleção no painel.
+
+   > [!NOTE]
+   > Se você não incluir as alterações não publicadas, elas serão perdidas quando você restaurar a versão anterior.
+
+6. Selecionar **Restaurar** na parte inferior do painel para restaurar a versão anterior.
+
+## <a name="view-site-feedback-on-the-microsoft-365-admin-center"></a>Exibir comentários do site no Centro de administração do Microsoft 365
+
+A guia Comentários do site mostra os sites que os usuários estão adicionando à lista de sites do modo IE local, bem como sites neutros potencialmente configurados de maneira incorreta relatados pelo Microsoft Edge. Você verá o endereço do site, o número de usuários que estão adicionando esse site e de qual lista de sites publicada e hospedada na nuvem os comentários vieram. Você pode agir em uma entrada individual adicionando-a a uma lista de sites existente, pausando ou excluindo os comentários. Você também pode exibir o histórico de alterações e os comentários.
 
 ### <a name="add-a-site-to-site-lists"></a>Adicionar um site a listas de sites
 
@@ -264,7 +279,7 @@ Para exibir o histórico de alterações:
 
 ### <a name="i-dont-see-the-microsoft-edge-site-lists-option-in-the-org-settings-page-on-microsoft-365-admin-center-why-is-that"></a>Não vejo a opção "listas de sites do Microsoft Edge" na página "Configurações da organização" no Centro de administração do Microsoft 365. Por quê?
 
-A experiência estará disponível quando a distribuição for concluída em meados de dezembro. Enquanto a experiência está sendo distribuída, você precisará optar por exibir essa experiência no Centro de Administração Microsoft 365. Você deve ser um administrador global no Microsoft 365 para aceitar.
+A experiência estará disponível quando a distribuição for concluída em meados de dezembro. Enquanto a experiência estiver sendo distribuída, você precisará optar por exibir essa experiência no Centro de Administração do Microsoft 365. Você deve ser um administrador global no Microsoft 365 para aceitar.
 
 Você pode usar as seguintes etapas para optar por:
 
@@ -291,7 +306,7 @@ A lista de sites é atualizada no Microsoft Edge a cada duas horas. Você pode a
 
 ### <a name="what-happens-if-users-log-out-of-microsoft-edge"></a>O que acontece se os usuários saírem do Microsoft Edge?
 
-O acesso à lista de sites requer entrada explícita no navegador para o primeiro download. Em um cenário em que o usuário faz logoff depois de fazer logon, a lista de sites é armazenada em cache no Microsoft Edge. A lista permanecerá armazenada em cache mesmo se o usuário fizer logoff do Microsoft Edge de sua conta do Azure Active Directory (Azure AD). Microsoft Edge não tentará fazer fallback para o local de download não na nuvem enquanto a política de lista de sites de nuvem estiver configurada. Microsoft Edge tenta atualizar a lista de sites armazenados em cache nos seguintes horários (observe que todas as tentativas falharão se o usuário não estiver conectado ao Microsoft Edge):
+O acesso à lista de sites requer entrada explícita no navegador para o primeiro download. Em um cenário em que o usuário faz logoff depois de fazer logon, a lista de sites é armazenada em cache no Microsoft Edge. A lista permanecerá armazenada em cache mesmo se o usuário fizer logoff do Microsoft Edge de sua conta do Azure Active Directory (Azure AD). O Microsoft Edge não tentará fazer fallback para o local de download fora da nuvem enquanto a política de lista de sites de nuvem estiver configurada. O Microsoft Edge tentará atualizar a lista de sites armazenados em cache nos seguintes horários (observe que todas as tentativas falharão se o usuário não estiver conectado ao Microsoft Edge):
 
 - 60 segundos depois de reiniciar o navegador.
 - A cada duas horas quando o Microsoft Edge está em execução. O intervalo de atualização de 120 minutos pode ser alterado usando a política [InternetExplorerIntegrationSiteListRefreshInterval](/deployedge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval). O intervalo mínimo de atualização é de 30 minutos.
