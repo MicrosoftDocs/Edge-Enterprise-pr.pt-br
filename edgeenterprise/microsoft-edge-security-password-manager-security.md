@@ -3,21 +3,21 @@ title: 'Segurança do gerenciador de senhas do Microsoft Edge '
 ms.author: v-danwesley
 author: dan-wesley
 manager: collw
-ms.date: 09/30/2021
+ms.date: 08/25/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Segurança do gerenciador de senhas do Microsoft Edge
-ms.openlocfilehash: 80cb7b895159284e207d69d73732bea18cd21037
-ms.sourcegitcommit: ad1cb6d9ff6c44b692403730c85ac671415aec86
+ms.openlocfilehash: 90ac5760f4e53ffe9b91380adecd5cf40e84ba0c
+ms.sourcegitcommit: f8a5f3bbc786f3666a2974a4f7be0e6145efb8da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "12551041"
+ms.lasthandoff: 08/26/2022
+ms.locfileid: "12735923"
 ---
-# <a name="microsoft-edge-password-manager-security"></a>Segurança do gerenciador de senhas do Microsoft Edge 
+# <a name="microsoft-edge-password-manager-security"></a>Segurança do gerenciador de senhas do Microsoft Edge
 
 As perguntas frequentes neste artigo descrevem como o gerenciador de senhas interno do Microsoft Edge fornece segurança para as senhas de usuário.
 
@@ -26,7 +26,7 @@ As perguntas frequentes neste artigo descrevem como o gerenciador de senhas inte
 
 ## <a name="how-are-passwords-stored-in-microsoft-edge-and-how-safe-is-this-approach"></a>Como as senhas são armazenadas em Microsoft Edge e qual é a segurança dessa abordagem?
 
-O Microsoft Edge armazena senhas criptografadas no disco. Elas são criptografados usando AES256 e a chave de criptografia é salva em uma área de armazenamento do sistema operacional (SO). Essa técnica é chamada de criptografia local de dados. Embora nem todos os dados do navegador sejam criptografados, dados confidenciais como senhas, números de cartão de crédito e cookies são criptografados quando são salvos.
+O Microsoft Edge armazena senhas criptografadas no disco. Eles são criptografados usando AES e a chave de criptografia é salva em uma área de armazenamento do sistema operacional (SO). Essa técnica é chamada de criptografia local de dados. Embora nem todos os dados do navegador sejam criptografados, dados confidenciais como senhas, números de cartão de crédito e cookies são criptografados quando são salvos.
 
 O gerenciador de senhas do Microsoft Edge criptografa senhas para que elas só possam ser acessadas quando um usuário estiver conectado ao sistema operacional. Mesmo que um invasor tenha direitos de administrador ou acesso offline e possa acessar os dados armazenados localmente, o sistema foi projetado para impedir que o invasor obtenha as senhas de texto de um usuário que não está conectado.
 
@@ -42,7 +42,7 @@ A chave de criptografia do perfil é protegida usando o OSCrypt do Chromium e us
 
 - No Linux, a área de armazenamento é Gnome Keyring ou KWallet
 
-Todas essas áreas de armazenamento criptografam a chave AES256 usando uma chave acessível para alguns ou todos os processos em execução como usuário. Esse vetor de ataque geralmente é exibido em blogs como uma possível "exploração" ou "vulnerabilidade". Essa é uma compreensão incorreta do modelo de ameaça do navegador e da postura de segurança.
+Todas essas áreas de armazenamento criptografam a chave AES usando uma chave acessível para alguns ou todos os processos em execução como o usuário. Esse vetor de ataque geralmente é exibido em blogs como uma possível "exploração" ou "vulnerabilidade". Essa é uma compreensão incorreta do modelo de ameaça do navegador e da postura de segurança.
 
 No entanto, ataques fisicamente locais e malware estão fora do modelo de ameaça e, sob essas condições, os dados criptografados seriam vulneráveis. Se o computador estiver infectado com malware, um invasor poderá obter acesso descriptografado às áreas de armazenamento do navegador. O código do invasor, em execução como sua conta de usuário, pode fazer tudo o que você pode fazer.
 
@@ -141,7 +141,7 @@ Quando as senhas do navegador são criptografadas em disco, a chave de criptogra
 Um recurso de Senha Mestra (que autentica o usuário antes de preencher automaticamente seus dados) fornece uma compensação na conveniência para uma mitigação mais ampla de ameaças. Especificamente, ele ajuda a reduzir a janela de exposição de dados contra malware latente ou invasores fisicamente locais. No entanto, uma Senha Mestra não é uma panacéia, e invesores locais e malwares dedicados têm várias estratégias para contornar a proteção de uma Senha Mestra.
 
 > [!Note]
-> Microsoft Edge agora oferece a capacidade de habilitar a autenticação antes da funcionalidade de preenchimento automático; isso fornece aos usuários uma camada adicional de privacidade e impede que suas senhas armazenadas sejam usadas por qualquer pessoa, menos eles. Para obter mais detalhes, consulte [Privacidade adicional para suas senhas salvas](https://support.microsoft.com/topic/additional-privacy-for-your-saved-passwords-31dbd670-e314-4901-a546-6f302548502e).  
+> O Microsoft Edge agora oferece a capacidade de habilitar a autenticação antes da funcionalidade de preenchimento automático; isso fornece aos usuários uma camada adicional de privacidade e impede que suas senhas armazenadas sejam usadas por qualquer pessoa, menos eles. Para obter mais detalhes, consulte [Privacidade adicional para suas senhas salvas](https://support.microsoft.com/topic/additional-privacy-for-your-saved-passwords-31dbd670-e314-4901-a546-6f302548502e).  
 
 ## <a name="can-using-a-password-manager-impact-my-privacy"></a>O uso de um gerenciador de senhas pode afetar minha privacidade?
 

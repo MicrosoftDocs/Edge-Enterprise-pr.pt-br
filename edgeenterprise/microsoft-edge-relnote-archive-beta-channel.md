@@ -3,23 +3,62 @@ title: Notas de versão arquivadas para o Canal Beta do Microsoft Edge
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 06/28/2022
+ms.date: 08/16/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas de versão arquivadas para o Canal Beta do Microsoft Edge
-ms.openlocfilehash: 7ba9c61f9a86aab87f7c3953b917a2c7fdee69fa
-ms.sourcegitcommit: 40acd8ce9c793b944198d73a62f9ae85d229f7f8
+ms.openlocfilehash: a0a5ccc012097f8978bd05366451b8becef5ebf6
+ms.sourcegitcommit: f4876eadb712279d577c43950de70fd5e7854c72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "12631802"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "12713305"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão arquivadas para o Canal Beta do Microsoft Edge
 
 Estas notas de versão fornecem informações sobre os novos recursos e atualizações não relacionadas à segurança que estão inclusos no canal Beta do Microsoft Edge. Para entender os canais do Microsoft Edge, confira a [Visão geral dos canais do Microsoft Edge](microsoft-edge-channels.md). Todas as atualizações de segurança estão listadas [aqui](microsoft-edge-relnotes-security.md).
+
+## <a name="version-1030126413-june-2"></a>Versão 103.0.1264.13: 2 de junho
+
+### <a name="feature-updates"></a>Atualizações de recursos
+
+- **Capacidade de controlar a alternância automática de perfil.** A política [GuidedSwitchEnabled](/DeployEdge/microsoft-edge-policies#guidedswitchenabled) permite que a Microsoft Edge solicite ao usuário que mude para o perfil apropriado quando o Microsoft Edge detectar que um link é um link pessoal ou de trabalho.
+
+- **Alternador de Certificado do Cliente.** Esse recurso oferecerá uma maneira para os usuários limparem o certificado lembrado e ressurgir o seletor de certificado ao visitar um site que exige autenticação de certificado http. A alternância pode ser feita sem sair manualmente do Microsoft Edge.
+
+- **Defesa da Web mais confiável.** Navegue pela Web com proteção mais confiável graças à biblioteca reescrita do[Microsoft Defender SmartScreen](/deployedge/microsoft-edge-security-smartscreen) para Microsoft Edge no Windows. A política [NewSmartScreenLibraryEnabled](microsoft-edge-policies.md#newsmartscreenlibraryenabled) permitirá que os clientes empresariais continuem usando a versão herdada da biblioteca até que ela seja preterida no Microsoft Edge versão 105.
+
+### <a name="policy-updates"></a>Atualizações de política
+
+#### <a name="new-policies"></a>Novas políticas
+
+- [GuidedSwitchEnabled](/DeployEdge/microsoft-edge-policies#guidedswitchenabled) – Comutador Guiado Habilitado
+- [InternetExplorerZoomDisplay](/DeployEdge/microsoft-edge-policies#internetexplorerzoomdisplay) - Exibir zoom nas guias do Modo IE com Escala de DPI incluída como está no Internet Explorer
+- [LiveCaptionsAllowed](/DeployEdge/microsoft-edge-policies#livecaptionsallowed) – Legendas ao vivo permitidas
+- [OriginAgentClusterDefaultEnabled](/DeployEdge/microsoft-edge-policies#originagentclusterdefaultenabled) - Agrupamento de agentes com chave de origem habilitada por padrão
+
+## <a name="version-1020124525-may-26"></a>Versão 102.0.1245.25: 26 de maio
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-1020124522-may-24"></a>Versão 102.0.1245.22: 24 de maio
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-1020124518-may-20"></a>Versão 102.0.1245.18: 20 de maio
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-1020124514-may-16"></a>Versão 102.0.1245.14: 16 de maio
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-1020124512-may-13"></a>Versão 102.0.1245.12: 13 de maio
+
+Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-102012457-may-10"></a>Versão 102.0.1245.7: 10 de maio
 

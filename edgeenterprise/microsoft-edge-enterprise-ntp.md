@@ -3,19 +3,19 @@ title: Página nova guia Microsoft Edge Empresarial
 ms.author: trnohra
 author: dan-wesley
 manager: collw
-ms.date: 07/27/2022
+ms.date: 08/11/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Saiba como a página nova guia Empresarial dá suporte à alternância de contexto e aumenta a produtividade dos trabalhadores.
-ms.openlocfilehash: dbd67f419825f4dd1a72994f3a7153e5fe15c3c8
-ms.sourcegitcommit: 5f76981a5a67e7caa32570393aec0f1e7261e5c8
-ms.translationtype: HT
+ms.openlocfilehash: 49329c20c1849ff6f1ba8995dad15732f78ac451
+ms.sourcegitcommit: 7d8822c464292ecb196f1934226fa42992af4d18
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "12685082"
+ms.lasthandoff: 08/12/2022
+ms.locfileid: "12707845"
 ---
 # <a name="microsoft-edge-enterprise-new-tab-page"></a>Página nova guia Microsoft Edge Empresarial
 
@@ -25,9 +25,9 @@ A página nova guia Empresarial é uma resposta direta a um novo desafio que os 
 
 À medida que a função de navegador cresce e se torna central para que os trabalhadores terminem as tarefas diárias, é mais importante agora do que nunca que os operadores da informação possam cortar o barulho e encontrar o que precisam. É por isso que criamos um painel de produtividade personalizado diretamente na página nova guia do Microsoft Edge Empresarial. Qualquer usuário empresarial do Microsoft Edge pode usar isto abrindo uma nova guia e selecionando a guia **Microsoft 365**.
 
-:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-dashboard.png" alt-text="Painel da página nova guia do Microsoft 365":::
+:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-dashboard-without-mail.png" alt-text="Painel da página nova guia do Microsoft 365":::
 
-Este painel é um ponto focal para encontrar rapidamente as informações necessárias e manter-se atualizado sobre as coisas que mais importam, tudo isso enquanto se corta o ruído. Agora, vamos destacar alguns dos principais recursos que podem ajudar a manter seus funcionários produtivos.
+O painel é um ponto focal para localizar rapidamente as informações necessárias e manter-se atualizado sobre as coisas mais importantes, tudo isso enquanto corta o ruído. Agora, vamos destacar alguns dos principais recursos que podem ajudar a manter seus funcionários produtivos.
 
 Estamos continuamente procurando melhorar a experiência do navegador para que possamos obter seus comentários, que você pode fornecer pressionando alt + shift + I para abrir a caixa de diálogo **Enviar comentários** onde você pode compartilhar suas ideias.
 
@@ -37,13 +37,13 @@ Estamos continuamente procurando melhorar a experiência do navegador para que p
 
 Você se sente sobrecarregado ao tentar acompanhar todas as atualizações no trabalho? O feed do Microsoft 365 é personalizado para você e seu trabalho. Este feed utiliza dados do Microsoft 365 para trazer as informações mais importantes que acontecem ao redor de sua organização. Desde as menções, aos arquivos que estão sendo editados, às gravações de reunião que você talvez queira colocar em dia, às promoções de colegas e muito mais. Esta experiência ajuda a mantê-lo atualizado sobre as informações mais importantes em uma visão geral.
 
-:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-feed-list.png" alt-text="Lista de feeds do Microsoft 365":::
+:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-feed-list-new-50.png" alt-text="Lista de feeds do Microsoft 365":::
 
 ## <a name="recent-sharepoint-sites-card"></a>Cartões recentes de sites do SharePoint
 
 Cansado de pular pelos aros para chegar aos seus sites do SharePoint? Aqui está um atalho para ajudá-lo a obter as informações de que você precisa para ser produtivo, ainda mais rápido.
 
-:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-sharepoint-sites.png" alt-text="Lista recente de sites do SharePoint":::
+:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-sharepoint-sites-50.png" alt-text="Lista recente de sites do SharePoint":::
 
 ## <a name="quick-access-list"></a>Lista de Acesso Rápido
 
@@ -55,13 +55,13 @@ Nossa pesquisa mostra que os operadores da informação podem lidar com dezenas,
 
 Um dos aspectos mais importantes para acompanhar um ambiente de trabalho rápido é saber que reuniões você tem e quando elas são agendadas. Como se não fosse difícil o suficiente para começar, o trabalho híbrido aumentou o número de reuniões para muitos trabalhadores, causando sobrecarga. Nenhum painel de produtividade está completo sem um calendário de fácil visualização para garantir que você esteja preparado para suas reuniões. E com um clique você pode ingressar na sua reunião do Teams ou enviar uma mensagem a outros participantes se você estiver atrasado.
 
-:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-calendar-card.png" alt-text="Lista dos próximos eventos do calendário do usuário":::
+:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-upcoming-events-50.png" alt-text="Lista dos próximos eventos do calendário do usuário":::
 
 ## <a name="to-do-task-list"></a>Listas de tarefas pendentes
 
 Uma das maneiras mais eficazes para muitos usuários permanecerem produtivos quando estão ficando sobrecarregados é fazer uma lista de tarefas pendentes. Isto mantém os usuários organizados e pode ser catártico para verificar itens fora da lista quando eles estão se sentindo estressados. Temos que fazer a integração de Tarefas Pendentes no navegador para que você possa obter toda a grandeza do [Microsoft To Do](https://todo.microsoft.com/tasks/) em um formato facilmente acessível.
 
-:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-to-do.png" alt-text="Listas de tarefas pendentes":::
+:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-to-do-50.png" alt-text="Listas de tarefas pendentes":::
 
 ## <a name="address-bar"></a>Barra de endereços
 

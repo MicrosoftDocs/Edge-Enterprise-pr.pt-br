@@ -1,26 +1,26 @@
 ---
-title: Microsoft Edge desabilitar a modificação de 'document.domain'
+title: O Microsoft Edge desabilitará a modificação de 'document.domain'
 ms.author: niarci
 author: dan-wesley
 manager: erikan
-ms.date: 04/25/2022
+ms.date: 08/26/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: Microsoft Edge desabilitar a modificação de 'document.domain'
-ms.openlocfilehash: 197334da0f70aa2cfa081a240de383c79fbbf701
-ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
+description: O Microsoft Edge desabilitará a modificação de 'document.domain'
+ms.openlocfilehash: 4b610515842388b8fb9233f3b387d1f5eec265d2
+ms.sourcegitcommit: 8227125a4322ccaee0655e54ddae12059fa8ec3b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "12505697"
+ms.lasthandoff: 08/29/2022
+ms.locfileid: "12736930"
 ---
-# <a name="microsoft-edge-will-disable-modifying-documentdomain"></a>Microsoft Edge desabilitar a modificação`document.domain`
+# <a name="microsoft-edge-will-disable-modifying-documentdomain"></a>O Microsoft Edge desabilitará a modificação `document.domain`
 
 > [!NOTE]
-> Este artigo se aplica Microsoft Edge versão estável 106 ou posterior.
+> Este artigo se aplica ao Microsoft Edge Stable versão 109 ou posterior.
 
 > [!WARNING]
 > Se seu site depender de relaxar a política de mesma origem por meio `document.domain`de, sua ação será necessária. Continue a ler mais sobre por que isso está mudando ou acesse a [](#alternative-cross-origin-communication) comunicação alternativa entre origens para saber mais sobre mecanismos alternativos para obter comunicação entre origens.
@@ -29,7 +29,7 @@ ms.locfileid: "12505697"
 
 A propriedade "domain" da interface Document obtém ou define a parte de domínio da origem do documento atual, conforme usado pela política [de mesma origem](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy).
 
-A partir Microsoft Edge versão 106, `document.domain` as tentativas de modificar a propriedade usando JavaScript serão ignoradas. Você precisará usar abordagens alternativas, `postMessage()` como a API de Mensagens de Canal, para se comunicar entre origens.
+A partir da versão 109 do Microsoft Edge, `document.domain` as tentativas de modificar a propriedade usando JavaScript serão ignoradas. Você precisará usar abordagens alternativas, `postMessage()` como a API de Mensagens de Canal, para se comunicar entre origens.
 
 Como alternativa, se seu site depende do relaxamento `document.domain` da política de mesma origem para funcionar corretamente, o site `Origin-Agent-Cluster: ?0` pode enviar um cabeçalho; esse cabeçalho deve ser enviado de todos os outros documentos que exigem o relaxamento.
 
@@ -62,14 +62,14 @@ Da mesma forma, considere um serviço de hospedagem compartilhado que atende a p
 
 ## <a name="how-will-i-know-if-my-site-is-affected"></a>Como saberei se meu site foi afetado?
 
-Se seu site for afetado por essa alteração, Microsoft Edge mostrará um aviso no painel Problemas do DevTools. A captura de tela a seguir mostra um exemplo desse aviso.
+Se seu site for afetado por essa alteração, o Microsoft Edge mostrará um aviso no painel Problemas do DevTools. A captura de tela a seguir mostra um exemplo desse aviso.
 
 :::image type="content" source="media/edge-learnmore-origin-keyed-agent-cluster/document-domain-modification-warning.png" alt-text="Aviso quando document.domain é modificado.":::
 
 Se você tiver um ponto de extremidade de relatório configurado, também será enviado relatórios de substituição. Saiba mais sobre [como usar a API de Relatórios](https://web.dev/reporting-api/) com serviços de coleta de relatórios existentes ou criando sua própria solução de relatório.
 
 > [!TIP]
-> Você pode executar seu site por meio da auditoria de [API preterida do LightHouse](https://web.dev/deprecations/) para localizar todas as APIs que estão agendadas para serem removidas Microsoft Edge.
+> Você pode executar seu site por meio da auditoria de [API preterida do LightHouse](https://web.dev/deprecations/) para localizar todas as APIs agendadas para serem removidas do Microsoft Edge.
 
 ## <a name="alternative-cross-origin-communication"></a>Comunicação alternativa entre origens
 

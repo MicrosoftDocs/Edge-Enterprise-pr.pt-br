@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Stable Channel
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 08/05/2022
+ms.date: 08/25/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: 3d9c2b0879be9d48f0b777104ce77ec2109530de
-ms.sourcegitcommit: c4b3a38fdb78cf663f82d35148716d88f3e7551d
-ms.translationtype: HT
+ms.openlocfilehash: 49e4031c49152d98a71657abb340c0ab8a4d6833
+ms.sourcegitcommit: 90c989762768d8ab5e383f2790d230825adf812e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "12691846"
+ms.lasthandoff: 08/26/2022
+ms.locfileid: "12735579"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão do Microsoft Edge Stable Channel
 
@@ -30,6 +30,35 @@ Essas notas de versão fornecem informações dos novos recursos e atualizaçõe
 > Para o Canal Estável, as atualizações serão implantadas progressivamente por um ou mais dias. Para saber mais, consulte [Distribuições progressivas para atualizações do Microsoft Edge](./microsoft-edge-update-progressive-rollout.md).
 >
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-1040129370-august-25-2022"></a>Versão 104.0.1293.70: 25 de agosto de 2022
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-1040129363--august-19"></a>Versão 104.0.1293.63 : 19 de agosto
+
+> [!IMPORTANT]
+> Essa atualização contém uma correção para [CVE-2022-2856](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-2856), que foi relatada pela equipe Chromium como tendo uma exploração em execução. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
+
+As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#august-19-2022).
+
+### <a name="feature-updates"></a>Atualizações de recursos
+
+- **Pesquise na barra lateral do Microsoft Edge.** Acesse facilmente uma pesquisa de barra lateral atualizada por meio da barra lateral do Microsoft Edge, incluindo acesso fácil à Pesquisa da Microsoft no Bing para organizações. Observação: essa é uma distribuição de recursos controlada. Se você não vir esse recurso, verifique novamente à medida que continuarmos nossa distribuição.
+
+- **Jogos para a barra lateral do Microsoft Edge.** Jogue jogos casuais populares gratuitamente. Os administradores podem controlar a disponibilidade do menu Jogos na barra lateral do Microsoft Edge. Observação: essa é uma distribuição de recursos controlada. Se você não vir esse recurso, verifique novamente à medida que continuarmos nossa distribuição.
+
+- **Descubra na barra lateral do Microsoft Edge.** Descubra o conteúdo relevante para a página que você está navegando, incluindo resumos, informações de origem e muito mais. Observação: essa é uma distribuição de recursos controlada. Se você não vir esse recurso, verifique novamente à medida que continuarmos nossa distribuição.
+
+- **Obtenha suas ferramentas favoritas na barra lateral do Microsoft Edge.** Acesse facilmente as ferramentas usadas com facilidade durante a navegação na Web, incluindo Calculadora, Teste de velocidade da Internet e Conversor de Unidade. Observação: essa é uma distribuição de recursos controlada. Se você não vir esse recurso, verifique novamente à medida que continuarmos nossa distribuição.
+
+- **Outlook na barra lateral do Microsoft Edge.** Acesse rapidamente e facilmente o Email e o Calendário do Outlook. Observação: essa é uma distribuição de recursos controlada. Se você não vir esse recurso, verifique novamente à medida que continuarmos nossa distribuição.
+
+- **Office na barra lateral do Microsoft Edge.** Acesse documentos e aplicativos do Microsoft Office de maneira rápida e fácil. Os administradores podem controlar o menu do Microsoft Office na barra lateral do Microsoft Edge. Observação: essa é uma distribuição de recursos controlada. Se você não vir esse recurso, verifique novamente à medida que continuarmos nossa distribuição.
+
+## <a name="version-1040129354-august-11"></a>Versão 104.0.1293.54: 11 de agosto
+
+Corrigidos vários bugs e problemas de desempenho para a versão Estável e Estável Estendida.
 
 ## <a name="version-1040129347-august-5"></a>Versão 104.0.1293.47: 5 de agosto
 

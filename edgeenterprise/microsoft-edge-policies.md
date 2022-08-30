@@ -3,20 +3,20 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 08/02/2022
+ms.date: 08/24/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom: ''
+ms.custom: generated
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 37ca303689114aaf3e31fc53b9ba2a11ab3bb028
-ms.sourcegitcommit: b7e46b77136f98d3cfad0f509124f5f2de12ca7b
-ms.translationtype: HT
+ms.openlocfilehash: 11c857d090f80fb882f21609cbcc332dd7e3e652
+ms.sourcegitcommit: a5a796dd806c4048b6c30a64c58ee76cfcbbdd0c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "12687093"
+ms.lasthandoff: 08/24/2022
+ms.locfileid: "12732247"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -28,15 +28,6 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
-
-## <a name="new-policies"></a>Novas políticas
-
-A tabela a seguir lista as políticas novas e preteridas que estão nesta atualização de artigo.
-
-| Nome da política | Legenda |
-|:-----|:-----|
-|[MicrosoftEditorSynonymsEnabled](#microsofteditorsynonymsenabled)|Sinônimos são fornecidos ao usar o verificador ortográfico do Microsoft Editor|
-|[UnthrottledNestedTimeoutEnabled](#unthrottlednestedtimeoutenabled)|O setTimeout do JavaScript não será fixado até que um limite de aninhamento mais alto seja definido (preterido)|
 
 ## <a name="available-policies"></a>Políticas disponíveis
 
@@ -242,6 +233,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |-|-|
 |[DefaultPrinterSelection](#defaultprinterselection)|Regras de seleção de impressora padrão|
 |[PrintHeaderFooter](#printheaderfooter)|Imprimir cabeçalhos e rodapés|
+|[PrintPdfAsImageDefault](#printpdfasimagedefault)|Imprimir PDF como Padrão de Imagem|
 |[PrintPostScriptMode](#printpostscriptmode)|Imprimir no Modo PostScript|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Definir a impressora padrão do sistema como impressora padrão|
 |[PrintRasterizationMode](#printrasterizationmode)|Modo de Rasterização de Impressão|
@@ -407,7 +399,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[DownloadRestrictions](#downloadrestrictions)|Permitir restrições de download|
 |[EdgeAssetDeliveryServiceEnabled](#edgeassetdeliveryserviceenabled)|Permitir que os recursos baixem ativos do Serviço de Entrega de Ativos|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Habilitar o recurso Coleções|
-|[EdgeDiscoverEnabled](#edgediscoverenabled)|Recurso Descobrir no Microsoft Edge|
+|[EdgeDiscoverEnabled](#edgediscoverenabled)|Descobrir recurso no Microsoft Edge (obsoleto)|
 |[EdgeEDropEnabled](#edgeedropenabled)|Habilitar o recurso Soltar no Microsoft Edge|
 |[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Aprimorar imagens habilitado|
 |[EdgeFollowEnabled](#edgefollowenabled)|Ativar o serviço Seguir no Microsoft Edge|
@@ -514,7 +506,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[NetworkServiceSandboxEnabled](#networkservicesandboxenabled)|Habilitar a área restrita do serviço de rede|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configurar se um usuário sempre tem um perfil padrão conectado automaticamente à sua conta corporativa ou de estudante|
 |[OriginAgentClusterDefaultEnabled](#originagentclusterdefaultenabled)|Agrupamento de agentes com chave de origem habilitada por padrão|
-|[OutlookHubMenuEnabled](#outlookhubmenuenabled)|Permitir que os usuários acessem o menu do Outlook|
+|[OutlookHubMenuEnabled](#outlookhubmenuenabled)|Permitir que os usuários acessem o menu do Outlook (obsoleto)|
 |[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|Controle onde as restrições de segurança em origens inseguras se aplicam|
 |[PDFSecureMode](#pdfsecuremode)|Modo seguro e validação de Assinatura Digital baseada em certificado no leitor de PDF nativo|
 |[PDFXFAEnabled](#pdfxfaenabled)|Suporte XFA no leitor de PDF nativo habilitado|
@@ -1167,6 +1159,8 @@ Observe que não é possível definir padrões de URL conflitantes entre essas t
 
 Para obter informações detalhadas sobre padrões de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * não é um valor aceito para esta política.
 
+Para permitir que cookies de terceiros sejam definidos, especifique um par de padrões de URL delimitados por uma vírgula. O primeiro valor no par especifica o site de terceiros que deve ter permissão para usar cookies. O segundo valor no par especifica o site de nível superior no qual o primeiro valor deve ser aplicado. O primeiro valor no par dá suporte a * mas o segundo valor não.
+
 Para impedir que os cookies sejam excluídos na saída, configure a política [SaveCookiesOnExit](#savecookiesonexit).
 
   #### <a name="supported-features"></a>Recursos compatíveis:
@@ -1201,6 +1195,8 @@ Para impedir que os cookies sejam excluídos na saída, configure a política [S
 ```
 SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
+SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\3 = "https://loaded-as-third-party.fabrikam.com,https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\4 = "*,https://www.contoso.com"
 
 ```
 
@@ -1212,6 +1208,8 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 <array>
   <string>https://www.contoso.com</string>
   <string>[*.]contoso.edu</string>
+  <string>https://loaded-as-third-party.fabrikam.com,https://www.contoso.com</string>
+  <string>*,https://www.contoso.com</string>
 </array>
 ```
   
@@ -3467,7 +3465,7 @@ Se você não definir essa política, o valor padrão global será utilizado par
 
   - Nome exclusivo da Política de Grupo: NotificationsBlockedForUrls
   - Nome da Política de Grupo: Bloquear notificações em sites específicos
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Content settings
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/configurações do conteúdo
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -6213,6 +6211,8 @@ Se você não configurar essa política, o Microsoft Edge não delegará credenc
 
 Você pode configurar a política usando estes valores: 'basic', 'digest', 'ntlm', and 'negotiate'. Separe vários valores com vírgulas.
 
+Observação: todos os valores dessa política diferenciam maiúsculas de minúsculas.
+
 Se você não configurar essa política, todos os quatro esquemas serão usados.
 
   #### <a name="supported-features"></a>Recursos compatíveis:
@@ -8715,6 +8715,68 @@ Se você habilitar essa política, os usuários sempre poderão imprimir cabeça
   - Valor de exemplo:
 ``` xml
 <false/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="printpdfasimagedefault"></a>PrintPdfAsImageDefault
+
+  #### <a name="print-pdf-as-image-default"></a>Imprimir PDF como Padrão de Imagem
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e no macOS desde o 106 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Controla se o Microsoft Edge torna a opção Imprimir como imagem o padrão ao imprimir PDFs.
+
+Se você habilitar essa política, o Microsoft Edge definirá como padrão a opção Imprimir como imagem na Visualização de Impressão ao imprimir um PDF.
+
+Se você desabilitar ou não configurar essa política, o Microsoft Edge não definirá como padrão a opção Imprimir como imagem na Visualização de Impressão ao imprimir um PDF.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: PrintPdfAsImageDefault
+  - Nome da Política de Grupo: Imprimir PDF como Padrão de Imagem
+  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/imprimir
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: PrintPdfAsImageDefault
+  - Tipo de Valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: PrintPdfAsImageDefault
+  - Valor de exemplo:
+``` xml
+<true/>
 ```
   
 
@@ -18271,17 +18333,19 @@ Se você desabilitar essa política, os usuários não poderão acessar e usar c
 
   ### <a name="edgediscoverenabled"></a>EdgeDiscoverEnabled
 
-  #### <a name="discover-feature-in-microsoft-edge"></a>Recurso Descobrir no Microsoft Edge
+  #### <a name="discover-feature-in-microsoft-edge-obsolete"></a>Descobrir recurso no Microsoft Edge (obsoleto)
 
   
-  
+  >OBSOLETO: essa política é obsoleta e não funciona após o Microsoft Edge 105.
   #### <a name="supported-versions"></a>Versões com suporte:
 
-  - No Windows e macOS desde 97 ou mais recente
+  - No Windows e no macOS desde 97 até 105
 
   #### <a name="description"></a>Descrição
 
-  Essa política permite configurar o recurso Descobrir no Microsoft Edge.
+  Essa política não funciona porque a Descoberta agora está contida na Barra Lateral do Edge e pode ser gerenciada usando a [política HubsSidebarEnabled](#hubssidebarenabled) .
+
+Essa política permite configurar o recurso Descobrir no Microsoft Edge.
 
 Trabalhando em segundo plano quando habilitado, esse recurso envia URLs ao Microsoft Bing para pesquisar recomendações relacionadas.
 
@@ -18304,7 +18368,7 @@ Se você desabilitar essa política, não poderá usar o recurso Descobrir no Mi
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
   - Nome exclusivo da Política de Grupo: EdgeDiscoverEnabled
-  - Nome da Política de Grupo: Descobrir recurso no Microsoft Edge
+  - Nome da Política de Grupo: Descobrir recurso no Microsoft Edge (obsoleto)
   - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): Administrative Templates/Microsoft Edge - Default Settings (usuários podem substituir)/
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
@@ -25415,10 +25479,10 @@ Consulte [https://go.microsoft.com/fwlink/?linkid=2191896](https://go.microsoft.
 
   ### <a name="outlookhubmenuenabled"></a>OutlookHubMenuEnabled
 
-  #### <a name="allow-users-to-access-the-outlook-menu"></a>Permitir que os usuários acessem o menu do Outlook
+  #### <a name="allow-users-to-access-the-outlook-menu-obsolete"></a>Permitir que os usuários acessem o menu do Outlook (obsoleto)
 
   
-  
+  >OBSOLETO: essa política é obsoleta e não funciona após o Microsoft Edge 105.
   #### <a name="supported-versions"></a>Versões com suporte:
 
   - No Windows e no macOS desde 102 até 105
@@ -25447,8 +25511,8 @@ Se você desabilitar essa política, os usuários não poderão acessar o menu d
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
   - Nome exclusivo da política de grupo: OutlookHubMenuEnabled
-  - Nome da política de grupo: Permitir que os usuários acessem o menu do Outlook
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Nome da Política de Grupo: Permitir que os usuários acessem o menu do Outlook (obsoleto)
+  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): Administrative Templates/Microsoft Edge - Default Settings (usuários podem substituir)/
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -30934,6 +30998,8 @@ Se você definir essa política, os instantâneos antigos serão excluídos conf
 
   O Microsoft Edge usa o recurso de Comentários do Edge (habilitado por padrão) para permitir que os usuários enviem comentários, sugestões ou pesquisas de clientes, além de relatar problemas com o navegador. Além disso, por padrão, os usuários não podem desabilitar (desativar) o recurso de Comentários do Edge.
 
+A partir do Microsoft Edge 105, se o usuário estiver conectado ao Microsoft Edge com sua conta corporativa ou de estudante, seus comentários estão associados à sua conta e organização.
+
 Se você habilitar essa política ou não a configurar, os usuários poderão invocar os Comentários do Edge.
 
 Se você desabilitar essa política, os usuários não poderão invocar os Comentários do Edge.
@@ -32262,7 +32328,7 @@ Se essa política não estiver definida, a detecção de ocultação da janela s
   [Voltar ao início](#microsoft-edge---policies)
 
 
-## <a name="see-also"></a>Ver também
+## <a name="see-also"></a>Consulte também
 
 - [Configurar o Microsoft Edge](configure-microsoft-edge.md)
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

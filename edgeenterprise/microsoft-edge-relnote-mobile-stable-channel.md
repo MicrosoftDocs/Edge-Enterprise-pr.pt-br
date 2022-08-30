@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Canal Estável Móvel
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 07/15/2022
+ms.date: 08/17/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Canal Estável Móvel
-ms.openlocfilehash: 4fd8ffcb992c21b7dbc0cf35ea225897f2ff1dfa
-ms.sourcegitcommit: 14a4ce4b42bc1059f8cb7785835ec9b7bffcf410
-ms.translationtype: HT
+ms.openlocfilehash: 1f3251365dfc8ede5f9521d2f9e9f26a591ef448
+ms.sourcegitcommit: b027cc228175935dc49bdf43e7f7ebb32b2d7fb1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2022
-ms.locfileid: "12669142"
+ms.lasthandoff: 08/18/2022
+ms.locfileid: "12713509"
 ---
 # <a name="release-notes-for-microsoft-edge-mobile-stable-channel"></a>Notas de versão para o Canal Estável Móvel do Microsoft Edge
 
@@ -27,6 +27,22 @@ Todas as atualizações de segurança do Canal Estável estão listadas em [Nota
 
 > [!NOTE]
 > Para o Canal Estável, as atualizações são implantadas progressivamente por um ou mais dias. Para saber mais, consulte [Distribuições progressivas para atualizações do Microsoft Edge](./microsoft-edge-update-progressive-rollout.md). Pode haver um atraso antes que a nova versão seja preenchida para o App Store (iOS) e o Google Play (Android).
+
+## <a name="version-1040129360-august-17"></a>Versão 104.0.1293.60: 17 de agosto
+
+> [!IMPORTANT]
+> Essa atualização contém uma correção para [CVE-2022-2856](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-2856), que foi relatada pela equipe Chromium como tendo uma exploração em execução. Para obter mais informações, consulte o [Guia de atualização de segurança](https://msrc.microsoft.com/update-guide).
+
+As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#august-17-2022).
+
+## <a name="version-1040129358-august-16"></a>Versão 104.0.1293.58: 16 de agosto
+
+Correção de vários bugs.
+
+### <a name="feature-updates"></a>Atualizações de recursos
+
+- **Suporte para desabilitação do recurso navegação inPrivate e Senha (iOS e Android).**  Antes do Microsoft Edge 104, o Edge para iOS e Android desabilitou a navegação InPrivate e a Senha (solicita que você salve senhas para o usuário) por padrão quando permitir apenas contas corporativas ou de estudante estiver configurada.<br><br>
+A partir do Microsoft Edge 104, você tem mais flexibilidade porque o InPrivate e a Senha não serão desabilitados por padrão quando somente permitir contas corporativas ou de estudante estiver configurada. Em vez disso, você pode decidir se deseja desabilitar a navegação InPrivate ou a senha configurando a chave **com.microsoft.intune.mam.managedbrowser.disabledFeatures** . Para obter mais informações, consulte [Desabilitar recursos específicos](https://docs.microsoft.com/mem/intune/apps/manage-microsoft-edge#disable-specific-features).
 
 ## <a name="version-103126453-july-1"></a>Versão 103.1264.53: 1º de julho
 
