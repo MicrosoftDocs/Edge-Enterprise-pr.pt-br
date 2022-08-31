@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas de versão arquivadas para o Canal Estável do Microsoft Edge
-ms.openlocfilehash: 367f38890d6f7c75212facfbab953e98b4e5f1a4
-ms.sourcegitcommit: c4b3a38fdb78cf663f82d35148716d88f3e7551d
+ms.openlocfilehash: 7170d7223cac947ead6a7edc0c2c9496859942f6
+ms.sourcegitcommit: 3e3362b0c5c663df160e8e8f68a4c82564183b2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "12691868"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "12740551"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão arquivadas para o Canal Estável do Microsoft Edge
 
@@ -187,7 +187,7 @@ Corrigidos vários bugs e problemas de desempenho para a versão Estável e Est�
 ## <a name="version-980110855-february-16"></a>Versão 98.0.1108.55: 16 de fevereiro
 
 > [!Important]
-> Essa atualização contém uma correção para [CVE-2022-0609](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-0609) que foi relatada pela equipe do Chromium como tendo uma exploração em execução. Para obter mais informações, consulte o [Guia de atualização de segurança](https://msrc.microsoft.com/update-guide).
+> Essa atualização contém uma correção para [CVE-2022-0609](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-0609) que foi relatada pela equipe do Chromium como tendo uma exploração em execução. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
 
 As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#february-16-2022).
 
@@ -321,7 +321,7 @@ Correção de vários bugs e problemas de desempenho.
 
 ## <a name="version-960105429-november-19"></a>Versão 96.0.1054.29: 19 de novembro
 
-As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#november-19-2021).
+As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#november-19-2021).
 
 ### <a name="feature-updates"></a>Atualizações de recursos
 
@@ -329,7 +329,7 @@ As atualizações de segurança do canal estável estão listadas [aqui](/deploy
   
 - **Entrega aprimorada entre o modo IE e o navegador moderno.** A partir desta versão do Microsoft Edge, as navegação entre o Microsoft Edge e o modo Internet Explorer incluirão dados de formulário e cabeçalhos HTTP adicionais. Os cabeçalhos de referenciador, os dados de postagem, os dados de formulários e os métodos de solicitação serão encaminhados corretamente entre as duas experiências. Você pode especificar quais tipos de dados devem ser incluídos usando a política InternetExplorerIntegrationComplexNavDataTypes. Para obter mais informações, consulte as perguntas frequentes: [Meu aplicativo requer a transferência de dados POST entre o modo IE e o Microsoft Edge. Há suporte para isso?](./edge-ie-mode-faq.md#my-application-requires-transferring-post-data-between-ie-mode-and-microsoft-edge-is-this-supported)
 
-- **Atualize o Microsoft Edge WebWiew2 usando o WSUS.** Os administradores de TI que Windows Server Update Services (WSUS) para atualizar o Microsoft Edge também poderão atualizar o Microsoft Edge WebView2 usando o WSUS. Essa funcionalidade oferece aos administradores um processo de manutenção mais fácil para dispositivos offline.
+- **Atualize o Microsoft Edge WebView2 usando o WSUS.** Os administradores de TI que Windows Server Update Services (WSUS) para atualizar o Microsoft Edge também poderão atualizar o Microsoft Edge WebView2 usando o WSUS. Essa funcionalidade oferece aos administradores um processo de manutenção mais fácil para dispositivos offline.
 
 - **Atualizações do WSUS para o Servidor.** As atualizações do WSUS e do Catálogo para canais do Microsoft Edge (Estável, Beta e Desenvolvimento) agora serão aplicadas a SKUs do Windows Server que têm o Microsoft Edge instalado, incluindo o Windows Server 2022. Para obter mais informações sobre como configurar atualizações do WSUS para o Microsoft Edge, consulte [Atualizar o Microsoft Edge](/mem/configmgr/apps/deploy-use/deploy-edge).
 
@@ -462,7 +462,7 @@ Vários bugs e problemas de desempenho corrigidos.
 > [!Important]
 > Essa atualização contém uma correção para [o CVE-2021-37973,](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37973) que foi relatada pela equipe Chromium como tendo uma exploração na natureza. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
 
-As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#september-24-2021).
+As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#september-24-2021).
 
 ### <a name="feature-updates"></a>Atualizações de recursos
 
@@ -822,7 +822,7 @@ Oito novas políticas foram adicionadas. Baixe os Modelos Administrativos atuali
 ## <a name="version-89077477-april-14"></a>Versão 89.0.774.77: 14 de abril
 
 > [!Important]
->Essa atualização contém uma correção para [CVE-2021-21206](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21206) e [CVE-2021-21220](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21220) que foi relatada pela equipe do Chromium como tendo uma exploração em execução.  Para obter mais informações, consulte o [Guia de atualização de segurança](https://msrc.microsoft.com/update-guide).
+>Essa atualização contém uma correção para [CVE-2021-21206](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21206) e [CVE-2021-21220](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21220) que foi relatada pela equipe do Chromium como tendo uma exploração em execução.  Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
 
 As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#april-14-2021).
 

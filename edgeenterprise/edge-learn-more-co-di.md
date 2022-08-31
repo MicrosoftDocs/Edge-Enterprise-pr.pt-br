@@ -9,24 +9,24 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: Saiba mais sobre os recursos ClickOnce e DirectInvoke no Microsoft Edge.
-ms.openlocfilehash: e8edb1cdef2c6aa83ba127558cc63cacfe40a331
-ms.sourcegitcommit: ad1cb6d9ff6c44b692403730c85ac671415aec86
+description: Saiba mais sobre os recursos clickOnce e DirectInvoke no Microsoft Edge.
+ms.openlocfilehash: ef0ec841541972ec563079fee0f1ae802951ea4b
+ms.sourcegitcommit: 3e3362b0c5c663df160e8e8f68a4c82564183b2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "12550996"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "12740771"
 ---
 # <a name="understand-the-clickonce-and-directinvoke-features-in-microsoft-edge"></a>Noções básicas sobre os recursos ClickOnce e DirectInvoke no Microsoft Edge
 
-ClickOnce e o DirectInvoke são recursos disponíveis no IE e no Microsoft Edge que dão suporte ao uso de um manipulador de arquivos para baixar arquivos de um site. Embora eles atendam a diferentes finalidades, os dois recursos permitem que sites especifiquem que um arquivo solicitado para download seja passado para um manipulador de arquivos no dispositivo do usuário. As solicitações do ClickOnce são manipuladas pelo manipulador de arquivos nativo no Windows. As solicitações do DirectInvoke são manipuladas por um manipulador de arquivos registrado pelo site que hospeda o arquivo.
+ClickOnce e DirectInvoke são recursos disponíveis no IE e no Microsoft Edge que dão suporte ao uso de um manipulador de arquivos para baixar arquivos de um site. Embora eles atendam a diferentes finalidades, os dois recursos permitem que sites especifiquem que um arquivo solicitado para download seja passado para um manipulador de arquivos no dispositivo do usuário. As solicitações do ClickOnce são manipuladas pelo manipulador de arquivos nativo no Windows. As solicitações do DirectInvoke são manipuladas por um manipulador de arquivos registrado pelo site que hospeda o arquivo.
 
-Depois de configurar o ClickOnce ou o DirectInvoke, os prompts ClickOnce ou DirectInvoke podem ser ignorados configurando outras políticas corporativas. Essas políticas podem dar suporte a ignorar os prompts ClickOnce ou DirectInvoke para tipos de arquivo especificados para todos os domínios ou para tipos de arquivo especificados de domínios especificados.
+Depois de configurar o ClickOnce ou o DirectInvoke, os prompts do ClickOnce ou do DirectInvoke podem ser ignorados configurando outras políticas corporativas. Essas políticas podem dar suporte a ignorar os prompts clickOnce ou DirectInvoke para tipos de arquivo especificados para todos os domínios ou para tipos de arquivo especificados de domínios especificados.
 
 Para obter mais informações sobre esses recursos, consulte:
 
 - [ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment?view=vs-2019)
-- [DirectInvoke]( https://technet.microsoft.com/learning/jj215788(v=vs.94).aspx)
+- [DirectInvoke](https://technet.microsoft.com/learning/jj215788(v=vs.94).aspx)
 
 > [!NOTE]
 > Atualmente, o Chromium não oferece suporte nativo ao ClickOnce nem ao DirectInvoke.
@@ -66,9 +66,9 @@ Suporte ao ClickOnce e ao DirectInvoke:
 
 ## <a name="clickonce-and-directinvoke-file-handling-security"></a>Segurança de manipulação de arquivos do ClickOnce e do DirectInvoke
 
-ClickOnce e o DirectInvoke são protegidos pelo Microsoft 365 Defender de verificação de reputação de URL do SmartScreen.
+O ClickOnce e o DirectInvoke são protegidos Microsoft 365 Defender verificação de reputação de URL do SmartScreen.
 
-Se uma ClickOnce ou uma solicitação do DirectInvoke for sinalizada pelo serviço de reputação de URL do Microsoft 365 Defender SmartScreen como não segura, os usuários com o ClickOnce ou DirectInvoke habilitado verão dois pop-ups.
+Se uma solicitação ClickOnce ou DirectInvoke for sinalizada pelo serviço de reputação de URL do Microsoft 365 Defender SmartScreen como não segura, os usuários com o ClickOnce ou DirectInvoke habilitado verão dois pop-ups.
 
 O primeiro pop-up pergunta ao usuário se ele quer abrir o arquivo. Esse pop-up é exibido independentemente de o arquivo ter sido sinalizado como seguro ou não seguro. O usuário pode **relatar o arquivo como não seguro****, cancelar** a solicitação ou selecionar **Abrir** para continuar.
 
@@ -91,9 +91,9 @@ O segundo pop-up só aparece se:
 
 Há duas políticas de grupo que você pode usar para habilitar ou desabilitar o ClickOnce e o DirectInvoke para usuários corporativos. Essas duas políticas são [ClickOnceEnabled](./microsoft-edge-policies.md#clickonceenabled) e [DirectInvokeEnabled](./microsoft-edge-policies.md#directinvokeenabled). Essas duas políticas são rotuladas no Editor de Política de Grupo como "Permitir que os usuários abram arquivos usando o protocolo ClickOnce" e "Permitir que os usuários abram arquivos usando o protocolo DirectInvoke", respectivamente.
 
-Para especificar tipos de arquivo para os quais os prompts ClickOnce ou DirectInvoke devem ser ignorados, use a política rotulada no Editor do Política de Grupo como "Lista de tipos de arquivo que devem ser abertos automaticamente no download". Essa configuração de política permitirá que os tipos de arquivo especificados sejam abertos automaticamente após o download para todos os domínios.  
+Para especificar tipos de arquivo para os quais os prompts clickOnce ou DirectInvoke devem ser ignorados, use a política rotulada no Editor do Política de Grupo como "Lista de tipos de arquivo que devem ser abertos automaticamente no download". Essa configuração de política permitirá que os tipos de arquivo especificados sejam abertos automaticamente após o download para todos os domínios.  
 
-Você pode ignorar os prompts ClickOnce ou DirectInvoke para tipos de arquivo específicos para domínios específicos configurando mais duas políticas. Essas políticas são rotuladas no Editor do Política de Grupo como "Lista de tipos de arquivo que devem ser abertos automaticamente no download" e "URLs em que AutoOpen-FileTypes pode aplicar".
+Você pode ignorar os prompts do ClickOnce ou do DirectInvoke para tipos de arquivo específicos para domínios específicos configurando mais duas políticas. Essas políticas são rotuladas no Editor do Política de Grupo como "Lista de tipos de arquivo que devem ser abertos automaticamente no download" e "URLs em que AutoOpen-FileTypes pode aplicar".
 
 > [!NOTE]
 > A política "URLs em que AutoOpen- FileTypes pode se aplicar" é uma política de suporte para "Lista de tipos de arquivo que devem ser abertos automaticamente no download" e não faz nada por conta própria.  
@@ -106,9 +106,9 @@ Os exemplos a seguir mostram a manipulação de arquivos quando o ClickOnce e o 
 
 1. Um usuário abre um link para uma página que solicita suporte ao ClickOnce e recebe o aviso exibido na próxima captura de tela.
 
-   ![Solicitar a abertura de um arquivo não seguro ClickOnce habilitado](./media/edge-learn-more-co-di/edge-clickonce-enabled-1.png)
+   ![Solicitar a abertura de um arquivo não seguro com o ClickOnce habilitado](./media/edge-learn-more-co-di/edge-clickonce-enabled-1.png)
 
-2. Depois que o usuário seleciona **Abrir**, ClickOnce tenta iniciar o aplicativo.
+2. Depois que o usuário seleciona **Abrir**, o ClickOnce tenta iniciar o aplicativo.
 
    ![O ClickOnce tenta iniciar o aplicativo](./media/edge-learn-more-co-di/edge-clickonce-enabled-launch-app.png)
 
@@ -121,7 +121,7 @@ Os exemplos a seguir mostram a manipulação de arquivos quando o ClickOnce e o 
 
 ### <a name="clickonce-disabled"></a>ClickOnce desabilitado
 
-1. Quando um usuário abre um link para uma página que solicita ClickOnce suporte, ele verá uma mensagem na bandeja de download semelhante à da próxima captura de tela.
+1. Quando um usuário abrir um link para uma página que solicita suporte ao ClickOnce, ele verá uma mensagem na bandeja de download semelhante à da próxima captura de tela.
 
    ![Aviso de download de arquivo](./media/edge-learn-more-co-di/edge-clickonce-disabled-1.png)
 

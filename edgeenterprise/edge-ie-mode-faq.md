@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: Guia de solução de problemas e perguntas frequentes Microsoft Edge modo Internet Explorer
-ms.openlocfilehash: 7b4e9f6af894111a47429bc321d785341c748170
-ms.sourcegitcommit: 645b392c4c124da136114066a3987ed752753974
+description: Guia de solução de problemas e perguntas frequentes para o modo Internet Explorer do Microsoft Edge
+ms.openlocfilehash: d78e51cf9e3e9eef1063974ae81d50b6aedc4b52
+ms.sourcegitcommit: 3e3362b0c5c663df160e8e8f68a4c82564183b2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "12595396"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "12740741"
 ---
 # <a name="internet-explorer-ie-mode-troubleshooting-and-faq"></a>Solução de problemas e perguntas frequentes do modo internet explorer (IE)
 
@@ -25,16 +25,16 @@ ms.locfileid: "12595396"
 > - Você ainda pode acessar sites antigos e herdados que exigem o Internet Explorer com o modo Internet Explorer no Microsoft Edge. [Saiba como >](https://aka.ms/IEmodewebsite)
 > - O aplicativo da área de trabalho do Internet Explorer 11 será redirecionado progressivamente para o navegador mais rápido e seguro Microsoft Edge e, por fim, será desabilitado por meio do Windows Update. [Desabilitar o IE hoje>](/deployedge/edge-ie-disable-ie11)  
 
-Este artigo fornece dicas de solução de problemas e perguntas frequentes Microsoft Edge versão 77 ou posterior.
+Este artigo fornece dicas de solução de problemas e perguntas frequentes sobre o Microsoft Edge versão 77 ou posterior.
 
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
 
 ## <a name="what-if-i-need-help-with-setting-up-microsoft-edge-or-internet-explorer-mode"></a>E se eu precisar de ajuda para configurar o Microsoft Edge ou o modo Internet Explorer?
 
-Oferecemos várias opções de suporte. Se você tiver Suporte Unificado da Microsoft, entre em contato com esse serviço de suporte para obter ajuda com a transição. Também  [há FastTrack,](https://www.microsoft.com/en-us/fasttrack/microsoft-365/microsoft-edge?rtc=1) disponível sem custo adicional para clientes com 150 ou mais estações pagas de Windows 10.
+Oferecemos várias opções de suporte. Se você tiver Suporte Unificado da Microsoft, entre em contato com esse serviço de suporte para obter ajuda com a transição. Também há o [FastTrack](https://www.microsoft.com/en-us/fasttrack/microsoft-365/microsoft-edge?rtc=1), disponível sem custo adicional para clientes com 150 ou mais estações pagas de Windows 10.
 
-Também recomendamos nosso guia Microsoft Edge + modo Internet Explorer [Introdução e](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWEHMs) nossa [série de blogs do modo IE](https://techcommunity.microsoft.com/t5/windows-10/internet-explorer-to-microsoft-edge-with-ie-mode-blog-series/m-p/2617124).
+Também recomendamos nosso guia de Introdução modo Microsoft Edge [](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWEHMs) + Internet Explorer e nossa [série de blogs do modo IE](https://techcommunity.microsoft.com/t5/windows-10/internet-explorer-to-microsoft-edge-with-ie-mode-blog-series/m-p/2617124).
 
 ## <a name="are-there-any-tools-that-i-can-use-to-guide-me-through-ie-mode-troubleshooting"></a>Há alguma ferramenta que eu possa usar para me orientar na solução de problemas do modo IE?
 
@@ -46,7 +46,7 @@ Também há o próximo vídeo, que fornece dicas e truques de solução de probl
 
 ## <a name="common-ie-mode-issues"></a>Problemas comuns do modo IE
 
-Use esta seção como um guia para ajudá-lo a solucionar e corrigir os dois problemas mais comuns ao passar para o Microsoft Edge com o modo IE. Esses problemas são:
+Use esta seção como um guia para ajudá-lo a solucionar e corrigir os dois problemas mais comuns ao migrar para o Microsoft Edge com o modo IE. Esses problemas são:
 
 - Configurações incorretas do modo documento
 - Configurações de site neutras incompletas
@@ -91,11 +91,11 @@ Se o modo documento indicar que uma das exibições de compatibilidade a seguir 
 - Por meio da lista de exibição de compatibilidade
 - Por meio das configurações de compatibilidade da intranet
 
-Como todas as configurações de Exibição de Compatibilidade resultam no comportamento "IE7 Enterprise", escolha essa configuração na seção "Modo de Compatibilidade" da entrada da lista de sites do modo IE.
+Como todas as configurações de Exibição de Compatibilidade resultam no comportamento do "IE7 Enterprise", escolha essa configuração na seção "Modo de Compatibilidade" da entrada da lista de sites do modo IE.
 
 Para obter mais informações sobre a lógica que o Internet Explorer ou o modo IE usa para pousar em um modo de documento sobre outro, consulte o artigo Modos de documento preteridos e [o artigo do Internet Explorer 11](/internet-explorer/ie11-deploy-guide/deprecated-document-modes) .
 
-A regra geral é usar o modo mais atual baseado em lógica que permite que um determinado site funcione conforme o esperado. Começaríamos com o modo Padrão, passaríamos para o modo de Enterprise IE8 e, em seguida, para o modo de Enterprise IE7, se necessário. Essa seleção oferece às páginas filho a flexibilidade de usar diferentes modos de documento conforme necessário por meio da lógica interna para suas necessidades específicas. Como resultado, todas as páginas do site não são bloqueadas em um modo de documento específico.  
+A regra geral é usar o modo mais atual baseado em lógica que permite que um determinado site funcione conforme o esperado. Começaríamos com o modo Padrão, passaríamos para o modo Empresarial do IE8 e, em seguida, para o modo Enterprise do IE7, se necessário. Essa seleção oferece às páginas filho a flexibilidade de usar diferentes modos de documento conforme necessário por meio da lógica interna para suas necessidades específicas. Como resultado, todas as páginas do site não são bloqueadas em um modo de documento específico.  
 
 A tabela a seguir lista os modos de documento disponíveis para essas configurações.
 
@@ -118,9 +118,9 @@ Uma página depende do SSO para autenticação, mas os usuários são solicitado
   
 Antes de começar a analisar um fluxo de trabalho com falha no Microsoft Edge, examine a barra de endereços para o logotipo "e" do modo IE, mostrado na próxima captura de tela.
 
-![Logotipo do IE na Microsoft Edge de menus.](./media/edge-ie-mode-faq/edge--ie-mode-logo.png)
+![Logotipo do IE na barra de menus do Microsoft Edge.](./media/edge-ie-mode-faq/edge--ie-mode-logo.png)
 
-Se, durante o processo de autenticação de SSO, virmos o "e", mas ele desaparecer após um redirecionamento, esse comportamento apontará para um site neutro ausente. Depois Microsoft Edge quedas no modo IE, precisamos permanecer lá para manter as informações de sessão e cookie. Se a URL aparecer na barra de endereços tempo suficiente para identificá-la, adicione-a à lista de sites do modo IE como um site neutro usando as etapas descritas em Configurar [sites neutros](/deployedge/edge-ie-mode-sitelist#configure-neutral-sites).
+Se, durante o processo de autenticação de SSO, virmos o "e", mas ele desaparecer após um redirecionamento, esse comportamento apontará para um site neutro ausente. Depois que o Microsoft Edge cair no modo IE, precisamos permanecer lá para manter as informações de sessão e cookie. Se a URL aparecer na barra de endereços tempo suficiente para identificá-la, adicione-a à lista de sites do modo IE como um site neutro usando as etapas descritas em Configurar [sites neutros](/deployedge/edge-ie-mode-sitelist#configure-neutral-sites).
 
 Geralmente, o ciclo de redirecionamento ocorre tão rapidamente que é difícil identificar os sites neutros ausentes. Para ajudar com essa análise, usamos uma ferramenta interna no Chromium: **net-export**.
 
@@ -155,14 +155,14 @@ Você pode obter informações de diagnóstico do modo Internet Explorer na guia
 - **Verificação de chave de registro.** (Exibido apenas se a verificação falhar.) Verifica se a integração com o Internet Explorer está configurada corretamente no registro. Caso contrário, o usuário poderá selecionar **Corrigir para** resolver o problema.
 - **Modo Internet Explorer.** Mostra a versão da API usada, com base na configuração e no SO. Se houver algum problema, o usuário poderá ser solicitado a instalar uma atualização do Windows Update.
 - **Configuração do modo Internet Explorer.** Mostra se o modo Internet Explorer está ativado e como está configurado.
-- **Linha de comando.** Mostra a cadeia de caracteres de linha de comando e as opções usadas para iniciar Microsoft Edge.
+- **Linha de comando.** Mostra a cadeia de caracteres de linha de comando e as opções usadas para iniciar o Microsoft Edge.
 - **Configurações de política de grupo.** Mostra se o modo IE está configurado usando políticas de grupo, e as políticas que estão aplicadas.
 
 ### <a name="error-message-to-open-this-page-in-internet-explorer-mode-reinstall-microsoft-edge-with-administrator-privileges"></a>Mensagem de erro: "Para abrir esta página no modo Internet Explorer, reinstale o Microsoft Edge com privilégios de administrador".
 
-Você poderá ver esse erro se não tiver todas as atualizações Windows necessárias. Consulte os pré-requisitos listados em [Sobre o modo IE](./edge-ie-mode.md) para obter as versões necessárias do Windows e Microsoft Edge.
+Você poderá ver esse erro se não tiver todos os recursos necessários do Windows Atualizações. Consulte os pré-requisitos listados em [Sobre o modo IE](./edge-ie-mode.md) para obter as versões necessárias do Windows e Microsoft Edge.
 
-Se você já tiver instalado todas as atualizações Windows necessárias, poderá ver esse erro se:
+Se você já tiver instalado todos os windows Atualizações necessários, poderá ver esse erro se:
 
 - Você estiver usando o canal Canary, que é instalado no nível do usuário por padrão.
 - Você estiver usando o canal Estável, Beta ou Dev, mas quando solicitada a elevação durante a instalação, a elevação foi cancelada. Quando você cancelar o prompt de elevação, a instalação continuará no nível do usuário.
@@ -173,9 +173,9 @@ As soluções possíveis são:
 - Execute o instalador para qualquer canal no nível do sistema: `installer.exe --system-level`.
 - Habilite o Internet Explorer 11 nos Recursos do Windows.
 
-Para verificar se o Microsoft Edge está instalado no nível do sistema, digite "edge://versão" na barra de endereços do Microsoft Edge. O caminho do executável mostrará um caminho que começa com *C:\Arquivos de Programas*, o que indica uma instalação do sistema. Se o caminho executável começar com *C:\Users*, desinstale e reinstale Microsoft Edge com privilégios de administrador.
+Para verificar se o Microsoft Edge está instalado no nível do sistema, digite "edge://versão" na barra de endereços do Microsoft Edge. O caminho do executável mostrará um caminho que começa com *C:\Arquivos de Programas*, o que indica uma instalação do sistema. Se o caminho executável começar com *C:\Users*, desinstale e reinstale o Microsoft Edge com privilégios de administrador.
 
-### <a name="error-message-to-open-this-page-in-ie-mode-try-restarting-microsoft-edge"></a>Mensagem de erro "Para abrir esta página no modo IE, tente reiniciar Microsoft Edge".
+### <a name="error-message-to-open-this-page-in-ie-mode-try-restarting-microsoft-edge"></a>Mensagem de erro "Para abrir esta página no modo IE, tente reiniciar o Microsoft Edge".
 
 Você poderá ver esse erro se houver um erro inesperado no Internet Explorer. Reiniciar o Microsoft Edge geralmente corrige esse erro.
 
@@ -185,7 +185,7 @@ Você poderá ver esse erro se estiver depurando remotamente e navegar até uma 
 
 ### <a name="error-message-could-not-retrieve-emie-site-list"></a>Mensagem de erro: "Não foi possível recuperar a lista de sites da EMIE".
 
-Você pode ver esse erro na página *edge://compat/enterprise* indicando que o download da lista de sites falhou. A partir Microsoft Edge versão 87, quando os cookies são bloqueados para solicitações de terceiros usando a política [BlockThirdPartyCookies](/deployedge/microsoft-edge-policies#blockthirdpartycookies), a autenticação HTTP também não é permitida. Você pode permitir cookies para o domínio específico que hospeda sua Lista de Sites do Modo Empresarial usando a política [CookiesAllowedForURLs](/deployedge/microsoft-edge-policies#cookiesallowedforurls) para garantir que os downloads da lista de sites sejam bem-sucedidos.
+Você pode ver esse erro na página *edge://compat/enterprise* indicando que o download da lista de sites falhou. A partir da versão 87 do Microsoft Edge, quando os cookies são bloqueados para solicitações de terceiros usando a política [BlockThirdPartyCookies](/deployedge/microsoft-edge-policies#blockthirdpartycookies) , a autenticação HTTP também não é permitida. Você pode permitir cookies para o domínio específico que hospeda sua Lista de Sites do Modo Empresarial usando a política [CookiesAllowedForURLs](/deployedge/microsoft-edge-policies#cookiesallowedforurls) para garantir que os downloads da lista de sites sejam bem-sucedidos.
 
 ### <a name="error-message-the-connection-for-this-site-is-not-secure"></a>Mensagem de erro: "A conexão para este site não é segura"
 
@@ -195,41 +195,44 @@ Esse erro poderá ocorrer se você estiver tentando abrir um site herdado no mod
 
 Determinados aplicativos podem exigir que você carregue a página da Web no modo IE. Você pode usar o recurso de modo IE no Microsoft Edge.
 
-Talvez você também precise definir o atributo na `compat-mode` lista de sites Enterprise modo **padrão**. Para obter mais informações, [consulte Enterprise modo e a lista de sites Enterprise modo de exibição](/internet-explorer/ie11-deploy-guide/what-is-enterprise-mode#enterprise-mode-and-the-enterprise-mode-site-list-1).
+Talvez você também precise definir o atributo na `compat-mode` Lista de Sites do Modo Empresarial como **Padrão**. Para obter mais informações, consulte [o Modo Empresarial e a Lista de Sites do Modo Empresarial](/internet-explorer/ie11-deploy-guide/what-is-enterprise-mode#enterprise-mode-and-the-enterprise-mode-site-list-1).
 
 > [!TIP]
-> Os usuários podem exibir facilmente essa lista de sites e o modo de compatibilidade digitando **about:compat** em Microsoft Edge.
+> Os usuários podem exibir facilmente essa lista de sites e o modo de compatibilidade digitando **about:compat** no Microsoft Edge.
 
 ## <a name="frequently-asked-questions"></a>Perguntas frequentes
 
 ### <a name="will-ie-mode-replace-internet-explorer-11"></a>O modo IE substituirá o Internet Explorer 11?
 
-Sim, o aplicativo da área de trabalho do Internet Explorer 11 será desativado e ficará sem suporte em 15 de junho de 2022. Para ver o que está no escopo, consulte perguntas frequentes [sobre ciclo de vida – Internet Explorer](/lifecycle/faq/internet-explorer-microsoft-edge). Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. Para saber mais, leia [O futuro do Internet Explorer Windows 10 está em Microsoft Edge](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+Sim, o aplicativo da área de trabalho do Internet Explorer 11 será desativado e ficará sem suporte em 15 de junho de 2022. Para ver o que está no escopo, consulte perguntas frequentes [sobre ciclo de vida – Internet Explorer](/lifecycle/faq/internet-explorer-microsoft-edge). Os mesmos aplicativos e sites do IE11 que você usa hoje podem abrir no Microsoft Edge com o modo Internet Explorer. Para saber mais, leia [O futuro do Internet Explorer no Windows 10 está no Microsoft Edge](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 ### <a name="can-i-use-view-in-file-explorer-in-sharepoint-online-on-microsoft-edge"></a>Posso usar "Exibir no Explorador de Arquivos" no SharePoint Online no Microsoft Edge?
 
-A partir Microsoft Edge versão 95, você pode habilitar a exibição **** Explorador de Arquivos funcionalidade para bibliotecas de documentos modernas do SharePoint Online. Para que essa experiência fique visível e funcione para seus usuários, você precisará habilitar a política Microsoft Edge "Configurar o recurso De exibição no Explorador de Arquivos para páginas do [SharePoint no Microsoft Edge"](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) e atualizar sua configuração de locatário do SharePoint Online. Saiba mais: [Exibir SharePoint arquivos com Explorador de Arquivos no Microsoft Edge – SharePoint no Microsoft 365 | Microsoft Docs](/SharePoint/sharepoint-view-in-edge).
+A partir da versão 95 do Microsoft Edge, você pode habilitar a exibição **Explorador de Arquivos funcionalidade para** bibliotecas de documentos modernas do SharePoint Online. Para que essa experiência fique visível e funcione para seus usuários, você precisará habilitar a política "Configurar a exibição no [recurso do Explorador de Arquivos para páginas do SharePoint no Microsoft Edge"](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) e atualizar sua configuração de locatário do SharePoint Online. Saiba mais: [Exibir arquivos do SharePoint com Explorador de Arquivos no Microsoft Edge – SharePoint no Microsoft 365 | Microsoft Docs](/SharePoint/sharepoint-view-in-edge).
 
-No entanto, em vez de usar a opção Exibir no Explorador de Arquivos, a abordagem recomendada para gerenciar arquivos e pastas fora do SharePoint é sincronizar arquivos SharePoint e [Teams](https://support.microsoft.com/office/sync-sharepoint-and-teams-files-with-your-computer-6de9ede8-5b6e-4503-80b2-6190f3354a88?ui=en-us&rs=en-us&ad=us) com seu computador ou mover ou copiar arquivos no [SharePoint](https://support.microsoft.com/office/move-or-copy-files-in-sharepoint-00e2f483-4df3-46be-a861-1f5f0c1a87bc?ui=en-us&rs=en-us&ad=us).
+No entanto, em vez de usar a opção Exibir no Explorador de Arquivos, a abordagem recomendada para gerenciar arquivos e pastas fora do SharePoint é sincronizar arquivos do [SharePoint](https://support.microsoft.com/office/sync-sharepoint-and-teams-files-with-your-computer-6de9ede8-5b6e-4503-80b2-6190f3354a88?ui=en-us&rs=en-us&ad=us) e do Teams com seu computador ou mover ou copiar arquivos no [SharePoint](https://support.microsoft.com/office/move-or-copy-files-in-sharepoint-00e2f483-4df3-46be-a861-1f5f0c1a87bc?ui=en-us&rs=en-us&ad=us).
 
-### <a name="does-ie-mode-on-microsoft-edge-support-the-no-merge-option-that-was-supported-in-internet-explorer-11"></a>O modo IE no Microsoft Edge dá suporte à opção "sem mesclagem" compatível com o Internet Explorer 11?
+### <a name="does-ie-mode-on-microsoft-edge-support-the-no-merge-option-that-was-supported-in-internet-explorer-11"></a>O modo IE no Microsoft Edge dá suporte à opção "sem mesclagem" com suporte no Internet Explorer 11?
 
 As alternativas recomendadas para a funcionalidade sem mesclagem no Microsoft Edge são uma das seguintes ações:
 
 1. Usar Perfis no Microsoft Edge – cada perfil é mapeado para uma sessão do IE diferente para páginas do modo IE, portanto, ele se comporta de forma idêntica à opção sem mesclagem.
-2. Use a linha de comando`--user-data-dir=<path>`, mas com um caminho diferente para cada sessão. Se necessário, você pode criar um utilitário para o usuário executar que inicia Microsoft Edge e altera o caminho para a sessão.
+2. Use a linha de comando`--user-data-dir=<path>`, mas com um caminho diferente para cada sessão. Se necessário, você pode criar um utilitário para o usuário executar que inicia o Microsoft Edge e altera o caminho para a sessão.
 
-Se nenhuma das opções anteriores funcionar para seu cenário, a partir da Microsoft Edge versão 93, o modo IE no Microsoft Edge será compatível com a não mesclagem. Para um usuário final, quando uma nova janela do navegador é iniciada de um aplicativo de modo IE, ela estará em uma sessão separada, como o comportamento de não mesclagem no IE11.
+Se nenhuma das opções anteriores funcionar para seu cenário, a partir do Microsoft Edge versão 93, o modo IE no Microsoft Edge será compatível com a não mesclagem. Para um usuário final, quando uma nova janela do navegador é iniciada de um aplicativo de modo IE, ela estará em uma sessão separada, como o comportamento de não mesclagem no IE11.
 
-Para cada Microsoft Edge, na primeira vez que uma guia do modo IE é visitada dentro dessa janela, se for um site designado "sem mesclagem", essa janela será bloqueada em uma sessão diferente do IE "sem mesclagem".  Essa janela permanece bloqueada de todas as Microsoft Edge janelas até que a última guia modo IE seja fechada na janela bloqueada. Isso segue o comportamento anterior em que os usuários podiam iniciar o IE sem mesclagem e iniciar Microsoft Edge sem mesclagem usando outros mecanismos. Todos os sites abertos em uma nova janela (por meio de window.open) respeitarão a natureza de mesclagem do processo pai.
+Para cada janela do Microsoft Edge, na primeira vez que uma guia do modo IE é visitada dentro dessa janela, se for um site designado "sem mesclagem", essa janela será bloqueada em uma sessão diferente do IE "sem mesclagem".  Essa janela permanece bloqueada de todas as outras janelas do Microsoft Edge até que a última guia do modo IE seja fechada na janela bloqueada. Isso segue o comportamento anterior em que os usuários podiam iniciar o IE sem mesclagem e iniciar o Microsoft Edge sem mesclagem usando outros mecanismos. Todos os sites abertos em uma nova janela (por meio de window.open) respeitarão a natureza de mesclagem do processo pai.
 
 > [!NOTE]
 > Não há suporte para alternância de sessão. As navegação na mesma guia modo IE usarão a mesma sessão.
 
-Você pode validar o comportamento de não mesclagem Microsoft Edge versão 93 ou posterior seguindo estas etapas:
+> [!NOTE]
+> [Não há suporte](/deployedge/edge-ie-mode-add-guidance-cookieshare) para o compartilhamento de cookies do modo IE para o modo do Microsoft Edge em sessões no modo IE sem mesclagem.
 
-1. Verifique se o modo IE está habilitado Microsoft Edge versão 93 ou posterior.
-2. Você pode configurar sites que precisam impedir o compartilhamento de sessão na lista de sites do modo Enterprise configurando o valor do atributo de tipo de mesclagem como "no-merge". Esse atributo não é aplicável somente quando o elemento open-in é definido como Microsoft Edge. Por padrão, todos os sites têm um valor do tipo mesclagem de mesclagem. (**Observação:** a ferramenta gerenciador de lista de sites integrada disponível no *edge://compat/sitelistmanager* inclui uma caixa de seleção **** Não mesclar quando você adiciona ou edita um site.)
+Você pode validar o comportamento de não mesclagem no Microsoft Edge versão 93 ou posterior seguindo estas etapas:
+
+1. Verifique se o modo IE está habilitado no Microsoft Edge versão 93 ou posterior.
+2. Você pode configurar sites que precisam impedir o compartilhamento de sessão na Lista de Sites do Modo Empresarial definindo o valor do atributo merge-type como "no-merge". Esse atributo não é aplicável somente quando o elemento open-in é definido como Microsoft Edge. Por padrão, todos os sites têm um valor do tipo mesclagem de mesclagem. (**Observação:** a ferramenta gerenciador de lista de sites integrada disponível no *edge://compat/sitelistmanager* inclui uma caixa de seleção **** Não mesclar quando você adiciona ou edita um site.)
 
    ```
    <site url="contoso.com">
@@ -237,13 +240,13 @@ Você pode validar o comportamento de não mesclagem Microsoft Edge versão 93 o
    </site>
    ```
 
-3. Navegue até qualquer site configurado como sem mesclagem. O site deve estar em sua própria sessão de IE não mesclada. Quando você abre outra Microsoft Edge ou janela e navega para o mesmo site, ela deve estar em sua própria sessão do IE. Observe que há vários processos iexplore.exe no Gerenciador de Tarefas.
+3. Navegue até qualquer site configurado como sem mesclagem. O site deve estar em sua própria sessão de IE não mesclada. Quando você abre outra instância ou janela do Microsoft Edge e navega para o mesmo site, ela deve estar em sua própria sessão do IE. Observe que há vários processos iexplore.exe no Gerenciador de Tarefas.
 
 Se você tiver algum comentário, entre em contato por meio de um dos nossos canais de comentários: Suporte da Microsoft ou fórum [techCommunity](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise) .
 
 ### <a name="can-i-save-links-as-webpages-in-internet-explorer-mode"></a>Posso salvar links como páginas da Web no modo Internet Explorer?
 
-Sim, você pode habilitar a opção Salvar destino como no menu de contexto do modo Internet Explorer no Microsoft Edge. Para fazer isso, configure a política de grupo "Permitir Salvar Destino como no modo *Internet Explorer*" localizada na Configuração do Computador > Modelos *Administrativos > Windows Componentes > Internet Explorer*. O mecanismo de salvamento funciona da mesma forma que no Internet Explorer e, se o destino for salvo como um arquivo html, reabrir o arquivo renderizará a página no Microsoft Edge.
+Sim, você pode habilitar a opção Salvar destino como no menu de contexto do modo Internet Explorer no Microsoft Edge. Para fazer isso, configure a política de grupo "Permitir Salvar Destino como no modo *Internet Explorer*", localizada em Modelos Administrativos > configuração do computador *> Componentes do Windows > Internet Explorer*. O mecanismo de salvamento funciona da mesma forma que no Internet Explorer e, se o destino for salvo como um arquivo html, a reabertura do arquivo renderizará a página no Microsoft Edge.
 
 A capacidade de salvar links como páginas da Web requer as seguintes atualizações mínimas do sistema operacional:
 
@@ -254,9 +257,9 @@ A capacidade de salvar links como páginas da Web requer as seguintes atualizaç
 - Windows 10, versão 1607: [KB4586830](https://support.microsoft.com/help/4586830/windows-10-update-kb4586830)
 - Windows 10, versão 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)
 
-### <a name="can-i-test-a-site-in-microsoft-edge-while-it-is-configured-to-open-ie-mode-in-the-enterprise-mode-site-list"></a>Posso testar um site no Microsoft Edge enquanto ele está configurado para abrir o modo IE na Lista de Sites Enterprise Modo de Exibição?
+### <a name="can-i-test-a-site-in-microsoft-edge-while-it-is-configured-to-open-ie-mode-in-the-enterprise-mode-site-list"></a>Posso testar um site no Microsoft Edge enquanto ele está configurado para abrir o modo IE na Lista de Sites do Modo Empresarial?
 
-Sim, enquanto estiver modernizando seus sites herdados, você pode testar aplicativos configurados no modo IE Microsoft Edge. Para testar esses aplicativos, você pode configurar a [política InternetExplorerModeTabInEdgeModeAllowed](/deployedge/microsoft-edge-policies#internetexplorermodetabinedgemodeallowed) . Se você habilitar essa política, os usuários poderão abrir sites do modo IE no Microsoft Edge selecionando **Configurações** e muito mais (o ícone de reticências...) **** >  > mais**ferramentas abrir sites** no modo de borda.
+Sim, enquanto estiver modernizando seus sites herdados, você pode testar aplicativos configurados no modo IE no Microsoft Edge. Para testar esses aplicativos, você pode configurar a [política InternetExplorerModeTabInEdgeModeAllowed](/deployedge/microsoft-edge-policies#internetexplorermodetabinedgemodeallowed) . Se você habilitar essa política, os usuários poderão abrir sites do modo IE no Microsoft Edge selecionando Configurações e muito **mais (o** ícone de reticências...) **** >  > Mais**Ferramentas Abrir sites** no modo de Borda.
 
 ### <a name="how-can-i-debug-my-legacy-application-while-using-ie-mode-on-microsoft-edge"></a>Como posso depurar meu aplicativo herdado ao usar o modo IE no Microsoft Edge?
 
@@ -267,11 +270,11 @@ Você pode usar o IEChooser para iniciar o Internet Explorer DevTools para depur
    - Insira `%systemroot%\system32\f12\IEChooser.exe`e selecione **Ok**.
 2. No IEChooser, selecione a entrada para a guia modo IE.
 
-### <a name="my-application-requires-transferring-post-data-between-ie-mode-and-microsoft-edge-is-this-supported"></a>Meu aplicativo requer a transferência de dados POST entre o modo IE e Microsoft Edge. Há suporte para isso?
+### <a name="my-application-requires-transferring-post-data-between-ie-mode-and-microsoft-edge-is-this-supported"></a>Meu aplicativo requer a transferência de dados POST entre o modo IE e o Microsoft Edge. Há suporte para isso?
 
-A partir canal Microsoft Edge Beta versão 96, as navegação que alternam entre o modo Internet Explorer e Microsoft Edge incluirão dados de formulário por padrão. No entanto, se os dados de formulário incluirem anexos de arquivo, eles não serão transferidos entre mecanismos. Você pode escolher quais tipos de dados devem ser incluídos em tais navegaçãos usando a política de grupo [InternetExplorerIntegrationComplexNavDataTypes](/deployedge/microsoft-edge-policies#internetexplorerintegrationcomplexnavdatatypes) .
+A partir canal Microsoft Edge Beta versão 96, as navegação que alternam entre o modo Internet Explorer e o Microsoft Edge incluirão dados de formulário por padrão. No entanto, se os dados de formulário incluirem anexos de arquivo, eles não serão transferidos entre mecanismos. Você pode escolher quais tipos de dados devem ser incluídos em tais navegaçãos usando a política de grupo [InternetExplorerIntegrationComplexNavDataTypes](/deployedge/microsoft-edge-policies#internetexplorerintegrationcomplexnavdatatypes) .
 
-Além da Microsoft Edge versão 96, você precisa ter as seguintes atualizações Windows instaladas para essa experiência:
+Além do Microsoft Edge versão 96, você precisa ter as seguintes atualizações do Windows instaladas para essa experiência:
 
 - Windows 11 [KB5007262](https://support.microsoft.com/topic/november-22-2021-kb5007262-os-build-22000-348-preview-7f3e18d7-4189-4882-b0e9-afc920253aee) ou posterior
 - Windows Server 2022 [KB5007254](
@@ -282,18 +285,18 @@ https://support.microsoft.com/topic/november-9-2021-kb5007189-os-build-18362-191
 
 ### <a name="where-can-i-find-the-reload-in-internet-explorer-mode-option"></a>Onde posso encontrar a opção "Recarregar no modo Internet Explorer"?
 
-Esse recurso está disponível no Microsoft Edge versão 92 ou posterior. Para habilitar essa opção, configure "Permitir que os sites sejam recarregados nas configurações do modo Internet Explorer" Microsoft Edge como "Permitir".  Para obter mais informações, consulte [Habilitar a experiência de lista de sites locais](/deployedge/edge-ie-mode-local-site-list#enable-the-local-site-list-experience).
+Esse recurso está disponível no Microsoft Edge versão 92 ou posterior. Para habilitar essa opção, configure "Permitir que os sites sejam recarregados nas configurações do modo Internet Explorer" no Microsoft Edge como "Permitir".  Para obter mais informações, consulte [Habilitar a experiência de lista de sites locais](/deployedge/edge-ie-mode-local-site-list#enable-the-local-site-list-experience).
 
 ### <a name="where-is-the-file--new-session-option-in-microsoft-edge"></a>Onde está a opção "> nova sessão" no Microsoft Edge?
 
 Uma solução de navegador moderna está disponível usando vários perfis no Microsoft Edge. Esse recurso permite que você crie uma nova sessão com outra conta. Os recursos a seguir fornecem informações sobre os benefícios de vários perfis e como usá-los.
 
 - [Vídeo: Microsoft Edge e Identidade](/deployedge/microsoft-edge-video-identity)
-- [Usar vários perfis no trabalho e em casa agora é mais fácil com Microsoft Edge](https://blogs.windows.com/msedgedev/2020/04/30/automatic-profile-switching/)
+- [Usar vários perfis no trabalho e em casa agora é mais fácil com o Microsoft Edge](https://blogs.windows.com/msedgedev/2020/04/30/automatic-profile-switching/)
 
-### <a name="why-am-i-getting-multiple-authentication-prompts-when-running-a-page-in-ie-mode-on-microsoft-edge"></a>Por que estou recebendo vários prompts de autenticação ao executar uma página no modo IE Microsoft Edge?
+### <a name="why-am-i-getting-multiple-authentication-prompts-when-running-a-page-in-ie-mode-on-microsoft-edge"></a>Por que estou recebendo vários prompts de autenticação ao executar uma página no modo IE no Microsoft Edge?
 
-O certificado do cliente pode ser solicitado duas vezes no modo IE. Na primeira vez, a caixa de diálogo de seleção de certificado será exibida no modo IE e, na segunda vez, a caixa de diálogo será exibida Microsoft Edge. O processo de quadro e o processo de janela precisam solicitar autenticação.
+O certificado do cliente pode ser solicitado duas vezes no modo IE. Na primeira vez, a caixa de diálogo de seleção de certificado será exibida no modo IE e, na segunda vez, a caixa de diálogo será exibida no Microsoft Edge. O processo de quadro e o processo de janela precisam solicitar autenticação.
 
 Depois que o cache favicon for criado, você não será solicitado a fornecer um certificado de cliente novamente, a menos que exclua o cache. Como alternativa, você pode definir uma regra na configuração do servidor, como o IIS, para não exigir um certificado de cliente para o favicon.
 
@@ -301,7 +304,7 @@ Depois que o cache favicon for criado, você não será solicitado a fornecer um
 
 A área de conteúdo de uma janela filho que é renderizada no modo IE no Microsoft Edge é ligeiramente diferente do que é no Internet Explorer 11. Se uma página da Web tiver sido projetada com alinhamentos ou posicionamentos baseados em pixel, você poderá experimentar renderização incorreta, disposição de texto e assim por diante.
 
-Duas configurações de política foram adicionadas ao Microsoft Edge versão 95 que permitem especificar ajustes personalizados à altura e à largura das janelas pop-up geradas de sites `window.open` do modo IE por meio do método. Você pode usar as seguintes políticas para ajustar o tamanho da janela:
+Duas configurações de política foram adicionadas ao Microsoft Edge versão 95 que permitem especificar ajustes personalizados à altura e à largura das janelas pop-up geradas a partir de sites `window.open` do modo IE por meio do método. Você pode usar as seguintes políticas para ajustar o tamanho da janela:
 
 - [InternetExplorerIntegrationWindowOpenHeightAdjustment](/deployedge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) – essa configuração permite que você especifique um ajuste personalizado para a altura das janelas pop-up geradas no site do modo Internet Explorer.
 - [InternetExplorerIntegrationWindowOpenWidthAdjustment](/deployedge/microsoft-edge-policies#internetexplorerintegrationwindowopenwidthadjustment) – essa configuração permite especificar um ajuste personalizado para a largura das janelas pop-up geradas do site do modo Internet Explorer.
@@ -312,18 +315,18 @@ Depois de configurar o modo IE, determinados sites, especialmente os sites que c
 
 Para esse tipo de site redirecionado, você pode usar a configuração na `allow-redirect="true"` lista de sites. Para obter mais informações, consulte [Elementos de esquema atualizados](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance#updated-schema-elements).
 
-### <a name="why-arent-websites-loading-in-ie-mode-when-i-launch-microsoft-edge-for-the-first-time"></a>Por que os sites não são carregados no modo IE quando eu Microsoft Edge pela primeira vez?
+### <a name="why-arent-websites-loading-in-ie-mode-when-i-launch-microsoft-edge-for-the-first-time"></a>Por que os sites não estão sendo carregados no modo IE quando eu iniciar o Microsoft Edge pela primeira vez?
 
-Microsoft Edge precisa baixar a lista de sites do modo IE antes de aplicar as configurações do modo IE. Esse processo pode não ser concluída quando o navegador é iniciado. Uma política está disponível que pode forçar o carregamento da lista de sites antes que um site seja carregado. Para obter mais informações, confira a política [DelayNavigationsForInitialSiteListDownload](/deployedge/microsoft-edge-policies#delaynavigationsforinitialsitelistdownload).
+O Microsoft Edge precisa baixar a lista de sites do modo IE para poder aplicar as configurações do modo IE. Esse processo pode não ser concluída quando o navegador é iniciado. Uma política está disponível que pode forçar o carregamento da lista de sites antes que um site seja carregado. Para obter mais informações, confira a política [DelayNavigationsForInitialSiteListDownload](/deployedge/microsoft-edge-policies#delaynavigationsforinitialsitelistdownload).
 
 ### <a name="why-cant-i-open-files-or-pages-that-are-found-by-using-file-urls-in-microsoft-edge"></a>Por que não consigo abrir arquivos ou páginas que são encontrados usando file:// URLs no Microsoft Edge?
 
-Por motivos de segurança, Microsoft Edge permite o acesso file:// URLs de páginas atendidas por HTTP ou HTTPS.
+Por motivos de segurança, o Microsoft Edge não permite o acesso file:// URLs de páginas atendidas por HTTP ou HTTPS.
 
 Se você quiser essa funcionalidade, as duas soluções alternativas a seguir estarão disponíveis:
 
-- Você pode usar a política de grupo [IntranetFileLinksEnabled](microsoft-edge-policies.md#intranetfilelinksenabled) para permitir links de páginas HTTPS para abrir compartilhamentos de arquivos de Zona da Intranet no Windows Explorer.
-- As páginas carregadas da Zona da Intranet Microsoft Edge o recurso de modo IE do Microsoft Edge têm permissão para navegar diretamente para URLs usando o **file:// protocolo.**
+- Você pode usar a política de grupo [IntranetFileLinksEnabled](microsoft-edge-policies.md#intranetfilelinksenabled) para permitir links de páginas HTTPS para abrir compartilhamentos de arquivos da Zona da Intranet no Windows Explorer.
+- As páginas carregadas da Zona da Intranet no recurso de modo IE do Microsoft Edge têm permissão para navegar diretamente para URLs usando o protocolo **file://** aplicativo.
 
 ## <a name="see-also"></a>Consulte também
   

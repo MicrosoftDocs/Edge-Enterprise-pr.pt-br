@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 08/24/2022
+ms.date: 08/31/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: generated
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 11c857d090f80fb882f21609cbcc332dd7e3e652
-ms.sourcegitcommit: a5a796dd806c4048b6c30a64c58ee76cfcbbdd0c
+ms.openlocfilehash: 5fd372b0aff4a7a5ace7c1b0b397a407975ab791
+ms.sourcegitcommit: 3e3362b0c5c663df160e8e8f68a4c82564183b2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "12732247"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "12740731"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -28,6 +28,16 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
+
+## <a name="new-policies"></a>Novas políticas
+
+A tabela a seguir lista as novas políticas que estão nesta atualização de artigo.
+
+| Nome da política | Legenda |
+|:-----|:-----|
+|[EfficiencyModeEnabled](#efficiencymodeenabled)|Modo de eficiência habilitado|
+|[EfficiencyModeOnPowerEnabled](#efficiencymodeonpowerenabled)|Habilitar o modo de eficiência quando o dispositivo estiver conectado a uma fonte de energia|
+|[InternetExplorerIntegrationAlwaysUseOSCapture](#internetexplorerintegrationalwaysuseoscapture)|Sempre use o mecanismo de captura do sistema operacional para evitar problemas com a captura de guias do modo Internet Explorer|
 
 ## <a name="available-policies"></a>Políticas disponíveis
 
@@ -218,6 +228,8 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |Nome da política|Legenda|
 |-|-|
 |[EfficiencyMode](#efficiencymode)|Configurar quando o modo de eficiência deve ficar ativo|
+|[EfficiencyModeEnabled](#efficiencymodeenabled)|Modo de eficiência habilitado|
+|[EfficiencyModeOnPowerEnabled](#efficiencymodeonpowerenabled)|Habilitar o modo de eficiência quando o dispositivo estiver conectado a uma fonte de energia|
 |[StartupBoostEnabled](#startupboostenabled)|Habilitar início rápido|
 ### [*<a name="permit-or-deny-screen-capture"></a>Permitir ou negar capturas de tela*](#permit-or-deny-screen-capture-policies)
 
@@ -460,6 +472,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[InPrivateModeAvailability](#inprivatemodeavailability)|Configurar a disponibilidade do modo InPrivate|
 |[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Habilitar avisos para formulários inseguros|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Controlar o recurso IntensiveWakeUpThrottling|
+|[InternetExplorerIntegrationAlwaysUseOSCapture](#internetexplorerintegrationalwaysuseoscapture)|Sempre use o mecanismo de captura do sistema operacional para evitar problemas com a captura de guias do modo Internet Explorer|
 |[AIntegraçãoComOInternetExplorerSempreAguardaODescarregamento](#internetexplorerintegrationalwayswaitforunload)|Aguarde que as guias do modo Internet Explorer sejam completamente descarregadas antes de encerrar a sessão do navegador|
 |[InternetExplorerIntegrationCloudNeutralSitesReporting](#internetexplorerintegrationcloudneutralsitesreporting)|Configurar relatórios de URLs de site neutro potencialmente configuradas incorretamente para o aplicativo Listas de Sites do Centro de Administração do M365|
 |[InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist)|Configurar a lista de sites de nuvem do Modo empresarial|
@@ -8167,7 +8180,7 @@ Use as informações anteriores ao configurar essa política.
 
   #### <a name="description"></a>Descrição
 
-  Esta configuração de política permite que você configure quando o modo de eficiência se tornará ativo. Por padrão, o modo de eficiência estará ativo quando o dispositivo estiver desligado da tomada e a bateria estiver fraca. Em dispositivos sem bateria, o padrão é que o modo de eficiência nunca se torne ativo.
+  Esta configuração de política permite que você configure quando o modo de eficiência se tornará ativo. Por padrão, o modo de eficiência é definido como 'BalancedSavings'. Em dispositivos sem bateria, o padrão é que o modo de eficiência nunca se torne ativo.
 
 Sites individuais podem ser impedidos de participar do modo de eficiência configurando a política [SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls).
 
@@ -8175,11 +8188,17 @@ Definir esta política para 'AlwaysActive' e o modo de eficiência estará sempr
 
 Defina esta política para 'NeverActive' e o modo de eficiência nunca se tornará ativo.
 
-Defina esta política para 'ActiveWhenUnplugged' e o modo de eficiência se tornará ativo quando o dispositivo for desconectado. Se o dispositivo não tiver uma bateria, o modo de eficiência nunca se tornará ativo.
+Defina esta política para 'ActiveWhenUnplugged' e o modo de eficiência se tornará ativo quando o dispositivo for desconectado.
 
-Defina esta política para 'ActiveWhenUnpluggedBatteryLow' e o modo de eficiência ficará ativo quando o dispositivo for desligado e a bateria estiver fraca. Se o dispositivo não tiver uma bateria, o modo de eficiência nunca se tornará ativo.
+Defina esta política para 'ActiveWhenUnpluggedBatteryLow' e o modo de eficiência ficará ativo quando o dispositivo for desligado e a bateria estiver fraca.
 
-Se você não configurar esta política, os usuários podem escolher a opção de modo de eficiência em edge://settings/system.
+Defina essa política como 'BalancedSavings' e, quando o dispositivo for desconectado, o modo de eficiência executará etapas moderadas para economizar bateria. Quando o dispositivo estiver desconectado e a bateria estiver fraca, o modo de eficiência executará etapas adicionais para economizar bateria.
+
+Defina essa política como "MaximumSavings" e quando o dispositivo estiver desconectado ou desconectado e a bateria estiver baixa, o modo de eficiência executará etapas adicionais para economizar bateria.
+
+Se o dispositivo não tiver uma bateria, o modo de eficiência nunca ficará ativo em nenhum modo diferente de 'AlwaysActive', a menos que a configuração ou a política [EfficiencyModeEnabled](#efficiencymodeenabled) esteja habilitada.
+
+Essa política não terá efeito se [a política EfficiencyModeEnabled](#efficiencymodeenabled) estiver desabilitada.
 
 Saiba mais sobre o modo de eficiência: [https://go.microsoft.com/fwlink/?linkid=2173921](https://go.microsoft.com/fwlink/?linkid=2173921)
 
@@ -8192,6 +8211,10 @@ Mapeamento das opções de política:
 * ActiveWhenUnplugged (2) = O modo de eficiência está ativo quando o dispositivo é desconectado
 
 * ActiveWhenUnpluggedBatteryLow (3) = O modo de eficiência está ativo quando o dispositivo está desligado da tomada e a bateria está fraca
+
+* BalancedSavings (4) = Quando o dispositivo é desconectado, o modo de eficiência executa etapas moderadas para economizar bateria. Quando o dispositivo está desconectado e a bateria está fraca, o modo de eficiência executa etapas adicionais para economizar bateria.
+
+* MaximumSavings (5) = Quando o dispositivo está desconectado ou desconectado e a bateria está baixa, o modo de eficiência executa etapas adicionais para economizar bateria.
 
 Use as informações anteriores ao configurar essa política.
 
@@ -8234,6 +8257,138 @@ Use as informações anteriores ao configurar essa política.
   - Valor de exemplo:
 ``` xml
 <integer>3</integer>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="efficiencymodeenabled"></a>EfficiencyModeEnabled
+
+  #### <a name="efficiency-mode-enabled"></a>Modo de eficiência habilitado
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e no macOS desde o 106 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Habilita o modo de eficiência que ajuda a estender a vida útil da bateria salvando recursos do computador. Por padrão, o modo de eficiência é habilitado para dispositivos com uma bateria e desabilitado caso contrário.
+
+Se você habilitar essa política, o modo de eficiência se tornará ativo de acordo com a configuração escolhida pelo usuário. Você pode definir a configuração do modo de eficiência usando [a política EfficiencyMode](#efficiencymode) . Se o dispositivo não tiver uma bateria, o modo de eficiência sempre estará ativo.
+
+Se você desabilitar essa política, o modo de eficiência nunca ficará ativo. As [políticas EfficiencyMode](#efficiencymode) [e EfficiencyModeOnPowerEnabled](#efficiencymodeonpowerenabled) não terão efeito.
+
+Se você não configurar essa política, o modo de eficiência será habilitado para dispositivos com uma bateria e desabilitado caso contrário. Os usuários podem escolher a opção de modo de eficiência desejada no edge://settings/system.
+
+Saiba mais sobre o modo de eficiência: [https://go.microsoft.com/fwlink/?linkid=2173921](https://go.microsoft.com/fwlink/?linkid=2173921)
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: Sim
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: EfficiencyModeEnabled
+  - Nome da Política de Grupo: modo de eficiência habilitado
+  - Caminho do GP (Obrigatório): Modelos Administrativos/Microsoft Edge/Desempenho
+  - Caminho do GP (Recomendado): Modelos Administrativos /Microsoft Edge - Configurações Padrão (os usuários podem substituir)/Desempenho
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Nome do valor: EfficiencyModeEnabled
+  - Tipo de Valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: EfficiencyModeEnabled
+  - Valor de exemplo:
+``` xml
+<true/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="efficiencymodeonpowerenabled"></a>EfficiencyModeOnPowerEnabled
+
+  #### <a name="enable-efficiency-mode-when-the-device-is-connected-to-a-power-source"></a>Habilitar o modo de eficiência quando o dispositivo estiver conectado a uma fonte de energia
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e no macOS desde o 106 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Permite que o modo de eficiência se torne ativo quando o dispositivo estiver conectado a uma fonte de energia. Em dispositivos sem bateria, essa política não tem efeito.
+
+Se você habilitar essa política, o modo de eficiência se tornará ativo quando o dispositivo estiver conectado a uma fonte de energia.
+
+Se você desabilitar ou não configurar essa política, o modo de eficiência nunca se tornará ativo quando o dispositivo estiver conectado a uma fonte de energia.
+
+Essa política não terá efeito se [a política EfficiencyModeEnabled](#efficiencymodeenabled) estiver desabilitada.
+
+Saiba mais sobre o modo de eficiência: [https://go.microsoft.com/fwlink/?linkid=2173921](https://go.microsoft.com/fwlink/?linkid=2173921)
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: Sim
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: EfficiencyModeOnPowerEnabled
+  - Nome da Política de Grupo: Habilitar o modo de eficiência quando o dispositivo estiver conectado a uma fonte de energia
+  - Caminho do GP (Obrigatório): Modelos Administrativos/Microsoft Edge/Desempenho
+  - Caminho do GP (Recomendado): Modelos Administrativos /Microsoft Edge - Configurações Padrão (os usuários podem substituir)/Desempenho
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Nome do valor: EfficiencyModeOnPowerEnabled
+  - Tipo de Valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: EfficiencyModeOnPowerEnabled
+  - Valor de exemplo:
+``` xml
+<true/>
 ```
   
 
@@ -22436,6 +22591,67 @@ Observe que a política é aplicada por processo de processamento, com o valor m
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### <a name="internetexplorerintegrationalwaysuseoscapture"></a>InternetExplorerIntegrationAlwaysUseOSCapture
+
+  #### <a name="always-use-the-os-capture-engine-to-avoid-issues-with-capturing-internet-explorer-mode-tabs"></a>Sempre use o mecanismo de captura do sistema operacional para evitar problemas com a captura de guias do modo Internet Explorer
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows desde o 106 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Configure essa política para controlar se o Microsoft Edge usará o "mecanismo de captura do sistema operacional" ou o "Mecanismo de captura do navegador" ao capturar janelas do navegador no mesmo processo usando as APIs de compartilhamento de tela.
+
+Você deve configurar essa política se quiser capturar o conteúdo das guias do modo Internet Explorer. No entanto, habilitar essa política pode afetar negativamente o desempenho ao capturar janelas do navegador no mesmo processo.
+
+Essa política afeta apenas a captura de janela, não a captura de tabulação. O conteúdo das guias do modo Internet Explorer não será capturado quando você optar por capturar apenas uma única guia, mesmo se você configurar essa política.
+
+Se você habilitar essa política, o Microsoft Edge sempre usará o mecanismo de captura do sistema operacional para captura de janela. As guias do modo Internet Explorer terão seu conteúdo capturado.
+
+Se você desabilitar ou não configurar essa política, o Microsoft Edge usará o mecanismo de captura do Navegador para janelas do navegador no mesmo processo. As guias do modo Internet Explorer nessas janelas não terão seu conteúdo capturado.
+
+Para saber mais sobre o modo Internet Explorer, confira [https://go.microsoft.com/fwlink/?linkid=2174004](https://go.microsoft.com/fwlink/?linkid=2174004)
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: não requer a reinicialização do navegador
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: InternetExplorerIntegrationAlwaysUseOSCapture
+  - Nome da Política de Grupo: sempre use o mecanismo de captura do sistema operacional para evitar problemas com a captura de guias do modo Internet Explorer
+  - Caminho da GP (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: InternetExplorerIntegrationAlwaysUseOSCapture
+  - Tipo de Valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000000
+```
+
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### <a name="internetexplorerintegrationalwayswaitforunload"></a>AIntegraçãoComOInternetExplorerSempreAguardaODescarregamento
 
   #### <a name="wait-for-internet-explorer-mode-tabs-to-completely-unload-before-ending-the-browser-session"></a>Aguarde que as guias do modo Internet Explorer sejam completamente descarregadas antes de encerrar a sessão do navegador
@@ -25512,7 +25728,7 @@ Se você desabilitar essa política, os usuários não poderão acessar o menu d
 
   - Nome exclusivo da política de grupo: OutlookHubMenuEnabled
   - Nome da Política de Grupo: Permitir que os usuários acessem o menu do Outlook (obsoleto)
-  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): Administrative Templates/Microsoft Edge - Default Settings (usuários podem substituir)/
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 

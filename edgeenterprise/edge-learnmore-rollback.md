@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Como reverter o Microsoft Edge para uma versão anterior
-ms.openlocfilehash: 1d20cfe920f8c0b5a8c1c253276555acb11e7916
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: ed2d18208820eaed3e57ab08d7cea1b9df9770c5
+ms.sourcegitcommit: 3e3362b0c5c663df160e8e8f68a4c82564183b2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11978540"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "12740534"
 ---
 # <a name="how-to-roll-back-microsoft-edge-to-a-previous-version"></a>Como reverter o Microsoft Edge para uma versão anterior
 
@@ -30,7 +30,7 @@ A reversão permite que você substitua a versão do navegador Microsoft Edge po
 
 ## <a name="before-you-begin"></a>Antes de começar
 
-É importante compreender como o recurso de reversão está instalado em um ambiente do Microsoft Edge. Você pode implantar a reversão ao usar dois métodos diferentes: manualmente com, um MSI ou ao usar a atualização do Microsoft Edge e a Política de grupo. Também encorajamos o uso de uma seleção de Políticas de Grupo para uma implantação mais suave.
+É importante compreender como o recurso de reversão está instalado em um ambiente do Microsoft Edge. Você pode implantar a reversão ao usar dois métodos diferentes: manualmente com, um MSI ou ao usar a atualização do Microsoft Edge e a Política de grupo. Também incentivamos o uso de uma seleção de Políticas de Grupo para uma implantação mais suave.
 
 ### <a name="recommendations"></a>Recomendações
 

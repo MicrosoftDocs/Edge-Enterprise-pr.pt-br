@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Saiba como configurar e usar o Gerenciamento de Lista de Sites na Nuvem para o modo IE usando o Centro de administração do Microsoft 365.
-ms.openlocfilehash: 4f1a633471500eea2fa2152659ab613fa0babe49
-ms.sourcegitcommit: 033c14980f4e7111abd6b3918e9c92e483078efa
-ms.translationtype: HT
+ms.openlocfilehash: 5e6422b76cee30f5cd39e982cc9d39fdc582a36b
+ms.sourcegitcommit: 3e3362b0c5c663df160e8e8f68a4c82564183b2d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "12699535"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "12740711"
 ---
 # <a name="cloud-site-list-management-for-internet-explorer-ie-mode"></a>Gerenciamento de Lista de Sites na Nuvem para modo Internet Explorer (IE)
 
@@ -30,7 +30,7 @@ Este artigo explica como configurar e usar o Gerenciamento de Lista de Sites na 
 
 Para saber mais, assista ao próximo vídeo.
 
-[![Novo Gerenciamento de Lista de Sites na Nuvem para o modo IE](media/edge-ie-mode-cloud-site-list-mgmt/0.png)](https://www.youtube.com/watch?v=p3FyGvsNKC8 "|::ref1::|").
+[![Novo Gerenciamento de Lista de Sites na Nuvem para o modo IE](media/edge-ie-mode-cloud-site-list-mgmt/0.png)](https://www.youtube.com/watch?v=p3FyGvsNKC8 "New Cloud Site List Management for IE mode")
 
 Essa experiência permite armazenar a lista de sites da sua organização em um local de nuvem compatível, em vez de precisar de uma infraestrutura local para hospedar sua ’ lista de sites. Você pode criar, importar, exportar listas de sites e auditar alterações nas entradas da lista de sites por meio do Centro de administração do Microsoft 365. Você pode publicar várias listas de sites na nuvem e usar a política de grupo para atribuir diferentes grupos de dispositivos para usar listas diferentes.
 

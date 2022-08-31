@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Suporte do Microsoft Edge para o Windows Defender Application Guard
-ms.openlocfilehash: fd5293dae19be2aa0939e3a14eeb118907ad375a
-ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
+ms.openlocfilehash: 18f5fe51dcc1a53df9d813f9cf57501cb7991f40
+ms.sourcegitcommit: 3e3362b0c5c663df160e8e8f68a4c82564183b2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "12445485"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "12740751"
 ---
 # <a name="microsoft-edge-support-for-microsoft-defender-application-guard"></a>Suporte do Microsoft Edge para o Windows Defender Application Guard
 
@@ -51,12 +51,16 @@ A próxima captura de tela mostra um exemplo de mensagem do Application Guard qu
 
 O suporte do Application Guard no novo navegador Microsoft Edge tem paridade funcional com a Versão Prévia do Microsoft Edge e inclui vários aperfeiçoamentos.
 
-### <a name="enable-application-guard-in-passive-mode-and-browse-edge-normally"></a>Habilitar o Application Guard no modo passivo e procurar Borda normalmente
+### <a name="enable-upload-blocking"></a>Habilitar o bloqueio de upload
 
-A partir Microsoft Edge 94, os usuários agora têm a opção de configurar o modo passivo, o que significa que o Application Guard ignora a configuração da lista de sites e os usuários podem navegar no Edge normalmente. Este suporte pode ser controlado pela política. Você pode atualizar a política de borda [ApplicationGuardPassiveModeEnabled](/deployedge/microsoft-edge-policies#applicationguardpassivemodeenabled) para habilitar ou desabilitar o modo passivo.
+A partir do Microsoft Edge 96, os administradores agora têm a opção de bloquear uploads enquanto estiverem no contêiner, o que significa que os usuários não podem carregar arquivos de seu dispositivo local para sua instância do Application Guard. Este suporte pode ser controlado pela política. Você pode atualizar a política de Borda [ApplicationGuardUploadBlockingEnabled](/deployedge/microsoft-edge-policies#applicationguarduploadblockingenabled) para habilitar ou desabilitar uploads no contêiner.
+
+### <a name="enable-application-guard-in-passive-mode-and-browse-edge-normally"></a>Habilitar o Application Guard no modo passivo e procurar no Edge normalmente
+
+A partir do Microsoft Edge 94, os usuários agora têm a opção de configurar o modo passivo, o que significa que o Application Guard ignora a configuração da lista de sites e os usuários podem procurar o Edge normalmente. Este suporte pode ser controlado pela política. Você pode atualizar a política de Borda [ApplicationGuardPassiveModeEnabled](/deployedge/microsoft-edge-policies#applicationguardpassivemodeenabled) para habilitar ou desabilitar o modo passivo.
 
 > [!Note]
-> Essa política AFETA SOMENTE o Edge, portanto, as navegação de outros navegadores podem ser redirecionadas para o Contêiner do Application Guard se você tiver as extensões correspondentes habilitadas.
+> Essa política afeta APENAS o Edge, portanto, as navegação de outros navegadores podem ser redirecionadas para o Contêiner do Application Guard se você tiver as extensões correspondentes habilitadas.
 
 ### <a name="favorites-synchronizing-from-the-host-to-the-container"></a>Favoritos sincronizando do host para o contêiner
 
@@ -129,7 +133,7 @@ Os artigos a seguir fornecem as informações necessárias para instalar, config
 
 - [Requisitos de sistema](/windows/security/threat-protection/microsoft-defender-application-guard/reqs-md-app-guard)
 - [Instalar o Microsoft Defender Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/install-md-app-guard)
-- [Configurar configurações de política de grupo do Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard)
+- [Definir configurações de política de grupo do Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard)
 - [Testar o Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/test-scenarios-md-app-guard)
 
 ## <a name="frequently-asked-questions"></a>Perguntas Frequentes
@@ -144,27 +148,27 @@ Não, o recurso Application Guard tem suporte nativo no Microsoft Edge. Na verda
 
 ### <a name="can-employees-download-documents-from-the-application-guard-edge-session-onto-host-devices"></a>Os funcionários podem baixar documentos da sessão Application Guard Edge nos dispositivos host?
 
-Na Windows 10 Enterprise, versão 1803, os usuários podem baixar documentos do contêiner isolado do Application Guard para o computador host. Esse recurso é gerenciado pela política.
+Na Windows 10 Enterprise, versão 1803, os usuários podem baixar documentos do contêiner isolado do Application Guard para o computador host. Essa funcionalidade é gerenciada pela política.
 
-Na Windows 10 Enterprise, versão 1709 ou Windows 10 Professional, versão 1803, não é possível baixar arquivos do contêiner isolado do Application Guard para o computador host. No entanto, os funcionários podem usar as opções Imprimir em PDF ou Imprimir como XPS e salvar esses arquivos no dispositivo host.
+Na Windows 10 Enterprise edition, versão 1709 ou Windows 10 Professional edition, versão 1803, não é possível baixar arquivos do contêiner isolado do Application Guard para o computador host. No entanto, os funcionários podem usar as opções Imprimir em PDF ou Imprimir como XPS e salvar esses arquivos no dispositivo host.
 
 ### <a name="can-employees-copy-and-paste-between-the-host-device-and-the-application-guard-edge-session"></a>Os funcionários podem copiar e colar entre o dispositivo host e a sessão Application Guard Edge?
 
 Dependendo das configurações da sua organização, os funcionários podem copiar e colar imagens (.bmp) e texto de e para o contêiner isolado.
 
-### <a name="why-dont-employees-see-their-favorites-in-the-application-guard-edge-session"></a>Por que os funcionários não veem seus favoritos na sessão de Borda do Application Guard?
+### <a name="why-dont-employees-see-their-favorites-in-the-application-guard-edge-session"></a>Por que os funcionários não veem seus favoritos na sessão do Application Guard Edge?
 
-Dependendo das configurações da sua organização, pode ser que a Sincronização de Favoritos está desligada. Para gerenciar a política, consulte: Microsoft Edge e Microsoft Defender Application Guard | Microsoft Docs.
+Dependendo das configurações da sua organização, pode ser que a Sincronização de Favoritos esteja desativada. Para gerenciar a política, consulte: Microsoft Edge e Microsoft Defender Application Guard | Microsoft Docs.
 
-### <a name="why-arent-employees-able-to-see-their-extensions-in-the-application-guard-edge-session"></a>Por que os funcionários não conseguem ver suas extensões na sessão de Borda do Application Guard?
+### <a name="why-arent-employees-able-to-see-their-extensions-in-the-application-guard-edge-session"></a>Por que os funcionários não conseguem ver suas extensões na sessão do Application Guard Edge?
 
-Certifique-se de habilitar a política de extensões na configuração do Application Guard.
+Habilite a política de extensões na configuração do Application Guard.
 
 ### <a name="my-extension-doesnt-seem-to-work-in-edge-application-guard"></a>Minha extensão não parece funcionar no Edge Application Guard?
 
-Se a política de extensões estiver habilitada para o MDAG na configuração, verifique se sua extensão requer componentes de Tratamento de Mensagens Nativas, essas extensões não são suportadas no contêiner do Application Guard.
+Se a política de extensões estiver habilitada para o MDAG na configuração, verifique se sua extensão requer componentes de Tratamento de Mensagens Nativas, não há suporte para essas extensões no contêiner do Application Guard.
 
-### <a name="im-trying-to-watch-playback-video-with-hdr-why-is-the-hdr-option-missing"></a>Estou tentando ver vídeo de reprodução com HDR, por que a opção HDR está ausente?
+### <a name="im-trying-to-watch-playback-video-with-hdr-why-is-the-hdr-option-missing"></a>Estou tentando assistir à reprodução de vídeo com HDR, por que a opção HDR está ausente?
 
 Para que a reprodução de vídeo HDR funcione no contêiner, a Aceleração de Hardware vGPU precisa ser habilitada no Application Guard.
 

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Saiba como criar variáveis de diretório de dados do usuário do Microsoft Edge
-ms.openlocfilehash: 3ad794875ee1ec962a05eecee81f0468e6bc8847
-ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
+ms.openlocfilehash: 8d69893febd5b4d60dc1ceb60d45f81db6397cb1
+ms.sourcegitcommit: 3e3362b0c5c663df160e8e8f68a4c82564183b2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "12505624"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "12740531"
 ---
 # <a name="create-microsoft-edge-user-data-directory-variables"></a>Criar variáveis de diretório de dados do usuário do Microsoft Edge
 
@@ -25,7 +25,7 @@ Este artigo explica como você pode usar as variáveis de diretório de dados em
 >Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
 ## <a name="path-variables"></a>Variáveis de caminho
 
-Políticas para modificar caminhos de diretório de dados (por exemplo, configurando as variáveis de suporte [UserDataDir](microsoft-edge-policies.md#userdatadir) ou [DownloadDirectory](microsoft-edge-policies.md#downloaddirectory). Ao configurar essas políticas, você pode usar variáveis em vez de caminhos embutidos no código. Por exemplo, para armazenar os dados de perfil em dados de aplicativo local do usuário no Windows, em vez do local padrão. Definir a política [UserDataDir](microsoft-edge-policies.md#userdatadir) como **${local_app_data}\Edge\Profile**. Na maioria das instalações de Windows 10, esse caminho resolve como *C:\Users\\&lt;Usuário atual&gt;\AppData\Local\Microsoft\Edge\Profile*.
+Políticas para modificar caminhos de diretório de dados (por exemplo, configurando as variáveis de suporte [UserDataDir](microsoft-edge-policies.md#userdatadir) ou [DownloadDirectory](microsoft-edge-policies.md#downloaddirectory) ). Ao configurar essas políticas, você pode usar variáveis em vez de caminhos embutidos no código. Por exemplo, para armazenar os dados de perfil em dados de aplicativo local do usuário no Windows, em vez do local padrão. Definir a política [UserDataDir](microsoft-edge-policies.md#userdatadir) como **${local_app_data}\Edge\Profile**. Na maioria das instalações de Windows 10, esse caminho resolve como *C:\Users\\&lt;Usuário atual&gt;\AppData\Local\Microsoft\Edge\Profile*.
 
 >[!NOTE]
 >Para exibir o **Caminho do perfil** atual, abra a página **Sobre a versão** (digite “edge://version”). O **Caminho do perfil** segue este formato: *C:\Users\\&lt;Usuário atual&gt;\AppData\Local\Microsoft\Edge\User Data\Default*.

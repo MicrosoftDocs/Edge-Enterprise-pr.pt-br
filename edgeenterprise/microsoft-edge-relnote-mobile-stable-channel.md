@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Canal Estável Móvel
-ms.openlocfilehash: 1f3251365dfc8ede5f9521d2f9e9f26a591ef448
-ms.sourcegitcommit: b027cc228175935dc49bdf43e7f7ebb32b2d7fb1
+ms.openlocfilehash: 709259c60594c5d4d2aed265ff43c0cd6c8a4001
+ms.sourcegitcommit: 3e3362b0c5c663df160e8e8f68a4c82564183b2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2022
-ms.locfileid: "12713509"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "12740691"
 ---
 # <a name="release-notes-for-microsoft-edge-mobile-stable-channel"></a>Notas de versão para o Canal Estável Móvel do Microsoft Edge
 
@@ -42,7 +42,7 @@ Correção de vários bugs.
 ### <a name="feature-updates"></a>Atualizações de recursos
 
 - **Suporte para desabilitação do recurso navegação inPrivate e Senha (iOS e Android).**  Antes do Microsoft Edge 104, o Edge para iOS e Android desabilitou a navegação InPrivate e a Senha (solicita que você salve senhas para o usuário) por padrão quando permitir apenas contas corporativas ou de estudante estiver configurada.<br><br>
-A partir do Microsoft Edge 104, você tem mais flexibilidade porque o InPrivate e a Senha não serão desabilitados por padrão quando somente permitir contas corporativas ou de estudante estiver configurada. Em vez disso, você pode decidir se deseja desabilitar a navegação InPrivate ou a senha configurando a chave **com.microsoft.intune.mam.managedbrowser.disabledFeatures** . Para obter mais informações, consulte [Desabilitar recursos específicos](https://docs.microsoft.com/mem/intune/apps/manage-microsoft-edge#disable-specific-features).
+A partir do Microsoft Edge 104, você tem mais flexibilidade porque o InPrivate e a Senha não serão desabilitados por padrão quando somente permitir contas corporativas ou de estudante estiver configurada. Em vez disso, você pode decidir se deseja desabilitar a navegação InPrivate ou a senha configurando a chave **com.microsoft.intune.mam.managedbrowser.disabledFeatures** . Para obter mais informações, consulte [Desabilitar recursos específicos](/mem/intune/apps/manage-microsoft-edge#disable-specific-features).
 
 ## <a name="version-103126453-july-1"></a>Versão 103.1264.53: 1º de julho
 
