@@ -3,23 +3,56 @@ title: Notas de versão arquivadas para o Canal Estável do Microsoft Edge
 ms.author: leahtu
 author: leahmsft
 manager: srugh
-ms.date: 08/05/2022
+ms.date: 09/01/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas de versão arquivadas para o Canal Estável do Microsoft Edge
-ms.openlocfilehash: 7170d7223cac947ead6a7edc0c2c9496859942f6
-ms.sourcegitcommit: 3e3362b0c5c663df160e8e8f68a4c82564183b2d
+ms.openlocfilehash: 2497868637be9d23278a59bd1fa311a2eb281f78
+ms.sourcegitcommit: 346c4c3e30ed30b68b59b77ec712d52eb8c62ce1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "12740551"
+ms.lasthandoff: 09/01/2022
+ms.locfileid: "12741554"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão arquivadas para o Canal Estável do Microsoft Edge
 
 Essas notas de versão fornecem informações dos novos recursos e atualizações não relacionados à segurança que estão inclusos Microsoft Edge Stable Channel. Todas as atualizações de segurança estão listadas [aqui](microsoft-edge-relnotes-security.md).
+
+## <a name="version-1020124530-may-31-2022"></a>Versão 102.0.1245.30: 31 de maio de 2022
+
+As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#may-31-2022).
+
+### <a name="policy-updates"></a>Atualizações de política
+
+#### <a name="new-policies"></a>Novas políticas
+
+- [AllHttpAuthSchemesAllowedForOrigins](/DeployEdge/microsoft-edge-policies#allhttpauthschemesallowedfororigins): lista de origens que permitem toda a autenticação HTTP
+- [OutlookHubMenuEnabled](/DeployEdge/microsoft-edge-policies#outlookhubmenuenabled): permite que os usuários acessem o menu do Outlook
+- [NetworkServiceSandboxEnabled](/DeployEdge/microsoft-edge-policies#networkservicesandboxenabled): habilitar a área restrita do serviço de rede
+- [UserAgentClientHintsGREASEUpdateEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsgreaseupdateenabled): controla o recurso Atualização GREASE das Dicas do Cliente do Agente do Usuário
+
+## <a name="version-1010121053-may-19-2022"></a>Versão 101.0.1210.53: 19 de maio de 2022
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-1000118560-may-13-2022"></a>Versão 100.0.1185.60: 13 de maio de 2022
+
+Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
+
+## <a name="version-1010121047-may-13-2022"></a>Versão 101.0.1210.47: 13 de maio de 2022
+
+As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#may-13-2022).
+
+## <a name="version-1010121039-may-5-2022"></a>Versão 101.0.1210.39: 5 de maio de 2022
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-1000118557-may-2-2022"></a>Versão 100.0.1185.57: 2 de maio de 2022
+
+Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
 
 ## <a name="version-1010121032-april-28"></a>Versão 101.0.1210.32: 28 de abril
 
@@ -118,7 +151,7 @@ Correção de vários bugs e problemas de desempenho para a versão Estável Est
 ## <a name="version-990115055-march-26"></a>Versão 99.0.1150.55: 26 de março
 
 > [!Important]
-> Esta atualização contém uma correção para [CVE-2022-1096](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-1096), que foi relatada pela equipe do Chromium como tendo uma exploração em estado selvagem. Para obter mais informações, consulte o [Guia de atualização de segurança](https://msrc.microsoft.com/update-guide).
+> Esta atualização contém uma correção para [CVE-2022-1096](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-1096), que foi relatada pela equipe do Chromium como tendo uma exploração em estado selvagem. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
 
 As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#march-26-2022).
 

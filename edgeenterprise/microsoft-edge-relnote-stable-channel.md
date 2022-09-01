@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Stable Channel
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 08/25/2022
+ms.date: 09/01/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: 49e4031c49152d98a71657abb340c0ab8a4d6833
-ms.sourcegitcommit: 90c989762768d8ab5e383f2790d230825adf812e
+ms.openlocfilehash: 634121b651be087c1215a5e8cd504fc26b0c0a7e
+ms.sourcegitcommit: 346c4c3e30ed30b68b59b77ec712d52eb8c62ce1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2022
-ms.locfileid: "12735579"
+ms.lasthandoff: 09/01/2022
+ms.locfileid: "12741544"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão do Microsoft Edge Stable Channel
 
@@ -30,6 +30,45 @@ Essas notas de versão fornecem informações dos novos recursos e atualizaçõe
 > Para o Canal Estável, as atualizações serão implantadas progressivamente por um ou mais dias. Para saber mais, consulte [Distribuições progressivas para atualizações do Microsoft Edge](./microsoft-edge-update-progressive-rollout.md).
 >
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-1050134325-september-1-2022"></a>Versão 105.0.1343.25: 1º de setembro de 2022
+
+As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#september-1-2022).
+
+### <a name="feature-updates"></a>Atualizações de recursos
+
+- **Aprimoramentos de modo de segurança aprimorados.** O modo de segurança aprimorado agora dá suporte ao WebAssembly para Windows x64. O suporte adicional entre plataformas é esperado no futuro. Para obter mais informações, confira [Navegar com mais segurança com o Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
+
+- **Melhoria na experiência de Gerenciamento de Lista de Sites na Nuvem para o modo IE.**
+
+  - Você pode restaurar para uma das três últimas versões publicadas da sua lista de sites no Administração Microsoft 365 Center. Para obter mais informações, [consulte Restaurar uma versão anterior de uma lista de sites](/deployedge/edge-ie-mode-cloud-site-list-mgmt#restore-a-previous-version-of-a-site-list).
+  - Você pode identificar lacunas em sua lista de sites corporativos configurando relatórios de comentários do site com as políticas [InternetExplorerIntegrationCloudUserSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudusersitesreporting) e [InternetExplorerIntegrationCloudNeutralSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudneutralsitesreporting). Você pode exibir URLs de lista de sites locais de usuários e URLs de site neutro potencialmente configuradas incorretamente na experiência de listas de sites do Microsoft Edge na Administração Microsoft 365 Center. Para saber mais, confira [Exibir comentários do site no Administração Microsoft 365 Center](/deployedge/edge-ie-mode-cloud-site-list-mgmt#view-site-feedback-on-the-microsoft-365-admin-center-1).
+  - Você pode configurar o compartilhamento de cookie de sessão entre o Microsoft Edge e o Internet Explorer para o modo IE em sua lista de sites na Administração Microsoft 365 Central. Para saber mais, confira o [compartilhamento de cookies entre o Microsoft Edge e o Internet Explorer](/deployedge/edge-ie-mode-add-guidance-cookieshare).
+
+- **Melhorias na experiência de Gerenciamento de Lista de Sites na Nuvem para o modo IE agora estão disponíveis no GCC.** Os clientes da GCC agora podem utilizar a experiência completa de lista de sites do Microsoft Edge no Administração Microsoft 365 Center.
+
+### <a name="policy-updates"></a>Atualizações de política
+
+#### <a name="new-policies"></a>Novas políticas
+
+- [ExemptFileTypeDownloadWarnings](/DeployEdge/microsoft-edge-policies#exemptfiletypedownloadwarnings) – desabilitar o download de avisos baseados em extensão de tipo de arquivo para tipos de arquivo especificados em domínios
+- [InternetExplorerIntegrationAlwaysWaitForUnload](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationalwayswaitforunload) – Aguarde até que as guias do modo Internet Explorer descarreguem completamente antes de encerrar a sessão do navegador
+- [MicrosoftEditorProofingEnabled](/DeployEdge/microsoft-edge-policies#microsofteditorproofingenabled) - Verificação ortográfica fornecida pelo Editor Microsoft
+- [MicrosoftEditorSynonymsEnabled](/DeployEdge/microsoft-edge-policies#microsofteditorsynonymsenabled) - Sinônimos são fornecidos ao usar Editor Microsoft verificador ortográfico
+- [PrintPdfAsImageDefault](/DeployEdge/microsoft-edge-policies#printpdfasimagedefault) – Imprimir PDF como Padrão de Imagem
+- [UnthrottledNestedTimeoutEnabled](/DeployEdge/microsoft-edge-policies#unthrottlednestedtimeoutenabled) - JavaScript setTimeout não será fixado até que um limite de aninhamento mais alto seja definido
+
+#### <a name="deprecated-policies"></a>Políticas preteridas
+
+- [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](/DeployEdge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings): Desabilita o download de avisos baseados em extensão do tipo de arquivo para tipos de arquivo especificados em domínios.
+
+#### <a name="additional-policy-changes"></a>Alterações de política adicionais
+
+- [GuidedSwitchEnabled](/DeployEdge/microsoft-edge-policies#guidedswitchenabled) – Adicionar suporte à plataforma Linux
+
+## <a name="version-1040129378-september-1-2022"></a>Versão 104.0.1293.78: 1º de setembro de 2022
+
+Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
 
 ## <a name="version-1040129370-august-25-2022"></a>Versão 104.0.1293.70: 25 de agosto de 2022
 
@@ -170,39 +209,7 @@ As atualizações de segurança do canal Estável estão listadas [aqui](/deploy
 
 Corrigidos vários bugs e problemas de desempenho para a versão Estável e Estável Estendida.
 
-## <a name="version-1020124530-may-31"></a>Versão 102.0.1245.30: 31 de maio
-
-As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#may-31-2022).
-
-### <a name="policy-updates"></a>Atualizações de política
-
-#### <a name="new-policies"></a>Novas políticas
-
-- [AllHttpAuthSchemesAllowedForOrigins](/DeployEdge/microsoft-edge-policies#allhttpauthschemesallowedfororigins): lista de origens que permitem toda a autenticação HTTP
-- [OutlookHubMenuEnabled](/DeployEdge/microsoft-edge-policies#outlookhubmenuenabled): permite que os usuários acessem o menu do Outlook
-- [NetworkServiceSandboxEnabled](/DeployEdge/microsoft-edge-policies#networkservicesandboxenabled): habilitar a área restrita do serviço de rede
-- [UserAgentClientHintsGREASEUpdateEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsgreaseupdateenabled): controla o recurso Atualização GREASE das Dicas do Cliente do Agente do Usuário
-
-## <a name="version-1010121053-may-19"></a>Versão 101.0.1210.53: 19 de maio
-
-Vários bugs e problemas de desempenho corrigidos.
-
-## <a name="version-1000118560-may-13"></a>Versão 100.0.1185.60: 13 de maio
-
-Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
-
-## <a name="version-1010121047-may-13"></a>Versão 101.0.1210.47: 13 de maio
-
-As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#may-13-2022).
-
-## <a name="version-1010121039-may-5"></a>Versão 101.0.1210.39: 5 de maio
-
-Vários bugs e problemas de desempenho corrigidos.
-
-## <a name="version-1000118557-may-2"></a>Versão 100.0.1185.57: 2 de maio
-
-Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
-
+<!--- from Version 102.0.1245.30: May 31 to Version 100.0.1185.57: May 2 ---->
 <!-- from Version 101.0.1210.32: April 28 to Version 100.0.1185.36: April 7 -->
 <!---from Version 100.0.1185.29: April 1  to  Version 99.0.1150.36: March 7 --->
 <!--- from Version 99.0.1150.30: March 3 to Version 98.0.1108.50: February 10 --->

@@ -3,26 +3,26 @@ title: Navegar com segurança com o Microsoft Edge
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
-ms.date: 08/04/2022
+ms.date: 09/01/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Saiba como a segurança aprimorada oferece suporte à navegação mais segura com o Microsoft Edge.
-ms.openlocfilehash: ff6bf5f9844ad282b18495149f171c05fb1727b4
-ms.sourcegitcommit: c4b3a38fdb78cf663f82d35148716d88f3e7551d
-ms.translationtype: HT
+ms.openlocfilehash: 5847b5e3254272c3ab596ee6c4d41b59cfa86a2c
+ms.sourcegitcommit: 346c4c3e30ed30b68b59b77ec712d52eb8c62ce1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "12691806"
+ms.lasthandoff: 09/01/2022
+ms.locfileid: "12741566"
 ---
 # <a name="browse-more-safely-with-microsoft-edge"></a>Navegar com segurança com o Microsoft Edge
 
 Este artigo descreve como o Microsoft Edge fornece segurança aprimorada na Web.
 
 > [!NOTE]
-> Este artigo se aplica ao Microsoft Edge versão 104 ou posterior.
+> Este artigo se aplica ao Microsoft Edge versão 105 ou posterior.
 
 ## <a name="overview"></a>Visão geral
 
@@ -37,7 +37,7 @@ Quando combinadas, essas alterações ajudam a fornecer 'defesa em profundidade'
 Você também pode estar interessado em saber mais sobre as [proteções de segurança de primeira linha no Microsoft Edge](/deployedge/ms-edge-security-for-business). Notavelmente, talvez você queira saber mais sobre como o [SmartScreen do Microsoft Edge](/deployedge/microsoft-edge-security-smartscreen) protege os usuários contra tentativas de phishing e downloads de malware.
 
 > [!NOTE]
-> Atualmente, não há suporte para os sites que usam WebAssembly (WASM) neste modo. Se você precisar de acesso a um site que precisa de WASM, considere adicioná-lo à sua lista de sites de exceção, conforme descrito em [Lista de sites de exceção](#exception-site-list).
+> O WebAssembly agora tem suporte no modo de segurança aprimorado para sistemas Windows x64. O suporte adicional entre plataformas é esperado no futuro.
 
 ## <a name="whats-new-in-microsoft-edge-security-settings"></a>Novidades nas configurações de segurança do Microsoft Edge
 
@@ -72,17 +72,17 @@ O modo balanceado é um modo adaptável que se baseia no comportamento do usuár
 
 Como o nome sugere, o Modo Estrito aplica essas proteções de segurança a todos os sites por padrão. No entanto, você ainda pode adicionar sites manualmente à lista de sites de exceção e a configuração de administrador corporativo ainda será aplicada, se presente. O modo estrito não é apropriado para a maioria dos usuários finais porque pode exigir algum nível de configuração para o usuário concluir suas tarefas normais.
 
-### <a name="exception-site-list"></a>Lista de sites de exceção
+### <a name="enhanced-security-sites"></a>Sites de segurança aprimorados
 
-No modo Básico, Equilibrado e Estrito, você também pode criar exceções para determinados sites familiares nos quais você confia. Use as etapas a seguir para adicionar um site à sua lista de exceções.
+No modo Básico, Equilibrado e Estrito, você também pode criar exceções para determinados sites conhecidos em que confia ou deseja impor esse modo. Use as etapas a seguir para adicionar um site à sua lista.
 
 1. No Microsoft Edge, selecione **Configurações e mais** >  **Configurações** >  **Privacidade, pesquisa e serviços**.
 2. Verifique se **Aprimorar sua segurança na Web** está ligado.
-3. Em **Aprimorar sua segurança na Web**, selecione **Exceções**.
+3. Em **Aprimorar sua segurança na Web**, selecione **Gerenciar segurança aprimorada para sites**.
 4. Selecione **Adicionar um site**, digite a URL completa e selecione **Adicionar**.
 
 > [!NOTE]
-> Você pode usar as etapas (1 a 3) para exibir sites em **Exceções de segurança aprimoradas**. Você pode **Editar** um site, **Remover** um site ou **Remover todas as** exceções.
+> Você pode usar as etapas (1 a 3) para exibir sites em **sites de segurança aprimorados.**. Você pode **Editar** um site, **Remover** um site ou **Remover todas as** exceções.
 
 A próxima captura de tela mostra a página de configurações para exceções de segurança.
 
