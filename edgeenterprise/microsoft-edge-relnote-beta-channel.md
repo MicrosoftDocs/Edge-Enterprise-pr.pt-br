@@ -3,19 +3,19 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 08/31/2022
+ms.date: 09/01/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: 975c9406b52ff4f95665dca1d97b77c275548ceb
-ms.sourcegitcommit: 3e3362b0c5c663df160e8e8f68a4c82564183b2d
+ms.openlocfilehash: a0b6f2a7f6355cdee1db81a1c15c3bb97082d009
+ms.sourcegitcommit: c561086d6659712bac466f158071b26c0c5ef100
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "12740561"
+ms.lasthandoff: 09/01/2022
+ms.locfileid: "12741483"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão do canal do Microsoft Edge beta
 
@@ -32,19 +32,23 @@ Vários bugs e problemas de desempenho corrigidos.
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-1050134310-august-19"></a>Versão 105.0.1343.10: 19 de agosto
+## <a name="version-1050134310-august-19-2022"></a>Versão 105.0.1343.10: 19 de agosto de 2022
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-105013437-august-16"></a>Versão 105.0.1343.7: 16 de agosto
+## <a name="version-105013437-august-16-2022"></a>Versão 105.0.1343.7: 16 de agosto de 2022
 
 Vários bugs e problemas de desempenho corrigidos.
 
 ### <a name="feature-updates"></a>Atualizações de recursos
 
-- **Melhoria na experiência de Gerenciamento de Lista de Sites na Nuvem para o modo IE.** Você pode restaurar para uma das três últimas versões publicadas da sua lista de sites no Administração Microsoft 365 Center. Para obter mais informações, [consulte Restaurar uma versão anterior de uma lista de sites](/deployedge/edge-ie-mode-cloud-site-list-mgmt#restore-a-previous-version-of-a-site-list).
+- **Melhoria na experiência de Gerenciamento de Lista de Sites na Nuvem para o modo IE.**
 
-- **Melhorias na experiência de Gerenciamento de Lista de Sites na Nuvem para o Modo IE agora estão disponíveis no GCC.** Você pode identificar lacunas em sua lista de sites corporativos configurando relatórios de comentários do site com as políticas [InternetExplorerIntegrationCloudUserSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudusersitesreporting) e [InternetExplorerIntegrationCloudNeutralSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudneutralsitesreporting) . Você pode exibir URLs de lista de sites locais de usuários e URLs de site neutro potencialmente configuradas incorretamente na experiência de listas de sites do Microsoft Edge na Administração Microsoft 365 Center. Para obter mais informações, [consulte Exibir comentários do site no Administração Microsoft 365 Center](/deployedge/edge-ie-mode-cloud-site-list-mgmt#view-site-feedback-on-the-microsoft-365-admin-center-1). Além disso, você pode configurar o compartilhamento de cookie de sessão entre o Microsoft Edge e o Internet Explorer para o Modo IE na lista de sites na Administração Microsoft 365 Central. Para obter mais informações, consulte [Compartilhamento de cookies entre o Microsoft Edge e o Internet Explorer](/deployedge/edge-ie-mode-add-guidance-cookieshare).
+  - Você pode restaurar para uma das três últimas versões publicadas da sua lista de sites no Administração Microsoft 365 Center. Para obter mais informações, [consulte Restaurar uma versão anterior de uma lista de sites](/deployedge/edge-ie-mode-cloud-site-list-mgmt#restore-a-previous-version-of-a-site-list).
+  - Você pode identificar lacunas em sua lista de sites corporativos configurando relatórios de comentários do site com as políticas [InternetExplorerIntegrationCloudUserSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudusersitesreporting) e [InternetExplorerIntegrationCloudNeutralSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudneutralsitesreporting). Você pode exibir URLs de lista de sites locais de usuários e URLs de site neutro potencialmente configuradas incorretamente na experiência de listas de sites do Microsoft Edge na Administração Microsoft 365 Center. Para saber mais, confira [Exibir comentários do site no Administração Microsoft 365 Center](/deployedge/edge-ie-mode-cloud-site-list-mgmt#view-site-feedback-on-the-microsoft-365-admin-center-1).
+  - Você pode configurar o compartilhamento de cookie de sessão entre o Microsoft Edge e o Internet Explorer para o modo IE em sua lista de sites na Administração Microsoft 365 Central. Para saber mais, confira o [compartilhamento de cookies entre o Microsoft Edge e o Internet Explorer](/deployedge/edge-ie-mode-add-guidance-cookieshare).
+
+- **Melhorias na experiência de Gerenciamento de Lista de Sites na Nuvem para o modo IE agora estão disponíveis no GCC.** Os clientes da GCC agora podem utilizar a experiência completa de lista de sites do Microsoft Edge no Administração Microsoft 365 Center.
 
 ### <a name="policy-updates"></a>Atualizações de política
 
