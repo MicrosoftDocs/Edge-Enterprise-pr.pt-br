@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Stable Channel
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 09/01/2022
+ms.date: 09/02/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: 634121b651be087c1215a5e8cd504fc26b0c0a7e
-ms.sourcegitcommit: 346c4c3e30ed30b68b59b77ec712d52eb8c62ce1
+ms.openlocfilehash: c636d47922c6a4d00aafe3346203d6be71e4bcd0
+ms.sourcegitcommit: 0b5fce460f0272e4655bca7ab75cef809ce4f2d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2022
-ms.locfileid: "12741544"
+ms.lasthandoff: 09/03/2022
+ms.locfileid: "12742377"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão do Microsoft Edge Stable Channel
 
@@ -31,9 +31,23 @@ Essas notas de versão fornecem informações dos novos recursos e atualizaçõe
 >
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## <a name="version-1040129381-september-2-2022"></a>Versão 104.0.1293.81: 2 de setembro de 2022
+
+> [!IMPORTANT]
+> Esta atualização para o Estável Estendido contém uma correção para [CVE-2022-3075](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-3075), que foi relatada pela equipe do Chromium como tendo uma exploração em execução. Para obter mais informações, consulte o [Guia de atualização de segurança](https://msrc.microsoft.com/update-guide).
+
+As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#september-2-2022)
+
+## <a name="version-1050134327-september-2-2022"></a>Versão 105.0.1343.27: 2 de setembro de 2022
+
+> [!IMPORTANT]
+> Essa atualização contém uma correção para [o CVE-2022-3075](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-3075), que foi relatada pela equipe Chromium como tendo uma exploração em execução. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
+
+As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#september-2-2022).
+
 ## <a name="version-1050134325-september-1-2022"></a>Versão 105.0.1343.25: 1º de setembro de 2022
 
-As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#september-1-2022).
+As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#september-1-2022).
 
 ### <a name="feature-updates"></a>Atualizações de recursos
 
@@ -77,9 +91,9 @@ Vários bugs e problemas de desempenho corrigidos.
 ## <a name="version-1040129363--august-19"></a>Versão 104.0.1293.63 : 19 de agosto
 
 > [!IMPORTANT]
-> Essa atualização contém uma correção para [CVE-2022-2856](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-2856), que foi relatada pela equipe Chromium como tendo uma exploração em execução. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
+> Essa atualização contém uma correção para [CVE-2022-2856](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-2856), que foi relatada pela equipe Chromium como tendo uma exploração em execução. Para obter mais informações, consulte o [Guia de atualização de segurança](https://msrc.microsoft.com/update-guide).
 
-As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#august-19-2022).
+As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#august-19-2022).
 
 ### <a name="feature-updates"></a>Atualizações de recursos
 
