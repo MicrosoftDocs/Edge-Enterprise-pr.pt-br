@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 08/31/2022
+ms.date: 09/07/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: generated
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 5fd372b0aff4a7a5ace7c1b0b397a407975ab791
-ms.sourcegitcommit: 3e3362b0c5c663df160e8e8f68a4c82564183b2d
+ms.openlocfilehash: 539e494d055062bae52746b109ff7e7c594a2246
+ms.sourcegitcommit: 80d9f61a23a7dc0def80089850a53ea02e571ed6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "12740731"
+ms.lasthandoff: 09/08/2022
+ms.locfileid: "12746097"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -29,15 +29,6 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
 
-## <a name="new-policies"></a>Novas políticas
-
-A tabela a seguir lista as novas políticas que estão nesta atualização de artigo.
-
-| Nome da política | Legenda |
-|:-----|:-----|
-|[EfficiencyModeEnabled](#efficiencymodeenabled)|Modo de eficiência habilitado|
-|[EfficiencyModeOnPowerEnabled](#efficiencymodeonpowerenabled)|Habilitar o modo de eficiência quando o dispositivo estiver conectado a uma fonte de energia|
-|[InternetExplorerIntegrationAlwaysUseOSCapture](#internetexplorerintegrationalwaysuseoscapture)|Sempre use o mecanismo de captura do sistema operacional para evitar problemas com a captura de guias do modo Internet Explorer|
 
 ## <a name="available-policies"></a>Políticas disponíveis
 
@@ -9471,7 +9462,7 @@ Use as informações anteriores ao configurar essa política.
 
   - Nome exclusivo da Política de Grupo: PrintingBackgroundGraphicsDefault
   - Nome da Política de Grupo: modo de impressão de gráficos em segundo plano padrão
-  - Caminho da Política de Grupo (obrigatório): Modelos administrativos/Microsoft Edge/Impressão
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Printing
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -10965,6 +10956,8 @@ Essa política está disponível apenas nas instâncias do Windows que fazem par
   #### <a name="description"></a>Descrição
 
   Essa configuração de política permite que você configure se o Microsoft Defender SmartScreen verificará a reputação de downloads de uma fonte confiável.
+
+No Windows, a política determina uma fonte confiável verificando sua zona da Internet. Se a origem vier do sistema local, da intranet ou da zona de sites confiáveis, o download será considerado confiável e seguro.
 
 Se você habilitar ou não definir essa configuração, o Microsoft Defender SmartScreen verificará a reputação do download independentemente da origem.
 

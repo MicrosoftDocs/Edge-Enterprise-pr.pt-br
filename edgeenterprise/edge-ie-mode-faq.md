@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Guia de solução de problemas e perguntas frequentes para o modo Internet Explorer do Microsoft Edge
-ms.openlocfilehash: d78e51cf9e3e9eef1063974ae81d50b6aedc4b52
-ms.sourcegitcommit: 3e3362b0c5c663df160e8e8f68a4c82564183b2d
+ms.openlocfilehash: 9a997f70f506e5d4270c4ae09926084d9ceaa8c8
+ms.sourcegitcommit: 80d9f61a23a7dc0def80089850a53ea02e571ed6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "12740741"
+ms.lasthandoff: 09/08/2022
+ms.locfileid: "12746137"
 ---
 # <a name="internet-explorer-ie-mode-troubleshooting-and-faq"></a>Solução de problemas e perguntas frequentes do modo internet explorer (IE)
 
@@ -246,7 +246,7 @@ Se você tiver algum comentário, entre em contato por meio de um dos nossos can
 
 ### <a name="can-i-save-links-as-webpages-in-internet-explorer-mode"></a>Posso salvar links como páginas da Web no modo Internet Explorer?
 
-Sim, você pode habilitar a opção Salvar destino como no menu de contexto do modo Internet Explorer no Microsoft Edge. Para fazer isso, configure a política de grupo "Permitir Salvar Destino como no modo *Internet Explorer*", localizada em Modelos Administrativos > configuração do computador *> Componentes do Windows > Internet Explorer*. O mecanismo de salvamento funciona da mesma forma que no Internet Explorer e, se o destino for salvo como um arquivo html, a reabertura do arquivo renderizará a página no Microsoft Edge.
+Sim, você pode habilitar a opção Salvar destino como no menu de contexto do modo Internet Explorer no Microsoft Edge. Para fazer isso, configure a política de grupo "Permitir Salvar Destino como no modo *Internet Explorer*", localizada em Modelos Administrativos > configuração do computador **> Componentes do Windows > Internet Explorer**. O mecanismo de salvamento funciona da mesma forma que no Internet Explorer e, se o destino for salvo como um arquivo html, a reabertura do arquivo renderizará a página no Microsoft Edge.
 
 A capacidade de salvar links como páginas da Web requer as seguintes atualizações mínimas do sistema operacional:
 
@@ -256,6 +256,21 @@ A capacidade de salvar links como páginas da Web requer as seguintes atualizaç
 - Windows 10, versão 1803: [KB4586785](https://support.microsoft.com/help/4586785/windows-10-update-kb4586785)
 - Windows 10, versão 1607: [KB4586830](https://support.microsoft.com/help/4586830/windows-10-update-kb4586830)
 - Windows 10, versão 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)
+
+### <a name="can-i-save-webpages-in-internet-explorer-mode"></a>Posso salvar páginas da Web no modo Internet Explorer?
+
+Sim, você pode habilitar o atalho Ctrl+S para o modo Internet Explorer (IE) no Microsoft Edge. Para fazer isso, configure a política de grupo "Habilitar chaves de acesso estendidas no modo *Internet Explorer*", localizada em Modelos Administrativos > Configuração do Computador **> Componentes do Windows > Internet Explorer**. 
+
+A capacidade de usar Ctrl+S no IE-Mode requer as seguintes atualizações mínimas do sistema operacional:
+
+- Windows 10, versão 1809, Windows Server 2019: [KB5001342](https://support.microsoft.com/en-us/topic/april-13-2021-kb5001342-os-build-17763-1879-52e9180d-0cd3-4ab9-8a35-514c07ea9e08) ou posterior
+- Windows 10, versão 1909: [KB5001337](https://support.microsoft.com/en-us/topic/april-13-2021-kb5001337-os-build-18363-1500-e7336837-2aaa-4f73-995c-ab2ba5013727) ou posterior
+- Windows 10, versão 2004, Windows 10, versão 20H2: [KB4601319](https://support.microsoft.com/en-us/topic/february-9-2021-kb4601319-os-builds-19041-804-and-19042-804-87fc8417-4a81-0ebb-5baa-40cfab2fbfde) ou posterior
+
+Além do atalho Ctrl+S **, a página** Salvar menuitem **como** no Edge em Configurações e muito **mais (o** ícone de reticências...) > Mais Ferramentas podem ser habilitadas no Edge 101 (e mais recentes) por meio do seguinte Política de Grupo: Permitir salvar página como no modo *Internet Explorer* localizado no modo Configuração do Computador **> Modelos Administrativos > Microsoft Edge**. A capacidade de usar o menu "Salvar página como" requer as seguintes atualizações mínimas do sistema operacional:
+- Windows 10, versão 20H2, Windows 10, versão 21H1, Windows 10, versão 21H2: [KB5014666 ou](https://support.microsoft.com/en-us/topic/june-28-2022-kb5014666-os-builds-19042-1806-19043-1806-and-19044-1806-preview-4bd911df-f290-4753-bdec-a83bc8709eb6) posterior
+- Windows Server 2022: [KB5014665](https://support.microsoft.com/en-us/topic/june-23-2022-kb5014665-os-build-20348-803-preview-feebab2b-1851-4119-a531-89ca80300b10) ou posterior
+- Windows 11: [KB5014668](https://support.microsoft.com/en-us/topic/june-23-2022-kb5014668-os-build-22000-778-preview-2b5f1da6-d602-48b4-b443-96b460e3c38d) ou posterior
 
 ### <a name="can-i-test-a-site-in-microsoft-edge-while-it-is-configured-to-open-ie-mode-in-the-enterprise-mode-site-list"></a>Posso testar um site no Microsoft Edge enquanto ele está configurado para abrir o modo IE na Lista de Sites do Modo Empresarial?
 

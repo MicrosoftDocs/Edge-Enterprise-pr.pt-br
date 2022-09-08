@@ -3,26 +3,26 @@ title: Suporte do Microsoft Edge para Proteção de Informações do Windows
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 11/15/2021
+ms.date: 09/06/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Suporte do Microsoft Edge para Proteção de Informações do Windows
-ms.openlocfilehash: 5f3dd297e59014cc01a1e8abd4db444b7a4176fb
-ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.openlocfilehash: d1254a91323775275fdfc43f385e313b06fabef1
+ms.sourcegitcommit: 80d9f61a23a7dc0def80089850a53ea02e571ed6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "12298289"
+ms.lasthandoff: 09/08/2022
+ms.locfileid: "12746127"
 ---
 # <a name="microsoft-edge-support-for-windows-information-protection-wip"></a>Suporte do Microsoft Edge para Proteção de Informações do Windows (WIP)
 
 Este artigo descreve como o Microsoft Edge tem suporte para a Proteção de Informações do Windows (WIP).
 
 > [!NOTE]
-> Isso se aplica ao Microsoft Edge versão 81 ou mais recente.
+> Isso se aplica ao Microsoft Edge versão 81 ou mais recente. A proteção de informações do Windows será descontinuada ao longo do tempo. Para obter mais informações, consulte [Anunciando o pôr do sol do Windows Proteção de Informações (WIP)](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/announcing-the-sunset-of-windows-information-protection-wip/ba-p/3579282).
 
 ## <a name="overview"></a>Visão geral
 
