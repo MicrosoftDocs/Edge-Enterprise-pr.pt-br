@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: generated
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 539e494d055062bae52746b109ff7e7c594a2246
-ms.sourcegitcommit: 80d9f61a23a7dc0def80089850a53ea02e571ed6
+ms.openlocfilehash: 58456048c8a1386a1d56aca3a77be8de190bf380
+ms.sourcegitcommit: 35cc59e177df124624c5d6733b195d00da8592de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/08/2022
-ms.locfileid: "12746097"
+ms.locfileid: "12746157"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -28,7 +28,6 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
-
 
 ## <a name="available-policies"></a>Políticas disponíveis
 
