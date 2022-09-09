@@ -3,7 +3,7 @@ title: Documentação de Política do Microsoft Edge WebView2
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 09/07/2022
+ms.date: 09/09/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,19 +11,18 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: generated
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 9b081a027d0cdc83735f3fd4e2684bcecd895f32
-ms.sourcegitcommit: 80d9f61a23a7dc0def80089850a53ea02e571ed6
+ms.openlocfilehash: cd14253827fc56405ef60b228aa4629bfa38c048
+ms.sourcegitcommit: 8a4c0d18492b5ffbc9a5f2cb57832f49ae4ac2ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2022
-ms.locfileid: "12746107"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "12747046"
 ---
 # <a name="microsoft-edge-webview2---policies"></a>Políticas do Microsoft Edge WebView2
 
 A versão mais recente do Microsoft Edge WebView2 inclui as políticas a seguir. Você pode usar essas políticas para configurar como o Microsoft Edge WebView2 será executado em sua organização.
 
 Para saber mais sobre o conjunto adicional de políticas, usado para controlar como e quando o Microsoft Edge WebView2 é atualizado, confira [Referência de política de atualização do Microsoft Edge](microsoft-edge-update-policies.md).
-
 
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 87 ou posterior.
@@ -246,7 +245,7 @@ Use as informações anteriores ao configurar essa política.
 
   [Voltar ao início](#microsoft-edge-webview2---policies)
 
-
+<!---Dev 107.0.1375.0---->
 ## <a name="see-also"></a>Consulte também
 
 - [Configurar o Microsoft Edge](configure-microsoft-edge.md)

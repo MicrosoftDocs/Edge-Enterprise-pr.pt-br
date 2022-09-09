@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 09/07/2022
+ms.date: 09/09/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: generated
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 58456048c8a1386a1d56aca3a77be8de190bf380
-ms.sourcegitcommit: 35cc59e177df124624c5d6733b195d00da8592de
+ms.openlocfilehash: 04afff3deb6a9814400ca9bdb5b8a6aecce76b56
+ms.sourcegitcommit: 8a4c0d18492b5ffbc9a5f2cb57832f49ae4ac2ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2022
-ms.locfileid: "12746157"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "12747064"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -16946,7 +16946,7 @@ Se você definir essa política para desabilitada, o item de menu de contexto da
 
 Se essa política estiver definida como habilitada ou não definida, o item de menu de contexto para o seu provedor de pesquisa padrão e a pesquisa da barra lateral estarão disponíveis.
 
-O valor da política será aplicado apenas quando a política [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) estiver ativada, e não será aplicado em caso contrário.
+O valor da política só é aplicado quando a [política DefaultSearchProviderEnabled](#defaultsearchproviderenabled) está habilitada e não é aplicável caso contrário.
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -32535,7 +32535,7 @@ Se essa política não estiver definida, a detecção de ocultação da janela s
 
   [Voltar ao início](#microsoft-edge---policies)
 
-
+<!------Dev 107.0.1375.0-------------->
 ## <a name="see-also"></a>Consulte também
 
 - [Configurar o Microsoft Edge](configure-microsoft-edge.md)
