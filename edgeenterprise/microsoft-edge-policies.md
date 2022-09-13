@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 09/09/2022
+ms.date: 09/13/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: generated
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 04afff3deb6a9814400ca9bdb5b8a6aecce76b56
-ms.sourcegitcommit: 8a4c0d18492b5ffbc9a5f2cb57832f49ae4ac2ad
+ms.openlocfilehash: 22616acda230c90d76af608eadc8ea75b787183c
+ms.sourcegitcommit: da20c54d9dd212dc533a576dc20b607dce532340
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "12747064"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "12752882"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -28,6 +28,17 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 
 > [!NOTE]
 > Este artigo se aplica ao Microsoft Edge versão 77 ou posterior.
+
+## <a name="new-policies"></a>Novas políticas
+
+A tabela a seguir lista as políticas novas e preteridas que estão nesta atualização de artigo.
+
+| Nome da política | Legenda |
+|:-----|:-----|
+|[InternetExplorerIntegrationLocalMhtFileAllowed](#internetexplorerintegrationlocalmhtfileallowed)|Permitir que arquivos MHTML locais abram automaticamente no modo Internet Explorer|
+|[MicrosoftOfficeMenuEnabled](#microsoftofficemenuenabled)|Permitir que os usuários acessem o menu do Microsoft Office (preterido)|
+|[NewSmartScreenLibraryEnabled](#newsmartscreenlibraryenabled)|Habilitar nova biblioteca SmartScreen (preterida)|
+|[ShadowStackCrashRollbackBehavior](#shadowstackcrashrollbackbehavior)|Configurar o comportamento de reversão de falha do ShadowStack (preterido)|
 
 ## <a name="available-policies"></a>Políticas disponíveis
 
@@ -274,7 +285,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 
 |Nome da política|Legenda|
 |-|-|
-|[NewSmartScreenLibraryEnabled](#newsmartscreenlibraryenabled)|Habilitar nova biblioteca SmartScreen|
+|[NewSmartScreenLibraryEnabled](#newsmartscreenlibraryenabled)|Habilitar nova biblioteca SmartScreen (preterida)|
 |[PreventSmartScreenPromptOverride](#preventsmartscreenpromptoverride)|Evitar ignorar os avisos do Microsoft Defender SmartScreen para sites|
 |[PreventSmartScreenPromptOverrideForFiles](#preventsmartscreenpromptoverrideforfiles)|Impedir que os avisos do Microsoft Defender SmartScreen sobre download sejam ignorados|
 |[SmartScreenAllowListDomains](#smartscreenallowlistdomains)|Configurar a lista de domínios para os quais o Microsoft Defender SmartScreen não desencadeará avisos|
@@ -473,6 +484,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Permitir a inicialização de arquivos locais no modo Internet Explorer|
 |[InternetExplorerIntegrationLocalFileExtensionAllowList](#internetexplorerintegrationlocalfileextensionallowlist)|Abrir arquivos locais na lista de permissões de extensão de arquivo do modo Internet Explorer|
 |[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Mostrar o menu de contexto para abrir um link file:// no modo Internet Explorer|
+|[InternetExplorerIntegrationLocalMhtFileAllowed](#internetexplorerintegrationlocalmhtfileallowed)|Permitir que arquivos MHTML locais abram automaticamente no modo Internet Explorer|
 |[InternetExplorerIntegrationLocalSiteListExpirationDays](#internetexplorerintegrationlocalsitelistexpirationdays)|Especificar o número de dias que um site permanece na lista de sites do modo IE local|
 |[InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed)|Permitir que sites não configurados sejam recarregados no modo Internet Explorer|
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|Configurar a lista de sites do Modo empresarial|
@@ -502,7 +514,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[MicrosoftEdgeInsiderPromotionEnabled](#microsoftedgeinsiderpromotionenabled)|Promoção do Microsoft Edge Insider Habilitada|
 |[MicrosoftEditorProofingEnabled](#microsofteditorproofingenabled)|Verificação ortográfica fornecida pelo Microsoft Editor|
 |[MicrosoftEditorSynonymsEnabled](#microsofteditorsynonymsenabled)|Sinônimos são fornecidos ao usar o verificador ortográfico do Microsoft Editor|
-|[MicrosoftOfficeMenuEnabled](#microsoftofficemenuenabled)|Permitir que os usuários acessem o menu do Microsoft Office|
+|[MicrosoftOfficeMenuEnabled](#microsoftofficemenuenabled)|Permitir que os usuários acessem o menu do Microsoft Office (preterido)|
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Habilitar Oclusão de Janela Nativa (preterida)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Definir um tempo limite para o atraso da navegação da guia para a lista de sites do Modo Empresarial|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Habilitar a previsão de rede|
@@ -555,7 +567,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[SerialAskForUrls](#serialaskforurls)|Permitir a API serial em sites específicos|
 |[SerialBlockedForUrls](#serialblockedforurls)|Bloquear a API serial em sites específicos|
 |[SetTimeoutWithout1MsClampEnabled](#settimeoutwithout1msclampenabled)|Controle o tempo limite mínimo da função setTimeout() do JavaScript (preterido)|
-|[ShadowStackCrashRollbackBehavior](#shadowstackcrashrollbackbehavior)|Configurar o comportamento de reversão de falha doShadowStack|
+|[ShadowStackCrashRollbackBehavior](#shadowstackcrashrollbackbehavior)|Configurar o comportamento de reversão de falha do ShadowStack (preterido)|
 |[SharedArrayBufferUnrestrictedAccessAllowed](#sharedarraybufferunrestrictedaccessallowed)|Especifica se SharedArrayBuffers pode ser usado em um contexto não isolado de origem cruzada|
 |[SharedLinksEnabled](#sharedlinksenabled)|Mostrar links compartilhados dos aplicativos Microsoft 365 na História|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Mostrar experiências do Microsoft Rewards|
@@ -9461,7 +9473,7 @@ Use as informações anteriores ao configurar essa política.
 
   - Nome exclusivo da Política de Grupo: PrintingBackgroundGraphicsDefault
   - Nome da Política de Grupo: modo de impressão de gráficos em segundo plano padrão
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Printing
+  - Caminho da Política de Grupo (obrigatório): Modelos administrativos/Microsoft Edge/Impressão
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -10547,17 +10559,19 @@ Use as informações anteriores ao configurar essa política.
 
   ### <a name="newsmartscreenlibraryenabled"></a>NewSmartScreenLibraryEnabled
 
-  #### <a name="enable-new-smartscreen-library"></a>Habilitar nova biblioteca SmartScreen
+  #### <a name="enable-new-smartscreen-library-deprecated"></a>Habilitar nova biblioteca SmartScreen (preterida)
 
+  >PRETERIDA: Essa política está preterida. Ela tem suporte no momento, mas se tornará obsoleta em uma versão futura.
   
-  
-  #### <a name="supported-versions"></a>Versões suportadas:
+  #### <a name="supported-versions"></a>Versões com suporte:
 
   - No Windows e no macOS desde 95 ou posterior
 
   #### <a name="description"></a>Descrição
 
-  Permitir que o navegador Microsoft Edge carregue a nova biblioteca SmartScreen (libSmartScreenN) para qualquer verificação SmartScreen em URLs de sites ou downloads de aplicativos.
+  Essa política foi preterida porque é uma política temporária para dar suporte à atualização para um novo cliente SmartScreen. Ele não funcionará no Microsoft Edge a partir da versão 107.
+
+Permite que o navegador Microsoft Edge carregue a nova biblioteca SmartScreen (libSmartScreenN) para quaisquer verificações do SmartScreen em URLs do site ou downloads de aplicativos.
 
 Se você habilitar ou não configurar essa política, o Microsoft Edge usará a nova biblioteca SmartScreen (libSmartScreenN).
 
@@ -10565,9 +10579,8 @@ Se você desabilitar essa política, o Microsoft Edge usará a antiga biblioteca
 
 Antes da versão 103 do Microsoft Edge, se você não configurar essa política, o Microsoft Edge usará a antiga biblioteca SmartScreen (libSmartScreen).
 
-Essa política está disponível apenas nas instâncias do Windows que fazem parte de um domínio do Microsoft Active Directory, em instâncias do Windows 10 Pro ou Enterprise que estejam inscritas no gerenciamento de dispositivos ou em instâncias do macOS que são gerenciadas por meio do MDM ou passaram a fazer parte de um domínio por meio de MCX.
-
-Esta política temporária foi criada para apoiar a atualização de um novo cliente SmartScreen. Esta política será depreciada e removida juntamente com o cliente herdado.
+Essa política só está disponível em instâncias do Windows ingressadas em um domínio do Microsoft Active Directory, Windows 10 Pro ou instâncias Enterprise registradas para gerenciamento de dispositivos.
+Isso também inclui instâncias do macOS que são gerenciadas por meio do MDM ou ingressadas em um domínio via MCX.
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -10584,7 +10597,7 @@ Esta política temporária foi criada para apoiar a atualização de um novo cli
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
   - Nome exclusivo do GP: NewSmartScreenLibraryEnabled
-  - Nome do GP: Habilitar a nova biblioteca SmartScreen
+  - Nome da Política de Grupo: Habilitar nova biblioteca SmartScreen (preterido)
   - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/SmartScreen settings
   - Caminho da Política de Grupo (recomendado): Administrative Templates/Microsoft Edge - Default Settings (usuários podem substituir)/SmartScreen settings
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
@@ -23263,6 +23276,67 @@ Para saber mais sobre o modo Internet Explorer, confira [https://go.microsoft.co
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### <a name="internetexplorerintegrationlocalmhtfileallowed"></a>InternetExplorerIntegrationLocalMhtFileAllowed
+
+  #### <a name="allow-local-mhtml-files-to-open-automatically-in-internet-explorer-mode"></a>Permitir que arquivos MHTML locais abram automaticamente no modo Internet Explorer
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows desde o 106 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Essa política controla se os arquivos mht ou mhtml locais iniciados na linha de comando podem ser abertos automaticamente no modo Internet Explorer com base no conteúdo do arquivo sem especificar a linha de comando --ie-mode-file-url.
+
+Essa configuração funciona em conjunto com: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) está definido como 'IEMode' e [InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed) está habilitado ou não configurado.
+
+Se você habilitar ou não configurar essa política, os arquivos mht ou mhtml locais poderão ser iniciados no modo Microsoft Edge ou Internet Explorer para exibir melhor o arquivo.
+
+Se você desabilitar essa política, os arquivos mht ou mhtml locais serão iniciados no Microsoft Edge.
+
+Observe que, se você usar o argumento de linha de comando --ie-mode-file-url para iniciar arquivos mht ou mhtml locais, ele terá precedência sobre como você configurou essa política.
+
+Para saber mais sobre o modo do Internet Explorer, confira [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: InternetExplorerIntegrationLocalMhtFileAllowed
+  - Nome da Política de Grupo: Permitir que arquivos MHTML locais abram automaticamente no modo Internet Explorer
+  - Caminho da GP (obrigatório): Administrative Templates/Microsoft Edge/
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: InternetExplorerIntegrationLocalMhtFileAllowed
+  - Tipo de Valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### <a name="internetexplorerintegrationlocalsitelistexpirationdays"></a>InternetExplorerIntegrationLocalSiteListExpirationDays
 
   #### <a name="specify-the-number-of-days-that-a-site-remains-on-the-local-ie-mode-site-list"></a>Especificar o número de dias que um site permanece na lista de sites do modo IE local
@@ -25253,9 +25327,9 @@ Se a política [SpellcheckEnabled](#spellcheckenabled) ou a política [Microsoft
 
   ### <a name="microsoftofficemenuenabled"></a>MicrosoftOfficeMenuEnabled
 
-  #### <a name="allow-users-to-access-the-microsoft-office-menu"></a>Permitir que os usuários acessem o menu do Microsoft Office
+  #### <a name="allow-users-to-access-the-microsoft-office-menu-deprecated"></a>Permitir que os usuários acessem o menu do Microsoft Office (preterido)
 
-  
+  >PRETERIDA: Essa política está preterida. Ela tem suporte no momento, mas se tornará obsoleta em uma versão futura.
   
   #### <a name="supported-versions"></a>Versões com suporte:
 
@@ -25263,7 +25337,9 @@ Se a política [SpellcheckEnabled](#spellcheckenabled) ou a política [Microsoft
 
   #### <a name="description"></a>Descrição
 
-  Quando os usuários podem acessar o menu Microsoft Office, eles podem obter acesso a aplicativos do Office, como o Microsoft Word e o Microsoft Excel.
+  Essa política foi preterida porque foi substituída pela barra lateral do Microsoft Edge. Os aplicativos do Microsoft Office agora estão disponíveis na barra lateral, que pode ser gerenciada pela política HubsSidebarEnabled.
+
+Quando os usuários podem acessar o menu Microsoft Office, eles podem obter acesso a aplicativos do Office, como o Microsoft Word e o Microsoft Excel.
 
 Se você habilitar ou não configurar essa política, os usuários poderão abrir o menu Microsoft Office usuário.
 
@@ -25284,8 +25360,8 @@ Se você desabilitar essa política, os usuários não poderão acessar o menu M
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
   - Nome exclusivo da Política de Grupo: MicrosoftOfficeMenuEnabled
-  - Nome da Política de Grupo: Permitir que os usuários acessem Microsoft Office menu
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Nome da Política de Grupo: Permitir que os usuários acessem o menu do Microsoft Office (preterido)
+  - Caminho da GP (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -28656,17 +28732,19 @@ Esse prazo poderá ser estendido se houver necessidade para empresas.
 
   ### <a name="shadowstackcrashrollbackbehavior"></a>ShadowStackCrashRollbackBehavior
 
-  #### <a name="configure-shadowstack-crash-rollback-behavior"></a>Configurar o comportamento de reversão de falha doShadowStack
+  #### <a name="configure-shadowstack-crash-rollback-behavior-deprecated"></a>Configurar o comportamento de reversão de falha do ShadowStack (preterido)
 
+  >PRETERIDA: Essa política está preterida. Ela tem suporte no momento, mas se tornará obsoleta em uma versão futura.
   
-  
-  #### <a name="supported-versions"></a>Versões suportadas:
+  #### <a name="supported-versions"></a>Versões com suporte:
 
   - No Windows desde 95 ou posterior
 
   #### <a name="description"></a>Descrição
 
-  O Microsoft Edge inclui um recurso de segurança de proteção de pilha imposta por hardware. Este recurso pode resultar em falha inesperada do navegador em casos que não representem uma tentativa de comprometer a segurança do navegador.
+  Essa política foi preterida porque destina-se a servir apenas como um mecanismo de curto prazo para dar às empresas mais tempo para atualizar seus ambientes e relatar problemas se forem considerados incompatíveis com a Proteção contra Pilha imposta por hardware. Ele não funcionará no Microsoft Edge assim que a versão 109.
+
+O Microsoft Edge inclui um recurso de segurança de proteção de pilha imposta por hardware. Este recurso pode resultar em falha inesperada do navegador em casos que não representem uma tentativa de comprometer a segurança do navegador.
 
 Usando essa política, você pode controlar o comportamento do recurso proteção de pilha imposto por hardware após uma falha disparada por esse recurso ser encontrada.
 
@@ -28701,8 +28779,8 @@ Use as informações anteriores ao configurar essa política.
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
   - Nome exclusivo da Política de Grupo: ShadowStackCrashRollbackBehavior
-  - Nome da Política de Grupo: Configurar o comportamento de reversão de falha do ShadowStack
-  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
+  - Nome da Política de Grupo: Configurar o comportamento de reversão de falha do ShadowStack (preterido)
+  - Caminho da GP (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -32535,7 +32613,7 @@ Se essa política não estiver definida, a detecção de ocultação da janela s
 
   [Voltar ao início](#microsoft-edge---policies)
 
-<!------Dev 107.0.1375.0-------------->
+
 ## <a name="see-also"></a>Consulte também
 
 - [Configurar o Microsoft Edge](configure-microsoft-edge.md)
