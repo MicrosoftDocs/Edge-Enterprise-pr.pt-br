@@ -3,23 +3,63 @@ title: Notas de versão arquivadas para o Canal Beta do Microsoft Edge
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 08/16/2022
+ms.date: 09/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas de versão arquivadas para o Canal Beta do Microsoft Edge
-ms.openlocfilehash: a0a5ccc012097f8978bd05366451b8becef5ebf6
-ms.sourcegitcommit: f4876eadb712279d577c43950de70fd5e7854c72
+ms.openlocfilehash: bd3d0dcfdf909e2c0478113ced0dbda43fa277e3
+ms.sourcegitcommit: 8a2193791e6606a4dced9808013d6b064d2f2319
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "12713305"
+ms.lasthandoff: 09/15/2022
+ms.locfileid: "12753885"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão arquivadas para o Canal Beta do Microsoft Edge
 
 Estas notas de versão fornecem informações sobre os novos recursos e atualizações não relacionadas à segurança que estão inclusos no canal Beta do Microsoft Edge. Para entender os canais do Microsoft Edge, confira a [Visão geral dos canais do Microsoft Edge](microsoft-edge-channels.md). Todas as atualizações de segurança estão listadas [aqui](microsoft-edge-relnotes-security.md).
+
+## <a name="version-1040129314-july-7"></a>Versão 104.0.1293.14: 7 de julho
+
+### <a name="policy-updates"></a>Atualizações de política
+
+#### <a name="new-policies"></a>Novas políticas
+
+- [AllowedDomainsForApps](/DeployEdge/microsoft-edge-policies#alloweddomainsforapps) - Define os domínios com permissão para acessar o Google Workspace
+- [AskBeforeCloseEnabled](/DeployEdge/microsoft-edge-policies#askbeforecloseenabled) - Obtém a confirmação do usuário antes de fechar uma janela do navegador com várias guias
+- [BrowserCodeIntegritySetting](/DeployEdge/microsoft-edge-policies#browsercodeintegritysetting) - Define a configuração de proteção da integridade do código do processo do navegador
+- [DoubleClickCloseTabEnabled](/DeployEdge/microsoft-edge-policies#doubleclickclosetabenabled) - Recurso de Clique Duplo no Microsoft Edge habilitado (disponível apenas na China)
+- [ImportOnEachLaunch](/DeployEdge/microsoft-edge-policies#importoneachlaunch) - Permite a importação de dados de outros navegadores em cada inicialização do Microsoft Edge
+- [QuickSearchShowMiniMenu](/DeployEdge/microsoft-edge-policies#quicksearchshowminimenu) - Habilita o mini menu do Microsoft Edge
+- [PasswordManagerRestrictLengthEnabled](/DeployEdge/microsoft-edge-policies#passwordmanagerrestrictlengthenabled) - Restringe o comprimento das senhas que podem ser salvas no Gerenciador de senhas
+- [PDFXFAEnabled](/DeployEdge/microsoft-edge-policies#pdfxfaenabled) - Suporte a XFA em leitor de PDF nativo habilitado
+- [TextPredictionEnabled](/DeployEdge/microsoft-edge-policies#textpredictionenabled) - Previsão de texto habilitada por padrão
+
+#### <a name="obsoleted-policy"></a>Política obsoleta
+
+- [U2fSecurityKeyApiEnabled](/DeployEdge/microsoft-edge-policies#u2fsecuritykeyapienabled) - Permitir o uso da API de chave de segurança U2F preterida
+
+## <a name="version-1030126445-july-1"></a>Versão 103.0.1264.45: 1º de julho
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-1030126437-june-22"></a>Versão 103.0.1264.37: 22 de junho
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-1030126432-june-20"></a>Versão 103.0.1264.32: 20 de junho
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-1030126421-june-10"></a>Versão 103.0.1264.21: 10 de junho
+
+Vários bugs e problemas de desempenho corrigidos.
+
+## <a name="version-1030126417-june-6"></a>Versão 103.0.1264.17: 6 de junho
+
+Vários bugs e problemas de desempenho corrigidos.
 
 ## <a name="version-1030126413-june-2"></a>Versão 103.0.1264.13: 2 de junho
 

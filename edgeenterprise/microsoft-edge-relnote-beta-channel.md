@@ -3,19 +3,19 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 09/09/2022
+ms.date: 09/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: 284b372a8657b96ed7afc77a0cb8c384c708865d
-ms.sourcegitcommit: 7adcf0b46470e8e1733f7b50a72bb9ec540140df
+ms.openlocfilehash: 4ed8f1b38b98ebb0a117d51a6bd0371d731ce165
+ms.sourcegitcommit: 8a2193791e6606a4dced9808013d6b064d2f2319
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2022
-ms.locfileid: "12747273"
+ms.lasthandoff: 09/15/2022
+ms.locfileid: "12753895"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão do canal do Microsoft Edge beta
 
@@ -23,6 +23,31 @@ Estas notas de versão fornecem informações sobre os novos recursos e atualiza
 
 > [!NOTE]
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-1060137015-september-15-2022"></a>Versão 106.0.1370.15: 15 de setembro de 2022
+
+Vários bugs e problemas de desempenho corrigidos.
+
+### <a name="feature-updates"></a>Atualizações de recursos
+
+- **Defesa da Web mais confiável.** Navegue pela Web com proteção mais confiável graças à biblioteca reescrito do [Microsoft Defender SmartScreen](/deployedge/microsoft-edge-security-smartscreen) para Microsoft Edge no Windows, que foi introduzida no Microsoft Edge versão 103. A [política NewSmartScreenLibraryEnabled](/deployedge/microsoft-edge-policies#newsmartscreenlibraryenabled) foi preterida no Microsoft Edge versão 106 e ficará obsoleta no Microsoft Edge versão 107.
+
+### <a name="policy-updates"></a>Atualizações de política
+
+#### <a name="new-policies"></a>Novas políticas
+
+- [EfficiencyModeEnabled](/DeployEdge/microsoft-edge-policies#efficiencymodeenabled) – modo de eficiência habilitado
+- [EfficiencyModeOnPowerEnabled](/DeployEdge/microsoft-edge-policies#efficiencymodeonpowerenabled) – Habilitar o modo de eficiência quando o dispositivo estiver conectado a uma fonte de energia
+- [InternetExplorerIntegrationAlwaysUseOSCapture](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationalwaysuseoscapture) Sempre use o mecanismo de captura do sistema operacional para evitar problemas com a captura de guias do modo Internet Explorer
+
+#### <a name="deprecated-policies"></a>Políticas preteridas
+
+- [NewSmartScreenLibraryEnabled](/deployedge/microsoft-edge-policies#newsmartscreenlibraryenabled) – permite que o navegador Microsoft Edge carregue a nova biblioteca SmartScreen para quaisquer verificações do SmartScreen em URLs do site ou downloads de aplicativos.
+
+#### <a name="obsoleted-policies"></a>Políticas obsoletas
+
+- [OutlookHubMenuEnabled](/DeployEdge/microsoft-edge-policies#outlookhubmenuenabled): permite que os usuários acessem o menu do Outlook
+- [EdgeDiscoverEnabled](/DeployEdge/microsoft-edge-policies#edgediscoverenabled) - Recurso de descoberta no Microsoft Edge
 
 ## <a name="version-1050134334-september-9-2022"></a>Versão 105.0.1343.34: 9 de setembro de 2022
 
@@ -105,46 +130,8 @@ Vários bugs e problemas de desempenho corrigidos.
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-1040129314-july-7"></a>Versão 104.0.1293.14: 7 de julho
 
-### <a name="policy-updates"></a>Atualizações de política
-
-#### <a name="new-policies"></a>Novas políticas
-
-- [AllowedDomainsForApps](/DeployEdge/microsoft-edge-policies#alloweddomainsforapps) - Define os domínios com permissão para acessar o Google Workspace
-- [AskBeforeCloseEnabled](/DeployEdge/microsoft-edge-policies#askbeforecloseenabled) - Obtém a confirmação do usuário antes de fechar uma janela do navegador com várias guias
-- [BrowserCodeIntegritySetting](/DeployEdge/microsoft-edge-policies#browsercodeintegritysetting) - Define a configuração de proteção da integridade do código do processo do navegador
-- [DoubleClickCloseTabEnabled](/DeployEdge/microsoft-edge-policies#doubleclickclosetabenabled) - Recurso de Clique Duplo no Microsoft Edge habilitado (disponível apenas na China)
-- [ImportOnEachLaunch](/DeployEdge/microsoft-edge-policies#importoneachlaunch) - Permite a importação de dados de outros navegadores em cada inicialização do Microsoft Edge
-- [QuickSearchShowMiniMenu](/DeployEdge/microsoft-edge-policies#quicksearchshowminimenu) - Habilita o mini menu do Microsoft Edge
-- [PasswordManagerRestrictLengthEnabled](/DeployEdge/microsoft-edge-policies#passwordmanagerrestrictlengthenabled) - Restringe o comprimento das senhas que podem ser salvas no Gerenciador de senhas
-- [PDFXFAEnabled](/DeployEdge/microsoft-edge-policies#pdfxfaenabled) - Suporte a XFA em leitor de PDF nativo habilitado
-- [TextPredictionEnabled](/DeployEdge/microsoft-edge-policies#textpredictionenabled) - Previsão de texto habilitada por padrão
-
-#### <a name="obsoleted-policy"></a>Política obsoleta
-
-- [U2fSecurityKeyApiEnabled](/DeployEdge/microsoft-edge-policies#u2fsecuritykeyapienabled) - Permitir o uso da API de chave de segurança U2F preterida
-
-## <a name="version-1030126445-july-1"></a>Versão 103.0.1264.45: 1º de julho
-
-Vários bugs e problemas de desempenho corrigidos.
-
-## <a name="version-1030126437-june-22"></a>Versão 103.0.1264.37: 22 de junho
-
-Vários bugs e problemas de desempenho corrigidos.
-
-## <a name="version-1030126432-june-20"></a>Versão 103.0.1264.32: 20 de junho
-
-Vários bugs e problemas de desempenho corrigidos.
-
-## <a name="version-1030126421-june-10"></a>Versão 103.0.1264.21: 10 de junho
-
-Vários bugs e problemas de desempenho corrigidos.
-
-## <a name="version-1030126417-june-6"></a>Versão 103.0.1264.17: 6 de junho
-
-Vários bugs e problemas de desempenho corrigidos.
-
+<!--- from Version 104.0.1293.14: July 7 to Version 103.0.1264.17: June 6 ---->
 <!--- from Version 103.0.1264.13: June 2 to Version 102.0.1245.12: May 13 ---->
 <!--- from Version 102.0.1245.7: May 10 to Version 101.0.1210.14: April 12 ---->
 <!--- from Version 101.0.1210.10: April 8 to Version 100.0.1185.12: March 18 --->

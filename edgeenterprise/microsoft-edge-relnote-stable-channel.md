@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Stable Channel
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 09/08/2022
+ms.date: 09/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: 7b5fcfa23f51b7359f514a7a5ae8bc5849ec505f
-ms.sourcegitcommit: 8a4c0d18492b5ffbc9a5f2cb57832f49ae4ac2ad
+ms.openlocfilehash: aba2212c5e68078e83549cdb64be908bc01f9c13
+ms.sourcegitcommit: 8a2193791e6606a4dced9808013d6b064d2f2319
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "12747047"
+ms.lasthandoff: 09/15/2022
+ms.locfileid: "12753876"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão do Microsoft Edge Stable Channel
 
@@ -30,6 +30,10 @@ Essas notas de versão fornecem informações dos novos recursos e atualizaçõe
 > Para o Canal Estável, as atualizações serão implantadas progressivamente por um ou mais dias. Para saber mais, consulte [Distribuições progressivas para atualizações do Microsoft Edge](./microsoft-edge-update-progressive-rollout.md).
 >
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-1040129391-september-15-2022"></a>Versão 104.0.1293.91: 15 de setembro de 2022
+
+Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
 
 ## <a name="version-1050134333-september-8-2022"></a>Versão 105.0.1343.33: 8 de setembro de 2022
 

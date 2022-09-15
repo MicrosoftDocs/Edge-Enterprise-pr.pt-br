@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Saiba como habilitar listas de sites locais e configurar o acesso fácil ao modo IE
-ms.openlocfilehash: 66d894e82203a1f3ed7bae4cd14dc5ec44982516
-ms.sourcegitcommit: ef95039fbc92a3310f420b1c26fc4bed5b2e43b1
+ms.openlocfilehash: 4263316fb8b0f9b658db20e87a9ee85eaa99d956
+ms.sourcegitcommit: 8a2193791e6606a4dced9808013d6b064d2f2319
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2022
-ms.locfileid: "12635718"
+ms.lasthandoff: 09/15/2022
+ms.locfileid: "12753926"
 ---
 # <a name="configure-local-site-list-for-internet-explorer-ie-mode"></a>Configurar a lista de sites locais para o modo Internet Explorer (IE)
 
@@ -36,6 +36,8 @@ Este artigo explica como configurar o acesso fácil ao modo Internet Explorer (m
 
    - Windows 11
 
+   - Windows 10, versão 1809; Windows Server 2019 – [KB5015880](https://support.microsoft.com/en-us/topic/july-21-2022-kb5015880-os-build-17763-3232-preview-1c984723-cdf0-4a24-9a4f-5df11d3024a1) ou posterior
+
    - Windows 10, versão 1909 – [KB5003974](https://support.microsoft.com/topic/kb5003974-servicing-stack-update-for-windows-10-version-1909-june-15-2021-0e65680e-2d21-4a31-b97a-e24c022aeccf) e [KB5003698](https://support.microsoft.com/topic/june-15-2021-kb5003698-os-build-18363-1645-preview-1ecf117e-1f89-40f9-a0a5-ed5766737620) ou posterior
 
    - Windows 10, versão 2004; Windows 10, versão 20H2 e Windows 10, versão 21H – [KB5005260](https://support.microsoft.com/topic/kb5005260-servicing-stack-update-for-windows-10-version-2004-20h2-and-21h1-august-10-2021-ec4c5daa-2cec-4b06-be93-037f150fe3ba) e [KB5005101](https://support.microsoft.com/topic/september-1-2021-kb5005101-os-builds-19041-1202-19042-1202-and-19043-1202-preview-82a50f27-a56f-4212-96ce-1554e8058dc1) ou posterior
@@ -45,7 +47,7 @@ Este artigo explica como configurar o acesso fácil ao modo Internet Explorer (m
 > [!IMPORTANT]
 > Não há suporte para esse recurso de lista de sites local Windows Server 2016 no momento.
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 O modo IE é alimentado pela configuração da Lista de Sites do Modo Empresarial. Enquanto você estiver identificando e configurando sites na lista de sites para usar o modo IE, os usuários não precisam mais esperar ou voltar para o aplicativo IE11 autônomo.
 
@@ -125,7 +127,7 @@ Essa política não terá efeito se você desabilitou a *política InternetExplo
 > [!NOTE]
 > Atualmente, a lista de sites locais não é sincronizada entre dispositivos. Essa melhoria está atualmente em nossa lista de pendências e atualizaremos esse recurso quando ele estiver disponível.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - Desabilitar o Internet Explorer 11 – [Desabilitar o Internet Explorer 11](/deployedge/edge-ie-disable-ie11)
 - Configurar políticas de modo IE – [Configurar políticas de modo IE](/deployedge/edge-ie-mode-policies)

@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: Microsoft Edge suporte para acesso condicional
-ms.openlocfilehash: cb21bb2b8ccf3abd5a27c325f233e95182f78bf3
-ms.sourcegitcommit: ad1cb6d9ff6c44b692403730c85ac671415aec86
+description: Suporte do Microsoft Edge para Acesso Condicional
+ms.openlocfilehash: 9b2356f9dee3677b7b7009a11017e901918580cf
+ms.sourcegitcommit: 8a2193791e6606a4dced9808013d6b064d2f2319
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "12551050"
+ms.lasthandoff: 09/15/2022
+ms.locfileid: "12753906"
 ---
 # <a name="microsoft-edge-and-conditional-access"></a>Microsoft Edge e acesso condicional
   
@@ -44,9 +44,12 @@ Para entrar e trabalhar com seu perfil, selecione a imagem da conta no canto sup
 
 Esse suporte está disponível em todas as plataformas, incluindo todas as versões compatíveis do Windows e do macOS.
 
+> [!NOTE]
+> Não há suporte para o Acesso Condicional no modo InPrivate, pois não há nenhum conceito de um perfil conectado nesse modo.
+
 ### <a name="how-to-deploy-conditional-access-in-azure-active-directory"></a>Como implantar o Acesso condicional no Azure Active Directory
 
-[Implantar o Acesso Condicional](/azure/active-directory/conditional-access/plan-conditional-access) fornece um guia detalhado para ajudar a planejar e implantar o Acesso Condicional Azure Active Directory.
+[Implantar o Acesso Condicional](/azure/active-directory/conditional-access/plan-conditional-access) fornece um guia detalhado para ajudar a planejar e implantar o Acesso Condicional no Azure Active Directory.
 
 ## <a name="see-also"></a>Consulte também
 

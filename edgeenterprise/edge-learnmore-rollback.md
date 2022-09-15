@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Como reverter o Microsoft Edge para uma versão anterior
-ms.openlocfilehash: ed2d18208820eaed3e57ab08d7cea1b9df9770c5
-ms.sourcegitcommit: 3e3362b0c5c663df160e8e8f68a4c82564183b2d
+ms.openlocfilehash: a12a434c628ad0aee0c5f490e0fcd1f5461b8dc0
+ms.sourcegitcommit: 8a2193791e6606a4dced9808013d6b064d2f2319
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "12740534"
+ms.lasthandoff: 09/15/2022
+ms.locfileid: "12753936"
 ---
 # <a name="how-to-roll-back-microsoft-edge-to-a-previous-version"></a>Como reverter o Microsoft Edge para uma versão anterior
 
@@ -67,6 +67,8 @@ Usar as etapas a seguir para fazer a reversão manualmente usando um MSI.
      > [!NOTE]
      > Para obter mais informações sobre o msiexec, consulte [msiexec](/windows-server/administration/windows-commands/msiexec).
    - Feche o Microsoft Edge e abra-o novamente para verificar se a reversão funcionou. Em **Configurações e mais** (ALT + F), acesse **Configurações** e selecione **Sobre o Microsoft Edge**.
+
+Para implantar um MSI com o Microsoft Endpoint Manager, consulte o guia Criar e [Implantar um aplicativo com Configuration Manager](/mem/configmgr/apps/get-started/create-and-deploy-an-application) aplicativo. Durante a etapa Criar Assistente de Aplicativo, adicione `ALLOW_DOWNGRADE=1` a opção ao Programa de Instalação, por exemplo, `msiexec /I FileName.msi /qn ALLOWDOWNGRADE=1`.
 
 ## <a name="enable-rollback-with-microsoft-edge-update-and-group-policy"></a>Habilitar a reversão com a atualização do Microsoft Edge e a Política de grupo
 
