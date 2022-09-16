@@ -3,27 +3,27 @@ title: Notas de versão para atualizações de segurança do Microsoft Edge
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 09/14/2022
+ms.date: 09/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão para atualizações de segurança do Microsoft Edge
-ms.openlocfilehash: f101d5fcebddf666d0a73595fd8beb3d4df7cc32
-ms.sourcegitcommit: 6331a58e357ddb8476d0726054ebabfc2a48ef66
+ms.openlocfilehash: abfde49b2f0c21193bcb936ebf5f7b3c31cf0a34
+ms.sourcegitcommit: f9e8d53456dc3b67b3d8be5f5cd2fb658c2867a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2022
-ms.locfileid: "12753672"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "12754072"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Notas de versão para atualizações de segurança do Microsoft Edge
 
 Estas notas de versão fornecem informações sobre correções de segurança incluídas nas atualizações para o canal estável do Microsoft Edge.
 
-## <a name="september-14-2022"></a>14 de setembro de 2022
+## <a name="september-15-2022"></a>15 de setembro de 2022
 
-A Microsoft está ciente das recentes correções de segurança do Chromium. Estamos trabalhando ativamente para lançar uma correção de segurança.
+A Microsoft lançou o canal estável mais recente do **Microsoft Edge (versão 105.0.1343.42)**, que incorpora o Atualizações de segurança mais recente do projeto Chromium. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
 
 ## <a name="september-2-2022"></a>2 de setembro de 2022
 

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: aba2212c5e68078e83549cdb64be908bc01f9c13
-ms.sourcegitcommit: 8a2193791e6606a4dced9808013d6b064d2f2319
+ms.openlocfilehash: 8a9b001c23556a64edc61f260c26d891f89f3d3e
+ms.sourcegitcommit: f9e8d53456dc3b67b3d8be5f5cd2fb658c2867a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2022
-ms.locfileid: "12753876"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "12754062"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão do Microsoft Edge Stable Channel
 
@@ -31,6 +31,10 @@ Essas notas de versão fornecem informações dos novos recursos e atualizaçõe
 >
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## <a name="version-1050134342-september-15-2022"></a>Versão 105.0.1343.42: 15 de setembro de 2022
+
+As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#september-15-2022).
+
 ## <a name="version-1040129391-september-15-2022"></a>Versão 104.0.1293.91: 15 de setembro de 2022
 
 Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
@@ -42,7 +46,7 @@ Vários bugs e problemas de desempenho corrigidos.
 ## <a name="version-1040129381-september-2-2022"></a>Versão 104.0.1293.81: 2 de setembro de 2022
 
 > [!IMPORTANT]
-> Esta atualização para o Estável Estendido contém uma correção para [CVE-2022-3075](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-3075), que foi relatada pela equipe do Chromium como tendo uma exploração em execução. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
+> Esta atualização para o Estável Estendido contém uma correção para [CVE-2022-3075](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-3075), que foi relatada pela equipe do Chromium como tendo uma exploração em execução. Para obter mais informações, consulte o [Guia de atualização de segurança](https://msrc.microsoft.com/update-guide).
 
 As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#september-2-2022)
 
