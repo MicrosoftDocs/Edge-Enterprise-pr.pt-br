@@ -3,7 +3,7 @@ title: Documentação de política do navegador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 09/13/2022
+ms.date: 09/21/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: generated
 description: Documentação do Windows e do Mac para todas as políticas compatíveis com o Microsoft Edge Browser
-ms.openlocfilehash: 22616acda230c90d76af608eadc8ea75b787183c
-ms.sourcegitcommit: da20c54d9dd212dc533a576dc20b607dce532340
+ms.openlocfilehash: b5c04f4bc20d745ccca1e4df8d169afb6a919d15
+ms.sourcegitcommit: 366312137ecaf5b18e8c9dbb48d7ea335114ec5e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "12752882"
+ms.lasthandoff: 09/21/2022
+ms.locfileid: "12759657"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Políticas
 
@@ -31,14 +31,13 @@ Você pode baixar o [Kit de ferramentas de conformidade de segurança da Microso
 
 ## <a name="new-policies"></a>Novas políticas
 
-A tabela a seguir lista as políticas novas e preteridas que estão nesta atualização de artigo.
+A tabela a seguir lista as políticas novas e obsoletas que estão nesta atualização de artigo.
 
 | Nome da política | Legenda |
 |:-----|:-----|
-|[InternetExplorerIntegrationLocalMhtFileAllowed](#internetexplorerintegrationlocalmhtfileallowed)|Permitir que arquivos MHTML locais abram automaticamente no modo Internet Explorer|
-|[MicrosoftOfficeMenuEnabled](#microsoftofficemenuenabled)|Permitir que os usuários acessem o menu do Microsoft Office (preterido)|
-|[NewSmartScreenLibraryEnabled](#newsmartscreenlibraryenabled)|Habilitar nova biblioteca SmartScreen (preterida)|
-|[ShadowStackCrashRollbackBehavior](#shadowstackcrashrollbackbehavior)|Configurar o comportamento de reversão de falha do ShadowStack (preterido)|
+|[PerformanceDetectorEnabled](#performancedetectorenabled)|Detector de Desempenho Habilitado|
+|[RestoreOnStartupUserURLsEnabled](#restoreonstartupuserurlsenabled)|Permitir que os usuários adicionem e removam seus próprios sites durante a inicialização quando a política RestoreOnStartupURLs estiver configurada|
+|[TravelAssistanceEnabled](#travelassistanceenabled)|Habilitar assistência de viagem (obsoleto)|
 
 ## <a name="available-policies"></a>Políticas disponíveis
 
@@ -231,6 +230,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[EfficiencyMode](#efficiencymode)|Configurar quando o modo de eficiência deve ficar ativo|
 |[EfficiencyModeEnabled](#efficiencymodeenabled)|Modo de eficiência habilitado|
 |[EfficiencyModeOnPowerEnabled](#efficiencymodeonpowerenabled)|Habilitar o modo de eficiência quando o dispositivo estiver conectado a uma fonte de energia|
+|[PerformanceDetectorEnabled](#performancedetectorenabled)|Detector de Desempenho Habilitado|
 |[StartupBoostEnabled](#startupboostenabled)|Habilitar início rápido|
 ### [*<a name="permit-or-deny-screen-capture"></a>Permitir ou negar capturas de tela*](#permit-or-deny-screen-capture-policies)
 
@@ -310,6 +310,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[NewTabPageSetFeedType](#newtabpagesetfeedtype)|Configurar a experiência de página de nova guia do Microsoft Edge (obsoleto)|
 |[RestoreOnStartup](#restoreonstartup)|Ação a ser realizada na inicialização|
 |[RestoreOnStartupURLs](#restoreonstartupurls)|Sites a abrir quando o navegador for iniciado|
+|[RestoreOnStartupUserURLsEnabled](#restoreonstartupuserurlsenabled)|Permitir que os usuários adicionem e removam seus próprios sites durante a inicialização quando a política RestoreOnStartupURLs estiver configurada|
 |[ShowHomeButton](#showhomebutton)|Botão Mostrar página inicial na barra de ferramentas|
 ### [*<a name="typosquattingchecker-settings"></a>Configurações do TyposquattingChecker*](#typosquattingchecker-settings-policies)
 
@@ -594,7 +595,7 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[TotalMemoryLimitMb](#totalmemorylimitmb)|Definir o limite em megabytes de memória que uma única instância do Microsoft Edge pode usar.|
 |[TrackingPrevention](#trackingprevention)|Bloquear o acompanhamento de atividades de navegação na Web do usuário|
 |[TranslateEnabled](#translateenabled)|Habilitar Tradução|
-|[TravelAssistanceEnabled](#travelassistanceenabled)|Habilitar assistência de viagem|
+|[TravelAssistanceEnabled](#travelassistanceenabled)|Habilitar assistência de viagem (obsoleto)|
 |[TripleDESEnabled](#tripledesenabled)|Habilitar pacotes de codificação 3DES no TLS|
 |[U2fSecurityKeyApiEnabled](#u2fsecuritykeyapienabled)|Permitir o uso da API de Chave de Segurança U2F preterida (obsoleto)|
 |[URLAllowlist](#urlallowlist)|Definir uma lista de URLs permitidas|
@@ -8396,6 +8397,72 @@ Saiba mais sobre o modo de eficiência: [https://go.microsoft.com/fwlink/?linkid
 
   [Voltar ao início](#microsoft-edge---policies)
 
+  ### <a name="performancedetectorenabled"></a>PerformanceDetectorEnabled
+
+  #### <a name="performance-detector-enabled"></a>Detector de Desempenho Habilitado
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e no macOS desde o 107 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  O detector de desempenho detecta problemas de desempenho de tabulação e recomenda ações para corrigir os problemas de desempenho.
+
+Se você habilitar ou não configurar essa política, o detector de desempenho será ativado.
+
+Se você desabilitar essa política, o detector de desempenho será desativado.
+
+O usuário pode configurar seu comportamento em edge://settings/system.
+
+Saiba mais sobre o detector de desempenho: https://aka.ms/EdgePerformanceDetector
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: Sim
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: PerformanceDetectorEnabled
+  - Nome da Política de Grupo: Detector de Desempenho Habilitado
+  - Caminho do GP (Obrigatório): Modelos Administrativos/Microsoft Edge/Desempenho
+  - Caminho do GP (Recomendado): Modelos Administrativos /Microsoft Edge - Configurações Padrão (os usuários podem substituir)/Desempenho
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Nome do valor: PerformanceDetectorEnabled
+  - Tipo de Valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: PerformanceDetectorEnabled
+  - Valor de exemplo:
+``` xml
+<true/>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
   ### <a name="startupboostenabled"></a>StartupBoostEnabled
 
   #### <a name="enable-startup-boost"></a>Habilitar início rápido
@@ -8911,7 +8978,7 @@ Se você desabilitar ou não configurar essa política, o Microsoft Edge não de
 
   - Nome exclusivo da Política de Grupo: PrintPdfAsImageDefault
   - Nome da Política de Grupo: Imprimir PDF como Padrão de Imagem
-  - Caminho da política de grupo (obrigatório): modelos administrativos/Microsoft Edge/imprimir
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/Printing
   - Caminho da Política de Grupo (recomendado): N/A
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -12035,6 +12102,66 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
   <string>https://contoso.com</string>
   <string>https://www.fabrikam.com</string>
 </array>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---policies)
+
+  ### <a name="restoreonstartupuserurlsenabled"></a>RestoreOnStartupUserURLsEnabled
+
+  #### <a name="allow-users-to-add-and-remove-their-own-sites-during-startup-when-the-restoreonstartupurls-policy-is-configured"></a>Permitir que os usuários adicionem e removam seus próprios sites durante a inicialização quando a política RestoreOnStartupURLs estiver configurada
+
+  
+  
+  #### <a name="supported-versions"></a>Versões com suporte:
+
+  - No Windows e no macOS desde o 107 ou posterior
+
+  #### <a name="description"></a>Descrição
+
+  Se você habilitar essa política, os usuários poderão adicionar e remover suas próprias URLs para abrir ao iniciar o Edge, mantendo a lista obrigatória de sites especificada pelo administrador, configurando a política [RestoreOnStartup](#restoreonstartup) para abrir uma lista de URLs e fornecer a lista de sites na política [RestoreOnStartupURLs](#restoreonstartupurls) .
+
+Se você desabilitar ou não configurar essa política, não haverá nenhuma alteração em como as políticas [RestoreOnStartup](#restoreonstartup) e [RestoreOnStartupURLs](#restoreonstartupurls) funcionam.
+
+  #### <a name="supported-features"></a>Recursos compatíveis:
+
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendável: não
+  - Atualização dinâmica das políticas: Sim
+
+  #### <a name="data-type"></a>Tipo de dados:
+
+  - Booliano
+
+  #### <a name="windows-information-and-settings"></a>Informações e configurações do Windows
+
+  ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
+
+  - Nome exclusivo da Política de Grupo: RestoreOnStartupUserURLsEnabled
+  - Nome da Política de Grupo: Permitir que os usuários adicionem e removam seus próprios sites durante a inicialização quando a política RestoreOnStartupURLs estiver configurada
+  - Caminho GP (obrigatório): Modelos Administrativos/Microsoft Edge/Inicialização, página inicial e página de nova guia
+  - Caminho da Política de Grupo (recomendado): N/A
+  - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configurações de registro do Windows
+
+  - Caminho (obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (recomendado): N/A
+  - Nome do valor: RestoreOnStartupUserURLsEnabled
+  - Tipo de Valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de exemplo:
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Informações e configurações do Mac
+  
+  - Nome da chave de preferência: RestoreOnStartupUserURLsEnabled
+  - Valor de exemplo:
+``` xml
+<false/>
 ```
   
 
@@ -22618,7 +22745,7 @@ Se você habilitar essa política, o Microsoft Edge sempre usará o mecanismo de
 
 Se você desabilitar ou não configurar essa política, o Microsoft Edge usará o mecanismo de captura do Navegador para janelas do navegador no mesmo processo. As guias do modo Internet Explorer nessas janelas não terão seu conteúdo capturado.
 
-Para saber mais sobre o modo Internet Explorer, confira [https://go.microsoft.com/fwlink/?linkid=2174004](https://go.microsoft.com/fwlink/?linkid=2174004)
+Para saber mais sobre o modo do Internet Explorer, confira [https://go.microsoft.com/fwlink/?linkid=2174004](https://go.microsoft.com/fwlink/?linkid=2174004)
 
   #### <a name="supported-features"></a>Recursos compatíveis:
 
@@ -23284,7 +23411,7 @@ Para saber mais sobre o modo Internet Explorer, confira [https://go.microsoft.co
   
   #### <a name="supported-versions"></a>Versões com suporte:
 
-  - No Windows desde o 106 ou posterior
+  - No Windows desde o 107 ou posterior
 
   #### <a name="description"></a>Descrição
 
@@ -30473,17 +30600,18 @@ Se você não configurar a política, os usuários poderão escolher se desejam 
 
   ### <a name="travelassistanceenabled"></a>TravelAssistanceEnabled
 
-  #### <a name="enable-travel-assistance"></a>Habilitar assistência de viagem
+  #### <a name="enable-travel-assistance-obsolete"></a>Habilitar assistência de viagem (obsoleto)
 
   
-  
+  >OBSOLETO: essa política é obsoleta e não funciona após o Microsoft Edge 105.
   #### <a name="supported-versions"></a>Versões com suporte:
 
-  - No Windows e no macOS desde 93 ou posterior
+  - No Windows e no macOS desde 93 até 105
 
   #### <a name="description"></a>Descrição
 
-  Configure esta política para permitir/não permitir assistência de viagem.
+  Essa política está obsoleta, pois o recurso agora está contido na Barra Lateral do Edge e pode ser gerenciado usando a [política HubsSidebarEnabled](#hubssidebarenabled) . Ele não funciona no Microsoft Edge após a versão 105.
+Configure esta política para permitir/não permitir assistência de viagem.
 
 O recurso de assistência de viagem fornece informações úteis e relevantes para um usuário que executa tarefas relacionadas a Viagens no navegador. Esse recurso fornece sugestões e informações confiáveis e validadas para os usuários de várias fontes coletadas pela Microsoft.
 
@@ -30506,8 +30634,8 @@ Se você desabilitar essa configuração, a assistência de viagem será desabil
   ##### <a name="group-policy-admx-info"></a>Informações da Política de Grupo (ADMX)
 
   - Nome exclusivo da Política de Grupo: TravelAssistanceEnabled
-  - Nome da Política de Grupo: Habilitar assistência de viagem
-  - Caminho da Política de Grupo (obrigatório): Modelos Administrativos/Microsoft Edge/
+  - Nome da Política de Grupo: Habilitar assistência de viagem (obsoleto)
+  - Caminho da Política de Grupo (obrigatório): Administrative Templates/Microsoft Edge/
   - Caminho da Política de Grupo (recomendado): Administrative Templates/Microsoft Edge - Default Settings (usuários podem substituir)/
   - Nome do arquivo ADMX da Política de Grupo: MSEdge.admx
 
@@ -31543,6 +31671,8 @@ Se você habilitar ou não configurar essa política, a pesquisa visual será ha
 
 Se você desabilitar essa política, a pesquisa visual será desabilitada e você não poderá obter mais informações sobre imagens por meio de foco, menu de contexto e pesquisa na barra lateral.
 
+Observação: a Pesquisa Visual na Captura da Web ainda é gerenciada pela [política WebCaptureEnabled](#webcaptureenabled) .
+
   #### <a name="supported-features"></a>Recursos compatíveis:
 
   - Pode ser obrigatório: Sim
@@ -31804,7 +31934,9 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   #### <a name="description"></a>Descrição
 
-  Habilita o recurso de captura da Web no Microsoft Edge que permite aos usuários capturar conteúdo da Web e fazer anotações na captura usando as ferramentas de escrita à tinta.
+  Habilita o recurso de captura da Web no Microsoft Edge que permite aos usuários capturar conteúdo web e PDF e anotar a captura usando ferramentas de escrita à tinta.
+A partir da versão 107 do Microsoft Edge, os usuários também podem executar a pesquisa de imagem visual no conteúdo capturado.
+
 Se você habilitar essa política ou não configurá-la, a opção de captura da Web será exibida no menu de contexto, no menu configurações e mais, usando o atalho de teclado, CTRL+SHIFT+S.
 Se você desabilitar essa política, os usuários não poderão acessar o recurso capturar conteúdo da Web no Microsoft Edge.
 
