@@ -3,81 +3,85 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 09/16/2022
+ms.date: 09/26/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: b2188486d2485370c3ebed93a09bc900a7111242
-ms.sourcegitcommit: deac6373697fe55fce800a59bafc98577b5dcbcd
+ms.openlocfilehash: 5f8cacfe544bff3ee7c9a4157034ec93902c6f93
+ms.sourcegitcommit: c68a84007c0b64af9149fe7bbf44401615bf17e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "12754257"
+ms.lasthandoff: 09/26/2022
+ms.locfileid: "12760692"
 ---
-# <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de versão do canal do Microsoft Edge beta
+# Notas de versão do canal do Microsoft Edge beta
 
 Estas notas de versão fornecem informações sobre os novos recursos e atualizações não relacionadas à segurança que estão inclusos no canal Beta do Microsoft Edge. As versões arquivadas dessas notas de versão estão disponíveis nas notas [de versão arquivadas para Microsoft Edge Beta Channel](./microsoft-edge-relnote-archive-beta-channel.md).
 
 > [!NOTE]
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## <a name="version-1060137017-september-16-2022"></a>Versão 106.0.1370.17: 16 de setembro de 2022
+## Versão 106.0.1370.26: 26 de setembro de 2022
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-1060137015-september-15-2022"></a>Versão 106.0.1370.15: 15 de setembro de 2022
+## Versão 106.0.1370.17: 16 de setembro de 2022
 
 Vários bugs e problemas de desempenho corrigidos.
 
-### <a name="feature-updates"></a>Atualizações de recursos
+## Versão 106.0.1370.15: 15 de setembro de 2022
+
+Vários bugs e problemas de desempenho corrigidos.
+
+### Atualizações de recursos
 
 - **Defesa da Web mais confiável.** Navegue pela Web com proteção mais confiável graças à biblioteca reescrito do [Microsoft Defender SmartScreen](/deployedge/microsoft-edge-security-smartscreen) para Microsoft Edge no Windows, que foi introduzida no Microsoft Edge versão 103. A [política NewSmartScreenLibraryEnabled](/deployedge/microsoft-edge-policies#newsmartscreenlibraryenabled) foi preterida no Microsoft Edge versão 106 e ficará obsoleta no Microsoft Edge versão 107.
 
-### <a name="policy-updates"></a>Atualizações de política
+### Atualizações de política
 
-#### <a name="new-policies"></a>Novas políticas
+#### Novas políticas
 
 - [EfficiencyModeEnabled](/DeployEdge/microsoft-edge-policies#efficiencymodeenabled) – modo de eficiência habilitado
 - [EfficiencyModeOnPowerEnabled](/DeployEdge/microsoft-edge-policies#efficiencymodeonpowerenabled) – Habilitar o modo de eficiência quando o dispositivo estiver conectado a uma fonte de energia
 - [InternetExplorerIntegrationAlwaysUseOSCapture](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationalwaysuseoscapture) Sempre use o mecanismo de captura do sistema operacional para evitar problemas com a captura de guias do modo Internet Explorer
 
-#### <a name="deprecated-policies"></a>Políticas preteridas
+#### Políticas preteridas
 
 - [NewSmartScreenLibraryEnabled](/deployedge/microsoft-edge-policies#newsmartscreenlibraryenabled) – permite que o navegador Microsoft Edge carregue a nova biblioteca SmartScreen para quaisquer verificações do SmartScreen em URLs do site ou downloads de aplicativos.
 
-#### <a name="obsoleted-policies"></a>Políticas obsoletas
+#### Políticas obsoletas
 
 - [OutlookHubMenuEnabled](/DeployEdge/microsoft-edge-policies#outlookhubmenuenabled): permite que os usuários acessem o menu do Outlook
 - [EdgeDiscoverEnabled](/DeployEdge/microsoft-edge-policies#edgediscoverenabled) - Recurso de descoberta no Microsoft Edge
 
-## <a name="version-1050134334-september-9-2022"></a>Versão 105.0.1343.34: 9 de setembro de 2022
+## Versão 105.0.1343.34: 9 de setembro de 2022
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-1050134327-september-2-2022"></a>Versão 105.0.1343.27: 2 de setembro de 2022
+## Versão 105.0.1343.27: 2 de setembro de 2022
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-1050134323-august-31-2022"></a>Versão 105.0.1343.23: 31 de agosto de 2022
+## Versão 105.0.1343.23: 31 de agosto de 2022
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-1050134317-august-26-2022"></a>Versão 105.0.1343.17: 26 de agosto de 2022
+## Versão 105.0.1343.17: 26 de agosto de 2022
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-1050134310-august-19-2022"></a>Versão 105.0.1343.10: 19 de agosto de 2022
+## Versão 105.0.1343.10: 19 de agosto de 2022
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-105013437-august-16-2022"></a>Versão 105.0.1343.7: 16 de agosto de 2022
+## Versão 105.0.1343.7: 16 de agosto de 2022
 
 Vários bugs e problemas de desempenho corrigidos.
 
-### <a name="feature-updates"></a>Atualizações de recursos
+### Atualizações de recursos
 
 - **Melhoria na experiência de Gerenciamento de Lista de Sites na Nuvem para o modo IE.**
 
@@ -87,9 +91,9 @@ Vários bugs e problemas de desempenho corrigidos.
 
 - **Melhorias na experiência de Gerenciamento de Lista de Sites na Nuvem para o modo IE agora estão disponíveis no GCC.** Os clientes da GCC agora podem utilizar a experiência completa de lista de sites do Microsoft Edge no Administração Microsoft 365 Center.
 
-### <a name="policy-updates"></a>Atualizações de política
+### Atualizações de política
 
-#### <a name="new-policies"></a>Novas políticas
+#### Novas políticas
 
 - [ExemptFileTypeDownloadWarnings](/DeployEdge/microsoft-edge-policies#exemptfiletypedownloadwarnings) – desabilitar o download de avisos baseados em extensão de tipo de arquivo para tipos de arquivo especificados em domínios
 - [InternetExplorerIntegrationAlwaysWaitForUnload](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationalwayswaitforunload) – Aguarde até que as guias do modo Internet Explorer descarreguem completamente antes de encerrar a sessão do navegador
@@ -98,39 +102,39 @@ Vários bugs e problemas de desempenho corrigidos.
 - [PrintPdfAsImageDefault](/DeployEdge/microsoft-edge-policies#printpdfasimagedefault) – Imprimir PDF como Padrão de Imagem
 - [UnthrottledNestedTimeoutEnabled](/DeployEdge/microsoft-edge-policies#unthrottlednestedtimeoutenabled) - JavaScript setTimeout não será fixado até que um limite de aninhamento mais alto seja definido
 
-#### <a name="deprecated-policy"></a>Política preterida
+#### Política preterida
 
 - [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](/DeployEdge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings): Desabilita o download de avisos baseados em extensão do tipo de arquivo para tipos de arquivo especificados em domínios.
 
-#### <a name="additional-change"></a>Alteração adicional
+#### Alteração adicional
 
 - [GuidedSwitchEnabled](/DeployEdge/microsoft-edge-policies#guidedswitchenabled) – Adicionar suporte à plataforma Linux
 
-## <a name="version-1040129344-august-3"></a>Versão 104.0.1293.44: 3 de agosto
+## Versão 104.0.1293.44: 3 de agosto
 
 Vários bugs e problemas de desempenho corrigidos.
 
-### <a name="feature-updates"></a>Atualizações de recursos
+### Atualizações de recursos
 
 - **Aprimorar sua segurança na Web**. As melhorias para **Aprimorar sua segurança na web** em *edge://settings/privacy* agora incluem **Básico** como nova opção padrão.  Com essa opção, o Microsoft Edge aplicará uma proteção de segurança adicional aos sites menos visitados. Isso preserva a experiência do usuário para os sites mais populares na Web. Para obter mais informações, confira [Navegar com mais segurança com o Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
 
-## <a name="version-1040129341-august-1"></a>Versão 104.0.1293.41: 1º de agosto
+## Versão 104.0.1293.41: 1º de agosto
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-1040129335-july-25"></a>Versão 104.0.1293.35: 25 de julho
+## Versão 104.0.1293.35: 25 de julho
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-1040129325-july-18"></a>Versão 104.0.1293.25: 18 de julho
+## Versão 104.0.1293.25: 18 de julho
 
 Vários bugs e problemas de desempenho corrigidos.
 
-### <a name="feature-updates"></a>Atualizações de recursos
+### Atualizações de recursos
 
 - **Importar os dados do Chrome sem o Chrome durante a Primeira Experiência de Execução.** Esse recurso permite que um usuário traga seus dados do Chrome fazendo logon na sua conta do Google durante a Experiência de Primeira Execução do Microsoft Edge. Esse recurso pode ser desativado desabilitando a Experiência de Primeira Execução com a política [HideFirstRunExperience](/deployedge/microsoft-edge-policies#hidefirstrunexperience) ou definindo [AutoImportAtFirstRun](/deployedge/microsoft-edge-policies#autoimportatfirstrun) como 'DisabledAutoImport'.
 
-## <a name="version-1040129321-july-14"></a>Versão 104.0.1293.21: 14 de julho
+## Versão 104.0.1293.21: 14 de julho
 
 Vários bugs e problemas de desempenho corrigidos.
 
@@ -152,7 +156,7 @@ Vários bugs e problemas de desempenho corrigidos.
 <!--- Archived to version 86.0.622.11: September 9 ---->
 <!--- Archived to version 85.0.564.18: July 28 ---->
 
-## <a name="see-also"></a>Ver também
+## Ver também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 
