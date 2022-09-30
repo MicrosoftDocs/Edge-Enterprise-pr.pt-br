@@ -3,19 +3,19 @@ title: Notas da versão do Microsoft Edge para canal beta
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 09/26/2022
+ms.date: 09/29/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas da versão do Microsoft Edge para canal beta
-ms.openlocfilehash: 5f8cacfe544bff3ee7c9a4157034ec93902c6f93
-ms.sourcegitcommit: c68a84007c0b64af9149fe7bbf44401615bf17e8
+ms.openlocfilehash: 55d462d7fadff1b7f6ff18cc39fab3acbbabc515
+ms.sourcegitcommit: 3082ced51d93e5c46377babb5601ae4dba2a859e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2022
-ms.locfileid: "12760692"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "12762549"
 ---
 # Notas de versão do canal do Microsoft Edge beta
 
@@ -23,6 +23,10 @@ Estas notas de versão fornecem informações sobre os novos recursos e atualiza
 
 > [!NOTE]
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Versão 106.0.1370.30: 29 de setembro de 2022
+
+Vários bugs e problemas de desempenho corrigidos.
 
 ## Versão 106.0.1370.26: 26 de setembro de 2022
 
@@ -38,7 +42,7 @@ Vários bugs e problemas de desempenho corrigidos.
 
 ### Atualizações de recursos
 
-- **Defesa da Web mais confiável.** Navegue pela Web com proteção mais confiável graças à biblioteca reescrito do [Microsoft Defender SmartScreen](/deployedge/microsoft-edge-security-smartscreen) para Microsoft Edge no Windows, que foi introduzida no Microsoft Edge versão 103. A [política NewSmartScreenLibraryEnabled](/deployedge/microsoft-edge-policies#newsmartscreenlibraryenabled) foi preterida no Microsoft Edge versão 106 e ficará obsoleta no Microsoft Edge versão 107.
+- **Defesa da Web mais confiável.** Navegue pela Web com proteção mais confiável graças à biblioteca [Microsoft Defender SmartScreen](/deployedge/microsoft-edge-security-smartscreen) para Microsoft Edge no Windows, que foi introduzida no Microsoft Edge versão 103. A [política NewSmartScreenLibraryEnabled](/deployedge/microsoft-edge-policies#newsmartscreenlibraryenabled) foi preterida no Microsoft Edge versão 106 e ficará obsoleta no Microsoft Edge versão 107.
 
 ### Atualizações de política
 
