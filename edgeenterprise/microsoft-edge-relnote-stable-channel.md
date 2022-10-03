@@ -3,19 +3,19 @@ title: Notas de versão do Microsoft Edge para Stable Channel
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 09/26/2022
+ms.date: 10/03/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão do Microsoft Edge para Stable Channel
-ms.openlocfilehash: 836627828574819b6f9a282722c8b4036c50202e
-ms.sourcegitcommit: 4506af4ad802cbf82e89270255f1b1ba042e98a8
+ms.openlocfilehash: 56abe43ff1a4b7a7365f3492e8be7d1d038e4ced
+ms.sourcegitcommit: 51b4070bcff302e1b8809e41b810c3e027e9c146
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "12760845"
+ms.lasthandoff: 10/03/2022
+ms.locfileid: "12763189"
 ---
 # Notas de versão do Microsoft Edge Stable Channel
 
@@ -30,6 +30,34 @@ Essas notas de versão fornecem informações dos novos recursos e atualizaçõe
 > Para o Canal Estável, as atualizações serão implantadas progressivamente por um ou mais dias. Para saber mais, consulte [Distribuições progressivas para atualizações do Microsoft Edge](./microsoft-edge-update-progressive-rollout.md).
 >
 > A Plataforma da Web do Microsoft Edge evolui constantemente para melhorar a experiência, segurança e privacidade do usuário. Para saber mais, confira [Compatibilidade de sites: alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Versão 106.0.1370.34: 3 de outubro de 2022
+
+As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#october-3-2022).
+
+### Atualizações de recursos
+
+- **Defesa da Web mais confiável.** Navegue pela Web com proteção mais confiável graças à biblioteca [Microsoft Defender SmartScreen](/deployedge/microsoft-edge-security-smartscreen) para Microsoft Edge no Windows, que foi introduzida no Microsoft Edge versão 103. A [política NewSmartScreenLibraryEnabled](/deployedge/microsoft-edge-policies#newsmartscreenlibraryenabled) foi preterida no Microsoft Edge versão 106 e ficará obsoleta no Microsoft Edge versão 107.
+
+- **Aumento dos resultados de trabalho na barra de endereços do Microsoft Edge.** Aumentamos o número máximo de resultados de trabalho exibidos na barra de endereços de 2 para 4, o que oferece maior visibilidade do conteúdo de trabalho disponível à medida que você pesquisa. Esse recurso requer [a política AddressBarMicrosoftSearchInBingProviderEnabled](/deployedge/microsoft-edge-policies#addressbarmicrosoftsearchinbingproviderenabled) habilitada para funcionar.
+
+### Atualizações de política
+
+#### Novas políticas
+
+- [EfficiencyModeEnabled](/DeployEdge/microsoft-edge-policies#efficiencymodeenabled) – modo de eficiência habilitado
+- [EfficiencyModeOnPowerEnabled](/DeployEdge/microsoft-edge-policies#efficiencymodeonpowerenabled) – Habilitar o modo de eficiência quando o dispositivo estiver conectado a uma fonte de energia
+- [InternetExplorerIntegrationAlwaysUseOSCapture](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationalwaysuseoscapture) – sempre use o mecanismo de captura do sistema operacional para evitar problemas com a captura de guias do modo Internet Explorer
+
+#### Políticas preteridas
+
+- [NewSmartScreenLibraryEnabled](/DeployEdge/microsoft-edge-policies#newsmartscreenlibraryenabled) – Habilitar nova biblioteca SmartScreen
+- [ShadowStackCrashRollbackBehavior](/DeployEdge/microsoft-edge-policies#shadowstackcrashrollbackbehavior) – Configurar o comportamento de reversão de falha do ShadowStack
+
+#### Políticas obsoletas
+
+- [OutlookHubMenuEnabled](/DeployEdge/microsoft-edge-policies#outlookhubmenuenabled): permite que os usuários acessem o menu do Outlook
+- [EdgeDiscoverEnabled](/DeployEdge/microsoft-edge-policies#edgediscoverenabled) - Recurso de descoberta no Microsoft Edge
 
 ## Versão 105.0.1343.53: 26 de setembro de 2022
 
@@ -63,11 +91,11 @@ As atualizações de segurança do canal estável estão listadas [aqui](/deploy
 > [!IMPORTANT]
 > Essa atualização contém uma correção para [o CVE-2022-3075](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-3075), que foi relatada pela equipe Chromium como tendo uma exploração em execução. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
 
-As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#september-2-2022).
+As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#september-2-2022).
 
 ## Versão 105.0.1343.25: 1º de setembro de 2022
 
-As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#september-1-2022).
+As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#september-1-2022).
 
 ### Atualizações de recursos
 
@@ -200,49 +228,8 @@ As atualizações de segurança do canal Estável estão listadas [aqui](/deploy
 
 Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
 
-## Versão 103.0.1264.37: 23 de junho
-
-As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#june-23-2022).
-
-### Atualizações de recursos
-
-- **Capacidade de controlar a alternância automática de perfil.** A política [GuidedSwitchEnabled](/DeployEdge/microsoft-edge-policies#guidedswitchenabled) permite que a Microsoft Edge solicite ao usuário que mude para o perfil apropriado quando o Microsoft Edge detectar que um link é um link pessoal ou de trabalho.
-
-- **Alternador de Certificado do Cliente.** Esse recurso oferecerá uma maneira para os usuários limparem o certificado lembrado e ressurgir o seletor de certificado ao visitar um site que exige autenticação de certificado http. A alternância pode ser feita sem sair manualmente do Microsoft Edge.
-
-- **Defesa da Web mais confiável.** Navegue pela Web com proteção mais confiável graças à biblioteca reescrita do[Microsoft Defender SmartScreen](/deployedge/microsoft-edge-security-smartscreen) para Microsoft Edge no Windows. A política [NewSmartScreenLibraryEnabled](microsoft-edge-policies.md#newsmartscreenlibraryenabled) permitirá que os clientes empresariais continuem usando a versão herdada da biblioteca até que ela seja preterida no Microsoft Edge versão 105.
-
-- **Faixa de Pesquisa de Trabalho na barra de endereços do Microsoft Edge.** Essa faixa ajuda você a permanecer no fluxo do seu trabalho ao restringir o foco da pesquisa aos resultados somente de trabalho. Para ver os resultados focados no trabalho da sua organização, selecione a faixa no início da pesquisa. Para ser direcionado para a página de resultados da pesquisa no local de trabalho da sua organização, selecione a faixa em qualquer ponto da pesquisa. Use a política [AddressBarMicrosoftSearchInBingProviderEnabled](/deployedge/microsoft-edge-policies#addressbarmicrosoftsearchinbingproviderenabled) para ativar ou desativar esse recurso.
-
-### Atualizações de política
-
-#### Novas políticas
-
-- [GuidedSwitchEnabled](/DeployEdge/microsoft-edge-policies#guidedswitchenabled) – Comutador Guiado Habilitado
-- [InternetExplorerZoomDisplay](/DeployEdge/microsoft-edge-policies#internetexplorerzoomdisplay) - Exibir zoom nas guias do Modo IE com Escala de DPI incluída como está no Internet Explorer
-- [LiveCaptionsAllowed](/DeployEdge/microsoft-edge-policies#livecaptionsallowed) – Legendas ao vivo permitidas
-- [OriginAgentClusterDefaultEnabled](/DeployEdge/microsoft-edge-policies#originagentclusterdefaultenabled) - Agrupamento de agentes com chave de origem habilitada por padrão
-
-#### Alterações de política adicionais
-
-- [SleepingTabsTimeout](/DeployEdge/microsoft-edge-policies#sleepingtabstimeout) - Define o tempo limite de inatividade da guia plano de fundo para guias inativas. **Nota:** Um tempo limite de 30 segundos de inatividade foi adicionado a essa política.
-
-## Versão 102.0.1245.44: 16 de junho
-
-Corrigidos vários bugs e problemas de desempenho para a versão Estável e Estável Estendida.
-
-## Versão 102.0.1245.41: 13 de junho
-
-As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#june-13-2022).
-
-## Versão 102.0.1245.39: 9 de junho
-
-As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#june-9-2022).
-
-## Versão 102.0.1245.33: 3 de junho
-
-Corrigidos vários bugs e problemas de desempenho para a versão Estável e Estável Estendida.
-
+<!--- from Version 103.0.1264.37: June 23 to Version 102.0.1245.33: June 3 ---->
+<!--- from Version 103.0.1264.37: June 23 to Version 102.0.1245.33: June 3 ---->
 <!--- from Version 102.0.1245.30: May 31 to Version 100.0.1185.57: May 2 ---->
 <!-- from Version 101.0.1210.32: April 28 to Version 100.0.1185.36: April 7 -->
 <!---from Version 100.0.1185.29: April 1  to  Version 99.0.1150.36: March 7 --->

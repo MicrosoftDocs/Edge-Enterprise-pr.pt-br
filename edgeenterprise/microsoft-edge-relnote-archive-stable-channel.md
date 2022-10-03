@@ -3,62 +3,105 @@ title: Notas de versão arquivadas para o Canal Estável do Microsoft Edge
 ms.author: leahtu
 author: leahmsft
 manager: srugh
-ms.date: 09/01/2022
+ms.date: 10/03/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas de versão arquivadas para o Canal Estável do Microsoft Edge
-ms.openlocfilehash: 2497868637be9d23278a59bd1fa311a2eb281f78
-ms.sourcegitcommit: 346c4c3e30ed30b68b59b77ec712d52eb8c62ce1
+ms.openlocfilehash: c4a1f5d70260d7bad538f2a3d727194ed1a211e3
+ms.sourcegitcommit: 51b4070bcff302e1b8809e41b810c3e027e9c146
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2022
-ms.locfileid: "12741554"
+ms.lasthandoff: 10/03/2022
+ms.locfileid: "12763199"
 ---
-# <a name="archived-release-notes-for-microsoft-edge-stable-channel"></a>Notas de versão arquivadas para o Canal Estável do Microsoft Edge
+# Notas de versão arquivadas para o Canal Estável do Microsoft Edge
 
 Essas notas de versão fornecem informações dos novos recursos e atualizações não relacionados à segurança que estão inclusos Microsoft Edge Stable Channel. Todas as atualizações de segurança estão listadas [aqui](microsoft-edge-relnotes-security.md).
 
-## <a name="version-1020124530-may-31-2022"></a>Versão 102.0.1245.30: 31 de maio de 2022
+## Versão 103.0.1264.37: 23 de junho
+
+As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#june-23-2022).
+
+### Atualizações de recursos
+
+- **Capacidade de controlar a alternância automática de perfil.** A política [GuidedSwitchEnabled](/DeployEdge/microsoft-edge-policies#guidedswitchenabled) permite que a Microsoft Edge solicite ao usuário que mude para o perfil apropriado quando o Microsoft Edge detectar que um link é um link pessoal ou de trabalho.
+
+- **Alternador de Certificado do Cliente.** Esse recurso oferecerá uma maneira para os usuários limparem o certificado lembrado e ressurgir o seletor de certificado ao visitar um site que exige autenticação de certificado http. A alternância pode ser feita sem sair manualmente do Microsoft Edge.
+
+- **Defesa da Web mais confiável.** Navegue pela Web com proteção mais confiável graças à biblioteca reescrita do[Microsoft Defender SmartScreen](/deployedge/microsoft-edge-security-smartscreen) para Microsoft Edge no Windows. A política [NewSmartScreenLibraryEnabled](microsoft-edge-policies.md#newsmartscreenlibraryenabled) permitirá que os clientes empresariais continuem usando a versão herdada da biblioteca até que ela seja preterida no Microsoft Edge versão 105.
+
+- **Faixa de Pesquisa de Trabalho na barra de endereços do Microsoft Edge.** Essa faixa ajuda você a permanecer no fluxo do seu trabalho ao restringir o foco da pesquisa aos resultados somente de trabalho. Para ver os resultados focados no trabalho da sua organização, selecione a faixa no início da pesquisa. Para ser direcionado para a página de resultados da pesquisa no local de trabalho da sua organização, selecione a faixa em qualquer ponto da pesquisa. Use a política [AddressBarMicrosoftSearchInBingProviderEnabled](/deployedge/microsoft-edge-policies#addressbarmicrosoftsearchinbingproviderenabled) para ativar ou desativar esse recurso.
+
+### Atualizações de política
+
+#### Novas políticas
+
+- [GuidedSwitchEnabled](/DeployEdge/microsoft-edge-policies#guidedswitchenabled) – Comutador Guiado Habilitado
+- [InternetExplorerZoomDisplay](/DeployEdge/microsoft-edge-policies#internetexplorerzoomdisplay) - Exibir zoom nas guias do Modo IE com Escala de DPI incluída como está no Internet Explorer
+- [LiveCaptionsAllowed](/DeployEdge/microsoft-edge-policies#livecaptionsallowed) – Legendas ao vivo permitidas
+- [OriginAgentClusterDefaultEnabled](/DeployEdge/microsoft-edge-policies#originagentclusterdefaultenabled) - Agrupamento de agentes com chave de origem habilitada por padrão
+
+#### Alterações de política adicionais
+
+- [SleepingTabsTimeout](/DeployEdge/microsoft-edge-policies#sleepingtabstimeout) - Define o tempo limite de inatividade da guia plano de fundo para guias inativas. **Nota:** Um tempo limite de 30 segundos de inatividade foi adicionado a essa política.
+
+## Versão 102.0.1245.44: 16 de junho
+
+Corrigidos vários bugs e problemas de desempenho para a versão Estável e Estável Estendida.
+
+## Versão 102.0.1245.41: 13 de junho
+
+As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#june-13-2022).
+
+## Versão 102.0.1245.39: 9 de junho
+
+As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#june-9-2022).
+
+## Versão 102.0.1245.33: 3 de junho
+
+Corrigidos vários bugs e problemas de desempenho para a versão Estável e Estável Estendida.
+
+## Versão 102.0.1245.30: 31 de maio de 2022
 
 As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#may-31-2022).
 
-### <a name="policy-updates"></a>Atualizações de política
+### Atualizações de política
 
-#### <a name="new-policies"></a>Novas políticas
+#### Novas políticas
 
 - [AllHttpAuthSchemesAllowedForOrigins](/DeployEdge/microsoft-edge-policies#allhttpauthschemesallowedfororigins): lista de origens que permitem toda a autenticação HTTP
 - [OutlookHubMenuEnabled](/DeployEdge/microsoft-edge-policies#outlookhubmenuenabled): permite que os usuários acessem o menu do Outlook
 - [NetworkServiceSandboxEnabled](/DeployEdge/microsoft-edge-policies#networkservicesandboxenabled): habilitar a área restrita do serviço de rede
 - [UserAgentClientHintsGREASEUpdateEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsgreaseupdateenabled): controla o recurso Atualização GREASE das Dicas do Cliente do Agente do Usuário
 
-## <a name="version-1010121053-may-19-2022"></a>Versão 101.0.1210.53: 19 de maio de 2022
+## Versão 101.0.1210.53: 19 de maio de 2022
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-1000118560-may-13-2022"></a>Versão 100.0.1185.60: 13 de maio de 2022
+## Versão 100.0.1185.60: 13 de maio de 2022
 
 Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
 
-## <a name="version-1010121047-may-13-2022"></a>Versão 101.0.1210.47: 13 de maio de 2022
+## Versão 101.0.1210.47: 13 de maio de 2022
 
 As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#may-13-2022).
 
-## <a name="version-1010121039-may-5-2022"></a>Versão 101.0.1210.39: 5 de maio de 2022
+## Versão 101.0.1210.39: 5 de maio de 2022
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-1000118557-may-2-2022"></a>Versão 100.0.1185.57: 2 de maio de 2022
+## Versão 100.0.1185.57: 2 de maio de 2022
 
 Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
 
-## <a name="version-1010121032-april-28"></a>Versão 101.0.1210.32: 28 de abril
+## Versão 101.0.1210.32: 28 de abril
 
 As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#april-28-2022).
 
-### <a name="feature-updates"></a>Atualizações de recursos
+### Atualizações de recursos
 
 - **Capacidade de definir o perfil padrão.** A política [EdgeDefaultProfileEnabled](/DeployEdge/microsoft-edge-policies#edgedefaultprofileenabled) permitirá que você defina um perfil padrão para usar ao abrir o navegador em vez do último perfil usado. Essa política não será aplicável se o parâmetro `--profile-directory` tiver sido especificado.
 
@@ -68,9 +111,9 @@ As atualizações de segurança do canal Estável estão listadas [aqui](/deploy
 
 - **Melhorias no Gerenciador de Lista de Sites Corporativos.** Agora você pode configurar cookies compartilhados entre o Microsoft Edge e o Internet Explorer em sua lista de sites corporativos. Você pode acessar o [Gerenciador de Lista de Sites Corporativos](/deployedge/edge-ie-mode-site-list-manager) em *edge://compat/SiteListManager*.
 
-### <a name="policy-updates"></a>Atualizações de política
+### Atualizações de política
 
-#### <a name="new-policies"></a>Novas políticas
+#### Novas políticas
 
 - [ConfigureKeyboardShortcuts](/DeployEdge/microsoft-edge-policies#configurekeyboardshortcuts) - Configure a lista de comandos para os quais desabilitar atalhos de teclado
 - [ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled](/DeployEdge/microsoft-edge-policies#controldefaultstateofallowextensionfromotherstoressettingenabled) - Configurar o estado padrão da configuração Permitir extensões de outras lojas
@@ -81,38 +124,38 @@ As atualizações de segurança do canal Estável estão listadas [aqui](/deploy
 - [MicrosoftOfficeMenuEnabled](/DeployEdge/microsoft-edge-policies#microsoftofficemenuenabled) - Permitir que os usuários acessem o menu do Microsoft Office
 - [SiteSafetyServicesEnabled](/DeployEdge/microsoft-edge-policies#sitesafetyservicesenabled) - Permitir que os usuários configurem os serviços de segurança do site
 
-#### <a name="deprecated-policies"></a>Políticas preteridas
+#### Políticas preteridas
 
 - [ForceCertificatePromptsOnMultipleMatches](/DeployEdge/microsoft-edge-policies#forcecertificatepromptsonmultiplematches) - Configure se o Microsoft Edge deve selecionar automaticamente um certificado quando houver várias correspondências de certificado para um site configurado com "AutoSelectCertificateForUrls"
 
-#### <a name="obsoleted-policies"></a>Políticas obsoletas
+#### Políticas obsoletas
 
 - [WebSQLInThirdPartyContextEnabled](/DeployEdge/microsoft-edge-policies#websqlinthirdpartycontextenabled) - Forçar o WebSQL em contextos de terceiros para ser habilitado novamente
 
-## <a name="version-1000118550-april-21"></a>Versão 100.0.1185.50: 21 de abril
+## Versão 100.0.1185.50: 21 de abril
 
 Corrigidos vários bugs e problemas de desempenho para a versão Estável e Estável Estendida.
 
-## <a name="version-1000118544-april-15"></a>Versão 100.0.1185.44: 15 de abril
+## Versão 100.0.1185.44: 15 de abril
 
 > [!Important]
 > Esta atualização contém uma correção para [CVE-2022-1364](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-1364), que foi relatada pela equipe do Chromium como tendo uma exploração em estado selvagem. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
 
 As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#april-15-2022).
 
-## <a name="version-1000118539-april-11"></a>Versão 100.0.1185.39: 11 de abril
+## Versão 100.0.1185.39: 11 de abril
 
 Corrigidos vários bugs e problemas de desempenho para a versão Estável e Estável Estendida.
 
-## <a name="version-1000118536-april-7"></a>Versão 100.0.1185.36: 7 de abril
+## Versão 100.0.1185.36: 7 de abril
 
 As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#april-7-2022).
 
-## <a name="version-1000118529-april-1"></a>Versão 100.0.1185.29: 1º de abril
+## Versão 100.0.1185.29: 1º de abril
 
 As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#april-1-2022).
 
-### <a name="feature-updates"></a>Atualizações de recursos
+### Atualizações de recursos
 
 - **Número de versão de três dígitos da cadeia de caracteres de agente de usuário.** O Microsoft Edge agora enviará um número de versão de três dígitos, como Edg/100 no cabeçalho do agente de usuário. Isso pode confundir scripts ou análises do lado do servidor que usam um analisador com erros para determinar o número de versão da cadeia de caracteres de agente de usuário. Você pode usar a política [ForceMajorVersionToMinorPositionInUserAgent](/deployedge/microsoft-edge-policies#forcemajorversiontominorpositioninuseragent) para controlar se a versão principal da cadeia de caracteres de agente de usuário deve ser congelada em 99. Além disso, o sinalizador **#force-major-version-to-minor** está disponível no *edge://flags* para congelar a versão principal da cadeia de caracteres de agente de usuário para 99.
 
@@ -124,9 +167,9 @@ As atualizações de segurança do canal estável estão listadas [aqui](/deploy
 
 - **Abra arquivos PDF assinados digitalmente.** As assinaturas digitais são usadas extensivamente para validar a autenticidade de um documento e as alterações feitas em um documento. Você pode usar a política [PDFSecureMode](/deployedge/microsoft-edge-policies#pdfsecuremode) para habilitar a validação de assinatura digital de arquivos PDF, diretamente do navegador, sem a necessidade de suplementos.
 
-### <a name="policy-updates"></a>Atualizações de política
+### Atualizações de política
 
-#### <a name="new-policies"></a>Novas políticas
+#### Novas políticas
 
 - [AdsTransparencyEnabled](/DeployEdge/microsoft-edge-policies#adstransparencyenabled) - Configurar se o recurso de transparência de anúncios estiver habilitado
 - [DefaultWebHidGuardSetting](/DeployEdge/microsoft-edge-policies#defaultwebhidguardsetting) - Controlar uso da API WebHID
@@ -136,54 +179,54 @@ As atualizações de segurança do canal estável estão listadas [aqui](/deploy
 - [WebHidAskForUrls](/DeployEdge/microsoft-edge-policies#webhidaskforurls) - Permitir a API WebHID nesses sites
 - [WebHidBlockedForUrls](/DeployEdge/microsoft-edge-policies#webhidblockedforurls) - Bloquear a API WebHID nesses sites
 
-#### <a name="deprecated-policy"></a>Política preterida
+#### Política preterida
 
 - [BackgroundTemplateListUpdatesEnabled](/DeployEdge/microsoft-edge-policies#backgroundtemplatelistupdatesenabled) - Habilitar atualizações em segundo plano para a lista de modelos disponíveis para coleções e outros recursos que usam modelos
 
-#### <a name="obsoleted-policy"></a>Política obsoleta
+#### Política obsoleta
 
 - [AllowSyncXHRInPageDismissal](/DeployEdge/microsoft-edge-policies#allowsyncxhrinpagedismissal) - Permitir que as páginas enviem solicitações XHR síncronas durante o encerramento da página
 
-## <a name="version-980110892-march-26"></a>Versão 98.0.1108.92: 26 de março
+## Versão 98.0.1108.92: 26 de março
 
 Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
 
-## <a name="version-990115055-march-26"></a>Versão 99.0.1150.55: 26 de março
+## Versão 99.0.1150.55: 26 de março
 
 > [!Important]
 > Esta atualização contém uma correção para [CVE-2022-1096](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-1096), que foi relatada pela equipe do Chromium como tendo uma exploração em estado selvagem. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
 
 As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#march-26-2022).
 
-## <a name="version-990115052-march-24"></a>Versão 99.0.1150.52: 24 de março
+## Versão 99.0.1150.52: 24 de março
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-980110884-march-17"></a>Versão 98.0.1108.84: 17 de março
+## Versão 98.0.1108.84: 17 de março
 
 Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
 
-## <a name="version-990115046-march-17"></a>Versão 99.0.1150.46: 17 de março
+## Versão 99.0.1150.46: 17 de março
 
 As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#march-17-2022).
 
-## <a name="version-990115039-march-10"></a>Versão 99.0.1150.39: 10 de março
+## Versão 99.0.1150.39: 10 de março
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-980110876-march-9"></a>Versão 98.0.1108.76: 9 de março
+## Versão 98.0.1108.76: 9 de março
 
 Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
 
-## <a name="version-990115036-march-7"></a>Versão 99.0.1150.36: 7 de março
+## Versão 99.0.1150.36: 7 de março
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-990115030-march-3"></a>Versão 99.0.1150.30: 3 de março
+## Versão 99.0.1150.30: 3 de março
 
 As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#march-3-2022).
 
-### <a name="feature-updates"></a>Atualizações de recursos
+### Atualizações de recursos
 
 - **Em breve, número de versão de três dígitos na cadeia de caracteres de agente do usuário.** A partir da versão 100, o Microsoft Edge enviará um número de versão de três dígitos no cabeçalho do agente de usuário, por exemplo, "Edg/100". A partir do Microsoft Edge 97, os proprietários de sites podem testar essa próxima cadeia de caracteres de agente habilitando o sinalizador de experimento **#force-major-version-to-100** em *edge://flags* para garantir que sua lógica de análise do agente de usuário seja robusta e funcione conforme o esperado.
 
@@ -195,9 +238,9 @@ As atualizações de segurança do canal Estável estão listadas [aqui](/deploy
 
 - **Senha primária personalizada.** O navegador já tem a funcionalidade em que os usuários podem adicionar uma etapa de autenticação antes que as senhas salvas sejam preenchidas automaticamente em formulários da Web. Isso adiciona outra camada de privacidade e ajuda a impedir que usuários não autorizados usem senhas salvas para fazer logon em sites. A senha primária personalizada é uma evolução desse mesmo recurso, onde os usuários agora poderão usar uma cadeia de caracteres personalizada de sua escolha como senha principal. Depois de habilitado, os usuários inserirão essa senha para autenticar a si mesmos e terão suas senhas salvas preenchidas automaticamente em formulários da Web.
 
-### <a name="policy-updates"></a>Atualizações de política
+### Atualizações de política
 
-#### <a name="new-policies"></a>Novas Políticas
+#### Novas Políticas
 
 - [DoNotSilentlyBlockProtocolsFromOrigins](/DeployEdge/microsoft-edge-policies#donotsilentlyblockprotocolsfromorigins) - Definir uma lista de protocolos que não podem ser bloqueados silenciosamente pela proteção anti-inundação
 - [ForceMajorVersionToMinorPositionInUserAgent](/DeployEdge/microsoft-edge-policies#forcemajorversiontominorpositioninuseragent) - Habilitar ou desabilitar o congelamento da cadeia de caracteres de agente de usuário na versão principal 99
@@ -209,30 +252,30 @@ As atualizações de segurança do canal Estável estão listadas [aqui](/deploy
 - [SignInCtaOnNtpEnabled](/DeployEdge/microsoft-edge-policies#signinctaonntpenabled) - Habilitar caixa de diálogo de clique para ação de entrada
 - [UserAgentReduction](/DeployEdge/microsoft-edge-policies#useragentreduction) - Habilitar ou desabilitar a Redução do agente de usuário
 
-## <a name="version-980110862-february-24"></a>Versão 98.0.1108.62: 24 de fevereiro
+## Versão 98.0.1108.62: 24 de fevereiro
 
 Corrigidos vários bugs e problemas de desempenho para a versão Estável e Estável Estendida.
 
-## <a name="version-980110856-february-17"></a>Versão 98.0.1108.56: 17 de fevereiro
+## Versão 98.0.1108.56: 17 de fevereiro
 
 Corrigidos vários bugs e problemas de desempenho para a versão Estável e Estável Estendida.
 
-## <a name="version-980110855-february-16"></a>Versão 98.0.1108.55: 16 de fevereiro
+## Versão 98.0.1108.55: 16 de fevereiro
 
 > [!Important]
 > Essa atualização contém uma correção para [CVE-2022-0609](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-0609) que foi relatada pela equipe do Chromium como tendo uma exploração em execução. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
 
 As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#february-16-2022).
 
-## <a name="version-980110850-february-10"></a>Versão 98.0.1108.50: 10 de fevereiro
+## Versão 98.0.1108.50: 10 de fevereiro
 
 As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#february-10-2022).
 
-## <a name="version-980110843-february-3"></a>Versão 98.0.1108.43: 3 de fevereiro
+## Versão 98.0.1108.43: 3 de fevereiro
 
 As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#february-3-2022).
 
-### <a name="feature-updates"></a>Atualizações de recursos
+### Atualizações de recursos
 
 - **Melhore sua segurança na Web.** Este é um modo de navegação no Microsoft Edge em que a segurança do navegador tem prioridade, oferecendo aos usuários uma camada extra de proteção ao navegar na Web. Os administradores podem aplicar políticas de grupo a áreas de trabalho de usuários finais (Windows, macOS e Linux) para ajudar a proteger contra explorações em execução (também conhecidas como 0-days). As seguintes políticas de grupo suportam este modo de navegação:
 
@@ -246,9 +289,9 @@ As atualizações de segurança do canal estável estão listadas [aqui](/deploy
 
 - **Barras de rolagem de sobreposição adicionadas ao Microsoft Edge.** Atualizamos nossas barras de rolagem com um design baseado em sobreposição. Os usuários podem ativar esse recurso em *edge://flags*.
 
-### <a name="policy-updates"></a>Atualizações de política
+### Atualizações de política
 
-#### <a name="new-policies"></a>Novas Políticas
+#### Novas Políticas
 
 - [AddressBarEditingEnabled](/DeployEdge/microsoft-edge-policies#addressbareditingenabled) - Configurar a edição da barra de endereços
 - [AllowGamesMenu](/DeployEdge/microsoft-edge-policies#allowgamesmenu) - Permitir que os usuários acessem o menu de jogos
@@ -262,35 +305,35 @@ As atualizações de segurança do canal estável estão listadas [aqui](/deploy
 - [SandboxExternalProtocolBlocked](/DeployEdge/microsoft-edge-policies#sandboxexternalprotocolblocked) - Permitir que o Microsoft Edge bloqueie navegações para protocolos externos em um iframe na área restrita
 - [U2fSecurityKeyApiEnabled](/DeployEdge/microsoft-edge-policies#u2fsecuritykeyapienabled) - Permitir o uso da API de chave de segurança U2F preterida
 
-## <a name="version-970107276-january-27"></a>Versão 97.0.1072.76: 27 de janeiro
+## Versão 97.0.1072.76: 27 de janeiro
 
 Vários bugs e problemas de desempenho corrigidos.
 
-### <a name="feature-updates"></a>Atualizações de recursos
+### Atualizações de recursos
 
 - **Em breve, número de versão de três dígitos na cadeia de caracteres de agente do usuário.** A partir da versão 100, o Microsoft Edge enviará um número de versão de três dígitos no cabeçalho do agente de usuário, por exemplo "Edg/**100**". A partir do Microsoft Edge 97, os proprietários de sites podem testar essa próxima cadeia de caracteres de agente de usuário habilitando o sinalizador de experimento **#force-major-version-to-100** no *edge://flags* para garantir que sua lógica de análise do agente de usuário seja robusta e funcione conforme o esperado.
 
-## <a name="version-960105475-january-21"></a>Versão 96.0.1054.75: 21 de janeiro
+## Versão 96.0.1054.75: 21 de janeiro
 
 Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
 
-## <a name="version-970107269-january-20"></a>Versão 97.0.1072.69: 20 de janeiro
+## Versão 97.0.1072.69: 20 de janeiro
 
 As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#january-20-2022).
 
-## <a name="version-970107262-january-13"></a>Versão 97.0.1072.62: 13 de janeiro
+## Versão 97.0.1072.62: 13 de janeiro
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-960105472-january-6"></a>Versão 96.0.1054.72: 6 de janeiro
+## Versão 96.0.1054.72: 6 de janeiro
 
 Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
 
-## <a name="version-970107255-january-6"></a>Versão 97.0.1072.55: 6 de janeiro
+## Versão 97.0.1072.55: 6 de janeiro
 
 As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#january-6-2022).
 
-### <a name="feature-updates"></a>Atualizações de recursos
+### Atualizações de recursos
 
 - **Use o perfil atual para entrar em sites quando várias contas corporativas ou de estudante estiverem conectadas em um dispositivo.** Quando várias contas corporativas ou de estudante estiverem conectadas em um dispositivo, os usuários deverão escolher uma conta no seletor de contas para continuar suas visitas a sites. Nesta versão, os usuários serão solicitados a permitir que o Microsoft Edge entre nos sites automaticamente com a conta corporativa ou de estudante conectada ao perfil atual. Os usuários podem ativar e desativar esse recurso em **Configurações** > **Preferências de perfil**.
 
@@ -307,9 +350,9 @@ As atualizações de segurança do canal estável estão listadas [aqui](/deploy
   > [!NOTE]
   > Esta é uma tecnologia em evolução, compartilhe seus comentários para nos ajudar a fortalecer seu suporte.
 
-### <a name="policy-updates"></a>Atualizações de política
+### Atualizações de política
 
-#### <a name="new-policies"></a>Novas Políticas
+#### Novas Políticas
 
 - [AccessibilityImageLabelsEnabled](/DeployEdge/microsoft-edge-policies#accessibilityimagelabelsenabled) - Obter descrições de imagens do Microsoft habilitado
 - [CORSNonWildcardRequestHeadersSupport](/DeployEdge/microsoft-edge-policies#corsnonwildcardrequestheaderssupport) - Suporte de cabeçalho de solicitação CORS não curinga habilitado
@@ -325,38 +368,38 @@ As atualizações de segurança do canal estável estão listadas [aqui](/deploy
 - [WebSQLInThirdPartyContextEnabled](/DeployEdge/microsoft-edge-policies#websqlinthirdpartycontextenabled) - Forçar o WebSQL em contextos de terceiros para ser habilitado novamente
 - [WindowCaptureAllowedByOrigins](/DeployEdge/microsoft-edge-policies#windowcaptureallowedbyorigins) - Permitir captura de janela e guia por essas origens
 
-## <a name="version-960105462-december-17"></a>Versão 96.0.1054.62: 17 de dezembro
+## Versão 96.0.1054.62: 17 de dezembro
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-960105457-december-14"></a>Versão 96.0.1054.57: 14 de dezembro
+## Versão 96.0.1054.57: 14 de dezembro
 
 > [!Important]
 > Esta atualização contém uma correção para [CVE-2021-4102](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-4102), que foi relatada pela equipe do Chromium como tendo uma exploração em execução. Para obter mais informações, consulte o [Guia de atualização de segurança](https://msrc.microsoft.com/update-guide).
 
 As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#december-14-2021).
 
-## <a name="version-960105453-december-10"></a>Versão 96.0.1054.53: 10 de dezembro
+## Versão 96.0.1054.53: 10 de dezembro
 
 As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#december-10-2021).
 
-## <a name="version-960105443-december-2"></a>Versão 96.0.1054.43: 2 de dezembro
+## Versão 96.0.1054.43: 2 de dezembro
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-960105441-november-30"></a>Versão 96.0.1054.41: 30 de novembro
+## Versão 96.0.1054.41: 30 de novembro
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-960105434-november-23"></a>Versão 96.0.1054.34: 23 de novembro
+## Versão 96.0.1054.34: 23 de novembro
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-960105429-november-19"></a>Versão 96.0.1054.29: 19 de novembro
+## Versão 96.0.1054.29: 19 de novembro
 
 As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#november-19-2021).
 
-### <a name="feature-updates"></a>Atualizações de recursos
+### Atualizações de recursos
 
 - **Gerenciamento de Lista de Sites na Nuvem para o modo IE na Visualização Pública.** O Gerenciamento de Lista de Sites na Nuvem permite que você gerencie suas listas de sites para o modo IE na nuvem sem precisar de uma infraestrutura local para hospedar a lista de sites da sua organização. Você pode acessar o recurso Gerenciamento de Lista de Sites na Nuvem usando a experiência de Listas de Sites do Microsoft Edge no Administração Microsoft 365 Center. Para saber mais, confira o artigo [Gerenciamento de Lista de Sites na Nuvem para modo IE (Versão Prévia](./edge-ie-mode-cloud-site-list-mgmt.md) Pública).
   
@@ -384,11 +427,11 @@ As atualizações de segurança do canal Estável estão listadas [aqui](/deploy
 
 - **Suporte à VPN de túnel dividido para WebRTC.** Permite que os clientes corporativos obtenham o benefício do túnel dividido de VPN para tráfego ponto a ponto no Microsoft Edge. Você pode habilitar esse recurso usando a [política WebRtcRespectOsRoutingTableEnabled](/deployedge/microsoft-edge-policies#webrtcrespectosroutingtableenabled) .
 
-### <a name="policy-updates"></a>Atualizações de política
+### Atualizações de política
 
-#### <a name="new-policies"></a>Novas Políticas
+#### Novas Políticas
 
-- [ApplicationGuardUploadBlockingEnabled](/DeployEdge/microsoft-edge-policies#applicationguarduploadblockingenabled) – impede que os arquivos sejam carregados no Application Guard
+- [ApplicationGuardUploadBlockingEnabled](/DeployEdge/microsoft-edge-policies#applicationguarduploadblockingenabled) – impede que os arquivos sejam carregados enquanto estiverem Application Guard
 - [AudioProcessHighPriorityEnabled](/DeployEdge/microsoft-edge-policies#audioprocesshighpriorityenabled) – Permitir que o processo de áudio seja executado com prioridade acima do normal no Windows
 - [AutoLaunchProtocolsComponentEnabled](/DeployEdge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) – Componente de protocolos autoLaunch habilitado
 - [EfficiencyMode](/DeployEdge/microsoft-edge-policies#efficiencymode) – Configurar quando o modo de eficiência deve ficar ativo
@@ -401,38 +444,38 @@ As atualizações de segurança do canal Estável estão listadas [aqui](/deploy
 - [SharedLinksEnabled](/DeployEdge/microsoft-edge-policies#sharedlinksenabled) – Mostrar links compartilhados de aplicativos do Microsoft 365 no Histórico
 - [TyposquattingCheckerEnabled](/DeployEdge/microsoft-edge-policies#typosquattingcheckerenabled) – Configurar TyposquattingChecker de Borda
 
-## <a name="version-950102053-november-12"></a>Versão 95.0.1020.53: 12 de novembro
+## Versão 95.0.1020.53: 12 de novembro
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-950102044-november-4"></a>Versão 95.0.1020.44: 4 de novembro
+## Versão 95.0.1020.44: 4 de novembro
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-94099258-october-30"></a>Versão 94.0.992.58: 30 de outubro
+## Versão 94.0.992.58: 30 de outubro
 
 Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
 
-## <a name="version-950102040-october-29"></a>Versão 95.0.1020.40: 29 de outubro
+## Versão 95.0.1020.40: 29 de outubro
 
 > [!IMPORTANT]
 > Esta atualização contém uma correção para [CVE-2021-38000](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38000) e [CVE-2021-38003](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38003) que foram relatadas pela equipe Chromium como tendo uma exploração na natureza. Para obter mais informações, consulte o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide)
 
 As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#october-29-2021).
 
-## <a name="version-950102038-october-28"></a>Versão 95.0.1020.38: 28 de outubro
+## Versão 95.0.1020.38: 28 de outubro
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-94099257-october-27"></a>Versão 94.0.992.57: 27 de outubro
+## Versão 94.0.992.57: 27 de outubro
 
 Correção de vários bugs e problemas de desempenho para a versão Estável Estendida.
 
-## <a name="version-950102030-october-21"></a>Versão 95.0.1020.30: 21 de outubro
+## Versão 95.0.1020.30: 21 de outubro
 
 As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#october-21-2021).
 
-### <a name="feature-updates"></a>Atualizações de recursos
+### Atualizações de recursos
 
 - **Veja no Explorador de Arquivos o suporte para bibliotecas do Microsoft Office SharePoint Online no Microsoft Edge.**  Agora você pode habilitar o recurso Exibir no explorador de arquivos nas Bibliotecas de Documentos Modernos do Microsoft Office SharePoint Online. Para que esta experiência seja visível e funcione para seus usuários, você precisa ativar a política do Microsoft Edge [Configurar a funcionalidade Exibir no explorador de arquivos para páginas do SharePoint no Microsoft Edge](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) e atualizar sua configuração de locatário do Microsoft Office SharePoint Online. Saiba mais: [Veja arquivos Microsoft Office SharePoint Online com o Explorador de arquivo no Microsoft Edge](/SharePoint/sharepoint-view-in-edge).
 
@@ -452,9 +495,9 @@ As atualizações de segurança do canal estável estão listadas [aqui](/deploy
 
 - **Criação automática de conta.** Agora oferecemos suporte adicional nas páginas de Inscrição, permitindo que você crie uma conta online com um clique. Você pode fazer isso selecionando o lista pendente de sugestões ao clicar em qualquer campo do formulário no formulário de Inscrição. Fazendo isso, não só mostrará informações relevantes para o formulário de Inscrição, mas também uma forte sugestão de nova senha. Após a seleção, todas as informações relevantes são preenchidas nos respectivos campos e a senha sugerida será automaticamente armazenada ao ser enviada para o site. Nota: Atualmente esta recurso está disponível apenas em um número limitado de sites.
 
-### <a name="policy-updates"></a>Atualizações de política
+### Atualizações de política
 
-#### <a name="new-policies"></a>Novas Políticas
+#### Novas Políticas
 
 - [BrowserLegacyExtensionPointsBlockingEnabled](/DeployEdge/microsoft-edge-policies#browserlegacyextensionpointsblockingenabled) Habilitar o bloqueio do ponto de extensão do navegador
 - [CrossOriginWebAssemblyModuleSharingEnabled](/DeployEdge/microsoft-edge-policies#crossoriginwebassemblymodulesharingenabled) Especifica se os módulos WebAssembly podem ser enviados entre origens
@@ -466,38 +509,38 @@ As atualizações de segurança do canal estável estão listadas [aqui](/deploy
 - [ShadowStackCrashRollbackBehavior](/DeployEdge/microsoft-edge-policies#shadowstackcrashrollbackbehavior) Configurar o comportamento do ShadowStack rollback
 - [VisualSearchEnabled](/DeployEdge/microsoft-edge-policies#visualsearchenabled) Pesquisa visual habilitada
 
-#### <a name="obsoleted-policies"></a>Políticas Obsoletas
+#### Políticas Obsoletas
 
 - [InternetExplorerIntegrationTestingAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) - Permitir teste no modo Internet Explorer.
 - [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) Habilitar configuração padrão de comportamento de cookie SameSite herdado
 
-## <a name="version-94099250-october-14"></a>Versão 94.0.992.50: 14 de outubro
+## Versão 94.0.992.50: 14 de outubro
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-94099247-october-11"></a>Versão 94.0.992.47:11 de outubro
+## Versão 94.0.992.47:11 de outubro
 
 As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#october-11-2021).
 
-## <a name="version-94099238-october-1"></a>Versão 94.0.992.38: 01 de outubro
+## Versão 94.0.992.38: 01 de outubro
 
 > [!Important]
 > Esta atualização contém uma correção para [CVE-2021-37975](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37975) e [CVE-2021-37976](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37976), que foram relatadas pela equipe do Chromium como tendo uma exploração em execução. Para obter mais informações, consulte o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide)
 
 As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#october-01-2021).
 
-## <a name="version-94099237-september-30"></a>Versão 94.0.992.37: 30 de setembro
+## Versão 94.0.992.37: 30 de setembro
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-94099231-september-24"></a>Versão 94.0.992.31: 24 de setembro
+## Versão 94.0.992.31: 24 de setembro
 
 > [!Important]
 > Essa atualização contém uma correção para [o CVE-2021-37973,](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37973) que foi relatada pela equipe Chromium como tendo uma exploração na natureza. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
 
 As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#september-24-2021).
 
-### <a name="feature-updates"></a>Atualizações de recursos
+### Atualizações de recursos
 
 - **O Microsoft Edge concluiu a mudança para uma cadência de 4 semanas para atualizações.**  Adotamos um novo ciclo de lançamento de 4 semanas para as versões principais. Leia mais aqui: https://blogs.windows.com/msedgedev/2021/03/12/new-release-cycles-microsoft-edge-extended-stable/
 
@@ -523,29 +566,29 @@ As atualizações de segurança do canal Estável estão listadas [aqui](/deploy
 
 - [UserAgentClientHintsEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsenabled) Habilite o recurso de Dicas de Cliente do Agente do Usuário
 
-## <a name="version-93096152-september-16"></a>Versão 93.0.961.52: 16 de setembro
+## Versão 93.0.961.52: 16 de setembro
 
 >[!Important]
 >Esta atualização contém uma correção para [CVE-2021-30633](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30632) que foi relatada pela equipe Chromium como tendo uma exploração em execução. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
 
 As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#september-16-2021).
 
-## <a name="version-93096147-september-11"></a>Versão 93.0.961.47: 11 de setembro
+## Versão 93.0.961.47: 11 de setembro
 
 > [!Important]
 > Esta atualização contém uma correção para [CVE-2021-30632](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30632) que foi relatado pela equipe do Chromium como tendo um exploit. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
 
 As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#september-11-2021).
 
-## <a name="version-93096144-september-9"></a>Versão 93.0.961.44: 9 de setembro
+## Versão 93.0.961.44: 9 de setembro
 
 As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#september-09-2021).
 
-## <a name="version-93096138-september-2"></a>Versão 93.0.961.38: 2 de setembro
+## Versão 93.0.961.38: 2 de setembro
 
 As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#september-02-2021).
 
-### <a name="feature-updates"></a>Atualizações de recursos
+### Atualizações de recursos
 
 - **Preferências Iniciais no Microsoft Edge.**  O Microsoft Edge agora oferece suporte a um número limitado de Preferências Iniciais (anteriormente Preferências Mestre). Os administradores de IT podem implantar essas configurações como padrão antes que o navegador seja executado pela primeira vez por seus usuários. Informações adicionais aqui: [Configurar o Microsoft Edge usando as configurações de Preferências Iniciais para a primeira execução](/deployedge/initial-preferences-support-on-microsoft-edge-browser).
 
@@ -608,35 +651,35 @@ As atualizações de segurança do canal estável estão listadas [aqui](/deploy
 - [ConfigureShare](/DeployEdge/microsoft-edge-policies#configureshare) adicionar suporte à plataforma mac
 - [PasswordMonitorAllowed](/DeployEdge/microsoft-edge-policies#passwordmonitorallowed) Adicionar suporte à plataforma mac
 
-## <a name="version-92090284-august-26"></a>Versão 92.0.902.84: 26 de agosto
+## Versão 92.0.902.84: 26 de agosto
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-92090278-august-19"></a>Versão 92.0.902.78: 19 de agosto
+## Versão 92.0.902.78: 19 de agosto
 
 As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#august-19-2021).
 
-## <a name="version-92090273-august-12"></a>Versão 92.0.902.73: 12 de agosto
+## Versão 92.0.902.73: 12 de agosto
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-92090267-august-5"></a>Versão 92.0.902.67: 5 de agosto
+## Versão 92.0.902.67: 5 de agosto
 
 As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#august-05-2021).
 
-## <a name="version-92090262-july-29"></a>Versão 92.0.902.62: 29 de julho
+## Versão 92.0.902.62: 29 de julho
 
 Vários bugs e problemas de desempenho corrigidos.
 
-### <a name="modified-policy"></a>Política modificada
+### Política modificada
 
 - AutoplayAllowed: definir como “Desabilitado” agora define a reprodução automática de mídia como “Limite”
 
-## <a name="version-92090255-july-22"></a>Versão 92.0.902.55: 22 de julho
+## Versão 92.0.902.55: 22 de julho
 
 As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#july-22-2021).
 
-### <a name="feature-updates"></a>Atualizações de recursos
+### Atualizações de recursos
 
 **Os usuários podem acessar facilmente o modo Internet Explorer no Microsoft Edge**. A partir da versão 92 do Microsoft Edge, os usuários podem recarregar um site no modo Internet Explorer no Microsoft Edge em vez de depender do aplicativo autônomo do IE 11 enquanto aguardam a configuração de um site na Lista de Sites do Modo Empresarial. Os usuários serão solicitados a adicionar o site à sua lista de sites locais de forma que a navegação para a mesma página no Microsoft Edge seja renderizada automaticamente no modo IE pelos próximos 30 dias. Você pode usar a política [InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) para configurar essa experiência e permitir o acesso aos pontos de entrada do modo IE, bem como a capacidade de adicionar sites à lista de sites locais. Você pode usar a política [InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays) para ajustar o número de dias para manter os sites na lista de sites locais. Observe que KB5003698 ou posterior é necessário para Windows 10, versão 1909; ou KB5003690 ou posterior é necessário para Windows 10, versão 2004, Windows 10, versão 20H2 ou Windows 10, versão 21H1 para a experiência de ponta a ponta. Para obter mais informações, [consulte Lista de sites local no modo IE](/deployedge/edge-ie-mode-local-site-list).
 
@@ -667,7 +710,7 @@ Com esta versão mais recente do Microsoft Edge, sua tarefa de usar senhas forte
 
 **Em alinhamento com o Chromium de código aberto, Microsoft Edge atualiza a maneira como renderiza tabelas em páginas da Web.** Essa alteração corrige problemas conhecidos e Microsoft Edge mais perto da maneira especificada como as tabelas devem ser renderizações na Web/outros navegadores. Recomendamos que você teste fluxos de trabalho importantes em seu ambiente para problemas inesperados. Um explicador completo está disponível [aqui](https://docs.google.com/document/d/16PFD1GtMI9Zgwu0jtPaKZJ75Q2wyZ9EZnVbBacOfiNA/edit).
 
-### <a name="new-policies"></a>Novas políticas
+### Novas políticas
 
 - [AADWebSiteSSOUsingThisProfileEnabled](/DeployEdge/microsoft-edge-policies#aadwebsitessousingthisprofileenabled)Logon único para sites de trabalho ou escola usando este perfil habilitado.
 - [AutomaticHttpsDefault](/DeployEdge/microsoft-edge-policies#automatichttpsdefault) Configurar HTTPS Automático
@@ -678,56 +721,56 @@ Com esta versão mais recente do Microsoft Edge, sua tarefa de usar senhas forte
 - [InternetExplorerIntegrationReloadInIEModeAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) Permite que sites não configurados sejam recarregados no modo Internet Explorer
 - [SharedArrayBufferUnrestrictedAccessAllowed](/DeployEdge/microsoft-edge-policies#sharedarraybufferunrestrictedaccessallowed) Especifica se SharedArrayBuffers pode ser usado em um contexto não isolado de origem cruzada
 
-### <a name="deprecated-policy"></a>Política Preterida
+### Política Preterida
 
 - [InternetExplorerIntegrationTestingAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) - Permitir teste no modo Internet Explorer.
 
-### <a name="obsoleted-policy"></a>Política Obsoleta
+### Política Obsoleta
 
 - [EnableSha1ForLocalAnchors](/DeployEdge/microsoft-edge-policies#enablesha1forlocalanchors) Permitir certificados assinados usando SHA-1 quando emitidos por âncoras de confiança locais.
 
-## <a name="version-91086471-july-19"></a>Versão 91.0.864.71: 19 de julho
+## Versão 91.0.864.71: 19 de julho
 
 > [!Important]
 >Esta atualização contém uma correção para [CVE-2021-30563](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30563) que foi relatado pela equipe do Chromium como tendo um exploit. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide/vulnerability/ADV200002).
 
 As atualizações de segurança do canal Estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#july-19-2021).
 
-## <a name="version-91086467-july-8"></a>Versão 91.0.864.67: 8 de julho
+## Versão 91.0.864.67: 8 de julho
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-91086464-july-2"></a>Versão 91.0.864.64: 2 de julho
+## Versão 91.0.864.64: 2 de julho
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-91086459-june-24"></a>Versão 91.0.864.59: 24 de junho
+## Versão 91.0.864.59: 24 de junho
 
 As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#june-24-2021).
 
-## <a name="version-91086454-june-18"></a>Versão 91.0.864.54: 18 de junho
+## Versão 91.0.864.54: 18 de junho
 
 > [!Important]
 > Esta atualização contém uma correção para [CVE-2021-30554](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30554) que foi relatado pela equipe do Chromium como tendo um exploit. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide/vulnerability/ADV200002).
 
 As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#june-18-2021).
 
-## <a name="version-91086448-june-11"></a>Versão 91.0.864.48: 11 de junho
+## Versão 91.0.864.48: 11 de junho
 
 > [!Important]
 >Esta atualização contém uma correção para [CVE-2021-30551](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30551) que foi relatada pela equipe Chromium como tendo uma exploração em execução. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide/vulnerability/ADV200002).
 
 As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#june-11-2021).
 
-## <a name="version-91086441-june-3"></a>Versão 91.0.864.41: 3 de junho
+## Versão 91.0.864.41: 3 de junho
 
 As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#june-3-2021).
 
-## <a name="version-91086437-may-27"></a>Versão 91.0.864.37: 27 de maio
+## Versão 91.0.864.37: 27 de maio
 
 As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#may-27-2021).
 
-### <a name="feature-updates"></a>Atualizações de recursos
+### Atualizações de recursos
 
 - **Identifique o tráfego de rede originado dos contêineres do Microsoft Defender Application Guard no nível do proxy**. A partir da versão 91 do Microsoft Edge, há suporte integrado para marcar o tráfego de rede originado de contêineres do Application Guard, permitindo que as empresas os identifiquem e apliquem políticas específicas.
 
@@ -742,9 +785,9 @@ As atualizações de segurança do canal estável estão listadas [aqui](/deploy
 
 - **Personalize seu navegador com novas cores de tema**. Personalize o Microsoft Edge com uma das quatorze novas cores de tema na página Configurações -> Aparência. Você também pode instalar temas personalizados do site do Complemento do Microsoft Edge. [Saiba mais](https://techcommunity.microsoft.com/t5/articles/make-microsoft-edge-your-own-with-themes/m-p/2083165)
 
-### <a name="policy-updates"></a>Atualizações de política
+### Atualizações de política
 
-#### <a name="new-policies"></a>Novas políticas
+#### Novas políticas
 
 Seis novas políticas foram adicionadas. Baixe os Modelos Administrativos atualizados da [página de aterrissagem do Microsoft Edge Empresa](https://www.microsoft.com/edge/business/download). Foram adicionadas as novas políticas a seguir:
 
@@ -755,50 +798,50 @@ Seis novas políticas foram adicionadas. Baixe os Modelos Administrativos atuali
 - [NewTabPageContentEnabled](/DeployEdge/microsoft-edge-policies#newtabpagecontentenabled) - Permitir conteúdo do Microsoft News na página nova guia
 - [NewTabPageQuickLinksEnabled](/DeployEdge/microsoft-edge-policies#newtabpagequicklinksenabled) - Permitir links rápidos na página nova guia
 
-#### <a name="obsoleted-policy"></a>Política Obsoleta
+#### Política Obsoleta
 
 - [ProactiveAuthEnabled](./microsoft-edge-policies.md#proactiveauthenabled): habilita a Autenticação Proativa
 
-## <a name="version-90081866-may-20"></a>Versão 90.0.818.66: 20 de maio
+## Versão 90.0.818.66: 20 de maio
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-90081862-may-13"></a>Versão 90.0.818.62: 13 de maio
+## Versão 90.0.818.62: 13 de maio
 
 As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#may-13-2021).
 
-## <a name="version-90081856-may-6"></a>Versão 90.0.818.56: 6 de maio
+## Versão 90.0.818.56: 6 de maio
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-90081851-april-29"></a>Versão 90.0.818.51: 29 de abril
+## Versão 90.0.818.51: 29 de abril
 
 As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#april-29-2021).
 
-## <a name="version-90081849-april-26"></a>Versão 90.0.818.49: 26 de abril
+## Versão 90.0.818.49: 26 de abril
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-90081846-april-22"></a>Versão 90.0.818.46: 22 de abril ##
+## Versão 90.0.818.46: 22 de abril ##
 
 As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#april-22-2021).
 
-## <a name="version-90081842-april-19"></a>Versão 90.0.818.42: 19 de abril
+## Versão 90.0.818.42: 19 de abril
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-90081841-april-16"></a>Versão 90.0.818.41: 16 de abril ##
+## Versão 90.0.818.41: 16 de abril ##
 
 > [!Important]
 >Esta atualização contém uma correção para [CVE-2021-21224](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21224) que foi relatada pela equipe do Chromium como tendo uma exploração em execução. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
 
 As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#april-16-2021).
 
-## <a name="version-90081839-april-15"></a>Versão 90.0.818.39: 15 de abril ##
+## Versão 90.0.818.39: 15 de abril ##
 
 As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#april-15-2021).
 
-## <a name="feature-updates"></a>Atualizações de recursos ##
+## Atualizações de recursos ##
 
 -    **O Logon Único (SSO) agora está disponível para contas do Azure Active Directory (Azure AD) e conta Microsoft (MSA) no macOS.** Um usuário conectado no Microsoft Edge em macOS agora terá automaticamente acesso aos sites que estão configurados para permitir logon único com as contas Microsoft e Corporativas (por exemplo, bing.com, office.com, msn.com e outlook.com).
 
@@ -826,9 +869,9 @@ Os administradores de empresas podem optar por não adotar esse comportamento po
 
 - **Modo Crianças.** Atualizamos a política para que, quando a política estiver habilitada, ela desabilite o recurso Modo Criança, além da proteção para a família. Saiba mais sobre o Modo Crianças aqui:[aqui](https://go.microsoft.com/fwlink/?linkid=2146910)
 
-## <a name="policy-updates"></a>Atualizações de política
+## Atualizações de política
 
-## <a name="new-policies"></a>Novas políticas
+## Novas políticas
 
 Oito novas políticas foram adicionadas. Baixe os Modelos Administrativos atualizados da [página de aterrissagem do Microsoft Edge Empresa](https://www.microsoft.com/edge/business/download). Foram adicionadas as novas políticas a seguir:
 -   [ApplicationGuardFavoritesSyncEnabled](/DeployEdge/microsoft-edge-policies#applicationguardfavoritessyncenabled): habilitada a Sincronização de Favoritos do Application Guard
@@ -846,71 +889,71 @@ Oito novas políticas foram adicionadas. Baixe os Modelos Administrativos atuali
 -   [WindowOcclusionEnabled](/DeployEdge/microsoft-edge-policies#windowocclusionenabled) - Habilitar Oclusão de Janela
 -   [WindowsHelloForHTTPAuthEnabled](/DeployEdge/microsoft-edge-policies#windowshelloforhttpauthenabled) - Windows Hello habilitado para autenticação HTTP
 
-## <a name="deprecated-policies"></a>Políticas preteridas
+## Políticas preteridas
 
 - [ProactiveAuthEnabled](/DeployEdge/microsoft-edge-policies#proactiveauthenabled): habilita a Autenticação Proativa
 -   [NativeWindowOcclusionEnabled](/DeployEdge/microsoft-edge-policies#nativewindowocclusionenabled): habilita a Oclusão de Janela Nativa
 -   [SSLVersionMin](/DeployEdge/microsoft-edge-policies#sslversionmin): versão mínima do TLS habilitada
 
-## <a name="version-89077477-april-14"></a>Versão 89.0.774.77: 14 de abril
+## Versão 89.0.774.77: 14 de abril
 
 > [!Important]
 >Essa atualização contém uma correção para [CVE-2021-21206](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21206) e [CVE-2021-21220](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21220) que foi relatada pela equipe do Chromium como tendo uma exploração em execução.  Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
 
 As atualizações de segurança do canal estável estão listadas [aqui](/deployedge/microsoft-edge-relnotes-security#april-14-2021).
 
-## <a name="version-89077476-april-12"></a>Versão 89.0.774.76: 12 de abril
+## Versão 89.0.774.76: 12 de abril
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-89077475-april-8"></a>Versão 89.0.774.75: 8 de abril
+## Versão 89.0.774.75: 8 de abril
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-89077468-april-1"></a>Versão 89.0.774.68: 1º de abril
+## Versão 89.0.774.68: 1º de abril
 
 As atualizações de segurança do canal estável estão listadas [aqui](./microsoft-edge-relnotes-security.md#april-1-2021).
 
-## <a name="version-89077463-march-25"></a>Versão 89.0.774.63: 25 de março
+## Versão 89.0.774.63: 25 de março
 
 Vários bugs corrigidos e problemas de desempenho.
 
-## <a name="version-89077457-march-18"></a>Versão 89.0.774.57: 18 de março
+## Versão 89.0.774.57: 18 de março
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-89077454-march-13"></a>Versão 89.0.774.54: 13 de março
+## Versão 89.0.774.54: 13 de março
 
 > [!IMPORTANT]
 > Esta atualização contém [CVE-2021-21193](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21193) que foi relatada pela equipe do Chromium como tendo uma exploração na natureza. Para obter mais informações, consulte o [Guia de atualização de segurança](https://msrc.microsoft.com/update-guide).
 
 As atualizações de segurança do canal estável estão listadas [aqui](./microsoft-edge-relnotes-security.md#march-13-2021).
 
-## <a name="version-89077450-march-10"></a>Versão 89.0.774.50: 10 de março
+## Versão 89.0.774.50: 10 de março
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-89077448-march-8"></a>Versão 89.0.774.48: 8 de março
+## Versão 89.0.774.48: 8 de março
 
 Vários bugs e problemas de desempenho corrigidos.
 
 <!-- begin major 89 -->
 
-## <a name="version"></a>Versão
+## Versão
 
 > [!IMPORTANT]
 > Esta atualização contém o [CVE-2021-21166](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21166) que foi reportado pela equipe da Chromium por ter uma vulnerabilidade em aberto. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
 
 As atualizações de segurança do canal estável estão listadas [aqui](./microsoft-edge-relnotes-security.md#march-4-2021).
 
-### <a name="resolved-issues"></a>Problemas resolvidos
+### Problemas resolvidos
 
 - **Atualizações e correções de atalhos da barra de tarefas e do menu Iniciar:**
   - Clicar com o botão direito do mouse no atalho do Microsoft Edge no menu Iniciar agora mostrará corretamente a opção para desafixar o Microsoft Edge da barra de tarefas quando ele estiver fixado.
   - Layouts iniciais que incluem uma [configuração da barra de tarefas](/windows/configuration/configure-windows-10-taskbar) para fixar o Microsoft Edge na barra de tarefas não resultará mais em um segundo atalho do Microsoft Edge sendo fixado na barra de tarefas.
   - As organizações que utilizam Perfis de Roaming do Windows não verão mais um ícone branco vazio no lugar do ícone do Microsoft Edge na barra de tarefas quando seus usuários fizerem logon no Windows.
 
-### <a name="feature-updates"></a>Atualizações de recursos
+### Atualizações de recursos
 
 - **O modo quiosque permite recursos adicionais de bloqueio**. A partir da versão 89 do Microsoft Edge, adicionamos funcionalidades adicionais de bloqueio no modo de quiosque para permitir que os clientes executem as tarefas em uma experiência mais produtiva e segura. [Saiba mais](microsoft-edge-configure-kiosk-mode.md#kiosk-mode-supported-features).
 
@@ -926,9 +969,9 @@ As atualizações de segurança do canal estável estão listadas [aqui](./micro
 
 - **O campo de data de nascimento agora é compatível com o preenchimento automático**. Hoje, o Microsoft Edge ajuda você a economizar tempo e esforço ao preencher formulários e criar contas online, preenchendo automaticamente seus dados como endereços, nomes, números de telefone, etc. A partir da versão 89 do Microsoft Edge, estamos adicionando suporte para outro campo que você pode ter salvar e preencher automaticamente: a data de nascimento. Você pode exibir, editar e excluir essas informações a qualquer momento nas configurações do seu perfil.
 
-### <a name="policy-updates"></a>Atualizações de política
+### Atualizações de política
 
-#### <a name="new-policies"></a>Novas políticas
+#### Novas políticas
 
 Sete novas políticas foram adicionadas. Baixe os modelos administrativos atualizados da [página inicial do Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). As novas políticas a seguir foram adicionadas.
 
@@ -940,7 +983,7 @@ Sete novas políticas foram adicionadas. Baixe os modelos administrativos atuali
 - [PrintingBackgroundGraphicsDefault](./microsoft-edge-policies.md#printingbackgroundgraphicsdefault) - Modo padrão de impressão de gráficos em segundo plano
 - [SmartActionsBlockList](./microsoft-edge-policies.md#smartactionsblocklist) - Bloqueie ações inteligentes  para uma lista de serviços
 
-#### <a name="obsoleted-policies"></a>Políticas obsoletas
+#### Políticas obsoletas
 
 As políticas a seguir estão obsoletas.
 
@@ -950,45 +993,45 @@ As políticas a seguir estão obsoletas.
 
 <!-- end major 89 -->
 
-## <a name="version-88070581-february-25"></a>Versão 88.0.705.81: 25 de fevereiro
+## Versão 88.0.705.81: 25 de fevereiro
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-88070574-february-17"></a>Versão 88.0.705.74: 17 de fevereiro
+## Versão 88.0.705.74: 17 de fevereiro
 
 As atualizações de segurança do canal estável estão listadas [aqui](./microsoft-edge-relnotes-security.md#february-17-2021).
 
-## <a name="version-88070568-february-11"></a>Versão 88.0.705.68: 11 de fevereiro
+## Versão 88.0.705.68: 11 de fevereiro
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-88070563-february-5"></a>Versão 88.0.705.63: 5 de Fevereiro
+## Versão 88.0.705.63: 5 de Fevereiro
 
 > [!IMPORTANT]
 > Esta atualização contém o [CVE-2021-21148](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21148) que foi reportado pela equipe da Chromium por ter uma vulnerabilidade em aberto.
 
 As atualizações de segurança do canal estável estão listadas [aqui](./microsoft-edge-relnotes-security.md#february-5-2021).
 
-## <a name="version-88070562-february-4"></a>Versão 88.0.705.62: 4 de Fevereiro
+## Versão 88.0.705.62: 4 de Fevereiro
 
 As atualizações de segurança do canal estável estão listadas [aqui](./microsoft-edge-relnotes-security.md#february-4-2021).
 
 Vários bugs e problemas de desempenho corrigidos.
 
-## <a name="version-88070556-january-28"></a>Versão 88.0.705.56: 28 de Janeiro
+## Versão 88.0.705.56: 28 de Janeiro
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-88070553-january-26"></a>Versão 88.0.705.53: 26 de janeiro
+## Versão 88.0.705.53: 26 de janeiro
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-88070550-january-21"></a>Versão 88.0.705.50: 21 de janeiro
+## Versão 88.0.705.50: 21 de janeiro
 
 As atualizações de segurança do canal estável estão listadas [aqui](./microsoft-edge-relnotes-security.md#january-21-2021).
 
 <!--- begin major 88  --->
-### <a name="feature-updates"></a>Atualizações de recursos
+### Atualizações de recursos
 
 - **Preteridos:**
 
@@ -1040,9 +1083,9 @@ As atualizações de segurança do canal estável estão listadas [aqui](./micro
   - Os ícones do navegador são atualizados para o sistema de design Fluent. Como parte do nosso trabalho contínuo em relação ao design Fluent no navegador, fizemos alterações para alinhar os ícones ao novo sistema de ícones da Microsoft. Essas mudanças afetarão muitas das nossas interfaces de usuário de alto toque, incluindo guias, barra de endereços, bem como ícones de navegação e ícones de orientação encontrados em nossos vários menus.
   - Renderização de fonte aprimorada. A renderização de texto é melhorada para melhorar a clareza e reduzir o desfoque.
 
-### <a name="policy-updates"></a>Atualizações de política
+### Atualizações de política
 
-#### <a name="new-policies"></a>Novas políticas
+#### Novas políticas
 
 Foram adicionadas dezoito novas políticas. Baixe os modelos administrativos atualizados da [página inicial do Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). As novas políticas a seguir foram adicionadas.
 
@@ -1065,7 +1108,7 @@ Foram adicionadas dezoito novas políticas. Baixe os modelos administrativos atu
 - [WebWidgetAllowed](./microsoft-edge-policies.md#webwidgetallowed) - habilita o widget Web.
 - [WebWidgetIsEnabledOnStartup](./microsoft-edge-policies.md#webwidgetisenabledonstartup) - permite o widget da Web na inicialização do Windows.
 
-#### <a name="deprecated-policies"></a>Políticas preteridas
+#### Políticas preteridas
 
 - [ProactiveAuthEnabled](./microsoft-edge-policies.md#proactiveauthenabled) - habilita a autenticação pró-ativa.
 - [ProxyBypassList](./microsoft-edge-policies.md#proxybypasslist) - configura regras de bypass de proxy.
@@ -1074,7 +1117,7 @@ Foram adicionadas dezoito novas políticas. Baixe os modelos administrativos atu
 - [ProxyServer](./microsoft-edge-policies.md#proxyserver) - configura o endereço ou URL do servidor proxy.
 - [WebDriverOverridesIncompatiblePolicies](./microsoft-edge-policies.md#webdriveroverridesincompatiblepolicies) - permite que o WebDriver substitua políticas incompatíveis.
 
-### <a name="obsoleted-policies"></a>Políticas Obsoletas
+### Políticas Obsoletas
 
 - [AllowPopupsDuringPageUnload](./microsoft-edge-policies.md#allowpopupsduringpageunload) - permite que uma página mostre pop-ups durante seu descarregamento.
 - [DefaultPluginsSetting](./microsoft-edge-policies.md#defaultpluginssetting) - configuração padrão do Adobe Flash.
@@ -1082,42 +1125,42 @@ Foram adicionadas dezoito novas políticas. Baixe os modelos administrativos atu
 - [PluginsBlockedForUrls](./microsoft-edge-policies.md#pluginsblockedforurls) - bloqueia o plug-in do Adobe Flash em sites específicos.
 - [RunAllFlashInAllowMode](./microsoft-edge-policies.md#runallflashinallowmode) - estende a configuração do Adobe Flash Content para todo o conteúdo.
 <!--- end major 88  --->
-## <a name="version-87066475-january-7"></a>Versão 87.0.664.75: 7 de janeiro
+## Versão 87.0.664.75: 7 de janeiro
 
 As atualizações de segurança do canal estável estão listadas [aqui](./microsoft-edge-relnotes-security.md#january-7-2021).
 
-## <a name="version-87066466-december-17"></a>Versão 87.0.664.66: 17 de dezembro
+## Versão 87.0.664.66: 17 de dezembro
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-87066460-december-10"></a>Versão 87.0.664.60: 10 de dezembro
+## Versão 87.0.664.60: 10 de dezembro
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-87066457-december-7"></a>Versão 87.0.664.57: 7 de dezembro
+## Versão 87.0.664.57: 7 de dezembro
 
 Vários bugs e problemas de desempenho corrigidos. As atualizações de segurança do canal estável estão listadas [aqui](./microsoft-edge-relnotes-security.md#december-7-2020).
 
-## <a name="version-87066455-december-3"></a>Versão 87.0.664.55: 3 de dezembro
+## Versão 87.0.664.55: 3 de dezembro
 
 Correção de vários bugs e problemas de desempenho. O seguinte recurso foi atualizado para este lançamento.
 
 - **O Shopping está habilitado por padrão**. A partir da versão 87 do Microsoft Edge, os usuários corporativos podem se beneficiar das compras no Microsoft Edge. Com os recursos de compra, o Microsoft Edge ajuda os usuários a encontrar cupons e melhores preços ao fazer compras online. (A experiência de cupom foi lançada com a versão estável 87.0.664.41). A experiência de comparação de preços agora está disponível nesta atualização. Este recurso pode ser configurado usando a política [EdgeShoppingAssistantEnabled](./microsoft-edge-policies.md#edgeshoppingassistantenabled). Veja nosso [Blog](https://blogs.windows.com/windowsexperience/2020/11/19/finish-up-that-holiday-shopping-with-new-features-from-microsoft-edge-and-bing/) e [Saiba mais](/microsoft-edge/privacy-whitepaper#shopping) sobre o Microsoft Shopping.
 
-## <a name="version-87066452-november-30"></a>Versão 87.0.664.52: 30 de novembro
+## Versão 87.0.664.52: 30 de novembro
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-87066447-november-23"></a>Versão 87.0.664.47: 23 de novembro
+## Versão 87.0.664.47: 23 de novembro
 
 Correção de vários bugs e problemas de desempenho.
 
 <!-- begin major 87 --->
-## <a name="version-87066441-november-19"></a>Versão 87.0.664.41: 19 de novembro
+## Versão 87.0.664.41: 19 de novembro
 
 As atualizações de segurança do canal estável estão listadas [aqui](./microsoft-edge-relnotes-security.md#november-19-2020).
 
-### <a name="feature-updates"></a>Atualizações de recursos
+### Atualizações de recursos
 
 - **Redirecionamento automático de sites incompatíveis do Internet Explorer para o Microsoft Edge**. A partir da atualização estável do Microsoft Edge 87, os sites públicos que mostram uma mensagem de incompatibilidade no Internet Explorer serão automaticamente redirecionados para o Microsoft Edge. Para saber mais e configurar essa experiência, confira [Redirecionamento de sites incompatíveis](./edge-learnmore-neededge.md).
 
@@ -1140,9 +1183,9 @@ As atualizações de segurança do canal estável estão listadas [aqui](./micro
   - Escolha o lado a ser invertido ao imprimir nos dois lados. Os usuários podem optar por virar o lado maior ou o lado menor de uma planilha ao imprimir em ambos os lados.
   - Escolha o modo de rasterização de impressão para a empresa. Controlar como o Microsoft Edge é impresso em uma impressora não PostScript no Windows. Às vezes, os trabalhos de impressão em impressoras não PostScript precisam ser rasterizados para serem impressos corretamente. As opções de impressão são "Total" e "Rápida".
 
-### <a name="policy-updates"></a>Atualizações de política
+### Atualizações de política
 
-#### <a name="new-policies"></a>Novas políticas
+#### Novas políticas
 
 Dez novas políticas foram adicionadas. Baixe os modelos administrativos atualizados da [página inicial do Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). As novas políticas a seguir foram adicionadas.
 
@@ -1157,63 +1200,63 @@ Dez novas políticas foram adicionadas. Baixe os modelos administrativos atualiz
 - [SpeechRecognitionEnabled](./microsoft-edge-policies.md#speechrecognitionenabled) - configurar Reconhecimento de Fala.
 - [WebCaptureEnabled](./microsoft-edge-policies.md#webcaptureenabled) - habilitar o recurso de captura da Web no Microsoft Edge.
 
-#### <a name="deprecated-policy"></a>Política Preterida
+#### Política Preterida
 
 [NewTabPageSetFeedType](./microsoft-edge-policies.md#newtabpagesetfeedtype) - configurar a nova experiência de página da guia Microsoft Edge.
 
-#### <a name="obsoleted-policy"></a>Política obsoleta
+#### Política obsoleta
 
 [EnableDeprecatedWebPlatformFeatures](./microsoft-edge-policies.md#enabledeprecatedwebplatformfeatures) - reative os recursos da plataforma Web preteridos por um tempo limitado.
 
 <!-- end major 87 -->
 
-## <a name="version-86062269-november-13"></a>Versão 86.0.622.69: 13 de novembro
+## Versão 86.0.622.69: 13 de novembro
 
 > [!IMPORTANT]
 > Esta atualização contém o [CVE-2020-16013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16013) e o [CVE-2020-16017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16017), que foi reportado pela equipe da Chromium por ter uma vulnerabilidade em aberto.
 
 As atualizações de segurança do canal estável estão listadas [aqui](./microsoft-edge-relnotes-security.md#november-13-2020).
 
-## <a name="version-86062268-november-11"></a>Versão 86.0.622.68: 11 de novembro
+## Versão 86.0.622.68: 11 de novembro
 
 As atualizações de segurança do canal estável estão listadas [aqui](./microsoft-edge-relnotes-security.md#november-11-2020)
 
-## <a name="version-86062263-november-4"></a>Versão 86.0.622.63: 4 de novembro
+## Versão 86.0.622.63: 4 de novembro
 
 > [!IMPORTANT]
 > Esta atualização contém o [CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009), que foi reportado pela equipe da Chromium por ter uma vulnerabilidade em aberto.
 
 As atualizações de segurança do canal estável estão listadas [aqui](./microsoft-edge-relnotes-security.md#november-4-2020).
 
-## <a name="version-86062261-november-2"></a>Versão 86.0.622.61: 2 de novembro
+## Versão 86.0.622.61: 2 de novembro
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-86062258-october-29"></a>Versão 86.0.622.58: 29 de outubro
+## Versão 86.0.622.58: 29 de outubro
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-86062256-october-27"></a>Versão 86.0.622.56: 27 de outubro
+## Versão 86.0.622.56: 27 de outubro
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-86062251-october-22"></a>Versão 86.0.622.51 : 22 de outubro
+## Versão 86.0.622.51 : 22 de outubro
 
 As atualizações de segurança do canal estável estão listadas [aqui](./microsoft-edge-relnotes-security.md#october-22-2020)
 
-## <a name="version-86062248-october-20"></a>Versão 86.0.622.48: 20 de outubro
+## Versão 86.0.622.48: 20 de outubro
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-86062243-october-15"></a>Versão 86.0.622.43: 15 de outubro
+## Versão 86.0.622.43: 15 de outubro
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-86062238-october-9"></a>Versão 86.0.622.38: 9 de outubro
+## Versão 86.0.622.38: 9 de outubro
 
 As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes-security.md#october-9-2020)
 
-### <a name="feature-updates"></a>Atualizações de recursos
+### Atualizações de recursos
 
 * **Reverter para a versão anterior do Microsoft Edge.** O recurso reversão permite que os administradores voltem para uma versão boa conhecida do Microsoft Edge, caso haja algum problema na versão mais recente do Microsoft Edge. **Observação:** A versão estável 86.0.622.38 é a primeira versão para a qual você pode reverter, o que significa que a versão estável 87 é a primeira versão pronta para ser revertida. [Saiba mais](edge-learnmore-rollback.md).
 
@@ -1248,9 +1291,9 @@ Essas políticas são substituídas por [Permitir Telemetria](/windows/privacy/c
 
 * **Excluir downloads do disco usando o gerenciador de downloads.** Agora, os usuários podem excluir os arquivos baixados de seu disco, sem sair do navegador. A nova funcionalidade Excluir downloads existe no menu de contexto da prateleira de downloads ou da página de downloads.
 
-### <a name="policy-updates"></a>Atualizações de política
+### Atualizações de política
 
-#### <a name="new-policies"></a>Novas políticas
+#### Novas políticas
 
 Vinte e três novas políticas foram adicionadas. Baixe os modelos administrativos atualizados da [página inicial do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise). As novas políticas a seguir foram adicionadas.
 
@@ -1278,42 +1321,42 @@ Vinte e três novas políticas foram adicionadas. Baixe os modelos administrativ
 - [UserAgentClientHintsEnabled](./microsoft-edge-policies.md#useragentclienthintsenabled) - Habilitar o recurso de Dicas do Cliente Usuário-Agente.
 - [UserDataSnapshotRetentionLimit](./microsoft-edge-policies.md#userdatasnapshotretentionlimit) - Limita o número de instantâneos de dados do usuário mantidos para uso no caso de uma reversão de emergência.
 
-#### <a name="deprecated-policies"></a>Políticas preteridas
+#### Políticas preteridas
 
 - [MetricsReportingEnabled](./microsoft-edge-policies.md#metricsreportingenabled) - habilita o uso e os relatórios de dados relacionados a falhas.
 - [SendSiteInfoToImproveServices](./microsoft-edge-policies.md#sendsiteinfotoimproveservices) - envia informações do site para melhorar os serviços da Microsoft.
 
-#### <a name="obsoleted-policy"></a>Política obsoleta
+#### Política obsoleta
 
 [TLS13HardeningForLocalAnchorsEnabled](./microsoft-edge-policies.md#tls13hardeningforlocalanchorsenabled)- Habilita um recurso de segurança TLS 1,3 para âncoras de confiança locais.
 
-## <a name="version-85056470-october-6"></a>Versão 85.0.564.70 : 6 de outubro
+## Versão 85.0.564.70 : 6 de outubro
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-85056468-october-1"></a>Versão 85.0.564.68: 1 de outubro
+## Versão 85.0.564.68: 1 de outubro
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-85056463-september-23"></a>Versão 85.0.564.63: 23 de setembro
+## Versão 85.0.564.63: 23 de setembro
 
 As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes-security.md#september-23-2020)
 
-## <a name="version-85056451-september-9"></a>Versão 85.0.564.51: 9 de setembro
+## Versão 85.0.564.51: 9 de setembro
 
 As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes-security.md#september-9-2020)
 
-## <a name="version-85056444-august-31"></a>Versão 85.0.564.44: 31 de agosto
+## Versão 85.0.564.44: 31 de agosto
 
 Correção de vários bugs e problemas de desempenho.
 
 <!-- 85.0.564.41: August 27 -->
 
-## <a name="version-85056441-august-27"></a>Versão 85.0.564.41: 27 de agosto
+## Versão 85.0.564.41: 27 de agosto
 
 As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes-security.md#august-27-2020)
 
-### <a name="feature-updates"></a>Atualizações de recursos
+### Atualizações de recursos
 
 - **Sincronização local de Favoritos e Configurações**. Agora, você pode sincronizar os favoritos do navegador e as configurações entre os perfis do Active Directory dentro de seu próprio ambiente sem a necessidade de sincronização na nuvem.
 
@@ -1330,9 +1373,9 @@ As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes
    - O DevTools do Microsoft Edge é compatível com a emulação Surface Duo. O DevTools do Microsoft Edge pode emular o Surface Duo para que você possa testar como o seu conteúdo da Web será visualizado em dispositivos com duas telas. Para ativar esse experimento no DevTools, entre no modo do dispositivo pressionando Ctrl + Shift + M no Windows ou Command + Shift + M no macOS e selecione Surface Duo na lista de seleção do dispositivo.
    - O DevTools do Microsoft Edge permite combinar atalhos de teclado com o Código VS. O DevTools do Microsoft Edge é compatível com a personalização de atalhos de teclado no DevTools para corresponder ao editor/IDE. No Microsoft Edge 85, estamos adicionando a capacidade para combinar os atalhos de teclado do DevTools para o VS Code. Essa alteração ajudará a aumentar a produtividade no Código VS e no DevTools.
 
-### <a name="policy-updates"></a>Atualizações de política
+### Atualizações de política
 
-#### <a name="new-policies"></a>Novas políticas
+#### Novas políticas
 
 Treze novas políticas foram adicionadas. Baixe os modelos administrativos atualizados da [página inicial do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise). As novas políticas a seguir foram adicionadas.
 
@@ -1349,53 +1392,53 @@ Treze novas políticas foram adicionadas. Baixe os modelos administrativos atual
 - [RoamingProfileLocation](./microsoft-edge-policies.md#roamingprofilelocation) - Configurar o roaming do diretório de perfil.
 - [TLSCipherSuiteDenyList](./microsoft-edge-policies.md#tlsciphersuitedenylist) - Especificar os pacotes de codificação TLS para desabilitar.
 
-#### <a name="obsoleted-policies"></a>Políticas obsoletas
+#### Políticas obsoletas
 
 - [EnableDomainActionsDownload](./microsoft-edge-policies.md#enabledomainactionsdownload) Habilitar o Download de Ações de Domínio da Microsoft.
 - [WebComponentsV0Enabled](./microsoft-edge-policies.md#webcomponentsv0enabled) -reabilita a API de componentes Web V0 até M84.
 - [WebDriverOverridesIncompatiblePolicies](./microsoft-edge-policies.md#webdriveroverridesincompatiblepolicies) - Permitir ao WebDriver Substituir Políticas Incompatíveis.
 
-## <a name="version-84052263-august-20"></a>Versão 84.0.522.63: 20 de agosto
+## Versão 84.0.522.63: 20 de agosto
 
 As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes-security.md#august-20-2020).
 
-## <a name="version-84052261-august-17"></a>Versão 84.0.522.61: 17 de agosto
+## Versão 84.0.522.61: 17 de agosto
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-84052259-august-11"></a>Versão 84.0.522.59: 11 de agosto
+## Versão 84.0.522.59: 11 de agosto
 
 As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes-security.md#august-11-2020)
 
-## <a name="version-84052258-august-10"></a>Versão 84.0.522.58: 10 de agosto
+## Versão 84.0.522.58: 10 de agosto
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-84052252-august-1"></a>Versão 84.0.522.52: 1º de agosto
+## Versão 84.0.522.52: 1º de agosto
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-84052250-july-31"></a>Version 84.0.522.50: 31 de julho
+## Version 84.0.522.50: 31 de julho
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-84052249-july-29"></a>Versão 84.0.522.49: 29 de julho
+## Versão 84.0.522.49: 29 de julho
 
 As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes-security.md#july-29-2020)
 
-## <a name="version-84052248-july-28"></a>Version 84.0.522.48: 28 de julho
+## Version 84.0.522.48: 28 de julho
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-84052244-july-23"></a>Version 84.0.522.44: 23 de julho
+## Version 84.0.522.44: 23 de julho
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-84052240-july-16"></a>Version 84.0.522.40: 16 de julho
+## Version 84.0.522.40: 16 de julho
 
 As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes-security.md#july-16-2020)
 
-### <a name="feature-updates"></a>Atualizações de recursos
+### Atualizações de recursos
 
 - Esta versão do Microsoft Edge fornece uma melhoria na velocidade de download de lista de sites para o modo Internet Explorer. Reduzimos o atraso de download para a lista de sites no modo Internet Explorer para 0 segundo (de uma espera de 60 segundos) na ausência de uma lista de sites armazenados em cache. Também adicionamos suporte à política de grupo para casos em que as navegações de página inicial no modo Internet Explorer precisem ser adiadas até que a lista de sites seja baixada. Para obter mais informações, confira a política [DelayNavigationsForInitialSiteListDownload](./microsoft-edge-policies.md#delaynavigationsforinitialsitelistdownload).
 
@@ -1432,9 +1475,9 @@ As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes
 
 - Várias atualizações do DevTools, incluindo o suporte à personalização de atalhos de teclado para corresponder ao VC Code e à visualização do DevTools em alto contraste.  Para obter mais detalhes, consulte [Novidades no DevTools (Microsoft Edge 84)](/microsoft-edge/devtools-guide-chromium/whats-new/2020/05/devtools).
 
-### <a name="policy-updates"></a>Atualizações de política
+### Atualizações de política
 
-#### <a name="new-policies"></a>Novas políticas
+#### Novas políticas
 
 Sete novas políticas foram adicionadas. Baixe os modelos administrativos atualizados da [página inicial do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise). As novas políticas a seguir foram adicionadas.
 
@@ -1446,56 +1489,56 @@ Sete novas políticas foram adicionadas. Baixe os modelos administrativos atuali
 - [NativeWindowOcclusionEnabled](./microsoft-edge-policies.md#nativewindowocclusionenabled) - para reduzir o consumo de CPU e de energia, o Microsoft Edge detectará quando uma janela é coberta por outras janelas e suspenderá os pixels da pintura do trabalho.
 - [NavigationDelayForInitialSiteListDownloadTimeout](./microsoft-edge-policies.md#navigationdelayforinitialsitelistdownloadtimeout) -Definir um tempo limite para o atraso da navegação da guia para a Lista de Sites no Modo Empresarial.
 
-#### <a name="deprecated-policies"></a>Políticas preteridas
+#### Políticas preteridas
 
 - [AllowSyncXHRInPageDismissal](./microsoft-edge-policies.md#allowsyncxhrinpagedismissal) - Autorizar páginas a enviar solicitações de XHR síncronas durante a descarte da página.
 - [BuiltinCertificateVerifierEnabled](./microsoft-edge-policies.md#builtincertificateverifierenabled) - Determina se o verificador de certificado interno será usado para verificar certificados do servidor.
 - [StricterMixedContentTreatmentEnabled](./microsoft-edge-policies.md#strictermixedcontenttreatmentenabled)- Habilita um tratamento mais estrito para conteúdo misto.
 
-#### <a name="obsoleted-policy"></a>Política obsoleta
+#### Política obsoleta
 
 [ForceNetworkInProcess](./microsoft-edge-policies.md#forcenetworkinprocess) - Forçar a execução do código de rede no processo do navegador.
 
 <!-- End 84 -->
-## <a name="version-83047864-july-13"></a>Version 83.0.478.64: 13 de julho
+## Version 83.0.478.64: 13 de julho
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-83047861-july-7"></a>Version 83.0.478.61: 7 de julho
+## Version 83.0.478.61: 7 de julho
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-83047858-june-30"></a>Versão 83.0.478.58: 30 de junho
+## Versão 83.0.478.58: 30 de junho
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-83047856-june-24"></a>Versão 83.0.478.56: 24 de junho
+## Versão 83.0.478.56: 24 de junho
 
 Correção de vários bugs e problemas de desempenho.
 
 As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes-security.md#june-24-2020)
 
-## <a name="version-83047854-june-17"></a>Versão 83.0.478.54: 17 de junho
+## Versão 83.0.478.54: 17 de junho
 
 As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes-security.md#june-17-2020)
 
-## <a name="version-83047850-june-15"></a>Versão 83.0.478.50: 15 de junho
+## Versão 83.0.478.50: 15 de junho
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-83047845-june-4"></a>Versão 83.0.478.45: 4 de junho
+## Versão 83.0.478.45: 4 de junho
 
 As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes-security.md#june-4-2020)
 
-## <a name="version-83047844-june-1"></a>Versão 83.0.478.44: 1 de junho
+## Versão 83.0.478.44: 1 de junho
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-83047837-may-21"></a>Versão 83.0.478.37: 21 de maio
+## Versão 83.0.478.37: 21 de maio
 
 As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes-security.md#may-21-2020)
 
-### <a name="feature-updates"></a>Atualizações de recursos
+### Atualizações de recursos
 
 - As atualizações do Microsoft Edge agora serão implantadas gradualmente. No futuro, as atualizações para o Microsoft Edge serão implantadas para os usuários em período de alguns dias. Isso nos permite proteger melhor as atualizações de bugs acidentais, o que melhora a experiência de atualização. Como usuário, você continuará a receber atualizações automáticas. Se a sua organização não estiver inscrita para as atualizações automáticas, você não serão afetados por essa alteração. Para saber mais, confira o artigo [Distribuições progressivas](microsoft-edge-update-progressive-rollout.md).
 - Melhorias no Microsoft Defender SmartScreen: foram feitas várias melhorias no serviço Microsoft Defender SmartScreen, como proteção melhorada contra sites mal-intencionados que são redirecionados durante o carregamento e bloqueio de quadros de nível superior que substitui completamente sites mal-intencionados pela página de segurança do Microsoft Defender SmartScreen. O bloqueio de quadros de nível superior impede a reprodução de áudio e outras mídias do site mal-intencionado, o que proporciona uma experiência mais fácil e menos confusa.
@@ -1531,9 +1574,9 @@ Um usuário digita incorretamente "powerbi como" powerbbi". com. O link Doctor v
 
 - Não permitir um XMLHttpRequest síncrono no descarte de página. O envio de XMLHttpRequests síncronos durante o carregamento de uma página da Web será removido. Essa alteração melhorará o desempenho e a confiabilidade do navegador, mas poderá afetar os aplicativos da Web que ainda não foram atualizados para usar APIs da Web mais modernas, incluindo sendBeacon e FETCH. A Política de Grupo para desabilitar essa alteração e permitir XHR síncronos durante a transmissão de página estará disponível até o Microsoft Edge 88. Para saber mais, confira [Compatibilidade de sites - alterações que afetam o Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-### <a name="policy-updates"></a>Atualizações de política
+### Atualizações de política
 
-#### <a name="new-policies"></a>Novas políticas
+#### Novas políticas
 
 15 novas políticas foram adicionadas. Baixe os modelos administrativos atualizados da [página inicial do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise). As novas políticas a seguir foram adicionadas.
 
@@ -1553,7 +1596,7 @@ Um usuário digita incorretamente "powerbi como" powerbbi". com. O link Doctor v
 - [SyncTypesListDisabled](./microsoft-edge-policies.md#synctypeslistdisabled) - Configurar a lista de tipos excluídos da sincronização.
 - [NativeWindowOcclusionEnabled](./microsoft-edge-policies.md#nativewindowocclusionenabled) - Ative a ocultação do Windows Nativo.
 
-#### <a name="deprecated-policy"></a>Política preterida
+#### Política preterida
 
 A política a seguir continuará funcionando nesta versão. Ela se tornará "obsoleta" em uma versão futura.
 
@@ -1561,31 +1604,31 @@ A política a seguir continuará funcionando nesta versão. Ela se tornará "obs
 
 <!-- end 83 -->
 
-## <a name="version-81041677-may-18"></a>Versão 81.0.416.77: 18 de maio
+## Versão 81.0.416.77: 18 de maio
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-81041672-may-7"></a>Versão 81.0.416.72: 7 de maio
+## Versão 81.0.416.72: 7 de maio
 
 As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes-security.md#may-7-2020)
 
-## <a name="version-81041668-april-29"></a>Versão 81.0.416.68: 29 de abril
+## Versão 81.0.416.68: 29 de abril
 
 As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes-security.md#april-29-2020)
 
-## <a name="version-81041664-april-23"></a>Versão 81.0.416.64: 23 de abril
+## Versão 81.0.416.64: 23 de abril
 
 As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes-security.md#april-23-2020)
 
-## <a name="version-81041658-april-17"></a>Versão 81.0.416.58: 17 de abril
+## Versão 81.0.416.58: 17 de abril
 
 As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes-security.md#april-17-2020)
 
-## <a name="version-81041653-april-13"></a>Versão 81.0.416.53: 13 de abril
+## Versão 81.0.416.53: 13 de abril
 
 As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes-security.md#april-13-2020)
 
-### <a name="feature-updates"></a>Atualizações de recursos
+### Atualizações de recursos
 
 - Adicionado suporte à Proteção de Informações do Windows (WIP), que ajuda as empresas a proteger dados confidenciais contra divulgação não autorizada. [Saiba mais](./microsoft-edge-security-windows-information-protection.md).
 
@@ -1631,9 +1674,9 @@ As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes
 `MicrosoftEdgeEnterpriseX64.msi DONOTCREATEDESKTOPSHORTCUT=true`<br>
 Haverá uma política de grupo para oferecer suporte a essa funcionalidade em uma próxima versão.
 
-### <a name="policy-updates"></a>Atualizações de política
+### Atualizações de política
 
-#### <a name="new-policies"></a>Novas políticas
+#### Novas políticas
 
 Foram adicionadas 11 novas políticas. Baixe os modelos administrativos atualizados da [página inicial do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise). As novas políticas a seguir foram adicionadas.
 
@@ -1649,65 +1692,65 @@ Foram adicionadas 11 novas políticas. Baixe os modelos administrativos atualiza
 - [TLS13HardeningForLocalAnchorsEnabled](./microsoft-edge-policies.md#tls13hardeningforlocalanchorsenabled)- Habilita um recurso de segurança TLS 1,3 para âncoras de confiança locais.
 - [ConfigureOnPremisesAccountAutoSignIn](./microsoft-edge-policies.md#configureonpremisesaccountautosignin)- Configura o login automático com uma conta de domínio do Active Directory quando não houver nenhuma conta de domínio do Azure AD.
 
-#### <a name="policy-name-and-caption-changes"></a>Alterações de nome e legenda da política
+#### Alterações de nome e legenda da política
 
 A política `OmniboxMSBProviderEnabled` é alterada para [AddressBarMicrosoftSearchInBingProviderEnabled](/DeployEdge/microsoft-edge-policies#addressbarmicrosoftsearchinbingproviderenabled) - A legenda da política é "Habilitar a pesquisa da Microsoft nas sugestões do Bing na barra de endereço".
 
-#### <a name="deprecated-policies"></a>Políticas preteridas
+#### Políticas preteridas
 
 As seguintes políticas continuam a funcionar nesta versão. Elas se tornarão "obsoletas" em uma versão futura.
 
 - [WebComponentsV0Enabled](./microsoft-edge-policies.md#webcomponentsv0enabled) - Reabilita a API de componentes Web V0 até M84.
 - [WebDriverOverridesIncompatiblePolicies](./microsoft-edge-policies.md#webdriveroverridesincompatiblepolicies)- Permite que o WebDriver substitua incompatível.
 
-#### <a name="resolved-issues"></a>Problemas resolvidos
+#### Problemas resolvidos
 
 - Foi corrigido um problema em que o modo IE no Microsoft Edge fazia com que uma caixa de diálogo de download em andamento fosse exibida mesmo após o download do arquivo.
 - Foi corrigido um problema em que o Microsoft Edge estava descartando cookies de sessão quando uma página que já estava no modo IE era acionada para abrir uma nova guia do modo IE.
 
-## <a name="version-800361111-april-7"></a>Versão 80.0.361.111: 7 de abril
+## Versão 80.0.361.111: 7 de abril
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-800361109-april-1"></a>Versão 80.0.361.109: 1º de abril
+## Versão 80.0.361.109: 1º de abril
 
 As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes-security.md#april-1-2020)
 
-## <a name="version-80036169-march-19"></a>Versão 80.0.361.69: 19 de março
+## Versão 80.0.361.69: 19 de março
 
 As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes-security.md#march-19-2020)
 
-## <a name="version-80036166-march-4"></a>Versão 80.0.361.66: 4 de março
+## Versão 80.0.361.66: 4 de março
 
 As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes-security.md#march-4-2020)
 
-## <a name="version-80036162-february-25"></a>Versão 80.0.361.62: 25 de fevereiro
+## Versão 80.0.361.62: 25 de fevereiro
 
 As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes-security.md#february-25-2020)
 
-## <a name="version-80036157-february-20"></a>Versão 80.0.361.57: 20 de fevereiro
+## Versão 80.0.361.57: 20 de fevereiro
 
 As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes-security.md#february-20-2020)
 
-## <a name="version-80036156-february-19"></a>Versão 80.0.361.56: 19 de fevereiro
+## Versão 80.0.361.56: 19 de fevereiro
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-80036154-february-14"></a>Versão 80.0.361.54: 14 de fevereiro
+## Versão 80.0.361.54: 14 de fevereiro
 
-### <a name="resolved-issues"></a>Problemas resolvidos
+### Problemas resolvidos
 
 - Foi corrigido um problema em que senha, pagamento e cookies não são importados no Microsoft Edge.
 
-## <a name="version-80036150-february-11"></a>Versão 80.0.361.50: 11 de fevereiro
+## Versão 80.0.361.50: 11 de fevereiro
 
 Correção de vários bugs e problemas de desempenho.
 
-## <a name="version-80036148-february-7"></a>Versão 80.0.361.48: 07 de fevereiro
+## Versão 80.0.361.48: 07 de fevereiro
 
 As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes-security.md#february-7-2020)
 
-### <a name="feature-updates"></a>Atualizações de recursos
+### Atualizações de recursos
 
 - Proteção do SmartScreen adicionada para baixar aplicativos potencialmente indesejados. [Saiba mais](/windows/security/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus)
 - Suporte adicional para a reprodução de Dolby Vision.
@@ -1721,9 +1764,9 @@ As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes
 - Adicionado suporte ao tema escuro à interface do usuário do PDF quando o navegador é gerenciado pela Diretiva de Grupo.
 - Atualização do Adobe Flash para a versão 32.0.0.321. [Saiba mais](https://helpx.adobe.com/flash-player/release-note/fp_32_air_32_release_notes.html)
 
-### <a name="policy-updates"></a>Atualizações de política
+### Atualizações de política
 
-#### <a name="new-policies"></a>Novas políticas
+#### Novas políticas
 
 16 novas políticas foram adicionadas. Baixe os modelos administrativos atualizados da [página inicial do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise). As novas políticas a seguir foram adicionadas.
 
@@ -1744,17 +1787,17 @@ As atualizações de segurança estão listadas [aqui](./microsoft-edge-relnotes
 - [WebComponentsV0Enabled](./microsoft-edge-policies.md#webcomponentsv0enabled) -reabilita a API de componentes Web V0 até M84.
 - [WebRtcLocalIpsAllowedUrls](./microsoft-edge-policies.md#webrtclocalipsallowedurls) -gerencia a exposição de endereços IP locais por WebRTC.
 
-#### <a name="deprecated-policies"></a>Políticas preteridas
+#### Políticas preteridas
 
 A política a seguir foi substituída.
 
 - [NewTabPageCompanyLogo](./microsoft-edge-policies.md#newtabpagecompanylogo) -define o logotipo da empresa da nova guia.
 
-### <a name="resolved-issues"></a>Problemas resolvidos
+### Problemas resolvidos
 
 - Corrigido um problema em que o áudio não estava funcionando no ambiente Citrix.
 - Foi corrigido um problema em que o Microsoft Edge e a experiência lado a lado do Microsoft Edge resulta em links e erros herdados.
 
-## <a name="see-also"></a>Consulte também
+## Consulte também
 
 - [Página de aterrissagem do Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

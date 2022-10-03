@@ -3,31 +3,35 @@ title: Notas de versão para atualizações de segurança do Microsoft Edge
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 09/27/2022
+ms.date: 10/03/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de versão para atualizações de segurança do Microsoft Edge
-ms.openlocfilehash: e8e288f87d849937d460a2a8fc554de9be9903f1
-ms.sourcegitcommit: 61062c70524201e7da05d1b8ceb11ffb5c71c409
+ms.openlocfilehash: 89d0ab6a32e0ab91a5de487586ffb463a806898a
+ms.sourcegitcommit: 51b4070bcff302e1b8809e41b810c3e027e9c146
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "12760985"
+ms.lasthandoff: 10/03/2022
+ms.locfileid: "12763179"
 ---
 # Notas de versão para atualizações de segurança do Microsoft Edge
 
 Estas notas de versão fornecem informações sobre correções de segurança incluídas nas atualizações para o canal estável do Microsoft Edge.
 
-## 27 de setembro de 2022
+## 3 de outubro de 2022
 
-A Microsoft está ciente das recentes correções de segurança do Chromium. Estamos trabalhando ativamente para lançar uma correção de segurança.
+A Microsoft lançou o canal estável mais recente do **Microsoft Edge (versão 106.0.1370.34)**, que incorpora o Atualizações de segurança mais recente do projeto Chromium. Para obter mais informações, consulte o [Guia de atualização de segurança](https://msrc.microsoft.com/update-guide).
+
+Esta instalação contém a seguinte atualização específica do Microsoft Edge:
+
+- [CVE-2022-41035](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-41035)
 
 ## 15 de setembro de 2022
 
-A Microsoft lançou o canal estável mais recente do **Microsoft Edge (versão 105.0.1343.42)**, que incorpora o Atualizações de segurança mais recente do projeto Chromium. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
+A Microsoft lançou o canal estável mais recente do **Microsoft Edge (versão 105.0.1343.42)**, que incorpora o Atualizações de segurança mais recente do projeto Chromium. Para obter mais informações, consulte o [Guia de atualização de segurança](https://msrc.microsoft.com/update-guide).
 
 ## 2 de setembro de 2022
 
@@ -38,7 +42,7 @@ A Microsoft lançou o Canal Estável do **Microsoft Edge mais recente (versão 1
 
 ## 1º de setembro de 2022
 
-A Microsoft lançou o canal estável mais recente do **Microsoft Edge (versão 105.0.1343.25)**, que incorpora o Atualizações de segurança mais recente do projeto Chromium. Para obter mais informações, consulte o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide)
+A Microsoft lançou o canal estável mais recente do **Microsoft Edge (versão 105.0.1343.25)**, que incorpora o Atualizações de segurança mais recente do projeto Chromium. Para obter mais informações, confira o [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide)
 
 Esta instalação contém a seguinte atualização específica do Microsoft Edge:
 
@@ -50,7 +54,7 @@ A Microsoft lançou o Canal Estável do **Microsoft Edge mais recente (versão 1
 
 ## 17 de agosto de 2022
 
-A Microsoft lançou o Canal Estável do **Microsoft Edge mais recente (versão 104.0.1293.60)**. Essa atualização contém uma correção para [CVE-2022-2856](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-2856), que foi relatada pela equipe Chromium como tendo uma exploração em execução. Para obter mais informações, confira [Guia de Atualização de Segurança](https://msrc.microsoft.com/update-guide).
+A Microsoft lançou o Canal Estável do **Microsoft Edge mais recente (versão 104.0.1293.60)**. Essa atualização contém uma correção para [CVE-2022-2856](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-2856), que foi relatada pela equipe Chromium como tendo uma exploração em execução. Para obter mais informações, consulte o [Guia de atualização de segurança](https://msrc.microsoft.com/update-guide).
 
 ## 5 de agosto de 2022
 
