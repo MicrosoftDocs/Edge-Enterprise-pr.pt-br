@@ -1,4 +1,4 @@
-# last revised 07/27/2022
+# last revised 10/12/2022
 - name: Documentação do Microsoft Edge Enterprise
   href: index.yml
 - name: Documentação do Microsoft Edge
@@ -87,6 +87,8 @@
       href: configure-microsoft-edge-on-mac-jamf.md
 - name: Usar os recursos do Microsoft Edge para empresas
   items:
+    - name: Microsoft Edge Workspaces
+      href: microsoft-edge-workspaces.md
     - name: Microsoft Edge infraestrutura de área de trabalho virtual
       href: edge-for-virtualized-desktop-infrastructure.md
     - name: Configurações e experimentação
@@ -105,6 +107,8 @@
       items:
         - name: Gerenciar as extensões na empresa
           href: microsoft-edge-manage-extensions.md
+        - name: Gerenciar a barra lateral no Microsoft Edge
+          href: microsoft-edge-sidebar.md
         - name: Usar as políticas de grupo para gerenciar extensões
           href: microsoft-edge-manage-extensions-policies.md
         - name: Auto-hospedar as extensões do Microsoft Edge
