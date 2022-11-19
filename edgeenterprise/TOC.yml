@@ -1,4 +1,4 @@
-# last revised 10/12/2022
+# last revised 11/18/2022
 - name: Documentação do Microsoft Edge Enterprise
   href: index.yml
 - name: Documentação do Microsoft Edge
@@ -171,6 +171,8 @@
       href: microsoft-edge-security-iemode-safer-than-ie.md
     - name: Navegar com segurança com Microsoft Edge
       href: microsoft-edge-security-browse-safer.md
+    - name: Alterações na verificação de certificado do servidor TLS do navegador do Microsoft Edge
+      href: microsoft-edge-security-cert-verification.md
     - name: Identificar e interromper downloads de arquivos potencialmente perigosos
       href: microsoft-edge-security-downloads-interruptions.md
     - name: Lista de permissões para pontos de extremidade do Microsoft Edge
